@@ -1,17 +1,40 @@
-{{ partial "header.html" . }}
-
-<body>
-<div id="layout" class="pure-g">
-<article class="pure-u-1">
-{{ partial "brand.html" . }}
-{{ partial "content.header.html" . }}
-{{ partial "toc.html" . }}
-<section>{{ .Content }}</section>
-<section>
-  {{ partial "disqus.html" . }}
-  {{ partial "footer.html" . }}
-</section>
-</article>
-</div>
-</body>
+<!DOCTYPE html>
+<html lang="en-us">
+  {{ partial "head.html" . }}
+  <!-- Need to add option to toggle width -->
+  <body class="default-width">
+    {{ partial "body-header.html" . }}
+    <main class="group" role="main" aria-label="Blog posting">
+      <nav role="navigation" aria-label="Blog postings navigation">
+        {{ partial "body-navigation.html" . }}
+      </nav>
+      <article role="article" class="single-article">
+        <header>
+          <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+          <div class="post-meta">
+            {{ partial "body-header-meta.html" . }}
+          </div>
+        </header>
+        <a name="skip-to-content"> </a>
+        <section class="content">
+          {{ .Content }}
+        </section>
+      </article>
+      <nav role="navigation" aria-hidden="true">
+        {{ partial "body-navigation.html" . }}
+      </nav>
+      <a name="skip-to-related-posts"> </a>
+      <aside role="complementary" aria-label="Related blog posting">
+        <h2>Related Posts</h2>
+        <ul>
+          {{ range first 5 (.Site.RegularPages.Related .) }}
+            <li>
+              <a aria-label="Related post: {{ .Title }}" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </aside>
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
 </html>
