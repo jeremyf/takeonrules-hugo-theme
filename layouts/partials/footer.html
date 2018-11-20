@@ -11,6 +11,6 @@
     {{ end }}
   </ul>
   <div class="credits">
-    <span>&copy; {{ now.Format "2006" }} &nbsp; {{ .Site.Params.copyrightHolder }}</span><br />
+    {{ partial "credits-and-license.html" . }}
   </div>
 </footer>

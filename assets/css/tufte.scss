@@ -225,6 +225,12 @@ ul.footer-links li { display: inline; padding: 0.5rem 0.25rem; }
 .credits {
   font-family: $sans-font;
   & a{ color: $contrast-color; }
+  .license {
+    margin-top: 1rem;
+    font-size: smaller;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 // End of Nav and Footer styling area
