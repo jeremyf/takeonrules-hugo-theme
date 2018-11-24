@@ -7,10 +7,18 @@
     <meta name="layout" content="terms" />
     <main class="group" role="main" aria-label="Blog posting">
       <article role="article" class="single-article">
+        {{ $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .URL }}
+        {{ $title := .Title }}
+        {{ with index $.Site.Data.licenses $slug }}
         <header>
-          {{ $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .URL }}
-          <h1 id="{{ anchorize .Title }}">{{ index (index $.Site.Data.licenses $slug) "Name" }}</h1>
+          <h1 id="{{ anchorize .Title }}">{{ index . "Name" }}</h1>
         </header>
+        {{ with index . "Description" }}
+          <section>
+            {{ . | safeHTML }}
+          </section>
+        {{ end }}
+        {{ end }}
         <section class="list-page">
   {{ range .Data.Pages.GroupByDate "2006" }}
     <details open>
