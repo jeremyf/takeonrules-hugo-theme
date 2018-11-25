@@ -327,6 +327,8 @@ ol.breadcrumb-list .breadcrumb-item:first-child { margin-left: 0rem; }
 ol.breadcrumb-list .breadcrumb-item { padding-top: 0rem; }
 ol.breadcrumb-list .breadcrumb-item:not(:last-of-type)::after { content: " / " }
 
+.end-of-article-navigation { padding-bottom: 1rem;}
+
 section.content { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 button[type='submit'] { padding: 3px 10px; }
 header form { padding-bottom: 1rem; }

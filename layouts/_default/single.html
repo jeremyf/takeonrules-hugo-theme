@@ -13,16 +13,15 @@
           <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
         </header>
         <nav class="post-meta">
-          {{ partial "body-header-meta.html" . }}<br />
-          {{ partial "body-navigation.html" . }}
+          {{ partial "body-header-meta.html" . }}
         </nav>
         <a name="skip-to-content"> </a>
         <section class="content">
           {{ .Content }}
         </section>
       </article>
-      <nav role="navigation" aria-hidden="true">
-        {{ partial "body-navigation.html" . }}
+      <nav class="end-of-article-navigation" role="navigation" aria-hidden="true">
+        {{ partial "body-header-meta.html" . }}
       </nav>
       <a name="skip-to-related-posts"> </a>
       <aside role="complementary" aria-label="Related blog posting">

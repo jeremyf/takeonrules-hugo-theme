@@ -12,20 +12,37 @@
     <dd><time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time></dd>
   {{ end }}
 </dl>
-{{ with .Params.series }}
-  <dl>
-    {{ $title := $.Site.Param (printf "series-%s" .) }}
-    {{ if eq $title nil }}{{ $title = humanize . | title }}{{ end }}
+<dl>
+  <dt>All Posts:</dt>
+  <dd>
+    {{- if .PrevInSection }}
+      <a href="{{ .PrevPage.Permalink }}" class="previous" aria-label="Previous post">
+        &laquo; Previous post
+      </a>
+    {{- else }}
+      <span class="previous">&laquo; Previous post</span>
+    {{- end }}
+  </dd>
+  <dd>
+    {{- if .NextInSection }}
+      <a href="{{ .NextPage.Permalink }}" class="next" aria-label="Next posts">Next post &raquo;</a>
+    {{- else }}
+      <span class="next ">Next post &raquo;</span>
+    {{- end }}
+  </dd>
+{{- with .Params.series }}
+    {{- $title := $.Site.Param (printf "series-%s" .) }}
+    {{- if eq $title nil }}{{ $title = humanize . | title }}{{ end }}
     <dt>{{ $title }}:<a name='skip-to-series-navigation'> </a></dt>
-    {{ $series := where $.Site.Pages "Params.series" . }}
-    {{ $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
-    {{ $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
+    {{- $series := where $.Site.Pages "Params.series" . }}
+    {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
+    {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
     <dd></dd>
-    {{ range first 1 $prev }}
+    {{- range first 1 $prev }}
       <dd><a class="prev" aria-label="Previous {{ $.Page.Params.series }} post" href="{{ .Permalink }}">&laquo; Previous post</a></dd>
-    {{ end}}
-    {{ range last 1 $next }}
+    {{- end}}
+    {{- range last 1 $next }}
       <dd><a class="next" aria-label="Next {{ $.Page.Params.series }} post" href="{{ .Permalink }}">Next post &raquo;</a></dd>
-    {{ end}}
-  </dl>
-{{ end }}
+    {{- end}}
+{{- end }}
+</dl>
