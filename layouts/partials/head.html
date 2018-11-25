@@ -6,16 +6,18 @@
   <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <title>{{ .Title }} // {{ .Site.Title  }}</title>
-
-  {{ $tufteCssResource := resources.Get "css/tufte.scss" | resources.ToCSS | resources.Fingerprint }}
+  {{- $tufteCssResource := resources.Get "css/tufte.scss" | resources.ToCSS | resources.Fingerprint }}
   <link rel="stylesheet" type="text/css" media="screen,print" href="{{ $tufteCssResource.RelPermalink }}">
   {{ $printCssResource := resources.Get "css/print.scss" | resources.ToCSS | resources.Fingerprint }}
   <link rel="stylesheet" type="text/css" media="print" href="{{ $printCssResource.RelPermalink }}">
   {{ if .RelPermalink }}<link rel="canonical" href="{{ .RelPermalink }}">{{ end }}
   {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}
-  {{ $rssTemplate := resources.Get "feed.xml" }}
-  {{ $rss := $rssTemplate | resources.ExecuteAsTemplate "feed.xml" . }}
+  {{- $rssTemplate := resources.Get "feed.xml" }}
+  {{- $rss := $rssTemplate | resources.ExecuteAsTemplate "feed.xml" . }}
   <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed" href="{{ $rss.RelPermalink }}">
+  {{- if in (slice "taxonomy" "taxonomyTerm") .Kind }}
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml">
+  {{- end }}
   <link rel="me" href="https://github.com/jeremyf" title="jeremyf@Github">
 
   {{ partial "opengraph.html" . }}
@@ -27,9 +29,9 @@
 
   {{ template "_internal/twitter_cards.html" . }}
 
-  {{ if .Site.Params.withJsonLd }}
+  {{- if .Site.Params.withJsonLd }}
     <script type="application/ld+json">
       {{ partial "jsonld.json" . }}
     </script>
-  {{ end }}
+  {{- end }}
 </head>
