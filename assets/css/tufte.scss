@@ -314,11 +314,19 @@ a.offscreen { position:absolute; left:-1000px; top:-1000px; width:1px; height:1p
 a.offscreen:focus, a.offscreen:active, a.offscreen:hover { position:absolute; padding: 0.75rem 0.75rem; margin-right: 2rem; margin-top: 1.5rem; left:5px; top:-20px; width:auto; height:auto; overflow:visible; background-color:$contrast-color; color: $bg-color; border: 1px dotted #000; }
 // END Skip Navigation
 ul, ol { padding-left: 2rem; }
-header dl { padding-top: 1rem; width: 85% ; clear: left; }
-header dl:first-of-type { padding-top: 0rem; }
-header dl dt, header dl dd { float: left; margin-right: 0.7rem; }
-header dl dt { margin-left: 0.7rem; }
-header dl dt:first-child { margin-left: 0rem; }
+nav dl { padding-top: 1rem; width: 85% ; clear: left; }
+nav dl:first-of-type { padding-top: 0rem; }
+nav dl dt, nav dl dd { float: left; margin-right: 0.7rem; }
+nav dl dt { margin-left: 0.7rem; }
+nav dl dt:first-child { margin-left: 0rem; }
+
+.breadcrumb-list { font-size: 1rem; padding-bottom: 1rem; padding-left: 0; }
+ol.breadcrumb-list { list-style: none; width: 85% ; clear: left; padding-top: 0rem;}
+ol.breadcrumb-list .breadcrumb-item { line-height: 1; padding-right: 0.2rem; margin-left: 0rem; float: left; margin-right: 0rem; }
+ol.breadcrumb-list .breadcrumb-item:first-child { margin-left: 0rem; }
+ol.breadcrumb-list .breadcrumb-item { padding-top: 0rem; }
+ol.breadcrumb-list .breadcrumb-item:not(:last-of-type)::after { content: " / " }
+
 section.content { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 button[type='submit'] { padding: 3px 10px; }
 header form { padding-bottom: 1rem; }

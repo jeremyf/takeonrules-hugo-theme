@@ -5,6 +5,9 @@
   <body class="default-width">
     {{ partial "body-header.html" . }}
     <main class="group" role="main">
+      <nav role="navigation" aria-label="Breadcrumbs">
+        {{ partial "breadcrumb.html" . }}
+      </nav>
       <article role="article">
         <header>
           <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
