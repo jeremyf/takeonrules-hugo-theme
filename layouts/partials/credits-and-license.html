@@ -1,9 +1,9 @@
-<span>&copy; {{ now.Format "2006" }} &nbsp; {{ .Site.Params.copyrightHolder }}</span>
-<div class="license">
-  {{ $context := . }}
-  {{ range .Params.licenses }}
+<span>&copy;<a name="skip-to-licenses"> </a>{{ now.Format "2006" }}&nbsp; {{ .Site.Params.copyrightHolder }}</span>
+{{ $context := . }}
+{{ range .Params.licenses }}
+  <div class="license">
     {{ with index $.Site.Data.licenses . }}
       {{ partial .PartialForLicenseFooter $context }}
     {{ end }}
-  {{ end }}
-</div>
+  </div>
+{{ end }}
