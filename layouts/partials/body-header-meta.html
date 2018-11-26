@@ -13,23 +13,17 @@
   {{ end }}
 </dl>
 <dl>
-  <dt>All Posts:</dt>
-  <dd>
-    {{- if .PrevInSection }}
-      <a href="{{ .PrevPage.Permalink }}" class="previous" aria-label="Previous post">
-        &laquo; Previous post
-      </a>
-    {{- else }}
-      <span class="previous">&laquo; Previous post</span>
-    {{- end }}
-  </dd>
-  <dd>
-    {{- if .NextInSection }}
-      <a href="{{ .NextPage.Permalink }}" class="next" aria-label="Next posts">Next post &raquo;</a>
-    {{- else }}
-      <span class="next ">Next post &raquo;</span>
-    {{- end }}
-  </dd>
+  <dt>Blog Posts:</dt>
+  {{- if .PrevInSection }}
+    <dd>
+      <a href="{{ .PrevPage.Permalink }}" class="previous" aria-label="Previous post">previous</a>
+    </dd>
+  {{- end }}
+  {{- if .NextInSection }}
+    <dd>
+      <a href="{{ .NextPage.Permalink }}" class="next" aria-label="Next posts">next</a>
+    </dd>
+  {{- end }}
 {{- with .Params.series }}
     {{- $title := $.Site.Param (printf "series-%s" .) }}
     {{- if eq $title nil }}{{ $title = humanize . | title }}{{ end }}
@@ -39,10 +33,10 @@
     {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
     <dd></dd>
     {{- range first 1 $prev }}
-      <dd><a class="prev" aria-label="Previous {{ $.Page.Params.series }} post" href="{{ .Permalink }}">&laquo; Previous post</a></dd>
+      <dd><a class="prev" aria-label="Previous {{ $.Page.Params.series }} post" href="{{ .Permalink }}">previous</a></dd>
     {{- end}}
     {{- range last 1 $next }}
-      <dd><a class="next" aria-label="Next {{ $.Page.Params.series }} post" href="{{ .Permalink }}">Next post &raquo;</a></dd>
+      <dd><a class="next" aria-label="Next {{ $.Page.Params.series }} post" href="{{ .Permalink }}">next</a></dd>
     {{- end}}
 {{- end }}
 </dl>
