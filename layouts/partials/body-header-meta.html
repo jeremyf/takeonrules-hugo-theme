@@ -2,7 +2,7 @@
   {{ with .Params.tags }}
     <dt>Tags:<a name="skip-to-tags"> </a></dt>
     {{ range . }}
-        <dd><a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a></dd>
+        <dd><a href="{{ "tags" | absURL }}/{{ . | urlize }}" aria-label="All posts with tag {{ . }}">{{ . }}</a></dd>
     {{ end }}
   {{ end }}
   <dt>Published:</dt>
