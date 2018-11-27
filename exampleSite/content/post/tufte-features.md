@@ -11,8 +11,8 @@ categories = ["mathjax", "latex", "tufte-css"]
 
 +++
 
-This is a quick demonstration post.  It serves as an example of the features
-of this theme.  One of them is \\( \LaTeX \\) via MathJax. 
+This is a quick demonstration post. It serves as an example of the features
+of this theme. One of them is \\( \LaTeX \\) via MathJax. 
 {{< section "begin" >}}
 ## A Bit About Mathematics
 
@@ -40,7 +40,7 @@ And display math using escaped brackets `\\[`:
 ### Environments
 
 Currently, certain $\LaTeX$ environments need to be escaped so that
-the markdown processor does not override MathJax.  Currently, display
+the markdown processor does not override MathJax. Currently, display
 environments should be enclosed in `<p>` tags and blank lines.
 For instance:
 
@@ -70,7 +70,7 @@ is produced from
 ```
 
 ### Blockquotes
-Some blockquotes.  But first, we try to manually cite via
+Some blockquotes. But first, we try to manually cite via
 <cite>This is between cite tags and has math: \\(e^x \\)</cite>
 
 {{% blockquote cite="www.shawnohare.com" footer="Shawn O'Hare" %}}
@@ -87,8 +87,8 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 ### New thoughts
 
 <span class="newthought">Sometimes a new thought</span> distinguishes a section,
-as here.  There are currently two ways to create one.  One way is with raw
-HTML such as: `<span class="newthought">...</span>"`.  The theme also provides
+as here. There are currently two ways to create one. One way is with raw
+HTML such as: `<span class="newthought">...</span>"`. The theme also provides
 the `newthought` shortcode.
 
 ### Code

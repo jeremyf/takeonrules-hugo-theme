@@ -9,9 +9,9 @@ By utilizing copious partial templates the theme is largely customizable.
 
 ## Math
 
-Mathjax renders LaTeX written inside of markdown files.  LaTeX can be
+Mathjax renders LaTeX written inside of markdown files. LaTeX can be
 written more or less as normal, but inline and display environments that
-start with `\` must be escaped.  Some examples:
+start with `\` must be escaped. Some examples:
 
 - `This $\LaTeX$ will be rendered inline.`
 - `This \\(\LaTeX\\) will be rendered inline.`
@@ -19,11 +19,11 @@ start with `\` must be escaped.  Some examples:
 - `A simple displayed equation: \\[f(x, y) := e^{x^2 - y^2}.\\]`
 
 There currently seems to be some weirdness with other environments,
-such as the `align` environment.  These environments will render provided
-they are wrapped in `<p>` tags and blank lines.  The snippet below should
+such as the `align` environment. These environments will render provided
+they are wrapped in `<p>` tags and blank lines. The snippet below should
 render correctly.
 ```
-Let $G$ be a finite group with exponent $2$.  Then every element is
+Let $G$ be a finite group with exponent $2$. Then every element is
 an involution, hence for any $x$, $y$ in $G$ we have:
 
 <p>
@@ -49,13 +49,13 @@ The site specific parameters that this theme recognizes are:
 
 ## Page Parameters
 
-- `hideDate` boolean: if true, do not display a page date.  When `meta` is set to
+- `hideDate` boolean: if true, do not display a page date. When `meta` is set to
   true, `hideDate` takes greater precedence.
 - `hideReadTime` boolean: if true, do not display the page's reading time
-  estimate.  When `meta` is set to true, `hideReadTime` takes greater precedence.
+  estimate. When `meta` is set to true, `hideReadTime` takes greater precedence.
 - `math` boolean: if true, try to render the page's LaTeX code using MatheJax.
 - `meta` boolean: if true, display page metadata such as author, date, categories provided
-  these page parameters exist and are not overridden.  Content in the `/post` directory,
+  these page parameters exist and are not overridden. Content in the `/post` directory,
   (i.e., pages of type "post") ignore this parameter.
 - `toc` boolean: if true, display the table of contents for the page.
 
@@ -92,7 +92,7 @@ support all the features present in the
   - **Description**: Create an epigraph with the wrapped text.
   - **Usage**: To include a footer with source attribution, pass in the
   optional named parameters `pre`, `cite`, `post`. These parameters
-  make no styling assumptions, so spacing is important.  A more compactly
+  make no styling assumptions, so spacing is important. A more compactly
   styled epigraph will be used if the `type` parameter is set to `compact`.
   - **Example**:
   ```
