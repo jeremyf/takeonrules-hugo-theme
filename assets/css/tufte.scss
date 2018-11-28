@@ -105,9 +105,9 @@ th, td{ font-size: 1.2rem; line-height: 1.71428571;  }
 
 .booktabs caption, caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; margin-right: auto; margin-top: 1ex; caption-side: top; }
 
-.booktabs tbody tr td.l { text-align: left }
-.booktabs tbody tr td.c { text-align: center }
-.booktabs tbody tr td.r { text-align: right }
+.booktabs tbody tr td.l, table .l { text-align: left }
+.booktabs tbody tr td.c, table .c { text-align: center }
+.booktabs tbody tr td.r, table .r { text-align: right }
 
 .table-caption { float:right; clear:right; margin-right: -60%; width: 50%; margin-top: 0; margin-bottom: 0; font-size: 1.0rem; line-height: 1.96; }
 /* -- End of Table Styling section --*/
@@ -245,7 +245,8 @@ body.default-width {
 body.full-width {
  .content-listing, ul.content-listing li.listing { width: 90%; margin-left: auto; margin-right: auto; padding: 0% 5%; }
 
-  .full-width article p { width: 90%; }
+ .table-wrapper { width: 90%; }
+  article p { width: 90%; }
   h1.content-listing-header { font-style: normal; text-transform: uppercase; letter-spacing: 0.2rem; font-size: 1.8rem; }
 
   li.listing hr { width:100%; }
