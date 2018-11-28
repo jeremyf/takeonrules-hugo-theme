@@ -34,4 +34,18 @@
       {{ partial "jsonld.json" . }}
     </script>
   {{- end }}
+  {{- if isset .Params "with_datatables" }}
+    <meta name="withDataTables" content="{{ .Params.with_datatables}}" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css" integrity="sha384-Y5cgvAigcTOTaObjiReosnMvQCzeJTHVQ3ezBmzGzM1g0Armw98SOB73bclZHywS" crossorigin="anonymous" media="screen">
+    <script src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js" integrity="sha384-lGO1Q1P+mA8tLRu41NDOmOxG62K3Z3ATFdolbbX3dWFkRXuJBz0Sl8qYa6b9C9wv" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.blogroll').DataTable({
+          "order": [[ 0, 'desc' ]],
+          "paging": false,
+          "info": true // Default is true, prints "Showing x of y entries"
+        }); } );
+    </script>
+  {{- end }}
 </head>
