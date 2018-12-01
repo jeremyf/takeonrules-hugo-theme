@@ -159,7 +159,7 @@ div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' 
   ul { width: 85%; }
   figure { max-width: 90%; }
   figcaption, figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
-  blockquote p, blockquote footer {  width: 80%; padding-left: 5%; padding-right: 5%; }
+  blockquote p, blockquote footer, blockquote ul, blockquote ol {  width: 80%; padding-left: 5%; padding-right: 5%; }
   .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
 }
 
