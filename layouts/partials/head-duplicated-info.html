@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+{{ template "_internal/google_analytics_async.html" . }}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+{{- $tufteCssResource := resources.Get "css/tufte.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" type="text/css" media="screen,print" href="{{ $tufteCssResource.RelPermalink }}">
+{{ $printCssResource := resources.Get "css/print.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" type="text/css" media="print" href="{{ $printCssResource.RelPermalink }}">
+{{- $rssTemplate := resources.Get "feed.xml" }}
+{{- $rss := $rssTemplate | resources.ExecuteAsTemplate "feed.xml" . }}
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed" href="{{ $rss.RelPermalink }}">
+<link rel="me" href="https://github.com/jeremyf" title="jeremyf@Github">
+<meta property="og:image" content="{{ .Site.BaseURL}}images/takeonrules.wordpress.com-banner.jpg" />
+<meta property="og:image:width" content="1000" />
+<meta property="og:image:height" content="288" />
+<meta property="og:locale" content="en_US" />

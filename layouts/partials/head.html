@@ -1,31 +1,14 @@
 <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
-  <meta charset="utf-8">
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
-  {{ template "_internal/google_analytics_async.html" . }}
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  {{ partialCached "head-duplicated-info.html" . }}
   <title>{{ .Title }} // {{ .Site.Title  }}</title>
-  {{- $tufteCssResource := resources.Get "css/tufte.scss" | resources.ToCSS | resources.Fingerprint }}
-  <link rel="stylesheet" type="text/css" media="screen,print" href="{{ $tufteCssResource.RelPermalink }}">
-  {{ $printCssResource := resources.Get "css/print.scss" | resources.ToCSS | resources.Fingerprint }}
-  <link rel="stylesheet" type="text/css" media="print" href="{{ $printCssResource.RelPermalink }}">
   {{ if .RelPermalink }}<link rel="canonical" href="{{ .RelPermalink }}">{{ end }}
   {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}
-  {{- $rssTemplate := resources.Get "feed.xml" }}
-  {{- $rss := $rssTemplate | resources.ExecuteAsTemplate "feed.xml" . }}
-  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed" href="{{ $rss.RelPermalink }}">
   {{- if in (slice "taxonomy" "taxonomyTerm") .Kind }}
   <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml">
   {{- end }}
-  <link rel="me" href="https://github.com/jeremyf" title="jeremyf@Github">
 
   {{ partial "opengraph.html" . }}
   <meta name="hugoPageKind" content="{{ .Kind }}" />
-  <meta property="og:image" content="{{ .Site.BaseURL}}images/takeonrules.wordpress.com-banner.jpg" />
-  <meta property="og:image:width" content="1000" />
-  <meta property="og:image:height" content="288" />
-  <meta property="og:locale" content="en_US" />
 
   {{ template "_internal/twitter_cards.html" . }}
 
