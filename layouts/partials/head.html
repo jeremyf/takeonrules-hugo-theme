@@ -3,6 +3,7 @@
   <title>{{ .Title }} // {{ .Site.Title  }}</title>
   {{ if .RelPermalink }}<link rel="canonical" href="{{ .RelPermalink }}">{{ end }}
   {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}
+  <link rel="alternate" type="application/json" title="JSON for {{ .Title}}" href="{{ .Permalink }}index.json">
   {{- if in (slice "taxonomy" "taxonomyTerm") .Kind }}
   <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml">
   {{- end }}
