@@ -15,6 +15,7 @@
 {{- $json := $jsonTemplate | resources.ExecuteAsTemplate "feed.json" . }}
 <link rel="alternate" type="application/json" title="{{ .Site.Title}} JSON Feed" href="{{ $json.RelPermalink }}">
 <link rel="me" href="https://github.com/jeremyf" title="jeremyf@Github">
+<link rel="me" href="https://medium.com/@takeonrules" title="@takeonrules at Medium">
 <meta property="og:image" content="{{ .Site.BaseURL}}images/takeonrules.wordpress.com-banner.jpg" />
 <meta property="og:image:width" content="1000" />
 <meta property="og:image:height" content="288" />
