@@ -4,20 +4,36 @@
     <link>{{ .Site.BaseURL }}</link>
     <description>Recent content for {{ .Site.Title }}</description>
     <generator>Hugo -- gohugo.io</generator>
-    {{- with .Site.LanguageCode }}<language>{{.}}</language>{{end}}
-    {{- with .Site.Params.copyrightHolder }}<managingEditor>{{.}}</managingEditor>{{end}}
-    {{- with .Site.Params.copyrightHolder }}<webMaster>{{.}}</webMaster>{{end}}{{ with .Site.Copyright }}
-    <copyright>{{.}}</copyright>{{end}}{{ if not .Date.IsZero }}
-    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    <copyright>Copyright {{ .Date.Format "2006" }}, {{ .Site.Params.copyrightHolder }}</copyright>
+    {{- with .Site.LanguageCode }}
+      <language>{{.}}</language>
+    {{- end}}
+    {{- with .Site.Params.copyrightHolderEmail }}
+      <managingEditor>{{.}}</managingEditor>
+    {{- end}}
+    {{- with .Site.Params.copyrightHolderEmail }}
+      <webMaster>{{.}}</webMaster>
+    {{- end}}
+    {{- with .Site.Params.docsUrlForRssV2}}
+      <docs>{{ . }}</docs>
+    {{- end }}
+    {{- if not .Date.IsZero }}
+      <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- end }}
     {{- range first 15 (where .Site.Pages "Type" "post") }}
-    <item>
-      <title>{{ .Title | htmlEscape }}</title>
-      <link>{{ .Permalink }}</link>
-      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{ with .Site.Params.copyrightHolder }}<author>{{.}}</author>{{end}}
-      <guid>{{ .Permalink }}</guid>
-      <description>{{ .Content | html }}</description>
-    </item>
+      <item>
+        <title>{{ .Title | htmlEscape }}</title>
+        <link>{{ .Permalink }}</link>
+        <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+        {{- with .Site.Params.copyrightHolderEmail }}
+          <author>{{ . }}</author>
+        {{- end }}
+        <guid>{{ .Permalink }}</guid>
+        {{- range .Params.tags }}
+          <category>{{ . | urlize }}</category>
+        {{- end }}
+        <description>{{ .Content | html }}</description>
+      </item>
     {{- end }}
   </channel>
 </rss>
