@@ -15,6 +15,9 @@
           <header>
             <h1><a href="{{ .URL }}">{{ .Title }}</a></h1>
           </header>
+          <nav class="post-meta">
+            {{ partial "tags-and-published-date.html" . }}
+          </nav>
           <section class="content">
             {{ .Content }}
           </section>
