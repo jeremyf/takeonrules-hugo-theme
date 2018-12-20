@@ -156,7 +156,7 @@ div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' 
   html { width: 90%; }
   p, footer,div.mathblock { width: 90%; }
   pre code { width: 87.5%; }
-  ul { width: 85%; }
+  ol, ul { width: 87.5%; }
   figure { max-width: 90%; }
   figcaption, figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
   blockquote p, blockquote footer, blockquote ul, blockquote ol {  width: 80%; padding-left: 5%; padding-right: 5%; }
