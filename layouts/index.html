@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   {{ partial "head.html" . }}
-  <body class="default-width">
+  <body class="{{ if isset .Params "full_width"}}full-width{{ else }}default-width{{ end }}">
     {{ $paginator := .Paginate (where .Pages "Type" "post") 5 }}
     {{ partial "body-header.html" . }}
     <nav role="navigation" aria-label="Blog postings pagination">
