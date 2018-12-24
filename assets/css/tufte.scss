@@ -62,7 +62,8 @@ p { margin-top: 1.4rem; }
 p, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
 blockquote {
   font-size: 1.1rem;
-  p, ul { font-size: 1.1rem; line-height: 1.78181818; margin-top: 1.78181818rem; margin-bottom: 1.78181818rem; width: 45%; padding-left: 2.5%; padding-right: 2.5%; }
+  p, ul, h2, h3, h4 { padding-left: 2.5%; padding-right: 2.5%; }
+  p, ul { font-size: 1.1rem; line-height: 1.78181818; margin-top: 1.78181818rem; margin-bottom: 1.78181818rem; width: 45%; }
   li { font-size: 1.1rem; margin-left: 3.5%; }
 // Removing the far too large padding for lists in a quote
   ul { padding-top: 0; }
@@ -159,7 +160,7 @@ div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' 
   ol, ul { width: 87.5%; }
   figure { max-width: 90%; }
   figcaption, figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
-  blockquote p, blockquote footer, blockquote ul, blockquote ol {  width: 80%; padding-left: 5%; padding-right: 5%; }
+  blockquote p, blockquote footer, blockquote ul, blockquote ol, blockquote h2, blockquote h3 {  width: 80%; padding-left: 5%; padding-right: 5%; }
   .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
 }
 
