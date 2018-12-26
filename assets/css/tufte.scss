@@ -91,6 +91,7 @@ h1 code, h2 code, h3 code { font-size: 0.80em; } //left in for no real reason
 table, table.booktabs { width: auto; margin: 0 auto; border-spacing: 0px; border-top: 2px solid $border-color; border-bottom: 2px solid $border-color; }
 
 .booktabs th, th { border-bottom: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; text-align: center; }
+.booktabs tbody th, tbody th { border: none; }
 
 tfoot td { border-top: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; font-size: smaller; text-align: center; }
 
