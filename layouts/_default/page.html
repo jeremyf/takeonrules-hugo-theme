@@ -13,10 +13,10 @@
           <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
         </header>
         <a name="skip-to-content"> </a>
-        <section class="content">
+        <div class="content">
           {{ .Content }}
         </section>
-      </article>
+      </div>
     </main>
     {{ partial "footer.html" . }}
   </body>

@@ -119,7 +119,7 @@ th, td{ font-size: 1.2rem; line-height: 1.71428571;  }
 
 article { position: relative; padding: 1rem 0rem 1.5rem 0rem; } // reduced top and bottom padding by 50%
 
-section { padding-top: 1rem; padding-bottom: 1rem; }
+.section { padding-top: 1rem; padding-bottom: 1rem; }
 
 
 ul, ol { width: 45%; -webkit-padding-start: 5%; -webkit-padding-end: 5%; padding-top: 1rem; }
@@ -332,7 +332,7 @@ ol.breadcrumb-list .breadcrumb-item:not(:last-of-type)::after { content: " / " }
 
 .end-of-article-navigation { padding-bottom: 1rem;}
 
-section.content { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
+.content { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 button[type='submit'] { padding: 3px 10px; }
 header form { padding-bottom: 1rem; }
 body.full-width ul { width: 85%; }
@@ -341,7 +341,7 @@ main.blogPostings article {
   h2, summary { font-size: 1.8rem; }
   h3 { font-size: 1.6rem; }
   h4 { font-size: 1.2rem; }
-  section.content { margin-top: 0.5rem; }
+  .content { margin-top: 0.5rem; }
 }
 .table-wrapper { padding-top: 0.5rem; }
 .paragraph { width: 55% }

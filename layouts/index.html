@@ -10,19 +10,24 @@
     <main role="main" aria-label="Blog postings" class="blogPostings">
       <h1>Blog Posts</h1>
       <a name="skip-to-content"> </a>
+      <section>
       {{ range $paginator.Pages }}
         <article>
           <header>
-            <h1><a href="{{ .URL }}">{{ .Title }}</a></h1>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           </header>
           <nav class="post-meta">
             {{ partial "tags-and-published-date.html" . }}
           </nav>
-          <section class="content">
-            {{ .Content }}
-          </section>
+          <div class="section">
+            <p>
+              {{ .Summary }}
+              <a href="{{ .RelPermalink }}">Read more&hellip;</a>
+            </p>
+          </div>
         </article>
       {{ end }}
+    </section>
     </main>
     <nav role="navigation" aria-hidden="true">
       {{ partial "paginator.html" $paginator }}
