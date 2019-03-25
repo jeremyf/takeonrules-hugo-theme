@@ -11,6 +11,9 @@
   {{ partial "opengraph.html" . }}
   <meta name="hugoPageKind" content="{{ .Kind }}" />
   <meta name="hugoPageType" content="{{ .Type }}" />
+  {{- if isset .Params "description" }}
+  <meta name="description" content="{{ .Params.description }}" />
+  {{- end }}
 
   {{ template "_internal/twitter_cards.html" . }}
 
