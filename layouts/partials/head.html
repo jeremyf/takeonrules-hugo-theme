@@ -1,6 +1,10 @@
 <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
   {{ partialCached "head-duplicated-info.html" . }}
+  {{- if .IsHome }}
+  <title>{{ .Title }}</title>
+  {{- else }}
   <title>{{ .Title }} // {{ .Site.Title  }}</title>
+  {{- end }}
   {{ if .RelPermalink }}<link rel="canonical" href="{{ .RelPermalink }}">{{ end }}
   {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}
   <link rel="alternate" type="application/json" title="JSON for {{ .Title}}" href="{{ .Permalink }}index.json">
