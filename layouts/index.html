@@ -21,6 +21,7 @@
           </nav>
           <div class="section">
             <p>
+              {{ partial "home_page_image.html" . }}
               {{ .Summary }}
               <a href="{{ .RelPermalink }}">Read more&hellip;</a>
             </p>
