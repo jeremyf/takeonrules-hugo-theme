@@ -53,6 +53,7 @@ body { width: 87.5%; margin-left: auto; margin-right: auto; padding-left: 12.5%;
 // added rational line height and margins ala http://webtypography.net/intro/
 h1 {                     font-weight: 400; font-size: 2.5rem; margin-top: 1.568rem;              margin-bottom: 1.568rem; line-height: 1.08888888888889; }
 h2, summary { font-style: italic; font-weight: 400; font-size: 2.1rem; margin-top: 1.8666666666666667rem; margin-bottom: 0;        line-height: 1.08888888888889; }
+.blogPostings h2 { margin-bottom: 1.568rem; }
 h3 { font-style: italic; font-weight: 400; font-size: 1.8rem; margin-top: 2.1777777777777778rem; margin-bottom: 0;        line-height: 1.08888888888889; }
 // ET says a need for more than 3 levels of headings is the sign of a diseased mind; But I added an h4
 
