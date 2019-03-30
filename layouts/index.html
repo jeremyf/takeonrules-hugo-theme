@@ -17,7 +17,14 @@
             <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           </header>
           <nav class="post-meta">
-            {{ partial "tags-and-published-date.html" . }}
+            <dl class="metadata">
+              <dt>Published:</dt>
+              <dd><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></dd>
+              {{ if ne .Lastmod .Date }}
+                <dt>Modified:</dt>
+                <dd><time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time></dd>
+              {{ end }}
+            </dl>
           </nav>
           <div class="section">
             <p>
