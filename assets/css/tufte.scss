@@ -120,7 +120,7 @@ th, td{ font-size: 1.2rem; line-height: 1.71428571;  }
 
 article { position: relative; padding: 1rem 0rem 1.5rem 0rem; } // reduced top and bottom padding by 50%
 
-.section { padding-top: 1rem; padding-bottom: 1rem; }
+.section { padding-top: 1rem; padding-bottom: 1rem; clear: left; }
 
 
 ul, ol { width: 45%; -webkit-padding-start: 5%; -webkit-padding-end: 5%; padding-top: 1rem; }
@@ -202,6 +202,7 @@ span.newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.
   div.table-wrapper, table, table.booktabs { width: 85%; }
   div.table-wrapper { border-right: 1px solid #efefef; }
   img { max-width: 100%; }
+  ol.breadcrumb-list .breadcrumb-item, .metadata { line-height: 1.78181818rem; }
 }
 /*--- End of Basic Layout stuff from tufte.css ---*/
 
@@ -326,7 +327,7 @@ nav dl dt:first-child { margin-left: 0rem; }
 
 .breadcrumb-list { font-size: 1rem; padding-bottom: 1rem; padding-left: 0; }
 ol.breadcrumb-list { list-style: none; width: 85% ; clear: left; padding-top: 0rem;}
-ol.breadcrumb-list .breadcrumb-item { line-height: 1; padding-right: 0.2rem; margin-left: 0rem; float: left; margin-right: 0rem; }
+ol.breadcrumb-list .breadcrumb-item { padding-right: 0.2rem; margin-left: 0rem; float: left; margin-right: 0rem; }
 ol.breadcrumb-list .breadcrumb-item:first-child { margin-left: 0rem; }
 ol.breadcrumb-list .breadcrumb-item { padding-top: 0rem; }
 ol.breadcrumb-list .breadcrumb-item:not(:last-of-type)::after { content: " / " }
