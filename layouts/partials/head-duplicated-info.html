@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 {{- $tufteCssResource := resources.Get "css/tufte.scss" | resources.ToCSS | resources.Fingerprint }}
 <link rel="stylesheet" type="text/css" media="screen,print" href="{{ $tufteCssResource.RelPermalink }}">
+<link rel="preload" as="style" href="{{ $tufteCssResource.RelPermalink }}">
 {{ $printCssResource := resources.Get "css/print.scss" | resources.ToCSS | resources.Fingerprint }}
 <link rel="stylesheet" type="text/css" media="print" href="{{ $printCssResource.RelPermalink }}">
 {{- $rssTemplate := resources.Get "feed.xml" }}
