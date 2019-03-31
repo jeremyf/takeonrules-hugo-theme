@@ -1,0 +1,2 @@
+{{ .RawContent | replaceRE "{{[%<][^}]marginfigure[^}]*}}" "" | replaceRE "{{[%<][^}](sidenote|marginnote)[^}]*}}" "=~=~=" | replaceRE "=~=~=[^{]*{{[%<][^}]*/(sidenote|marginnote)[^}]*}}" "" | markdownify | truncate 450 }}
+<p><a href="{{ .RelPermalink }}">Read more&hellip;</a></p>

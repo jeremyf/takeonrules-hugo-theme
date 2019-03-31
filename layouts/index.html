@@ -20,11 +20,8 @@
             {{ partial "tags-and-published-date.html" . }}
           </nav>
           <div class="section">
-            <p>
-              {{ partial "home_page_image.html" . }}
-              {{ .Summary }}
-              <a href="{{ .RelPermalink }}">Read more&hellip;</a>
-            </p>
+            {{ partial "home_page_image.html" . }}
+            {{ partial "summary-without-image.html" . }}
           </div>
         </article>
       {{ end }}

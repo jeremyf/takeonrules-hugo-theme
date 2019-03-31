@@ -1,4 +1,5 @@
 {{- if (isset .Params "images") }}
+<p>
   <span class="marginnote marginfigure" role="note">
     {{- range first 1 .Params.images }}
       {{- $original := resources.Get .src }}
@@ -8,4 +9,5 @@
       </a>
     {{- end }}
   </span>
+</p>
 {{- end }}
