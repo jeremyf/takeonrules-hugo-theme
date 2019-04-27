@@ -5,7 +5,13 @@
   {{- else }}
   <title>{{ .Title }} // {{ .Site.Title  }}</title>
   {{- end }}
-  {{ if .RelPermalink }}<link rel="canonical" href="{{ .RelPermalink }}">{{ end }}
+  {{- if .Params.canonical_url }}
+  <link rel="canonical" href="{{ .Params.canonical_url }}">
+  {{- else }}
+    {{- if .RelPermalink }}
+  <link rel="canonical" href="{{ .RelPermalink }}">
+    {{- end }}
+  {{- end }}
   {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}
   <link rel="alternate" type="application/json" title="JSON for {{ .Title}}" href="{{ .Permalink }}index.json">
   {{- if in (slice "taxonomy" "taxonomyTerm") .Kind }}
