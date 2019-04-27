@@ -7,7 +7,7 @@
     <meta name="layout" content="terms" />
     <main class="group" role="main" aria-label="Blog posting">
       <article role="article" class="single-article">
-        {{ $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .URL }}
+        {{ $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
         {{ $title := .Title }}
         {{ with index $.Site.Data.licenses $slug }}
         <header>
