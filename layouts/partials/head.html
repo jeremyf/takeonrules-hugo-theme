@@ -27,7 +27,7 @@
 
   {{- if .Site.Params.withJsonLd }}
     <script type="application/ld+json">
-      {{ partial "jsonld.json" . }}
+      {{ partial "jsonld.json" . | safeJS }}
     </script>
   {{- end }}
   {{- if isset .Params "with_datatables" }}
