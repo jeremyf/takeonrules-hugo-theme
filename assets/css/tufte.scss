@@ -62,6 +62,7 @@ p, ol, ul { font-size: 1.4rem; }
 p { margin-top: 1.4rem; }
 p, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
 blockquote {
+  width: 55%;
   font-size: 1.1rem;
   p, ul, h2, h3, h4 { padding-left: 2.5%; padding-right: 2.5%; }
   p, ul { font-size: 1.1rem; line-height: 1.78181818; margin-top: 1.78181818rem; margin-bottom: 1.78181818rem; width: 45%; }
@@ -152,12 +153,14 @@ figure.fullwidth figcaption { float: left; margin-right: 0%; margin-left: 36%; }
 img { max-width: 100%; }
 
 p, footer, div.table-wrapper, div.mathblock{ width: 55%; }
+blockquote { margin-top: 1.4rem; }
+blockquote footer { width: 90%; margin-top: 1.4rem; }
 
 div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
 @media screen and (max-width: 760px) {
   html { width: 90%; }
-  p, footer,div.mathblock { width: 90%; }
+  blockquote, p, footer,div.mathblock { width: 90%; }
   pre code { width: 87.5%; }
   ol, ul { width: 87.5%; }
   figure { max-width: 90%; }
