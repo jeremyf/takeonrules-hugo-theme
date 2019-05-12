@@ -159,7 +159,7 @@ blockquote footer { width: 90%; margin-top: 1.4rem; }
 div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
 // Without this setting, when the header would wrap, the letters would overlap
-main header h1 { line-height: 1.08888888888889; width: 55%; }
+main header h1 { width: 55%; }
 header > nav.group { padding-bottom: 1rem; }
 
 pre, pre code, p pre code { width: 52.5%; padding-left: 2.5%; overflow-x: auto; }
@@ -318,6 +318,7 @@ main.blogPostings article {
   blockquote, p, footer,div.mathblock { width: 90%; }
   pre code { width: 87.5%; }
   ol, ul { width: 87.5%; }
+  nav .breadcrumb-list .breadcrumb-item:last-of-type { padding-bottom: 1rem; }
   figure { max-width: 90%; }
   figcaption, figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
   blockquote p, blockquote footer, blockquote ul, blockquote ol, blockquote h2, blockquote h3 {  width: 80%; padding-left: 5%; padding-right: 5%; }
