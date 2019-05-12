@@ -158,17 +158,9 @@ blockquote footer { width: 90%; margin-top: 1.4rem; }
 
 div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
-@media screen and (max-width: 760px) {
-  html { width: 90%; }
-  blockquote, p, footer,div.mathblock { width: 90%; }
-  pre code { width: 87.5%; }
-  ol, ul { width: 87.5%; }
-  figure { max-width: 90%; }
-  figcaption, figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
-  blockquote p, blockquote footer, blockquote ul, blockquote ol, blockquote h2, blockquote h3 {  width: 80%; padding-left: 5%; padding-right: 5%; }
-  .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
-}
-
+// Without this setting, when the header would wrap, the letters would overlap
+main header h1 { line-height: 1.08888888888889; width: 55%; }
+header > nav.group { padding-bottom: 1rem; }
 
 pre, pre code, p pre code { width: 52.5%; padding-left: 2.5%; overflow-x: auto; }
 
@@ -177,37 +169,6 @@ pre, pre code, p pre code { width: 52.5%; padding-left: 2.5%; overflow-x: auto; 
 span.newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.05rem; }
 
 @import "marginalia";
-
-@media screen and (max-width: 760px) {
-  span.marginnote:not(.marginfigure), span.sidenote {
-    border-left-width: thin;
-    border-left-color: $contrast-color;
-    border-left-style: dotted;
-    padding-left: 0.5rem;
-  }
-  // The collapsed and non-collapsed CSS are reciprocals. You should pick one or the other
-  // BEGIN collapsed margin
-  // .sidenote, .marginnote { display: none; }
-  // .margin-toggle:checked + .sidenote,
-  // .margin-toggle:checked + .marginnote { display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative; }
-  // END collapsed margin
-  .sidenote, .marginnote { display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative; }
-  .margin-toggle:checked + .sidenote,
-  .margin-toggle:checked + .marginnote { display: none; }
-  // END non-collapsed margin
-}
-
-@media (max-width: 760px) {
-  label.margin-toggle:not(.sidenote-number) { display: inline; color: $contrast-color; }
-  label { cursor: pointer; }
-  pre, pre code, p code, p pre code { width: 90%; padding: 0; }
-  .table-caption { display: block; float: right; clear: both; width: 98%; margin-top: 1rem; margin-bottom: 0.5rem; margin-left: 1%; margin-right: 1%; vertical-align: baseline; position: relative; }
-  div.table-wrapper, table, table.booktabs { width: 85%; }
-  div.table-wrapper { border-right: 1px solid #efefef; }
-  img { max-width: 100%; }
-  ol.breadcrumb-list .breadcrumb-item, .metadata { line-height: 1.78181818rem; }
-}
-/*--- End of Basic Layout stuff from tufte.css ---*/
 
 /* -- Jekyll specific styling --*/
 //helper classes
@@ -314,9 +275,6 @@ table.unstriped tbody tr {  background-color: $bg-color; }
 table tbody tr.subhead { background-color: lighten($table-header, 20%); }
 table tr.subbody td { padding-left: 1.5rem; }
 table.full { width: 100%; }
- // Without this setting, when the header would wrap, the letters would overlap
-main header h1 { line-height: 1.08888888888889; width: 55%; }
-header > nav.group { padding-bottom: 1rem; }
 // BEGIN Skip Navigation
 a.offscreen { position:absolute; left:-1000px; top:-1000px; width:1px; height:1px; text-align: left; overflow:hidden; }
 a.offscreen:focus, a.offscreen:active, a.offscreen:hover { position:absolute; padding: 0.75rem 0.75rem; margin-right: 2rem; margin-top: 1.5rem; left:5px; top:-20px; width:auto; height:auto; overflow:visible; background-color:$contrast-color; color: $bg-color; border: 1px dotted #000; }
@@ -353,3 +311,45 @@ main.blogPostings article {
 .single-article { padding-top: 0; }
 
 .hide-when-javascript-disabled { display: none; }
+
+
+@media screen and (max-width: 760px) {
+  html { width: 90%; }
+  blockquote, p, footer,div.mathblock { width: 90%; }
+  pre code { width: 87.5%; }
+  ol, ul { width: 87.5%; }
+  figure { max-width: 90%; }
+  figcaption, figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
+  blockquote p, blockquote footer, blockquote ul, blockquote ol, blockquote h2, blockquote h3 {  width: 80%; padding-left: 5%; padding-right: 5%; }
+  .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
+  main header h1 { width: 90%; }
+
+  span.marginnote:not(.marginfigure), span.sidenote {
+    border-left-width: thin;
+    border-left-color: $contrast-color;
+    border-left-style: dotted;
+    padding-left: 0.5rem;
+  }
+  // The collapsed and non-collapsed CSS are reciprocals. You should pick one or the other
+  // BEGIN collapsed margin
+  // .sidenote, .marginnote { display: none; }
+  // .margin-toggle:checked + .sidenote,
+  // .margin-toggle:checked + .marginnote { display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative; }
+  // END collapsed margin
+  .sidenote, .marginnote { display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative; }
+  .margin-toggle:checked + .sidenote,
+  .margin-toggle:checked + .marginnote { display: none; }
+  // END non-collapsed margin
+}
+
+@media (max-width: 760px) {
+  label.margin-toggle:not(.sidenote-number) { display: inline; color: $contrast-color; }
+  label { cursor: pointer; }
+  pre, pre code, p code, p pre code { width: 90%; padding: 0; }
+  .table-caption { display: block; float: right; clear: both; width: 98%; margin-top: 1rem; margin-bottom: 0.5rem; margin-left: 1%; margin-right: 1%; vertical-align: baseline; position: relative; }
+  div.table-wrapper, table, table.booktabs { width: 85%; }
+  div.table-wrapper { border-right: 1px solid #efefef; }
+  img { max-width: 100%; }
+  ol.breadcrumb-list .breadcrumb-item, .metadata { line-height: 1.78181818rem; }
+}
+/*--- End of Basic Layout stuff from tufte.css ---*/
