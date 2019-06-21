@@ -1,5 +1,5 @@
 {{- $cite := .Get "cite" | markdownify }}
 <blockquote cite="{{ $cite }}">
-  {{ .Inner }}
+  {{ .Inner | markdownify }}
   <footer>&mdash;<cite>{{ $cite }}</cite></footer>
 </blockquote>
