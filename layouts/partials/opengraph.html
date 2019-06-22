@@ -1,12 +1,20 @@
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+<meta property="og:locale" content="{{ .Site.LanguageCode }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{- with .Params.images }}{{ range first 6 . }}
+{{- if (isSet .Params "images") }}
+{{- with .Params.images }}{{ range first 1 . }}
 <meta property="og:image" content="{{ .src | absURL }}" />
 <meta property="og:image:width" content="{{ .width }}" />
 <meta property="og:image:height" content="{{ .height }}" />
-{{ end }}{{ end }}
+{{- end}}
+{{- end}}
+{{- else }}
+<meta property="og:image" content="{{ .Site.BaseURL}}images/takeonrules.wordpress.com-banner.jpg" />
+<meta property="og:image:width" content="1000" />
+<meta property="og:image:height" content="288" />
+{{- end }}
 
 {{- if .IsPage }}
 {{- if not .PublishDate.IsZero }}<meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" | safeHTMLAttr }}"/>
