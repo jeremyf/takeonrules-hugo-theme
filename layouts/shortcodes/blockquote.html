@@ -1,5 +1,5 @@
 {{- $cite := .Get "cite" | markdownify }}
 <blockquote cite="{{ $cite }}">
-  {{ .Inner | markdownify }}
+  {{ .Inner | markdownify | replaceRE "^([^<p>].*)$" "<p>$1</p>" | safeHTML }}
   <footer>&mdash;<cite>{{ $cite }}</cite></footer>
 </blockquote>
