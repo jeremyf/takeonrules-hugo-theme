@@ -1,6 +1,6 @@
 {{- if isset .Params "description" }}
-{{ .Params.description | markdownify }}
+{{ .Params.description | markdownify | replaceRE "^([^<p>].*)$" "<p>$1</p>" | safeHTML }}
 {{- else }}
-{{ .RawContent | replaceRE "{{[%<][^}]marginfigure[^}]*}}" "" | replaceRE "{{[%<][^}](sidenote|marginnote|epigraph)[^}]*}}" "=~=~=" | replaceRE "=~=~=[^{]*{{[%<][^}]*/(sidenote|marginnote|epigraph)[^}]*}}" "" | markdownify | truncate 450 | replaceRE "{{[%<][^<]*" "" | safeHTML }}
+{{ .RawContent | replaceRE "{{[%<][^}]marginfigure[^}]*}}" "" | replaceRE "{{[%<][^}](sidenote|marginnote|epigraph)[^}]*}}" "=~=~=" | replaceRE "=~=~=[^{]*{{[%<][^}]*/(sidenote|marginnote|epigraph)[^}]*}}" "" | markdownify | truncate 450 | replaceRE "{{[%<][^<]*" "" | replaceRE "^([^<p>].*)$" "<p>$1</p>" | safeHTML }}
 {{- end }}
 <p><a href="{{ .RelPermalink }}">Read more&hellip;</a></p>
