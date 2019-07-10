@@ -13,6 +13,7 @@ article h2, article h2 h3, article h3, article h3 h4, article h4, article h4 h5 
 // body main header, .marginnote, .sidenote { display: inherit; }
 body header, body footer, body nav { display:none; }
 body main header { display: inherit; }
+body blockquote footer { display: inherit; }
 
 @import "marginalia";
 
