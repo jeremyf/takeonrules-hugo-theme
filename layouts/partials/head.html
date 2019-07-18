@@ -21,9 +21,9 @@
   {{ partial "opengraph.html" . }}
   <meta name="hugoPageKind" content="{{ .Kind }}" />
   <meta name="hugoPageType" content="{{ .Type }}" />
-  <meta name="Description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+  <meta name="Description" content="{{ with .Description }}{{ . | markdownify | plainify }}{{ else }}{{if .IsPage}}{{ .Summary | markdownify | plainify }}{{ else }}{{ with .Site.Params.description }}{{ . | markdownify | plainify }}{{ end }}{{ end }}{{ end }}" />
 
-  {{ template "_internal/twitter_cards.html" . }}
+  {{ partial "twitter_cards.html" . }}
 
   {{- if .Site.Params.withJsonLd }}
     <script type="application/ld+json">
