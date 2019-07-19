@@ -1,13 +1,24 @@
+{{- $cite := .Get "cite" }}
+{{- $cite_url := .Get "cite_url" }}
 <div class="epigraph">
-<blockquote>
-{{ $t := .Get "type" }}
-{{ if eq $t "compact"  }}{{ .Inner }}{{ else }}<p>{{ .Inner | markdownify }}</p>{{ end }}
-{{ if .IsNamedParams }}
-<footer>
-{{ with .Get "pre" }}&mdash; {{ . }}, {{ end }}
-{{ with .Get "cite" }}<cite>{{ . | markdownify }}</cite>{{ end }}
-{{ with .Get "post" }}{{ . }}{{ end }}
-</footer>
-{{ end }}
-<blockquote>
+<blockquote{{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
+  {{ .Inner | markdownify | replaceRE "^([^<p>].*)$" "<p>$1</p>" | safeHTML }}
+  {{ if .IsNamedParams }}
+  <footer>
+  {{ with .Get "pre" }}&mdash; {{ . | markdownify }}, {{ end }}
+  {{- if($cite) }}
+    <cite>
+    {{- if($cite_url) }}
+      <a href="{{ $cite_url }}">{{ $cite | markdownify }}</a>
+    {{- else }}
+      {{ $cite | markdownify }}
+    {{- end }}
+    </cite>
+  {{- else if($cite_url) }}
+     <cite><a href="{{ $cite_url }}">{{ $cite_url }}</a></cite>
+  {{- end }}
+  {{ with .Get "post" }}{{ . | markdownify  }}{{ end }}
+  </footer>
+  {{ end }}
+</blockquote>
 </div>
