@@ -1,0 +1,6 @@
+{{/*
+  Inject a paragraph into a markdown rendering if a paragraph does not already wrap the content.
+
+  Based on https://stackoverflow.com/questions/26771592/negative-look-ahead-go-regular-expressions
+*/}}
+{{ . | markdownify | replaceRE "^(([^<]|<[^p]|<p[^>]).*)$" "<p>$1</p>" | safeHTML }}
