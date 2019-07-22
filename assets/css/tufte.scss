@@ -71,7 +71,11 @@ blockquote {
   ul { padding-top: 0; }
   footer { font-size: 1.1rem; margin-top: -1.2818181rem; width: 45%; text-align: right; }
   p { width: 100%; }
-  ul { width: 80%; }
+  ul ol { width: 80%; }
+}
+
+table {
+  ul, ol { width: 80%; }
 }
 
 /* BEGIN Epigraphs */
@@ -99,7 +103,7 @@ table, table.booktabs { width: auto; margin: 0 auto; border-spacing: 0px; border
 
 tfoot td { border-top: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; font-size: smaller; text-align: center; }
 
-th, td{ font-size: 1.2rem; line-height: 1.71428571;  }
+th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.71428571;  }
 
 .booktabs th.cmid, th { border-bottom: 1px solid lighten($border-color, 25%); }
 
