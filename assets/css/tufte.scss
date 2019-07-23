@@ -78,6 +78,15 @@ table {
   ul, ol { width: 80%; }
 }
 
+.external-links {
+  margin-top: 1rem;
+  dt.url { float: left; padding-right: 1rem; }
+  ul { font-size: 1rem; }
+  li { line-height: 1.1rem; }
+  dd { padding-bottom: 0.4rem; }
+  dd.references { padding-bottom: 2rem; }
+}
+
 /* BEGIN Epigraphs */
 div.epigraph > blockquote { font-style: italic; }
 div.epigraph > blockquote p, div.epigraph > blockquote ul { font-style: italic; margin-top: 1rem; margin-bottom: 1rem; }
