@@ -84,7 +84,8 @@ table {
   ul { font-size: 1rem; }
   li { line-height: 1.1rem; }
   dd { padding-bottom: 0.4rem; }
-  dd.references { padding-bottom: 2rem; }
+  dt.references { padding-left: 1rem; }
+  dd.references { padding-bottom: 2rem; padding-left: 2rem; }
 }
 
 /* BEGIN Epigraphs */
