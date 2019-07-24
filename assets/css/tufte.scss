@@ -297,7 +297,7 @@ a.offscreen { position:absolute; left:-1000px; top:-1000px; width:1px; height:1p
 a.offscreen:focus, a.offscreen:active, a.offscreen:hover { position:absolute; padding: 0.75rem 0.75rem; margin-right: 2rem; margin-top: 1.5rem; left:5px; top:-20px; width:auto; height:auto; overflow:visible; background-color:$contrast-color; color: $bg-color; border: 1px dotted #000; }
 // END Skip Navigation
 ul, ol { padding-left: 2rem; }
-nav dl { padding-top: 1rem; width: 85% ; clear: left; }
+nav dl { padding-top: 1rem; width: 55% ; clear: left; line-height: 1.5rem; }
 nav dl:first-of-type { padding-top: 0rem; }
 nav dl dt, nav dl dd { float: left; margin-right: 0.7rem; }
 nav dl dt { margin-left: 0.7rem; }
@@ -336,6 +336,7 @@ main.blogPostings article {
   pre code { width: 87.5%; }
   ol, ul { width: 87.5%; }
   nav .breadcrumb-list .breadcrumb-item:last-of-type { padding-bottom: 1rem; }
+  nav dl { width: 87.5% }
   figure { max-width: 90%; }
   figcaption, figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
   blockquote p, blockquote footer, blockquote ul, blockquote ol, blockquote h2, blockquote h3 {  width: 80%; padding-left: 5%; padding-right: 5%; }
