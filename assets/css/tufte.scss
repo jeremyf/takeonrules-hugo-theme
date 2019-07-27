@@ -99,7 +99,7 @@ div.epigraph > blockquote > footer > cite { font-style: italic; }
 // removed .code 'class' since code is an actual html tag
 // also added p code, p pre code and pre selector to account for Markdown parsing
 // of triple backticks plus rationalized line-heights and margins
-pre, pre code, p code, p pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.71428571; margin-top: 1.71428571rem; }
+pre, pre code, p code, p pre code, li pre code, li code { font-family: $code-font; font-size: 1.0rem; line-height: 1.71428571; margin-top: 1.71428571rem; }
 
 h1 code, h2 code, h3 code { font-size: 0.80em; } //left in for no real reason
 
