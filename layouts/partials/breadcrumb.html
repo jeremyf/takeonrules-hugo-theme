@@ -5,7 +5,7 @@
 {{- define "breadcrumbnav" }}
   {{- if eq .p1.Kind "taxonomy" }}
     <li class="breadcrumb-item">
-      <a href="{{ .p1.Site.BaseURL }}">Take on Rules</a>
+      <a href="{{ .p1.Site.BaseURL }}">{{ .Site.Title }}</a>
     </li>
     <li class="breadcrumb-item">
       <a href="{{ .p1.Site.BaseURL }}{{ .p1.Data.Plural }}/">{{ .p1.Data.Plural | title }}</a>
