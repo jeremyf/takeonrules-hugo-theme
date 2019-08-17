@@ -23,9 +23,7 @@
       </a>
     {{- end }}
   </nav>
-  <form class="hide-when-javascript-disabled" role="search" method="get" action="https://cse.google.com/cse" aria-label="Site-wide" id="cse-search-box" target="_blank">
-    <input type="hidden" name="cx" value="{{ .Site.Params.googleCseCx }}" />
-    <input name="ie" type="hidden" value="UTF-8" />
+  <form class="hide-when-javascript-disabled" role="search" method="get" action="/search/" aria-label="Site-wide" id="cse-search-box" target="_blank">
     <input name="q" type="text" id="google-q-param" aria-label="Search"/>
     <input name="sa" type="submit" value="Search" />
   </form>

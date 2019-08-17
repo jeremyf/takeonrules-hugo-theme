@@ -1,0 +1,65 @@
+{
+  "@context": "http://schema.org",
+  "@type": {{ if (isset .Params "schema_dot_org_type") }}"{{ .Params.schema_dot_org_type}}"{{ else if eq .Type "post" }}"BlogPosting"{{else}}"WebPage"{{ end }},
+  "image": [
+    {{ if (isset .Params "images") }}
+      {{ range .Params.images }}
+        {
+          "@type": "imageObject",
+          "url": "{{ $.Site.BaseURL | replaceRE "/$" "" }}{{ .src }}",
+          "width": {{ .width }},
+          "height": {{ .height }}
+        },
+      {{ end }}
+    {{ end }}
+      {
+        "@type": "imageObject",
+        "url": "{{ .Site.BaseURL }}images/large-takeonrules-banner.jpg",
+        "width": 3868,
+        "height": 1384
+      }
+  ],
+  "name": "{{ .Title }}",
+  "headline": "{{ .Title }}",
+  "text": {{ .Content | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "wordCount": {{ .WordCount }},
+  "inLanguage": "en-US",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["article header h1", "article .content"]
+  },
+  {{ if (isset .Params "tags") }}"keywords": "{{ delimit .Params.tags ", " }}",{{ end }}
+  "author": {{ partialCached "copyrightHolder-jsonld.json" . }},
+  {{- if ne .Type "post" }}
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {{- partial "jsonld.breadcrumb-elements.json" . }}
+    ]
+  },
+  {{- end }}
+  {{ if (isset .Params "additional_jsonld") }}
+    {{ .Params.additional_jsonld }}
+  ,
+  {{ end }}
+  "publisher": {{ partialCached "publisher-jsonld.json" . }},
+{{ range .Params.licenses }}{{ with index $.Site.Data.licenses . }}  "license": "{{ .Permalink }}",{{ end }}{{ end }}
+  "copyrightHolder": {{ partialCached "copyrightHolder-jsonld.json" . }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "{{ .Site.BaseURL }}" ,
+    "name": "{{ .Site.Title }}" ,
+    "about": "{{ .Site.Params.Description }}",
+    "copyrightYear": {{ now.Format "2006" }},
+    "copyrightHolder": {{ partialCached "copyrightHolder-jsonld.json" . }},
+    "accessibilityFeature": ["structuralNavigation", "highContrastDisplay", "readingOrder", "displayTransformability/resizeText", "structuralNavigation", "unlocked", "fullKeyboardControl", "fullMouseControl"],
+    "accessibilityHazard": ["noFlashingHazard", "noMotionSimulationHazard", "noSoundHazard" ],
+    "accessibilityAPI": "ARIA"
+  }
+}

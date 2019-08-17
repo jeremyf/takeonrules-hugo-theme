@@ -1,4 +1,65 @@
+{{ if .IsHome }}
 {
   "@context": "http://schema.org",
-  "@type": "WebSite"
+  "@type": "WebSite",
+  "url": "{{ .Site.BaseURL }}" ,
+  "name": "{{ .Site.Title }}" ,
+  "about": "{{ .Site.Params.Description }}",
+  "copyrightYear": {{ now.Format "2006" }},
+  "copyrightHolder": {{ partialCached "copyrightHolder-jsonld.json" . }},
+  "publisher": {{ partialCached "publisher-jsonld.json" . }},
+  "headline": "{{ .Site.Params.Headline }}",
+  "accessibilityFeature": ["structuralNavigation", "highContrastDisplay", "readingOrder", "displayTransformability/resizeText", "structuralNavigation", "unlocked", "fullKeyboardControl", "fullMouseControl"],
+  "accessibilityHazard": ["noFlashingHazard", "noMotionSimulationHazard", "noSoundHazard" ],
+  "accessibilityAPI": "ARIA",
+  "inLanguage": "en-US",
+  "hasPart": {
+    "@type": "Blog",
+    "blogPost": [
+      {{ $jsonPaginator := .Paginate (where .Site.RegularPages "Type" "post") 5 }}
+      {{ $scratch := newScratch }}
+      {{ $scratch.Set "blogPostCounter" 0 }}
+      {{ range $jsonPaginator.Pages }}{{ $scratch.Add "blogPostCounter" 1 }}
+        {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "image": [
+            {{ if (isset .Params "images") }}
+              {{ range .Params.images }}
+                {
+                  "@type": "imageObject",
+                  "url": "{{ $.Site.BaseURL | replaceRE "/$" "" }}{{ .src }}",
+                  "width": {{ .width }},
+                  "height": {{ .height }}
+                },
+              {{ end }}
+            {{ end }}
+              {
+                "@type": "imageObject",
+                "url": "{{ .Site.BaseURL }}images/large-takeonrules-banner.jpg",
+                "width": 3868,
+                "height": 1384
+              }
+          ],
+          "name": "{{ .Title }}",
+          "headline": {{- if isset .Params "description" }}{{ .Params.description | jsonify }}{{- else }}"{{ .Title }}"{{- end }},
+          "inLanguage": "en-US",
+          "datePublished": "{{ .Date.Format "2006-01-02" }}",
+          "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+          {{ if (isset .Params "tags") }}"keywords": "{{ delimit .Params.tags ", " }}",{{ end }}
+          "author": {{ partialCached "copyrightHolder-jsonld.json" . }},
+          "publisher": {{ partialCached "publisher-jsonld.json" . }},
+          "copyrightHolder": {{ partialCached "copyrightHolder-jsonld.json" . }},
+          "wordCount": {{ .WordCount }},
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ .Permalink }}"
+          }
+        }{{ if lt ($scratch.Get "blogPostCounter") $jsonPaginator.NumberOfElements }},{{end}}
+      {{ end }}
+    ]
+  }
 }
+{{ else }}
+{{- partial "single-jsonld.json" . }}
+{{ end }}
