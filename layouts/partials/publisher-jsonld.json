@@ -2,7 +2,7 @@
   "@type": "Organization",
   "name": "{{ .Site.Title }}",
   "email": "{{ .Site.Params.copyrightHolderEmail }}",
-  "url": "https://takeonrules.com",
+  "url": "{{ .Site.BaseURL }}",
   "logo": {
     "@type": "imageObject",
     "url": "{{ .Site.BaseURL }}images/amp-logo-takeonrules.wordpress.com-banner.jpg",
