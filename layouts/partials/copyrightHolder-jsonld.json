@@ -6,7 +6,7 @@
   "{{ .relationship }}": {
     "@type": "{{ .type }}",
     "url": "{{ .url }}",
-    "name": "{{ .name }}",
+    "name": "{{ .name }}"
   },
   {{- end }}
   "sameAs": [ "{{ delimit .Site.Params.sameAs "\", \"" }}" ]
