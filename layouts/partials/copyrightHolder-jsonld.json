@@ -2,21 +2,12 @@
   "@type": "Person",
   "name": "{{ .Site.Params.copyrightHolder }}",
   "email": "{{ .Site.Params.copyrightHolderEmail }}",
-  "sameAs": [
-    "https://github.com/jeremyf",
-    "https://orcid.org/0000-0002-1191-0873",
-    "https://www.facebook.com/jeremy.n.friesen",
-    "https://directory.library.nd.edu/directory/employees/jfriesen",
-    "https://rpggeek.com/rpgdesigner/41663/jeremy-friesen"
-  ],
-  "alumniOf": {
-    "@type": "EducationalOrganization",
-    "url": "https://goshen.edu" ,
-    "name": "Goshen College"
+  {{- range .Site.Params.CopyrightRelation }}
+  "{{ .relationship }}": {
+    "@type": "{{ .type }}",
+    "url": "{{ .url }}",
+    "name": "{{ .name }}",
   },
-  "worksFor": {
-    "@type": "EducationalOrganization",
-    "name": "University of Notre Dame",
-    "url": "https://nd.edu"
-  }
+  {{- end }}
+  "sameAs": [ "{{ delimit .Site.Params.sameAs "\", \"" }}" ]
 }
