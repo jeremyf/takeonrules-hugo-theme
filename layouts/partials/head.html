@@ -38,12 +38,28 @@
     <script src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js" integrity="sha384-lGO1Q1P+mA8tLRu41NDOmOxG62K3Z3ATFdolbbX3dWFkRXuJBz0Sl8qYa6b9C9wv" crossorigin="anonymous"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('.data-tables').DataTable({
-          "order": [{{ if isset .Params "datatables_sort"}}{{ .Params.datatables_sort | safeJS }}{{ else }}[ 0, 'asc' ]{{ end }}],
-          "paging": false,
-          "scrollX": true,
-          "info": true // Default is true, prints "Showing x of y entries"
-        }); } );
+        $('.data-tables').each(function() {
+          var $this = $(this);
+          $("thead th", $this).each( function() {
+            var title = $(this).text();
+            $(this).html( title + '<br /><input type="text" placeholder="Search '+title+'" />');
+          });
+          table = $(this).DataTable({
+            "order": [{{ if isset .Params "datatables_sort"}}{{ .Params.datatables_sort | safeJS }}{{ else }}[ 0, 'asc' ]{{ end }}],
+            "paging": false,
+            "scrollX": true,
+            "info": true // Default is true, prints "Showing x of y entries"
+          });
+          table.columns().every( function () {
+            var that = this;
+            $('input', this.header()).on( 'keyup change clear', function (ev) {
+              if ( that.search() !== this.value ) {
+                that.search( this.value ).draw();
+              }
+            });
+          });
+        });
+      } );
     </script>
   {{- end }}
 </head>
