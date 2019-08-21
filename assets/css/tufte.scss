@@ -245,6 +245,7 @@ body.full-width {
 }
 hr.slender {
     border: 0;
+    width: 55%;
     height: 1px;
     margin-top: 1.4rem;
     margin-bottom:1.4rem;
@@ -359,6 +360,8 @@ main.blogPostings article {
   .margin-toggle:checked + .sidenote,
   .margin-toggle:checked + .marginnote { display: none; }
   // END non-collapsed margin
+  hr.slender { width: 100%; }
+
 }
 
 @media (max-width: 760px) {
