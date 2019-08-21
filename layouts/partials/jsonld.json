@@ -44,8 +44,8 @@
           "name": "{{ .Title }}",
           "headline": {{- if isset .Params "description" }}{{ .Params.description | jsonify }}{{- else }}"{{ .Title }}"{{- end }},
           "inLanguage": "en-US",
-          "datePublished": "{{ .Date.Format "2006-01-02" }}",
-          "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+          "datePublished": "{{ .Date.Format .Site.Params.iso8601_format }}",
+          "dateModified": "{{ .Lastmod.Format .Site.Params.iso8601_format }}",
           {{ if (isset .Params "tags") }}"keywords": "{{ delimit .Params.tags ", " }}",{{ end }}
           "author": {{ partialCached "copyrightHolder-jsonld.json" . }},
           "publisher": {{ partialCached "publisher-jsonld.json" . }},

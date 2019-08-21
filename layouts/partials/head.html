@@ -22,7 +22,7 @@
   <meta name="hugoPageKind" content="{{ .Kind }}" />
   <meta name="hugoPageType" content="{{ .Type }}" />
   <meta name="Description" content="{{ with .Description }}{{ . | markdownify | plainify }}{{ else }}{{if .IsPage}}{{ .Summary | markdownify | plainify }}{{ else }}{{ with .Site.Params.description }}{{ . | markdownify | plainify }}{{ end }}{{ end }}{{ end }}" />
-  <meta name="datePublished" content="{{ .Date.Format "2006-01-02" }}" />
+  <meta name="datePublished" content="{{ .Date.Format .Site.Params.iso8601_format }}" />
 
   {{ partial "twitter_cards.html" . }}
 

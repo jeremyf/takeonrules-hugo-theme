@@ -22,8 +22,8 @@
   "name": "{{ .Title }}",
   "headline": "{{ .Title }}",
   "text": {{ .Content | jsonify }},
-  "datePublished": "{{ .Date.Format "2006-01-02" }}",
-  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "datePublished": "{{ .Date.Format .Site.Params.iso8601_format }}",
+  "dateModified": "{{ .Lastmod.Format .Site.Params.iso8601_format }}",
   "wordCount": {{ .WordCount }},
   "inLanguage": "en-US",
   "speakable": {
