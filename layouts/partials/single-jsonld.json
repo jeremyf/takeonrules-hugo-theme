@@ -53,13 +53,6 @@
   },
   "isPartOf": {
     "@type": "WebSite",
-    "url": "{{ .Site.BaseURL }}" ,
-    "name": "{{ .Site.Title }}" ,
-    "about": "{{ .Site.Params.Description }}",
-    "copyrightYear": {{ now.Format "2006" }},
-    "copyrightHolder": {{ partialCached "copyrightHolder-jsonld.json" . }},
-    "accessibilityFeature": ["structuralNavigation", "highContrastDisplay", "readingOrder", "displayTransformability/resizeText", "structuralNavigation", "unlocked", "fullKeyboardControl", "fullMouseControl"],
-    "accessibilityHazard": ["noFlashingHazard", "noMotionSimulationHazard", "noSoundHazard" ],
-    "accessibilityAPI": "ARIA"
+    "url": "{{ .Site.BaseURL }}"
   }
 }

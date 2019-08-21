@@ -42,6 +42,7 @@
               }
           ],
           "name": "{{ .Title }}",
+          "url": "{{ .Permalink }}",
           "headline": {{- if isset .Params "description" }}{{ .Params.description | jsonify }}{{- else }}"{{ .Title }}"{{- end }},
           "inLanguage": "en-US",
           "datePublished": "{{ .Date.Format .Site.Params.iso8601_format }}",
