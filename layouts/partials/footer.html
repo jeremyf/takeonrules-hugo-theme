@@ -1,5 +1,5 @@
 <footer class="group" role="contentinfo" aria-label="Site-wide">
-  <span class="print-footer">
+  <span class="print-footer" role="copyright">
     {{ .Title }} - {{ .Date.Format "2006-02-03" }} - {{ .Site.Params.copyrightHolder }}
   </span>
   <hr class="slender">
@@ -10,7 +10,7 @@
       </li>
     {{ end }}
   </ul>
-  <div class="credits">
+  <div class="credits" >
     {{ partial "credits-and-license.html" . }}
   </div>
 </footer>

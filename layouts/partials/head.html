@@ -1,17 +1,18 @@
 <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
-  {{ partialCached "head-duplicated-info.html" . }}
-  {{- if .IsHome }}
-  <title>{{ .Title }}</title>
-  {{- else }}
-  <title>{{ .Title }} // {{ .Site.Title  }}</title>
-  {{- end }}
   {{- if .Params.canonical_url }}
-  <link rel="canonical" href="{{ .Params.canonical_url }}">
+    <link rel="canonical" href="{{ .Params.canonical_url }}">
   {{- else }}
     {{- if .RelPermalink }}
-  <link rel="canonical" href="{{ .RelPermalink }}">
+      <link rel="canonical" href="{{ .RelPermalink }}">
     {{- end }}
   {{- end }}
+  {{- if .IsHome }}
+    <title>{{ .Title }}</title>
+  {{- else }}
+    <title>{{ .Title }} // {{ .Site.Title  }}</title>
+  {{- end }}
+  {{ partialCached "head-duplicated-info.html" . }}
+
   {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}
   <link rel="alternate" type="application/ld+json" title="JSONLD for {{ .Title}}" href="{{ .Permalink }}index.json">
   {{- if in (slice "taxonomy" "taxonomyTerm") .Kind }}
@@ -42,7 +43,7 @@
           var $this = $(this);
           $("thead th", $this).each( function() {
             var title = $(this).text();
-            $(this).html( title + '<br /><input type="text" placeholder="Search '+title+'" />');
+            $(this).html( title + '<br /><input role="search" type="text" placeholder="Search '+title+'" />');
           });
           table = $(this).DataTable({
             "paging": false,
