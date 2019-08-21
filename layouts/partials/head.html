@@ -45,7 +45,6 @@
             $(this).html( title + '<br /><input type="text" placeholder="Search '+title+'" />');
           });
           table = $(this).DataTable({
-            "order": [{{ if isset .Params "datatables_sort"}}{{ .Params.datatables_sort | safeJS }}{{ else }}[ 0, 'asc' ]{{ end }}],
             "paging": false,
             "scrollX": true,
             "info": true // Default is true, prints "Showing x of y entries"
