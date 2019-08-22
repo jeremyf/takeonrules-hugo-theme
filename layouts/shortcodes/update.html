@@ -1,0 +1,15 @@
+{{/*
+  For rendering consistent "updated" information.
+*/}}
+{{- $time := .Get "time" }}
+{{- $time_for_attr := dateFormat "2006-01-02" $time }}
+{{- $time_for_display := dateFormat "Jan 2, 2006" $time }}
+{{- if .Params.inline }}
+<em><strong><time datetime="{{ $time_for_attr }}">{{ $time_for_display }}</time> update:</strong></em> {{ .Inner | markdownify }}
+{{- else }}
+<p>
+<span class="marginnote" role="note">
+<em><strong><time datetime="{{ $time_for_attr }}">{{ $time_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}
+</span>
+</p>
+{{- end }}

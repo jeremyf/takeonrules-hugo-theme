@@ -379,3 +379,7 @@ main.blogPostings article {
   ol.breadcrumb-list .breadcrumb-item, .metadata { line-height: 1.78181818rem; }
 }
 /*--- End of Basic Layout stuff from tufte.css ---*/
+
+/* Related to update shortcode */
+.marginnote br { margin-bottom: 0.66rem; }
+.marginnote br:last-of-type { margin-bottom: 0rem; }

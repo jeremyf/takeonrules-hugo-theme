@@ -1,0 +1,6 @@
+{{/*
+  Undo paragraph tags. A bit of an inverse to paragraphy partial
+
+  Based on https://stackoverflow.com/questions/26771592/negative-look-ahead-go-regular-expressions
+*/}}
+{{ . | markdownify | replaceRE "<p>(([^<]|<[^p]|<p[^>])*)</p>" "$1<br>" | safeHTML }}
