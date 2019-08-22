@@ -365,7 +365,7 @@ main.blogPostings article {
   .margin-toggle:checked + .marginnote { display: none; }
   // END non-collapsed margin
   hr.slender { width: 100%; }
-
+  div.table-wrapper, table, table.booktabs { width: 90%; }
 }
 
 @media (max-width: 760px) {
@@ -373,7 +373,6 @@ main.blogPostings article {
   label { cursor: pointer; }
   pre, pre code, p code, p pre code { width: 90%; padding: 0; }
   .table-caption { display: block; float: right; clear: both; width: 98%; margin-top: 1rem; margin-bottom: 0.5rem; margin-left: 1%; margin-right: 1%; vertical-align: baseline; position: relative; }
-  div.table-wrapper, table, table.booktabs { width: 85%; }
   div.table-wrapper { border-right: 1px solid #efefef; }
   img { max-width: 100%; }
   ol.breadcrumb-list .breadcrumb-item, .metadata { line-height: 1.78181818rem; }
