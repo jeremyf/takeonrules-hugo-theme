@@ -1,0 +1,18 @@
+<dl class="metadata">
+  {{ with .Params.tags }}
+    <dt>Tags:<a name="skip-to-tags"> </a></dt>
+    {{ range . }}
+        <dd role="contentinfo" class="tag"><a rel="tag" href="{{ "tags" | absURL }}/{{ . | urlize }}" aria-label="All posts with tag {{ . }}">{{ . }}</a></dd>
+    {{ end }}
+  {{ end }}
+  {{ with .Params.series }}
+    <dt>Series:</dt>
+    <dd role="contentinfo"><a rel="tag" href="{{ "series" | absURL }}/{{ . | urlize }}" aria-label="All posts in series {{ . }}">{{ . }}</a></dd>
+  {{ end }}
+  <dt>Published:</dt>
+  <dd role="contentinfo"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></dd>
+  {{ if ne .Lastmod .Date }}
+    <dt>Modified:</dt>
+    <dd role="contentinfo"><time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time></dd>
+  {{ end }}
+</dl>

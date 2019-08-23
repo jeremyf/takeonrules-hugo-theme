@@ -16,7 +16,7 @@
   "hasPart": {
     "@type": "Blog",
     "blogPost": [
-      {{ $jsonPaginator := .Paginate (where .Site.RegularPages "Type" "post") 5 }}
+      {{ $jsonPaginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
       {{ $scratch := newScratch }}
       {{ $scratch.Set "blogPostCounter" 0 }}
       {{ range $jsonPaginator.Pages }}{{ $scratch.Add "blogPostCounter" 1 }}
