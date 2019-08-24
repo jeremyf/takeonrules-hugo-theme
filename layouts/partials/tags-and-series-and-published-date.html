@@ -7,9 +7,11 @@
   {{ end }}
   {{ with .Params.series }}
     <dt>Series:</dt>
-    {{- $title := $.Site.Param (printf "series-%s" .) }}
-    {{- if eq $title nil }}{{ $title = humanize . | title }}{{ end }}
-    <dd role="contentinfo"><a rel="tag" href="{{ "series" | absURL }}/{{ . | urlize }}" aria-label="All posts in series {{ $title }}">{{ $title }}</a></dd>
+    {{- range (where $.Site.Data.series "key" "eq" .) }}
+    <dd role="contentinfo">
+      <a rel="tag" href="{{ "series" | absURL }}/{{ .key | urlize }}" aria-label="All posts in series {{ .title }}">{{ .title }}</a>
+    </dd>
+    {{- end }}
   {{ end }}
   <dt>Published:</dt>
   <dd role="contentinfo"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></dd>

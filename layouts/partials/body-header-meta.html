@@ -12,10 +12,11 @@
     </dd>
   {{- end }}
 {{- with .Params.series }}
-    {{- $title := $.Site.Param (printf "series-%s" .) }}
-    {{- if eq $title nil }}{{ $title = humanize . | title }}{{ end }}
-    <dt><a name='skip-to-series-navigation' /><a href="{{ "series" | absURL }}/{{ . | urlize }}" rel="bookmark">{{ $title }}</a>:</dt>
-    {{- $series := where $.Site.Pages "Params.series" . }}
+  {{- range (where $.Site.Data.series "key" "eq" .) }}
+    <dt><a name='skip-to-series-navigation' />
+      <a href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ .title }}</a>:
+    </dt>
+    {{- $series := where $.Site.Pages "Params.series" .key }}
     {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
     {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
     <dd></dd>
@@ -25,5 +26,6 @@
     {{- range last 1 $next }}
       <dd><a class="next" aria-label="Next {{ $.Page.Params.series }} post" href="{{ .Permalink }}">next</a></dd>
     {{- end}}
+  {{- end}}
 {{- end }}
 </dl>
