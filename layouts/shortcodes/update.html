@@ -1,22 +1,22 @@
 {{/*
   For rendering consistent "updated" information.
 */}}
-{{- $time := .Get "time" }}
-{{- $time_for_attr := dateFormat "2006-01-02" $time }}
-{{- $time_for_display := dateFormat "Jan 2, 2006" $time }}
+{{- $date := .Get "date" }}
+{{- $date_for_attr := dateFormat "2006-01-02" $date }}
+{{- $date_for_display := dateFormat "Jan 2, 2006" $date }}
 {{- if .Params.inline }}
-<em><strong><time datetime="{{ $time_for_attr }}">{{ $time_for_display }}</time> update:</strong></em> {{ .Inner | markdownify }}
+<em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ .Inner | markdownify }}
 {{- else }}
 {{- if .Params.sidenote }}
 {{- $sidenoteDomIdSuffix := .Ordinal -}}<label for="sidenote-{{.Page.File.UniqueID}}-{{ $sidenoteDomIdSuffix }}" class="margin-toggle sidenote-number"></label>
 <input type="checkbox" id="sidenote-{{.Page.File.UniqueID}}-{{ $sidenoteDomIdSuffix }}" class="margin-toggle"/>
 <span class="sidenote" role="note">
-<em><strong><time datetime="{{ $time_for_attr }}">{{ $time_for_display }}</time> update:</strong></em> {{ .Inner | markdownify }}
+<em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ .Inner | markdownify }}
 </span>
 {{- else }}
 <p>
 <span class="marginnote" role="note">
-<em><strong><time datetime="{{ $time_for_attr }}">{{ $time_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}
+<em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}
 </span>
 </p>
 {{- end }}
