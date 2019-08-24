@@ -1,7 +1,8 @@
 {{- $caption := .Get "caption" }}
 {{- $table_number := .Get "table_number" }}
 <div class="table-wrapper">
-<table id="table-{{ $table_number }}" aria-label="Table {{ $table_number }}{{ if $caption}}: {{ $caption }}{{ end }}">
+<a name="table-{{ $table_number }}"></a>
+<table aria-label="Table {{ $table_number }}{{ if $caption}}: {{ $caption }}{{ end }}">
 {{- if $caption }}<caption>Table {{ $table_number}}: {{ $caption | markdownify }}</caption>{{- end }}
 {{ .Inner }}
 </table>
