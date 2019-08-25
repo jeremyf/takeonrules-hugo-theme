@@ -11,6 +11,9 @@
       <article role="article" class="single-article">
         <header>
           <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+          {{- with .Params.subtitle }}
+          <p class="subtitle">{{ . }}</p>
+          {{- end }}
         </header>
         <nav class="post-meta">
           {{ partial "body-header-meta.html" . }}
