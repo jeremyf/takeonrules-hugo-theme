@@ -4,6 +4,6 @@
 <a name="table-{{ $table_number }}"></a>
 <table aria-label="Table {{ $table_number }}{{ if $caption}}: {{ $caption }}{{ end }}">
 {{- if $caption }}<caption>Table {{ $table_number}}: {{ $caption | markdownify }}</caption>{{- end }}
-{{ .Inner }}
+{{ .Inner | markdownify }}
 </table>
 </div>
