@@ -3,4 +3,9 @@
 
   Based on https://stackoverflow.com/questions/26771592/negative-look-ahead-go-regular-expressions
 */}}
-{{ . | markdownify | replaceRE "^(([^<]|<[^p]|<p[^>]).*)$" "<p>$1</p>" | safeHTML }}
+{{ $content := . | markdownify }}
+{{- if findRE "^([^<]|<[^p]|<p[^>])" $content }}
+<p>{{ $content | safeHTML }}</p>
+{{- else }}
+{{ $content | safeHTML }}
+{{- end }}
