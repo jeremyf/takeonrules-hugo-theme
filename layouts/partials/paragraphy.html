@@ -1,11 +1,9 @@
 {{/*
   Inject a paragraph into a markdown rendering if a paragraph does not already wrap the content.
-
-  Based on https://stackoverflow.com/questions/26771592/negative-look-ahead-go-regular-expressions
 */}}
 {{ $content := . | markdownify }}
-{{- if findRE "^([^<]|<[^p]|<p[^>])" $content }}
-<p>{{ $content | safeHTML }}</p>
-{{- else }}
+{{- if findRE "^<p>" $content }}
 {{ $content | safeHTML }}
+{{- else }}
+<p>{{ $content | safeHTML }}</p>
 {{- end }}
