@@ -26,7 +26,7 @@
       </noscript>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.4.1.min.js">
-      {{ $js := resources.Get "js/lunr.js" }}
+      {{ $js := resources.Get "js/lunr.js" | resources.Minify }}
       {{ $secureJS := $js | resources.Fingerprint "sha512" }}
       <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
       <link rel="preload" as="script" href="{{ $secureJS.Permalink }}">
