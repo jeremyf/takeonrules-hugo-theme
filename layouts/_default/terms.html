@@ -5,57 +5,30 @@
     </header>
     <a name="skip-to-content"> </a>
     <section class="content terms">
-      {{ $data := .Data }}
-      <details open>
-        <summary>By Frequency</summary>
-        <div class="table-wrapper">
-        <table role="contents">
-          <caption>{{ .Title }} by Frequency</caption>
-        <thead>
-          <tr>
-            <th>Term</th>
-            <th>Count</th>
-          </tr>
-        </thead>
-        <tbody>
-        {{ range $key, $value := .Data.Terms.ByCount }}
-          <tr>
-            <td>
-            <a href="{{ $value.Name| urlize }}">
-            {{ $value.Name}}
-            </a>
-            </td>
-            <td>{{  $value.Count }}</td>
-          </tr>
-        {{ end }}
-        </tbody>
+      {{ .Content }}
+      <div class="table-wrapper">
+        <a name="table-{{ anchorize .Title }}"></a>
+        <table class="data-tables stripe">
+          <caption>Table {{ .Title }}: All {{ .Title }} in {{ .Site.Title }}</caption>
+          <thead>
+            <tr><th>Title</th><th class="r">Count</th><th class="c">First Post</th><th class="c">Last Post</th></tr>
+          </thead>
+          <tbody>
+          {{- range $key, $value := .Data.Terms.Alphabetical}}
+            <tr>
+              <td><a href="{{ $value.Name| urlize }}">{{ $value.Name }}</a></td>
+              <td class="r">{{  $value.Count }}</td>
+              {{- range first 1 $value.Pages.Reverse }}
+              <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
+              {{- end }}
+              {{- range first 1 $value.Pages }}
+              <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
+              {{- end }}
+            </tr>
+          {{- end }}
+          </tbody>
         </table>
       </div>
-    </details>
-    <details open>
-      <summary>By Alphabetical Order</summary>
-      <div class="table-wrapper">
-        <table role="contents">
-        <caption>{{ .Title }} by Alphabetical Order</caption>
-        <thead>
-          <tr>
-            <th>Term</th>
-            <th>Count</th>
-          </tr>
-        </thead>
-        <tbody>
-        {{ range $key, $value := .Data.Terms.Alphabetical}}
-          <tr>
-            <td><a href="{{ $value.Name| urlize }}">
-              {{ $value.Name}}
-            </a></td>
-            <td>{{  $value.Count }}</td>
-          </tr>
-        {{ end }}
-        </tbody>
-        </table>
-        </div>
-      </details>
     </section>
   </article>
 {{ end }}
