@@ -24,10 +24,12 @@
           <input type="submit" value="Search via Google" />
         </form>
       </noscript>
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-      <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.3.1.min.js">
-      <script type="text/javascript" src="/js/lunr.js"></script>
-      <link rel="preload" as="script" href="/js/lunr.js">
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.4.1.min.js">
+      {{ $js := resources.Get "js/lunr.js" }}
+      {{ $secureJS := $js | resources.Fingerprint "sha512" }}
+      <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+      <link rel="preload" as="script" href="{{ $secureJS.Permalink }}">
       <script type="text/javascript">
         var lunrIndex, $results, pagesIndex;
 
