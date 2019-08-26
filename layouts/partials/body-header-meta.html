@@ -13,7 +13,7 @@
   {{- end }}
 {{- with .Params.series }}
   {{- range (where $.Site.Data.series "key" "eq" .) }}
-    <dt><a name='skip-to-series-navigation' />
+    <dt><a name='skip-to-series-navigation'></a>
       <a href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ .title }}</a>:
     </dt>
     {{- $series := where $.Site.Pages "Params.series" .key }}

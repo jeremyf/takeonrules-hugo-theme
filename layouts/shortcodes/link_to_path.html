@@ -1,0 +1,7 @@
+{{/*
+  Lookup the page by the given path and use the page's title
+*/}}
+{{- $rel_permalink := index .Params 0 | replaceRE "^([^/])" "/$1" | replaceRE "([^/])$" "$1/" }}
+{{- range first 1 (where $.Site.Pages ".RelPermalink" "eq" $rel_permalink) }}
+<a href="{{ .Permalink }}">{{ .Title }}</a>
+{{- end }}
