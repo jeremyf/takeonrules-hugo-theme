@@ -1,86 +1,85 @@
-<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
-  {{- if .Params.canonical_url }}
-    <link rel="canonical" href="{{ .Params.canonical_url }}">
-  {{- else }}
-    {{- if .RelPermalink }}
-      <link rel="canonical" href="{{ .RelPermalink }}">
-    {{- end }}
+{{- if .Params.canonical_url }}
+  <link rel="canonical" href="{{ .Params.canonical_url }}">
+{{- else }}
+  {{- if .RelPermalink }}
+    <link rel="canonical" href="{{ .RelPermalink }}">
   {{- end }}
-  {{- if .IsHome }}
-    <title>{{ .Title }}</title>
-  {{- else }}
-    <title>{{ .Title }} // {{ .Site.Title  }}</title>
-  {{- end }}
-  {{ partialCached "head-duplicated-info.html" . }}
+{{- end }}
+{{- if .IsHome }}
+  <title>{{ .Title }}</title>
+{{- else }}
+  <title>{{ .Title }} // {{ .Site.Title  }}</title>
+{{- end }}
+{{ partialCached "head-duplicated-info.html" . }}
 
-  {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}
-  <link rel="alternate" type="application/ld+json" title="JSONLD for {{ .Title}}" href="{{ .Permalink }}index.json">
-  {{- if in (slice "taxonomy" "taxonomyTerm") .Kind }}
-  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml">
-  {{- end }}
+{{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}
+<link rel="alternate" type="application/ld+json" title="JSONLD for {{ .Title}}" href="{{ .Permalink }}index.json">
+{{- if in (slice "taxonomy" "taxonomyTerm") .Kind }}
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml">
+{{- end }}
 
-  {{ partial "opengraph.html" . }}
+{{ partial "opengraph.html" . }}
+<meta name="Description" content="{{ with .Description }}{{ . | markdownify | plainify }}{{ else }}{{if .IsPage}}{{ .Summary | markdownify | plainify }}{{ else }}{{ with .Site.Params.description }}{{ . | markdownify | plainify }}{{ end }}{{ end }}{{ end }}" />
+<meta name="datePublished" content="{{ .Date.Format .Site.Params.iso8601_format }}" />
+
+{{ partial "twitter_cards.html" . }}
+
+{{- if .Site.Params.withJsonLd }}
+  <script type="application/ld+json">
+    {{ partial "jsonld.json" . | safeJS }}
+  </script>
+{{- end }}
+
+{{- if eq hugo.Environment "development" }}
   <meta name="hugoPageKind" content="{{ .Kind }}" />
   <meta name="hugoPageType" content="{{ .Type }}" />
   {{- with .Section }}
   <meta name="hugoSection" content="{{ . }}" />
   {{- end }}
-  <meta name="Description" content="{{ with .Description }}{{ . | markdownify | plainify }}{{ else }}{{if .IsPage}}{{ .Summary | markdownify | plainify }}{{ else }}{{ with .Site.Params.description }}{{ . | markdownify | plainify }}{{ end }}{{ end }}{{ end }}" />
-  <meta name="datePublished" content="{{ .Date.Format .Site.Params.iso8601_format }}" />
+  <meta name="hugoSections" content="{{ delimit .Site.Sections ", " }}" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.3.1.min.js">
+  <script type="text/javascript">
+    $(document).on("keypress", function(event) {
+      if (event.which == 112) {
+        $(".post-meta a.prev")[0].click();
+      } else if (event.which == 110) {
+        $(".post-meta a.next")[0].click();
+      }
+    });
+  </script>
+{{- end }}
 
-  {{ partial "twitter_cards.html" . }}
-
-  {{- if .Site.Params.withJsonLd }}
-    <script type="application/ld+json">
-      {{ partial "jsonld.json" . | safeJS }}
-    </script>
-  {{- end }}
-
-  {{- if eq hugo.Environment "development" }}
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.3.1.min.js">
-    <script type="text/javascript">
-      $(document).on("keypress", function(event) {
-        if (event.which == 112) {
-          $(".post-meta a.prev")[0].click();
-        } else if (event.which == 110) {
-          $(".post-meta a.next")[0].click();
-        }
-      });
-    </script>
-  {{- end }}
-
-  {{- if isset .Params "with_datatables" }}
-    <meta name="withDataTables" content="true" />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.3.1.min.js">
-    <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css" integrity="sha384-Y5cgvAigcTOTaObjiReosnMvQCzeJTHVQ3ezBmzGzM1g0Armw98SOB73bclZHywS" crossorigin="anonymous" media="screen">
-    <link rel="preload" as="style" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css">
-    <script src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js" integrity="sha384-lGO1Q1P+mA8tLRu41NDOmOxG62K3Z3ATFdolbbX3dWFkRXuJBz0Sl8qYa6b9C9wv" crossorigin="anonymous"></script>
-    <link rel="preload" as="script" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js">
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('.data-tables').each(function() {
-          var $this = $(this);
-          $("thead th", $this).each( function() {
-            var title = $(this).text();
-            $(this).html( title + '<br /><input role="search" type="text" placeholder="Search '+title+'" />');
-          });
-          table = $(this).DataTable({
-            "paging": false,
-            "scrollX": true,
-            "info": true // Default is true, prints "Showing x of y entries"
-          });
-          table.columns().every( function () {
-            var that = this;
-            $('input', this.header()).on( 'keyup change clear', function (ev) {
-              if ( that.search() !== this.value ) {
-                that.search( this.value ).draw();
-              }
-            });
+{{- if isset .Params "with_datatables" }}
+  <meta name="withDataTables" content="true" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.3.1.min.js">
+  <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css" integrity="sha384-Y5cgvAigcTOTaObjiReosnMvQCzeJTHVQ3ezBmzGzM1g0Armw98SOB73bclZHywS" crossorigin="anonymous" media="screen">
+  <link rel="preload" as="style" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css">
+  <script src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js" integrity="sha384-lGO1Q1P+mA8tLRu41NDOmOxG62K3Z3ATFdolbbX3dWFkRXuJBz0Sl8qYa6b9C9wv" crossorigin="anonymous"></script>
+  <link rel="preload" as="script" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js">
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.data-tables').each(function() {
+        var $this = $(this);
+        $("thead th", $this).each( function() {
+          var title = $(this).text();
+          $(this).html( title + '<br /><input role="search" type="text" placeholder="Search '+title+'" />');
+        });
+        table = $(this).DataTable({
+          "paging": false,
+          "scrollX": true,
+          "info": true // Default is true, prints "Showing x of y entries"
+        });
+        table.columns().every( function () {
+          var that = this;
+          $('input', this.header()).on( 'keyup change clear', function (ev) {
+            if ( that.search() !== this.value ) {
+              that.search( this.value ).draw();
+            }
           });
         });
-      } );
-    </script>
-  {{- end }}
-</head>
+      });
+    } );
+  </script>
+{{- end }}
