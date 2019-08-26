@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  {{ partial "head.html" . }}
-  <!-- Need to add option to toggle width -->
-  <body class="{{ if isset .Params "full_width"}}full-width{{ else }}default-width{{ end }}">
-    {{ partial "body-header.html" . }}
-    <main class="group" role="main">
-      <nav role="navigation" aria-label="Breadcrumbs">
-        {{ partial "breadcrumb.html" . }}
-      </nav>
-      <article role="article">
-        <header>
-          <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
-        </header>
-        <a name="skip-to-content"> </a>
-        <div class="content">
-          {{ .Content }}
-        </section>
-      </div>
-    </main>
-    {{ partial "footer.html" . }}
-  </body>
-</html>
+{{ define "main" }}
+  <article role="article">
+    <header>
+      <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+    </header>
+    <a name="skip-to-content"> </a>
+    <div class="content">
+      {{ .Content }}
+    </section>
+  </article>
+{{ end }}

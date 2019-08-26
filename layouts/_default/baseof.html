@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    {{ block "head" . }}
+      {{ partial "head" . }}
+    {{ end }}
+  </head>
+  <body class="{{ if isset .Params "full_width"}}full-width{{ else }}default-width{{ end }}">
+    {{ partial "body-header.html" . }}
+    {{ block "navigation" . }}
+      <nav role="navigation" aria-label="Breadcrumbs">
+        {{ partial "breadcrumb.html" . }}
+      </nav>
+    {{ end }}
+    <main class="group" role="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ block "footer" . }}
+      {{ partial "footer.html" . }}
+    {{ end }}
+  </body>
+</html>

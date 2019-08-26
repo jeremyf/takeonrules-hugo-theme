@@ -1,32 +1,27 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  {{ partial "head.html" . }}
-  <body class="{{ if isset .Params "full_width"}}full-width{{ else }}default-width{{ end }}">
-    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
-    {{ partial "body-header.html" . }}
-    <nav role="navigation" aria-label="Blog postings pagination">
-      {{ partial "paginator.html" $paginator }}
-    </nav>
-    <main role="main" aria-label="Blog postings" class="blogPostings">
-      <h1>Blog Posts</h1>
-      <a name="skip-to-content"> </a>
-      <section>
-      {{ range $paginator.Pages }}
-        <article>
-          <header>
-            <h2><a href="{{ .RelPermalink }}" rel="bookmark">{{ .Title }}</a></h2>
-          </header>
-          <nav class="post-meta">
-            {{ partial "tags-and-series-and-published-date.html" . }}
-          </nav>
-          <div class="section"><a aria-hidden href="{{ .RelPermalink}}">Read more&hellip;</a></div>
-        </article>
-      {{ end }}
-      </section>
-    </main>
-    <nav role="navigation" aria-hidden="true">
-      {{ partial "paginator.html" $paginator }}
-    </nav>
-    {{ partial "footer.html" . }}
-  </body>
-</html>
+{{ define "navigation" }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
+  <nav role="navigation" aria-label="Blog postings pagination">
+    {{ partial "paginator.html" $paginator }}
+  </nav>
+{{ end }}
+{{ define "main" }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
+  <h1>Blog Posts</h1>
+  <a name="skip-to-content"> </a>
+  <section>
+  {{ range $paginator.Pages }}
+    <article>
+      <header>
+        <h2><a href="{{ .RelPermalink }}" rel="bookmark">{{ .Title }}</a></h2>
+      </header>
+      <nav class="post-meta">
+        {{ partial "tags-and-series-and-published-date.html" . }}
+      </nav>
+      <div class="section"><a aria-hidden href="{{ .RelPermalink}}">Read more&hellip;</a></div>
+    </article>
+  {{ end }}
+  </section>
+  <nav role="navigation" aria-hidden="true">
+    {{ partial "paginator.html" $paginator }}
+  </nav>
+{{ end }}

@@ -1,30 +1,21 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  {{ partial "head.html" . }}
-  <!-- Need to add option to toggle width -->
-  <body class="default-width">
-    {{ partial "body-header.html" . }}
-    <main class="group" role="main" aria-label="Blog posting">
-      <article role="article">
-        <header>
-          <h1>{{ .Title }}</h1>
-        </header>
+{{ define "main" }}
+  <article role="article">
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
 
-        <a name="skip-to-content"> </a>
-        <div class="content">
-          <p>
-            <span class="marginnote marginfigure" role="note">
-              <img class="fullwidth" src="/images/logo.jpg" alt="A large yellow wooden abstract chicken stares at you amongst a field of game pieces." data-widht="309" data-height="250" />
-              <br>The Chicken of Judgement has found nothing.
-            </span>
-          </p>
+    <a name="skip-to-content"> </a>
+    <div class="content">
+      <p>
+        <span class="marginnote marginfigure" role="note">
+          <img class="fullwidth" src="/images/logo.jpg" alt="A large yellow wooden abstract chicken stares at you amongst a field of game pieces." data-widht="309" data-height="250" />
+          <br>The Chicken of Judgement has found nothing.
+        </span>
+      </p>
 
-          <p>Welp, it looks like we couldn't find what you requested.</p>
+      <p>Welp, it looks like we couldn't find what you requested.</p>
 
-          <p>Maybe try a site search? Or <a href="/contact-me/">contacting me</a> to see if I can help you find it. <em>I did migrate my site, and while I tried to avoid broken pages, I'm not perfect.</em></p>
-        </div>
-      </article>
-    </main>
-    {{ partial "footer.html" . }}
-  </body>
-</html>
+      <p>Maybe try a site search? Or <a href="/contact-me/">contacting me</a> to see if I can help you find it. <em>I did migrate my site, and while I tried to avoid broken pages, I'm not perfect.</em></p>
+    </div>
+  </article>
+{{ end }}
