@@ -46,7 +46,7 @@
           var title = $(this).text();
           $(this).html( title + '<br /><input role="search" type="text" placeholder="Search '+title+'" />');
         });
-        table = $(this).DataTable({
+        table = $this.DataTable({
           "paging": false,
           "scrollX": true,
           "info": true // Default is true, prints "Showing x of y entries"
@@ -60,7 +60,7 @@
           });
         });
       });
-    } );
+    });
   </script>
 {{- end }}
 
@@ -71,7 +71,8 @@
   <meta name="hugoSection" content="{{ . }}" />
   {{- end }}
   <meta name="hugoSections" content="{{ delimit .Site.Sections ", " }}" />
-  {{ if isset .Params "with_datatables" }}
+  {{- if isset .Params "with_datatables" }}
+  {{- else }}
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.3.1.min.js">
   {{ end }}
