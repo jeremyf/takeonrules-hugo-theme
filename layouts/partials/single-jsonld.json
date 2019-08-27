@@ -47,6 +47,7 @@
   "publisher": {{ partialCached "publisher-jsonld.json" . }},
 {{ range .Params.licenses }}{{ with index $.Site.Data.licenses . }}  "license": "{{ .Permalink }}",{{ end }}{{ end }}
   "copyrightHolder": {{ partialCached "copyrightHolder-jsonld.json" . }},
+  "url": "{{ .Permalink }}",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ .Permalink }}"
