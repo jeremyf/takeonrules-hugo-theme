@@ -17,11 +17,11 @@
         var siteSearch = document.getElementById('cse-search-box');
       </script>
       <noscript>
-        <p>I see you've disabled Javascript. You'll need to use Google or some other Search Engine to search {{ .Site.Params.siteHost }}.</p>
+        <p>I see you've disabled Javascript. You'll need to use DuckDuckGo or some other Search Engine to search {{ .Site.Params.siteHost }}.</p>
         <br>
-        <form role="search" method="get" action="https://google.com/search" aria-label="Site-wide" id="cse-search-box" target="_blank">
+        <form role="search" method="get" action="https://duckduckgo.com/" aria-label="Site-wide" id="cse-search-box" target="_blank">
           <input name="q" type="hidden" value="site:{{ .Site.Params.siteHost }}" />
-          <input type="submit" value="Search via Google" />
+          <input type="submit" value="Search via DuckDuckGo" />
         </form>
       </noscript>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
