@@ -1,4 +1,5 @@
 @import "settings";
+
 * { -webkit-transition: none !important; transition: none !important; }
 *, *:before, *:after { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
 @page { margin: 0.75in 0.5in 0.75in 0.5in; orphans:4; widows:2; }
@@ -7,11 +8,11 @@ html body span.print-footer{ font-family: $sans-font; font-size: 9pt; margin-top
 thead { display: table-header-group; }
 tr, img { page-break-inside: avoid; }
 img { max-width: 100% !important; }
-p, h2, h3, h4 { orphans: 4; widows: 4; }
-article h2, article h2 h3, article h3, article h3 h4, article h4, article h4 h5 { page-break-after: avoid; }
+p, h2, h3, h4, summary { orphans: 4; widows: 4; }
+article h2, article summary, article h2 h3, article h3, article h3 h4, article h4, article h4 h5 { page-break-after: avoid; }
 // body header, body footer, body nav, body .content .margin-toggle:not(.sidenote-number) { display:none; }
 // body main header, .marginnote, .sidenote { display: inherit; }
-body header, body footer, body nav { display:none; }
+body header, body footer.group, body nav { display:none; }
 body main header { display: inherit; }
 body blockquote footer { display: inherit; }
 
