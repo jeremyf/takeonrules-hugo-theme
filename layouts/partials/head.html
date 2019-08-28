@@ -70,20 +70,4 @@
   <meta name="hugoSection" content="{{ . }}" />
   {{- end }}
   <meta name="hugoSections" content="{{ delimit .Site.Sections ", " }}" />
-  {{- if isset .Params "with_datatables" }}
-  {{- else }}
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.4.1.min.js">
-  {{ end }}
-  <script type="text/javascript">
-    $(document).on("keypress", function(event) {
-      if (event.which == 112) {
-        $(".post-meta a.prev")[0].click();
-      } else if (event.which == 110) {
-        $(".post-meta a.next")[0].click();
-      } else if (event.which == 104) {
-        $("header nav h1 a")[0].click();
-      }
-    });
-  </script>
 {{- end }}

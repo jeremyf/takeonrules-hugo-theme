@@ -256,6 +256,8 @@ table th { font-weight: bold; }
 table tbody tr:nth-child(even) { background-color: lighten($table-header, 20%); }
 table.unstriped tbody tr {  background-color: $bg-color; }
 table tbody tr.subhead { background-color: lighten($table-header, 20%); }
+table tbody tr.subhead th { text-align: left; }
+
 table tr.subbody td { padding-left: 1.5rem; }
 table.full { width: 100%; }
 // BEGIN Skip Navigation
