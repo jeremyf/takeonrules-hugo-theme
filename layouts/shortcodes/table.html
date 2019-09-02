@@ -2,7 +2,7 @@
 {{- $table_number := .Get "table_number" }}
 <div class="table-wrapper">
 <a name="table-{{ $table_number }}"></a>
-<table aria-label="Table {{ $table_number }}{{ if $caption}}: {{ $caption }}{{ end }}">
+<table {{ with .Get "unstriped" }}class="unstriped" {{ end }}aria-label="Table {{ $table_number }}{{ if $caption}}: {{ $caption }}{{ end }}">
 {{- if $caption }}<caption>Table {{ $table_number}}: {{ $caption | markdownify }}</caption>{{- end }}
 {{ .Inner | markdownify }}
 </table>
