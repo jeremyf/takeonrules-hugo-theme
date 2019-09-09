@@ -32,3 +32,4 @@ a:link:not([href^="/images/"]):after, a:visited:not([href^="/images/"]):after { 
 // Without this line, the links could spill into the right column; I suspect this is in play regardless, and will
 // require more experimentation to see how things behave.
 body { overflow-wrap: break-word; }
+sup { font-size: 0.7rem; }
