@@ -4,6 +4,6 @@
 <a name="table-{{ $table_number }}"></a>
 <table {{ with .Get "unstriped" }}class="unstriped" {{ end }}aria-label="Table {{ $table_number }}{{ if $caption}}: {{ $caption }}{{ end }}">
 {{- if $caption }}<caption>Table {{ $table_number}}: {{ $caption | markdownify }}</caption>{{- end }}
-{{ .Inner | markdownify }}
+{{ .Inner }}
 </table>
 </div>
