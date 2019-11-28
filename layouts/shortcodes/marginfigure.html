@@ -11,7 +11,7 @@
 {{- $result   := $original.Resize $imageResize }}<p>
 <span class="marginnote marginfigure" role="note">
 <a href="{{ if $href }}{{ $href }}{{ else }}{{ $original.RelPermalink }}{{ end}}" title="{{ if $title }}{{ $title }}{{ else }}See full-size image{{ end }}">
-  <img class="fullwidth" src="{{ $result.RelPermalink }}" alt="{{$alt}}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}"/>
+<img class="fullwidth" src="{{ $result.RelPermalink }}" alt="{{$alt}}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}"/>
 </a><br>{{ $caption | markdownify }}
 </span>
 </p>

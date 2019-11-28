@@ -3,23 +3,23 @@
 {{- $post := .Get "post" }}
 <div class="epigraph">
 <blockquote{{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
-  {{ partial "paragraphy.html" .Inner }}
-  {{ if .IsNamedParams }}
-  <footer>
-  {{ with .Get "pre" }}&mdash; {{ . | markdownify }}{{- if(or (or $cite $cite_url) $post) }}, {{ end }}{{ end }}
-  {{- if($cite) }}
-    <cite>
-    {{- if($cite_url) }}
-      <a href="{{ $cite_url }}">{{ $cite | markdownify }}</a>
-    {{- else }}
-      {{ $cite | markdownify }}
-    {{- end }}
-    </cite>
-  {{- else if($cite_url) }}
-     <cite><a href="{{ $cite_url }}">{{ $cite_url }}</a></cite>
-  {{- end }}
-  {{ if($post) }}{{ $post | markdownify  }}{{ end }}
-  </footer>
-  {{ end }}
+{{ partial "paragraphy.html" .Inner }}
+{{ if .IsNamedParams }}
+<footer>
+{{ with .Get "pre" }}&mdash; {{ . | markdownify }}{{- if(or (or $cite $cite_url) $post) }}, {{ end }}{{ end }}
+{{- if($cite) }}
+<cite>
+{{- if($cite_url) }}
+<a href="{{ $cite_url }}">{{ $cite | markdownify }}</a>
+{{- else }}
+{{ $cite | markdownify }}
+{{- end }}
+</cite>
+{{- else if($cite_url) }}
+<cite><a href="{{ $cite_url }}">{{ $cite_url }}</a></cite>
+{{- end }}
+{{ if($post) }}{{ $post | markdownify  }}{{ end }}
+</footer>
+{{ end }}
 </blockquote>
 </div>
