@@ -64,6 +64,17 @@
 {{- end }}
 
 {{- if eq hugo.Environment "development" }}
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.3.1.min.js">
+  <script type="text/javascript">
+    $(document).on("keypress", function(event) {
+      if (event.which == 112) {
+        $(".post-meta a.prev")[0].click();
+      } else if (event.which == 110) {
+        $(".post-meta a.next")[0].click();
+      }
+    });
+  </script>
   <meta name="hugoPageKind" content="{{ .Kind }}" />
   <meta name="hugoPageType" content="{{ .Type }}" />
   {{- with .Section }}
