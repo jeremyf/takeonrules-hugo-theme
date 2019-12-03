@@ -159,7 +159,9 @@ main header h1 { width: 55%; }
 h2, h3, h4, h5 { width: 55%; }
 header > nav.group { padding-bottom: 1rem; }
 
-pre, pre code, p pre code { width: 52.5%; padding-left: 2.5%; overflow-x: auto; }
+pre { width: 52.5%; }
+pre, pre code, p pre code { padding: 0 1.5% 0 1.5%; overflow-x: auto; }
+p pre code, pre code { display: block; margin-top: 0; white-space: pre; }
 
 .fullwidth, li.listing div{ max-width: 90%; }
 
