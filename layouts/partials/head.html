@@ -34,10 +34,13 @@
   <meta name="withDataTables" content="true" />
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.4.1.min.js">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" integrity="sha384-1UXhfqyOyO+W+XsGhiIFwwD3hsaHRz2XDGMle3b8bXPH5+cMsXVShDoHA3AH/y/p" crossorigin="anonymous">
-  <link rel="preload" as="style" href="https://cdn.datatables.net/v/dt/dt-1.10.19/datatables.min.css">
-  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" integrity="sha384-rgWRqC0OFPisxlUvl332tiM/qmaNxnlY46eksSZD84t+s2vZlqGeHrncwIRX7CGp" crossorigin="anonymous"></script>
-  <link rel="preload" as="script" href="https://cdn.datatables.net/v/dt/dt-1.10.19/datatables.min.js">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" integrity="sha384-1UXhfqyOyO+W+XsGhiIFwwD3hsaHRz2XDGMle3b8bXPH5+cMsXVShDoHA3AH/y/p" crossorigin="anonymous">
+  <link rel="preload" as="style" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" integrity="sha384-L74JDRkaoB7PWnReNepwX6+kSckc13TJXrka4EerY9jxQxSDl0dTguSLcA7dEfq8" crossorigin="anonymous"></script>
+  <link rel="preload" as="script" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js">
+
   <script type="text/javascript">
     $(document).ready(function() {
       $('.data-tables').each(function() {
@@ -64,8 +67,11 @@
 {{- end }}
 
 {{- if eq hugo.Environment "development" }}
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.3.1.min.js">
+  {{- if isset .Params "with_datatables" }}
+  {{- else }}
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.4.1.min.js">
+  {{- end }}
   <script type="text/javascript">
     $(document).on("keypress", function(event) {
       if (event.which == 112) {
