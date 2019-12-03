@@ -161,6 +161,7 @@ header > nav.group { padding-bottom: 1rem; }
 
 pre { width: 52.5%; }
 pre, pre code, p pre code { padding: 0 1.5% 0 1.5%; overflow-x: auto; color:$code-color; }
+code { color:$code-color; }
 p pre code, pre code { display: block; margin-top: 0; white-space: pre; }
 
 .fullwidth, li.listing div{ max-width: 90%; }
