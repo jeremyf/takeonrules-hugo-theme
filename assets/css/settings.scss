@@ -8,9 +8,16 @@ $sans-font:  "Gill Sans", "Gill Sans MT", "Lato", Calibri, Helvetica, sans-serif
 $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 $url-font: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
 $counter-font: ETbookRomanOldStyle, ETBook, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+// $text-color: #111;
+// $bg-color: #fffff8;
+// $contrast-color: #A00000;
+// $code-color: #0B486E;
+// $border-color: #3B3A00;
+// $table-header: #CCB8B8;
 $text-color: #111;
 $bg-color: #fffff8;
-$contrast-color: #a00000;
-$border-color: #333333;
-$table-header: #aaaabb;
+$contrast-color: #8C0303;
+$code-color: #027333;
+$border-color: #A6977B;
+$table-header: #A6977B;
 $link-style: color; // choices are 'color' or 'underline'. Default is color using $contrast-color set above

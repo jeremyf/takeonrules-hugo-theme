@@ -95,7 +95,7 @@ tfoot td { border-top: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5e
 
 th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.71428571;  }
 
-.booktabs th.cmid, th { border-bottom: 1px solid lighten($border-color, 25%); }
+.booktabs th.cmid, th { border-bottom: 1px solid $border-color; }
 
 .booktabs th.nocmid { border-bottom: none; }
 
@@ -160,7 +160,7 @@ h2, h3, h4, h5 { width: 55%; }
 header > nav.group { padding-bottom: 1rem; }
 
 pre { width: 52.5%; }
-pre, pre code, p pre code { padding: 0 1.5% 0 1.5%; overflow-x: auto; }
+pre, pre code, p pre code { padding: 0 1.5% 0 1.5%; overflow-x: auto; color:$code-color; }
 p pre code, pre code { display: block; margin-top: 0; white-space: pre; }
 
 .fullwidth, li.listing div{ max-width: 90%; }
