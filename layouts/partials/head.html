@@ -32,6 +32,14 @@
 
 {{- if isset .Params "with_datatables" }}
   <meta name="withDataTables" content="true" />
+  {{/*
+    See https://www.srihash.org/ for details on integrity generation. In a pinch, you can use the following:
+
+    ```shell
+    openssl dgst -sha384 -binary FILENAME.js | openssl base64 -A
+    ```
+  */}}
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.4.1.min.js">
 
