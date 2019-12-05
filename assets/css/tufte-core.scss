@@ -101,6 +101,8 @@ table, table.booktabs { width: auto; margin: 0 auto; border-spacing: 0px; border
 tfoot td { border-top: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; font-size: smaller; text-align: center; }
 
 th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.71428571;  }
+table li { width: 100%; }
+table ul, table ol { padding-top: 0rem; }
 
 .booktabs th.cmid, th { border-bottom: 1px solid $border-color; }
 
@@ -169,7 +171,7 @@ pre, pre code, p pre code { padding: 0 1.5% 0 1.5%; overflow-x: auto; color:$cod
 code { color:$code-color; }
 p pre code, pre code { display: block; margin-top: 0; white-space: pre; }
 
-.fullwidth, li.listing div{ max-width: 90%; }
+.fullwidth, li.listing div { max-width: 90%; }
 
 span.newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.05rem; }
 
