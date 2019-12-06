@@ -28,17 +28,19 @@
               {{ range .Params.images }}
                 {
                   "@type": "imageObject",
-                  "url": "{{ $.Site.BaseURL | replaceRE "/$" "" }}{{ .src }}",
-                  "width": {{ .width }},
-                  "height": {{ .height }}
+                  {{- $original := resources.Get .src }}
+                  "url": "{{ $original.Permalink }}",
+                  "width": {{ $original.Width }},
+                  "height": {{ $original.Height }}
                 },
               {{ end }}
             {{ end }}
               {
                 "@type": "imageObject",
-                "url": "{{ .Site.BaseURL }}images/large-takeonrules-banner.jpg",
-                "width": 3868,
-                "height": 1384
+                {{- $original := resources.Get "images/large-takeonrules-banner.jpg" }}
+                "url": "{{ $original.Permalink }}",
+                "width": {{ $original.Width }},
+                "height": {{ $original.Height }}
               }
           ],
           "name": "{{ .Title }}",
