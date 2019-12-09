@@ -23,7 +23,7 @@
   ],
   "name": "{{ .Title }}",
   "headline": "{{ .Title }}",
-  "text": {{ .Content | jsonify }},
+  "text": {{ .Plain | jsonify }},
   "datePublished": "{{ .Date.Format .Site.Params.iso8601_format }}",
   "dateModified": "{{ .Lastmod.Format .Site.Params.iso8601_format }}",
   "wordCount": {{ .WordCount }},
