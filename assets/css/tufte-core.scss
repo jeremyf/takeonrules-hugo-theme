@@ -45,7 +45,6 @@ blockquote {
   width: 55%;
   font-size: 1.1rem;
   margin-top: 1.4rem;
-  color: darken($table-header, 25%);
   p, ul, h2, h3, h4 { padding-left: 2.5%; padding-right: 2.5%; }
   p, ul { font-size: 1.1rem; line-height: 1.78181818; margin-top: 1.78181818rem; margin-bottom: 1.78181818rem; }
   li { font-size: 1.1rem; margin-left: 3.5%; }
@@ -361,4 +360,8 @@ sup { font-size: 0.7rem; }
 main h2 { border-bottom: $table-header 1px solid; }
 .open-game-content {
   border-left: $code-color 1px dotted; padding-left: 1rem;
+}
+
+blockquote, .update {
+  color: darken($table-header, 25%);
 }
