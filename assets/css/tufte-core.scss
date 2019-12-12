@@ -362,6 +362,10 @@ main h2 { border-bottom: $table-header 1px solid; }
   border-left: $code-color 1px dotted; padding-left: 1rem;
 }
 
-blockquote, .update {
+blockquote {
   color: darken($table-header, 25%);
+}
+
+.update {
+  color: $update-color;
 }
