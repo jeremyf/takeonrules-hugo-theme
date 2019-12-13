@@ -1,7 +1,7 @@
 <span>&copy;<a name="skip-to-licenses"> </a>{{ now.Format "2006" }}&nbsp; <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">{{ .Site.Params.copyrightHolder }}</a></span>
 {{ $context := . }}
 {{ range .Params.licenses }}
-  <div class="license" role="copyright">
+  <div class="license" role="complementary">
     {{ with index $.Site.Data.licenses . }}
       {{ partial .PartialForLicenseFooter $context }}
     {{ end }}
