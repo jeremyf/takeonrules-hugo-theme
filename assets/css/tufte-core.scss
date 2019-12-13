@@ -256,7 +256,7 @@ footer hr.slender {
 @media screen{ .print-footer { display: none; } }
 
 // Personal modifications
-.post-meta { padding-top: 0.5em; }
+.post-meta { padding-top: 0.5em; font-size: 1.1rem; }
 
 figure { margin-top: 1em; }
 h4 { font-style: italic; font-weight: 400; font-size: 1.2rem; margin-top: 1.6777777777777778rem; margin-bottom: 0; line-height: 1.08888888888889; }
@@ -279,7 +279,7 @@ nav dl dt, nav dl dd { float: left; margin-right: 0.7rem; }
 nav dl dt { margin-left: 0.7rem; }
 nav dl dt:first-child { margin-left: 0rem; }
 
-.breadcrumb-list { font-size: 1rem; padding-bottom: 1rem; padding-left: 0; }
+.breadcrumb-list { font-size: 1.1rem; padding-bottom: 1rem; padding-left: 0; }
 ol.breadcrumb-list { list-style: none; width: 85% ; clear: left; padding-top: 0rem;}
 ol.breadcrumb-list .breadcrumb-item { padding-right: 0.2rem; margin-left: 0rem; float: left; margin-right: 0rem; }
 ol.breadcrumb-list .breadcrumb-item:first-child { margin-left: 0rem; }
