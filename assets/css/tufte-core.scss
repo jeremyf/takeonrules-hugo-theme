@@ -357,7 +357,10 @@ main.blogPostings article {
 sup { font-size: 0.7rem; }
 
 /* Hacks to better present */
-main h2 { border-bottom: $table-header 1px solid; }
+main h2 {
+  border-bottom: $table-header 1px solid;
+  padding-bottom: 3px;
+}
 .open-game-content {
   border-left: $code-color 1px dotted; padding-left: 1rem;
 }
