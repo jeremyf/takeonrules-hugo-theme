@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <article role="article" class="single-article">
+  <article role="article" class="single-article" aria-label="{{ .Title }}">
     <header>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
       {{- with .Params.subtitle }}

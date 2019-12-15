@@ -13,7 +13,7 @@
         {{ partial "breadcrumb.html" . }}
       </nav>
     {{ end }}
-    <main class="group" role="main">
+    <main class="group" role="main" aria-label="Main Content">
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}
