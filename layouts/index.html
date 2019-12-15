@@ -7,7 +7,7 @@
 {{ define "main" }}
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
   <h1>Blog Posts</h1>
-  <a name="skip-to-content"> </a>
+  <a name="skip-to-content" aria-label="Anchor for content"> </a>
   <section>
   {{ range $paginator.Pages }}
     <article>

@@ -1,4 +1,4 @@
-<span>&copy;<a name="skip-to-licenses"> </a>{{ now.Format "2006" }}&nbsp; <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">{{ .Site.Params.copyrightHolder }}</a></span>
+<span>&copy;<a name="skip-to-licenses" aria-label="Anchor for licenses"> </a>{{ now.Format "2006" }}&nbsp; <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">{{ .Site.Params.copyrightHolder }}</a></span>
 {{ $context := . }}
 {{ range .Params.licenses }}
   <div class="license" role="complementary">

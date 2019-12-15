@@ -10,7 +10,7 @@
         <header>
           <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
         </header>
-        <a name="skip-to-content"> </a>
+        <a name="skip-to-content" aria-label="Anchor for content"> </a>
         <section class="content terms">
           {{ $data := .Data }}
           <details open>

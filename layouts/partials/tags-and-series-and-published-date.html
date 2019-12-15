@@ -1,6 +1,6 @@
 <dl class="metadata">
   {{ with .Params.tags }}
-    <dt>Tags:<a name="skip-to-tags"> </a></dt>
+    <dt>Tags:<a name="skip-to-tags" aria-label="Anchor for tags"> </a></dt>
     {{ range . }}
         <dd role="contentinfo" class="tag"><a rel="tag" href="{{ "tags" | absURL }}/{{ . | urlize }}" aria-label="All posts with tag {{ . }}">{{ . }}</a></dd>
     {{ end }}
