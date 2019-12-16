@@ -51,6 +51,8 @@
           "dateModified": "{{ .Lastmod.Format .Site.Params.iso8601_format }}",
           {{ if (isset .Params "tags") }}"keywords": "{{ delimit .Params.tags ", " }}",{{ end }}
           "wordCount": {{ .WordCount }},
+          "author": {{ partialCached "copyrightHolder-jsonld.json" . }},
+          "publisher": {{ partialCached "publisher-jsonld.json" . }},
           "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "{{ .Permalink }}"
