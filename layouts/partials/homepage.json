@@ -1,0 +1,94 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "{{ .Site.BaseURL }}" ,
+  "name": "{{ .Site.Title }}" ,
+  "about": "{{ .Site.Params.Description }}",
+  "copyrightYear": {{ now.Format "2006" }},
+  "copyrightHolder": {{ partialCached "copyrightHolder-jsonld.json" . }},
+  "publisher": {{ partialCached "publisher-jsonld.json" . }},
+  "headline": "{{ .Site.Params.Headline }}",
+  "accessibilityFeature": ["structuralNavigation", "highContrastDisplay", "readingOrder", "displayTransformability/resizeText", "structuralNavigation", "unlocked", "fullKeyboardControl", "fullMouseControl"],
+  "accessibilityHazard": ["noFlashingHazard", "noMotionSimulationHazard", "noSoundHazard" ],
+  "accessibilityAPI": "ARIA",
+  "inLanguage": "en-US",
+  "hasPart": [{
+    "@type": "Blog",
+    "blogPost": [
+      {{ $jsonPaginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
+      {{ $scratch := newScratch }}
+      {{ $scratch.Set "blogPostCounter" 0 }}
+      {{ range $jsonPaginator.Pages }}{{ $scratch.Add "blogPostCounter" 1 }}
+        {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "image": [
+            {{ if (isset .Params "images") }}
+              {{ range .Params.images }}
+                {
+                  "@type": "imageObject",
+                  {{- $original := resources.Get .src }}
+                  "url": "{{ $original.Permalink }}",
+                  "width": {{ $original.Width }},
+                  "height": {{ $original.Height }}
+                },
+              {{ end }}
+            {{ end }}
+              {
+                "@type": "imageObject",
+                {{- $original := resources.Get "images/large-takeonrules-banner.jpg" }}
+                "url": "{{ $original.Permalink }}",
+                "width": {{ $original.Width }},
+                "height": {{ $original.Height }}
+              }
+          ],
+          "name": "{{ .Title }}",
+          "url": "{{ .Permalink }}",
+          "headline": {{- if isset .Params "description" }}{{ .Params.description | jsonify }}{{- else }}"{{ .Title }}"{{- end }},
+          "inLanguage": "en-US",
+          "datePublished": "{{ .Date.Format .Site.Params.iso8601_format }}",
+          "dateModified": "{{ .Lastmod.Format .Site.Params.iso8601_format }}",
+          {{ if (isset .Params "tags") }}"keywords": "{{ delimit .Params.tags ", " }}",{{ end }}
+          "wordCount": {{ .WordCount }},
+          "author": {{ partialCached "copyrightHolder-jsonld.json" . }},
+          "publisher": {{ partialCached "publisher-jsonld.json" . }},
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ .Permalink }}"
+          }
+        }{{ if lt ($scratch.Get "blogPostCounter") $jsonPaginator.NumberOfElements }},{{end}}
+      {{ end }}
+    ]
+  },{
+    "@type": "AboutPage",
+    "url": "{{ .Site.BaseURL }}about/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Site.BaseURL }}about/"
+    }
+  },{
+    "@type": "CollectionPage",
+    "url": "{{ .Site.BaseURL }}metadata/",
+    "abstract": "A web page outlining the different views into the content of the site.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Site.BaseURL }}metadata/"
+    }
+  },{
+    "@type": "CollectionPage",
+    "url": "{{ .Site.BaseURL }}blog-roll/",
+    "abstract": "A web page listing blogs I follow.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Site.BaseURL }}blog-roll/"
+    }
+  },{
+    "@type": "ContactPage",
+    "url": "{{ .Site.BaseURL }}contact-me/",
+    "abstract": "A web page providing means of contacting the author and publisher of the {{ .Site.Title }}.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Site.BaseURL }}contact-me/"
+    }
+  }]
+}
