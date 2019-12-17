@@ -13,7 +13,7 @@ blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
 
 .sidenote-number { counter-increment: sidenote-counter; }
 
-.sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " "; font-family: $counter-font; color: $contrast-color; position: relative; vertical-align: baseline; }
+.sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) ") "; font-family: $counter-font; color: $contrast-color; position: relative; vertical-align: baseline; }
 
 .sidenote-number:after { content: counter(sidenote-counter); font-size: 1rem; top: -0.5rem; left: 0.1rem; }
 
