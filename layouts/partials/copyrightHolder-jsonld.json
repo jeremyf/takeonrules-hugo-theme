@@ -1,13 +1,5 @@
 {
   "@type": "Person",
   "name": "{{ .Site.Params.copyrightHolder }}",
-  "email": "{{ .Site.Params.copyrightHolderEmail }}",
-  {{- range .Site.Params.CopyrightRelation }}
-  "{{ .relationship }}": {
-    "@type": "{{ .type }}",
-    "url": "{{ .url }}",
-    "name": "{{ .name }}"
-  },
-  {{- end }}
-  "sameAs": [ "{{ delimit .Site.Params.sameAs "\", \"" }}" ]
+  "email": "{{ .Site.Params.copyrightHolderEmail }}"
 }
