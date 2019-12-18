@@ -17,8 +17,6 @@ html { vertical-align: baseline; font-size: 11px; -webkit-font-smoothing: antial
 @media screen and (min-width: 1300px){ html{ font-size: 17px; } }
 
 // sets link style according to values in _settings.scss
-.mathblock{ font-size: 1.3rem; }
-
 a { color: $contrast-color;  text-decoration: none; }
 
 p > a {
@@ -98,7 +96,7 @@ tfoot td { border-top: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5e
 
 th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.71428571;  }
 table li { width: 100%; }
-table ul, table ol { padding-top: 0rem; }
+table ul, table ol, .single-article { padding-top: 0rem; }
 
 .booktabs th.cmid, th { border-bottom: 1px solid $border-color; }
 
@@ -133,17 +131,9 @@ ul, ol { padding-left: 2rem; width: 45%; -webkit-padding-start: 5%; -webkit-padd
 .list-page ul { list-style-type: none; margin: -0.25em; width: 87.5%; max-width: 45rem; }
 .list-page li { margin: 0; }
 .list-date { display: inline; font-size: 0.75em; }
-
-/* Table of Contents */
-.toc summary { font-size: 1.5rem; margin-bottom: -1.5rem; padding-left: 0; }
-.toc ul { list-style: none; display: block; padding: 0; width: 87.5%; }
-.toc li { line-height: 0.5rem; margin: 1rem; }
 /* ------------------------------------------------------------------------ */
 /* END Styling for listing pages. */
 /* ------------------------------------------------------------------------ */
-
-
-//li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
 figure, figure img.maincolumn { max-width: 55%; -webkit-margin-start: 0; -webkit-margin-end: 0; margin-bottom: 3em; }
 
@@ -153,16 +143,12 @@ figure.fullwidth figcaption { float: left; margin-right: 0%; margin-left: 36%; }
 
 img { max-width: 100%; }
 
-p, footer, div.table-wrapper, div.mathblock{ width: 55%; }
-
-div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
+div.table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
 // Without this setting, when the header would wrap, the letters would overlap
-main header h1 { width: 55%; }
-h2, h3, h4, h5 { width: 55%; }
+main header h1, h2, h3, h4, h5, .p, p, footer, div.table-wrapper, pre { width: 55%; }
 header > nav.group { padding-bottom: 1rem; }
 
-pre { width: 52.5%; }
 pre, pre code, p pre code { padding: 0 1.5% 0 1.5%; overflow-x: auto; color:$code-color; }
 code { color:$code-color; }
 p pre code, pre code { display: block; margin-top: 0; white-space: pre; }
@@ -191,10 +177,10 @@ header > nav  a { font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.
 header > nav a img { height: 5rem; position: relative; max-width: 100%; top:-1.5rem; }
 ul.footer-links, .credits { list-style: none; text-align: center; margin: 0 auto; }
 ul.footer-links li { display: inline; padding: 0.5rem 0.25rem; }
-.credits { padding: 1rem 0rem; }
 
 //change font color for credit links in footer
 .credits {
+  padding: 1rem 0rem;
   font-family: $sans-font;
   & a{ color: $contrast-color; }
   .license {
@@ -216,8 +202,7 @@ body.default-width {
 body.full-width {
  .content-listing, ul.content-listing li.listing { width: 90%; margin-left: auto; margin-right: auto; padding: 0% 5%; }
 
- .table-wrapper { width: 90%; }
-  article p { width: 90%; }
+  .table-wrapper, article p { width: 90%; }
   h1.content-listing-header { font-style: normal; text-transform: uppercase; letter-spacing: 0.2rem; font-size: 1.8rem; }
 
   li.listing hr { width:100%; }
@@ -261,8 +246,10 @@ table thead tr { background-color: $table-header; }
 table th { font-weight: bold; }
 table tbody tr:nth-child(even) { background-color: lighten($table-header, 20%); }
 table.unstriped tbody tr {  background-color: $bg-color; }
-table tbody tr.subhead { background-color: lighten($table-header, 20%); }
-table tbody tr.subhead th { text-align: left; }
+table tbody tr.subhead {
+  background-color: lighten($table-header, 20%);
+  th { text-align: left; }
+}
 
 table tr.subbody td { padding-left: 1.5rem; }
 table.full { width: 100%; }
@@ -277,18 +264,17 @@ nav dl dt { margin-left: 0.7rem; }
 nav dl dt:first-child { margin-left: 0rem; }
 
 .breadcrumb-list { font-size: 1.1rem; padding-bottom: 1rem; padding-left: 0; }
-ol.breadcrumb-list { list-style: none; width: 85% ; clear: left; padding-top: 0rem;}
+body.full-width ul, body.full-width ol, ol.breadcrumb-list { width: 85%; }
+ol.breadcrumb-list { list-style: none ; clear: left; padding-top: 0rem;}
 ol.breadcrumb-list .breadcrumb-item { padding-right: 0.2rem; margin-left: 0rem; float: left; margin-right: 0rem; }
 ol.breadcrumb-list .breadcrumb-item:first-child { margin-left: 0rem; }
 ol.breadcrumb-list .breadcrumb-item { padding-top: 0rem; }
 ol.breadcrumb-list .breadcrumb-item:not(:last-of-type)::after { content: " / " }
 
-.end-of-article-navigation { padding-bottom: 1rem;}
-
 .content { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 button[type='submit'] { padding: 3px 10px; }
 header form { padding-bottom: 1rem; }
-body.full-width ul { width: 85%; }
+
 main.blogPostings article {
   h1 { font-size: 2.1rem; }
   h2, summary { font-size: 1.8rem; }
@@ -296,25 +282,17 @@ main.blogPostings article {
   h4 { font-size: 1.2rem; }
   .content { margin-top: 0.5rem; }
 }
-.table-wrapper { padding-top: 0.5rem; }
-.paragraph { width: 55% }
-.single-article { padding-top: 0; }
 
 .hide-when-javascript-disabled { display: none; }
 
 
 @media screen and (max-width: 760px) {
-  html { width: 90%; }
-  blockquote, p, footer,div.mathblock { width: 90%; }
-  pre code { width: 87.5%; }
-  ol, ul { width: 87.5%; }
+  html, blockquote, p, footer, figure, main header h1, h2, h3, h4, h5, h6, div.table-wrapper, table, table.booktabs { width: 90%; }
+  pre code, ol, ul, nav dl { width: 87.5%; }
   nav .breadcrumb-list .breadcrumb-item:last-of-type { padding-bottom: 1rem; }
-  nav dl { width: 87.5% }
-  figure { max-width: 90%; }
   figcaption, figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
   blockquote p, blockquote footer, blockquote ul, blockquote ol, blockquote h2, blockquote h3 {  width: 80%; padding-left: 5%; padding-right: 5%; }
   .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
-  main header h1, h2, h3, h4, h5, h6 { width: 90%; }
 
   span.marginnote:not(.marginfigure), span.sidenote {
     border-left-width: thin;
@@ -333,7 +311,6 @@ main.blogPostings article {
   .margin-toggle:checked + .marginnote { display: none; }
   // END non-collapsed margin
   hr.slender { width: 100%; }
-  div.table-wrapper, table, table.booktabs { width: 90%; }
 }
 
 @media (max-width: 760px) {
