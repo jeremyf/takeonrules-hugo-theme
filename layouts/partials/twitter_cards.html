@@ -3,12 +3,14 @@
   {{- $original := resources.Get .src  }}
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="{{ $original.Permalink }}" />
+  <link rel="image_source" content="{{ $original.Permalink }}" />
   {{- end}}
 {{- else }}
   {{- with $.Site.Params.images -}}
   {{- $original := resources.Get (index . 0) }}
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="{{ $original.Permalink }}" />
+  <link rel="image_source" content="{{ $original.Permalink }}" />
   {{- end}}
 {{- end }}
 <meta name="twitter:title" content="{{ .Title }}"/>
