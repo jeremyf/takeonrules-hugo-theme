@@ -22,7 +22,7 @@
       }
   ],
   "name": "{{ .Title }}",
-  "headline": "{{ .Title }}",
+  "headline": {{- if isset .Params "headline" }}{{ .Params.headline | jsonify }}{{- else }}{{- if isset .Params "description" }}{{ .Params.description | jsonify }}{{- else }}"{{ .Title }}"{{- end }}{{- end }},
   "text": {{ .Plain | jsonify }},
   "datePublished": "{{ .Date.Format .Site.Params.iso8601_format }}",
   "dateModified": "{{ .Lastmod.Format .Site.Params.iso8601_format }}",

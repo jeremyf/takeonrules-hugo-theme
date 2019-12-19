@@ -44,7 +44,7 @@
           ],
           "name": "{{ .Title }}",
           "url": "{{ .Permalink }}",
-          "headline": {{- if isset .Params "description" }}{{ .Params.description | jsonify }}{{- else }}"{{ .Title }}"{{- end }},
+          "headline": {{- if isset .Params "headline" }}{{ .Params.headline | jsonify }}{{- else }}{{- if isset .Params "description" }}{{ .Params.description | jsonify }}{{- else }}"{{ .Title }}"{{- end }}{{- end }},
           "inLanguage": "en-US",
           "datePublished": "{{ .Date.Format .Site.Params.iso8601_format }}",
           "dateModified": "{{ .Lastmod.Format .Site.Params.iso8601_format }}",
