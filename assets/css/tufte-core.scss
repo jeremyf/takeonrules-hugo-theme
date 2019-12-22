@@ -29,7 +29,7 @@ p > a {
 body { width: 87.5%; margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: $body-font; background-color: $bg-color; color: $text-color; max-width: 1400px; counter-reset: sidenote-counter; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
-h1 {                     font-weight: 400; font-size: 2.5rem; margin-top: 1.568rem;              margin-bottom: 1.568rem; line-height: 1.08888888888889; }
+h1 { font-weight: 400; font-size: 2.5rem; margin-top: 1.568rem; margin-bottom: 1.568rem; line-height: 1.08888888888889; }
 h2, summary { font-style: italic; font-weight: 400; font-size: 2.1rem; margin-top: 1.8666666666666667rem; margin-bottom: 0;        line-height: 1.08888888888889; }
 .blogPostings h2 { margin-bottom: 1.568rem; }
 h3 { font-style: italic; font-weight: 400; font-size: 1.8rem; margin-top: 2.1777777777777778rem; margin-bottom: 0;        line-height: 1.08888888888889; }
@@ -40,6 +40,7 @@ p, ol, ul, dl { font-size: 1.4rem; }
 p { margin-top: 1.4rem; }
 p, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
 blockquote {
+  color: darken($table-header, 25%);
   width: 55%;
   font-size: 1.1rem;
   margin-top: 1.4rem;
@@ -54,10 +55,6 @@ blockquote {
     width: 90%;
     text-align: right;
   }
-}
-
-table {
-  ul, ol { width: 80%; }
 }
 
 .definition-list {
@@ -88,12 +85,12 @@ tfoot td { border-top: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5e
 
 th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.71428571;  }
 table li { width: 100%; }
-table ul, table ol, .single-article { padding-top: 0rem; }
-
+table {
+  ul, ol { width: 80%; padding-top: 0rem; }
+}
+.single-article { padding-top: 0rem; }
 th { border-bottom: 1px solid $border-color; }
-
 tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */
-
 td {  padding-left: 0.5em; padding-right: 0.5em; text-align: left; }
 
 caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; margin-right: auto; margin-top: 1ex; caption-side: top; }
@@ -102,7 +99,6 @@ table .l { text-align: left }
 table .c { text-align: center }
 table .r { text-align: right }
 
-.table-caption { float:right; clear:right; margin-right: -60%; width: 50%; margin-top: 0; margin-bottom: 0; font-size: 1.0rem; line-height: 1.96; }
 /* -- End of Table Styling section --*/
 
 
@@ -139,7 +135,7 @@ div.table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overf
 main header h1, h2, h3, h4, h5, .p, p, footer, div.table-wrapper, pre { width: 55%; }
 header > nav.group { padding-bottom: 1rem; }
 
-pre, pre code, pre code { padding: 0 1.5% 0 1.5%; overflow-x: auto; color:$code-color; }
+pre, pre code { padding: 0 1.5% 0 1.5%; overflow-x: auto; color:$code-color; }
 code { color:$code-color; }
 pre code { display: block; margin-top: 0; white-space: pre; }
 
@@ -256,34 +252,30 @@ nav dl dt { margin-left: 0.7rem; }
 nav dl dt:first-child { margin-left: 0rem; }
 
 .breadcrumb-list { font-size: 1.1rem; padding-bottom: 1rem; padding-left: 0; }
-body.full-width ul, body.full-width ol, ol.breadcrumb-list { width: 85%; }
-ol.breadcrumb-list { list-style: none ; clear: left; padding-top: 0rem;}
-ol.breadcrumb-list .breadcrumb-item { padding-right: 0.2rem; margin-left: 0rem; float: left; margin-right: 0rem; }
-ol.breadcrumb-list .breadcrumb-item:first-child { margin-left: 0rem; }
-ol.breadcrumb-list .breadcrumb-item { padding-top: 0rem; }
-ol.breadcrumb-list .breadcrumb-item:not(:last-of-type)::after { content: " / " }
+body.full-width {
+  ul, ol { width: 85%; }
+}
+ol.breadcrumb-list {
+  width: 85%; list-style: none ; clear: left; padding-top: 0rem;
+  .breadcrumb-item { padding-top: 0rem; padding-right: 0.2rem; margin-left: 0rem; float: left; margin-right: 0rem; }
+  .breadcrumb-item:first-child { margin-left: 0rem; }
+  .breadcrumb-item:not(:last-of-type)::after { content: " / " }
+}
 
 .content { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 button[type='submit'] { padding: 3px 10px; }
 header form { padding-bottom: 1rem; }
 
-main.blogPostings article {
-  h1 { font-size: 2.1rem; }
-  h2, summary { font-size: 1.8rem; }
-  h3 { font-size: 1.6rem; }
-  h4 { font-size: 1.2rem; }
-  .content { margin-top: 0.5rem; }
-}
-
 .hide-when-javascript-disabled { display: none; }
-
 
 @media screen and (max-width: 760px) {
   html, blockquote, p, footer, figure, main header h1, h2, h3, h4, h5, h6, div.table-wrapper, table, table.booktabs { width: 90%; }
   pre code, ol, ul, nav dl { width: 87.5%; }
   nav .breadcrumb-list .breadcrumb-item:last-of-type { padding-bottom: 1rem; }
   figcaption, figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
-  blockquote p, blockquote footer, blockquote ul, blockquote ol, blockquote h2, blockquote h3 {  width: 80%; padding-left: 5%; padding-right: 5%; }
+  blockquote {
+    p, footer, ul, ol, h2, h3 {  width: 80%; padding-left: 5%; padding-right: 5%; }
+  }
   .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
 
   .marginnote:not(.marginfigure), .sidenote {
@@ -309,7 +301,6 @@ main.blogPostings article {
   label.margin-toggle:not(.sidenote-number) { display: inline; color: $contrast-color; }
   label { cursor: pointer; }
   pre, pre code { width: 90%; padding: 0; }
-  .table-caption { display: block; float: right; clear: both; width: 98%; margin-top: 1rem; margin-bottom: 0.5rem; margin-left: 1%; margin-right: 1%; vertical-align: baseline; position: relative; }
   div.table-wrapper { border-right: 1px solid #efefef; }
   img { max-width: 100%; }
   ol.breadcrumb-list .breadcrumb-item, .metadata { line-height: 1.78181818rem; }
@@ -325,10 +316,6 @@ sup { font-size: 0.7rem; }
 /* Hacks to better present */
 .open-game-content {
   border-left: $code-color 1px dotted; padding-left: 1rem;
-}
-
-blockquote {
-  color: darken($table-header, 25%);
 }
 
 .update {
