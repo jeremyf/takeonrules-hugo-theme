@@ -27,7 +27,7 @@ table tbody tr.subhead {
 // Cribbed from https://www.smashingmagazine.com/2018/05/print-stylesheets-in-2018/
 // And https://www.w3schools.com/css/css_attribute_selectors.asp
 // Render HREF for all non images
-a:link:not([href^="/images/"]):after, a:visited:not([href^="/images/"]):after { content: " (" attr(href) ")"; }
+// a:link:not([href^="/images/"]):after, a:visited:not([href^="/images/"]):after { content: " (" attr(href) ")"; }
 
 // Without this line, the links could spill into the right column; I suspect this is in play regardless, and will
 // require more experimentation to see how things behave.
