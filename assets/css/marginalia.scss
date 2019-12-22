@@ -17,9 +17,13 @@ h1, h2, h3, h4, h5 { clear: left; }
 }
 
  //added to allow for the fact that lists are indented and marginnotes and sidenotes push to right
-li .sidenote, li .marginnote { margin-right: -80%; }
+li {
+  .sidenote, .marginnote { margin-right: -80%; }
+}
 
-blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
+blockquote {
+  .sidenote, .marginnote { margin-right: -79% }
+}
 
 .sidenote-number { counter-increment: sidenote-counter; }
 
@@ -27,6 +31,8 @@ blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
 
 .sidenote-number:after { content: counter(sidenote-counter); font-size: 1rem; top: -0.5rem; left: 0.1rem; }
 
+// TODO: Must figure this out. I don't want to hide marginalia but instead
+//       render it similar to the print style
 .full-width { .sidenote, .sidenote-number, .marginnote { display: none; } }
 
 input.margin-toggle { display: none; }
