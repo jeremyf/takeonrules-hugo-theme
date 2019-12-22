@@ -28,3 +28,24 @@ input.margin-toggle { display: none; }
 label.sidenote-number { display: inline; }
 
 label.margin-toggle:not(.sidenote-number) { display: none; }
+
+
+.marginnote.margin-table {
+  margin-right: 11%; width: 29%;
+  .table-wrapper {
+    width: 100%;
+    table { width: 100%; }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .marginnote.margin-table {
+    display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative;
+    .table-wrapper {
+      width: 92%;
+      table {
+        width: 95%;
+      }
+    }
+  }
+}
