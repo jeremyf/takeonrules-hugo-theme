@@ -87,10 +87,10 @@ h1 code, h2 code, h3 code { font-size: 0.80em; } //left in for no real reason
 /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
 
 //making booktabs style tables the unstyled default in case someone uses Markdown styling
-table, table.booktabs { width: auto; margin: 0 auto; border-spacing: 0px; border-top: 2px solid $border-color; border-bottom: 2px solid $border-color; }
+table { width: auto; margin: 0 auto; border-spacing: 0px; border-top: 2px solid $border-color; border-bottom: 2px solid $border-color; }
 
-.booktabs th, th { border-bottom: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; text-align: center; }
-.booktabs tbody th, tbody th { border: none; }
+th { border-bottom: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; text-align: center; }
+tbody th { border: none; }
 
 tfoot td { border-top: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; font-size: smaller; text-align: center; }
 
@@ -98,19 +98,17 @@ th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.71428571;  }
 table li { width: 100%; }
 table ul, table ol, .single-article { padding-top: 0rem; }
 
-.booktabs th.cmid, th { border-bottom: 1px solid $border-color; }
+th { border-bottom: 1px solid $border-color; }
 
-.booktabs th.nocmid { border-bottom: none; }
+tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */
 
-.booktabs tbody tr:first-child td, tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */
+td {  padding-left: 0.5em; padding-right: 0.5em; text-align: left; }
 
-.booktabs td, td {  padding-left: 0.5em; padding-right: 0.5em; text-align: left; }
+caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; margin-right: auto; margin-top: 1ex; caption-side: top; }
 
-.booktabs caption, caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; margin-right: auto; margin-top: 1ex; caption-side: top; }
-
-.booktabs tbody tr td.l, table .l { text-align: left }
-.booktabs tbody tr td.c, table .c { text-align: center }
-.booktabs tbody tr td.r, table .r { text-align: right }
+table .l { text-align: left }
+table .c { text-align: center }
+table .r { text-align: right }
 
 .table-caption { float:right; clear:right; margin-right: -60%; width: 50%; margin-top: 0; margin-bottom: 0; font-size: 1.0rem; line-height: 1.96; }
 /* -- End of Table Styling section --*/
@@ -294,7 +292,7 @@ main.blogPostings article {
   blockquote p, blockquote footer, blockquote ul, blockquote ol, blockquote h2, blockquote h3 {  width: 80%; padding-left: 5%; padding-right: 5%; }
   .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
 
-  span.marginnote:not(.marginfigure), span.sidenote {
+  .marginnote:not(.marginfigure), .sidenote {
     border-left-width: thin;
     border-left-color: $contrast-color;
     border-left-style: dotted;
