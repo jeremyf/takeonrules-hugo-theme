@@ -1,16 +1,16 @@
 <a name="skip-to-breadcrumbs" aria-label="Anchor for breadcrumbs"></a>
-<ol aria-label="Breadcrumbs List" class="breadcrumb-list">
+<ol aria-label="Breadcrumbs List" class="bcl">
   {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
 </ol>
 {{- define "breadcrumbnav" }}
   {{- if eq .p1.Kind "taxonomy" }}
-    <li class="breadcrumb-item">
+    <li class="bci">
       <a href="{{ .p1.Site.BaseURL }}">{{ .p1.Site.Title }}</a>
     </li>
-    <li class="breadcrumb-item">
+    <li class="bci">
       <a href="{{ .p1.Site.BaseURL }}{{ .p1.Data.Plural }}/">{{ .p1.Data.Plural | title }}</a>
     </li>
-    <li class="breadcrumb-item active">
+    <li class="bci active">
       <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
     </li>
   {{- else }}
@@ -19,7 +19,7 @@
     {{- else if not .p1.IsHome }}
       {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
     {{- end }}
-    <li class="breadcrumb-item {{ if eq .p1 .p2 }}active{{ end }}">
+    <li class="bci {{ if eq .p1 .p2 }}active{{ end }}">
       <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
     </li>
   {{- end }}

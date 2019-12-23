@@ -19,20 +19,14 @@ html { vertical-align: baseline; font-size: 11px; -webkit-font-smoothing: antial
 // sets link style according to values in _settings.scss
 a { color: $contrast-color;  text-decoration: none; }
 
-p > a {
-  @if $link-style == underline {
-    color: $text-color; text-decoration: none; border-bottom: 1px solid #777; padding-bottom: 1px;
-  } @else {
-    color: $contrast-color; text-decoration: none;
-  }
-}
 body { width: 87.5%; margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: $body-font; background-color: $bg-color; color: $text-color; max-width: 1400px; counter-reset: sidenote-counter; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1 { font-weight: 400; font-size: 2.5rem; margin-top: 1.568rem; margin-bottom: 1.568rem; line-height: 1.08888888888889; }
-h2, summary { font-style: italic; font-weight: 400; font-size: 2.1rem; margin-top: 1.8666666666666667rem; margin-bottom: 0;        line-height: 1.08888888888889; }
-.blogPostings h2 { margin-bottom: 1.568rem; }
-h3 { font-style: italic; font-weight: 400; font-size: 1.8rem; margin-top: 2.1777777777777778rem; margin-bottom: 0;        line-height: 1.08888888888889; }
+h2, h3, summary { font-style: italic; font-weight: 400; margin-bottom: 0; line-height: 1.08888888888889; }
+h2, summary { font-size: 2.1rem; margin-top: 1.8666666666666667rem; }
+h3 { font-size: 1.8rem; margin-top: 2.1777777777777778rem; }
+h4 { font-size: 1.2rem; margin-top: 1.6777777777777778rem; }
 // ET says a need for more than 3 levels of headings is the sign of a diseased mind; But I added an h4
 
 p.subtitle { font-style: italic; margin-top: 2.1777777777777778rem; margin-bottom: 2.1777777777777778rem; font-size: 1.8rem; display: block; line-height: 1.08888888888889; }
@@ -65,57 +59,68 @@ blockquote {
 }
 
 /* BEGIN Epigraphs */
-div.epigraph > blockquote { font-style: italic; }
-div.epigraph > blockquote p, div.epigraph > blockquote ul { font-style: italic; margin-top: 1rem; margin-bottom: 1rem; }
-div.epigraph > blockquote > footer { margin-top: 0rem; font-style: normal; }
-div.epigraph > blockquote > footer > cite { font-style: italic; }
+div.epigraph > blockquote {
+  font-style: italic;
+  p, ul { font-style: italic; margin-top: 1rem; margin-bottom: 1rem; }
+  > footer {
+    margin-top: 0rem; font-style: normal;
+    > cite { font-style: italic; }
+  }
+}
 /* END Epigraphs */
-
-pre, code { font-family: $code-font; font-size: 1.0rem; line-height: 1.71428571; margin-top: 1.71428571rem; }
 
 /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
 
 //making booktabs style tables the unstyled default in case someone uses Markdown styling
-table { width: auto; margin: 0 auto; border-spacing: 0px; border-top: 2px solid $border-color; border-bottom: 2px solid $border-color; }
-
-th { border-bottom: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; text-align: center; }
-tbody th { border: none; }
-
-tfoot td { border-top: 1px solid $border-color; padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; font-size: smaller; text-align: center; }
-
-th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.71428571;  }
-table li { width: 100%; }
 table {
+  width: auto; margin: 0 auto; border-spacing: 0px; border-top: 2px solid $border-color; border-bottom: 2px solid $border-color;
+  .l { text-align: left }
+  .c { text-align: center }
+  .r { text-align: right }
+  thead {
+    th { border-bottom: 1px solid $border-color; }
+    tr { background-color: $table-header; }
+  }
+  th { font-weight: bold; }
+  &.unstriped tbody tr, &.unstriped .subbody { background-color: $bg-color; }
+  tbody tr {
+    &:nth-child(even) { background-color: lighten($table-header, 20%); }
+    &.subhead {
+      background-color: lighten($table-header, 20%);
+      th { text-align: left; }
+    }
+  }
+  .subbody td { padding-left: 1.5rem; }
+  &.full { width: 100%; }
+
+  li { width: 100%; }
   ul, ol { width: 80%; padding-top: 0rem; }
+
 }
-.single-article { padding-top: 0rem; }
-th { border-bottom: 1px solid $border-color; }
+
+tfoot td { border-top: 1px solid $border-color; font-size: smaller }
+th, tfoot td { padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; ; text-align: center; }
+th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.71428571;  }
 tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */
-td {  padding-left: 0.5em; padding-right: 0.5em; text-align: left; }
-
+td { padding-left: 0.5em; padding-right: 0.5em; text-align: left; }
 caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; margin-right: auto; margin-top: 1ex; caption-side: top; }
-
-table .l { text-align: left }
-table .c { text-align: center }
-table .r { text-align: right }
-
 /* -- End of Table Styling section --*/
 
 
 /* Basic Layout stuff --*/
 
 article { position: relative; padding: 1rem 0rem 1.5rem 0rem; } // reduced top and bottom padding by 50%
-
+.single-article { padding-top: 0rem; }
 .section { padding-top: 1rem; padding-bottom: 1rem; clear: left; }
-
-
 ul, ol { padding-left: 2rem; width: 45%; -webkit-padding-start: 5%; -webkit-padding-end: 5%; padding-top: 1rem; }
 
 /* ------------------------------------------------------------------------ */
 /* Styling for listing pages. */
 /* ------------------------------------------------------------------------ */
-.list-page ul { list-style-type: none; margin: -0.25em; width: 87.5%; max-width: 45rem; }
-.list-page li { margin: 0; }
+.list-page {
+  ul { list-style-type: none; margin: -0.25em; width: 87.5%; max-width: 45rem; }
+  li { margin: 0; }
+}
 .list-date { display: inline; font-size: 0.75em; }
 /* ------------------------------------------------------------------------ */
 /* END Styling for listing pages. */
@@ -134,10 +139,13 @@ div.table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overf
 // Without this setting, when the header would wrap, the letters would overlap
 main header h1, h2, h3, h4, h5, .p, p, footer, div.table-wrapper, pre { width: 55%; }
 header > nav.group { padding-bottom: 1rem; }
+header > nav.group, body footer.group { width: 95%; }
+body footer.group { padding-top: 2rem; }
+
 
 pre, pre code { padding: 0 1.5% 0 1.5%; overflow-x: auto; color:$code-color; }
 code { color:$code-color; }
-pre code { display: block; margin-top: 0; white-space: pre; }
+pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.71428571; margin-top: 1.71428571rem; display: block; margin-top: 0; white-space: pre; }
 
 .fullwidth, li.listing div { max-width: 90%; }
 
@@ -152,17 +160,15 @@ pre code { display: block; margin-top: 0; white-space: pre; }
 .smaller { font-size: 80%;}
 //Nav and Footer styling area
 
-header > nav.group, body footer.group { width: 95%; }
-
-body footer.group { padding-top: 2rem; }
-
 nav.group {
   a.active:before { content:"\0003c\000a0"; } // escaped unicode for the carats and then a space on active menu links
   a.active:after { content:"\000a0\0003e"; }
 }
 
-header > nav  a { font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin-top: 1.5rem; margin-bottom: 0; margin-right: 2rem; vertical-align: baseline; }
-header > nav a img { height: 5rem; position: relative; max-width: 100%; top:-1.5rem; }
+header > nav a {
+  font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin-top: 1.5rem; margin-bottom: 0; margin-right: 2rem; vertical-align: baseline;
+  img { height: 5rem; position: relative; max-width: 100%; top:-1.5rem; }
+}
 ul.footer-links, .credits { list-style: none; text-align: center; margin: 0 auto; }
 ul.footer-links li { display: inline; padding: 0.5rem 0.25rem; }
 
@@ -229,37 +235,34 @@ footer hr.slender {
 .post-meta { padding-top: 0.5em; font-size: 1.1rem; }
 
 figure { margin-top: 1em; }
-h4 { font-style: italic; font-weight: 400; font-size: 1.2rem; margin-top: 1.6777777777777778rem; margin-bottom: 0; line-height: 1.08888888888889; }
-table thead tr { background-color: $table-header; }
-table th { font-weight: bold; }
-table tbody tr:nth-child(even) { background-color: lighten($table-header, 20%); }
-table.unstriped tbody tr {  background-color: $bg-color; }
-table tbody tr.subhead {
-  background-color: lighten($table-header, 20%);
-  th { text-align: left; }
+
+// BEGIN Skip Navigation
+a.offscreen {
+  position:absolute; left:-1000px; top:-1000px; width:1px; height:1px; text-align: left; overflow:hidden;
+  &:focus, &:active, &:hover { position:absolute; padding: 0.75rem 0.75rem; margin-right: 2rem; margin-top: 1.5rem; left:5px; top:-20px; width:auto; height:auto; overflow:visible; background-color:$contrast-color; color: $bg-color; border: 1px dotted #000; }
+}
+// END Skip Navigation
+nav dl {
+  &:first-of-type { padding-top: 0rem; }
+  font-size: 1.1rem; padding-top: 1rem; width: 55% ; clear: left; line-height: 2rem;
+  dt, dd { float: left; margin-right: 0.7rem; }
+  dt {
+    margin-left: 0.7rem;
+    &:first-child { margin-left: 0rem; }
+  }
 }
 
-table tr.subbody td { padding-left: 1.5rem; }
-table.full { width: 100%; }
-// BEGIN Skip Navigation
-a.offscreen { position:absolute; left:-1000px; top:-1000px; width:1px; height:1px; text-align: left; overflow:hidden; }
-a.offscreen:focus, a.offscreen:active, a.offscreen:hover { position:absolute; padding: 0.75rem 0.75rem; margin-right: 2rem; margin-top: 1.5rem; left:5px; top:-20px; width:auto; height:auto; overflow:visible; background-color:$contrast-color; color: $bg-color; border: 1px dotted #000; }
-// END Skip Navigation
-nav dl { font-size: 1.1rem; padding-top: 1rem; width: 55% ; clear: left; line-height: 2rem; }
-nav dl:first-of-type { padding-top: 0rem; }
-nav dl dt, nav dl dd { float: left; margin-right: 0.7rem; }
-nav dl dt { margin-left: 0.7rem; }
-nav dl dt:first-child { margin-left: 0rem; }
-
-.breadcrumb-list { font-size: 1.1rem; padding-bottom: 1rem; padding-left: 0; }
 body.full-width {
   ul, ol { width: 85%; }
 }
-ol.breadcrumb-list {
-  width: 85%; list-style: none ; clear: left; padding-top: 0rem;
-  .breadcrumb-item { padding-top: 0rem; padding-right: 0.2rem; margin-left: 0rem; float: left; margin-right: 0rem; }
-  .breadcrumb-item:first-child { margin-left: 0rem; }
-  .breadcrumb-item:not(:last-of-type)::after { content: " / " }
+
+// breadcrumb
+ol.bcl {
+  font-size: 1.1rem; padding: 0 0 1rem 0; width: 85%; list-style: none ; clear: left;
+  .bci {
+    padding: 0 0.2rem 0 0; margin: 0; float: left;
+    &.bci:not(:last-of-type)::after { content: " / " }
+  }
 }
 
 .content { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
@@ -271,12 +274,13 @@ header form { padding-bottom: 1rem; }
 @media screen and (max-width: 760px) {
   html, blockquote, p, footer, figure, main header h1, h2, h3, h4, h5, h6, div.table-wrapper, table, table.booktabs { width: 90%; }
   pre code, ol, ul, nav dl { width: 87.5%; }
-  nav .breadcrumb-list .breadcrumb-item:last-of-type { padding-bottom: 1rem; }
+  nav .bcl .bci:last-of-type { padding-bottom: 1rem; }
   figcaption, figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
   blockquote {
     p, footer, ul, ol, h2, h3 {  width: 80%; padding-left: 5%; padding-right: 5%; }
   }
-  .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
+  // Removed as it appears to not be used
+  // .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
 
   .marginnote:not(.marginfigure), .sidenote {
     border-left-width: thin;
@@ -298,18 +302,23 @@ header form { padding-bottom: 1rem; }
 }
 
 @media (max-width: 760px) {
-  label.margin-toggle:not(.sidenote-number) { display: inline; color: $contrast-color; }
-  label { cursor: pointer; }
+  label
+  label {
+    &.margin-toggle:not(.sidenote-number) { display: inline; color: $contrast-color; }
+    cursor: pointer;
+  }
   pre, pre code { width: 90%; padding: 0; }
   div.table-wrapper { border-right: 1px solid #efefef; }
   img { max-width: 100%; }
-  ol.breadcrumb-list .breadcrumb-item, .metadata { line-height: 1.78181818rem; }
+  ol.bcl .bci, .metadata { line-height: 1.78181818rem; }
 }
 /*--- End of Basic Layout stuff from tufte.css ---*/
 
 /* Related to update shortcode */
-.marginnote br { margin-bottom: 0.66rem; }
-.marginnote br:last-of-type { margin-bottom: 0rem; }
+.marginnote br {
+  margin-bottom: 0.66rem;
+  &:last-of-type { margin-bottom: 0rem; }
+}
 
 sup { font-size: 0.7rem; }
 
