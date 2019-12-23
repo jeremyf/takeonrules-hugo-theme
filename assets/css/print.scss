@@ -15,9 +15,12 @@ body {
 article {
   .table-wrapper, h2, h3, h4, h5, summary { page-break-after: avoid; }
 }
-header, footer.group, nav, aside { display:none; }
+header, nav, aside { display:none; }
 main header, blockquote footer { display: inherit; }
-.print-footer{ font-family: $sans-font; font-size: 9pt; margin-top: 22.4pt; padding-top: 4pt; border-top: 1px solid #000; }
+footer.group {
+  font-family: $sans-font; font-size: 9pt; border-top: 1px solid $text-color;
+  .footer-links { display: none; }
+}
 
 tr, img { page-break-inside: avoid; }
 img { max-width: 100% !important; }
