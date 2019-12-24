@@ -55,7 +55,7 @@ blockquote {
 /* BEGIN Epigraphs */
 div.epigraph > blockquote {
   font-style: italic;
-  p, ul { font-style: italic; margin-top: 1rem; margin-bottom: 1rem; }
+  p, ul { font-style: italic; margin: 1rem 0; }
   > footer {
     margin-top: 0rem; font-style: normal;
     > cite { font-style: italic; }
@@ -132,12 +132,12 @@ figcaption { float: right; clear: right; margin-right: -48%; margin-top: 0; marg
 // Without this setting, when the header would wrap, the letters would overlap
 main header h1, h2, h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
 header > nav.group { padding-bottom: 1rem; }
-header > nav.group, body footer.group { width: 95%; }
 body footer.group { padding-top: 2rem; }
+header > nav.group, body footer.group { width: 95%; }
 
 
-pre, pre code { padding: 0 1.5% 0 1.5%; overflow-x: auto; color:$code-color; }
-code { color:$code-color; }
+pre, pre code { padding: 0 1.5%; overflow-x: auto; color:$code-color; }
+code { color:$code-color; font-size: 1.1rem; }
 pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.7142; margin-top: 1.7142rem; display: block; white-space: pre; }
 
 .fullwidth, li.listing div { max-width: 90%; }
