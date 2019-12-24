@@ -51,13 +51,6 @@ blockquote {
   }
 }
 
-.definition-list {
-  margin-top: 1rem;
-  width: 55%;
-  dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
-  dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
-}
-
 /* BEGIN Epigraphs */
 div.epigraph > blockquote {
   font-style: italic;
@@ -238,6 +231,13 @@ a.offscreen {
   &:focus, &:active, &:hover { position:absolute; padding: 0.75rem 0.75rem; margin-right: 2rem; margin-top: 1.5rem; left:5px; top:-20px; width:auto; height:auto; overflow:visible; background-color:$contrast-color; color: $bg-color; border: 1px dotted #000; }
 }
 // END Skip Navigation
+.content dl {
+  margin-top: 1rem;
+  width: 55%;
+  dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
+  dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
+}
+
 nav dl {
   &:first-of-type { padding-top: 0rem; }
   font-size: 1.1rem; padding-top: 1rem; width: 55% ; clear: left; line-height: 2rem;
@@ -269,7 +269,7 @@ header form { padding-bottom: 1rem; }
 
 @media screen and (max-width: 760px) {
   html, blockquote, p, footer, figure, main header h1, h2, h3, h4, .table-wrapper, table { width: 90%; }
-  pre code, ol, ul, nav dl { width: 87.5%; }
+  pre code, ol, ul, nav dl.nav { width: 87.5%; }
   nav .bcl .bci:last-of-type { padding-bottom: 1rem; }
   figcaption { margin-right: 0%; max-width: none; }
   // figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
@@ -307,7 +307,7 @@ header form { padding-bottom: 1rem; }
   pre, pre code { width: 90%; padding: 0; }
   div.table-wrapper { border-right: 1px solid #efefef; }
   img { max-width: 100%; }
-  ol.bcl .bci, .metadata { line-height: 1.78181818rem; }
+  ol.bcl .bci, nav dl.nav { line-height: 1.78181818rem; }
 }
 /*--- End of Basic Layout stuff from tufte.css ---*/
 
