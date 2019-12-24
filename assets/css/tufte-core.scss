@@ -161,7 +161,7 @@ header > nav a {
   font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin-top: 1.5rem; margin-bottom: 0; margin-right: 2rem; vertical-align: baseline;
   // img { height: 5rem; position: relative; max-width: 100%; top:-1.5rem; }
 }
-ul.footer-links, .credits { list-style: none; text-align: center; margin: 0 auto; }
+ul.footer-links, .credits { padding-left: 0rem; list-style: none; text-align: center; margin: 0 auto; }
 ul.footer-links li { display: inline; padding: 0.5rem 0.25rem; }
 
 //change font color for credit links in footer
