@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5 { clear: left; }
 // Responsible for common rendering behavior of the marginalia. When tinkering
 // with this file, remember to review both the narrow version and the print version
 .sidenote, .marginnote {
-  float: right; clear: right; margin-right: -60%; width: 50%; margin: 0 0 1.96rem 0; font-size: 1.0rem; line-height: 1.96; vertical-align: baseline; position: relative;
+  float: right; clear: right; margin: 0 -60% 1.96rem 0; width: 50%; font-size: 1.0rem; line-height: 1.96; vertical-align: baseline; position: relative;
   &.margin-table {
     margin-right: 11%; width: 29%;
     .table-wrapper {
