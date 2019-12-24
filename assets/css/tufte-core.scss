@@ -120,8 +120,7 @@ ul, ol { padding: 1rem 0 0 1.5rem; width: 45%; -webkit-padding-start: 5%; -webki
 /* END Styling for listing pages. */
 /* ------------------------------------------------------------------------ */
 
-figure, figure img.maincolumn { max-width: 55%; -webkit-margin-start: 0; -webkit-margin-end: 0; margin-bottom: 3em; }
-figure { margin-top: 1em; }
+figure { margin: 1em 0 3em 0; max-width: 55%; -webkit-margin-start: 0; -webkit-margin-end: 0; }
 img { max-width: 100%; }
 figcaption { float: right; clear: right; margin-right: -48%; margin-top: 0; margin-bottom: 0; font-size: 1.0rem; line-height: 1.6; vertical-align: baseline; position: relative; max-width: 40%; }
 // figure.fullwidth figcaption { float: left; margin-right: 0%; margin-left: 36%; }
@@ -140,7 +139,7 @@ pre, pre code { padding: 0 1.5%; overflow-x: auto; color:$code-color; }
 code { color:$code-color; font-size: 1.1rem; }
 pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.7142; margin-top: 1.7142rem; display: block; white-space: pre; }
 
-.fullwidth, li.listing div { max-width: 90%; }
+.fullwidth { max-width: 90%; }
 
 .newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.05rem; }
 
