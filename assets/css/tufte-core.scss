@@ -168,7 +168,7 @@ ul.footer-links li { display: inline; padding: 0.5rem 0.25rem; }
 .credits {
   padding: 1rem 0rem;
   font-family: $sans-font;
-  & a{ color: $contrast-color; }
+  a{ color: $contrast-color; }
   .license {
     margin-top: 1rem;
     font-size: smaller;
@@ -284,7 +284,7 @@ header form { padding-bottom: 1rem; }
   figcaption { margin-right: 0%; max-width: none; }
   // figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
   blockquote {
-    p, footer, ul, ol, h2, h3 {  width: 80%; padding: 0 5%; }
+    > * {  width: 80%; padding: 0 5%; }
   }
   // Removed as it appears to not be used
   // .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
