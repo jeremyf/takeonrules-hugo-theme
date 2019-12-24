@@ -29,7 +29,7 @@ h3 { font-size: 1.8rem; margin-top: 2.1777777777777778rem; }
 h4 { font-size: 1.2rem; margin-top: 1.6777777777777778rem; }
 // ET says a need for more than 3 levels of headings is the sign of a diseased mind; But I added an h4
 
-p.subtitle { font-style: italic; margin-top: 2.1777777777777778rem; margin-bottom: 2.1777777777777778rem; font-size: 1.8rem; display: block; line-height: 1.08888888888889; }
+// p.subtitle { font-style: italic; margin-top: 2.1777777777777778rem; margin-bottom: 2.1777777777777778rem; font-size: 1.8rem; display: block; line-height: 1.08888888888889; }
 p, ol, ul, dl { font-size: 1.4rem; }
 p { margin-top: 1.4rem; }
 p, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
@@ -127,17 +127,16 @@ ul, ol { padding-left: 2rem; width: 45%; -webkit-padding-start: 5%; -webkit-padd
 /* ------------------------------------------------------------------------ */
 
 figure, figure img.maincolumn { max-width: 55%; -webkit-margin-start: 0; -webkit-margin-end: 0; margin-bottom: 3em; }
-
-figcaption { float: right; clear: right; margin-right: -48%; margin-top: 0; margin-bottom: 0; font-size: 1.0rem; line-height: 1.6; vertical-align: baseline; position: relative; max-width: 40%; }
-
-figure.fullwidth figcaption { float: left; margin-right: 0%; margin-left: 36%; }
-
+figure { margin-top: 1em; }
 img { max-width: 100%; }
+figcaption { float: right; clear: right; margin-right: -48%; margin-top: 0; margin-bottom: 0; font-size: 1.0rem; line-height: 1.6; vertical-align: baseline; position: relative; max-width: 40%; }
+// figure.fullwidth figcaption { float: left; margin-right: 0%; margin-left: 36%; }
 
-div.table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overflow values to 'auto' so scroll bars appear only as needed
+
+.table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
 // Without this setting, when the header would wrap, the letters would overlap
-main header h1, h2, h3, h4, h5, .p, p, footer, div.table-wrapper, pre { width: 55%; }
+main header h1, h2, h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
 header > nav.group { padding-bottom: 1rem; }
 header > nav.group, body footer.group { width: 95%; }
 body footer.group { padding-top: 2rem; }
@@ -157,7 +156,6 @@ pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.71428571; 
 //helper classes
 
 .contrast { color: $contrast-color;}
-.smaller { font-size: 80%;}
 //Nav and Footer styling area
 
 nav.group {
@@ -167,7 +165,7 @@ nav.group {
 
 header > nav a {
   font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin-top: 1.5rem; margin-bottom: 0; margin-right: 2rem; vertical-align: baseline;
-  img { height: 5rem; position: relative; max-width: 100%; top:-1.5rem; }
+  // img { height: 5rem; position: relative; max-width: 100%; top:-1.5rem; }
 }
 ul.footer-links, .credits { list-style: none; text-align: center; margin: 0 auto; }
 ul.footer-links li { display: inline; padding: 0.5rem 0.25rem; }
@@ -180,8 +178,8 @@ ul.footer-links li { display: inline; padding: 0.5rem 0.25rem; }
   .license {
     margin-top: 1rem;
     font-size: smaller;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0 2rem;
+    img { padding-bottom: 0.5rem; }
   }
 }
 
@@ -234,8 +232,6 @@ footer hr.slender {
 // Personal modifications
 .post-meta { padding-top: 0.5em; font-size: 1.1rem; }
 
-figure { margin-top: 1em; }
-
 // BEGIN Skip Navigation
 a.offscreen {
   position:absolute; left:-1000px; top:-1000px; width:1px; height:1px; text-align: left; overflow:hidden;
@@ -266,16 +262,17 @@ ol.bcl {
 }
 
 .content { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
-button[type='submit'] { padding: 3px 10px; }
+// button[type='submit'] { padding: 3px 10px; }
 header form { padding-bottom: 1rem; }
 
 .hide-when-javascript-disabled { display: none; }
 
 @media screen and (max-width: 760px) {
-  html, blockquote, p, footer, figure, main header h1, h2, h3, h4, h5, h6, div.table-wrapper, table, table.booktabs { width: 90%; }
+  html, blockquote, p, footer, figure, main header h1, h2, h3, h4, .table-wrapper, table { width: 90%; }
   pre code, ol, ul, nav dl { width: 87.5%; }
   nav .bcl .bci:last-of-type { padding-bottom: 1rem; }
-  figcaption, figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
+  figcaption { margin-right: 0%; max-width: none; }
+  // figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
   blockquote {
     p, footer, ul, ol, h2, h3 {  width: 80%; padding-left: 5%; padding-right: 5%; }
   }
