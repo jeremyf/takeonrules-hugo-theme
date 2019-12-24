@@ -13,7 +13,7 @@ body {
 }
 
 article {
-  .table-wrapper, h2, h3, h4, h5, summary { page-break-after: avoid; }
+  .table-wrapper, h2, h3, h4, summary { page-break-after: avoid; }
 }
 header, nav, aside { display:none; }
 main header, blockquote footer { display: inherit; }
