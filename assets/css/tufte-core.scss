@@ -24,7 +24,7 @@ a { color: $contrast-color;  text-decoration: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1 { font-weight: 400; font-size: 2.5rem; margin: 1.568rem 0; line-height: 1.0889; }
-h2, h3, summary { font-style: italic; font-weight: 400; margin-bottom: 0; line-height: 1.0889; }
+h2, h3, h4, summary { font-style: italic; font-weight: 400; margin-bottom: 0; line-height: 1.0889; }
 h2, summary { font-size: 2.1rem; margin-top: 1.8667rem; }
 h3 { font-size: 1.8rem; margin-top: 2.1778rem; }
 h4 { font-size: 1.2rem; margin-top: 1.6778rem; }
@@ -288,23 +288,6 @@ header form { padding-bottom: 1rem; }
   }
   // Removed as it appears to not be used
   // .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
-
-  .marginnote:not(.marginfigure), .sidenote {
-    border-left-width: thin;
-    border-left-color: $contrast-color;
-    border-left-style: dotted;
-    padding-left: 0.5rem;
-  }
-  // The collapsed and non-collapsed CSS are reciprocals. You should pick one or the other
-  // BEGIN collapsed margin
-  // .sidenote, .marginnote { display: none; }
-  // .margin-toggle:checked + .sidenote,
-  // .margin-toggle:checked + .marginnote { display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative; }
-  // END collapsed margin
-  .sidenote, .marginnote { display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative; }
-  .margin-toggle:checked + .sidenote,
-  .margin-toggle:checked + .marginnote { display: none; }
-  // END non-collapsed margin
   hr.slender { width: 100%; }
 }
 
@@ -318,12 +301,6 @@ header form { padding-bottom: 1rem; }
   ol.bcl .bci, nav dl { line-height: 1.7819rem; }
 }
 /*--- End of Basic Layout stuff from tufte.css ---*/
-
-/* Related to update shortcode */
-.marginnote br {
-  margin-bottom: 0.66rem;
-  &:last-of-type { margin-bottom: 0rem; }
-}
 
 sup { font-size: 0.7rem; }
 

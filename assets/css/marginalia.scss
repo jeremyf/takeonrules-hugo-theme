@@ -13,17 +13,13 @@ h1, h2, h3, h4, h5 { clear: left; }
       table { width: 100%; }
     }
   }
-  code { font-size: 1rem; }
 }
 
  //added to allow for the fact that lists are indented and marginnotes and sidenotes push to right
-li {
+li, blockquote {
   .sidenote, .marginnote { margin-right: -80%; }
 }
 
-blockquote {
-  .sidenote, .marginnote { margin-right: -79% }
-}
 
 .sidenote-number { counter-increment: sidenote-counter; }
 
@@ -35,15 +31,36 @@ blockquote {
 //       render it similar to the print style
 .full-width { .sidenote, .sidenote-number, .marginnote { display: none; } }
 
-input.margin-toggle { display: none; }
+input.margin-toggle {
+  display: none;
+  &:not(.sidenote-number) { display: none; }
+}
 
 label.sidenote-number { display: inline; }
 
-label.margin-toggle:not(.sidenote-number) { display: none; }
-
 @media screen and (max-width: 760px) {
-  .marginnote.margin-table {
+  .marginnote:not(.marginfigure), .sidenote {
+    border-left-width: thin;
+    border-left-color: $contrast-color;
+    border-left-style: dotted;
+    padding-left: 0.5rem;
+  }
+  // The collapsed and non-collapsed CSS are reciprocals. You should pick one or the other
+  // BEGIN collapsed margin
+  // .sidenote, .marginnote { display: none; }
+  // .margin-toggle:checked + .sidenote,
+  // .margin-toggle:checked + .marginnote { display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative; }
+  // END collapsed margin
+  .sidenote, .marginnote {
     display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative;
+    br {
+     margin-bottom: 0.66rem;
+     &:last-of-type { margin-bottom: 0rem; }
+   }
+  }
+  .margin-toggle:checked + .sidenote,
+  .margin-toggle:checked + .marginnote { display: none; }
+  .margin-table {
     .table-wrapper {
       width: 92%;
       table {
