@@ -2,7 +2,7 @@
 
 * { -webkit-transition: none !important; transition: none !important; }
 *, *:before, *:after { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
-@page { margin: 0.75in 0.5in 0.75in 0.5in; orphans:4; widows:2; }
+@page { margin: 0.75in 0.5in; orphans:4; widows:2; }
 // body header, body footer, body nav, body .content .margin-toggle:not(.sidenote-number) { display:none; }
 // body main header, .marginnote, .sidenote { display: inherit; }
 body {

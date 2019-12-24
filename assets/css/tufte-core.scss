@@ -23,14 +23,14 @@ a { color: $contrast-color;  text-decoration: none; }
 
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
-h1 { font-weight: 400; font-size: 2.5rem; margin-top: 1.568rem; margin-bottom: 1.568rem; line-height: 1.08888888888889; }
-h2, h3, summary { font-style: italic; font-weight: 400; margin-bottom: 0; line-height: 1.08888888888889; }
-h2, summary { font-size: 2.1rem; margin-top: 1.8666666666666667rem; }
-h3 { font-size: 1.8rem; margin-top: 2.1777777777777778rem; }
-h4 { font-size: 1.2rem; margin-top: 1.6777777777777778rem; }
+h1 { font-weight: 400; font-size: 2.5rem; margin: 1.568rem 0; line-height: 1.0889; }
+h2, h3, summary { font-style: italic; font-weight: 400; margin-bottom: 0; line-height: 1.0889; }
+h2, summary { font-size: 2.1rem; margin-top: 1.8667rem; }
+h3 { font-size: 1.8rem; margin-top: 2.1778rem; }
+h4 { font-size: 1.2rem; margin-top: 1.6778rem; }
 // ET says a need for more than 3 levels of headings is the sign of a diseased mind; But I added an h4
 
-// p.subtitle { font-style: italic; margin-top: 2.1777777777777778rem; margin-bottom: 2.1777777777777778rem; font-size: 1.8rem; display: block; line-height: 1.08888888888889; }
+// p.subtitle { font-style: italic; margin-top: 2.1778rem; margin-bottom: 2.1778rem; font-size: 1.8rem; display: block; line-height: 1.0889; }
 p, ol, ul, dl { font-size: 1.4rem; }
 p { margin-top: 1.4rem; }
 p, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
@@ -42,7 +42,7 @@ blockquote {
   p, ul, ol, h2, h3, h4 { padding-left: 2.5%; padding-right: 2.5%; }
   p { width: 100%; }
   ul, ol { width: 80%; padding-top: 0; }
-  p, ul, ol { font-size: 1.1rem; line-height: 1.78181818; margin-top: 1.78181818rem; margin-bottom: 1.78181818rem; }
+  p, ul, ol { font-size: 1.1rem; line-height: 1.7819rem; margin: 1.7819rem 0; }
   li { font-size: 1.1rem; margin-left: 3.5%; }
   footer {
     font-size: 1.1rem;
@@ -94,7 +94,7 @@ table {
 
 tfoot td { border-top: 1px solid $border-color; font-size: smaller }
 th, tfoot td { padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; ; text-align: center; }
-th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.71428571;  }
+th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.7142;  }
 tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */
 td { padding-left: 0.5em; padding-right: 0.5em; text-align: left; }
 caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; margin-right: auto; margin-top: 1ex; caption-side: top; }
@@ -105,8 +105,8 @@ caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; marg
 
 article { position: relative; padding: 1rem 0rem 1.5rem 0rem; } // reduced top and bottom padding by 50%
 .single-article { padding-top: 0rem; }
-.section { padding-top: 1rem; padding-bottom: 1rem; clear: left; }
-ul, ol { padding-left: 2rem; width: 45%; -webkit-padding-start: 5%; -webkit-padding-end: 5%; padding-top: 1rem; }
+.section { padding: 1rem 0rem; clear: left; }
+ul, ol { padding: 1rem 0 0 1.5rem; width: 45%; -webkit-padding-start: 5%; -webkit-padding-end: 5%; }
 
 /* ------------------------------------------------------------------------ */
 /* Styling for listing pages. */
@@ -138,7 +138,7 @@ body footer.group { padding-top: 2rem; }
 
 pre, pre code { padding: 0 1.5% 0 1.5%; overflow-x: auto; color:$code-color; }
 code { color:$code-color; }
-pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.71428571; margin-top: 1.71428571rem; display: block; white-space: pre; }
+pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.7142; margin-top: 1.7142rem; display: block; white-space: pre; }
 
 .fullwidth, li.listing div { max-width: 90%; }
 
@@ -158,7 +158,7 @@ nav.group {
 }
 
 header > nav a {
-  font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin: 1.5rem 2rem 0 inherit; vertical-align: baseline;
+  font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin: 1.5rem 2rem 0 auto; vertical-align: baseline;
   // img { height: 5rem; position: relative; max-width: 100%; top:-1.5rem; }
 }
 ul.footer-links, .credits { padding-left: 0rem; list-style: none; text-align: center; margin: 0 auto; }
@@ -204,8 +204,7 @@ hr.slender {
     border: 0;
     width: 55%;
     height: 1px;
-    margin-top: 1.4rem;
-    margin-bottom:1.4rem;
+    margin: 1.4rem 0;
     background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
     background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
     background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
@@ -232,8 +231,7 @@ a.offscreen {
   &:focus, &:active, &:hover {
     position:absolute;
     padding: 0.75rem 0.75rem;
-    margin-right: 2rem;
-    margin-top: 1.5rem;
+    margin: 1.5rem 2rem 0 0;
     left:5px;
     top:-20px;
     width:auto;
@@ -286,7 +284,7 @@ header form { padding-bottom: 1rem; }
   figcaption { margin-right: 0%; max-width: none; }
   // figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
   blockquote {
-    p, footer, ul, ol, h2, h3 {  width: 80%; padding: inherit 5%; }
+    p, footer, ul, ol, h2, h3 {  width: 80%; padding: 0 5%; }
   }
   // Removed as it appears to not be used
   // .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
@@ -317,7 +315,7 @@ header form { padding-bottom: 1rem; }
   }
   pre, pre code { width: 90%; padding: 0; }
   img { max-width: 100%; }
-  ol.bcl .bci, nav dl { line-height: 1.78181818rem; }
+  ol.bcl .bci, nav dl { line-height: 1.7819rem; }
 }
 /*--- End of Basic Layout stuff from tufte.css ---*/
 
