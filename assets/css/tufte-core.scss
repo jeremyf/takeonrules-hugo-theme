@@ -106,7 +106,7 @@ caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; marg
 article { position: relative; padding: 1rem 0rem 1.5rem 0rem; } // reduced top and bottom padding by 50%
 .single-article { padding-top: 0rem; }
 .section { padding: 1rem 0rem; clear: left; }
-ul, ol { padding: 1rem 0 0 1.5rem; width: 45%; -webkit-padding-start: 5%; -webkit-padding-end: 5%; }
+ul, ol { padding: 1rem 0 0 5%; width: 45%; }
 
 /* ------------------------------------------------------------------------ */
 /* Styling for listing pages. */
@@ -120,7 +120,7 @@ ul, ol { padding: 1rem 0 0 1.5rem; width: 45%; -webkit-padding-start: 5%; -webki
 /* END Styling for listing pages. */
 /* ------------------------------------------------------------------------ */
 
-figure { margin: 1em 0 3em 0; max-width: 55%; -webkit-margin-start: 0; -webkit-margin-end: 0; }
+figure { margin: 1em 0 3em 0; max-width: 55%; }
 img { max-width: 100%; }
 figcaption { float: right; clear: right; margin-right: -48%; margin-top: 0; margin-bottom: 0; font-size: 1.0rem; line-height: 1.6; vertical-align: baseline; position: relative; max-width: 40%; }
 // figure.fullwidth figcaption { float: left; margin-right: 0%; margin-left: 36%; }
