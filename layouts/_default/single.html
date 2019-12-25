@@ -1,5 +1,6 @@
 {{ define "main" }}
   <article role="article" class="single-article" aria-label="{{ .Title }}">
+    <section>
     <header>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
       {{- with .Params.subtitle }}
@@ -9,10 +10,11 @@
     <nav class="post-meta">
       {{ partial "body-header-meta.html" . }}
     </nav>
+    </section>
     <a name="skip-to-content" aria-label="Anchor for content"> </a>
-    <div class="content">
+    <section class="content">
       {{ .Content }}
-    </div>
+    </section>
   </article>
   <a name="skip-to-related-posts" aria-label="Anchor for Related Posts"> </a>
   <aside class="related" role="complementary" aria-label="Related blog posting">

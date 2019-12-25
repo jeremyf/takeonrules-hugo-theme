@@ -10,15 +10,13 @@
   <a name="skip-to-content" aria-label="Anchor for content"> </a>
   <section>
   {{ range $paginator.Pages }}
-    <article>
-      <header>
-        <h2><a href="{{ .RelPermalink }}" rel="bookmark">{{ .Title }}</a></h2>
-      </header>
-      <nav class="post-meta">
-        {{ partial "tags-and-series-and-published-date.html" . }}
-      </nav>
-      <div class="section"><a aria-hidden href="{{ .RelPermalink}}">Read more&hellip;</a></div>
-    </article>
+    <header>
+      <h2><a href="{{ .RelPermalink }}" rel="bookmark">{{ .Title }}</a></h2>
+    </header>
+    <nav class="post-meta">
+      {{ partial "tags-and-series-and-published-date.html" . }}
+    </nav>
+    <div class="section"><a aria-hidden href="{{ .RelPermalink}}">Read more&hellip;</a></div>
   {{ end }}
   </section>
   <nav role="navigation" aria-hidden="true">

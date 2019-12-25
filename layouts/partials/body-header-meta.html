@@ -13,18 +13,18 @@
   {{- end }}
 {{- with .Params.series }}
   {{- range (where $.Site.Data.series "key" "eq" .) }}
+    {{- $title := .title }}
     <dt><a name='skip-to-series-navigation'></a>
-      <a href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ .title }}</a>:
+      Series “<a href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ $title }}</a>”:
     </dt>
     {{- $series := where $.Site.Pages "Params.series" .key }}
     {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
     {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
-    <dd></dd>
     {{- range first 1 $prev }}
-      <dd><a class="prev" aria-label="Previous {{ $.Page.Params.series }} post" href="{{ .Permalink }}">previous</a></dd>
+      <dd><a class="prev" aria-label="Previous {{ $title }} post" href="{{ .Permalink }}">previous</a></dd>
     {{- end}}
     {{- range last 1 $next }}
-      <dd><a class="next" aria-label="Next {{ $.Page.Params.series }} post" href="{{ .Permalink }}">next</a></dd>
+      <dd><a class="next" aria-label="Next {{ $title }} post" href="{{ .Permalink }}">next</a></dd>
     {{- end}}
   {{- end}}
 {{- end }}
