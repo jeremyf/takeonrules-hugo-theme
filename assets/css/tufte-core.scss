@@ -129,7 +129,7 @@ figcaption { float: right; clear: right; margin-right: -48%; margin-top: 0; marg
 .table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
 // Without this setting, when the header would wrap, the letters would overlap
-main header h1, h2, h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
+main header h1, main header h2, h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
 header > nav.group { padding-bottom: 1rem; }
 body footer.group { padding-top: 2rem; }
 header > nav.group, body footer.group { width: 95%; }
@@ -157,7 +157,7 @@ nav.group {
 }
 
 header > nav a {
-  font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin: 1.5rem 2rem 0 auto; vertical-align: baseline;
+  font-style: normal; font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin: 1.5rem 2rem 0 auto; vertical-align: baseline;
   // img { height: 5rem; position: relative; max-width: 100%; top:-1.5rem; }
 }
 ul.footer-links, .credits { padding-left: 0rem; list-style: none; text-align: center; margin: 0 auto; }
@@ -273,7 +273,7 @@ header form { padding-bottom: 1rem; }
 .hide-when-javascript-disabled { display: none; }
 
 @media screen and (max-width: 760px) {
-  html, blockquote, p, .p, footer, figure, main header h1, h2, h3, h4, .table-wrapper, table { width: 90%; }
+  html, blockquote, p, .p, footer, figure, main header, h3, h4, .table-wrapper, table { width: 90%; }
   pre code, ol, ul, nav dl { width: 87.5%; }
   nav .bcl .bci:last-of-type { padding-bottom: 1rem; }
   figcaption { margin-right: 0%; max-width: none; }

@@ -1,26 +1,26 @@
 <header aria-label="Site-wide header">
   <nav class="group" role="navigation" aria-label="Site-wide navigation">
-    <a href="#skip-to-content" title="Skip to Content" class="offscreen">Skip to Content</a>
+    <h2><a href="#skip-to-content" title="Skip to Content" class="offscreen">Skip to Content</a></h2>
     {{- if ne .IsHome true }}
-      <a href="#skip-to-breadcrumbs" title="Skip to Breadcrumbs" class="offscreen">Skip to Breadcrumbs</a>
+      <h2><a href="#skip-to-breadcrumbs" title="Skip to Breadcrumbs" class="offscreen">Skip to Breadcrumbs</a></h2>
     {{- end }}
     {{- with .Params.tags }}
-      <a href="#skip-to-tags" title="Skip to Page's Tags" class="offscreen">Skip to Page's Tags</a>
+      <h2><a href="#skip-to-tags" title="Skip to Page's Tags" class="offscreen">Skip to Page's Tags</a></h2>
     {{- end }}
     {{- with .Params.series }}
-      <a href="#skip-to-series-navigation" title="Skip to Page's Series Navigation" class="offscreen">Skip to Page's Series Navigation</a>
+      <h2><a href="#skip-to-series-navigation" title="Skip to Page's Series Navigation" class="offscreen">Skip to Page's Series Navigation</a></h2>
     {{- end }}
     {{- if eq .Type "post" }}
-      <a href="#skip-to-related-posts" title="Skip to Page's Related Posts" class="offscreen">Skip to Page's Related Posts</a>
+      <h2><a href="#skip-to-related-posts" title="Skip to Page's Related Posts" class="offscreen">Skip to Page's Related Posts</a></h2>
     {{- end }}
     {{- with .Params.licenses }}
-      <a href="#skip-to-licenses" title="Skip to Page's Licenses" class="offscreen">Skip to Page's Licenses</a>
+      <h2><a href="#skip-to-licenses" title="Skip to Page's Licenses" class="offscreen">Skip to Page's Licenses</a></h2>
     {{- end }}
     <h1><a href="{{ .Site.BaseURL }}" title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
     {{- range .Site.Menus.topnav }}
-      <a href="{{ .URL }}" title="{{ if .Title }}{{ .Title }}{{ else }}{{ .Name }} page{{ end }}">
+      <h2><a href="{{ .URL }}" title="{{ if .Title }}{{ .Title }}{{ else }}{{ .Name }} page{{ end }}">
         {{ .Name }}
-      </a>
+      </a></h2>
     {{- end }}
   </nav>
   <form class="hide-when-javascript-disabled" role="search" method="get" action="/search/" aria-label="Site-wide search" id="cse-search-box" target="_blank">
