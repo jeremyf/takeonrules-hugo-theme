@@ -129,7 +129,7 @@ figcaption { float: right; clear: right; margin-right: -48%; margin-top: 0; marg
 .table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
 // Without this setting, when the header would wrap, the letters would overlap
-main header h1, h2, h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
+main header, h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
 header > nav.group { padding-bottom: 1rem; }
 body footer.group { padding-top: 2rem; }
 header > nav.group, body footer.group { width: 95%; }
