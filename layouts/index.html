@@ -8,17 +8,15 @@
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
   <h1>Blog Posts</h1>
   <a name="skip-to-content" aria-label="Anchor for content"> </a>
-  <section>
   {{ range $paginator.Pages }}
-    <header>
-      <h2><a href="{{ .RelPermalink }}" rel="bookmark">{{ .Title }}</a></h2>
-    </header>
-    <nav class="post-meta">
-      {{ partial "tags-and-series-and-published-date.html" . }}
-    </nav>
-    <div class="section"><a aria-hidden href="{{ .RelPermalink}}">Read more&hellip;</a></div>
+    <h2><a href="{{ .RelPermalink }}" rel="bookmark">{{ .Title }}</a></h2>
+    <section>
+      <nav class="post-meta">
+        {{ partial "tags-and-series-and-published-date.html" . }}
+      </nav>
+      <div class="section"><a aria-hidden href="{{ .RelPermalink}}">Read more&hellip;</a></div>
+    </section>
   {{ end }}
-  </section>
   <nav role="navigation" aria-hidden="true">
     {{ partial "paginator.html" $paginator }}
   </nav>
