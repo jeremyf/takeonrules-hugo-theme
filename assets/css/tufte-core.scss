@@ -132,7 +132,9 @@ figcaption { float: right; clear: right; margin-right: -48%; margin-top: 0; marg
 main header, h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
 header > nav.group { padding-bottom: 1rem; }
 body footer.group { padding-top: 2rem; }
-header > nav.group, body footer.group { width: 95%; }
+main h1, main h2, header > nav.group, body footer.group { width: 95%; }
+main article h2 { width: 55% }
+
 
 
 pre, pre code { padding: 0 1.5%; overflow-x: auto; color:$code-color; }
@@ -273,7 +275,7 @@ header form { padding-bottom: 1rem; }
 .hide-when-javascript-disabled { display: none; }
 
 @media screen and (max-width: 760px) {
-  html, blockquote, p, .p, footer, figure, main header, h3, h4, .table-wrapper, table { width: 90%; }
+  html, blockquote, p, .p, footer, figure, main header, main article h2, h3, h4, .table-wrapper, table { width: 90%; }
   pre code, ol, ul, nav dl { width: 87.5%; }
   nav .bcl .bci:last-of-type { padding-bottom: 1rem; }
   figcaption { margin-right: 0%; max-width: none; }
