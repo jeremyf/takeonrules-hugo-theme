@@ -2,10 +2,13 @@
   <article role="article">
     <header>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      <nav role="navigation" aria-label="Breadcrumbs">
+        {{ partial "breadcrumb.html" . }}
+      </nav>
     </header>
-    <a name="skip-to-content" aria-label="Anchor for content"> </a>
-    <div class="content">
+    <section class="content" role="region" aria-label="article content">
+      <a name="skip-to-content" aria-label="Anchor for content"> </a>
       {{ .Content }}
-    </div>
+    </section>
   </article>
 {{ end }}

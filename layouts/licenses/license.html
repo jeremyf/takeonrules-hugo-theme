@@ -6,12 +6,16 @@
     {{ partial "body-header.html" . }}
     <meta name="layout" content="terms" />
     <main class="group" role="main" aria-label="Blog posting">
-      <article role="article" class="single-article">
-        {{ $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
-        {{ $title := .Title }}
+      <article role="article">
+        {{- $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
+        {{- $title := .Title }}
+        {{- $context := . }}
         {{ with index $.Site.Data.licenses $slug }}
         <header>
           <h1 id="{{ anchorize .Title }}">{{ index . "Name" }}</h1>
+          <nav role="navigation" aria-label="Breadcrumbs">
+            {{ partial "breadcrumb.html" $context }}
+          </nav>
         </header>
         {{ with index . "Description" }}
           <section>
@@ -19,7 +23,7 @@
           </section>
         {{ end }}
         {{ end }}
-        <section class="list-page">
+        <section>
   {{ range .Data.Pages.GroupByDate "2006" }}
     <details open>
       <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>

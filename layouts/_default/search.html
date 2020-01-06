@@ -1,10 +1,13 @@
 {{ define "main" }}
-  <section role="search">
+  <article role="search">
     <header>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      <nav role="navigation" aria-label="Breadcrumbs">
+        {{ partial "breadcrumb.html" . }}
+      </nav>
     </header>
-    <a name="skip-to-content" aria-label="Anchor for content"> </a>
-    <div class="content">
+    <section class="content">
+      <a name="skip-to-content" aria-label="Anchor for content"> </a>
       <div class="hide-when-javascript-disabled" id="lunr-search-result-container">
         <label for="search">Search for:</label>
         <input id="search" type="text" name="q" class="site-search-input" placeholder="Start typing&hellip;">
@@ -142,6 +145,6 @@
           $('#search').focus();
         });
       </script>
-    </div>
-  </section>
+    </section>
+  </article>
 {{ end }}

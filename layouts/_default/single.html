@@ -1,30 +1,90 @@
+{{ define "head" }}
+<style type="text/css" media="screen,print">
+  {{ (resources.Get "css/tufte.scss" | resources.ToCSS | resources.Minify).Content | safeCSS }}
+</style>
+{{ end }}
 {{ define "main" }}
-  <article role="article" class="single-article" aria-label="{{ .Title }}">
-    <section>
+  <article role="article" aria-labelledby="{{ anchorize .Title }}">
     <header>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
       {{- with .Params.subtitle }}
-      <p class="subtitle">{{ . }}</p>
+      <h2 class="subtitle">{{ . }}</h2>
       {{- end }}
+      <nav role="navigation" aria-label="Breadcrumbs and Blog Navigation">
+        {{ partial "breadcrumb.html" . }}
+        <ol>
+          {{- with .PrevInSection }}
+            <li><a href="{{ .Permalink }}" rel="prev">Previous post</a></li>
+          {{- end }}
+          {{- with .NextInSection }}
+            <li><a href="{{ .Permalink }}" rel="next">Next post</a></li>
+          {{- end }}
+        </ol>
+      </nav>
     </header>
-    <nav class="post-meta">
-      {{ partial "body-header-meta.html" . }}
-    </nav>
-    </section>
-    <a name="skip-to-content" aria-label="Anchor for content"> </a>
-    <section class="content">
+    <section class="content" role="region" aria-label="article content">
+      <a name="skip-to-content" aria-label="Anchor for content"> </a>
       {{ .Content }}
     </section>
+    <aside role="complementary">
+      <section aria-label="Metadata related to the article">
+        <h2>Metadata</h2>
+        <a name="skip-to-posts-metadata" aria-label="Anchor for post's metadata"> </a>
+        <dl>
+          {{- with .Date }}<dt>Published</dt><dd><time datetime="{{ dateFormat $.Site.Params.iso8601_format . }}">{{ dateFormat "2006-01-02" . }}</time></dd>{{- end }}
+          {{ if ne .Lastmod .Date }}
+            <dt>Last Modified</dt>
+            <dd><time datetime="{{ .Lastmod.Format $.Site.Params.iso8601_format }}">{{ .Lastmod.Format "2006-01-02" }}</time></dd>
+          {{ end }}
+          {{- with .Params.tags }}
+            <dt>Tags<a name="skip-to-tags" aria-label="Anchor for post's tags"></a></dt>
+            {{ range . }}
+              <dd><a rel="tag" href="{{ "tags" | absURL }}/{{ . | urlize }}" aria-label="All posts with tag {{ . }}">{{ . }}</a></dd>
+            {{ end }}
+          {{- end }}
+          {{- with .PrevInSection }}
+            <dt>Previous post</dt>
+            <dd>
+              <a href="{{ .Permalink }}" rel="prev"><cite>{{ .Title }}</cite></a>
+            </dd>
+          {{- end }}
+          {{- with .NextInSection }}
+            <dt>Next post</dt>
+            <dd>
+              <a href="{{ .Permalink }}" rel="next"><cite>{{ .Title }}</cite></a>
+            </dd>
+          {{- end }}
+          {{- with .Params.series }}
+            {{- range (where $.Site.Data.series "key" "eq" .) }}
+              {{- $title := .title }}
+              <dt>Series</dt>
+              <dd><a name='skip-to-series-navigation' href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ $title }}</a></dd>
+              {{- $series := where $.Site.Pages "Params.series" .key }}
+              {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
+              {{- range first 1 $prev }}
+                <dt>Previous in series</dt>
+                <dd><a rel="prev" aria-label="Previous {{ $title }} post" href="{{ .Permalink }}">{{ .Title }}</a></dd>
+              {{- end}}
+              {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
+              {{- range last 1 $next }}
+                <dt>Next in series</dt>
+                <dd><a rel="next" aria-label="Next {{ $title }} post" href="{{ .Permalink }}">{{ .Title }}</a></dd>
+              {{- end}}
+            {{- end}}
+          {{- end }}
+        </dl>
+      </section>
+      <section aria-label="Related articles to post">
+        <h2>Related Posts</h2>
+        <a name="skip-to-related-posts" aria-label="Anchor for Related Posts"> </a>
+        <ul>
+          {{ range first 5 (.Site.RegularPages.Related .) }}
+            <li>
+              <a aria-label="Related post: {{ .Title }}" href="{{ .RelPermalink }}"><cite>{{ .Title | markdownify }}</cite></a>
+            </li>
+          {{ end }}
+        </ul>
+      </section>
+    </aside>
   </article>
-  <a name="skip-to-related-posts" aria-label="Anchor for Related Posts"> </a>
-  <aside class="related" role="complementary" aria-label="Related blog posting">
-    <h2>Related Posts</h2>
-    <ul>
-      {{ range first 5 (.Site.RegularPages.Related .) }}
-        <li>
-          <a aria-label="Related post: {{ .Title }}" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-        </li>
-      {{ end }}
-    </ul>
-  </aside>
 {{ end }}

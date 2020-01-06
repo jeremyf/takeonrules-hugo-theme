@@ -1,17 +1,12 @@
 {{/* Assumes a .Paginator object */}}
-{{ if .HasNext }}
-<a href="{{ .Next.URL }}" class="previous" aria-label="Previous posts">
-  Previous posts
-</a>
-{{ else }}
-<span class="previous">Previous posts</span>
-{{ end }}
-|
-{{ if .HasPrev }}
-  <a href="{{ .Prev.URL }}" class="next" aria-label="Next posts">Next posts</a>
-{{ else }}
-  <span class="next ">Next posts</span>
-{{ end }}
-<small class="page_number ">
-  Page {{ .PageNumber }} of {{ .TotalPages }}
-</small>
+<ul>
+  <li class="previous">
+    {{- if .HasNext }}<a href="{{ .Next.URL }}">Previous posts</a>{{- else }}Previous posts{{- end }}
+  </li>
+  <li class="next">
+    {{- if .HasPrev }}<a href="{{ .Prev.URL }}">Next posts</a>{{- else }}Next posts{{- end }}
+  </li>
+  <li>
+    Page {{ .PageNumber }} of {{ .TotalPages }}
+  </li>
+</ul>

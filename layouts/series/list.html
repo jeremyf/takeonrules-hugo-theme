@@ -1,22 +1,27 @@
 {{ define "main" }}
   <article role="article">
+  {{- $termTitle := .Title }}
+  {{- $data := .Data }}
+  {{- $context := . }}
+  {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
     <header>
-      <h1 id="{{ anchorize .Title }}">{{ .Title | title }}</h1>
+      <h1 id="{{ anchorize $termTitle }}">{{ .title }}</h1>
       <nav role="navigation" aria-label="Breadcrumbs">
-        {{ partial "breadcrumb.html" . }}
+        {{ partial "breadcrumb.html" $context }}
       </nav>
     </header>
+    <a name="skip-to-content" aria-label="Anchor for content"> </a>
     <section class="content">
-      <a name="skip-to-content" aria-label="Anchor for content"> </a>
+      {{ partial "paragraphy.html" .description }}
       <div class="table-wrapper">
-        <a name="table-{{ .Data.Singular | anchorize }}-{{ .Title | anchorize }}"></a>
+        <a name="table-{{ $data.Singular | anchorize }}-{{ .key | anchorize }}"></a>
         <table class="stripe data-tables">
-          <caption>Table "{{ .Title | title }}" {{ .Data.Singular | title }}: Posts with "{{ .Title | title }}" {{ .Data.Singular }}</caption>
+          <caption>Table "{{ .title | title }}" {{ $data.Singular | title }}: Posts in "{{ .title }}" {{ $data.Singular }}</caption>
           <thead>
             <tr><th>Title</th><th>Date</th></tr>
           </thead>
           <tbody>
-            {{- range .Data.Pages }}
+            {{- range $data.Pages }}
             <tr>
               <td><a href="{{ .Permalink}}">{{ .Title }}</a></td>
               <td><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</td>
@@ -26,5 +31,6 @@
         </table>
       </div>
     </section>
+  {{- end }}
   </article>
 {{ end }}

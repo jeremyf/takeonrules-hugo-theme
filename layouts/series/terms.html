@@ -1,13 +1,13 @@
 {{ define "main" }}
-  <article role="article" class="single-article">
+  <article role="article">
     <header>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
       <nav role="navigation" aria-label="Breadcrumbs">
         {{ partial "breadcrumb.html" . }}
       </nav>
     </header>
-    <section class="content">
-      <a name="skip-to-content" aria-label="Anchor for content"> </a>
+    <a name="skip-to-content" aria-label="Anchor for content"> </a>
+    <section class="content terms">
       {{ .Content }}
       <div class="table-wrapper">
         <a name="table-{{ anchorize .Title }}"></a>
@@ -19,13 +19,15 @@
           <tbody>
           {{- range $key, $value := .Data.Terms.Alphabetical}}
             <tr>
-              <td><a href="{{ $value.Name| urlize }}">{{ $value.Name }}</a></td>
-              <td class="r">{{  $value.Count }}</td>
-              {{- range first 1 $value.Pages.Reverse }}
-              <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
-              {{- end }}
-              {{- range first 1 $value.Pages }}
-              <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
+              {{- range first 1 (where $.Site.Data.series "key" "eq" $value.Name ) }}
+                <td><a href="{{ $value.Name| urlize }}">{{ .title }}</a></td>
+                <td>{{ $value.Count }}</td>
+                {{- range first 1 $value.Pages.Reverse }}
+                <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
+                {{- end }}
+                {{- range first 1 $value.Pages }}
+                <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
+                {{- end }}
               {{- end }}
             </tr>
           {{- end }}
