@@ -65,6 +65,8 @@ div.epigraph > blockquote {
 
 /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
 
+.table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overflow values to 'auto' so scroll bars appear only as needed
+
 //making booktabs style tables the unstyled default in case someone uses Markdown styling
 table {
   width: auto; margin: 0 auto; border-spacing: 0px; border-top: 2px solid $border-color; border-bottom: 2px solid $border-color;
@@ -103,9 +105,6 @@ caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; marg
 
 /* Basic Layout stuff --*/
 
-article { position: relative; padding: 1rem 0rem 1.5rem 0rem; } // reduced top and bottom padding by 50%
-.single-article { padding-top: 0rem; }
-.section { padding: 1rem 0rem; clear: left; }
 ul, ol { padding: 1rem 0 0 5%; width: 45%; }
 
 /* ------------------------------------------------------------------------ */
@@ -123,25 +122,19 @@ ul, ol { padding: 1rem 0 0 5%; width: 45%; }
 figure { margin: 1em 0 3em 0; max-width: 55%; }
 img { max-width: 100%; }
 figcaption { float: right; clear: right; margin-right: -48%; margin-top: 0; margin-bottom: 0; font-size: 1.0rem; line-height: 1.6; vertical-align: baseline; position: relative; max-width: 40%; }
-// figure.fullwidth figcaption { float: left; margin-right: 0%; margin-left: 36%; }
+.fullwidth { max-width: 90%; }
 
-
-.table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
 // Without this setting, when the header would wrap, the letters would overlap
-main header, h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
-header > nav.group { padding-bottom: 1rem; }
-body footer.group { padding-top: 2rem; }
-main h1, main h2, header > nav.group, body footer.group { width: 95%; }
-main article h2 { width: 55% }
-
-
+h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
+header > nav { padding-bottom: 1rem; }
+body > footer { padding-top: 2rem; }
+h1, h2, header > nav, body > footer { width: 95%; }
+main article section h2 { width: 55% }
 
 pre, pre code { padding: 0 1.5%; overflow-x: auto; color:$code-color; }
 code { color:$code-color; font-size: 1.1rem; }
 pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.7142; margin-top: 1.7142rem; display: block; white-space: pre; }
-
-.fullwidth { max-width: 90%; }
 
 .newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.05rem; }
 
@@ -153,14 +146,13 @@ pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.7142; marg
 .contrast { color: $contrast-color;}
 //Nav and Footer styling area
 
-nav.group {
+nav {
   a.active:before { content:"\0003c\000a0"; } // escaped unicode for the carats and then a space on active menu links
   a.active:after { content:"\000a0\0003e"; }
 }
 
-header > nav a {
+body > header > nav a {
   font-style: normal; font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin: 1.5rem 2rem 0 auto; vertical-align: baseline;
-  // img { height: 5rem; position: relative; max-width: 100%; top:-1.5rem; }
 }
 ul.footer-links, .credits { padding-left: 0rem; list-style: none; text-align: center; margin: 0 auto; }
 ul.footer-links li { display: inline; padding: 0.5rem 0.25rem; }
@@ -180,26 +172,10 @@ ul.footer-links li { display: inline; padding: 0.5rem 0.25rem; }
 
 // End of Nav and Footer styling area
 
-//Full width page styling stuff
-
-// body.default-width {
-//   .content-listing, ul.content-listing li.listing { width: 90%; margin-right: auto; padding: 0% 5% 0% 0%; margin-left: 0; }
-//   .listing, .listing h3 { display: inline-block; margin:0; }
-// }
 .full-width {
  // .content-listing, ul.content-listing li.listing { width: 90%; margin-left: auto; margin-right: auto; padding: 0% 5%; }
   ul, ol { width: 85%; }
   .table-wrapper, article p { width: 90%; }
-  // h1.content-listing-header { font-style: normal; text-transform: uppercase; letter-spacing: 0.2rem; font-size: 1.8rem; }
-
-  // .listing, .listing h3 { display: inline-block; margin:0; }
-  // li.listing {
-  //   margin:0;
-  //   & p { width: 100% }
-  //   hr { width:100%; }
-  //   h3.new { text-transform: uppercase; font-style: normal; }
-  // }
-  // li.listing:last-of-type { border-bottom: none; margin-bottom: 1.4rem; }
 }
 hr.slender {
     border: 0;
@@ -223,9 +199,6 @@ footer hr.slender {
 // Does not display a print-footer for screen display
 @media screen{ .print-footer { display: none; } }
 
-// Personal modifications
-.post-meta { padding-top: 0.5em; font-size: 1.1rem; }
-
 // BEGIN Skip Navigation
 a.offscreen {
   position:absolute; left:-1000px; top:-1000px; width:1px; height:1px; text-align: left; overflow:hidden;
@@ -242,35 +215,65 @@ a.offscreen {
     color: $bg-color; border: 1px dotted #000; }
 }
 // END Skip Navigation
-.content dl {
+
+// Working with lists, especially navigation
+
+article > section.content dl {
   margin-top: 1rem;
   width: 55%;
   dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
   dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
 }
 
-nav dl {
-  &:first-of-type { padding-top: 0rem; }
-  font-size: 1.1rem; padding-top: 1rem; width: 55% ; clear: left; line-height: 2rem;
-  dt, dd { float: left; margin-right: 0.7rem; }
-  dt {
-    margin-left: 0.7rem;
-    &:first-child { margin-left: 0rem; }
+article > aside section {
+  clear: both; padding-top: 1rem;
+}
+
+main > nav ul, main > ol, {
+  width: 90%; padding: 0;
+  li { list-style: none; }
+}
+
+main > nav  {
+  clear: both; font-family: $sans-font;
+  // BEGIN Hack: Ensure that of the two pagination navs, the last one
+  //   has padding. Without this line, the bottom nav would butt up against
+  //   the `main > ol`. I chose to set the first-of-type as padding-top: 0rem
+  //   in case I decide to remove the second nav declaration
+  padding-top: 3rem; &:first-of-type { padding-top: 0rem; }
+  // END Hack
+  li { float: left; padding: 0; margin-right: 1rem; }
+}
+
+main > ol {
+  li { clear: both; padding-top: 1rem; padding-right: 0; }
+  header { width: 100%; }
+}
+
+// metadata of articles, either on the index or in the aside
+main > ol, article > aside {
+  dl {
+    padding-top: 0.5rem; padding-left: 1.5rem; clear: both;
+    dt, dd { margin-top: 1rem; float: left }
+    dd { margin-right: 1rem; }
+    dt {  margin-right: 0.7rem; clear: left; }
+    dt:after { content: ":" }
   }
 }
+
+
+main header h2 { margin-bottom: 1rem; }
 
 // breadcrumb
-ol.bcl {
+header > nav ol {
   font-size: 1.1rem; padding: 0 0 1rem 0; width: 85%; list-style: none ; clear: left;
-  .bci {
-    padding: 0 0.2rem 0 0; margin: 0; float: left;
-    &.bci:not(:last-of-type)::after { content: " / " }
+  li {
+    padding: 0 0.2rem 0 0; margin: 0; float: left; font-family: $sans-font;
+    &:not(:last-of-type)::after { content: " / " }
   }
 }
 
-.content { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
-// button[type='submit'] { padding: 3px 10px; }
-header form { padding-bottom: 1rem; }
+article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 
 .hide-when-javascript-disabled { display: none; }
 
@@ -279,7 +282,6 @@ header form { padding-bottom: 1rem; }
   pre code, ol, ul, nav dl { width: 87.5%; }
   nav .bcl .bci:last-of-type { padding-bottom: 1rem; }
   figcaption { margin-right: 0%; max-width: none; }
-  // figure.fullwidth figcaption { margin-right: 0%; max-width: none; }
   blockquote {
     > * {  width: 80%; padding: 0 5%; }
   }

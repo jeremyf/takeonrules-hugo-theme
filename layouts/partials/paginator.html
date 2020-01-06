@@ -1,10 +1,10 @@
 {{/* Assumes a .Paginator object */}}
 <ul>
-  <li class="previous">
-    {{- if .HasNext }}<a href="{{ .Next.URL }}">Previous posts</a>{{- else }}Previous posts{{- end }}
+  <li>
+    {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- else }}Previous posts{{- end }}
   </li>
-  <li class="next">
-    {{- if .HasPrev }}<a href="{{ .Prev.URL }}">Next posts</a>{{- else }}Next posts{{- end }}
+  <li>
+    {{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- else }}Next posts{{- end }}
   </li>
   <li>
     Page {{ .PageNumber }} of {{ .TotalPages }}

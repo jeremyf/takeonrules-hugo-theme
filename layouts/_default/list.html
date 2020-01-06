@@ -1,10 +1,10 @@
 {{ define "main" }}
   <article role="article">
     <header>
-      <h1 id="{{ anchorize .Title }}">{{ .Title | title }}</h1>
       <nav role="navigation" aria-label="Breadcrumbs">
         {{ partial "breadcrumb.html" . }}
       </nav>
+      <h1 id="{{ anchorize .Title }}">{{ .Title | title }}</h1>
     </header>
     <section class="content">
       <a name="skip-to-content" aria-label="Anchor for content"> </a>

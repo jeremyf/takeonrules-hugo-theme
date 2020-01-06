@@ -1,21 +1,21 @@
 {{ define "main" }}
   <article role="article" aria-labelledby="{{ anchorize .Title }}">
     <header>
-      <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
-      {{- with .Params.subtitle }}
-      <h2 class="subtitle">{{ . }}</h2>
-      {{- end }}
       <nav role="navigation" aria-label="Breadcrumbs and Blog Navigation">
         {{ partial "breadcrumb.html" . }}
         <ol>
           {{- with .PrevInSection }}
-            <li><a href="{{ .Permalink }}" rel="prev">Previous post</a></li>
+          <li><a href="{{ .Permalink }}" rel="prev">Previous post</a></li>
           {{- end }}
           {{- with .NextInSection }}
-            <li><a href="{{ .Permalink }}" rel="next">Next post</a></li>
+          <li><a href="{{ .Permalink }}" rel="next">Next post</a></li>
           {{- end }}
         </ol>
       </nav>
+      <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      {{- with .Params.subtitle }}
+      <h2 class="subtitle">{{ . }}</h2>
+      {{- end }}
     </header>
     <section class="content" role="region" aria-label="article content">
       <a name="skip-to-content" aria-label="Anchor for content"> </a>
