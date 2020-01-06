@@ -75,14 +75,6 @@
       "@id": "{{ .Site.BaseURL }}metadata/"
     }
   },{
-    "@type": "WebPage",
-    "url": "{{ .Site.BaseURL }}changelog/",
-    "abstract": "A web page outlining the system, functional, and stylistic updates of the site.",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "{{ .Site.BaseURL }}metadata/"
-    }
-  },{
     "@type": "CollectionPage",
     "url": "{{ .Site.BaseURL }}blog-roll/",
     "abstract": "A web page listing blogs I follow.",
