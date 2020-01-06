@@ -15,10 +15,10 @@ body {
 article {
   .table-wrapper, h2, h3, h4, summary { page-break-after: avoid; }
 }
-header, nav, aside.related { display:none; }
+header, nav, aside[role="complementary"] { display:none; }
 main header, blockquote footer { display: inherit; }
 footer.group {
-  font-family: $sans-font; font-size: 9pt; border-top: 1px solid $text-color;
+  font-family: $sans-font; font-size: 9pt; // border-top: 1px solid $text-color;
   .footer-links { display: none; }
 }
 
