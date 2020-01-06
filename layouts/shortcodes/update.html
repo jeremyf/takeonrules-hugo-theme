@@ -8,10 +8,8 @@ For rendering consistent "updated" information.
 <input type="checkbox" id="sidenote-{{.Page.File.UniqueID}}-{{ $sidenoteDomIdSuffix }}" class="margin-toggle"/>
 <span class="sidenote update" role="note"><em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}</span>
 {{- else }}
-<p>
-<span class="marginnote update" role="note">
+<aside class="marginnote update" role="note">
 <em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}
-</span>
-</p>
+</aside>
 {{- end }}
 {{- end }}
