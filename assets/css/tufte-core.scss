@@ -41,7 +41,7 @@ blockquote {
   margin-top: 1.4rem;
   p, ul, ol, h2, h3, h4 { padding-left: 2.5%; padding-right: 2.5%; }
   p { width: 100%; }
-  ul, ol { width: 80%; padding-top: 0; }
+  ul, ol { padding-top: 0; }
   p, ul, ol { font-size: 1.1rem; line-height: 1.7819rem; margin: 1.7819rem 0; }
   li { font-size: 1.1rem; margin-left: 3.5%; }
   footer {
@@ -80,17 +80,13 @@ table {
   th { font-weight: bold; }
   &.unstriped tbody tr, &.unstriped .subbody { background-color: $bg-color; }
   tbody tr {
-    &:nth-child(even) { background-color: lighten($table-header, 20%); }
-    &.subhead {
-      background-color: lighten($table-header, 20%);
-      th { text-align: left; }
-    }
+    &:nth-child(even), &.subhead { background-color: lighten($table-header, 20%); }
+    &.subhead th { text-align: left; }
   }
   .subbody td { padding-left: 1.5rem; }
-  &.full { width: 100%; }
+  // &.full { width: 100%; }
 
-  li { width: 100%; }
-  ul, ol { width: 80%; padding-top: 0rem; }
+  ul, ol { width: 90%; padding-top: 0rem; }
 
 }
 
@@ -127,10 +123,16 @@ figcaption { float: right; clear: right; margin-right: -50%; margin-top: 0; marg
 
 // Without this setting, when the header would wrap, the letters would overlap
 article section h2, h3, h4, .p, p, footer, .table-wrapper, pre, article > section.content dl { width: 55%; }
+article header, body > footer { width: 95%; }
+.full-width {
+  ul, ol { width: 85%; }
+  article section h2, h3, h4, .p, p, footer, .table-wrapper, pre, article > section.content dl { width: 90%; }
+}
+
+
 main header > nav { padding: 1rem 0; }
 header > nav { padding-bottom: 1rem; }
 body > footer { padding-top: 2rem; }
-article header, body > footer { width: 95%; }
 
 pre, pre code { padding: 0 1.5%; overflow-x: auto; color:$code-color; }
 code { color:$code-color; font-size: 1.1rem; }
@@ -147,6 +149,7 @@ pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.7142; marg
 //Nav and Footer styling area
 
 nav {
+  // a.active { font-weight: bolder; }
   a.active:before { content:"\0003c\000a0"; } // escaped unicode for the carats and then a space on active menu links
   a.active:after { content:"\000a0\0003e"; }
 }
@@ -172,11 +175,6 @@ ul.footer-links li { display: inline; padding: 0.5rem 0.25rem; }
 
 // End of Nav and Footer styling area
 
-.full-width {
- // .content-listing, ul.content-listing li.listing { width: 90%; margin-left: auto; margin-right: auto; padding: 0% 5%; }
-  ul, ol { width: 85%; }
-  .table-wrapper, article p { width: 90%; }
-}
 hr.slender {
     border: 0;
     width: 55%;
@@ -277,10 +275,15 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 
 .hide-when-javascript-disabled { display: none; }
 
+// Accounts for asides floating to the right, without this CSS selector
+// the opening margin figure's top rule will be several pixels above
+// the top of the paragraph's top
+aside + p { margin-top: 0; }
+
 @media screen and (max-width: 760px) {
   article section h2, h3, h4, .p, p, footer, .table-wrapper, pre, article > section.content dl { width: 90%; }
-  pre code, ol, ul, nav dl { width: 87.5%; }
-  nav .bcl .bci:last-of-type { padding-bottom: 1rem; }
+  ol, ul, nav dl { width: 90%; }
+  nav ol li:last-of-type { padding-bottom: 1rem; }
   figure { max-width: 90%; }
   figcaption { margin-right: 0%; max-width: none; }
   blockquote {
@@ -293,20 +296,20 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 }
 
 @media (max-width: 760px) {
-
   label {
     &.margin-toggle:not(.sidenote-number) { display: inline; color: $contrast-color; }
     cursor: pointer;
   }
   pre, pre code { width: 90%; padding: 0; }
   img { max-width: 100%; }
-  ol.bcl .bci, nav dl { line-height: 1.7819rem; }
+  nav ol li, nav dl { line-height: 1.7819rem; }
 }
 /*--- End of Basic Layout stuff from tufte.css ---*/
 
 sup { font-size: 0.7rem; }
 
 ins { text-decoration-line: none; }
+q:after, q:before { content: none; }
 
 
 /* Hacks to better present */
