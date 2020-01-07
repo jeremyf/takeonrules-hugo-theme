@@ -7,33 +7,6 @@
 <style type="text/css" media="print">
   {{ (resources.Get "css/print.scss" | resources.ToCSS | resources.Minify).Content | safeCSS }}
 </style>
-{{ $js := resources.Get "js/mousetrap.js" | resources.Minify }}
-{{ $secureJS := $js | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
-<link rel="preload" as="script" href="{{ $secureJS.Permalink }}">
-<script type="text/javascript">
-  Mousetrap.bind('ctrl+/', function() {
-    try {
-      var element = document.getElementById('kdn_slash');
-      element.focus();
-    } catch(error) {}
-    }
-  )
-  Mousetrap.bind(['ctrl+0', 'ctrl+1', 'ctrl+2', 'ctrl+3', 'ctrl+4', 'ctrl+5', 'ctrl+6', 'ctrl+7', 'ctrl+8', 'ctrl+9'], function(e) {
-    try {
-      var element = document.getElementById('kdn_' + e.key);
-      element.focus();
-    } catch(error) {}
-    }
-  )
-  Mousetrap.bind(['ctrl+p', 'ctrl+n', 'ctrl+h'], function(e) {
-    try {
-      var element = document.getElementById('kdn_' + e.key);
-      element.click();
-    } catch(error) {}
-    }
-  )
-</script>
 {{- $tufteAmpCssResource := resources.Get "css/tufte-amp.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <meta name="amp-css-name" content="{{ $tufteAmpCssResource.RelPermalink }}">
 {{- $rssTemplate := resources.Get "feed.xml" }}
