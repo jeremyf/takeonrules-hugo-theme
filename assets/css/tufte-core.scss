@@ -126,11 +126,10 @@ figcaption { float: right; clear: right; margin-right: -48%; margin-top: 0; marg
 
 
 // Without this setting, when the header would wrap, the letters would overlap
-h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
+article section h2, h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
 header > nav { padding: 1rem 0; }
 body > footer { padding-top: 2rem; }
-article header h1, article header h2, body > footer { width: 95%; }
-article section h2 { width: 55% }
+article header, body > footer { width: 95%; }
 
 pre, pre code { padding: 0 1.5%; overflow-x: auto; color:$code-color; }
 code { color:$code-color; font-size: 1.1rem; }
