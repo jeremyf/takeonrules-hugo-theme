@@ -127,10 +127,10 @@ figcaption { float: right; clear: right; margin-right: -48%; margin-top: 0; marg
 
 // Without this setting, when the header would wrap, the letters would overlap
 h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
-header > nav { padding-bottom: 1rem; }
+header > nav { padding: 1rem 0; }
 body > footer { padding-top: 2rem; }
-h1, h2, header > nav, body > footer { width: 95%; }
-main article section h2 { width: 55% }
+article header h1, article header h2, body > footer { width: 95%; }
+article section h2 { width: 55% }
 
 pre, pre code { padding: 0 1.5%; overflow-x: auto; color:$code-color; }
 code { color:$code-color; font-size: 1.1rem; }
@@ -278,7 +278,7 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 .hide-when-javascript-disabled { display: none; }
 
 @media screen and (max-width: 760px) {
-  html, blockquote, p, .p, footer, figure, main header, main article h2, h3, h4, .table-wrapper, table { width: 90%; }
+  html, blockquote, p, .p, footer, figure, main header, 100% h2, h3, h4, .table-wrapper, table { width: 90%; }
   pre code, ol, ul, nav dl { width: 87.5%; }
   nav .bcl .bci:last-of-type { padding-bottom: 1rem; }
   figcaption { margin-right: 0%; max-width: none; }
@@ -291,6 +291,7 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 }
 
 @media (max-width: 760px) {
+
   label {
     &.margin-toggle:not(.sidenote-number) { display: inline; color: $contrast-color; }
     cursor: pointer;
