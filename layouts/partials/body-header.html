@@ -16,7 +16,7 @@
     {{- with .Params.licenses }}
       <h2><a href="#skip-to-licenses" title="Skip to Page's Licenses" class="offscreen">Skip to Page's Licenses</a></h2>
     {{- end }}
-    <h1><a href="{{ .Site.BaseURL }}" title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
+    <h1><a id="kdn_h" href="{{ .Site.BaseURL }}" title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
     {{- range .Site.Menus.topnav }}
       <h2><a href="{{ .URL }}" title="{{ if .Title }}{{ .Title }}{{ else }}{{ .Name }} page{{ end }}">
         {{ .Name }}
