@@ -6,10 +6,11 @@
     {{ partial "paginator.html" $paginator }}
   </nav>
   <ol aria-labelledby="blog-posts">
-  {{ range $paginator.Pages }}
+  {{ range $index, $object := $paginator.Pages }}
+  {{ with $object }}
   <li>
     <header>
-      <h2><a href="{{ .RelPermalink }}" rel="bookmark"><cite>{{ .Title }}</cite></a></h2>
+      <h2><a href="{{ .RelPermalink }}" id="kdn_{{ $index }}" rel="bookmark"><cite>{{ .Title }}</cite></a></h2>
       <dl>
         {{- with .Date }}<dt>Published</dt><dd><time datetime="{{ dateFormat $.Site.Params.iso8601_format . }}">{{ dateFormat "2006-01-02" . }}</time></dd>{{- end }}
         {{ if ne .Lastmod .Date }}
@@ -32,6 +33,7 @@
       </dl>
     </header>
   </li>
+  {{ end }}
   {{ end }}
   </ol>
   <nav aria-hidden="true">

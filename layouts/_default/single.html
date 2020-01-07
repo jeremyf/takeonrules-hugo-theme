@@ -5,10 +5,10 @@
         {{ partial "breadcrumb.html" . }}
         <ol>
           {{- with .PrevInSection }}
-          <li><a href="{{ .Permalink }}" rel="prev">Previous post</a></li>
+          <li><a id="kdn_p" href="{{ .Permalink }}" rel="prev">Previous post</a></li>
           {{- end }}
           {{- with .NextInSection }}
-          <li><a href="{{ .Permalink }}" rel="next">Next post</a></li>
+          <li><a id="kdn_n" href="{{ .Permalink }}" rel="next">Next post</a></li>
           {{- end }}
         </ol>
       </nav>
