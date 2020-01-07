@@ -1,3 +1,1 @@
-{{- $sidenoteDomIdSuffix := .Ordinal -}}<label for="sidenote-{{.Page.File.UniqueID}}-{{ $sidenoteDomIdSuffix }}" class="margin-toggle sidenote-number"></label>
-<input type="checkbox" id="sidenote-{{.Page.File.UniqueID}}-{{ $sidenoteDomIdSuffix }}" class="margin-toggle"/>
-<span class="sidenote" role="note">{{ partial "unparagraphy" .Inner }}</span>
+<span class="sidenote-number"><q class="sidenote" role="note">{{ partial "unparagraphy" .Inner }}</q></span>
