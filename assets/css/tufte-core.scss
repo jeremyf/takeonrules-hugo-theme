@@ -126,7 +126,7 @@ figcaption { float: right; clear: right; margin-right: -50%; margin-top: 0; marg
 
 
 // Without this setting, when the header would wrap, the letters would overlap
-article section h2, h3, h4, .p, p, footer, .table-wrapper, pre { width: 55%; }
+article section h2, h3, h4, .p, p, footer, .table-wrapper, pre, article > section.content dl { width: 55%; }
 main header > nav { padding: 1rem 0; }
 header > nav { padding-bottom: 1rem; }
 body > footer { padding-top: 2rem; }
@@ -220,7 +220,6 @@ a.offscreen {
 
 article > section.content dl {
   margin-top: 1rem;
-  width: 55%;
   dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
   dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
 }
@@ -278,7 +277,7 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 .hide-when-javascript-disabled { display: none; }
 
 @media screen and (max-width: 760px) {
-  article section h2, h3, h4, .p, p, footer, .table-wrapper, pre { width: 90%; }
+  article section h2, h3, h4, .p, p, footer, .table-wrapper, pre, article > section.content dl { width: 90%; }
   pre code, ol, ul, nav dl { width: 87.5%; }
   nav .bcl .bci:last-of-type { padding-bottom: 1rem; }
   figure { max-width: 90%; }
