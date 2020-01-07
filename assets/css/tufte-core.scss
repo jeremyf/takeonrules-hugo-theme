@@ -251,6 +251,7 @@ main > ol {
 
 // metadata of articles, either on the index or in the aside
 main > ol, article > aside {
+  ol, ul, dl { width: 90%; }
   dl {
     padding-top: 0.5rem; padding-left: 1.5rem; clear: both;
     dt, dd { margin-top: 1rem; float: left }
@@ -304,6 +305,9 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 /*--- End of Basic Layout stuff from tufte.css ---*/
 
 sup { font-size: 0.7rem; }
+
+ins { text-decoration-line: none; }
+
 
 /* Hacks to better present */
 .ogc {
