@@ -281,8 +281,10 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
   article section h2, h3, h4, .p, p, footer, .table-wrapper, pre { width: 90%; }
   pre code, ol, ul, nav dl { width: 87.5%; }
   nav .bcl .bci:last-of-type { padding-bottom: 1rem; }
+  figure { max-width: 90%; }
   figcaption { margin-right: 0%; max-width: none; }
   blockquote {
+    width: 80%;
     > * {  width: 80%; padding: 0 5%; }
   }
   // Removed as it appears to not be used
