@@ -2,7 +2,7 @@
 {{- $href     := .Get "href" }}{{- $title    := .Get "title" }}
 {{- $imageResize := "360x" }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "360x r%s" .) }}{{- end }}
-{{- $result   := $original.Resize $imageResize }}<p>
+{{- $result   := $original.Resize $imageResize }}
 <aside class="marginnote marginfigure" role="note">
 <a href="{{ if $href }}{{ $href }}{{ else }}{{ $original.RelPermalink }}{{ end}}" title="{{ if $title }}{{ $title }}{{ else }}See full-size image{{ end }}">
 <img class="fullwidth" src="{{ $result.RelPermalink }}" alt="{{$alt}}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}"/>

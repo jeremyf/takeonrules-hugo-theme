@@ -39,7 +39,11 @@ input.margin-toggle {
 label.sidenote-number { display: inline; }
 aside.marginnote { margin-right: 12.5%; width: 27%; }
 @media screen and (max-width: 760px) {
-  aside.marginnote { width: 90%; }
+  aside.marginnote { width: 80%; }
+  aside.marginnote.marginfigure {
+    width: 90% ; left: 0; margin-left: 0;
+    .fullwidth { max-width: 100%; }
+  }
   .marginnote:not(.marginfigure), .sidenote {
     border-left-width: thin;
     border-left-color: $contrast-color;
@@ -53,7 +57,7 @@ aside.marginnote { margin-right: 12.5%; width: 27%; }
   // .margin-toggle:checked + .marginnote { display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative; }
   // END collapsed margin
   .sidenote, .marginnote {
-    display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative;
+    display: block; float: left; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative;
     br {
      margin-bottom: 0.66rem;
      &:last-of-type { margin-bottom: 0rem; }

@@ -278,7 +278,7 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 .hide-when-javascript-disabled { display: none; }
 
 @media screen and (max-width: 760px) {
-  html, blockquote, p, .p, footer, figure, main header, h2, h3, h4, .table-wrapper, table { width: 90%; }
+  article section h2, h3, h4, .p, p, footer, .table-wrapper, pre { width: 90%; }
   pre code, ol, ul, nav dl { width: 87.5%; }
   nav .bcl .bci:last-of-type { padding-bottom: 1rem; }
   figcaption { margin-right: 0%; max-width: none; }
