@@ -38,7 +38,7 @@ blockquote {
   color: darken($table-header, 25%);
   width: 55%;
   font-size: 1.1rem;
-  margin: 1.4rem 0;
+  margin-top: 1.4rem;
   p, ul, ol, h2, h3, h4 { padding-left: 2.5%; padding-right: 2.5%; }
   p { width: 100%; }
   ul, ol { padding-top: 0; }
@@ -274,11 +274,6 @@ header > nav ol {
 article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 
 .hide-when-javascript-disabled { display: none; }
-
-// Accounts for asides floating to the right, without this CSS selector
-// the opening margin figure's top rule will be several pixels above
-// the top of the paragraph's top
-aside + p { margin-top: 0; }
 
 @media screen and (max-width: 760px) {
   article section h2, h3, h4, .p, p, footer, .table-wrapper, pre, article > section.content dl { width: 90%; }
