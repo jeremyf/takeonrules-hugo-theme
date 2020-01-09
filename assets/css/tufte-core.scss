@@ -146,13 +146,16 @@ pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.7142; marg
 //helper classes
 
 .contrast { color: $contrast-color;}
+
 //Nav and Footer styling area
 
+// For some reason AMP is mis-behaving around this
+/* BEGIN SKIP-AMP */
 nav {
-  // a.active { font-weight: bolder; }
   a.active:before { content:"\0003c\000a0"; } // escaped unicode for the carats and then a space on active menu links
   a.active:after { content:"\000a0\0003e"; }
 }
+/* END SKIP-AMP */
 
 body > header > nav a {
   font-style: normal; font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin: 1.5rem 2rem 0 auto; vertical-align: baseline;
