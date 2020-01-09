@@ -18,7 +18,7 @@
     {{- end }}
     <h1><a id="ctrl+0" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
     {{- range $idx, $item := .Site.Menus.topnav }}
-      <h2><a id="ctrl+{{ add 1 $idx }}" href="{{ $item.URL }}" {{ if eq $.Page.URL $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">
+      <h2><a id="ctrl+{{ add 1 $idx }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">
         {{ $item.Name }}
       </a></h2>
     {{- end }}
