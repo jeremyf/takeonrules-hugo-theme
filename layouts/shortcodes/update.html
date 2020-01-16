@@ -17,7 +17,7 @@ TODO: Add paragraphs for a margin note; They are already a block element
 {{- else }}
 <aside class="marginnote update">
   <ins role="note">
-    <em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}
+    <p><em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}</p>
   </ins>
 </aside>
 {{- end }}
