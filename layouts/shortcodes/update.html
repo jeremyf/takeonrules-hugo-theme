@@ -1,8 +1,11 @@
 {{/*
 For rendering consistent "updated" information.
+TODO: Add paragraphs for a margin note; They are already a block element
 */}}{{- $date := .Get "date" }}{{- $date_for_attr := dateFormat "2006-01-02" $date }}{{- $date_for_display := dateFormat "Jan 2, 2006" $date }}{{- if .Params.inline }}
- <ins class="update" role="note">
-  <em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}
+<ins class="update" role="note">
+  <p>
+    <em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}
+  </p>
 </ins>
 {{- else }}{{- if .Params.sidenote }}
 {{- $sidenoteDomIdSuffix := .Ordinal -}}
