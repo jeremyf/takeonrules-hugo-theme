@@ -39,10 +39,10 @@ blockquote {
   width: 55%;
   font-size: 1.1rem;
   margin-top: 1.4rem;
-  p, ul, ol, h2, h3, h4 { padding-left: 2.5%; padding-right: 2.5%; }
+  p, ul, ol, h2, h3, h4 { margin-left: 1rem; margin-right: 1rem; }
   p { width: 100%; }
   ul, ol { padding-top: 0; }
-  p, ul, ol { font-size: 1.1rem; line-height: 1.7819rem; margin: 1.7819rem 0; }
+  p, ul, ol { font-size: 1.1rem; line-height: 1.7819rem; margin: 1.7819rem 1rem; }
   li { font-size: 1.1rem; margin-left: 3.5%; }
   footer {
     font-size: 1.1rem;
@@ -286,7 +286,7 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
   figcaption { margin-right: 0%; max-width: none; }
   blockquote {
     width: 80%;
-    > * {  width: 80%; padding: 0 5%; }
+    > * {  width: 80%; }
   }
   // Removed as it appears to not be used
   // .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
