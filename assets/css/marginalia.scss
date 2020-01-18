@@ -15,6 +15,7 @@ main { h1, h2, h3, h4 { clear: left; } }
     }
   }
   p { font-size: 1.0rem; width:100%; }
+  p:last-of-type { margin-top: 0; }
 }
 
  //added to allow for the fact that lists are indented and marginnotes and sidenotes push to right
