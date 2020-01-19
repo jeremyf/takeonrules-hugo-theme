@@ -312,7 +312,8 @@ q:after, q:before { content: none; }
 
 /* Hacks to better present */
 .ogc {
-  border-left: $code-color 1px dotted; margin-top: 1rem; padding-left: 1rem;
+  border-left: $code-color 1px dotted; padding-left: 1rem;
+  & > pre { margin-top: 1rem; }
 }
 
 .update {
