@@ -152,8 +152,8 @@ pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.7142; marg
 // For some reason AMP is mis-behaving around this
 /* BEGIN SKIP-AMP */
 nav {
-  a.active:before { content:"\0003c\000a0"; } // escaped unicode for the carats and then a space on active menu links
-  a.active:after { content:"\000a0\0003e"; }
+  a.active:before { content:"\000AB\000a0"; } // escaped unicode for the double-angled pointing quotes and then a space on active menu links
+  a.active:after { content:"\000a0\000BB"; }
 }
 /* END SKIP-AMP */
 
