@@ -1,15 +1,6 @@
-<footer class="group" role="contentinfo" aria-label="Site-wide footer">
+<footer class="group credits" role="contentinfo" aria-label="Site-wide footer">
   <hr class="slender">
-  <ul class="footer-links">
-    {{ range .Site.Menus.footer }}
-      <li>
-        <a href="{{ .URL }}" aria-label="{{ .Name }}"><span aria-hidden="true" class="{{ .Identifier }}"></span></a>
-      </li>
-    {{ end }}
-  </ul>
-  <div class="credits" >
-    {{ partial "credits-and-license.html" . }}
-  </div>
+  {{ partial "credits-and-license.html" . }}
 </footer>
 {{ $js := resources.Get "js/mousetrap.js" | resources.Minify }}
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}

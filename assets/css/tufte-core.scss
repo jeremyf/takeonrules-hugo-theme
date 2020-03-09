@@ -160,12 +160,11 @@ nav {
 body > header > nav a {
   font-style: normal; font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin: 1.5rem 2rem 0 auto; vertical-align: baseline;
 }
-ul.footer-links, .credits { padding-left: 0rem; list-style: none; text-align: center; margin: 0 auto; }
-ul.footer-links li { display: inline; padding: 0.5rem 0.25rem; }
 
 //change font color for credit links in footer
 .credits {
   padding: 1rem 0rem;
+  text-align: center;
   font-family: $sans-font;
   a{ color: $contrast-color; }
   .license {
