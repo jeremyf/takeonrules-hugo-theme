@@ -318,3 +318,7 @@ q:after, q:before { content: none; }
 .update {
   color: $update-color;
 }
+
+mark {
+  background-color: lighten($update-color, 40%);
+}
