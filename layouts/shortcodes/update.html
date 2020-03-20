@@ -9,7 +9,7 @@ TODO: Add paragraphs for a margin note; They are already a block element
 </ins>
 {{- else }}{{- if .Params.sidenote }}
 {{- $sidenoteDomIdSuffix := .Ordinal -}}
- <span class="sidenote-number">
+<span class="sidenote-number">
   <ins class="sidenote update" role="note" datetime="{{ $date_for_attr }}">
     <em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}
   </ins>

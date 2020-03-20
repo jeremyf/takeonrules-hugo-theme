@@ -6,11 +6,11 @@
     {{ partial "body-header.html" . }}
     <meta name="layout" content="terms" />
     <main class="group" role="main" aria-label="Blog posting">
+      <nav role="navigation" aria-label="Breadcrumbs">
+        {{ partial "breadcrumb.html" . }}
+      </nav>
       <article role="article">
         <header>
-          <nav role="navigation" aria-label="Breadcrumbs">
-            {{ partial "breadcrumb.html" . }}
-          </nav>
           <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
         </header>
         <a name="skip-to-content" aria-label="Anchor for content"> </a>

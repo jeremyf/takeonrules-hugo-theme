@@ -1,28 +1,32 @@
 {{ define "main" }}
+  <nav role="navigation" aria-label="Breadcrumbs">
+    {{ partial "breadcrumb.html" . }}
+  </nav>
+  <nav role="navigation" aria-label="Blog postings">
+    <ol>
+      {{- with .PrevInSection }}
+      <li><a id="kdn_p" href="{{ .Permalink }}" rel="prev">Previous post</a></li>
+      {{- end }}
+      {{- with .NextInSection }}
+      <li><a id="kdn_n" href="{{ .Permalink }}" rel="next">Next post</a></li>
+      {{- end }}
+    </ol>
+  </nav>
   <article role="article" aria-labelledby="{{ anchorize .Title }}">
     <header>
-      <nav role="navigation" aria-label="Breadcrumbs and Blog Navigation">
-        {{ partial "breadcrumb.html" . }}
-        <ol>
-          {{- with .PrevInSection }}
-          <li><a id="ctrl+p" href="{{ .Permalink }}" rel="prev">Previous post</a></li>
-          {{- end }}
-          {{- with .NextInSection }}
-          <li><a id="ctrl+n" href="{{ .Permalink }}" rel="next">Next post</a></li>
-          {{- end }}
-        </ol>
-      </nav>
-      <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
-      {{- with .Params.subtitle }}
-      <h2 class="subtitle">{{ . }}</h2>
-      {{- end }}
+      <hgroup>
+        <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+        {{- with .Params.subtitle }}
+        <h2 class="subtitle">{{ . }}</h2>
+        {{- end }}
+      </hgroup>
     </header>
     <section class="content" role="region" aria-label="article content">
       <a name="skip-to-content" aria-label="Anchor for content"> </a>
       {{ .Content }}
     </section>
-    <aside role="complementary">
-      <section aria-label="Metadata related to the article">
+    <footer role="complementary">
+      <nav aria-label="Metadata related to the article">
         <h2>Metadata</h2>
         <a name="skip-to-posts-metadata" aria-label="Anchor for post's metadata"> </a>
         <dl>
@@ -68,8 +72,8 @@
             {{- end}}
           {{- end }}
         </dl>
-      </section>
-      <section aria-label="Related articles to post">
+      </nav>
+      <nav aria-label="Related articles to post">
         <h2>Related Posts</h2>
         <a name="skip-to-related-posts" aria-label="Anchor for Related Posts"> </a>
         <ul>
@@ -79,7 +83,7 @@
             </li>
           {{ end }}
         </ul>
-      </section>
-    </aside>
+      </nav>
+    </footer>
   </article>
 {{ end }}

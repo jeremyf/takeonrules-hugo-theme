@@ -122,7 +122,7 @@ figcaption { float: right; clear: right; margin-right: -50%; margin-top: 0; marg
 
 
 // Without this setting, when the header would wrap, the letters would overlap
-article section h2, h3, h4, .p, p, footer, .table-wrapper, pre, article > section.content dl { width: 55%; }
+article section h2, h3, h4, .p, p, body > footer, .table-wrapper, pre, article > section.content dl { width: 55%; }
 article header, body > footer { width: 95%; }
 .full-width {
   ul, ol { width: 85%; }
@@ -130,8 +130,7 @@ article header, body > footer { width: 95%; }
 }
 
 
-main header > nav { padding: 1rem 0; }
-header > nav { padding-bottom: 1rem; }
+body > header > nav { padding-bottom: 1rem; }
 body > footer { padding-top: 2rem; }
 
 pre, pre code { padding: 0 1.5%; overflow-x: auto; color:$code-color; }
@@ -163,6 +162,7 @@ body > header > nav a {
 
 //change font color for credit links in footer
 .credits {
+  text-align: center;
   padding: 1rem 0rem;
   text-align: center;
   font-family: $sans-font;
@@ -224,7 +224,7 @@ article > section.content dl {
   dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
 }
 
-article > aside section {
+article > footer nav {
   clear: both; padding-top: 1rem;
 }
 
@@ -234,23 +234,20 @@ main > nav ul, main > ol, {
 }
 
 main > nav  {
+  &:first-of-type { padding-top: 1rem; }
+  &:last-of-type { padding-bottom: 1rem; }
   clear: both; font-family: $sans-font;
-  // BEGIN Hack: Ensure that of the two pagination navs, the last one
-  //   has padding. Without this line, the bottom nav would butt up against
-  //   the `main > ol`. I chose to set the first-of-type as padding-top: 0rem
-  //   in case I decide to remove the second nav declaration
-  padding-top: 3rem; &:first-of-type { padding-top: 0rem; }
-  // END Hack
   li { float: left; padding: 0; margin-right: 1rem; }
 }
 
 main > ol {
+  &+nav { padding-top: 3rem; } // The last nav element on the listing page
   li { clear: both; padding-top: 1rem; padding-right: 0; }
   header { width: 100%; }
 }
 
 // metadata of articles, either on the index or in the aside
-main > ol, article > aside {
+main > ol, article > footer {
   ol, ul, dl { width: 90%; }
   dl {
     padding-top: 0.5rem; padding-left: 1.5rem; clear: both;
@@ -265,7 +262,7 @@ main > ol, article > aside {
 main header h2 { margin-bottom: 1rem; }
 
 // breadcrumb
-header > nav ol {
+nav ol {
   font-size: 1.1rem; padding: 0 0 1rem 0; width: 85%; list-style: none ; clear: left;
   li {
     padding: 0 0.2rem 0 0; margin: 0; float: left; font-family: $sans-font;
@@ -278,7 +275,7 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 .hide-when-javascript-disabled { display: none; }
 
 @media screen and (max-width: 760px) {
-  article section h2, h3, h4, .p, p, footer, .table-wrapper, pre, article > section.content dl { width: 90%; }
+  article section h2, h3, h4, .p, p, body > footer, .table-wrapper, pre, article > section.content dl { width: 90%; }
   ol, ul, nav dl { width: 90%; }
   nav ol li:last-of-type { padding-bottom: 1rem; }
   figure { max-width: 90%; }

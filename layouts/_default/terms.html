@@ -1,9 +1,9 @@
 {{ define "main" }}
+  <nav role="navigation" aria-label="Breadcrumbs">
+    {{ partial "breadcrumb.html" . }}
+  </nav>
   <article role="article" class="single-article">
     <header>
-      <nav role="navigation" aria-label="Breadcrumbs">
-        {{ partial "breadcrumb.html" . }}
-      </nav>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
     </header>
     <section class="content">

@@ -6,15 +6,15 @@
     {{ partial "body-header.html" . }}
     <meta name="layout" content="terms" />
     <main class="group" role="main" aria-label="Blog posting">
+      {{- $context := . }}
+      <nav role="navigation" aria-label="Breadcrumbs">
+        {{ partial "breadcrumb.html" $context }}
+      </nav>
       <article role="article">
         {{- $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
         {{- $title := .Title }}
-        {{- $context := . }}
         {{ with index $.Site.Data.licenses $slug }}
         <header>
-          <nav role="navigation" aria-label="Breadcrumbs">
-            {{ partial "breadcrumb.html" $context }}
-          </nav>
           <h1 id="{{ anchorize .Title }}">{{ index . "Name" }}</h1>
         </header>
         {{ with index . "Description" }}

@@ -1,13 +1,13 @@
 {{ define "main" }}
+  {{- $context := . }}
+  <nav role="navigation" aria-label="Breadcrumbs">
+    {{ partial "breadcrumb.html" $context }}
+  </nav>
   <article role="article">
   {{- $termTitle := .Title }}
   {{- $data := .Data }}
-  {{- $context := . }}
   {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
     <header>
-      <nav role="navigation" aria-label="Breadcrumbs">
-        {{ partial "breadcrumb.html" $context }}
-      </nav>
       <h1 id="{{ anchorize $termTitle }}">{{ .title }}</h1>
     </header>
     <a name="skip-to-content" aria-label="Anchor for content"> </a>
