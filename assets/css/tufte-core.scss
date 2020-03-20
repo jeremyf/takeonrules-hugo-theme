@@ -156,6 +156,9 @@ nav {
 }
 /* END SKIP-AMP */
 
+// Put a bit of space between the top nave and the form
+nav+form { padding-top: 1rem;}
+
 body > header > nav a {
   font-style: normal; font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin: 1.5rem 2rem 0 auto; vertical-align: baseline;
 }
@@ -296,7 +299,7 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
   // }
   pre, pre code { width: 90%; padding: 0; }
   img { max-width: 100%; }
-  nav ol li, nav dl { line-height: 1.7819rem; }
+  nav ol li, nav ul li, nav dl { line-height: 2.5rem; }
 }
 /*--- End of Basic Layout stuff from tufte.css ---*/
 
