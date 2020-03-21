@@ -55,7 +55,7 @@
         var $this = $(this);
         $("thead th", $this).each( function() {
           var title = $(this).text();
-          $(this).html( title + '<br /><input role="search" type="text" placeholder="Search '+title+'" />');
+          $(this).html( '<label for="' + title + '">' + title + '</label><br /><input role="search" name="'+ title +'" type="text" placeholder="Search '+title+'" />');
         });
         table = $this.DataTable({
           "paging": false,
