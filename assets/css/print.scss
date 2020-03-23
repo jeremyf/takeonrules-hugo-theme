@@ -15,7 +15,7 @@ body {
 article {
   .table-wrapper, h2, h3, h4, summary { page-break-after: avoid; }
 }
-header, nav, aside[role="complementary"] { display:none; }
+header, nav, article footer { display:none; }
 main header, blockquote footer { display: inherit; }
 footer.group {
   font-family: $sans-font; font-size: 9pt; // border-top: 1px solid $text-color;
@@ -33,11 +33,3 @@ table {
     th { text-align: left; }
   }
 }
-
-// @import "marginalia";
-
-// Modifications to ensure printed page includes URLs
-// Cribbed from https://www.smashingmagazine.com/2018/05/print-stylesheets-in-2018/
-// And https://www.w3schools.com/css/css_attribute_selectors.asp
-// Render HREF for all non images
-// a:link:not([href^="/images/"]):after, a:visited:not([href^="/images/"]):after { content: " (" attr(href) ")"; }

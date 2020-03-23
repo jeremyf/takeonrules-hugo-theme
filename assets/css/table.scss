@@ -1,0 +1,28 @@
+.table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overflow values to 'auto' so scroll bars appear only as needed
+
+//making booktabs style tables the unstyled default in case someone uses Markdown styling
+table {
+  width: auto; margin: 0 auto; border-spacing: 0px; border-top: 2px solid $border-color; border-bottom: 2px solid $border-color;
+  .l { text-align: left }
+  .c { text-align: center }
+  .r { text-align: right }
+  &.unstriped tbody tr, &.unstriped .subbody { background-color: $bg-color; }
+  ul, ol { width: 90%; padding-top: 0rem; }
+}
+thead {
+  th { border-bottom: 1px solid $border-color; }
+  tr { background-color: $table-header; }
+}
+th { font-weight: bold; }
+tbody tr {
+  &:nth-child(even), &.subhead { background-color: lighten($table-header, 20%); }
+  &.subhead th { text-align: left; }
+}
+.subbody td { padding-left: 1.5rem; }
+
+tfoot td { border-top: 1px solid $border-color; font-size: smaller }
+th, tfoot td { padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; ; text-align: center; }
+th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.7142;  }
+tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */
+td { padding-left: 0.5em; padding-right: 0.5em; text-align: left; }
+caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; margin-right: auto; margin-top: 1ex; caption-side: top; }

@@ -5,7 +5,6 @@
 
 
 // First significant deviation from CSS on tufte.css site - variable font size as browser width expands or contracts
-//html { font-size: 15px; }
 
 html, body { height: 100%; }
 html { vertical-align: baseline; font-size: 12px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -30,7 +29,6 @@ h3 { font-size: 1.8rem; margin-top: 2.1778rem; }
 h4 { font-size: 1.2rem; margin-top: 1.6778rem; }
 // ET says a need for more than 3 levels of headings is the sign of a diseased mind; But I added an h4
 
-// p.subtitle { font-style: italic; margin-top: 2.1778rem; margin-bottom: 2.1778rem; font-size: 1.8rem; display: block; line-height: 1.0889; }
 p, ol, ul, dl { font-size: 1.4rem; }
 p { margin-top: 1.4rem; }
 p, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
@@ -64,38 +62,7 @@ div.epigraph > blockquote {
 /* END Epigraphs */
 
 /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
-
-.table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overflow values to 'auto' so scroll bars appear only as needed
-
-//making booktabs style tables the unstyled default in case someone uses Markdown styling
-table {
-  width: auto; margin: 0 auto; border-spacing: 0px; border-top: 2px solid $border-color; border-bottom: 2px solid $border-color;
-  .l { text-align: left }
-  .c { text-align: center }
-  .r { text-align: right }
-  thead {
-    th { border-bottom: 1px solid $border-color; }
-    tr { background-color: $table-header; }
-  }
-  th { font-weight: bold; }
-  &.unstriped tbody tr, &.unstriped .subbody { background-color: $bg-color; }
-  tbody tr {
-    &:nth-child(even), &.subhead { background-color: lighten($table-header, 20%); }
-    &.subhead th { text-align: left; }
-  }
-  .subbody td { padding-left: 1.5rem; }
-  // &.full { width: 100%; }
-
-  ul, ol { width: 90%; padding-top: 0rem; }
-
-}
-
-tfoot td { border-top: 1px solid $border-color; font-size: smaller }
-th, tfoot td { padding: 0.65ex 0.5em 0.4ex 0.5em; font-weight: normal; ; text-align: center; }
-th, td, table ol, table ul { font-size: 1.2rem; line-height: 1.7142;  }
-tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */
-td { padding-left: 0.5em; padding-right: 0.5em; text-align: left; }
-caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; margin-right: auto; margin-top: 1ex; caption-side: top; }
+@import "table";
 /* -- End of Table Styling section --*/
 
 
@@ -167,7 +134,6 @@ body > header > nav a {
 .credits {
   text-align: center;
   padding: 1rem 0rem;
-  text-align: center;
   font-family: $sans-font;
   a{ color: $contrast-color; }
   .license {
@@ -221,32 +187,34 @@ a.offscreen {
 
 // Working with lists, especially navigation
 
-article > section.content dl {
-  margin-top: 1rem;
-  dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
-  dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
+article {
+  > section.content dl {
+    margin-top: 1rem;
+    dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
+    dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
+  }
+  > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
+  > footer nav {
+    clear: both; padding-top: 1rem;
+  }
 }
 
-article > footer nav {
-  clear: both; padding-top: 1rem;
-}
-
-main > nav ul, main > ol, {
-  width: 90%; padding: 0;
-  li { list-style: none; }
-}
-
-main > nav  {
-  &:first-of-type { padding-top: 1rem; }
-  &:last-of-type { padding-bottom: 1rem; }
-  clear: both; font-family: $sans-font;
-  li { float: left; padding: 0; margin-right: 1rem; }
-}
-
-main > ol {
-  &+nav { padding-top: 3rem; } // The last nav element on the listing page
-  li { clear: both; padding-top: 1rem; padding-right: 0; }
-  header { width: 100%; }
+main {
+  > nav ul, > ol, {
+    width: 90%; padding: 0;
+    li { list-style: none; }
+  }
+  > nav  {
+    clear: both; font-family: $sans-font;
+    &:first-of-type { padding-top: 1rem; }
+    &:last-of-type { padding-bottom: 1rem; }
+    li { float: left; padding: 0; margin-right: 1rem; }
+  }
+  > ol {
+    &+nav { padding-top: 3rem; } // The last nav element on the listing page
+    li { clear: both; padding-top: 1rem; padding-right: 0; }
+    header { width: 100%; }
+  }
 }
 
 // metadata of articles, either on the index or in the aside
@@ -261,7 +229,6 @@ main > ol, article > footer {
   }
 }
 
-
 main header h2 { margin-bottom: 1rem; }
 
 // breadcrumb
@@ -272,8 +239,6 @@ nav ol {
     &:not(:last-of-type)::after { content: " / " }
   }
 }
-
-article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
 
 .hide-when-javascript-disabled { display: none; }
 
@@ -288,15 +253,10 @@ article > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
     > * {  width: 80%; }
   }
   // Removed as it appears to not be used
-  // .terms td { padding-top: 0.33rem; padding-bottom: 0.33rem;}
   hr.slender { width: 100%; }
 }
 
 @media (max-width: 760px) {
-  // label {
-  //   &.margin-toggle:not(.sidenote-number) { display: inline; color: $contrast-color; }
-  //   cursor: pointer;
-  // }
   pre, pre code { width: 90%; padding: 0; }
   img { max-width: 100%; }
   nav ol li, nav ul li, nav dl { line-height: 2.5rem; }

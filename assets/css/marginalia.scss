@@ -14,8 +14,11 @@ main { h1, h2, h3, h4 { clear: left; } }
       table { width: 100%; }
     }
   }
-  p { font-size: 1.0rem; width:100%; }
-  p:last-of-type { margin-top: 0; }
+}
+
+.marginnote p {
+  font-size: 1.0rem; width:100%;
+  &:last-of-type { margin-top: 0; }
 }
 
  //added to allow for the fact that lists are indented and marginnotes and sidenotes push to right
@@ -23,23 +26,16 @@ li, blockquote {
   .sidenote, .marginnote { margin-right: -80%; }
 }
 
-
-.sidenote-number { counter-increment: sidenote-counter; }
-
-.sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) ")\000a0"; font-family: $counter-font; color: $contrast-color; position: relative; vertical-align: baseline; }
-
-.sidenote-number:after { content: counter(sidenote-counter); font-size: 1rem; top: -0.5rem; left: 0.1rem; }
+.sidenote-number {
+  counter-increment: sidenote-counter;
+  &:after, &:before { content: counter(sidenote-counter) ")\000a0"; font-family: $counter-font; color: $contrast-color; position: relative; vertical-align: baseline; }
+  &:after { content: counter(sidenote-counter); font-size: 1rem; top: -0.5rem; left: 0.1rem; }
+}
 
 // TODO: Must figure this out. I don't want to hide marginalia but instead
 //       render it similar to the print style
 .full-width { .sidenote, .sidenote-number, .marginnote { display: none; } }
 
-// input.margin-toggle {
-//   display: none;
-//   &:not(.sidenote-number) { display: none; }
-// }
-
-// label.sidenote-number { display: inline; }
 aside.marginnote { margin-right: 12.5%; width: 27%; }
 @media screen and (max-width: 760px) {
   aside.marginnote { width: 80%; }
@@ -52,12 +48,6 @@ aside.marginnote { margin-right: 12.5%; width: 27%; }
     border-left-style: dotted;
     padding-left: 0.5rem;
   }
-  // The collapsed and non-collapsed CSS are reciprocals. You should pick one or the other
-  // BEGIN collapsed margin
-  // .sidenote, .marginnote { display: none; }
-  // .margin-toggle:checked + .sidenote,
-  // .margin-toggle:checked + .marginnote { display: block; float: left; left: 1rem; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative; }
-  // END collapsed margin
   .sidenote, .marginnote {
     display: block; float: left; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative;
     br {
@@ -65,14 +55,4 @@ aside.marginnote { margin-right: 12.5%; width: 27%; }
      &:last-of-type { margin-bottom: 0rem; }
    }
   }
-  // .margin-toggle:checked + .sidenote,
-  // .margin-toggle:checked + .marginnote { display: none; }
-  // .margin-table {
-  //   .table-wrapper {
-  //     width: 92%;
-  //     table {
-  //       width: 95%;
-  //     }
-  //   }
-  // }
 }
