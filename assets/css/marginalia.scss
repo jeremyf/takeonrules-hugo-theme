@@ -26,11 +26,9 @@ li, blockquote {
   .sidenote, .marginnote { margin-right: -80%; }
 }
 
-.sidenote-number {
-  counter-increment: sidenote-counter;
-  &:after, &:before { content: counter(sidenote-counter) ")\000a0"; font-family: $counter-font; color: $contrast-color; position: relative; vertical-align: baseline; }
-  &:after { content: counter(sidenote-counter); font-size: 1rem; top: -0.5rem; left: 0.1rem; }
-}
+.sidenote-number { counter-increment: sidenote-counter; }
+.sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) ")\000a0"; font-family: $counter-font; color: $contrast-color; position: relative; vertical-align: baseline; }
+.sidenote-number:after { content: counter(sidenote-counter); font-size: 1rem; top: -0.5rem; left: 0.1rem; }
 
 // TODO: Must figure this out. I don't want to hide marginalia but instead
 //       render it similar to the print style
