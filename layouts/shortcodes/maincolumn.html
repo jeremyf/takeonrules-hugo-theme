@@ -9,7 +9,7 @@
 {{- $imageResize = (printf "770x r%s" .) }}
 {{- end }}
 {{- $result   := $original.Resize $imageResize }}
-<figure>
+<figure{{ if isSet .Params "hidden" }}aria-hidden="true"{{ end }}>
 <figcaption>{{ $caption | markdownify }}</figcaption>
 <a href="{{ if $href }}{{ $href }}{{ else }}{{ $original.RelPermalink }}{{ end}}" title="{{ if $title }}{{ $title }}{{ else }}See full-size image{{ end }}">
 <img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
