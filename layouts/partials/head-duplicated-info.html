@@ -10,7 +10,7 @@
 {{- $tufteAmpCssResource := resources.Get "css/tufte-amp.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <meta name="amp-css-name" content="{{ $tufteAmpCssResource.RelPermalink }}">
 {{ range .Site.Home.AlternativeOutputFormats -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s Feed" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML}}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title | safeHTML }} {{ .Name }} Feed" />
 {{ end -}}
 {{- range .Site.Menus.me_elsewhere }}
 <link rel="me" href="{{ .URL }}" title="{{ .Name }}">
