@@ -188,12 +188,15 @@ a.offscreen {
 // Working with lists, especially navigation
 
 article {
-  > section.content dl {
-    margin-top: 1rem;
-    dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
-    dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
+  > section.content {
+    margin-bottom: 0rem;
+    dl {
+      margin-top: 1rem;
+      dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
+      dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
+    }
   }
-  > section { clear: left; padding-top: 1rem; margin-bottom: 0rem; }
+  > header { padding-bottom: 1rem; }
   > footer nav {
     clear: both; padding-top: 1rem;
   }
