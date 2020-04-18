@@ -7,8 +7,8 @@
         <h2 class="subtitle">{{ . }}</h2>
         {{- end }}
       </hgroup>
+      {{ partial "breadcrumb.html" . }}
     </header>
-    {{ partial "breadcrumb.html" . }}
     <section class="content" role="region" aria-label="article content">
       <a name="skip-to-content" aria-label="Anchor for content"> </a>
       {{ .Content }}

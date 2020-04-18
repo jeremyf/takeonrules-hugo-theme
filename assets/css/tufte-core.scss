@@ -149,7 +149,7 @@ nav+form { padding-top: 0.5rem; }
   text-align: center;
   padding: 1rem 0rem;
   font-family: $sans-font;
-  a{ color: $contrast-color; }
+  a { color: $contrast-color; }
   .license {
     margin-top: 1rem;
     font-size: smaller;
@@ -216,15 +216,15 @@ article {
 }
 
 main {
-  > ol, {
+  > ol {
     width: 90%; padding: 0;
-    &+nav { padding-top: 3rem; } // The last nav element on the listing page
     li {
       list-style: none; clear: both; padding-right: 0;
       // I'd prefer to use padding-bottom, but because of the float nature of the
       // elements this does not work.
       &:not(:first-of-type) { padding-top: 1rem; }
     }
+    &+nav { padding-top: 3rem; } // The last nav element on the listing page
     header { width: 100%; }
   }
 }
@@ -254,16 +254,8 @@ article hgroup h2 { margin-bottom: 1.2rem; }
   &:not(:first-of-type) { margin-left: 0.3333333rem; }
 }
 .paginator {
-  font-size: 1.1rem; clear: both;
+  clear: both;
   a { margin-right: 1rem; }
-}
-
-nav ol {
-  font-size: 1.1rem; padding: 0 0 1rem 0; width: 85%; list-style: none ; clear: left;
-  li {
-    padding: 0 0.2rem 0 0; margin: 0; float: left; font-family: $sans-font;
-    // &:not(:last-of-type)::after { content: " / " }
-  }
 }
 
 .hide-when-javascript-disabled { display: none; }
@@ -271,7 +263,6 @@ nav ol {
 @media screen and (max-width: 760px) {
   article section h2, h3, h4, .p, p, body > footer, .table-wrapper, pre, article > section.content dl { width: 90%; }
   ol, ul, nav dl { width: 90%; }
-  nav ol li:last-of-type { padding-bottom: 1rem; }
   figure { max-width: 90%; }
   figcaption { margin-right: 0%; max-width: none; }
   blockquote {
@@ -285,7 +276,6 @@ nav ol {
 @media (max-width: 760px) {
   pre, pre code { width: 90%; padding: 0; }
   img { max-width: 100%; }
-  nav ol li, nav ul li, nav dl { line-height: 2.5rem; }
 }
 /*--- End of Basic Layout stuff from tufte.css ---*/
 
