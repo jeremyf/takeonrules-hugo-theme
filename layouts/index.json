@@ -1,5 +1,26 @@
-{{- $.Scratch.Add "index" slice -}}
-{{- range where .Site.Pages "Type" "not in"  (slice "page" "json") -}}
-{{- $.Scratch.Add "index" (dict "uri" .Permalink "title" .Title "content" .Plain "tags" .Params.tags "categories" .Params.tags "pubDate" (dateFormat "2006-01-02" .Date)) -}}
-{{- end -}}
-{{- $.Scratch.Get "index" | jsonify -}}
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "{{ .Site.Title }}",
+  "home_page_url": {{ .Site.BaseURL | jsonify }},
+  "description": "Recent content for {{ .Site.Title }}",
+  "feed_url": "{{ .Site.BaseURL }}feed.json",
+  "favicon": "{{ .Site.BaseURL }}favicon.ico",
+  "author": {
+    "name": "{{ .Site.Params.copyrightHolder }}"
+  },
+  "items": [
+    {{- $scratch := newScratch }}
+    {{- $scratch.Set "blogPostCounter" 0 }}
+    {{- range first 15 (where .Site.Pages "Type" "post") }}
+    {{- $scratch.Add "blogPostCounter" 1 }}
+    {
+      "id": {{ .Permalink | jsonify }},
+      "url": {{ .Permalink | jsonify }},
+      "title": {{ .Title | jsonify }},
+      "date_published": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+      {{ if (isset .Params "tags") }}"tags": "{{ delimit .Params.tags ", " }}",{{ end }}
+      "content_html": {{ .Content | jsonify }}
+    }{{ if lt ($scratch.Get "blogPostCounter") 15 }},{{end}}
+    {{- end }}
+  ]
+}
