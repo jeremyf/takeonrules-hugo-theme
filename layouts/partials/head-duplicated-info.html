@@ -9,9 +9,10 @@
 </style>
 {{- $tufteAmpCssResource := resources.Get "css/tufte-amp.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <meta name="amp-css-name" content="{{ $tufteAmpCssResource.RelPermalink }}">
-{{- $rssTemplate := resources.Get "feed.xml" }}
-{{- $rss := $rssTemplate | resources.ExecuteAsTemplate "feed.xml" . }}
-<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed" href="{{ $rss.RelPermalink }}">
+{{ with .Site.Home.OutputFormats.Get "RSS" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s RSS Feed" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+
 {{- $jsonTemplate := resources.Get "feed.json" }}
 {{- $json := $jsonTemplate | resources.ExecuteAsTemplate "feed.json" . }}
 <link rel="alternate" type="application/json" title="{{ .Site.Title}} JSON Feed" href="{{ $json.RelPermalink }}">
