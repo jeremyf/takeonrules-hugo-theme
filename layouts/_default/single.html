@@ -1,17 +1,4 @@
 {{ define "main" }}
-  <nav role="navigation" aria-label="Breadcrumbs">
-    {{ partial "breadcrumb.html" . }}
-  </nav>
-  <nav role="navigation" aria-label="Blog postings">
-    <ol>
-      {{- with .PrevInSection }}
-      <li><a id="ctrl+p" href="{{ .Permalink }}" rel="prev">Previous post</a></li>
-      {{- end }}
-      {{- with .NextInSection }}
-      <li><a id="ctrl+n" href="{{ .Permalink }}" rel="next">Next post</a></li>
-      {{- end }}
-    </ol>
-  </nav>
   <article role="article" aria-labelledby="{{ anchorize .Title }}">
     <header>
       <hgroup>
@@ -21,6 +8,7 @@
         {{- end }}
       </hgroup>
     </header>
+    {{ partial "breadcrumb.html" . }}
     <section class="content" role="region" aria-label="article content">
       <a name="skip-to-content" aria-label="Anchor for content"> </a>
       {{ .Content }}

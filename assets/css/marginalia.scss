@@ -1,7 +1,3 @@
-// I encountered print styling issues where an H2 was "floating" to the right of marginalia
-// This appeared to resolve that issue
-main { h1, h2, h3, h4 { clear: left; } }
-
 // Responsible for common rendering behavior of the marginalia. When tinkering
 // with this file, remember to review both the narrow version and the print version
 .sidenote, .marginnote {

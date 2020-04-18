@@ -97,7 +97,25 @@ article header, body > footer { width: 95%; }
 }
 
 
-body > header > nav { padding-bottom: 1rem; }
+body > header {
+  hr { display: none; }
+  &> nav {
+    h1 { display: inline-block; margin: 0; }
+    padding: 1rem 0;
+    a {
+      font-style: normal;
+      font-size: 1.2rem;
+      font-family: $sans-font;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: $contrast-color;
+      text-decoration: none;
+      display: inline-block;
+      margin: 1.5rem 2rem 0 auto;
+      vertical-align: baseline;
+    }
+  }
+}
 body > footer { padding-top: 2rem; }
 
 pre, pre code { padding: 0 1.5%; overflow-x: auto; color:$code-color; }
@@ -124,11 +142,7 @@ nav {
 /* END SKIP-AMP */
 
 // Put a bit of space between the top nave and the form
-nav+form { padding-top: 1rem;}
-
-body > header > nav a {
-  font-style: normal; font-size: 1.2rem; font-family: $sans-font; letter-spacing: 0.15em; text-transform: uppercase; color: $contrast-color; text-decoration: none; display: inline-block; float: left; margin: 1.5rem 2rem 0 auto; vertical-align: baseline;
-}
+nav+form { padding-top: 0.5rem; }
 
 //change font color for credit links in footer
 .credits {
@@ -196,26 +210,21 @@ article {
       dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
     }
   }
-  > header { padding-bottom: 1rem; }
   > footer nav {
     clear: both; padding-top: 1rem;
   }
 }
 
 main {
-  > nav ul, > ol, {
+  > ol, {
     width: 90%; padding: 0;
-    li { list-style: none; }
-  }
-  > nav  {
-    clear: both; font-family: $sans-font;
-    &:first-of-type { padding-top: 1rem; }
-    &:last-of-type { padding-bottom: 1rem; }
-    li { float: left; padding: 0; margin-right: 1rem; }
-  }
-  > ol {
     &+nav { padding-top: 3rem; } // The last nav element on the listing page
-    li { clear: both; padding-top: 1rem; padding-right: 0; }
+    li {
+      list-style: none; clear: both; padding-right: 0;
+      // I'd prefer to use padding-bottom, but because of the float nature of the
+      // elements this does not work.
+      &:not(:first-of-type) { padding-top: 1rem; }
+    }
     header { width: 100%; }
   }
 }
@@ -232,14 +241,28 @@ main > ol, article > footer {
   }
 }
 
-main header h2 { margin-bottom: 1rem; }
+article hgroup h2 { margin-bottom: 1.2rem; }
 
 // breadcrumb
+.breadcrumbs, .paginator {
+  .label { display: none; }
+  width: 85%; font-family: $sans-font; padding-bottom: 1rem;
+}
+
+.breadcrumbs a {
+  margin-right: 0.33333333rem;
+  &:not(:first-of-type) { margin-left: 0.3333333rem; }
+}
+.paginator {
+  font-size: 1.1rem; clear: both;
+  a { margin-right: 1rem; }
+}
+
 nav ol {
   font-size: 1.1rem; padding: 0 0 1rem 0; width: 85%; list-style: none ; clear: left;
   li {
     padding: 0 0.2rem 0 0; margin: 0; float: left; font-family: $sans-font;
-    &:not(:last-of-type)::after { content: " / " }
+    // &:not(:last-of-type)::after { content: " / " }
   }
 }
 

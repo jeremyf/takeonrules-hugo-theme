@@ -1,26 +1,30 @@
 <a name="skip-to-breadcrumbs" aria-label="Anchor for breadcrumbs"></a>
-<ol aria-label="Breadcrumbs List">
+<nav role="navigation" aria-label="Breadcrumbs" class="breadcrumbs">
+  <span class="label">Breadcrumbs: </span>
   {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
-</ol>
+</nav>
+{{- if eq .Type "post" }}
+<nav role="navigation" aria-label="Post neighbors" class="paginator breadcrumbs">
+  <span class="label">Post Neighbors: </span>
+  {{- with .PrevInSection }}
+  <a id="ctrl+p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>
+  {{- end }}
+  {{- with .NextInSection }}
+  <a id="ctrl+n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>
+  {{- end }}
+</nav>
+{{- end }}
 {{- define "breadcrumbnav" }}
   {{- if eq .p1.Kind "taxonomy" }}
-    <li>
-      <a href="{{ .p1.Site.BaseURL }}">{{ .p1.Site.Title }}</a>
-    </li>
-    <li>
-      <a href="{{ .p1.Site.BaseURL }}{{ .p1.Data.Plural }}/">{{ .p1.Data.Plural | title }}</a>
-    </li>
-    <li>
-      <a class="active" href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
-    </li>
+    <a href="{{ .p1.Site.BaseURL }}">{{ .p1.Site.Title }}</a> /
+    <a href="{{ .p1.Site.BaseURL }}{{ .p1.Data.Plural }}/">{{ .p1.Data.Plural | title }}</a> /
+    <a class="active" href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
   {{- else }}
     {{- if .p1.Parent }}
-      {{- template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
+      {{- template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }} /
     {{- else if not .p1.IsHome }}
-      {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
+      {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }} /
     {{- end }}
-    <li>
-      <a href="{{ .p1.Permalink }}" class="{{ if eq .p1 .p2 }}active{{ end }}">{{ .p1.Title }}</a>
-    </li>
+    <a href="{{ .p1.Permalink }}" class="{{ if eq .p1 .p2 }}active{{ end }}">{{ .p1.Title }}</a>
   {{- end }}
 {{- end }}

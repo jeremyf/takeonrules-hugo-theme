@@ -2,7 +2,7 @@
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
   <a name="skip-to-content" aria-label="Anchor for content"> </a>
   <h1 id="blog-posts">Blog Posts</h1>
-  <nav role="navigation" aria-label="Blog postings pagination">
+  <nav role="navigation" aria-label="Blog postings pagination" class="paginator">
     {{ partial "paginator.html" $paginator }}
   </nav>
   <ol aria-labelledby="blog-posts">
@@ -36,7 +36,7 @@
   {{ end }}
   {{ end }}
   </ol>
-  <nav aria-hidden="true">
+  <nav aria-hidden="true" class="paginator">
     {{ partial "paginator.html" $paginator }}
   </nav>
 {{ end }}

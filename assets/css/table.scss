@@ -6,9 +6,13 @@ table {
   .l { text-align: left }
   .c { text-align: center }
   .r { text-align: right }
-  &.unstriped tbody tr, &.unstriped .subbody { background-color: $bg-color; }
   ul, ol { width: 90%; padding-top: 0rem; }
 }
+
+// When the following line was scoped within table, it overwrote the following
+// delaration: tbody tr.subhead { background-color: lighten($table-header, 20%); }
+.unstriped tbody tr, .unstriped .subbody { background-color: $bg-color; }
+
 thead {
   th { border-bottom: 1px solid $border-color; }
   tr { background-color: $table-header; }
