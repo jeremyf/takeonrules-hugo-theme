@@ -9,11 +9,11 @@ TODO: Add paragraphs for a margin note; They are already a block element
 </ins>
 {{- end }}
 {{- if eq .Params.mode "paragraph" }}
-<ins class="update" role="note" datetime="{{ $date_for_attr }}">
-  <p>
-    <em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}
-  </p>
-</ins>
+<p class="update" role="note">
+  <ins datetime="{{ $date_for_attr }}">
+      <em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}
+  </ins>
+</p>
 {{- end }}
 {{- if eq .Params.mode "sidenote" }}
 <span class="sidenote-number">
@@ -23,9 +23,11 @@ TODO: Add paragraphs for a margin note; They are already a block element
 </span>
 {{- end }}
 {{- else }}
-<aside class="marginnote update">
-  <ins role="note" datetime="{{ $date_for_attr }}">
-    <p><em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}</p>
+<aside role="note" class="marginnote update">
+  <p>
+  <ins datetime="{{ $date_for_attr }}">
+    <em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}
   </ins>
+  </p>
 </aside>
 {{- end }}
