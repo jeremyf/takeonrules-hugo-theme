@@ -232,10 +232,11 @@ main {
 // metadata of articles, either on the index or in the aside
 main > ol, article > footer {
   ol, ul, dl { width: 90%; }
+  li { padding-bottom: 0.5rem; }
   dl {
     padding-top: 0.5rem; padding-left: 1.5rem; clear: both;
     dt, dd { margin-top: 1rem; float: left }
-    dd { margin-right: 1.5rem; }
+    a:not(:first-of-type) { margin-left: 0.5rem; }
     dt {  margin-right: 0.7rem; clear: left; }
     dt:after { content: ":" }
   }
