@@ -6,13 +6,7 @@
 {{- if eq .Type "post" }}
 <nav role="navigation" aria-label="Post neighbors" class="paginator breadcrumbs">
   <span class="label">Post Neighbors: </span>
-  {{- with .PrevInSection }}
-  <a id="ctrl+p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>
-  {{- end }}
-  {{- if and .PrevInSection .NextInSection }}&nbsp;|&nbsp;{{- end }}
-  {{- with .NextInSection }}
-  <a id="ctrl+n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>
-  {{- end }}
+  {{- with .PrevInSection }}<a id="ctrl+p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>{{- end }}{{- if and .PrevInSection .NextInSection }}&nbsp;|&nbsp;{{- end }}{{- with .NextInSection }}<a id="ctrl+n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
 </nav>
 {{- end }}
 {{- define "breadcrumbnav" }}
