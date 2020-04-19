@@ -238,7 +238,6 @@ main > ol, article > footer {
     dt, dd { margin-top: 1rem; float: left }
     a:not(:first-of-type) { margin-left: 0.5rem; }
     dt {  margin-right: 0.7rem; clear: left; }
-    dt:after { content: ":" }
   }
 }
 

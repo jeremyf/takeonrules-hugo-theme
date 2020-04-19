@@ -12,13 +12,13 @@
     <header>
       <h2><a href="{{ .RelPermalink }}" id="ctrl+mod+{{ $index }}" rel="bookmark"><cite>{{ .Title }}</cite></a></h2>
       <dl>
-        {{- with .Date }}<dt>Published</dt><dd><time datetime="{{ dateFormat $.Site.Params.iso8601_format . }}">{{ dateFormat "2006-01-02" . }}</time></dd>{{- end }}
+        {{- with .Date }}<dt>Published:</dt><dd><time datetime="{{ dateFormat $.Site.Params.iso8601_format . }}">{{ dateFormat "2006-01-02" . }}</time></dd>{{- end }}
         {{ if ne .Lastmod .Date }}
-          <dt>Last Modified</dt>
+          <dt>Last Modified:</dt>
           <dd><time datetime="{{ .Lastmod.Format $.Site.Params.iso8601_format }}">{{ .Lastmod.Format "2006-01-02" }}</time></dd>
         {{ end }}
         {{- with .Params.tags }}
-          <dt>Tags</dt>
+          <dt>Tags:</dt>
           <dd>
             {{- $tags := . }}{{- $last_tag := . | last 1 }}
             {{- range ($tags | complement $last_tag) }}
@@ -31,7 +31,7 @@
         {{- with .Params.series }}
           {{- range (where $.Site.Data.series "key" "eq" .) }}
             {{- $title := .title }}
-            <dt>Series</dt>
+            <dt>Series:</dt>
             <dd><a href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ $title }}</a></dd>
           {{- end }}
         {{- end }}
