@@ -255,7 +255,9 @@ article hgroup h2 { margin-bottom: 1.2rem; }
 }
 .paginator {
   clear: both;
-  a { margin-right: 1rem; }
+  a:not(:last-of-type) { margin-right: 0.5rem; }
+  a:not(:first-of-type) { margin-left: 0.5rem; }
+  a:last-of-type { margin-right: 0.5rem; }
 }
 
 .hide-when-javascript-disabled { display: none; }
