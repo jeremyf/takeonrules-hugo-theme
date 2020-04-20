@@ -1,9 +1,6 @@
 <header aria-label="Site-wide header" role="banner">
   <nav class="group" role="navigation" aria-label="Site-wide navigation">
     <a href="#skip-to-content" accesskey="c" title="Skip to Content" class="offscreen">Skip to Content</a>
-    {{- if ne .IsHome true }}
-      <a href="#skip-to-breadcrumbs" accesskey="b" title="Skip to Breadcrumbs" class="offscreen">Skip to Breadcrumbs</a>
-    {{- end }}
     {{- with .Params.tags }}
       <a href="#skip-to-tags" accesskey="t" title="Skip to Page's Tags" class="offscreen">Skip to Page's Tags</a>
     {{- end }}
@@ -17,7 +14,7 @@
       <a href="#skip-to-licenses" accesskey="l" title="Skip to Page's Licenses" class="offscreen">Skip to Page's Licenses</a>
     {{- end }}
     <hr>
-    <h1><a accesskey="1" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
+    <h1><a accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
     {{- range $idx, $item := .Site.Menus.topnav }}
       <a accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name }}</a>
     {{- end }}
