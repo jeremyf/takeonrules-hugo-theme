@@ -26,12 +26,8 @@
           {{- with .Params.tags }}
             <dt>Tags:<a name="skip-to-tags" aria-label="Anchor for post's tags"></a></dt>
             <dd>
-            {{- $tags := . }}{{- $last_tag := . | last 1 }}
-            {{- range ($tags | complement $last_tag) }}
-              <a rel="tag" aria-label="All posts with tag {{ . }}" href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a>,
-            {{- end }}{{- range $last_tag }}
-              <a rel="tag" aria-label="All posts with tag {{ . }}" href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a>
-            {{- end }}
+              {{ partial "tags.html" . }}
+            </dd>
           {{- end }}
           {{- with .PrevInSection }}
             <dt>Previous post:</dt>

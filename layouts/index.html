@@ -19,12 +19,7 @@
       {{- with .Params.tags }}
         <dt>Tags:</dt>
         <dd>
-          {{- $tags := . }}{{- $last_tag := . | last 1 }}
-          {{- range ($tags | complement $last_tag) }}
-            <a rel="tag" aria-label="All posts with tag {{ . }}" href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a>,
-          {{- end }}{{- range $last_tag }}
-            <a rel="tag" aria-label="All posts with tag {{ . }}" href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a>
-          {{- end }}
+          {{ partial "tags.html" . }}
         </dd>
       {{- end }}
       {{- with .Params.series }}
