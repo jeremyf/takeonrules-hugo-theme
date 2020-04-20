@@ -20,8 +20,9 @@
     {{- end }}
   </nav>
   <form class="hide-when-javascript-disabled" role="search" method="get" action="/search/" aria-label="Site-wide search" id="cse-search-box" target="_blank">
-    <input name="q" accesskey="/" type="text" aria-label="Search"/>
-    <input name="sa" type="submit" value="Search" />
+    <label for="q-js">Search:</label>
+    <input name="q" id="q-js" accesskey="/" type="text" />
+    <input name="sa" type="submit" value="Go" />
   </form>
   <script>
     var form = document.getElementById('cse-search-box');
@@ -29,8 +30,9 @@
   </script>
   <noscript>
     <form role="search" method="get" action="https://duckduckgo.com/" aria-label="Site-wide" id="cse-search-box" target="_blank">
-      <input name="q" type="hidden" value="site:{{ .Site.Params.siteHost }}" />
-      <input type="submit" value="Search via DuckDuckGo" />
+      <label for="q-no-js">Search:</label>
+      <input name="q" id="q-no-js" type="hidden" value="site:{{ .Site.Params.siteHost }}" />
+      <input type="submit" accesskey="/" value="Search via DuckDuckGo" />
     </form>
   </noscript>
   <hr>
