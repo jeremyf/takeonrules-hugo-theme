@@ -31,7 +31,7 @@ h4 { font-size: 1.2rem; margin-top: 1.6778rem; }
 
 p, ol, ul, dl { font-size: 1.4rem; }
 p { margin-top: 1.4rem; }
-p, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
+p, li, footer dd { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
 blockquote {
   color: darken($table-header, 25%);
   width: 55%;
@@ -219,7 +219,7 @@ main {
   > ol {
     width: 90%; padding: 0;
     li {
-      list-style: none; clear: both; padding-right: 0;
+      margin-left: 1.2rem; clear: both; padding-right: 0;
       // I'd prefer to use padding-bottom, but because of the float nature of the
       // elements this does not work.
       &:not(:first-of-type) { padding-top: 1rem; }
@@ -235,13 +235,15 @@ main > ol, article > footer {
   li { padding-bottom: 0.5rem; }
   dl {
     padding-top: 0.5rem; padding-left: 1.5rem; clear: both;
-    dt, dd { margin-top: 1rem; float: left }
-    a:not(:first-of-type) { margin-left: 0.5rem; }
-    dt {  margin-right: 0.7rem; clear: left; }
+    dd { padding-left: 1.5rem;
+      &:not(:last-of-type) { margin-bottom: 1rem; }
+    }
   }
 }
 
 article hgroup h2 { margin-bottom: 1.2rem; }
+
+input[type="submit"] { margin-left: 0.5rem;}
 
 // breadcrumb
 .breadcrumbs, .paginator {

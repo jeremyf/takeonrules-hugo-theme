@@ -11,7 +11,7 @@
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
   <li>
-    <h2><a accesskey="{{ $index }}" href="{{ .RelPermalink }}" id="ctrl+mod+{{ $index }}" rel="bookmark"><cite>{{ .Title }}</cite></a></h2>
+    <h2><a accesskey="{{ mod (add 1 $index) 10 }}" href="{{ .RelPermalink }}" id="ctrl+mod+{{ $index }}" rel="bookmark"><cite>{{ .Title }}</cite></a></h2>
     <dl aria-label="Metadata">
       {{- with .Date }}<dt>Published:</dt><dd><time datetime="{{ dateFormat $.Site.Params.iso8601_format . }}">{{ dateFormat "2006-01-02" . }}</time></dd>{{- end }}
       {{ if ne .Lastmod .Date }}
