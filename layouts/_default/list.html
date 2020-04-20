@@ -4,8 +4,7 @@
       <h1 id="{{ anchorize .Title }}">{{ .Title | title }}</h1>
       {{ partial "breadcrumb.html" . }}
     </header>
-    <section class="content">
-      <a name="skip-to-content" aria-label="Anchor for content"> </a>
+    <section id="skip-to-content" class="content">
       <div class="table-wrapper">
         <a name="table-{{ .Data.Singular | anchorize }}-{{ .Title | anchorize }}"></a>
         <table class="stripe data-tables">

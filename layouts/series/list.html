@@ -10,8 +10,7 @@
     <header>
       <h1 id="{{ anchorize $termTitle }}">{{ .title }}</h1>
     </header>
-    <a name="skip-to-content" aria-label="Anchor for content"> </a>
-    <section class="content">
+    <section id="skip-to-content" class="content">
       {{ partial "paragraphy.html" .description }}
       <div class="table-wrapper">
         <a name="table-{{ $data.Singular | anchorize }}-{{ .key | anchorize }}"></a>

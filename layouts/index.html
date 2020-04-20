@@ -1,16 +1,18 @@
 {{ define "main" }}
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
-  <a name="skip-to-content" aria-label="Anchor for content"> </a>
-  <h1 id="blog-posts">Blog Posts</h1>
+  <h1 id="skip-to-content">Blog Posts</h1>
   <nav role="navigation" aria-label="Blog postings pagination" class="paginator">
-    {{ partial "paginator.html" $paginator }}
+    {{- with $paginator }}
+      {{- if .HasNext }}<a accesskey="p" href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a accesskey="n" href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
+      Page {{ .PageNumber }} of {{ .TotalPages }}
+    {{- end }}
   </nav>
-  <ol aria-labelledby="blog-posts">
+  <ol aria-labelledby="skip-to-content">
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
   <li>
     <h2><a href="{{ .RelPermalink }}" id="ctrl+mod+{{ $index }}" rel="bookmark"><cite>{{ .Title }}</cite></a></h2>
-    <dl aria-label="Metadata for {{ .Title }}">
+    <dl aria-label="Metadata">
       {{- with .Date }}<dt>Published:</dt><dd><time datetime="{{ dateFormat $.Site.Params.iso8601_format . }}">{{ dateFormat "2006-01-02" . }}</time></dd>{{- end }}
       {{ if ne .Lastmod .Date }}
         <dt>Last Modified:</dt>
@@ -35,6 +37,9 @@
   {{ end }}
   </ol>
   <nav aria-hidden="true" class="paginator">
-    {{ partial "paginator.html" $paginator }}
+    {{- with $paginator }}
+      {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
+      Page {{ .PageNumber }} of {{ .TotalPages }}
+    {{- end }}
   </nav>
 {{ end }}

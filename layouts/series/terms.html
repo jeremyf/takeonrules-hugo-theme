@@ -4,8 +4,7 @@
     <header>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
     </header>
-    <a name="skip-to-content" aria-label="Anchor for content"> </a>
-    <section class="content terms">
+    <section id="skip-to-content" class="content terms">
       {{ .Content }}
       <div class="table-wrapper">
         <a name="table-{{ anchorize .Title }}"></a>

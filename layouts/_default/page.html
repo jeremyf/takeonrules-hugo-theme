@@ -4,8 +4,7 @@
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
       {{ partial "breadcrumb.html" . }}
     </header>
-    <section class="content" role="region" aria-label="article content">
-      <a name="skip-to-content" aria-label="Anchor for content"> </a>
+    <section id="skip-to-content" class="content" role="region" aria-label="article content">
       {{ .Content }}
     </section>
   </article>
