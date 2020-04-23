@@ -2,11 +2,11 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article role="search">
+  <article  id="skip-to-content" role="search">
     <header>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
     </header>
-    <section id="skip-to-content" class="content">
+    <section class="content">
       <div class="hide-when-javascript-disabled" id="lunr-search-result-container">
         <label for="search">Search for:</label>
         <input id="search" type="text" name="q" class="site-search-input" placeholder="Start typing&hellip;">

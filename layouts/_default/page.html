@@ -2,11 +2,11 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article role="article">
+  <article id="skip-to-content" role="article">
     <header>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
     </header>
-    <section id="skip-to-content" class="content" role="region" aria-label="article content">
+    <section class="content" role="region" aria-label="article content">
       {{ .Content }}
     </section>
   </article>

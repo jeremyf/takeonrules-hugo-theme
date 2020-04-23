@@ -3,14 +3,14 @@
 {{ end }}
 {{ define "main" }}
   {{- $context := . }}
-  <article role="article">
+  <article  id="skip-to-content" role="article">
   {{- $termTitle := .Title }}
   {{- $data := .Data }}
   {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
     <header>
       <h1 id="{{ anchorize $termTitle }}">{{ .title }}</h1>
     </header>
-    <section id="skip-to-content" class="content">
+    <section class="content">
       {{ partial "paragraphy.html" .description }}
       <div class="table-wrapper">
         <a name="table-{{ $data.Singular | anchorize }}-{{ .key | anchorize }}"></a>
