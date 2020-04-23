@@ -3,7 +3,7 @@
 {{ end }}
 {{ define "main" }}
   <article id="skip-to-content" role="article" aria-labelledby="{{ anchorize .Title }}">
-    <header>
+    <header aria-labelledby="{{ anchorize .Title }}" role="heading">
       <hgroup>
         <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
         {{- with .Params.subtitle }}
@@ -11,11 +11,11 @@
         {{- end }}
       </hgroup>
     </header>
-    <section class="content" role="region" aria-label="article content">
+    <section class="content" role="region" aria-label="Content">
       {{ .Content }}
     </section>
-    <footer role="complementary">
-      <nav aria-label="Metadata">
+    <footer role="complementary" aria-label="Metadata and Related Posts">
+      <nav aria-labelledby="skip-to-posts-metadata">
         <h2 id="skip-to-posts-metadata">Metadata</h2>
         <dl>
           {{- with .Date }}<dt>Published:</dt><dd><time datetime="{{ dateFormat $.Site.Params.iso8601_format . }}">{{ dateFormat "2006-01-02" . }}</time></dd>{{- end }}
@@ -61,7 +61,7 @@
           {{- end }}
         </dl>
       </nav>
-      <nav aria-label="Related Posts">
+      <nav aria-labelledby="skip-to-related-posts">
         <h2 id="skip-to-related-posts">Related Posts</h2>
         <ul>
           {{ range first 5 (.Site.RegularPages.Related .) }}

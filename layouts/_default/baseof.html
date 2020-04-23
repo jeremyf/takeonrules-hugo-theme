@@ -37,9 +37,9 @@
         var domClass = form.getAttribute("class");
         form.setAttribute("class", domClass.replace("hide-when-javascript-disabled", "javascript-enabled"));
       </script>
-      {{ block "breadcrumb" . }}{{ end }}
       <hr>
     </header>
+    {{ block "breadcrumb" . }}{{ end }}
     <main class="group" role="main" aria-label="Main Content">
       {{ block "main" . }}{{ end }}
     </main>
