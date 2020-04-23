@@ -89,11 +89,11 @@ figcaption { float: right; clear: right; margin-right: -50%; margin-top: 0; marg
 
 
 // Without this setting, when the header would wrap, the letters would overlap
-article section h2, h3, h4, .p, p, body > footer, .table-wrapper, pre, article > section.content dl { width: 55%; }
+h2, h3, h4, .p, p, body > footer, .table-wrapper, pre, .content dl { width: 55%; }
 article header, body > footer { width: 95%; }
 .full-width {
   ul, ol { width: 85%; }
-  article section h2, h3, h4, .p, p, footer, .table-wrapper, pre, article > section.content dl { width: 90%; }
+  h2, h3, h4, .p, p, footer, .table-wrapper, pre, article .content dl { width: 90%; }
 }
 
 
@@ -142,8 +142,6 @@ nav {
 }
 /* END SKIP-AMP */
 
-// Put a bit of space between the top nave and the form
-nav+form { padding-top: 0.5rem; }
 
 //change font color for credit links in footer
 .credits {
@@ -203,7 +201,7 @@ a.offscreen {
 // Working with lists, especially navigation
 
 article {
-  > section.content {
+  .content {
     margin-bottom: 0rem;
     dl {
       margin-top: 1rem;
@@ -231,9 +229,9 @@ main {
 }
 
 // metadata of articles, either on the index or in the aside
+article li { padding-bottom: 0.5rem; }
 main > ol, article > footer {
   ol, ul, dl { width: 90%; }
-  li { padding-bottom: 0.5rem; }
   dl {
     padding-top: 0.5rem; padding-left: 1.5rem; clear: both;
     dd { padding-left: 1.5rem;
@@ -266,8 +264,7 @@ input[type="submit"] { margin-left: 0.5rem;}
 .hide-when-javascript-disabled { display: none; }
 
 @media screen and (max-width: 760px) {
-  article section h2, h3, h4, .p, p, body > footer, .table-wrapper, pre, article > section.content dl { width: 90%; }
-  ol, ul, nav dl { width: 90%; }
+  h2, h3, h4, .p, p, body > footer, .table-wrapper, pre, dl, ol, ul { width: 90%; }
   figure { max-width: 90%; }
   figcaption { margin-right: 0%; max-width: none; }
   blockquote {
