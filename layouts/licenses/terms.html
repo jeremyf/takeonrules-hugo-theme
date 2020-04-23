@@ -1,71 +1,63 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  {{ partial "head.html" . }}
-  <!-- Need to add option to toggle width -->
-  <body class="default-width">
-    {{ partial "body-header.html" . }}
-    <meta name="layout" content="terms" />
-    <main class="group" role="main" aria-label="Blog posting">
-      {{ partial "breadcrumb.html" . }}
-      <article role="article">
-        <header>
-          <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
-        </header>
-        <section id="skip-to-content" class="content terms">
-          {{ $data := .Data }}
-          <details open>
-            <summary>By Frequency</summary>
-            <div class="table-wrapper">
-            <table role="contents">
-              <caption>{{ .Title }} by Frequency</caption>
-            <thead>
-              <tr>
-                <th>Term</th>
-                <th>Count</th>
-              </tr>
-            </thead>
-            <tbody>
-            {{ range $key, $value := .Data.Terms.ByCount }}
-              <tr>
-                <td>
-                <a href="{{ $value.Name| urlize }}">
-                  {{ index (index $.Site.Data.licenses $value.Name) "Name" }}
-                </a>
-                </td>
-                <td>{{  $value.Count }}</td>
-              </tr>
-            {{ end }}
-            </tbody>
-            </table>
-          </div>
-        </details>
-        <details open>
-          <summary>By Alphabetical Order</summary>
-          <div class="table-wrapper">
-            <table role="contents">
-              <caption>{{ .Title }} by Alphabetical Order</caption>
-            <thead>
-              <tr>
-                <th>Term</th>
-                <th>Count</th>
-              </tr>
-            </thead>
-            <tbody>
-            {{ range $key, $value := .Data.Terms.Alphabetical}}
-              <tr>
-                <td><a href="{{ $value.Name| urlize }}">
-                  {{ index (index $.Site.Data.licenses $value.Name) "Name" }}
-                </a></td>
-                <td>{{  $value.Count }}</td>
-              </tr>
-            {{ end }}
-            </tbody>
-            </table>
-            </div>
-          </details>
-        </section>
-      </article>
-    </main>
-    {{ partial "footer.html" . }}
-  </body>
-</html>
+{{ define "breadcrumb" }}
+  {{ partial "breadcrumb.html" . }}
+{{ end }}
+{{ define "main" }}
+  <article role="article">
+    <header>
+      <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+    </header>
+    <section id="skip-to-content" class="content terms">
+      {{ $data := .Data }}
+      <details open>
+        <summary>By Frequency</summary>
+        <div class="table-wrapper">
+        <table role="contents">
+          <caption>{{ .Title }} by Frequency</caption>
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{ range $key, $value := .Data.Terms.ByCount }}
+          <tr>
+            <td>
+            <a href="{{ $value.Name| urlize }}">
+              {{ index (index $.Site.Data.licenses $value.Name) "Name" }}
+            </a>
+            </td>
+            <td>{{  $value.Count }}</td>
+          </tr>
+        {{ end }}
+        </tbody>
+        </table>
+      </div>
+    </details>
+    <details open>
+      <summary>By Alphabetical Order</summary>
+      <div class="table-wrapper">
+        <table role="contents">
+          <caption>{{ .Title }} by Alphabetical Order</caption>
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{ range $key, $value := .Data.Terms.Alphabetical}}
+          <tr>
+            <td><a href="{{ $value.Name| urlize }}">
+              {{ index (index $.Site.Data.licenses $value.Name) "Name" }}
+            </a></td>
+            <td>{{  $value.Count }}</td>
+          </tr>
+        {{ end }}
+        </tbody>
+        </table>
+        </div>
+      </details>
+    </section>
+  </article>
+{{ end }}

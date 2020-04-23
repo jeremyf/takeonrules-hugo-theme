@@ -1,8 +1,8 @@
+{{ define "breadcrumb" }}
+  {{ partial "breadcrumb.html" . }}
+{{ end }}
 {{ define "main" }}
   {{- $context := . }}
-  <nav role="navigation" aria-label="Breadcrumbs">
-    {{ partial "breadcrumb.html" $context }}
-  </nav>
   <article role="article">
   {{- $termTitle := .Title }}
   {{- $data := .Data }}

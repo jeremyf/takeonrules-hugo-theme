@@ -1,13 +1,16 @@
-{{ define "main" }}
+{{ define "breadcrumb" }}
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
-  <h1 id="skip-to-content">Blog Posts</h1>
   <nav role="navigation" aria-label="Blog postings pagination" class="paginator">
     {{- with $paginator }}
       {{- if .HasNext }}<a accesskey="p" href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a accesskey="n" href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
       Page {{ .PageNumber }} of {{ .TotalPages }}
     {{- end }}
   </nav>
+{{ end }}
+{{ define "main" }}
+  <h1 id="skip-to-content">Blog Posts</h1>
   <ol aria-labelledby="skip-to-content">
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
   <li>
@@ -37,6 +40,7 @@
   {{ end }}
   </ol>
   <nav aria-hidden="true" class="paginator">
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
     {{- with $paginator }}
       {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
       Page {{ .PageNumber }} of {{ .TotalPages }}

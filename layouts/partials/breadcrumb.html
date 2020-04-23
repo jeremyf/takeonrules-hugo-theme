@@ -10,7 +10,7 @@
 {{- end }}
 {{- define "breadcrumbnav" }}
   {{- if eq .p1.Kind "taxonomy" }}
-    <a href="{{ .p1.Site.BaseURL }}">{{ .p1.Site.Title }}</a> /
+    <a href="{{ .p1.Site.BaseURL }}">Home</a> /
     <a href="{{ .p1.Site.BaseURL }}{{ .p1.Data.Plural }}/">{{ .p1.Data.Plural | title }}</a> /
     <a class="active" href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
   {{- else }}
@@ -19,6 +19,6 @@
     {{- else if not .p1.IsHome }}
       {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }} /
     {{- end }}
-    <a href="{{ .p1.Permalink }}" class="{{ if eq .p1 .p2 }}active{{ end }}">{{ .p1.Title }}</a>
+    <a href="{{ .p1.Permalink }}" class="{{ if eq .p1 .p2 }}active{{ end }}">{{ if eq .p1.Permalink .p1.Site.BaseURL }}Home{{ else }}{{ .p1.Title }}{{ end }}</a>
   {{- end }}
 {{- end }}

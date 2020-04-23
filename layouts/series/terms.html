@@ -1,5 +1,7 @@
-{{ define "main" }}
+{{ define "breadcrumb" }}
   {{ partial "breadcrumb.html" . }}
+{{ end }}
+{{ define "main" }}
   <article role="article">
     <header>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>

@@ -99,10 +99,11 @@ article header, body > footer { width: 95%; }
 
 body > header {
   hr { display: none; }
-  &> nav {
+  &> nav.site-nav {
     h1 { display: inline-block; margin: 0; }
     padding: 1rem 0;
     a {
+      &.hide-when-javascript-disabled { display: none; }
       font-style: normal;
       font-size: 1.2rem;
       font-family: $sans-font;

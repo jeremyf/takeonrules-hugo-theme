@@ -1,8 +1,10 @@
+{{ define "breadcrumb" }}
+  {{ partial "breadcrumb.html" . }}
+{{ end }}
 {{ define "main" }}
   <article role="search">
     <header>
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
-      {{ partial "breadcrumb.html" . }}
     </header>
     <section id="skip-to-content" class="content">
       <div class="hide-when-javascript-disabled" id="lunr-search-result-container">
@@ -17,12 +19,7 @@
         var siteSearch = document.getElementById('cse-search-box');
       </script>
       <noscript>
-        <p>I see you've disabled Javascript. You'll need to use DuckDuckGo or some other Search Engine to search {{ .Site.Params.siteHost }}.</p>
-        <br>
-        <form role="search" method="get" action="https://duckduckgo.com/" aria-label="Site-wide search" id="cse-search-box" target="_blank">
-          <input name="q" type="hidden" value="site:{{ .Site.Params.siteHost }}" />
-          <input type="submit" value="Search via DuckDuckGo" />
-        </form>
+        <p>I see you've disabled Javascript. You'll need to use <a href="https://duckduckgo.com/?site:{{ .Site.Params.siteHost}}">DuckDuckGo</a> or some other Search Engine to search {{ .Site.Title }}.</p>
       </noscript>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.4.1.min.js">

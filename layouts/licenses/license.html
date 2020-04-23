@@ -1,53 +1,31 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  {{ partial "head.html" . }}
-  <!-- Need to add option to toggle width -->
-  <body class="default-width">
-    {{ partial "body-header.html" . }}
-    <meta name="layout" content="terms" />
-    <main class="group" role="main" aria-label="Blog posting">
-      {{- $context := . }}
-      <nav role="navigation" aria-label="Breadcrumbs">
-        {{ partial "breadcrumb.html" $context }}
-      </nav>
-      <article role="article">
-        {{- $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
-        {{- $title := .Title }}
-        {{ with index $.Site.Data.licenses $slug }}
-        <header>
-          <h1 id="{{ anchorize .Title }}">{{ index . "Name" }}</h1>
-        </header>
-        {{ with index . "Description" }}
-          <section>
-            {{ . | safeHTML }}
-          </section>
-        {{ end }}
-        {{ end }}
-        <section>
+{{ define "breadcrumb" }}
+  {{ partial "breadcrumb.html" . }}
+{{ end }}
+{{ define "main" }}
+<article role="article">
+  {{- $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
+  {{- $title := .Title }}
+  {{ with index $.Site.Data.licenses $slug }}
+  {{ with index . "Description" }}
+    <section>
+      {{ . | safeHTML }}
+    </section>
+  {{ end }}
+  {{ end }}
+  <section>
   {{ range .Data.Pages.GroupByDate "2006" }}
     <details open>
-      <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
-      {{ range .Pages.GroupByDate "January" }}
-        <ul>
-          <li>
-            <details open>
-              <summary class="month">{{ .Key }} ({{ len .Pages }})</summary>
-                {{ range .Pages }}
-                  <ul>
-                    <li>
-                      <span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
-                      <a href="{{ .RelPermalink }}">{{.Title}}</a>
-                    </li>
-                  </ul>
-                {{ end }}
-            </details>
-          </li>
-        </ul>
-      {{ end }}
-    </details>
+    <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
+          {{ range .Pages }}
+            <ul>
+              <li>
+                <span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
+                <a href="{{ .RelPermalink }}">{{.Title}}</a>
+              </li>
+            </ul>
+          {{ end }}
+      </details>
     {{ end }}
   </section>
-{{ partial "footer.html" . }}
 </article>
-</body>
-</html>
+{{ end }}

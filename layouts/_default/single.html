@@ -1,15 +1,17 @@
+{{ define "breadcrumb" }}
+  {{ partial "breadcrumb.html" . }}
+{{ end }}
 {{ define "main" }}
   <article role="article" aria-labelledby="{{ anchorize .Title }}">
     <header>
-      <hgroup>
+      <hgroup id="skip-to-content">
         <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
         {{- with .Params.subtitle }}
         <h2 class="subtitle">{{ . }}</h2>
         {{- end }}
       </hgroup>
-      {{ partial "breadcrumb.html" . }}
     </header>
-    <section id="skip-to-content" class="content" role="region" aria-label="article content">
+    <section class="content" role="region" aria-label="article content">
       {{ .Content }}
     </section>
     <footer role="complementary">
