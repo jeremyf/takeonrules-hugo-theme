@@ -2,6 +2,13 @@
 <html lang="en-us">
   <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="utf-8">
+    {{ block "head-title" . }}
+      {{- if .IsHome }}
+        <title>{{ .Title }}</title>
+      {{- else }}
+        <title>{{ .Title }} // {{ .Site.Title  }}</title>
+      {{- end }}
+    {{ end }}
     {{ block "head" . }}
       {{ partial "head" . }}
     {{ end }}

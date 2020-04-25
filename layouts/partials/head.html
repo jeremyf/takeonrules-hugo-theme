@@ -5,11 +5,6 @@
     <link rel="canonical" href="{{ .RelPermalink }}">
   {{- end }}
 {{- end }}
-{{- if .IsHome }}
-  <title>{{ .Title }}</title>
-{{- else }}
-  <title>{{ .Title }} // {{ .Site.Title  }}</title>
-{{- end }}
 {{ partialCached "head-duplicated-info.html" . }}
 
 {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}

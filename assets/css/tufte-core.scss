@@ -23,6 +23,9 @@ a { color: $contrast-color;  text-decoration: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1 { font-weight: 400; font-size: 2.5rem; margin: 1.568rem 0; line-height: 1.0889; }
+article header {
+  h1, h2, h3 { width: 87.5%; }
+}
 h2, h3, h4, summary { font-style: italic; font-weight: 400; margin-bottom: 0; line-height: 1.0889; }
 h2, summary { font-size: 2.1rem; margin-top: 1.8667rem; }
 h3 { font-size: 1.8rem; margin-top: 2.1778rem; }
