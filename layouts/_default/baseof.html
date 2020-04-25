@@ -34,7 +34,7 @@
         {{- range $idx, $item := .Site.Menus.topnav }}
           <a accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name }}</a>
         {{- end }}
-        <a class="hide-when-javascript-disabled {{ if eq (string $.Page.RelPermalink) "/search/" }}active{{ end }}" id="search-via-js" accesskey="/" href="/search/" title="Site-wide search" role="search">Search</a>
+        <a class="hide-when-javascript-disabled {{ if eq (string $.Page.RelPermalink) "/search/" }}active{{ end }}" id="search-via-js" accesskey="/" href="/search/" title="Site-wide search">Search</a>
         <noscript>
           <a accesskey="/" {{ if eq (string $.Page.RelPermalink) "/search/" }}class="active"{{ end }} href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a>
         </noscript>

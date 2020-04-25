@@ -7,7 +7,7 @@
       <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
     </header>
     <section class="content">
-      <div class="hide-when-javascript-disabled" id="lunr-search-result-container">
+      <div class="hide-when-javascript-disabled" id="lunr-search-result-container" role="search">
         <label for="search">Search for:</label>
         <input id="search" type="text" name="q" class="site-search-input" placeholder="Start typing&hellip;">
         <h3>Results:</h3>
@@ -19,7 +19,7 @@
         var siteSearch = document.getElementById('cse-search-box');
       </script>
       <noscript>
-        <p>I see you've disabled Javascript. You'll need to use <a href="https://duckduckgo.com/?site:{{ .Site.Params.siteHost}}">DuckDuckGo</a> or some other Search Engine to search {{ .Site.Title }}.</p>
+        <p>I see you've disabled Javascript. You'll need to use <a href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost}}">DuckDuckGo</a> or some other Search Engine to search {{ .Site.Title }}.</p>
       </noscript>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.4.1.min.js">
