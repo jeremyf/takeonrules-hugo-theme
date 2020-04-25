@@ -6,7 +6,7 @@
     <header aria-labelledby="{{ anchorize .Title }}" role="heading">
       <hgroup>
         <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
-        {{- with .Params.subtitle }}<h2>{{ . }}</h2>{{- end }}
+        {{- with .Params.title_sub }}<h2>{{ . }}</h2>{{- end }}
         {{- with .Params.headline }}<h3>{{ . }}</h3>{{- end }}
       </hgroup>
     </header>
