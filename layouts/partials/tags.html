@@ -1,6 +1,6 @@
 {{- $tags := . }}{{- $last_tag := . | last 1 }}
 {{- range ($tags | complement $last_tag) }}
-  <a rel="tag" aria-label="All posts with tag {{ . }}" href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a>,
+  <a rel="tag" aria-label="Posts tagged with “{{ . }}”" href="{{ "tags" | absURL }}/{{ . | urlize }}">#{{ . | anchorize }}</a>&nbsp;
 {{- end }}{{- range $last_tag }}
-  <a rel="tag" aria-label="All posts with tag {{ . }}" href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a>
+  <a rel="tag" aria-label="Posts tagged with “{{ . }}”" href="{{ "tags" | absURL }}/{{ . | urlize }}">#{{ . | anchorize }}</a>
 {{- end }}
