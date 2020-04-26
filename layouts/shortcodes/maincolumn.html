@@ -2,16 +2,12 @@
 {{- $alt      := .Get "alt" }}
 {{- $caption  := .Get "caption" }}
 {{- $original := resources.Get $path  }}
-{{- $href     := .Get "href" }}
 {{- $title    := .Get "title" }}
 {{- $imageResize := "770x" }}
-{{- with .Get "rotate" }}
-{{- $imageResize = (printf "770x r%s" .) }}
-{{- end }}
+{{- $alt      := .Get "alt" }}
+{{- with .Get "rotate" }}{{- $imageResize = (printf "770x r%s" .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
 <figure{{ if isSet .Params "hidden" }}aria-hidden="true"{{ end }}>
 <figcaption>{{ $caption | markdownify }}</figcaption>
-<a href="{{ if $href }}{{ $href }}{{ else }}{{ $original.RelPermalink }}{{ end}}" title="{{ if $title }}{{ $title }}{{ else }}See full-size image{{ end }}">
 <img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
-</a>
 </figure>

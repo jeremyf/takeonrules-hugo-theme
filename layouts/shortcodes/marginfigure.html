@@ -1,12 +1,12 @@
-{{- $path     := .Get "src" }}{{- $original := resources.Get $path  }}
-{{- $href     := .Get "href" }}{{- $title    := .Get "title" }}
+{{- $path     := .Get "src" }}
+{{- $original := resources.Get $path  }}
+{{- $alt      := .Get "alt" }}
 {{- $imageResize := "360x" }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "360x r%s" .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
 <aside {{ if isSet .Params "hidden" }}aria-hidden="true" {{ end }}class="marginnote marginfigure" role="note">
 <p>
-  <a href="{{ if $href }}{{ $href }}{{ else }}{{ $original.RelPermalink }}{{ end}}" title="{{ if $title }}{{ $title }}{{ else }}See full-size image{{ end }}">
-    <img class="fullwidth" src="{{ $result.RelPermalink }}" {{ with .Get "alt" }} alt="{{ .}}"{{ end }} data-width="{{ $result.Width }}" data-height="{{ $result.Height }}"/>
-  </a>{{ with .Get "caption" }}<br>{{ partial "unparagraphy.html" . }}{{ end }}
+  <img class="fullwidth" src="{{ $result.RelPermalink }}" {{ with $alt }} alt="{{ . }}"{{ end }} data-width="{{ $result.Width }}" data-height="{{ $result.Height }}"/>
+  {{ with .Get "caption" }}<br>{{ partial "unparagraphy.html" . }}{{ end }}
 </p>
 </aside>
