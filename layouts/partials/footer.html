@@ -2,7 +2,3 @@
   <hr class="slender">
   {{ partial "credits-and-license.html" . }}
 </footer>
-{{ $js := resources.Get "js/mousetrap.js" | resources.Minify }}
-{{ $secureJS := $js | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
-<link rel="preload" as="script" href="{{ $secureJS.Permalink }}">
