@@ -6,7 +6,12 @@
 {{- $result   := $original.Resize $imageResize }}
 <aside {{ if isSet .Params "hidden" }}aria-hidden="true" {{ end }}class="marginnote marginfigure" role="note">
 <p>
-  <img class="fullwidth" src="{{ $result.RelPermalink }}" {{ with $alt }} alt="{{ . }}"{{ end }} data-width="{{ $result.Width }}" data-height="{{ $result.Height }}"/>
+  <img
+    src="{{ $result.RelPermalink }}"
+    alt="{{ $alt }}"
+    data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}"
+    data-width="{{ $result.Width }}"
+    data-height="{{ $result.Height }}" />
   {{ with .Get "caption" }}<br>{{ partial "unparagraphy.html" . }}{{ end }}
 </p>
 </aside>

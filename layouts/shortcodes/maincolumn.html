@@ -9,5 +9,10 @@
 {{- $result   := $original.Resize $imageResize }}
 <figure{{ if isSet .Params "hidden" }}aria-hidden="true"{{ end }}>
 <figcaption>{{ $caption | markdownify }}</figcaption>
-<img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
+<img
+  src="{{ $result.RelPermalink }}"
+  alt="{{ $alt }}"
+  data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}"
+  data-width="{{ $result.Width }}"
+  data-height="{{ $result.Height }}" />
 </figure>
