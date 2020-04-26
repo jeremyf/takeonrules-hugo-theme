@@ -4,14 +4,12 @@
 {{- $imageResize := "360x" }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "360x r%s" .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
-<aside {{ if isSet .Params "hidden" }}aria-hidden="true" {{ end }}class="marginnote marginfigure" role="note">
-<p>
+<figure {{ if isSet .Params "hidden" }}aria-hidden="true" {{ end }} class="marginnote marginfigure" role="note">
   <img
     src="{{ $result.RelPermalink }}"
     alt="{{ $alt }}"
     data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}"
     data-width="{{ $result.Width }}"
     data-height="{{ $result.Height }}" />
-  {{ with .Get "caption" }}<br>{{ partial "unparagraphy.html" . }}{{ end }}
-</p>
-</aside>
+  {{ with .Get "caption" }}<figcaption>{{ partial "unparagraphy.html" . }}</figcaption>{{ end }}
+</figure>
