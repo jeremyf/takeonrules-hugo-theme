@@ -3,7 +3,7 @@
 {{ end }}
 {{ define "main" }}
   <article id="skip-to-content" role="article" aria-labelledby="{{ anchorize .Title }}">
-    <header aria-labelledby="{{ anchorize .Title }}" role="heading">
+    <header aria-labelledby="{{ anchorize .Title }}" role="heading" aria-level="1">
       <hgroup>
         <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
         {{- with .Params.title_sub }}<h2>{{ . }}</h2>{{- end }}
