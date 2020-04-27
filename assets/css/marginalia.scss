@@ -1,17 +1,6 @@
 // Responsible for common rendering behavior of the marginalia. When tinkering
 // with this file, remember to review both the narrow version and the print version
-.sidenote, .marginnote {
-  &.marginfigure {
-    max-width: 100%;
-    img { max-width: 100%; }
-    figcaption {
-      margin-right: 0;
-      float: none;
-      clear: both;
-      vertical-align: baseline;
-      position: relative;
-      max-width: 100%; }
-  }
+[role="note"] {
   .fullwidth { max-width: 100%; }
   float: right; clear: right; margin: 0 -60% 1.96rem 0; width: 50%; font-size: 1.0rem; line-height: 1.96; vertical-align: baseline; position: relative;
   &.margin-table {
@@ -21,39 +10,51 @@
       table { width: 100%; }
     }
   }
+  p {
+    font-size: 1.0rem; width:100%;
+    &:last-of-type { margin-top: 0; }
+  }
 }
 
-.marginnote p {
-  font-size: 1.0rem; width:100%;
-  &:last-of-type { margin-top: 0; }
+figure[role="note"] {
+  max-width: 100%;
+  img { max-width: 100%; }
+  figcaption {
+    margin-right: 0;
+    float: none;
+    clear: both;
+    vertical-align: baseline;
+    position: relative;
+    max-width: 100%; }
 }
+
 
  //added to allow for the fact that lists are indented and marginnotes and sidenotes push to right
 li, blockquote {
-  .sidenote, .marginnote { margin-right: -80%; }
+  [role="note"] { margin-right: -80%; }
 }
 
 .sidenote-number { counter-increment: sidenote-counter; }
-.sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) ")\000a0"; font-family: $counter-font; color: $contrast-color; position: relative; vertical-align: baseline; }
+.sidenote-number:after, ins[role="note"]:before { content: counter(sidenote-counter) ")\000a0"; font-family: $counter-font; color: $contrast-color; position: relative; vertical-align: baseline; }
 .sidenote-number:after { content: counter(sidenote-counter); font-size: 1rem; top: -0.5rem; left: 0.1rem; }
 
 // TODO: Must figure this out. I don't want to hide marginalia but instead
 //       render it similar to the print style
-.full-width { .sidenote, .sidenote-number, .marginnote { display: none; } }
+.full-width { [role="note"], .sidenote-number { display: none; } }
 
-.marginnote { margin-right: 12.5%; width: 27%; }
+aside[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; }
 @media screen and (max-width: 760px) {
-  .marginnote { width: 80%; }
-  .marginnote.marginfigure {
+  aside[role="note"] { width: 80%; }
+  figure[role="note"] {
     width: 90% ; left: 0; margin-left: 0;
   }
-  .marginnote:not(.marginfigure), .sidenote {
+  aside[role="note"], ins[role="note"] {
     border-left-width: thin;
     border-left-color: $contrast-color;
     border-left-style: dotted;
     padding-left: 0.5rem;
   }
-  .sidenote, .marginnote {
+  [role="note"] {
     display: block; float: left; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative;
     br {
      margin-bottom: 0.66rem;
