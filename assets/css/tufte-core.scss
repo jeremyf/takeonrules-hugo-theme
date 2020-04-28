@@ -3,13 +3,12 @@
 /* clearfix hack after Cederholm (group class name) */
 .group:after { content: ""; display: table; clear: both; }
 
-
 // First significant deviation from CSS on tufte.css site - variable font size as browser width expands or contracts
 
 html, body { height: 100%; }
 html { scroll-behavior: smooth; vertical-align: baseline; font-size: 12px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: $body-font; background-color: $bg-color; color: $text-color; max-width: 1400px; counter-reset: sidenote-counter; }
-body, article header h1, article header h2, article header h3, .list-page ul { width: 87.5%; }
+body, article hgroup, .list-page ul { width: 87.5%; }
 
 @media screen and (min-width: 800px){ html{ font-size: 12px;} }
 @media screen and (min-width: 900px){ html{ font-size: 13px;} }
@@ -83,7 +82,18 @@ ul, ol { padding: 1rem 0 0 5%; width: 45%; }
 
 figure { margin: 1em 0 3em 0; max-width: 55%; }
 img { max-width: 100%; }
-figcaption { float: right; clear: right; margin-right: -50%; margin-top: 0; margin-bottom: 0; font-size: 1.0rem; line-height: 1.6; vertical-align: baseline; position: relative; max-width: 40%; }
+figcaption {
+  float: right;
+  clear: right;
+  margin-right: -50%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.0rem;
+  line-height: 1.6;
+  vertical-align: baseline;
+  position: relative;
+  max-width: 40%;
+}
 .fullwidth { max-width: 90%; }
 
 
