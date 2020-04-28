@@ -8,7 +8,7 @@
 html, body { height: 100%; }
 html { scroll-behavior: smooth; vertical-align: baseline; font-size: 12px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: $body-font; background-color: $bg-color; color: $text-color; max-width: 1400px; counter-reset: sidenote-counter; }
-body, article hgroup, .list-page ul { width: 87.5%; }
+body, article hgroup > *, .list-page ul { width: 87.5%; }
 
 @media screen and (min-width: 800px){ html{ font-size: 12px;} }
 @media screen and (min-width: 900px){ html{ font-size: 13px;} }
@@ -117,12 +117,13 @@ body > header {
       font-size: 1.2rem;
       font-family: $sans-font;
       letter-spacing: 0.15em;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       color: $contrast-color;
       text-decoration: none;
       display: inline-block;
       margin: 1.5rem 2rem 0 auto;
       vertical-align: baseline;
+      font-variant: small-caps;
     }
   }
 }
@@ -213,35 +214,33 @@ article {
   .content {
     margin-bottom: 0rem;
     dl {
-      margin-top: 1rem;
       dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
       dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
     }
   }
   > footer nav {
-    clear: both; padding-top: 1rem;
+    padding-top: 1rem;
   }
 }
 
 main {
   > ol {
-    width: 90%; padding: 0;
+    width: 100%; padding: 0;
     li {
-      margin-left: 1.2rem; clear: both; padding-right: 0;
+      margin-left: 1.2rem; padding-right: 0;
       // I'd prefer to use padding-bottom, but because of the float nature of the
       // elements this does not work.
       &:not(:first-of-type) { padding-top: 1rem; }
     }
     &+nav { padding-top: 3rem; } // The last nav element on the listing page
-    header { width: 100%; }
   }
 }
 
 // metadata of articles, either on the index or in the aside
 article li { padding-bottom: 0.5rem; }
-main > ol, article > footer {
-  ol, ul, dl { width: 90%; }
+article > footer {
   dl {
+    width: 90%;
     padding-top: 0.5rem; padding-left: 1.5rem; clear: both;
     dd { padding-left: 1.5rem;
       &:not(:last-of-type) { margin-bottom: 1rem; }
