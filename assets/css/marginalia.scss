@@ -44,18 +44,19 @@ li, blockquote {
 
 aside[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; }
 @media screen and (max-width: 760px) {
-  aside[role="note"] { width: 80%; }
-  figure[role="note"] {
-    width: 90% ; left: 0; margin-left: 0;
+  [role="note"] {
+    display: block;
   }
   aside[role="note"], ins[role="note"] {
     border-left-width: thin;
     border-left-color: $contrast-color;
     border-left-style: dotted;
     padding-left: 0.5rem;
+    margin: 1rem 2.5%;
   }
-  [role="note"]:not(p) {
-    display: block; float: left; clear: both; width: 95%; margin: 1rem 2.5%; vertical-align: baseline; position: relative;
+  aside[role="note"], figure[role="note"], ins[role="note"] {
+    width: 87.5%;
+    float: left; clear: both; vertical-align: baseline; position: relative;
     br {
      margin-bottom: 0.66rem;
      &:last-of-type { margin-bottom: 0rem; }
