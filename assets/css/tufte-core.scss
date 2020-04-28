@@ -286,3 +286,7 @@ q:after, q:before { content: none; }
 mark {
   background-color: lighten($update-color, 40%);
 }
+
+del {
+  text-decoration-color: $contrast-color;
+}
