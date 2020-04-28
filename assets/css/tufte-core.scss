@@ -98,11 +98,11 @@ figcaption {
 
 
 // Without this setting, when the header would wrap, the letters would overlap
-h2, h3, h4, .p, p, .table-wrapper, pre, .content dl { width: 55%; }
+h2, h3, h4, .p, p, .table-wrapper, pre, dl { width: 55%; }
 article header, body > footer { width: 95%; }
 .full-width {
   ul, ol { width: 85%; }
-  h2, h3, h4, .p, p, footer, .table-wrapper, pre, .content dl { width: 90%; }
+  h2, h3, h4, .p, p, footer, .table-wrapper, pre, dl { width: 90%; }
 }
 
 
@@ -219,6 +219,7 @@ article {
   }
   > footer nav {
     padding-top: 1rem;
+    ul { width: 87.5% }
   }
 }
 
