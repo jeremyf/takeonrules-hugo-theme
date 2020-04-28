@@ -1,5 +1,7 @@
 .table-wrapper { overflow-x: auto; padding-top: 0.5rem; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
+table.full { width: 100%; max-width: 100%; }
+
 //making booktabs style tables the unstyled default in case someone uses Markdown styling
 table {
   width: auto; margin: 0 auto; border-spacing: 0px; border-top: 2px solid $border-color; border-bottom: 2px solid $border-color;

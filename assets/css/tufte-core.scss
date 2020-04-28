@@ -30,7 +30,7 @@ h4 { font-size: 1.2rem; margin-top: 1.6778rem; }
 
 p, ol, ul, dl { font-size: 1.4rem; }
 p { margin-top: 1.4rem; }
-p, li, footer dd { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
+p, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
 blockquote {
   color: darken($table-header, 25%);
   width: 55%;
@@ -209,19 +209,12 @@ a.offscreen {
 
 // Working with lists, especially navigation
 
-article {
-  .content {
-    margin-bottom: 0rem;
-    dl {
-      dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
-      dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
-    }
-  }
-  > footer nav {
-    padding-top: 1rem;
-    ul { width: 87.5% }
-  }
+dl {
+  dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
+  dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
 }
+
+article footer nav ul { width: 87.5% }
 
 main {
   > ol {
@@ -238,15 +231,6 @@ main {
 
 // metadata of articles, either on the index or in the aside
 article li { padding-bottom: 0.5rem; }
-article > footer {
-  dl {
-    width: 90%;
-    padding-top: 0.5rem; padding-left: 1.5rem; clear: both;
-    dd { padding-left: 1.5rem;
-      &:not(:last-of-type) { margin-bottom: 1rem; }
-    }
-  }
-}
 
 article hgroup h2 { margin-bottom: 1.2rem; }
 

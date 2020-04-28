@@ -16,49 +16,30 @@
     <footer role="complementary" aria-label="Metadata and Related Posts">
       <nav aria-labelledby="skip-to-posts-metadata">
         <h2 id="skip-to-posts-metadata">Metadata</h2>
-        <dl>
-          {{- with .Date }}<dt>Published:</dt><dd><time datetime="{{ dateFormat $.Site.Params.iso8601_format . }}">{{ dateFormat "2006-01-02" . }}</time></dd>{{- end }}
-          {{ if ne .Lastmod .Date }}
-            <dt>Last Modified:</dt>
-            <dd><time datetime="{{ .Lastmod.Format $.Site.Params.iso8601_format }}">{{ .Lastmod.Format "2006-01-02" }}</time></dd>
-          {{ end }}
-          {{- with .Params.tags }}
-            <dt id="skip-to-tags">Tags:</dt>
-            <dd>
-              {{ partial "tags.html" . }}
-            </dd>
-          {{- end }}
-          {{- with .PrevInSection }}
-            <dt>Previous post:</dt>
-            <dd>
-              <a href="{{ .Permalink }}" rel="prev"><cite>{{ .Title }}</cite></a>
-            </dd>
-          {{- end }}
-          {{- with .NextInSection }}
-            <dt>Next post:</dt>
-            <dd>
-              <a href="{{ .Permalink }}" rel="next"><cite>{{ .Title }}</cite></a>
-            </dd>
-          {{- end }}
-          {{- with .Params.series }}
-            {{- range (where $.Site.Data.series "key" "eq" .) }}
+        <p aria-label="Publication date and tags">
+        <time aria-label="Published On" datetime="{{ dateFormat $.Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
+        {{ if ne .Lastmod .Date }}<ins>: (Updated <time datetime="{{ .Lastmod.Format $.Site.Params.iso8601_format }}">{{ .Lastmod.Format "2006-01-02" }}</time></ins>){{ end }}
+        ::
+        {{- with .Params.tags }}<span id="skip-to-tags">{{ partial "tags.html" . }}</span>{{- end }}
+        </p>
+        {{- with .Params.series }}
+          {{- range (where $.Site.Data.series "key" "eq" .) }}
+            <p>
               {{- $title := .title }}
-              <dt>Series:</dt>
-              <dd><a name='skip-to-series-navigation' href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ $title }}</a></dd>
+              Series: <a name='skip-to-series-navigation' href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ $title }}</a>
               {{- $series := where $.Site.Pages "Params.series" .key }}
               {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
               {{- range first 1 $prev }}
-                <dt>Previous in series:</dt>
-                <dd><a rel="prev" aria-label="Previous {{ $title }} post" href="{{ .Permalink }}">{{ .Title }}</a></dd>
+                : <a rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">previous in series</a>
               {{- end}}
               {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
               {{- range last 1 $next }}
-                <dt>Next in series:</dt>
-                <dd><a rel="next" aria-label="Next {{ $title }} post" href="{{ .Permalink }}">{{ .Title }}</a></dd>
+                : <a rel="next" title="{{ .Title }}" href="{{ .Permalink }}">next in series</a>
               {{- end}}
-            {{- end}}
-          {{- end }}
-        </dl>
+              </ul>
+            </p>
+          {{- end}}
+        {{- end }}
       </nav>
       <nav aria-labelledby="skip-to-related-posts">
         <h2 id="skip-to-related-posts">Related Posts</h2>
