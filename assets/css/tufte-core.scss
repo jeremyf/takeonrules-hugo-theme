@@ -128,9 +128,9 @@ body > header {
 }
 body > footer { padding-top: 2rem; }
 
-pre, pre code { padding: 0 1.5%; overflow-x: auto; color:$code-color; }
-code { color:$code-color; font-size: 1.1rem; }
-pre code { font-family: $code-font; font-size: 1.0rem; line-height: 1.7142; margin-top: 1.7142rem; display: block; white-space: pre; }
+pre, pre code { font-family: $code-font; padding: 0 1.5%; overflow-x: auto; color:$code-color; }
+code { font-family: $code-font; color:$code-color; font-size: 1.1rem; }
+pre code { font-size: 1.0rem; line-height: 1.7142; margin-top: 1.7142rem; display: block; white-space: pre; }
 
 .newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.05rem; }
 
@@ -261,9 +261,8 @@ article hgroup h2 { margin-bottom: 1.2rem; }
 }
 .paginator {
   clear: both;
-  a:not(:last-of-type) { margin-right: 0.5rem; }
+  a { margin-right: 0.5rem; }
   a:not(:first-of-type) { margin-left: 0.5rem; }
-  a:last-of-type { margin-right: 0.5rem; }
 }
 
 .hide-js { display: none; }
