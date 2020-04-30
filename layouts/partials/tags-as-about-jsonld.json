@@ -1,12 +1,12 @@
 {{/* Take the intersection of article tags and defined tags.
   If we have at least one tag, create an "about" node, with "Thing" objects
-  that have an identifier equal to the defined tags associated wikidata_url
+  that have an identifier equal to the defined tags associated identifier_url
 */}}
 {{- $tags := .Params.tags }}{{- $applied_tags := slice }}{{- $has_tags := false }}
 {{- range $tags }}
   {{- with index $.Site.Data.tags (. | anchorize ) }}
     {{- $has_tags = true }}
-    {{- $applied_tags = $applied_tags | append .wikidata_url }}
+    {{- $applied_tags = $applied_tags | append .identifier_url }}
   {{- end }}
 {{- end }}
 {{- if eq $has_tags true }}
