@@ -32,7 +32,10 @@
     "@type": "SpeakableSpecification",
     "cssSelector": ["article header h1", "article .content"]
   },
-  {{ if (isset .Params "tags") }}"keywords": "{{ delimit .Params.tags ", " }}",{{ end }}
+  {{ if (isset .Params "tags") }}
+  {{ partial "tags-as-about-jsonld.json" . }}
+  "keywords": "{{ delimit .Params.tags ", " }}",
+  {{ end }}
   "author": {{ partialCached "copyrightHolder-jsonld.json" . }},
   {{- if ne .Type "post" }}
   "breadcrumb": {
