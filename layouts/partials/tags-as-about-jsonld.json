@@ -3,20 +3,40 @@
   that have an identifier equal to the defined tags associated identifier_url
 */}}
 {{- $tags := .Params.tags }}{{- $applied_tags := slice }}{{- $has_tags := false }}
-{{- range $tags }}
-  {{- with index $.Site.Data.tags (. | anchorize ) }}
+{{- range $tag := $tags }}
+  {{- with index $.Site.Data.tags . }}
     {{- $has_tags = true }}
-    {{- $applied_tags = $applied_tags | append .identifier_url }}
+    {{- $applied_tags = $applied_tags | append $tag }}
   {{- end }}
 {{- end }}
 {{- if eq $has_tags true }}
   {{- $last_tag := $applied_tags | last 1 }}
   "about": [
     {{- range ($applied_tags | complement $last_tag) }}
-      { "@type": "Thing", "identifier": "{{ . }}" },
+      {{- $data := index $.Site.Data.tags . }}
+      {{- $itemid := $data.itemid }}
+      {{- $alternateName := $data.abbr }}
+      {{- if isset $data "abbr" }}
+        {{- $abbr := index $.Site.Data.abbrs $data.abbr }}
+        {{- if isset $abbr "itemid" }}
+          {{- $itemid = $abbr.itemid }}
+          {{- $alternateName = $abbr.title }}
+        {{- end }}
+      {{- end }}
+      { "@type": "Thing", {{ with $alternateName}} "alternateName": "{{ . }}",{{ end }} "identifier": "{{ $itemid }}" },
     {{- end }}
     {{- range $last_tag }}
-      { "@type": "Thing", "identifier": "{{ . }}" }
+      {{- $data := index $.Site.Data.tags . }}
+      {{- $itemid := $data.itemid }}
+      {{- $alternateName := $data.abbr }}
+      {{- if isset $data "abbr" }}
+        {{- $abbr := index $.Site.Data.abbrs $data.abbr }}
+        {{- if isset $abbr "itemid" }}
+          {{- $itemid = $abbr.itemid }}
+          {{- $alternateName = $abbr.title }}
+        {{- end }}
+      {{- end }}
+      { "@type": "Thing", {{ with $alternateName }} "alternateName": "{{ . }}",{{ end }} "identifier": "{{ $itemid }}" }
     {{- end }}
   ],
 {{- end }}
