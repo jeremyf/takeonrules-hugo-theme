@@ -16,7 +16,7 @@
     <footer role="complementary" aria-label="Metadata and Related Posts">
       <nav aria-labelledby="skip-to-posts-metadata">
         <h2 id="skip-to-posts-metadata">Metadata</h2>
-        <p aria-label="Publication date and tags">
+        <p>
         <time aria-label="Published On" datetime="{{ dateFormat $.Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
         {{ if ne .Lastmod .Date }}<ins>: (Updated <time datetime="{{ .Lastmod.Format $.Site.Params.iso8601_format }}">{{ .Lastmod.Format "2006-01-02" }}</time></ins>){{ end }}
         ::
