@@ -2,22 +2,22 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article id="skip-to-content" role="article" aria-labelledby="{{ anchorize .Title }}">
-    <header aria-labelledby="{{ anchorize .Title }}" role="heading" aria-level="1">
+  <article id="skip-to-content" aria-labelledby="{{ anchorize .Title }}">
+    <header aria-labelledby="{{ anchorize .Title }}">
       <hgroup>
         <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
         {{- with .Params.title_sub }}<h2>{{ . }}</h2>{{- end }}
         {{- with .Params.headline }}<h3>{{ . }}</h3>{{- end }}
       </hgroup>
     </header>
-    <section class="content" role="region" aria-label="Content">
+    <section class="content" aria-label="Content">
       {{ .Content }}
     </section>
-    <footer role="complementary" aria-label="Metadata and Related Posts">
+    <footer aria-label="Metadata and Related Posts">
       <nav aria-labelledby="skip-to-posts-metadata">
         <h2 id="skip-to-posts-metadata">Metadata</h2>
         <p>
-        <time aria-label="Published On" datetime="{{ dateFormat $.Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
+        Published <time datetime="{{ dateFormat $.Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
         {{ if ne .Lastmod .Date }}<ins>: (Updated <time datetime="{{ .Lastmod.Format $.Site.Params.iso8601_format }}">{{ .Lastmod.Format "2006-01-02" }}</time></ins>){{ end }}
         ::
         {{- with .Params.tags }}<span id="skip-to-tags">{{ partial "tags.html" . }}</span>{{- end }}

@@ -3,7 +3,7 @@
 {{ end }}
 {{ define "main" }}
   {{- $context := . }}
-  <article  id="skip-to-content" role="article">
+  <article  id="skip-to-content">
   {{- $termTitle := .Title }}
   {{- $data := .Data }}
   {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}

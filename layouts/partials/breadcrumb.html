@@ -1,9 +1,9 @@
-<nav role="navigation" aria-label="Breadcrumbs" class="breadcrumbs">
+<nav aria-label="Breadcrumbs" class="breadcrumbs">
   <span class="label">Breadcrumbs: </span>
   {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
 </nav>
 {{- if eq .Type "post" }}
-<nav role="navigation" aria-label="Post neighbors" class="paginator breadcrumbs">
+<nav aria-label="Post neighbors" class="paginator breadcrumbs">
   <span class="label">Post Neighbors: </span>
   {{- with .PrevInSection }}<a accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>{{- end }}{{- if and .PrevInSection .NextInSection }}&nbsp;|&nbsp;{{- end }}{{- with .NextInSection }}<a accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
 </nav>

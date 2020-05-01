@@ -2,7 +2,7 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-<article id="skip-to-content" role="article">
+<article id="skip-to-content">
   {{- $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
   {{- $title := .Title }}
   {{ with index $.Site.Data.licenses $slug }}

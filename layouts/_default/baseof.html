@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+  <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# dct: http://purl.org/dc/terms/ cc: https://creativecommons.org/ns#">
     <meta charset="utf-8">
     {{ block "head-title" . }}
       {{- if .IsHome }}
@@ -14,8 +14,8 @@
     {{ end }}
   </head>
   <body class="{{ if isset .Params "full_width"}}full-width{{ else }}default-width{{ end }}">
-    <header aria-label="Site-wide header" role="banner">
-      <nav class="group site-nav" role="navigation" aria-label="Site-wide navigation">
+    <header aria-label="Site-wide header">
+      <nav class="group" aria-label="Site-wide navigation">
         <a href="#skip-to-content" accesskey="c" title="Skip to Content" class="offscreen">Skip to Content</a>
         {{- with .Params.tags }}
           <a href="#skip-to-tags" accesskey="t" title="Skip to Page's Tags" class="offscreen">Skip to Page's Tags</a>
@@ -44,7 +44,7 @@
       <hr>
     </header>
     {{ block "breadcrumb" . }}{{ end }}
-    <main class="group" role="main" aria-label="Main Content">
+    <main class="group" aria-label="Main Content">
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}
