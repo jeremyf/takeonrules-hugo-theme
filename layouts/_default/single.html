@@ -33,18 +33,24 @@
           <dt>Permalink</dt><dd><a href="{{ .Permalink }}" rel="bookmark" class="u-url">{{ .Permalink }}</a></dd>
         {{- with .Params.series }}
           {{- range (where $.Site.Data.series "key" "eq" .) }}
-              {{- $title := .title }}
-              <dt>Series</dt><dd><a name='skip-to-series-navigation' href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ $title }}</a></dd>
-              {{- $series := where $.Site.Pages "Params.series" .key }}
-              {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
-              {{- range first 1 $prev }}
+            {{- $title := .title }}
+            <dt>Series</dt><dd><a name='skip-to-series-navigation' href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ $title }}</a></dd>
+            {{- $series := where $.Site.Pages "Params.series" .key }}
+            {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
+            {{- range first 1 $prev }}
               <dt>Previous in Series</dt><dd><a rel="prev" title="{{ .Title }}" href="{{ .Permalink }}"><cite>{{ .Title }}</cite></a></dd>
-              {{- end}}
-              {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
-              {{- range last 1 $next }}
+            {{- end}}
+            {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
+            {{- range last 1 $next }}
               <dt>Next in Series</dt><dd><a rel="next" title="{{ .Title }}" href="{{ .Permalink }}"><cite>{{ .Title }}</cite></a></dd>
-              {{- end}}
+            {{- end}}
           {{- end}}
+        {{- end }}
+        {{- with .Params.webmentions }}
+          <dt>Webmentions</dt>
+          {{- range . }}
+            <dd><a href="{{ . }}">{{ . }}</a></dd>
+          {{- end }}
         {{- end }}
       </dl>
 
