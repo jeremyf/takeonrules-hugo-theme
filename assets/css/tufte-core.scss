@@ -23,14 +23,14 @@ a { color: $contrast-color;  text-decoration: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1 { font-weight: 400; font-size: 2.5rem; margin: 1.568rem 0; line-height: 1.0889; }
-h2, h3, h4, summary { font-style: italic; font-weight: 400; margin-bottom: 0; line-height: 1.0889; }
-h2, summary { font-size: 2.1rem; margin-top: 1.8667rem; }
+h2, h3, h4{ font-style: italic; font-weight: 400; margin-bottom: 0; line-height: 1.0889; }
+h2 { font-size: 2.1rem; margin-top: 1.8667rem; }
 h3 { font-size: 1.8rem; margin-top: 2.1778rem; }
 h4 { font-size: 1.2rem; margin-top: 1.6778rem; }
 
-p, ol, ul, dl { font-size: 1.4rem; }
-p { margin-top: 1.4rem; }
-p, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
+p, summary, ol, ul, dl { font-size: 1.4rem; }
+p, summary { margin-top: 1.4rem; }
+p, summary, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
 blockquote {
   color: darken($table-header, 25%);
   width: 55%;
@@ -96,13 +96,12 @@ figcaption {
 }
 .fullwidth { max-width: 90%; }
 
-
 // Without this setting, when the header would wrap, the letters would overlap
-h2, h3, h4, .p, p, .table-wrapper, pre, dl { width: 55%; }
+h2, h3, h4, summary, .p, p, .table-wrapper, pre, dl { width: 55%; }
 article header, body > footer { width: 95%; }
 .full-width {
   ul, ol { width: 85%; }
-  h2, h3, h4, .p, p, footer, .table-wrapper, pre, dl { width: 90%; }
+  h2, h3, h4, summary, .p, p, footer, .table-wrapper, pre, dl { width: 90%; }
 }
 
 
@@ -247,7 +246,7 @@ article hgroup h2 { margin-bottom: 1.2rem; }
 .hide-js { display: none; }
 
 @media screen and (max-width: 760px) {
-  h2, h3, h4, .p, p, body > footer, .table-wrapper, pre, dl, ol, ul { width: 90%; }
+  h2, h3, h4, summary, .p, p, body > footer, .table-wrapper, pre, dl, ol, ul { width: 90%; }
   figure { max-width: 90%; }
   figcaption { margin-right: 0%; max-width: none; }
   blockquote {
@@ -271,6 +270,18 @@ q:after, q:before { content: none; }
 .ogc {
   border-left: $code-color 1px dotted; padding-left: 1rem;
   & pre { margin-top: 1rem; }
+}
+
+details[open] > *:not(summary) {
+  border-left: $code-color 1px dotted;
+  margin-left: 0.5% ; // Aligns left border with center of down caret
+  padding-left: 2.5%;
+  width: 52%;
+}
+@media screen and (max-width: 760px) {
+  details[open] > *:not(summary) {
+    width: 87%;
+  }
 }
 
 .update {
