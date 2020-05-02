@@ -202,10 +202,22 @@ a.offscreen {
 
 // Working with lists, especially navigation
 
-dl {
+dl:not(.compact) {
   dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
   dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
 }
+
+dl.compact {
+  font-size: 1.1rem;
+  padding-top: 0.5rem; clear: both;
+  dt, dd { margin-top: 1rem; float: left }
+  dd { text-indent: 1rem; }
+  dt + dd { text-indent: 0;}
+  dt { font-weight: bold; margin-right: 0.7rem; clear: left; }
+  dt:after { content: ":"; }
+  &:after { clear: both; }
+}
+
 
 article footer nav ul { width: 87.5% }
 
