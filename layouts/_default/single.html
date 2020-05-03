@@ -17,7 +17,36 @@
     <section class="content e-content" aria-label="Content">
       {{ .Content }}
     </section>
-    <footer aria-label="Metadata and Related Posts">
+    <footer aria-label="Webmentions, Metadata, and Related Posts">
+      {{- with .Params.webmentions }}
+      <nav aria-labelledby="skip-to-webmentions">
+        <h2 id="skip-to-related-posts">Web Mentions</h2>
+        <ul>
+          {{- range $mention := . }}
+            <li>
+              {{ with $mention.source_author_name }}
+                {{ if isset $mention "source_author_url" }}
+                  <a href="{{ $mention.source_author_url}}" rel="nofollow">{{ . }}</a>
+                {{ else }}
+                  {{ . }}
+                {{ end }}
+              {{ end }}
+              mentioned <a href="{{.Permalink }}">this post</a> at: <a href="{{ $mention.source }}" rel="nofollow">{{ if isset $mention "source_page_name" }}{{ $mention.source_page_name }}{{ else }}{{ $mention.source }}{{ end }}</a>
+            </li>
+          {{- end }}
+        </ul>
+      </nav>
+      {{- end }}
+      <nav aria-labelledby="skip-to-related-posts">
+        <h2 id="skip-to-related-posts">Related Posts</h2>
+        <ul>
+          {{ range first 5 (.Site.RegularPages.Related .) }}
+            <li>
+              <a aria-label="Related post: {{ .Title }}" href="{{ .RelPermalink }}"><cite>{{ .Title | markdownify }}</cite></a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
       <nav aria-labelledby="skip-to-posts-metadata">
         <h2 id="skip-to-posts-metadata">Metadata</h2>
         <dl class="metadata">
@@ -46,24 +75,7 @@
             {{- end}}
           {{- end}}
         {{- end }}
-        {{- with .Params.webmentions }}
-          <dt id="skip-to-webmentions">Web mentions</dt>
-          {{- range . }}
-            <dd><a href="{{ . }}" rel="nofollow">{{ . }}</a></dd>
-          {{- end }}
-        {{- end }}
       </dl>
-
-      </nav>
-      <nav aria-labelledby="skip-to-related-posts">
-        <h2 id="skip-to-related-posts">Related Posts</h2>
-        <ul>
-          {{ range first 5 (.Site.RegularPages.Related .) }}
-            <li>
-              <a aria-label="Related post: {{ .Title }}" href="{{ .RelPermalink }}"><cite>{{ .Title | markdownify }}</cite></a>
-            </li>
-          {{ end }}
-        </ul>
       </nav>
     </footer>
   </article>
