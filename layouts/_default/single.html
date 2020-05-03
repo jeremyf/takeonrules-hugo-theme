@@ -49,7 +49,7 @@
         {{- with .Params.webmentions }}
           <dt id="skip-to-webmentions">Web mentions</dt>
           {{- range . }}
-            <dd><a href="{{ . }}">{{ . }}</a></dd>
+            <dd><a href="{{ . }}" rel="nofollow">{{ . }}</a></dd>
           {{- end }}
         {{- end }}
       </dl>
