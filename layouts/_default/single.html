@@ -18,20 +18,23 @@
       {{ .Content }}
     </section>
     <footer aria-label="Webmentions, Metadata, and Related Posts">
-      {{- with .Params.webmentions }}
+      {{- if isset .Params "webmentions" }}
       <nav aria-labelledby="skip-to-webmentions">
         <h2 id="skip-to-related-posts">Web Mentions</h2>
         <ul>
-          {{- range $mention := . }}
+          {{- range .Params.webmentions }}
             <li>
-              {{ with $mention.source_author_name }}
-                {{ if isset $mention "source_author_url" }}
-                  <a href="{{ $mention.source_author_url}}" rel="nofollow">{{ . }}</a>
-                {{ else }}
-                  {{ . }}
-                {{ end }}
-              {{ end }}
-              mentioned <a href="{{.Permalink }}">this post</a> at: <a href="{{ $mention.source }}" rel="nofollow">{{ if isset $mention "source_page_name" }}{{ $mention.source_page_name }}{{ else }}{{ $mention.source }}{{ end }}</a>
+              {{- if isset . "source_author_name" }}
+                {{- if isset . "source_author_url" }}
+                  <a href="{{ .source_author_url}}" rel="nofollow">{{ .source_author_name }}</a>
+                {{- else }}
+                  {{ .source_author_name }}
+                {{- end }}
+                mentioned <a href="{{.Permalink }}">this post</a> at:
+              {{- else }}
+                <a href="{{.Permalink }}">this post</a> was mentioned at:
+              {{- end }}
+              <a href="{{ .source }}" rel="nofollow">{{ if isset . "source_page_name" }}{{ .source_page_name }}{{ else }}{{ .source }}{{ end }}</a>
             </li>
           {{- end }}
         </ul>
