@@ -29,6 +29,9 @@
         {{- with .Params.licenses }}
           <a href="#skip-to-licenses" accesskey="l" title="Skip to Page's Licenses" class="offscreen">Skip to Page's Licenses</a>
         {{- end }}
+        {{- with .Params.webmentions }}
+          <a href="#skip-to-webmentions" accesskey="w" title="Skip to Page's Web Mentions" class="offscreen">Skip to Page's Web Mentions</a>
+        {{- end }}
         <hr>
         <h1><a accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}

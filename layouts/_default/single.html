@@ -47,7 +47,7 @@
           {{- end}}
         {{- end }}
         {{- with .Params.webmentions }}
-          <dt>Webmentions</dt>
+          <dt id="skip-to-webmentions">Web mentions</dt>
           {{- range . }}
             <dd><a href="{{ . }}">{{ . }}</a></dd>
           {{- end }}
