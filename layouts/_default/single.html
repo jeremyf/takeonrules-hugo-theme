@@ -20,7 +20,7 @@
     <footer aria-label="Webmentions, Metadata, and Related Posts">
       {{- if isset .Params "webmentions" }}
       <nav aria-labelledby="skip-to-webmentions">
-        <h2 id="skip-to-related-posts">Web Mentions</h2>
+        <h2 id="skip-to-webmentions">Web Mentions</h2>
         <p><a href="{{.Permalink }}" rel="bookmark">This post</a> was mentioned at:</p>
         <ul>
           {{- range .Params.webmentions }}
