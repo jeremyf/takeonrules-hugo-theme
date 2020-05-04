@@ -60,7 +60,7 @@
               <dd><a rel="tag" class="p-category" aria-label="Posts tagged with “{{ . }}”" href="{{ "tags" | absURL }}/{{ . | urlize }}">#{{ . | anchorize }}</a></dd>
             {{- end }}
           {{- end }}
-          <dt>Author</dt><dd class="u-author p-author h-card"><a rel="author" class="u-url p-name" href="{{ .Site.BaseURL }}">{{ .Site.Params.copyrightHolder }}</a></dd>
+          <dt>Author</dt><dd class="u-author p-author"><a rel="author" class="u-url" href="{{ .Site.BaseURL }}">{{ .Site.Params.copyrightHolder }}</a></dd>
           <dt>Permalink</dt><dd><a href="{{ .Permalink }}" rel="bookmark" class="u-url">{{ .Permalink }}</a></dd>
         {{- with .Params.series }}
           {{- range (where $.Site.Data.series "key" "eq" .) }}
