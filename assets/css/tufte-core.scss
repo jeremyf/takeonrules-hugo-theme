@@ -295,9 +295,9 @@ q:after, q:before { content: none; }
 
 details[open] > *:not(summary) {
   border-left: $code-color 1px dotted;
-  margin-left: 0.8% ; // Aligns left border with center of down caret
+  margin-left: 0.5% ; // Aligns left border with center of down caret
   padding-left: 2.5%;
-  width: 51.7%;
+  width: 52%;
 }
 @media screen and (max-width: 760px) {
   details[open] > *:not(summary) {
