@@ -33,6 +33,7 @@ p, summary { margin-top: 1.4rem; }
 p, summary, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
 blockquote {
   color: darken($table-header, 25%);
+  border-left: $code-color 1px dotted;
   width: 55%;
   font-size: 1.1rem;
   margin-top: 1.4rem;
