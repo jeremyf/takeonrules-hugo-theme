@@ -30,7 +30,7 @@
   "inLanguage": "en-US",
   "speakable": {
     "@type": "SpeakableSpecification",
-    "cssSelector": ["article header h1", "article .content"]
+    "cssSelector": ["article"]
   },
   {{ if (isset .Params "tags") }}
   {{ partial "tags-as-about-jsonld.json" . }}
