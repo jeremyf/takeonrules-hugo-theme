@@ -3,14 +3,14 @@
 {{ end }}
 {{ define "main" }}
   {{- $context := . }}
-  <article  id="skip-to-content">
+  <article class="h-entry" id="skip-to-content">
   {{- $termTitle := .Title }}
   {{- $data := .Data }}
   {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
     <header>
-      <h1 id="{{ anchorize $termTitle }}">{{ .title }}</h1>
+      <h1 class="p-name" id="{{ anchorize $termTitle }}">{{ .title }}</h1>
     </header>
-    <section class="content">
+    <section class="e-content content">
       {{ partial "paragraphy.html" .description }}
       <div class="table-wrapper">
         <a name="table-{{ $data.Singular | anchorize }}-{{ .key | anchorize }}"></a>

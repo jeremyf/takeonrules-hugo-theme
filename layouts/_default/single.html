@@ -18,27 +18,7 @@
       {{ .Content }}
     </section>
     <footer aria-label="Webmentions, Metadata, and Related Posts">
-      {{- if isset .Params "webmentions" }}
-      <nav aria-labelledby="skip-to-webmentions">
-        <h2 id="skip-to-webmentions">Web Mentions</h2>
-        <p><a href="{{.Permalink }}" rel="bookmark">This post</a> was mentioned at:</p>
-        <ul>
-          {{- range .Params.webmentions }}
-            <li>
-              <a href="{{ .source }}" rel="nofollow">{{ if isset . "source_page_name" }}{{ .source_page_name }}{{ else }}{{ .source }}{{ end }}</a>
-              {{- if isset . "source_author_name" }}
-                by
-                {{- if isset . "source_author_url" }}
-                  <a href="{{ .source_author_url}}" rel="nofollow">{{ .source_author_name }}</a>
-                {{- else }}
-                  {{ .source_author_name }}
-                {{- end }}
-              {{- end }}
-            </li>
-          {{- end }}
-        </ul>
-      </nav>
-      {{- end }}
+      {{ partial "webmentions.html" . }}
       <nav aria-labelledby="skip-to-related-posts">
         <h2 id="skip-to-related-posts">Related Posts</h2>
         <ul>

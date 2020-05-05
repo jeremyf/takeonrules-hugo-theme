@@ -2,11 +2,11 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article id="skip-to-content">
+  <article class="h-entry" id="skip-to-content">
     <header>
-      <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
     </header>
-    <section class="content terms">
+    <section class="e-content content terms">
       {{ $data := .Data }}
       <details open>
         <summary>By Frequency</summary>

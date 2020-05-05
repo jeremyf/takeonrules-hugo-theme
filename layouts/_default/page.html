@@ -2,12 +2,17 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article id="skip-to-content">
+  <article class="h-entry" id="skip-to-content">
     <header>
-      <h1 id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
     </header>
-    <section class="content" role="region" aria-label="article content">
+    <section class="e-content content" role="region" aria-label="article content">
       {{ .Content }}
     </section>
+    {{- if isset .Params "webmentions" }}
+      <footer aria-label="Webmentions">
+        {{ partial "webmentions.html" . }}
+      </footer>
+    {{- end }}
   </article>
 {{ end }}
