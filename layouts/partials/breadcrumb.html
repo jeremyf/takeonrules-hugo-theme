@@ -1,24 +1,24 @@
-<nav aria-label="Breadcrumbs" class="breadcrumbs">
+<nav aria-label="Breadcrumbs" class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
   <span class="label">Breadcrumbs: </span>
-  {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+  {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3) }}
 </nav>
 {{- if eq .Type "post" }}
 <nav aria-label="Post neighbors" class="paginator breadcrumbs">
   <span class="label">Post Neighbors: </span>
-  {{- with .PrevInSection }}<a accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>{{- end }}{{- if and .PrevInSection .NextInSection }}&nbsp;|&nbsp;{{- end }}{{- with .NextInSection }}<a accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
+  {{- with .PrevInSection }}<a itemprop="relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>{{- end }}{{- if and .PrevInSection .NextInSection }}&nbsp;|&nbsp;{{- end }}
+  {{- with .NextInSection }}<a itemprop="relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
 </nav>
 {{- end }}
 {{- define "breadcrumbnav" }}
-  {{- if eq .p1.Kind "taxonomy" }}
-    <a href="{{ .p1.Site.BaseURL }}">Home</a> /
-    <a href="{{ .p1.Site.BaseURL }}{{ .p1.Data.Plural }}/">{{ .p1.Data.Plural | title }}</a> /
-    <a class="active" href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
-  {{- else }}
-    {{- if .p1.Parent }}
-      {{- template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }} /
-    {{- else if not .p1.IsHome }}
-      {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }} /
-    {{- end }}
-    <a href="{{ .p1.Permalink }}" class="{{ if eq .p1 .p2 }}active{{ end }}">{{ if eq .p1.Permalink .p1.Site.BaseURL }}Home{{ else }}{{ .p1.Title }}{{ end }}</a>
+  {{- if .p1.Parent }}
+    {{- template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 "depth" (sub .depth 1) )}} /
+  {{- else if not .p1.IsHome }}
+    {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) ) }} /
   {{- end }}
+  <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="{{ .p1.Permalink }}" class="{{ if eq .p1 .p2 }}active{{ end }}">
+      <span itemprop="name">{{ if eq .p1.Permalink .p1.Site.BaseURL }}Home{{ else }}{{ .p1.Title }}{{ end }}</span>
+      <meta itemprop="position" content="{{ .depth }}" />
+    </a>
+  </span>
 {{- end }}

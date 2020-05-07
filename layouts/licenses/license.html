@@ -2,19 +2,22 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-<article class="h-entry" id="skip-to-content">
+<article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
   {{- $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
   {{- $title := .Title }}
   {{ with index $.Site.Data.licenses $slug }}
-  {{ with index . "Description" }}
-    <section>
-      {{ . | safeHTML }}
-    </section>
-  {{ end }}
+    <header>
+      <h1 itemprop="name" class="p-name" id="{{ anchorize $title }}">{{ .Name }}</h1>
+    </header>
+    {{ with index . "Description" }}
+      <section itemprop="about">
+        {{ . | safeHTML }}
+      </section>
+    {{ end }}
   {{ end }}
   <section>
   {{ range .Data.Pages.GroupByDate "2006" }}
-    <details open>
+    <details>
     <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
           {{ range .Pages }}
             <ul>

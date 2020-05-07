@@ -6,4 +6,8 @@
 {{- $imageResize := "770x" }}
 {{- $alt      := .Get "alt" }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "770x r%s" .) }}{{- end }}
-{{- $result   := $original.Resize $imageResize }}<figure{{ if isSet .Params "hidden" }} aria-hidden="true"{{ end }}>{{ with $caption }}<figcaption>{{ partial "unparagraphy.html" . }}</figcaption>{{ end }}<img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" /></figure>
+{{- $result   := $original.Resize $imageResize }}
+<figure itemprop="image" itemscope itemType="http://schema.org/ImageObject" {{ if isSet .Params "hidden" }} aria-hidden="true"{{ end }}>
+{{- with $caption }}<figcaption  itemprop="caption">{{ partial "unparagraphy.html" . }}</figcaption>{{ end }}
+<img itemprop="url" src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
+</figure>

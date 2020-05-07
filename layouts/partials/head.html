@@ -18,12 +18,6 @@
 
 {{ partial "twitter_cards.html" . }}
 
-{{- if .Site.Params.withJsonLd }}
-  <script type="application/ld+json">
-    {{ partial "jsonld.json" . | safeJS }}
-  </script>
-{{- end }}
-
 {{- if isset .Params "with_datatables" }}
   <meta name="withDataTables" content="true" />
   {{/*

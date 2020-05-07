@@ -13,9 +13,9 @@
       {{ partial "head" . }}
     {{ end }}
   </head>
-  <body class="{{ if isset .Params "full_width"}}full-width{{ else }}default-width{{ end }}">
+  <body class="{{ if isset .Params "full_width"}}full-width{{ else }}default-width{{ end }}" itemscope itemtype="http://schema.org/{{ with .Params.schema_dot_org_type }}{{ . }}{{ else }}WebPage{{ end }}">
     <header aria-label="Site-wide header">
-      <nav class="group" aria-label="Site-wide navigation">
+      <nav itemprop="hasPart" class="group" aria-label="Site-wide navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <section id="skip-links">
           <a href="#skip-to-content" accesskey="c" title="Skip to Content" class="offscreen">Skip to Content</a>
           {{- with .Params.series }}
@@ -31,9 +31,9 @@
             <a href="#skip-to-webmentions" accesskey="w" title="Skip to Page's Web Mentions" class="offscreen">Skip to Page's Web Mentions</a>
           {{- end }}
         </section>
-        <h1><a accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
+        <h1><a itemprop="url" accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
-          <a accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name }}</a>
+          <a itemprop="url" accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name }}</a>
         {{- end }}
         <a accesskey="/" {{ if eq (string $.Page.RelPermalink) "/search/" }}class="active"{{ end }} id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a>
       </nav>

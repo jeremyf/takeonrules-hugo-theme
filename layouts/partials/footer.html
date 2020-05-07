@@ -1,4 +1,16 @@
-<footer class="group credits" aria-label="Site-wide footer">
+<footer id="skip-to-licenses" class="group credits" aria-label="Site-wide footer">
   <hr class="slender">
-  {{ partial "credits-and-license.html" . }}
+  <span itemid="#microdata-author" itemscope itemType="http://schema.org/Person">
+    &copy;{{ now.Format "2006" }}&nbsp;
+    <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
+      <span itemprop="name">{{ .Site.Params.copyrightHolder }}</span>
+    </a>
+  </span>
+  <span itemid='#microdata-org' itemscope itemType='http://schema.org/Organization' >
+    <meta itemprop="name" content="Take on Rules" />
+    <link itemprop="url" href="https://takeonrules.com" />
+    <span itemprop="logo" itemscope itemType="http://schema.org/ImageObject">
+      <meta itemprop="url" content="https://takeonrules.com/images/amp-logo-takeonrules.wordpress.com-banner.jpg" />
+    </span>
+  </span>
 </footer>
