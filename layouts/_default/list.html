@@ -7,10 +7,10 @@
       <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title | title }}</h1>
     </header>
     <section class="e-content content">
-      <div class="table-wrapper">
-        <a name="table-{{ .Data.Singular | anchorize }}-{{ .Title | anchorize }}"></a>
-        <table class="stripe data-tables">
-          <caption>Table "{{ .Title | title }}" {{ .Data.Singular | title }}: Posts with "{{ .Title | title }}" {{ .Data.Singular }}</caption>
+      <div class="table-wrapper" itemscope itemtype="http://schema.org/Table">
+        <a ></a>
+        <table id="table-{{ .Data.Singular | anchorize }}-{{ .Title | anchorize }}" class="stripe data-tables">
+          <caption itemprop="about">Table "{{ .Title | title }}" {{ .Data.Singular | title }}: Posts with "{{ .Title | title }}" {{ .Data.Singular }}</caption>
           <thead>
             <tr><th>Title</th><th>Date</th></tr>
           </thead>

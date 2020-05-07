@@ -1,5 +1,5 @@
-{{- $caption := .Get "caption" }}{{- $table_number := .Get "table_number" }}{{- if .Params.margin }}<div class="marginnote margin-table">{{- end }}<div class="table-wrapper">
+{{- $caption := .Get "caption" }}{{- $table_number := .Get "table_number" }}{{- if .Params.margin }}<div class="marginnote margin-table">{{- end }}<div class="table-wrapper" itemscope itemtype="http://schema.org/Table">
 <table id="table-{{ $table_number }}" {{ with .Get "unstriped" }}class="unstriped" {{ end }}aria-label="Table {{ $table_number }}{{ if $caption}}: {{ $caption }}{{ end }}">
-{{- if $caption }}<caption>Table {{ $table_number}}: {{ $caption | markdownify }}</caption>{{- end }}
+{{- if $caption }}<caption itemprop="about">Table {{ $table_number}}: {{ $caption | markdownify }}</caption>{{- end }}
 {{ .Inner }}
 </table></div>{{- if .Params.margin }}</div>{{- end}}

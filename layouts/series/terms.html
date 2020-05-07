@@ -8,10 +8,9 @@
     </header>
     <section class="e-content content terms">
       {{ .Content }}
-      <div class="table-wrapper">
-        <a name="table-{{ anchorize .Title }}"></a>
-        <table class="data-tables stripe">
-          <caption>Table {{ .Title }}: All {{ .Title }} in {{ .Site.Title }}</caption>
+      <div class="table-wrapper" itemscope itemtype="http://schema.org/Table">
+        <table id="table-{{ anchorize .Title }}" class="data-tables stripe">
+          <caption itemprop="about">Table {{ .Title }}: All {{ .Title }} in {{ .Site.Title }}</caption>
           <thead>
             <tr><th>Title</th><th class="r">Count</th><th class="c">First Post</th><th class="c">Last Post</th></tr>
           </thead>

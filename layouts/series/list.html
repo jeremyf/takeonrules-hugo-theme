@@ -12,10 +12,9 @@
     </header>
     <section class="e-content content">
       {{ partial "paragraphy.html" .description }}
-      <div class="table-wrapper">
-        <a name="table-{{ $data.Singular | anchorize }}-{{ .key | anchorize }}"></a>
-        <table class="stripe data-tables">
-          <caption>Table "{{ .title | title }}" {{ $data.Singular | title }}: Posts in "{{ .title }}" {{ $data.Singular }}</caption>
+      <div class="table-wrapper" itemscope itemtype="http://schema.org/Table">
+        <table id="table-{{ $data.Singular | anchorize }}-{{ .key | anchorize }}" class="stripe data-tables">
+          <caption itemprop="about">Table "{{ .title | title }}" {{ $data.Singular | title }}: Posts in "{{ .title }}" {{ $data.Singular }}</caption>
           <thead>
             <tr><th>Title</th><th>Date</th></tr>
           </thead>
