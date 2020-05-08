@@ -67,7 +67,8 @@ div.epigraph > blockquote {
 
 
 /* Basic Layout stuff --*/
-ul, ol { padding: 1rem 0 0 5%; width: 45%; }
+ul, ol { padding: 1rem 0 0 5%; }
+article section > ul, article section > ol { width: 45%; }
 
 /* ------------------------------------------------------------------------ */
 /* Styling for listing pages. */
@@ -101,7 +102,7 @@ figcaption {
 h2, h3, h4, summary, .p, p, .table-wrapper, pre, dl { width: 55%; }
 article header, body > footer { width: 95%; }
 .full-width {
-  ul, ol { width: 85%; }
+  section > ul, section > ol { width: 85%; }
   h2, h3, h4, summary, .p, p, footer, .table-wrapper, pre, dl { width: 90%; }
 }
 
