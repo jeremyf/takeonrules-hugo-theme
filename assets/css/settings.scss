@@ -8,19 +8,38 @@ $sans-font: Helvetica, sans-serif;
 $code-font: "JetBrains Mono", Courier, monospace;
 $counter-font: Times, serif;
 
-// $text-color: #111;
-// $bg-color: #fffff8;
-// $contrast-color: #A00000;
-// $code-color: #0B486E;
-// $border-color: #3B3A00;
-// $table-header: #CCB8B8;
-$text-color: #111;
-$bg-color: #fffff8;
-$contrast-color: #8C0303;
-$code-color: #027333;
-$border-color: #A6977B;
-$table-header: #A6977B;
-// $update-color: #8E83A6;
-$update-color: #5B5071;
+// $text-color-light: #111;
+// $bg-color-light: #fffff8;
+// $contrast-color-light: #A00000;
+// $code-color-light: #0B486E;
+// $border-color-light: #3B3A00;
+// $table-header-color: #CCB8B8;
+$text-color-light: #111;
+$bg-color-light: #fffff8;
+$contrast-color-light: #8C0303;
+$code-color-light: #027333;
+$border-color-light: #A6977B;
+$table-header-color-light: $border-color-light;
+$blockquote-color-light: darken($table-header-color-light, 25%);
+$update-color-light: #5B5071;
+
+$text-color-dark: #f5f5f5;
+$bg-color-dark: #172637;
+$contrast-color-dark: #66FF00;
+$code-color-dark: lighten(#44B4CC, 15%);
+// $border-color-dark: darken(#A6977B, 33%);
+$border-color-dark: lighten($bg-color-dark, 10%);
+$table-header-color-dark: $border-color-dark;
+$blockquote-color-dark: #FFCC00;
+$update-color-dark: lighten($blockquote-color-dark, 30%);
+
+$text-color: $text-color-light;
+$bg-color: $bg-color-light;
+$contrast-color: $contrast-color-light;
+$code-color: $code-color-light;
+$border-color: $border-color-light;
+$table-header-color: $table-header-color-light;
+$update-color: $update-color-light;
+$blockquote-color: $blockquote-color-light;
 
 $link-style: color; // choices are 'color' or 'underline'. Default is color using $contrast-color set above

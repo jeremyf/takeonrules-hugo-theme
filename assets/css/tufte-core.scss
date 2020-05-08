@@ -6,8 +6,9 @@
 // First significant deviation from CSS on tufte.css site - variable font size as browser width expands or contracts
 
 html, body { height: 100%; }
+
 html { scroll-behavior: smooth; vertical-align: baseline; font-size: 12px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: $body-font; background-color: $bg-color; color: $text-color; max-width: 1400px; counter-reset: sidenote-counter; }
+body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: $body-font; max-width: 1400px; counter-reset: sidenote-counter; }
 body, article hgroup > *, .list-page ul { width: 87.5%; }
 
 @media screen and (min-width: 800px){ html{ font-size: 12px;} }
@@ -18,7 +19,7 @@ body, article hgroup > *, .list-page ul { width: 87.5%; }
 @media screen and (min-width: 1300px){ html{ font-size: 17px; } }
 
 // sets link style according to values in _settings.scss
-a { color: $contrast-color;  text-decoration: none; }
+a { text-decoration: none; }
 
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
@@ -32,7 +33,6 @@ p, summary, ol, ul, dl { font-size: 1.4rem; }
 p, summary { margin-top: 1.4rem; }
 p, summary, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
 blockquote {
-  color: darken($table-header, 25%);
   border-left: $code-color 1px dotted;
   width: 55%;
   font-size: 1.1rem;
@@ -117,7 +117,6 @@ body > header {
       font-size: 1.2rem;
       font-family: $sans-font;
       letter-spacing: 0.15em;
-      color: $contrast-color;
       text-decoration: none;
       display: inline-block;
       margin: 1.5rem 2rem 0 auto;
@@ -128,8 +127,8 @@ body > header {
 }
 body > footer { padding-top: 2rem; }
 
-pre, pre code { font-family: $code-font; padding: 0 1.5%; overflow-x: auto; color:$code-color; }
-code { font-family: $code-font; color:$code-color; font-size: 1.1rem; }
+pre, pre code { font-family: $code-font; padding: 0 1.5%; overflow-x: auto; }
+code { font-family: $code-font; font-size: 1.1rem; }
 pre code { font-size: 1.0rem; line-height: 1.7142; margin-top: 1.7142rem; display: block; white-space: pre; }
 
 .newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.05rem; }
@@ -139,7 +138,6 @@ pre code { font-size: 1.0rem; line-height: 1.7142; margin-top: 1.7142rem; displa
 /* -- Jekyll specific styling --*/
 //helper classes
 
-.contrast { color: $contrast-color;}
 
 //Nav and Footer styling area
 
@@ -157,7 +155,6 @@ nav {
   text-align: center;
   padding: 1rem 0rem;
   font-family: $sans-font;
-  a { color: $contrast-color; }
   .license {
     margin-top: 1rem;
     font-size: smaller;
@@ -195,10 +192,9 @@ a.offscreen {
     top:-20px;
     width:auto;
     height:auto;
-    overflow:visible;
-    background-color:$contrast-color;
-    color: $bg-color; border: 1px dotted #000; }
+    overflow:visible; }
 }
+
 // END Skip Navigation
 
 // Working with lists, especially navigation
@@ -305,17 +301,42 @@ details[open] > *:not(summary) {
   }
 }
 
-.update {
-  color: $update-color;
-}
-
-mark {
-  background-color: lighten($update-color, 40%);
-}
-
-del {
-  text-decoration-color: $contrast-color;
-}
 dfn {
   font-weight: bold;
+}
+
+/* COLORS */
+
+.contrast { color: $contrast-color;}
+blockquote { color: $blockquote-color; }
+.update { color: $update-color; }
+pre, code { color:$code-color; }
+a { color: $contrast-color;}
+body { background-color: $bg-color; color: $text-color; }
+a.offscreen {
+  &:focus, &:active, &:hover {
+    background-color:$contrast-color;
+    color: $bg-color; border: 1px dotted $text-color;
+  }
+}
+mark { background-color: lighten($update-color, 40%); }
+
+del { text-decoration-color: $contrast-color; }
+
+@media screen and (prefers-color-scheme: dark) {
+  .contrast { color: $contrast-color-dark; }
+  blockquote { color: $blockquote-color-dark; }
+  .update { color: $update-color-dark; }
+  pre, code { color:$code-color-dark; }
+  a { color: $contrast-color-dark; }
+  body { background-color: $bg-color-dark; color: $text-color-dark; }
+  a.offscreen {
+    &:focus, &:active, &:hover {
+      background-color:$contrast-color-dark;
+      color: $bg-color-dark; border: 1px dotted $text-color-dark;
+    }
+  }
+  mark { color: $text-color-dark; background-color: darken($update-color, 10%); }
+
+  del { text-decoration-color: $contrast-color-dark; }
 }
