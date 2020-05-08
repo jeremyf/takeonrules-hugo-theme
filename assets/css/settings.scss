@@ -27,7 +27,6 @@ $text-color-dark: #f5f5f5;
 $bg-color-dark: #172637;
 $contrast-color-dark: #66FF00;
 $code-color-dark: lighten(#44B4CC, 15%);
-// $border-color-dark: darken(#A6977B, 33%);
 $border-color-dark: lighten($bg-color-dark, 30%);
 $table-header-color-dark: $border-color-dark;
 $blockquote-color-dark: #FFCC00;
