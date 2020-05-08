@@ -43,7 +43,7 @@ caption { font-size: 90%; text-align: left; width: auto; margin-left: auto; marg
     border-top-color: $border-color-dark;
   }
   tbody tr {
-    &:nth-child(even), &.subhead { background-color: lighten($table-header-color-dark, 20%); }
+    &:nth-child(even), &.subhead { background-color: darken($table-header-color-dark, 20%); }
   }
   .unstriped tbody tr, .unstriped .subbody {
     background-color: $bg-color-dark;

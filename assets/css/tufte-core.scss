@@ -200,7 +200,7 @@ a.offscreen {
 
 // Working with lists, especially navigation
 
-dl:not(.compact) {
+dl:not(.group) {
   dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
   dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
 }
@@ -213,7 +213,7 @@ dl.metadata {
   dt:after { content: ":"; }
   dd { float: left; }
 }
-dl.compact {
+dl.group {
   font-size: 1.1rem;
   padding-top: 0.5rem; clear: both;
   dt, dd { margin-top: 1rem; float: left }
