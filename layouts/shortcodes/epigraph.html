@@ -18,7 +18,7 @@
 {{- end }}
 </cite>
 {{- else if($cite_url) }}
-<cite><a href="{{ $cite_url }}" class="u-url" rel="p-name">{{ $cite_url }}</a></cite>
+<cite><a href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{ $cite_url }}</a></cite>
 {{- end }}
 {{- if($post) }}{{ $post | markdownify }}{{ end }}
 </footer>
