@@ -25,7 +25,8 @@ $update-color-light: #5B5071;
 
 $text-color-dark: #f5f5f5;
 $bg-color-dark: #172637;
-$contrast-color-dark: #66FF00;
+$contrast-color-dark: #66FF00; // Green
+// $contrast-color-dark: #FF6100; // Orange
 $code-color-dark: lighten(#44B4CC, 15%);
 $border-color-dark: lighten($bg-color-dark, 30%);
 $table-header-color-dark: $border-color-dark;
