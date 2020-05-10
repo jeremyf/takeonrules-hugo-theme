@@ -217,6 +217,7 @@ dl.group {
   font-size: 1.1rem;
   padding-top: 0.5rem; clear: both;
   dt, dd { margin-top: 1rem; float: left }
+  dd:after { content: ";" }
   dd { text-indent: 1rem; }
   dt + dd { text-indent: 0; }
   dt { font-weight: bold; margin-right: 0.7rem; clear: left; }
