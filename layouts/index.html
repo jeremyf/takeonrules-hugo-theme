@@ -28,12 +28,13 @@
     {{- with .Params.tags }}{{ partial "tags.html" . }}{{- end }}
     </p>
     {{- if isset .Params "headline" }}
-      {{ partial "paragraphy.html" .Params.headline }} <a href="{{ .RelPermalink }}">Read More…</a>
+      {{ partial "paragraphy.html" .Params.headline }}
     {{- else }}
     {{- if isset .Params "description" }}
-      {{ partial "paragraphy.html" .Params.description }} <a href="{{ .RelPermalink }}">Read More…</a>
+      {{ partial "paragraphy.html" .Params.description }}
     {{- end }}
     {{- end }}
+    <p aria-hidden><a href="{{ .RelPermalink }}">Read More…</a></p>
   </li>
   {{- end }}
   {{- end }}
