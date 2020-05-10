@@ -1,8 +1,5 @@
 * { margin: 0; padding: 0; }
 
-/* clearfix hack after Cederholm (group class name) */
-.group:after { content: ""; display: table; clear: both; }
-
 // First significant deviation from CSS on tufte.css site - variable font size as browser width expands or contracts
 
 html, body { height: 100%; }
@@ -213,15 +210,21 @@ dl.metadata {
   dt:after { content: ":"; }
   dd { float: left; }
 }
+
+/* clearfix hack after Cederholm (group class name) */
+.group:after { display: table; clear: both; }
+
 dl.group {
   font-size: 1.1rem;
+  display: table;
   dt, dd { margin-top: 1rem; float: left }
   dd { text-indent: 1rem; }
   dt + dd { text-indent: 0; }
   dt { font-weight: bold; margin-right: 0.7rem; clear: left; }
   dt:after { content: ":"; }
-  &:after { clear: both; }
 }
+
+.group:not(dl):after { content: "" ;}
 
 
 article footer nav ul { width: 87.5% }
