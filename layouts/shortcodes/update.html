@@ -1,7 +1,7 @@
 {{/*
 NOTE SPACING MATTERS
 */}}{{- $date := .Get "date" }}{{- $date_for_attr := dateFormat "2006-01-02" $date }}{{- $date_for_display := dateFormat "Jan 2, 2006" $date }}
-{{- if isset .Params "mode" }}{{- if eq .Params.mode "inline" }}<ins class="update" role="note" datetime="{{ $date_for_attr }}"><em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}</ins>{{- end }}
+{{- if isset .Params "mode" }}{{- if eq .Params.mode "inline" }}<ins class="update" datetime="{{ $date_for_attr }}"><em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}</ins>{{- end }}
 {{- if eq .Params.mode "paragraph" }}<p class="update" role="note"><ins datetime="{{ $date_for_attr }}"><em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}</ins></p>{{- end }}
 {{- if eq .Params.mode "sidenote" }}<span class="sidenote-number"><ins class="update" role="note" datetime="{{ $date_for_attr }}"><em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}</ins></span>{{- end }}
 {{- else }}<aside role="note" class="update"><p><ins datetime="{{ $date_for_attr }}"><em><strong><time datetime="{{ $date_for_attr }}">{{ $date_for_display }}</time> update:</strong></em> {{ partial "unparagraphy" .Inner }}</ins></p></aside>{{- end }}
