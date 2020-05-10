@@ -2,9 +2,7 @@
 {{ $pages := where (where .Site.Pages "Type" "eq" "post") "Date.Year" "eq" $year }}
 <div class="list-page">
 <p>There are {{ len $pages}} posts in {{ $year }}.</p>
-<ul>
 {{ range $pages.GroupByDate "January" }}
-<li>
 <details open>
 <summary class="month">{{ .Key }}({{ len .Pages }})</summary>
 <ul>
@@ -16,7 +14,5 @@
 {{ end }}
 </ul>
 </details>
-</li>
 {{ end }}
-</ul>
 </div>
