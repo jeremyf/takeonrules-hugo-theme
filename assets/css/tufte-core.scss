@@ -293,18 +293,19 @@ q:after, q:before { content: none; }
   & pre { margin-top: 1rem; }
 }
 
-details[open] > *:not(summary):not([role="note"]) {
+details > *:not(summary):not([role="note"]) {
   border-left: $code-color 1px dotted;
   margin-left: 0.5% ; // Aligns left border with center of down caret
   padding-left: 2.5%;
   width: 52%;
 }
-details[open] > ul {
+
+details > ul:not([role="note"]) {
   width: 100%;
 }
 
 @media screen and (max-width: 760px) {
-  details[open] > *:not(summary) {
+  details > *:not(summary):not([role="note"]) {
     width: 87%;
   }
 }
