@@ -8,7 +8,7 @@
 <ul>
 {{ range .Pages }}
 <li>
-<span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
+<time datetime="{{ .Date.Format "2006-01-02" }}" class="list-date">{{ .Date.Format "Jan 2" }}</time> &middot;
 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
 </li>
 {{ end }}
