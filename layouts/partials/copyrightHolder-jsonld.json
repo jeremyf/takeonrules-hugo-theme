@@ -1,5 +1,0 @@
-{
-  "@type": "Person",
-  "name": "{{ .Site.Params.copyrightHolder }}",
-  "email": "{{ .Site.Params.copyrightHolderEmail }}"
-}
