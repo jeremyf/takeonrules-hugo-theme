@@ -16,23 +16,21 @@
   <body class="{{ if isset .Params "full_width"}}full-width{{ else }}default-width{{ end }}">
     <header aria-label="Site-wide header">
       <nav class="group" aria-label="Site-wide navigation">
-        <a href="#skip-to-content" accesskey="c" title="Skip to Content" class="offscreen">Skip to Content</a>
-        {{- with .Params.tags }}
-          <a href="#skip-to-tags" accesskey="t" title="Skip to Page's Tags" class="offscreen">Skip to Page's Tags</a>
-        {{- end }}
-        {{- with .Params.series }}
-          <a href="#skip-to-series-navigation" accesskey="s" title="Skip to Page's Series Navigation" class="offscreen">Skip to Page's Series Navigation</a>
-        {{- end }}
-        {{- if eq .Type "post" }}
-          <a href="#skip-to-related-posts" accesskey="r" title="Skip to Page's Related Posts" class="offscreen">Skip to Page's Related Posts</a>
-        {{- end }}
-        {{- with .Params.licenses }}
-          <a href="#skip-to-licenses" accesskey="l" title="Skip to Page's Licenses" class="offscreen">Skip to Page's Licenses</a>
-        {{- end }}
-        {{- with .Params.webmentions }}
-          <a href="#skip-to-webmentions" accesskey="w" title="Skip to Page's Web Mentions" class="offscreen">Skip to Page's Web Mentions</a>
-        {{- end }}
-        <hr>
+        <section id="skip-links">
+          <a href="#skip-to-content" accesskey="c" title="Skip to Content" class="offscreen">Skip to Content</a>
+          {{- with .Params.series }}
+            <a href="#skip-to-series-navigation" accesskey="s" title="Skip to Page's Series Navigation" class="offscreen">Skip to Page's Series Navigation</a>
+          {{- end }}
+          {{- if eq .Type "post" }}
+            <a href="#skip-to-related-posts" accesskey="r" title="Skip to Page's Related Posts" class="offscreen">Skip to Page's Related Posts</a>
+          {{- end }}
+          {{- with .Params.licenses }}
+            <a href="#skip-to-licenses" accesskey="l" title="Skip to Page's Licenses" class="offscreen">Skip to Page's Licenses</a>
+          {{- end }}
+          {{- with .Params.webmentions }}
+            <a href="#skip-to-webmentions" accesskey="w" title="Skip to Page's Web Mentions" class="offscreen">Skip to Page's Web Mentions</a>
+          {{- end }}
+        </section>
         <h1><a accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
           <a accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name }}</a>
