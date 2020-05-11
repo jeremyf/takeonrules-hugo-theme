@@ -2,13 +2,12 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article class="h-entry" id="skip-to-content">
+  <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
     <header>
-      <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title | title }}</h1>
+      <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title | title }}</h1>
     </header>
-    <section class="e-content content">
+    <section itemprop="text" class="e-content content">
       <div class="table-wrapper" itemscope itemtype="http://schema.org/Table">
-        <a ></a>
         <table id="table-{{ .Data.Singular | anchorize }}-{{ .Title | anchorize }}" class="stripe data-tables">
           <caption itemprop="about">Table "{{ .Title | title }}" {{ .Data.Singular | title }}: Posts with "{{ .Title | title }}" {{ .Data.Singular }}</caption>
           <thead>

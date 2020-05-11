@@ -3,14 +3,14 @@
 {{ end }}
 {{ define "main" }}
   {{- $context := . }}
-  <article class="h-entry" id="skip-to-content">
+  <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
   {{- $termTitle := .Title }}
   {{- $data := .Data }}
   {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
     <header>
-      <h1 class="p-name" id="{{ anchorize $termTitle }}">{{ .title }}</h1>
+      <h1 itemprop="name" class="p-name" id="{{ anchorize $termTitle }}">{{ .title }}</h1>
     </header>
-    <section class="e-content content">
+    <section itemprop="text" class="e-content content">
       {{ partial "paragraphy.html" .description }}
       <div class="table-wrapper" itemscope itemtype="http://schema.org/Table">
         <table id="table-{{ $data.Singular | anchorize }}-{{ .key | anchorize }}" class="stripe data-tables">

@@ -229,8 +229,8 @@ dl.group {
 
 article footer nav ul { width: 87.5% }
 
-main {
-  > ol {
+main .home {
+  ol {
     width: 100%; padding: 0;
     li {
       margin-left: 1.2rem; padding-right: 0;

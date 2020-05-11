@@ -1,5 +1,5 @@
 {{ if .IsHome }}
-{{- partial "homepage.json" . }}
+{}
 {{ else }}
-{{- partial "single-jsonld.json" . }}
+{}
 {{ end }}

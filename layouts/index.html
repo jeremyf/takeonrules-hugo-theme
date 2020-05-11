@@ -16,25 +16,31 @@
   </nav>
 {{ end }}
 {{ define "main" }}
+<article class="home" itemscope itemtype="http://schema.org/Blog">
   <h1 id="skip-to-content">Blog Posts</h1>
-  <ol aria-labelledby="skip-to-content">
+  <ol  aria-labelledby="skip-to-content">
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
-  <li>
-    <h2><a accesskey="{{ mod (add 1 $index) 10 }}" href="{{ .RelPermalink }}" id="ctrl+mod+{{ $index }}" rel="bookmark"><cite>{{ .Title }}</cite></a></h2>
+  <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" />
+    <link itemprop="author" href="#microdata-author" />
+    <link itemprop="publisher" href="#microdata-org" />
+    <link itemprop="image" href="https://takeonrules.com/images/amp-logo-takeonrules.wordpress.com-banner.jpg" />
+    <meta itemprop="wordCount" content="{{ .WordCount }}" />
+    <h2>
+      <a itemprop="mainEntityOfPage" href="{{ .RelPermalink }}" accesskey="{{ mod (add 1 $index) 10 }}" rel="bookmark">
+        <cite itemprop="name">{{ .Title }}</cite>
+      </a>
+    </h2>
     <p aria-label="Publication date and tags">
-    {{- with .Date }}<time aria-label="Published On" datetime="{{ dateFormat $.Site.Params.iso8601_format . }}">{{ dateFormat "2006-01-02" . }}</time> :: {{- end }}
-    {{- with .Params.tags }}{{ partial "tags.html" . }}{{- end }}
+      {{ partial "dates-and-tags.html" . }}
     </p>
     {{- if isset .Params "headline" }}
-      {{ partial "paragraphy.html" .Params.headline }}
-    {{- else }}
-    {{- if isset .Params "description" }}
-      {{ partial "paragraphy.html" .Params.description }}
+      <p itemprop="headline">{{ partial "unparagraphy.html" .Params.headline }}</p>
+    {{- else if isset .Params "description" }}
+      <p itemprop="description">{{ partial "unparagraphy.html" .Params.description }}</p>
     {{- end }}
-    {{- end }}
-    <p aria-hidden><a href="{{ .RelPermalink }}">Read More…</a></p>
+    <p><a href="{{ .RelPermalink }}">Read More…</a></p>
   </li>
   {{- end }}
   {{- end }}
@@ -45,4 +51,5 @@
       Page {{ .PageNumber }} of {{ .TotalPages }}
     {{- end }}
   </nav>
+</article>
 {{ end }}

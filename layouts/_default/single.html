@@ -2,23 +2,62 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}">
+  <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
+    <link itemprop="author" href="#microdata-author" />
+    <link itemprop="publisher" href="#microdata-org" />
+    <link itemprop="isPartOf" href="{{ .Site.BaseURL }}" />
+    <link itemprop="speakable" href="#skip-to-content" />
+    <meta itemprop="wordCount" content="{{ .WordCount }}" />
+    <meta itemprop="inLanguage" content="en-US" />
+
     <header aria-labelledby="{{ anchorize .Title }}">
       <hgroup>
-        <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+        <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
         {{- if .Params.title_sub }}
           <h2>{{ .Params.title_sub }}</h2>
-          {{- with .Params.headline }}<h3>{{ . }}</h3>{{- end }}
+          {{- with .Params.headline }}
+            <h3 itemprop="headline">{{ . }}</h3>
+          {{- else }}
+            <meta itemprop="headline" content="{{ with .Params.description }}{{ . | plainify }}{{ else }}{{ .Title }}{{ end }}" />
+          {{- end }}
         {{- else }}
-          {{- with .Params.headline }}<h2>{{ . }}</h2>{{- end }}
+          {{- with .Params.headline }}
+            <h2 itemprop="headline">{{ . }}</h2>
+          {{- else }}
+            <meta itemprop="headline" content="{{ with .Params.description }}{{ . | plainify }}{{ else }}{{ .Title }}{{ end }}" />
+          {{- end }}
         {{- end }}
       </hgroup>
+      <section aria-label="Author, Dates, and Tags">
+        {{ partial "dates-and-tags.html" . }}
+      </section>
     </header>
-    <section class="content e-content" aria-label="Content">
+    <section itemprop="articleBody" class="content e-content" aria-label="Content">
       {{ .Content }}
     </section>
-    <footer aria-label="Webmentions, Metadata, and Related Posts">
+    <footer>
       {{ partial "webmentions.html" . }}
+      {{- with .Params.series }}
+        <nav aria-labelledby="skip-to-series-navigation">
+          {{- range (where $.Site.Data.series "key" "eq" .) }}
+            {{- $title := .title }}
+            <h2 itemprop="articleSection" id="skip-to-series-navigation">
+               Series: <a href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ $title }}</a>
+            </h2>
+            <p>
+              {{- $series := where $.Site.Pages "Params.series" .key }}
+              {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
+              {{- range first 1 $prev }}
+                The previous post in the series is <a rel="prev" title="{{ .Title }}" href="{{ .Permalink }}"><cite>{{ .Title }}</cite></a>.
+              {{- end}}
+              {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
+              {{- range last 1 $next }}
+                The next post in the series is <a rel="next" title="{{ .Title }}" href="{{ .Permalink }}"><cite>{{ .Title }}</cite></a>.
+              {{- end}}
+            </p>
+          {{- end}}
+        </nav>
+      {{- end }}
       <nav aria-labelledby="skip-to-related-posts">
         <h2 id="skip-to-related-posts">Related Posts</h2>
         <ul>
@@ -29,35 +68,16 @@
           {{ end }}
         </ul>
       </nav>
-      <nav aria-labelledby="skip-to-posts-metadata">
-        <h2 id="skip-to-posts-metadata">Metadata</h2>
-        <dl class="metadata">
-          <dt>Published</dt><dd><time class="dt-published" datetime="{{ dateFormat $.Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date }}</time></dd>
-          {{ if ne .Lastmod .Date }}<dt><ins>Updated</ins><dd><ins><time class="dt-updated" datetime="{{ .Lastmod.Format $.Site.Params.iso8601_format }}">{{ .Lastmod.Format "2006-01-02" }}</time></ins></dd>{{ end }}
-          {{- with .Params.tags }}
-            <dt id="skip-to-tags">Tags</dt>
-            {{- range . }}
-              <dd><a rel="tag" class="p-category" aria-label="Posts tagged with “{{ . }}”" href="{{ "tags" | absURL }}/{{ . | urlize }}">#{{ . | anchorize }}</a></dd>
-            {{- end }}
-          {{- end }}
-          <dt>Author</dt><dd class="u-author p-author"><a rel="author" class="u-url" href="{{ .Site.BaseURL }}">{{ .Site.Params.copyrightHolder }}</a></dd>
-          <dt>Permalink</dt><dd><a href="{{ .Permalink }}" rel="bookmark" class="u-url">{{ .Permalink }}</a></dd>
-        {{- with .Params.series }}
-          {{- range (where $.Site.Data.series "key" "eq" .) }}
-            {{- $title := .title }}
-            <dt>Series</dt><dd><a name='skip-to-series-navigation' href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ $title }}</a></dd>
-            {{- $series := where $.Site.Pages "Params.series" .key }}
-            {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
-            {{- range first 1 $prev }}
-              <dt>Previous in Series</dt><dd><a rel="prev" title="{{ .Title }}" href="{{ .Permalink }}"><cite>{{ .Title }}</cite></a></dd>
-            {{- end}}
-            {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
-            {{- range last 1 $next }}
-              <dt>Next in Series</dt><dd><a rel="next" title="{{ .Title }}" href="{{ .Permalink }}"><cite>{{ .Title }}</cite></a></dd>
-            {{- end}}
-          {{- end}}
-        {{- end }}
-      </dl>
+      <nav aria-labelledby="skip-to-licenses">
+        <h2 id="skip-to-licenses">License(s)</h2>
+        {{ $context := . }}
+        {{ range .Params.licenses }}
+          <p class="license" role="complimentary">
+            {{ with index $.Site.Data.licenses . }}
+              {{ partial .PartialForLicenseFooter $context }}
+            {{ end }}
+          </p>
+        {{ end }}
       </nav>
     </footer>
   </article>

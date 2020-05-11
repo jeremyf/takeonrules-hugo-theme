@@ -2,11 +2,11 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article class="h-entry" id="skip-to-content">
+  <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
     <header>
-      <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
     </header>
-    <section class="e-content content terms">
+    <section itemprop="text" itemscope itemtype="http://schema.org/WebPageElement" class="e-content content">
       {{ $data := .Data }}
       <details open>
         <summary>By Frequency</summary>
