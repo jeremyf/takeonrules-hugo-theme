@@ -6,7 +6,7 @@
 // body header, body footer, body nav, body .content .margin-toggle:not(.sidenote-number) { display:none; }
 // body main header, .marginnote, .sidenote { display: inherit; }
 body {
-  font-size:  12pt;
+  font-size:  12pt; 
   // Without this line, the links could spill into the right column; I suspect this is in play regardless, and will
   // require more experimentation to see how things behave.
   overflow-wrap: break-word;
