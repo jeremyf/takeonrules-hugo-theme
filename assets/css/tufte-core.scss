@@ -282,7 +282,7 @@ article hgroup h2 { margin-bottom: 1.2rem; }
 }
 /*--- End of Basic Layout stuff from tufte.css ---*/
 
-sup { font-size: 0.7rem; }
+sup { font-size: 51%; } /* A weird rendering error happens when this is a set height or greater than 50% */
 ins { text-decoration-line: none; }
 q:after, q:before { content: none; }
 
