@@ -22,7 +22,7 @@
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
-  <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" />
+  <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
     <link itemprop="author" href="#microdata-author" />
     <link itemprop="publisher" href="#microdata-org" />
     <link itemprop="image" href="https://takeonrules.com/images/amp-logo-takeonrules.wordpress.com-banner.jpg" />
