@@ -142,8 +142,8 @@ pre code { font-size: 1.0rem; line-height: 1.7142; margin-top: 1.7142rem; displa
 // For some reason AMP is mis-behaving around this
 /* BEGIN SKIP-AMP */
 nav {
-  a.active:before { content:"\000AB\000a0"; } // escaped unicode for the double-angled pointing quotes and then a space on active menu links
-  a.active:after { content:"\000a0\000BB"; }
+  a.active:before { content:"« "; }
+  a.active:after { content:" »"; }
 }
 /* END SKIP-AMP */
 
