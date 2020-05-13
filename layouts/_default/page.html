@@ -9,10 +9,9 @@
     <section itemprop="text" class="e-content content" role="region" aria-label="article content">
       {{ .Content }}
     </section>
-    {{- if isset .Params "webmentions" }}
-      <footer aria-label="Webmentions">
-        {{ partial "webmentions.html" . }}
-      </footer>
-    {{- end }}
+    <footer>
+      {{ partial "webmentions.html" . }}
+      {{ partial "licenses.html" . }}
+    </footer>
   </article>
 {{ end }}

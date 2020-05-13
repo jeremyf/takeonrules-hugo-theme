@@ -68,18 +68,7 @@
           {{ end }}
         </ul>
       </nav>
-      <nav aria-labelledby="skip-to-licenses">
-        <h2 id="skip-to-licenses">License(s)</h2>
-        <link itemprop="mainEntityOfPage" href={{ .RelPermalink }}>
-        {{ $context := . }}
-        {{ range .Params.licenses }}
-          <p class="license" role="complimentary">
-            {{ with index $.Site.Data.licenses . }}
-              {{ partial .PartialForLicenseFooter $context }}
-            {{ end }}
-          </p>
-        {{ end }}
-      </nav>
+      {{ partial "licenses.html" . }}
     </footer>
   </article>
 {{ end }}
