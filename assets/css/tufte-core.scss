@@ -97,10 +97,9 @@ figcaption {
 
 // Without this setting, when the header would wrap, the letters would overlap
 h2, h3, h4, summary, .p, p, .table-wrapper, pre, dl { width: 55%; }
-article header, body > footer { width: 95%; }
+article header, body > footer { width: 85%; }
 .full-width {
-  section > ul, section > ol { width: 85%; }
-  h2, h3, h4, summary, .p, p, footer, .table-wrapper, pre, dl { width: 90%; }
+  section > ul, section > ol, h2, h3, h4, summary, .p, p, footer, .table-wrapper, pre, dl { width: 85%; }
 }
 
 
