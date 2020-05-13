@@ -18,13 +18,13 @@
           {{- with .Params.headline }}
             <h3 itemprop="headline">{{ . }}</h3>
           {{- else }}
-            <meta itemprop="headline" content="{{ with .Params.description }}{{ . | plainify }}{{ else }}{{ .Title }}{{ end }}" />
+            <meta itemprop="headline" content="{{ with .Params.description }}{{ substr (. | plainify ) 0 100 }}&hellip;{{ else }}{{ .Title }}{{ end }}" />
           {{- end }}
         {{- else }}
           {{- with .Params.headline }}
             <h2 itemprop="headline">{{ . }}</h2>
           {{- else }}
-            <meta itemprop="headline" content="{{ with .Params.description }}{{ . | plainify }}{{ else }}{{ .Title }}{{ end }}" />
+            <meta itemprop="headline" content="{{ with .Params.description }}{{ substr (. | plainify ) 0 100 }}&hellip;{{ else }}{{ .Title }}{{ end }}" />
           {{- end }}
         {{- end }}
       </hgroup>
@@ -70,6 +70,7 @@
       </nav>
       <nav aria-labelledby="skip-to-licenses">
         <h2 id="skip-to-licenses">License(s)</h2>
+        <link itemprop="mainEntityOfPage" href={{ .RelPermalink }}>
         {{ $context := . }}
         {{ range .Params.licenses }}
           <p class="license" role="complimentary">
