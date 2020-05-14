@@ -11,7 +11,7 @@
   "items": [
     {{- $scratch := newScratch }}
     {{- $scratch.Set "blogPostCounter" 0 }}
-    {{- range first 15 (where .Site.Pages "Type" "post") }}
+    {{- range first 15 (where .Site.Pages "Type" "in" .Site.Params.paginatedSections) }}
     {{- $scratch.Add "blogPostCounter" 1 }}
     {
       "id": {{ .Permalink | jsonify }},

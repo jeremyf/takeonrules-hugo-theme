@@ -1,0 +1,21 @@
+{{- with .Params.series }}
+  <nav aria-labelledby="skip-to-series-navigation">
+    {{- range (where $.Site.Data.series "key" "eq" .) }}
+      {{- $title := .title }}
+      <h2 itemprop="articleSection" id="skip-to-series-navigation">
+         Series: <a href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark">{{ $title }}</a>
+      </h2>
+      <p>
+        {{- $series := where $.Site.Pages "Params.series" .key }}
+        {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
+        {{- range first 1 $prev }}
+          The previous post in the series is <a rel="prev" title="{{ .Title }}" href="{{ .Permalink }}"><cite>{{ .Title }}</cite></a>.
+        {{- end}}
+        {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
+        {{- range last 1 $next }}
+          The next post in the series is <a rel="next" title="{{ .Title }}" href="{{ .Permalink }}"><cite>{{ .Title }}</cite></a>.
+        {{- end}}
+      </p>
+    {{- end}}
+  </nav>
+{{- end }}

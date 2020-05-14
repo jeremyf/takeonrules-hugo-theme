@@ -1,0 +1,47 @@
+{{ define "breadcrumb" }}
+  {{ partial "breadcrumb.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <article class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
+    <span itemprop="hasPart"  itemscope itemtype="http://schema.org/BlogPosting">
+    <link itemprop="author" href="#microdata-author" />
+    <link itemprop="publisher" href="#microdata-org" />
+    <link itemprop="isPartOf" href="{{ .Site.BaseURL }}" />
+    <link itemprop="speakable" href="#skip-to-content" />
+    <meta itemprop="wordCount" content="{{ .WordCount }}" />
+    <meta itemprop="inLanguage" content="en-US" />
+    <header aria-labelledby="{{ anchorize .Title }}">
+      {{ partial "header/post.html" . }}
+      {{- with .Params.images }}
+        {{- range . }}
+          {{- $original := resources.Get .src  }}
+          <span itemprop="image" itemscope itemType="http://schema.org/ImageObject">
+            <link itemprop="url" href="{{ $original.Permalink }}" content="{{ $original.Permalink }}" />
+          </span>
+        {{- end }}
+      {{- end }}
+    </header>
+    <section itemprop="mainEntityOfPage" class="content e-content" aria-label="Content" itemscope itemtype="http://schema.org/Review">
+      <link itemprop="author" href="#microdata-author" />
+      <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/CreativeWork">
+        {{ with .Params.itemReviewed }}
+          <link itemprop="url" href="{{ .url }}">
+          <meta itemprop="name" content="{{ .name }}">
+          {{ with .authors }}
+            <meta itemprop="author" content="{{ . }}">
+          {{ end }}
+        {{ else }}
+          {{ .Get }}
+        {{ end }}
+      </span>
+      {{ .Content }}
+    </section>
+    <footer>
+      {{ partial "footer/webmentions.html" . }}
+      {{ partial "footer/series.html" . }}
+      {{ partial "footer/related-posts.html" . }}
+      {{ partial "footer/licenses.html" . }}
+    </footer>
+  </article>
+{{ end }}

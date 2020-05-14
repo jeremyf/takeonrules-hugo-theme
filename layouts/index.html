@@ -1,5 +1,5 @@
 {{ define "head-title" }}
-  {{- $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
+  {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   {{- if eq 1 $paginator.PageNumber }}
     <title>{{ .Title }}</title>
   {{- else }}
@@ -7,7 +7,7 @@
   {{- end }}
 {{ end }}
 {{ define "breadcrumb" }}
-  {{- $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
+  {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   <nav aria-label="Blog postings pagination" class="paginator">
     {{- with $paginator }}
       {{- if .HasNext }}<a accesskey="p" href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a accesskey="n" href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
@@ -19,7 +19,7 @@
 <article class="home" itemscope itemtype="http://schema.org/Blog">
   <h1 id="skip-to-content">Blog Posts</h1>
   <ol  aria-labelledby="skip-to-content">
-  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") .Site.Params.pagination_size }}
+  {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
   <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
