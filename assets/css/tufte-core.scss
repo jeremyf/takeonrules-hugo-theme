@@ -49,6 +49,7 @@ blockquote {
 
 /* BEGIN Epigraphs */
 div.epigraph > blockquote {
+  border-left: none;
   font-style: italic;
   p, ul { font-style: italic; margin: 1rem 0; }
   > footer {
