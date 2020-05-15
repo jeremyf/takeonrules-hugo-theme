@@ -324,7 +324,7 @@ a.offscreen {
 }
 mark { background-color: lighten($update-color, 40%); }
 
-del { text-decoration-color: $contrast-color; }
+del { text-decoration-thickness: 2px; text-decoration-color: $contrast-color; }
 
 @media screen and (prefers-color-scheme: dark) {
   .contrast { color: $contrast-color-dark; }
