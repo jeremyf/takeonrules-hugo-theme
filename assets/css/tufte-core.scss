@@ -49,14 +49,20 @@ blockquote {
 
 /* BEGIN Epigraphs */
 div.epigraph > blockquote {
+  width: 45%; padding-left: 5%;
+  @media screen and (max-width:760px) {
+    width: 75%; padding-left: 5%
+  }
   border-left: none;
   font-style: italic;
   p, ul { font-style: italic; margin: 1rem 0; }
   > footer {
     margin-top: 0rem; font-style: normal;
+    line-height: 1.5rem;
     > cite { font-style: italic; }
   }
 }
+
 /* END Epigraphs */
 
 /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
