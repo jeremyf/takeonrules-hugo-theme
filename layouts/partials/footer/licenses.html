@@ -4,7 +4,7 @@
   <link itemprop="mainEntityOfPage" href={{ .RelPermalink }}>
   {{ $context := . }}
   {{ range .Params.licenses }}
-    <p class="license" role="complimentary">
+    <p class="license">
       {{ with index $.Site.Data.licenses . }}
         {{ partial .PartialForLicenseFooter $context }}
       {{ end }}
