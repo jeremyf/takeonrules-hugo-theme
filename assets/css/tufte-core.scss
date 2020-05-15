@@ -196,15 +196,6 @@ dl:not(.group) {
   dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
 }
 
-dl.metadata {
-  font-size: 1.1rem;
-  padding-top: 0.5rem; clear: both;
-  padding-bottom: 3.5rem;
-  dt { padding-top: 0.5rem; font-weight: bold; clear: left; }
-  dt:after { content: ":"; }
-  dd { float: left; }
-}
-
 /* clearfix hack after Cederholm (group class name) */
 .group:after { display: table; clear: both; }
 
