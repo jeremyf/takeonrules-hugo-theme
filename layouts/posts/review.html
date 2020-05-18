@@ -3,8 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <article class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
-    <span itemprop="hasPart"  itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/Review">
     <link itemprop="author" href="#microdata-author" />
     <link itemprop="publisher" href="#microdata-org" />
     <link itemprop="isPartOf" href="{{ .Site.BaseURL }}" />
@@ -22,8 +21,7 @@
         {{- end }}
       {{- end }}
     </header>
-    <section itemprop="mainEntityOfPage" class="content e-content" aria-label="Content" itemscope itemtype="http://schema.org/Review">
-      <link itemprop="author" href="#microdata-author" />
+    <section itemprop="mainEntityOfPage" class="content e-content" aria-label="Content" >
       <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/CreativeWork">
         {{ with .Params.itemReviewed }}
           <link itemprop="url" href="{{ .url }}">
