@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <article class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/Review">
+  <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/Review">
     <header aria-labelledby="{{ anchorize .Title }}">
       {{ partial "header/post.html" . }}
       <link itemprop="author" href="#microdata-author" />
@@ -12,19 +12,19 @@
       <link itemprop="speakable" href="#skip-to-content" />
       <meta itemprop="wordCount" content="{{ .WordCount }}" />
       <meta itemprop="inLanguage" content="en-US" />
-    </header>
-    <section itemprop="mainEntityOfPage" class="content e-content" aria-label="Content" >
       <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/CreativeWork">
         {{ with .Params.itemReviewed }}
           <link itemprop="url" href="{{ .url }}">
           <meta itemprop="name" content="{{ .name }}">
           {{ with .authors }}
-            <meta itemprop="author" content="{{ . }}">
+          <meta itemprop="author" content="{{ . }}">
           {{ end }}
         {{ else }}
           {{ .Get }}
         {{ end }}
       </span>
+    </header>
+    <section itemprop="reviewBody" class="content e-content" aria-label="Content" >
       {{ .Content }}
     </section>
     <footer>
