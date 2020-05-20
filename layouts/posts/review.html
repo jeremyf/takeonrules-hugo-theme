@@ -4,22 +4,14 @@
 
 {{ define "main" }}
   <article class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/Review">
-    <link itemprop="author" href="#microdata-author" />
-    <link itemprop="publisher" href="#microdata-org" />
-    <link itemprop="isPartOf" href="{{ .Site.BaseURL }}" />
-    <link itemprop="speakable" href="#skip-to-content" />
-    <meta itemprop="wordCount" content="{{ .WordCount }}" />
-    <meta itemprop="inLanguage" content="en-US" />
     <header aria-labelledby="{{ anchorize .Title }}">
       {{ partial "header/post.html" . }}
-      {{- with .Params.images }}
-        {{- range . }}
-          {{- $original := resources.Get .src  }}
-          <span itemprop="image" itemscope itemType="http://schema.org/ImageObject">
-            <link itemprop="url" href="{{ $original.Permalink }}" content="{{ $original.Permalink }}" />
-          </span>
-        {{- end }}
-      {{- end }}
+      <link itemprop="author" href="#microdata-author" />
+      <link itemprop="publisher" href="#microdata-org" />
+      <link itemprop="isPartOf" href="{{ .Site.BaseURL }}" />
+      <link itemprop="speakable" href="#skip-to-content" />
+      <meta itemprop="wordCount" content="{{ .WordCount }}" />
+      <meta itemprop="inLanguage" content="en-US" />
     </header>
     <section itemprop="mainEntityOfPage" class="content e-content" aria-label="Content" >
       <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/CreativeWork">

@@ -23,16 +23,16 @@
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
   <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-    <link itemprop="author" href="#microdata-author" />
-    <link itemprop="publisher" href="#microdata-org" />
-    <link itemprop="image" href="https://takeonrules.com/images/amp-logo-takeonrules.wordpress.com-banner.jpg" />
-    <meta itemprop="wordCount" content="{{ .WordCount }}" />
     <h2>
       <a itemprop="mainEntityOfPage" href="{{ .RelPermalink }}" accesskey="{{ mod (add 1 $index) 10 }}" rel="bookmark">
         <cite itemprop="name">{{ .Title }}</cite>
       </a>
     </h2>
     <p aria-label="Publication date and tags">
+      <link itemprop="author" href="#microdata-author" />
+      <link itemprop="publisher" href="#microdata-org" />
+      <link itemprop="image" href="https://takeonrules.com/images/amp-logo-takeonrules.wordpress.com-banner.jpg" />
+      <meta itemprop="wordCount" content="{{ .WordCount }}" />
       {{ partial "dates-and-tags.html" . }}
     </p>
     {{- if isset .Params "headline" }}
