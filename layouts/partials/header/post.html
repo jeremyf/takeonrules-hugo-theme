@@ -16,9 +16,5 @@
   {{- end }}
 </hgroup>
 <section aria-label="Author, Dates, and Tags">
-  {{- with .Params.images }}
-  {{- else }}
-    <link itemprop="image" href="#microdata-logo" />
-  {{- end }}
   {{ partial "dates-and-tags.html" . }}
 </section>
