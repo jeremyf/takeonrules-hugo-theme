@@ -31,9 +31,15 @@
     <p aria-label="Publication date and tags">
       <link itemprop="author" href="#microdata-author" />
       <link itemprop="publisher" href="#microdata-org" />
-      <link itemprop="image" href="https://takeonrules.com/images/amp-logo-takeonrules.wordpress.com-banner.jpg" />
       <meta itemprop="wordCount" content="{{ .WordCount }}" />
       {{ partial "dates-and-tags.html" . }}
+      {{ with .Params.images }}
+        {{ range . }}
+          <link itemprop="image" href="{{ .src }}" />
+        {{ end }}
+      {{ else }}
+        <link itemprop="image" href="{{ $.Site.BaseURL }}images/amp-logo-takeonrules.wordpress.com-banner.jpg" />
+      {{ end }}
     </p>
     {{- if isset .Params "headline" }}
       <p itemprop="headline">{{ partial "unparagraphy.html" .Params.headline }}</p>
