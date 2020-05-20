@@ -3,7 +3,7 @@
   <span itemid="#microdata-author" itemscope itemType="http://schema.org/Person">
     &copy;{{ now.Format "2006" }}&nbsp;
     <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
-      <span itemprop="name">{{ .Site.Params.copyrightHolder }}</span>
+      <span class="p-name" itemprop="name">{{ .Site.Params.copyrightHolder }}</span>
     </a>
   </span>
   <span itemid='#microdata-org' itemscope itemType='http://schema.org/Organization' >
