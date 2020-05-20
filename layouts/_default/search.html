@@ -5,6 +5,7 @@
   <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" role="search" itemscope itemtype="http://schema.org/WebPageElement">
     <header>
       <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      {{ partial "footer/image.html" . }}
     </header>
     <section itemprop="text" class="e-content">
       <div class="hide-js" id="lunr-search-result-container" role="search">

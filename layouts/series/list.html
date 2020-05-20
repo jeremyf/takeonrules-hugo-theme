@@ -9,6 +9,7 @@
   {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
     <header>
       <h1 itemprop="name" class="p-name" id="{{ anchorize $termTitle }}">{{ .title }}</h1>
+      {{ partial "footer/image.html" . }}
     </header>
     <section itemprop="text" class="e-content content">
       {{ partial "paragraphy.html" .description }}

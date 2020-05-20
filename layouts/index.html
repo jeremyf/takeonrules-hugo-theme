@@ -39,7 +39,7 @@
           <link itemprop="image" href="{{ .src }}" />
         {{ end }}
       {{ else }}
-        <link itemprop="image" href="{{ $.Site.BaseURL }}images/amp-logo-takeonrules.wordpress.com-banner.jpg" />
+        {{ partial "footer/image.html" . }}
       {{ end }}
     </p>
     {{- if isset .Params "headline" }}

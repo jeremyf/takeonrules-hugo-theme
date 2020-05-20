@@ -5,6 +5,7 @@
   <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
     <header>
       <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      {{ partial "footer/image.html" . }}
     </header>
     <section itemprop="text" itemscope itemtype="http://schema.org/WebPageElement" class="e-content content">
       {{ $data := .Data }}
