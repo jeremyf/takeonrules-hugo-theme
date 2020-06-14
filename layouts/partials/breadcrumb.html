@@ -2,7 +2,7 @@
   <span class="label">Breadcrumbs: </span>
   {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3) }}
 </nav>
-{{- if eq .Type "post" }}
+{{- if in .Site.Params.paginatedSections .Type -}}
 <nav aria-label="Post neighbors" class="paginator breadcrumbs">
   <span class="label">Post Neighbors: </span>
   {{- with .PrevInSection }}<a itemprop="relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>&nbsp;|&nbsp;{{- end }}{{- with .NextInSection }}<a itemprop="relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>&nbsp;|&nbsp;{{- end }}<a accesskey="r" href="{{ .Site.BaseURL }}index.xml">RSS feed</a>
