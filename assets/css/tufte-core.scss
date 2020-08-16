@@ -291,7 +291,8 @@ details > *:not(summary):not([role="note"]) {
   width: 52%;
 }
 
-details > ul:not([role="note"]) {
+details > ol:not([role="note"]), details > ul:not([role="note"]) {
+  padding-left: 5%;
   width: 100%;
 }
 
