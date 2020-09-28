@@ -1,6 +1,6 @@
 // Responsible for common rendering behavior of the marginalia. When tinkering
 // with this file, remember to review both the narrow version and the print version
-[role="note"]:not(p):not(section.update) {
+[role="note"]:not(p) {
   .fullwidth { max-width: 100%; }
   float: right;
   clear: right;
