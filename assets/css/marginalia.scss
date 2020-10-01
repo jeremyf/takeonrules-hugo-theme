@@ -68,7 +68,7 @@ aside[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; }
   aside[role="note"], ins[role="note"] {
     border-left: $contrast-color thin dotted;
     padding-left: 0.5rem;
-    margin: 1rem 2.5%;
+    margin: 1rem 10% 1rem 2.5%; // Note, the 12.5% + 87.5% from below
   }
   aside[role="note"], figure[role="note"], ins[role="note"] {
     width: 87.5%;
