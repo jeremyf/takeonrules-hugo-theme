@@ -12,7 +12,7 @@
       <link itemprop="speakable" href="#skip-to-content" />
       <meta itemprop="wordCount" content="{{ .WordCount }}" />
       <meta itemprop="inLanguage" content="en-US" />
-      <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/CreativeWork">
+      <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .Params.itemReviewedType }}{{ . }}{{ else }}Book{{ end }}">
         {{ with .Params.itemReviewed }}
           <link itemprop="url" href="{{ .url }}">
           <meta itemprop="name" content="{{ .name }}">
