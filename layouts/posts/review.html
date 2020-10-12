@@ -12,11 +12,16 @@
       <link itemprop="speakable" href="#skip-to-content" />
       <meta itemprop="wordCount" content="{{ .WordCount }}" />
       <meta itemprop="inLanguage" content="en-US" />
+      {{- with .Params.ratingValue }}
+      <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+        <meta itemprop="ratingValue">{{ . }}</meta>
+      </span>
+      {{- end }}
       <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .Params.itemReviewedType }}{{ . }}{{ else }}Book{{ end }}">
         {{ with .Params.itemReviewed }}
           <link itemprop="url" href="{{ .url }}">
           <meta itemprop="name" content="{{ .name }}">
-          {{ with .authors }}
+          {{ range .authors }}
           <meta itemprop="author" content="{{ . }}">
           {{ end }}
         {{ else }}
