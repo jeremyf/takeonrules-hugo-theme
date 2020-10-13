@@ -207,10 +207,11 @@ dl:not(.group) {
 .group:after { display: table; clear: both; }
 
 dl.group {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   display: table;
-  dt, dd { margin-top: 1rem; float: left }
-  dd { text-indent: 1rem; }
+  dt { float: left; }
+  dt, dd { margin-top: 1rem; line-height: 1.5rem; }
+  dd { text-indent: 1rem; float: initial; }
   dt + dd { text-indent: 0; }
   dt { font-weight: bold; margin-right: 0.7rem; clear: left; }
   dt:after { content: ":"; }
