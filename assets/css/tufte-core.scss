@@ -210,9 +210,8 @@ dl.group {
   font-size: 1.2rem;
   display: table;
   ul { font-size: 1.2rem; }
-  dt { float: left; }
-  dt, dd { margin-top: 1rem; line-height: 1.5rem; }
-  dd { text-indent: 1rem; float: initial; }
+  dt, dd { margin-top: 1rem; line-height: 1.5rem; float: left; }
+  dd { text-indent: 1rem; }
   dt + dd { text-indent: 0; }
   dt { font-weight: bold; margin-right: 0.7rem; clear: left; }
   dt:after { content: ":"; }
