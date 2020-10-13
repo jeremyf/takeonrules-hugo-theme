@@ -209,6 +209,7 @@ dl:not(.group) {
 dl.group {
   font-size: 1.2rem;
   display: table;
+  ul { font-size: 1.2rem; }
   dt { float: left; }
   dt, dd { margin-top: 1rem; line-height: 1.5rem; }
   dd { text-indent: 1rem; float: initial; }

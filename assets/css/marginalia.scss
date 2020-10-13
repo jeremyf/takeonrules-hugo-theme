@@ -22,6 +22,10 @@
   }
 }
 
+[role="note"] {
+    pre, code { font-size: 1rem; }
+}
+
 figure[role="note"] {
   max-width: 100%;
   figcaption {
