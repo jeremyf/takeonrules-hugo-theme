@@ -117,16 +117,20 @@ body > header {
     h1 { display: inline-block; margin: 0; }
     padding: 1rem 0;
     a {
-      &.hide-when-javascript-disabled { display: none; }
-      font-style: normal;
-      font-size: 1.2rem;
-      font-family: $sans-font;
-      letter-spacing: 0.15em;
-      text-decoration: none;
-      display: inline-block;
-      margin: 1.5rem 2rem 0 auto;
-      vertical-align: baseline;
-      font-variant: small-caps;
+        &.hide-when-javascript-disabled { display: none; }
+        // This is a hack to prevent the underline from overflowing
+        // into empty space.  Instead the underline is only under the
+        // character.
+        u { letter-spacing: 0; margin-right: .15rem; }
+        letter-spacing: 0.15em;
+        font-style: normal;
+        font-size: 1.2rem;
+        font-family: $sans-font;
+        text-decoration: none;
+        display: inline-block;
+        margin: 1.5rem 2rem 0 auto;
+        vertical-align: baseline;
+        font-variant: small-caps;
     }
   }
 }

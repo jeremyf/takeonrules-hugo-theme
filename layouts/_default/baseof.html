@@ -33,7 +33,7 @@
         </section>
         <h1><a itemprop="url" accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
-          <a itemprop="url" accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name }}</a>
+          <a itemprop="url" accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a>
         {{- end }}
         <a accesskey="/" {{ if eq (string $.Page.RelPermalink) "/search/" }}class="active"{{ end }} id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a>
       </nav>
