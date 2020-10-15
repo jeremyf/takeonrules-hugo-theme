@@ -5,7 +5,7 @@
 {{- if in .Site.Params.paginatedSections .Type -}}
 <nav aria-label="Post neighbors" class="paginator breadcrumbs">
   <span class="label">Post Neighbors: </span>
-  {{- with .PrevInSection }}<a itemprop="relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>&nbsp;|&nbsp;{{- end }}{{- with .NextInSection }}<a itemprop="relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>&nbsp;|&nbsp;{{- end }}<a href="{{ .Site.BaseURL }}index.xml">RSS feed</a>
+  {{- with .PrevInSection }}<a itemprop="relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev"><u>P</u>revious post</a>&nbsp;|&nbsp;{{- end }}{{- with .NextInSection }}<a itemprop="relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next"><u>N</u>ext post</a>&nbsp;|&nbsp;{{- end }}<a href="{{ .Site.BaseURL }}index.xml">RSS feed</a>
 </nav>
 {{- end }}
 {{- define "breadcrumbnav" }}
@@ -16,7 +16,7 @@
   {{- end }}
   <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
     <a itemprop="item" href="{{ .p1.Permalink }}" class="{{ if eq .p1 .p2 }}active{{ end }}">
-      <span itemprop="name">{{ if eq .p1.Permalink .p1.Site.BaseURL }}Home{{ else }}{{ .p1.Title }}{{ end }}</span>
+      <span itemprop="name">{{ if eq .p1.Permalink .p1.Site.BaseURL }}<u>H</u>ome{{ else }}{{ .p1.Title }}{{ end }}</span>
       <meta itemprop="position" content="{{ .depth }}" />
     </a>
   </span>

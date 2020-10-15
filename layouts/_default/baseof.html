@@ -17,18 +17,18 @@
     <header aria-label="Site-wide header">
       <nav itemprop="hasPart" class="group" aria-label="Site-wide navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <section id="skip-links">
-          <a href="#skip-to-content" accesskey="c" title="Skip to Content" class="offscreen">Skip to Content</a>
+          <a href="#skip-to-content" accesskey="c" title="Skip to Content" class="offscreen">Skip to <u>C</u>ontent</a>
           {{- with .Params.series }}
-            <a href="#skip-to-series-navigation" accesskey="s" title="Skip to Page's Series Navigation" class="offscreen">Skip to Page's Series Navigation</a>
+            <a href="#skip-to-series-navigation" accesskey="s" title="Skip to Page's Series Navigation" class="offscreen">Skip to Page's <u>S</u>eries Navigation</a>
           {{- end }}
           {{- if eq .Type "post" }}
-            <a href="#skip-to-related-posts" accesskey="r" title="Skip to Page's Related Posts" class="offscreen">Skip to Page's Related Posts</a>
+            <a href="#skip-to-related-posts" accesskey="r" title="Skip to Page's Related Posts" class="offscreen">Skip to Page's <u>R</u>elated Posts</a>
           {{- end }}
           {{- with .Params.licenses }}
-            <a href="#skip-to-licenses" accesskey="l" title="Skip to Page's Licenses" class="offscreen">Skip to Page's Licenses</a>
+            <a href="#skip-to-licenses" accesskey="l" title="Skip to Page's Licenses" class="offscreen">Skip to Page's <u>L</u>icenses</a>
           {{- end }}
           {{- with .Params.webmentions }}
-            <a href="#skip-to-webmentions" accesskey="w" title="Skip to Page's Web Mentions" class="offscreen">Skip to Page's Web Mentions</a>
+            <a href="#skip-to-webmentions" accesskey="w" title="Skip to Page's Web Mentions" class="offscreen">Skip to Page's <u>W</u>eb Mentions</a>
           {{- end }}
         </section>
         <h1><a itemprop="url" accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
