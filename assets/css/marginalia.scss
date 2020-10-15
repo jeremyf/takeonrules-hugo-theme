@@ -23,7 +23,9 @@
 }
 
 [role="note"] {
+
     pre, code { font-size: 1rem; }
+    ins p:first-of-type { margin-bottom: -1.5rem; margin-top: 0rem; }
 }
 
 figure[role="note"] {
