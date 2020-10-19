@@ -1,6 +1,4 @@
-/* This file contains all the constants for colors and font styles */
-
-
+// This file contains all the constants for colors and font styles
 // Enter Hipster Fonts
 
 $body-font: Times, serif;
@@ -25,9 +23,9 @@ $update-color-light: #5B5071;
 
 $text-color-dark: #f5f5f5;
 $bg-color-dark: #172637;
-$contrast-color-dark: #66FF00; // Green
+$contrast-color-dark: darken(#66FF00, 10%); // Green
 // $contrast-color-dark: #FF6100; // Orange
-$code-color-dark: lighten(#44B4CC, 15%);
+$code-color-dark: lighten(#44B4CC, 25%);
 $border-color-dark: lighten($bg-color-dark, 30%);
 $table-header-color-dark: $border-color-dark;
 $blockquote-color-dark: #FFCC00;

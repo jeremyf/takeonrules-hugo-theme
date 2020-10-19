@@ -335,6 +335,7 @@ del { text-decoration-thickness: 2px; text-decoration-color: $contrast-color; }
   .contrast { color: $contrast-color-dark; }
   .ogc { border-left-color: $code-color-dark; }
   blockquote { border-left-color: $blockquote-color-dark; color: $blockquote-color-dark; }
+  .license { color: $blockquote-color-dark; }
   .update { color: $update-color-dark; }
   pre, code { color:$code-color-dark; }
   a { color: $contrast-color-dark; }
