@@ -65,7 +65,7 @@ li, blockquote {
 //       render it similar to the print style
 .full-width { [role="note"]:not(p), .sidenote-number { display: none; } }
 
-aside[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; }
+div[role="note"], aside[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; }
 @media screen and (max-width: 760px) {
   [role="note"] {
     display: block;
