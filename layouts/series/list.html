@@ -17,7 +17,7 @@
         <table id="table-{{ $data.Singular | anchorize }}-{{ .key | anchorize }}" class="stripe data-tables">
           <caption itemprop="about">Table "{{ .title | title }}" {{ $data.Singular | title }}: Posts in "{{ .title }}" {{ $data.Singular }}</caption>
           <thead>
-            <tr><th>Title</th><th>Date</th></tr>
+            <tr><th scope="col">Title</th><th scope="col">Date</th></tr>
           </thead>
           <tbody>
             {{- range $data.Pages }}

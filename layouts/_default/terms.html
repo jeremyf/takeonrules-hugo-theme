@@ -13,7 +13,7 @@
         <table id="table-{{ anchorize .Title }}" class="data-tables stripe">
           <caption itemprop="about">Table {{ .Title }}: All {{ .Title }} in {{ .Site.Title }}</caption>
           <thead>
-            <tr><th>Title</th><th class="r">Count</th><th class="c">First Post</th><th class="c">Last Post</th></tr>
+            <tr><th scope="col">Title</th><th class="r" scope="col">Count</th><th class="c" scope="col">First Post</th><th class="c" scope="col">Last Post</th></tr>
           </thead>
           <tbody>
           {{- range $key, $value := .Data.Terms.Alphabetical}}

@@ -12,7 +12,7 @@
         <table id="table-{{ .Data.Singular | anchorize }}-{{ .Title | anchorize }}" class="stripe data-tables">
           <caption itemprop="about">Table "{{ .Title | title }}" {{ .Data.Singular | title }}: Posts with "{{ .Title | title }}" {{ .Data.Singular }}</caption>
           <thead>
-            <tr><th>Title</th><th>Date</th></tr>
+            <tr><th scope="col">Title</th><th scope="col">Date</th></tr>
           </thead>
           <tbody>
             {{- range .Data.Pages }}
