@@ -25,7 +25,7 @@
 [role="note"] {
 
     pre, code { font-size: 1rem; }
-    ins p:first-of-type { margin-bottom: -1.5rem; margin-top: 0rem; }
+    ins *:first-of-type { margin-bottom: -1.5rem; margin-top: 0rem; }
 }
 
 figure[role="note"] {
@@ -71,11 +71,12 @@ ins.margin[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; 
     display: block;
   }
   ins[role="note"] {
+      *:first-of-type { padding-top: 0; }
     border-left: $contrast-color thin dotted;
     padding-left: 0.5rem;
     margin: 1rem 10% 1rem 2.5%; // Note, the 12.5% + 87.5% from below
   }
-  aside[role="note"], figure[role="note"], ins[role="note"] {
+  ins.margin[role="note"], aside[role="note"], figure[role="note"], ins[role="note"] {
     width: 87.5%;
     float: left;
     clear: both;
