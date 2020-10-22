@@ -35,10 +35,11 @@ blockquote {
   font-size: 1.1rem;
   margin-top: 1.4rem;
   p, .group, ul, ol, h2, h3, h4 { margin-left: 1rem; margin-right: 1rem; }
-
+  p:first-of-type { padding-top: 0rem; }
+  p { margin-top: 1.7819rem; }
   p, .group { width: 100%; }
-  ul, ol { padding-top: 0; }
-  p, ul, ol { font-size: 1.1rem; line-height: 1.7819rem; margin: 1.7819rem 1rem; }
+  ul, ol { padding-top: 0; margin: 1.7819rem 1rem; }
+  p, ul, ol { font-size: 1.1rem; line-height: 1.7819rem; }
   li { font-size: 1.1rem; margin-left: 3.5%; }
   footer {
     font-size: 1.1rem;
@@ -290,6 +291,7 @@ q:after, q:before { content: none; }
   & pre { margin-top: 1rem; }
 }
 
+details p:first-of-type { padding-top: 0; margin-top: 1.4rem; }
 details > *:not(summary):not([role="note"]) {
   border-left: $code-color 1px dotted;
   margin-left: 0.5% ; // Aligns left border with center of down caret
