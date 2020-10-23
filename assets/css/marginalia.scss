@@ -37,6 +37,13 @@ figure[role="note"] {
     max-width: 100%;
     width: 100%;
   }
+  // A weird bug in rendering. On a test page I had a narrow view
+  // port, with Figcaption and younger sibling Blockquote.  Without
+  // the clear left, the left border ran right up to the bottom of the
+  // image.
+  @media screen and (max-width: 760px) {
+      + * { clear: left; }
+  }
 }
 
 
@@ -49,10 +56,6 @@ li, blockquote {
 .sidenote-number:after, ins.side[role="note"]:before {
   content: counter(sidenote-counter) ")\000a0";
   font-family: $counter-font;
-  color: $contrast-color;
-  @media screen and (prefers-color-scheme: dark) {
-    color: $contrast-color-dark;
-  }
   position: relative;
   vertical-align: baseline;
 }
@@ -74,7 +77,6 @@ ins.margin[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; 
   }
   ins[role="note"] {
       *:first-of-type { padding-top: 0; }
-    border-left: $contrast-color thin dotted;
     padding-left: 0.5rem;
     margin: 1rem 10% 1rem 2.5%; // Note, the 12.5% + 87.5% from below
   }
@@ -86,12 +88,5 @@ ins.margin[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; 
      margin-bottom: 0.66rem;
      &:last-of-type { margin-bottom: 0rem; }
    }
-  }
-}
-
-/* This one is stubborn. I needed something more targetd, as an and+and didn't work */
-@media screen and (prefers-color-scheme: dark) {
-  aside[role="note"], ins[role="note"] {
-    border-left-color: $contrast-color-dark;
   }
 }
