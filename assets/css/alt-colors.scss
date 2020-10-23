@@ -18,7 +18,9 @@ $blockquote-color-light: $h3-color-light;
 $commentary-color-light: rgb(91, 68, 18);
 $table-cell-color-light: rgb(35,86,35);
 $table-header-color-light: darken(rgb(243,247,238), 10%);
+$border-color-light: $table-header-color-light;
 $border-alternate-row-color-light: rgb(243,247,238);
+$update-color-light: $commentary-color-light;
 
 $text-color: $text-color-light;
 $bg-color: $bg-color-light;
@@ -39,7 +41,32 @@ $blockquote-color: $blockquote-color-light;
 $commentary-color: $commentary-color-light;
 $table-cell-color: $table-cell-color-light;
 $table-header-color: $table-header-color-light;
+$border-color: $border-color-light;
 $border-alternate-row-color: $border-alternate-row-color-light;
+$update-color: $update-color-light;
+
+$text-color-dark: $text-color-light;
+$bg-color-dark: $bg-color-light;
+$definition-color-dark: $definition-color-light;
+$abbreviation-color-dark: $abbreviation-color-light;
+$term-color-dark: $term-color-light;
+$contrast-color-dark: $contrast-color-light;
+$link-color-dark: $link-color-light;
+$visited-link-color-dark: $visited-link-color-light;
+$summary-color-dark: $summary-color-light;
+$sidenote-number-color-dark: $sidenote-number-color-light;
+$h1-color-dark: $h1-color-light;
+$h2-color-dark: $h2-color-light;
+$h3-color-dark: $h3-color-light;
+$h4-color-dark: $h4-color-light;
+$code-color-dark: $code-color-light;
+$blockquote-color-dark: $blockquote-color-light;
+$commentary-color-dark: $commentary-color-light;
+$table-cell-color-dark: $table-cell-color-light;
+$table-header-color-dark: $table-header-color-light;
+$border-color-dark: $border-color-light;
+$border-alternate-row-color-dark: $border-alternate-row-color-light;
+$update-color-dark: $update-color-light;
 
 p { color: $text-color !important;}
 dfn { color: $definition-color !important; }
