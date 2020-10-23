@@ -1,4 +1,5 @@
 @import "settings";
+@import "colors";
 
 * { -webkit-transition: none !important; transition: none !important; }
 *, *:before, *:after { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
@@ -6,7 +7,7 @@
 // body header, body footer, body nav, body .content .margin-toggle:not(.sidenote-number) { display:none; }
 // body main header, .marginnote, .sidenote { display: inherit; }
 body {
-  font-size:  12pt; 
+  font-size:  12pt;
   // Without this line, the links could spill into the right column; I suspect this is in play regardless, and will
   // require more experimentation to see how things behave.
   overflow-wrap: break-word;

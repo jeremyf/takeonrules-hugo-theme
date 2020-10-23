@@ -1,0 +1,28 @@
+$text-color-light: #111;
+$bg-color-light: #fffff8;
+$contrast-color-light: #8C0303;
+$code-color-light: #027333;
+$border-color-light: #A6977B;
+$table-header-color-light: $border-color-light;
+$blockquote-color-light: darken($table-header-color-light, 25%);
+$update-color-light: #5B5071;
+
+$text-color-dark: #f5f5f5;
+$bg-color-dark: #172637;
+$contrast-color-dark: darken(#66FF00, 10%); // Green
+$code-color-dark: lighten(#44B4CC, 25%);
+$border-color-dark: lighten($bg-color-dark, 30%);
+$table-header-color-dark: $border-color-dark;
+$blockquote-color-dark: #FFCC00;
+$update-color-dark: lighten($blockquote-color-dark, 30%);
+
+$text-color: $text-color-light;
+$bg-color: $bg-color-light;
+$contrast-color: $contrast-color-light;
+$code-color: $code-color-light;
+$border-color: $border-color-light;
+$table-header-color: $table-header-color-light;
+$update-color: $update-color-light;
+$blockquote-color: $blockquote-color-light;
+
+$link-style: color; // choices are 'color' or 'underline'. Default is color using $contrast-color set above
