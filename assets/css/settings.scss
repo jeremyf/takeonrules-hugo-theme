@@ -24,16 +24,14 @@ $h4-color-light: rgb(0,64,0);  // Operandi ORG Header 4
 $code-color-light: rgb(0, 90, 95); // Operandi Elisp Hash key
 $blockquote-color-light: rgb(42,72,106); // Operandi Elisp docstring
 $commentary-color-light: rgb(95,68,0); // Operandi comment color
-// $table-th-fg-color-light: rgb(0,86,35);
 $table-th-fg-color-light: rgb(9,48,96); // Operandi ORG Table Lines
 $table-td-fg-color-light: $table-th-fg-color-light;
-// $table-bg-tr-alt-color-light: rgb(243,247,238);
 $table-bg-tr-alt-color-light: lighten(rgb(9,48,96), 75%);
 $table-bg-thead-color-light: darken($table-bg-tr-alt-color-light, 10%);
 $border-color-light: $table-bg-thead-color-light;
 $update-color-light: $commentary-color-light;
-$mark-color-light: lighten($commentary-color-light,70%);
-$mark-fg-color-light: $bg-color-light;
+$mark-bg-color-light:  rgb(223,223,176); // Org Mod H6 dark foreground
+$mark-fg-color-light: rgb(63,48,0); // Org Mod H6 light foreground
 
 $fg-color-dark: #fffff8;
 $bg-color-dark: rgb(23,38,55);
@@ -61,5 +59,5 @@ $table-bg-thead-color-dark: lighten($bg-color-dark,20%);
 $table-bg-tr-alt-color-dark: lighten($bg-color-dark,10%);
 $border-color-dark: $table-bg-thead-color-dark;
 $update-color-dark: $commentary-color-dark;
-$mark-color-dark: lighten($commentary-color-dark,10%);
-$mark-fg-color-dark: $bg-color-dark;
+$mark-bg-color-dark:  rgb(63,48,0);
+$mark-fg-color-dark:  rgb(223,223,176);

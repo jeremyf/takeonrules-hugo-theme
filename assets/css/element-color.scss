@@ -54,7 +54,7 @@ a.offscreen {
     p { color: $commentary-color-light; }
 }
 time { color: $time-color-light; }
-mark { color: $mark-fg-color-light; background-color: $mark-color-light; }
+mark { color: $mark-fg-color-light; background-color: $mark-bg-color-light; }
 del { text-decoration-thickness: 1px; text-decoration-color: $commentary-color-light; }
 summary { color: $summary-color-light; }
 del, ins { color: $commentary-color-light; }
@@ -134,7 +134,7 @@ ins[role=note] { border-color: $commentary-color-light; }
         p { color: $commentary-color-dark; }
     }
     time { color: $time-color-dark; }
-    mark { color: $mark-fg-color-dark; background-color: $mark-color-dark; }
+    mark { color: $mark-fg-color-dark; background-color: $mark-bg-color-dark; }
     del { text-decoration-thickness: 1px; text-decoration-color: $commentary-color-dark; }
     summary { color: $summary-color-dark; }
     del, ins { color: $commentary-color-dark; }
