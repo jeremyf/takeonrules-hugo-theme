@@ -21,10 +21,10 @@ a { text-decoration: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1 { font-weight: 400; font-size: 2.5rem; margin: 1.568rem 0; line-height: 1.0889; }
-h2, h3, h4, .h2 { font-style: italic; font-weight: 400; margin-bottom: 0; line-height: 1.0889; }
+h2, h3, h4, .h2, .h3 { font-style: italic; font-weight: 400; margin-bottom: 0; line-height: 1.0889; }
 h2, .h2 { font-size: 2.1rem; margin-top: 1.8667rem; }
-h3 { font-size: 1.8rem; margin-top: 2.1778rem; }
-h4 { font-size: 1.2rem; margin-top: 1.6778rem; }
+h3, .h3 { font-size: 1.8rem; margin-top: 2.1778rem; }
+h4 { font-size: 1.5rem; margin-top: 1.6778rem; }
 
 p, summary, ol, ul, dl { font-size: 1.4rem; }
 p, summary { padding-top: 1.4rem; }
@@ -47,6 +47,14 @@ blockquote {
     width: 90%;
     text-align: right;
   }
+}
+
+mark {
+    // Helping the mark highlight extend just pass the letters
+    padding-left: 0.1 rem;
+    padding-right: 0.1 rem;
+    margin-left: -0.1 rem;
+    margin-right: -0.1 rem;
 }
 
 /* BEGIN Epigraphs */
