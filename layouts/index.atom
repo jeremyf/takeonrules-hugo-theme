@@ -1,0 +1,28 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ .Site.Title }}</title>
+  <link rel="self" href="{{ .Permalink }}index.atom" hreflang="en-us"/>
+  <link href="{{ .Permalink }}" hreflang="en-us"/>
+  <updated>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>
+  <author>
+    {{- with .Site.Params.copyrightHolder }}<name>{{ . }}</name>{{- end }}
+    {{- with .Site.Params.copyrightHolderEmail }}<email>{{ . }}</email>{{- end }}
+    <uri>{{ .Permalink }}</uri>
+  </author>
+  <id>{{ .Permalink }}</id>
+  {{- range first 25 (where .Site.Pages "Type" "in" .Site.Params.paginatedSections) }}
+  <entry>
+    {{ `<title type="html"><![CDATA[` | safeHTML }}{{ .Title }}]]></title>
+    <link rel="alternate" href="{{ .Permalink }}"/>
+    <id>{{ .Permalink }}</id>
+    <author>
+    {{- with .Site.Params.copyrightHolder }}<name>{{ . }}</name>{{- end }}
+    {{- with .Site.Params.copyrightHolderEmail }}<email>{{ . }}</email>{{- end }}
+    <uri>{{ .Site.BaseURL }}</uri>
+    </author>
+    {{- range .Params.tags }}<category term="{{ . | urlize }}" label="{{ . }}"/>{{- end }}
+    {{ `<content type="html"><![CDATA[` | safeHTML }}{{ .Content }}]]></content>
+    <published>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</published>
+    <updated>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>
+  </entry>
+  {{ end }}
+</feed>
