@@ -25,7 +25,7 @@ thead {
 }
 th { font-weight: bold; }
 tbody tr {
-  &:nth-child(even), &.subhead { background-color: lighten($table-header-color, 20%); }
+    &:nth-child(even), &.subhead { background-color: $border-color-alternate-light; }
   &.subhead th { text-align: left; }
 }
 .subbody td { padding-left: 1.5rem; }

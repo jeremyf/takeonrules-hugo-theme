@@ -1,0 +1,74 @@
+$text-color-light: #000;
+$bg-color-light: #fffff8;
+
+$link-color: rgb(7,54,166);
+$definition-color: rgb(94,1,53);
+$contrast-color-light: $definition-color;
+summary, a, .sidenote-number { color: $link-color !important; }
+$visited-link-color: rgb(85,32,168);
+a:visited { color: $visited-link-color !important; }
+ins[role=note] { border-color: $link-color !important; }
+
+h1, h2, h3, h4 { font-style: normal !important; font-family: $sans-font; }
+h1 { color: #000000; }
+h2 { color: rgb(88,50,41); }
+h3 { color: rgb(20,48,93); }
+h4 { color: rgb(35,63,53); font-size: 1.5rem !important;}
+
+abbr, dfn, dt { color: $definition-color !important;  }
+dfn, dt { font-weight: 400 !important; }
+$code-color: rgb(35,63,53);
+code.code, code, pre code { color: $code-color !important; }
+p { color: #000000 !important;}
+$blockquote-color: rgb(32,55,87);
+blockquote { border-color: $blockquote-color !important; color: $blockquote-color !important; }
+
+$commentary-color: rgb(91, 68, 18);
+.margin, .side, .update {
+    color: $commentary-color !important;
+    p { color: $commentary-color !important; }
+}
+
+$table-color: rgb(35,86,35);
+$table-header-color-light: darken(rgb(243,247,238), 10%);
+$border-color-light: $table-header-color-light;
+$border-color: $border-color-light;
+$border-color-alternate-light: rgb(243,247,238);
+
+thead tr { background-color: $table-header-color-light !important; }
+thead th { font-weight: bold; color: $table-color; }
+tbody th { font-weight: bold; color: $table-color; }
+del { text-decoration-color: $commentary-color !important; }
+ins { color: $commentary-color !important; }
+
+
+
+// $contrast-color-light: rgb(94,1,53); // Variable Face
+$code-color-light: $link-color; // Keyword
+$blockquote-color-light: $blockquote-color;
+$update-color-light: $link-color;
+$side-note-color: $commentary-color;
+$margin-note-color: $side-note-color;
+$heading-one-light: $text-color-light;
+
+$text-color-dark: #f5f5f5;
+$bg-color-dark: #172637;
+$contrast-color-dark: darken(#66FF00, 10%); // Green
+// $contrast-color-dark: #FF6100; // Orange
+$code-color-dark: lighten(#44B4CC, 25%);
+$border-color-dark: lighten($bg-color-dark, 30%);
+$table-header-color-dark: $border-color-dark;
+$blockquote-color-dark: #FFCC00;
+$update-color-dark: lighten($blockquote-color-dark, 30%);
+
+$text-color: $text-color-light;
+$bg-color: $bg-color-light;
+$contrast-color: $contrast-color-light;
+$code-color: $code-color-light;
+$table-header-color: $table-header-color-light;
+$update-color: $update-color-light;
+$blockquote-color: $blockquote-color-light;
+
+$link-style: color; // choices are 'color' or 'underline'. Default is color using $contrast-color set above
+
+// rgb(85,32,168)
