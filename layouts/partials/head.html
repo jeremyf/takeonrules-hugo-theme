@@ -8,7 +8,7 @@
 {{ partialCached "head-duplicated-info.html" . }}
 
 {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}
-{{- if in (slice "taxonomy" "taxonomyTerm") .Kind }}
+{{- if in (slice "term" "taxonomy" "taxonomyTerm") .Kind }}
 <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml">
 {{- end }}
 
