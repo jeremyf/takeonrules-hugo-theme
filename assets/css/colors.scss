@@ -1,11 +1,36 @@
 $text-color-light: #111;
 $bg-color-light: #fffff8;
 $contrast-color-light: #8C0303;
-$code-color-light: #027333;
-$border-color-light: #A6977B;
+$code-color-light:  #027333;
+$border-color-light: darken(rgb(243,247,238), 10%);
 $table-header-color-light: $border-color-light;
-$blockquote-color-light: darken($table-header-color-light, 25%);
+$blockquote-color-light: darken(#A6977B, 25%);
 $update-color-light: #5B5071;
+$summary-color-light: $code-color-light;
+
+$text-color: #000000;
+$bg-color: #fffff8;
+$definition-color: #8C0303;
+$abbreviation-color: $definition-color;
+$term-color: $definition-color;
+$contrast-color: $definition-color;
+$link-color: $contrast-color;
+$visited-link-color: $contrast-color;
+$summary-color: $link-color;
+$sidenote-number-color: $link-color;
+$h1-color: $text-color;
+$h2-color: $text-color;
+$h3-color: $text-color;
+$h4-color: $text-color;
+$code-color: $code-color-light;
+$blockquote-color: $blockquote-color-light;
+$commentary-color: rgb(91, 68, 18);
+$table-cell-color: rgb(35,86,35);
+$table-header-color: darken(rgb(243,247,238), 10%);
+$table-color: $table-header-color;
+$border-alternate-row-color: rgb(243,247,238);
+$border-color-alternate-light: $border-alternate-row-color;
+
 
 $text-color-dark: #f5f5f5;
 $bg-color-dark: #172637;
@@ -15,6 +40,7 @@ $border-color-dark: lighten($bg-color-dark, 30%);
 $table-header-color-dark: $border-color-dark;
 $blockquote-color-dark: #FFCC00;
 $update-color-dark: lighten($blockquote-color-dark, 30%);
+$summary-color-dark: $code-color-dark;
 
 $text-color: $text-color-light;
 $bg-color: $bg-color-light;

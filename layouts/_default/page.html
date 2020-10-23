@@ -5,6 +5,9 @@
   <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" itemtype="http://schema.org/WebPageElement">
     <header>
       <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+    {{- with .Params.headline }}
+      <h2 itemprop="headline">{{ . }}</h2>
+    {{- end }}
     </header>
     <section itemprop="text" class="e-content content" role="region" aria-label="article content">
       {{ .Content }}

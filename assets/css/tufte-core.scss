@@ -30,7 +30,6 @@ p, summary, ol, ul, dl { font-size: 1.4rem; }
 p, summary { padding-top: 1.4rem; }
 p, summary, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
 blockquote {
-  border-left: $blockquote-color 1px dotted;
   width: 55%;
   font-size: 1.1rem;
   margin-top: 1.4rem;
@@ -160,8 +159,6 @@ nav {
 }
 /* END SKIP-AMP */
 
-
-//change font color for credit links in footer
 .credits {
   text-align: center;
   padding: 1rem 0rem;
@@ -287,14 +284,12 @@ q:after, q:before { content: none; }
 /* Hacks to better present */
 .ogc {
     ul, ol { width: 85%; }
-  border-left: $code-color 1px dotted;
   padding-left: 1rem;
   & pre { margin-top: 1rem; }
 }
 
 details p:first-of-type { padding-top: 0; margin-top: 1.4rem; }
 details > *:not(summary):not([role="note"]) {
-  border-left: $code-color 1px dotted;
   margin-left: 0.5% ; // Aligns left border with center of down caret
   padding-left: 2.5%;
   width: 52%;
@@ -315,45 +310,4 @@ dfn {
   font-weight: bold;
 }
 
-.license { font-size: 1rem; color: $blockquote-color; }
-
-/* COLORS */
-
-.contrast { color: $contrast-color;}
-blockquote { color: $blockquote-color; }
-.update { color: $update-color; }
-pre, code { color:$code-color; }
-a { color: $contrast-color;}
-body { background-color: $bg-color; color: $text-color; }
-a.offscreen {
-  &:focus, &:active, &:hover {
-    background-color:$contrast-color;
-    color: $bg-color; border: 1px dotted $text-color;
-  }
-}
-mark { background-color: lighten($update-color, 40%); }
-
-del { text-decoration-thickness: 2px; text-decoration-color: $contrast-color; }
-
-@media screen and (prefers-color-scheme: dark) {
-  .contrast { color: $contrast-color-dark; }
-  .ogc { border-left-color: $code-color-dark; }
-  blockquote { border-left-color: $blockquote-color-dark; }
-  blockquote, blockquote mark { color: $blockquote-color-dark; }
-  .license { color: $blockquote-color-dark; }
-  .update { color: $update-color-dark; }
-  pre, code { color:$code-color-dark; }
-  a { color: $contrast-color-dark; }
-  body { background-color: $bg-color-dark; color: $text-color-dark; }
-  a.offscreen {
-    &:focus, &:active, &:hover {
-      background-color:$contrast-color-dark;
-      color: $bg-color-dark; border: 1px dotted $text-color-dark;
-    }
-  }
-  mark { color: $text-color-dark; background-color: darken($update-color, 10%); }
-  details[open] > *:not(summary) {
-    border-left-color: $code-color-dark;
-  }
-  del { text-decoration-color: $contrast-color-dark; }
-}
+.license { font-size: 1rem; }

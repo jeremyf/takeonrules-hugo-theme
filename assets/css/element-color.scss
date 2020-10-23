@@ -1,0 +1,76 @@
+body { background-color: $bg-color; color: $text-color; }
+table {
+  border-top: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
+}
+.unstriped tbody tr, .unstriped .subbody {
+  background-color: $bg-color;
+}
+thead {
+  th { border-bottom: 1px solid $border-color; }
+  tr { background-color: $table-header-color; }
+}
+th { font-weight: bold; color: $table-cell-color; }
+tbody tr {
+    &:nth-child(even), &.subhead { background-color: $border-alternate-row-color; }
+}
+tfoot td { border-top-color: $border-color; }
+
+blockquote { border-left: $blockquote-color 1px dotted; }
+.ogc, details > *:not(summary):not([role="note"]) {
+    border-left-width: 1px;
+    border-left-style: dotted;
+    border-left-color: $summary-color;
+}
+blockquote, .license { color: $blockquote-color; }
+del, a, .contrast { color: $contrast-color;}
+.update { color: $update-color; }
+pre, code { color:$code-color; }
+a.offscreen {
+  &:focus, &:active, &:hover {
+      background-color:$contrast-color;
+      color: $bg-color;
+      border: 1px dotted $text-color;
+  }
+}
+mark { background-color: lighten($update-color, 40%); }
+del { text-decoration-thickness: 2px; }
+
+/* COLORS */
+@media screen and (prefers-color-scheme: dark) {
+  .contrast { color: $contrast-color-dark; }
+  .ogc { border-left-color: $code-color-dark; }
+  blockquote { border-left-color: $blockquote-color-dark; }
+  blockquote, blockquote mark { color: $blockquote-color-dark; }
+  .license { color: $blockquote-color-dark; }
+  .update { color: $update-color-dark; }
+  pre, code { color:$code-color-dark; }
+  a { color: $contrast-color-dark; }
+  body { background-color: $bg-color-dark; color: $text-color-dark; }
+  a.offscreen {
+    &:focus, &:active, &:hover {
+      background-color:$contrast-color-dark;
+      color: $bg-color-dark; border: 1px dotted $text-color-dark;
+    }
+  }
+  mark { color: $text-color-dark; background-color: darken($update-color, 10%); }
+  details[open] > *:not(summary) {
+    border-left-color: $summary-color-dark;
+  }
+  del { text-decoration-color: $contrast-color-dark; }
+  table {
+    border-bottom-color: $border-color-dark;
+    border-top-color: $border-color-dark;
+  }
+  tbody tr {
+    &:nth-child(even), &.subhead { background-color: darken($table-header-color-dark, 20%); }
+  }
+  .unstriped tbody tr, .unstriped .subbody {
+    background-color: $bg-color-dark;
+  }
+  tfoot td { border-top-color: $border-color-dark; }
+  thead {
+    th { border-bottom-color: $border-color-dark; }
+    tr { background-color: $table-header-color-dark; }
+  }
+}
