@@ -15,7 +15,7 @@
       Page {{ .PageNumber }} of {{ .TotalPages }}
     {{- end }}
   </nav>
-    <aside role="complimentary" aria-labelledby="site-feeds-label">
+    <aside class="feeds" role="complimentary" aria-labelledby="site-feeds-label">
       <span id="site-feeds-label" class="label">Site feeds: </span>
       <a href="{{ .Site.BaseURL }}index.atom">ATOM feed</a> | <a href="{{ .Site.BaseURL }}index.json">JSON feed</a> | <a href="{{ .Site.BaseURL }}index.xml">RSS feed</a>
   </aside>
