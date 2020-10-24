@@ -50,7 +50,7 @@ blockquote {
   }
 }
 
-.sidenote-number:hover * { background: var(--tor-bg-special-warm); }
+.sidenote-number:hover *, [role=note]:hover { background: var(--tor-bg-special-warm); }
 
 // Helping the mark highlight extend just pass the letters
 article {
