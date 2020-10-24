@@ -6,62 +6,76 @@ $sans-font: Helvetica, sans-serif;
 $code-font: Courier, monospace;
 $counter-font: $body-font;
 
-$fg-color-light: #000000;  // Operandi ORG fg-color
-$bg-color-light: #fffff8;  // Operandi ORG bg-color
-$time-color-light: rgb(17,80,111); // Operandi ORG date
-$dfn-color-light: rgb(80,80,80); // Operandi ORG property drawer
-$abbr-color-light: $dfn-color-light;
-$dt-color-light: $dfn-color-light;
-$contrast-color-light: $dfn-color-light;
-$a-color-light:  #0000c0;  // Operandi ORG link color
-// $a-visited-color-light: #005a5f;
-$a-visited-color-light: #5317ac;
-$summary-color-light: $a-color-light;
-$sidenote-number-color-light: $a-color-light;
-$h1-color-light: $fg-color-light; // Operandi ORG Header 1
-$h2-color-light: rgb(93,48,38);  // Operandi ORG Header 2
-$h3-color-light: rgb(9,48,96); // Operandi ORG Header 3
-$h4-color-light: rgb(0,64,0);  // Operandi ORG Header 4
-$code-color-light: rgb(143, 1, 117); // Operandi Elisp Hash key
-$code-color-light: rgb(166, 0, 0); // Operandi Elisp Hash key
-$blockquote-color-light: rgb(42,72,106); // Operandi Elisp docstring
-$commentary-color-light: rgb(95,68,0); // Operandi comment color
-$table-th-fg-color-light: rgb(9,48,96); // Operandi ORG Table Lines
-$table-td-fg-color-light: $table-th-fg-color-light;
-$table-bg-tr-alt-color-light: lighten(rgb(9,48,96), 75%);
-$table-bg-thead-color-light: darken($table-bg-tr-alt-color-light, 10%);
-$border-color-light: $table-bg-thead-color-light;
-$update-color-light: $commentary-color-light;
-$mark-bg-color-light:  rgb(223,223,176); // Org Mod H6 dark foreground
-$mark-fg-color-light: rgb(63,48,0); // Org Mod H6 light foreground
+:root {
+    --tor-black: #000000;
+    --fg-color: var(--tor-black);
+    --tor-white: #fffff8;
+    --bg-color: var(--tor-white);
+    --tor-cyan-faint: #12506f;
+    --time-color: var(--cyan-faint);
+    --tor-black-alt: #505050;
+    --tor-dfn-color: #505050;
+    --dfn-color: var(--tor-dfn-color);
+    --abbr-color: var(--tor-dfn-color);
+    --dt-color: var(--tor-dfn-color);
+    --tor-blue: #0000BB;
+    --a-color: var(--tor-blue);
+    --sidenote-number-color: var(--tor-blue);
+    --tor-magenta-alt: #5317ac;
+    --a-visited-color: var(--tor-magenta-alt);
+    --tor-blue-alt: #2544bb;
+    --summary-color: var(--tor-magenta-alt);
+    --h1-color: var(--fg-color);
+    --tor-warm: #5d3026;
+    --h2-color: var(--tor-warm);
+    --tor-cold: #093060;
+    --h3-color: var(--tor-cold);
+    --tor-mild: #184034;
+    --h4-color: var(--tor-mild);
+    --tor-red-alt: #972500;
+    --code-color: var(--tor-red-alt);
+    --tor-docstring: #2a486a;
+    --blockquote-color: var(--tor-docstring);
+    --tor-yellow-faint: #5f4400;
+    --commentary-color: var(--tor-yellow-faint);
+    --tor-green-alt: #315b00;
+    // --tor-green-alt: #145c33;
+    --table-th-fg-color: var(--tor-green-alt);
+    --table-td-fg-color: var(--tor-green-alt);
+    --tor-bgdim: #F8F8F8;
+    --table-bg-tr-alt-color: var(--tor-bgdim);
+    --tor-thead-bg-color: #F0F0F0;
+    --table-bg-thead-color: var(--tor-thead-bg-color);
+    --border-color: var(--tor-head-bg-color);
+    --update-color: var(--commentary-color);
+    --tor-bg-special-warm: #f0e0d4;
+    --tor-fg-special-warm: #5d3026;
+    --mark-fg-color: var(--tor-fg-special-warm);
+    --mark-bg-color: var(--tor-bg-special-warm);
+}
 
-$fg-color-dark: #fffff8;
-$bg-color-dark: rgb(23,38,55);
-$time-color-dark: rgb(160,190,223);
-$dfn-color-dark: rgb(168,168,168);
-$abbr-color-dark: $dfn-color-dark;
-$dt-color-dark: $dfn-color-dark;
-$contrast-color-dark: $dfn-color-dark;
-$a-color-dark: #00bcff;
-// $a-visited-color-dark: #6ae4b9;
-$a-visited-color-dark: #b6a0ff;
-$summary-color-dark: $a-color-dark;
-$sidenote-number-color-dark: $a-color-dark;
-$h1-color-dark: $fg-color-dark;
-$h2-color-dark: rgb(248,222,192);
-$h3-color-dark: rgb(198,234,255);
-$h4-color-dark: rgb(191,235,224);
-$code-color-dark: rgb(247,143,231);
-$code-color-dark: rgb(255,128,90);
-$blockquote-color-dark: rgb(176,214,245);
-$commentary-color-dark: rgb(203,185,143);
-$border-color-light: $table-bg-thead-color-light;
-$update-color-light: $commentary-color-light;
-$table-th-fg-color-dark: rgb(198,234,255);
-$table-td-fg-color-dark: $table-th-fg-color-dark;
-$table-bg-thead-color-dark: lighten($bg-color-dark,20%);
-$table-bg-tr-alt-color-dark: lighten($bg-color-dark,10%);
-$border-color-dark: $table-bg-thead-color-dark;
-$update-color-dark: $commentary-color-dark;
-$mark-bg-color-dark:  rgb(63,48,0);
-$mark-fg-color-dark:  rgb(223,223,176);
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg-color: var(--tor-white);
+        --bg-color: var(--tor-black);
+        --tor-cyan-faint: #a0bfdf;
+        --tor-dfn-color: #a8a8a8;
+        --tor-black-alt: #181a20;
+        --tor-blue: #00bdfa;
+        --tor-magenta-alt: #b6a0ff;
+        --tor-blue-alt: #79a8ff;
+        --tor-warm: #f8dec0;
+        --tor-cold: #c6eaff;
+        --tor-mild: #bfebe0;
+        --tor-red-alt: #f4923b;
+        --tor-docstring: #b0d6f5;
+        --tor-yellow-faint: #cab98f;
+        --tor-green-alt: #80d200;
+        --tor-green-alt-other: #00cd68;
+        --tor-thead-bg-color: #181a20;
+        --tor-bgdim: #110b11;
+        --tor-white-alt: #a8a8a8;
+        --tor-fg-special-warm: #f8dec0;
+        --tor-bg-special-warm: #382f27;
+    }
+}

@@ -3,157 +3,74 @@
 //
 // When you need to edit colors, make changes within this region.
 // Then look to the Dark Color Definition instructions.
-body { background-color: $bg-color-light; color: $fg-color-light; }
+body { background-color:  var(--bg-color); color:   var(--fg-color); }
 
-h1 { color: $h1-color-light; }
-h2 { color: $h2-color-light; }
-h3 { color: $h3-color-light; }
-h4 { color: $h4-color-light; }
+h1 { color: var(--h1-color); }
+h2 { color: var(--h2-color); }
+h3 { color: var(--h3-color); }
+h4 { color: var(--h4-color); }
 
 table {
-    border-top: 2px solid $table-bg-thead-color-light;
-    border-bottom: 2px solid $table-bg-thead-color-light;
+    border-top: 2px solid   var(--table-bg-thead-color);
+    border-bottom: 2px solid   var(--table-bg-thead-color);
 
     &.unstriped tbody tr, .unstriped .subbody {
-        background-color: $bg-color-light;
+        background-color:   var(--table-bg-thead-color);
     }
 
     thead {
-        th { border-bottom: 1px solid $table-bg-thead-color-light; }
-        tr { background-color: $table-bg-thead-color-light; }
+        th { border-bottom: 1px solid var(--table-bg-thead-color); }
+        tr { background-color:   var(--table-bg-thead-color); }
     }
-    th { font-weight: bold; color: $table-th-fg-color-light; }
-    td { color: $table-td-fg-color-light; }
+    th { font-weight: bold; color: var(--table-th-fg-color); }
+    td { color:   var(--table-td-fg-color); }
     tbody {
         th { text-align: left; }
-        tr:nth-child(even), &.subhead { background-color: $table-bg-tr-alt-color-light; }
+        tr:nth-child(odd), &.subhead { background-color: var(--table-bg-tr-alt-color); }
     }
-    tfoot td { border-top-color: $border-color-light; }
+    tfoot td { border-top-color: var(--table-bg-thead-color); }
 }
 
-blockquote { border-left: 1px dotted $blockquote-color-light; }
-blockquote, .license, blockquote p { color: $blockquote-color-light; }
+blockquote { border-left: 1px dotted   var(--blockquote-color); }
+blockquote, .license, blockquote p { color:   var(--blockquote-color); }
 
 .ogc, details > *:not(summary):not([role="note"]) {
-    border-left: 1px dotted $summary-color-light;
+    border-left: 1px dotted   var(--summary-color);
 }
-dt { color: $dt-color-light; }
-dfn { color: $dfn-color-light; }
-abbr { color: $abbr-color-light; }
-a, .contrast { color: $a-color-light;}
-a:visited { color: $a-visited-color-light; }
-.update { color: $update-color-light; }
-pre, code { color:$code-color-light; }
+dt { color:   var(--dt-color); }
+dfn { color:   var(--dfn-color); }
+abbr { color:   var(--abbr-color); }
+a, .contrast { color:   var(--a-color);}
+a:visited { color:   var(--a-visited-color); }
+.update { color:   var(--update-color); }
+pre, code { color:  var(--code-color); }
 a.offscreen {
     &:focus, &:active, &:hover {
-        background-color:$contrast-color-light;
-        color: $bg-color-light;
-        border: 1px dotted $fg-color-light;
+        background-color:  var(--contrast-color);
+        color:   var(--bg-color);
+        border: 1px dotted   var(--fg-color);
     }
 }
 
 .margin, .side, .update {
-    color: $commentary-color-light;
-    p { color: $commentary-color-light; }
+    color:   var(--commentary-color);
+    p { color:   var(--commentary-color); }
 }
-time { color: $time-color-light; }
-mark { color: $mark-fg-color-light; background-color: $mark-bg-color-light; }
-del { text-decoration-thickness: 1px; text-decoration-color: $commentary-color-light; }
-summary { color: $summary-color-light; }
-del, ins { color: $commentary-color-light; }
+time { color:   var(--time-color); }
+mark { color:   var(--mark-fg-color); background-color:   var(--mark-bg-color); }
+del { text-decoration-thickness: 1px; text-decoration-color:   var(--commentary-color); }
+summary { color:   var(--summary-color); }
+del, ins { color:   var(--commentary-color); }
 .sidenote-number:after, ins.side[role="note"]:before {
-    color: $sidenote-number-color-light;
+    color:   var(--sidenote-number-color);
 }
 
-ins[role=note] { border-color: $commentary-color-light; }
+ins[role=note] { border-color:   var(--commentary-color); }
 
 @media screen and (max-width: 760px) {
     ins[role="note"] {
-        border-left: thin dotted $commentary-color-light;
+        border-left: thin dotted   var(--commentary-color);
     }
 }
 // END Light Color Definition
-////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////
-// BEGIN End Color Definition
-//
-// You should be able to:
-//
-// * copy the above Light Color Definition region
-// * paste between the regions (listed below)
-// * rename the variables suffix from `-light` to `-dark`
-@media screen and (prefers-color-scheme: dark) {
-    // Begin select region for the line after this comment
-    body { background-color: $bg-color-dark; color: $fg-color-dark; }
-
-    h1 { color: $h1-color-dark; }
-    h2 { color: $h2-color-dark; }
-    h3 { color: $h3-color-dark; }
-    h4 { color: $h4-color-dark; }
-
-    table {
-        border-top: 2px solid $table-bg-thead-color-dark;
-        border-bottom: 2px solid $table-bg-thead-color-dark;
-
-        &.unstriped tbody tr, .unstriped .subbody {
-            background-color: $bg-color-dark;
-        }
-
-        thead {
-            th { border-bottom: 1px solid $table-bg-thead-color-dark; }
-            tr { background-color: $table-bg-thead-color-dark; }
-        }
-        th { font-weight: bold; color: $table-th-fg-color-dark; }
-        td { color: $table-td-fg-color-dark; }
-        tbody {
-            th { text-align: left; }
-            tr:nth-child(even), &.subhead { background-color: $table-bg-tr-alt-color-dark; }
-        }
-        tfoot td { border-top-color: $border-color-dark; }
-    }
-
-    blockquote { border-left: 1px dotted $blockquote-color-dark; }
-    blockquote, .license, blockquote p { color: $blockquote-color-dark; }
-
-    .ogc, details > *:not(summary):not([role="note"]) {
-        border-left: 1px dotted $summary-color-dark;
-    }
-    dt { color: $dt-color-dark; }
-    dfn { color: $dfn-color-dark; }
-    abbr { color: $abbr-color-dark; }
-    a, .contrast { color: $a-color-dark;}
-    a:visited { color: $a-visited-color-dark; }
-    .update { color: $update-color-dark; }
-    pre, code { color:$code-color-dark; }
-    a.offscreen {
-        &:focus, &:active, &:hover {
-            background-color:$contrast-color-dark;
-            color: $bg-color-dark;
-            border: 1px dotted $fg-color-dark;
-        }
-    }
-
-    .margin, .side, .update {
-        color: $commentary-color-dark;
-        p { color: $commentary-color-dark; }
-    }
-    time { color: $time-color-dark; }
-    mark { color: $mark-fg-color-dark; background-color: $mark-bg-color-dark; }
-    del { text-decoration-thickness: 1px; text-decoration-color: $commentary-color-dark; }
-    summary { color: $summary-color-dark; }
-    del, ins { color: $commentary-color-dark; }
-    .sidenote-number:after, ins.side[role="note"]:before {
-        color: $sidenote-number-color-dark;
-    }
-    ins[role=note] { border-color: $commentary-color-dark; }
-    @media screen and (max-width: 760px) {
-        ins[role="note"] {
-            border-left: thin dotted $commentary-color-dark;
-        }
-    }
-    // End select region for the line after this comment
-}
-// END Dark Color Definition
 ////////////////////////////////////////////////////////////////////////////////

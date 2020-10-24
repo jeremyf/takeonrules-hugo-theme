@@ -32,8 +32,6 @@ p, h2, h3, h4, summary { orphans: 4; widows: 4; }
 
 table {
   tbody tr.subhead {
-    background-color: lighten($table-bg-thead-color-light, 20%);
-    td, th { border-top: 1px solid lighten($table-bg-thead-color-light, 20%); }
     th { text-align: left; }
   }
 }
