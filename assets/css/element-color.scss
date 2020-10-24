@@ -45,20 +45,19 @@ abbr {
         background: var(--abbr-color) !important;
         color: var(--bg-color) !important;
     }
-    e
 }
 a, .contrast {
     color:   var(--a-color);
     &:hover {
-        background: var(--a-color);
-        color: var(--bg-color);
+        background: var(--a-color) !important;
+        color: var(--bg-color) !important;
     }
 }
 a:visited {
     color:   var(--a-visited-color);
     &:hover {
-        background: var(--a-visited-color);
-        color: var(--bg-color);
+        background: var(--a-visited-color) !important;
+        color: var(--bg-color) !important;
     }
 }
 
@@ -67,8 +66,8 @@ a:visited {
 pre, code { color:  var(--code-color); }
 a.offscreen {
     &:focus, &:active, &:hover {
-        background:  var(--a-color);
-        color:   var(--bg-color);
+        background:  var(--a-color) !important;
+        color:   var(--bg-color) !important;
         border: 1px dotted   var(--fg-color);
     }
 }
