@@ -41,7 +41,11 @@ dt { color:   var(--dt-color); }
 dfn { color:   var(--dfn-color); }
 abbr {
     color:   var(--abbr-color);
-    &:hover { font-weight: bold; }
+    &:hover {
+        background: var(--abbr-color) !important;
+        color: var(--bg-color) !important;
+    }
+    e
 }
 a, .contrast {
     color:   var(--a-color);
