@@ -298,15 +298,14 @@ q:after, q:before { content: none; }
 }
 
 details p:first-of-type { padding-top: 0; margin-top: 1.4rem; }
-details > *:not(summary):not([role="note"]) {
+details > *:not(summary) {
   margin-left: 0.5% ; // Aligns left border with center of down caret
   padding-left: 2.5%;
   width: 52%;
 }
 
 details ul, details ol {
-  padding-left: 5%;
-  width: 100%;
+    padding-left: 5%;
 }
 
 @media screen and (max-width: 760px) {
