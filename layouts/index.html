@@ -8,13 +8,17 @@
 {{ end }}
 {{ define "breadcrumb" }}
   {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
-  <nav aria-label="Blog postings pagination" class="paginator">
-    {{- with $paginator }}
+    <nav aria-labelledby="blog-pagination-label" class="paginator">
+      <span class="label" id="blog-pagination-label">Blog postings pagination:</span>
+      {{- with $paginator }}
       {{- if .HasNext }}<a accesskey="p" href="{{ .Next.URL }}" rel="prev"><u>P</u>revious posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a accesskey="n" href="{{ .Prev.URL }}" rel="next"><u>N</u>ext posts</a>{{- end }}
       Page {{ .PageNumber }} of {{ .TotalPages }}
     {{- end }}
-    &nbsp; | <a href="{{ .Site.BaseURL }}index.xml">RSS feed</a>
   </nav>
+    <aside role="complimentary" aria-labelledby="site-feeds-label">
+      <span id="site-feeds-label" class="label">Site feeds: </span>
+      <a href="{{ .Site.BaseURL }}index.atom">ATOM feed</a> | <a href="{{ .Site.BaseURL }}index.json">JSON feed</a> | <a href="{{ .Site.BaseURL }}index.xml">RSS feed</a>
+  </aside>
 {{ end }}
 {{ define "main" }}
 <article class="home" itemscope itemtype="http://schema.org/Blog">
@@ -52,7 +56,7 @@
   {{- end }}
   {{- end }}
   </ol>
-  <nav aria-hidden="true" class="paginator">
+  <nav class="paginator">
     {{- with $paginator }}
       {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
       Page {{ .PageNumber }} of {{ .TotalPages }}

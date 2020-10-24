@@ -1,11 +1,11 @@
-<nav aria-label="Breadcrumbs" class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
-  <span class="label">Breadcrumbs: </span>
+<nav aria-labelledby="breadcrumbs-label" class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+  <span id="breadcrumbs-label" class="label">Breadcrumbs: </span>
   {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3) }}
 </nav>
 {{- if in .Site.Params.paginatedSections .Type -}}
-<nav aria-label="Post neighbors" class="paginator breadcrumbs">
-  <span class="label">Post Neighbors: </span>
-  {{- with .PrevInSection }}<a itemprop="relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev"><u>P</u>revious post</a>&nbsp;|&nbsp;{{- end }}{{- with .NextInSection }}<a itemprop="relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next"><u>N</u>ext post</a>&nbsp;|&nbsp;{{- end }}<a href="{{ .Site.BaseURL }}index.xml">RSS feed</a>
+<nav aria-labelledby="post-neighbors-label" class="paginator breadcrumbs">
+  <span id="post-neighbors-label" class="label">Post Neighbors: </span>
+  {{- with .PrevInSection }}<a itemprop="relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev"><u>P</u>revious post</a>&nbsp;{{- end }}{{- with .NextInSection }}|&nbsp;<a itemprop="relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next"><u>N</u>ext post</a>{{- end }}
 </nav>
 {{- end }}
 {{- define "breadcrumbnav" }}

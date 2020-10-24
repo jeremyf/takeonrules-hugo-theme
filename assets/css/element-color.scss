@@ -39,18 +39,36 @@ blockquote, .license, blockquote p { color:   var(--blockquote-color); }
 }
 dt { color:   var(--dt-color); }
 dfn { color:   var(--dfn-color); }
-abbr { color:   var(--abbr-color); }
-a, .contrast { color:   var(--a-color);}
-a:visited { color:   var(--a-visited-color); }
+abbr {
+    color:   var(--abbr-color);
+    &:hover { font-weight: bold; }
+}
+a, .contrast {
+    color:   var(--a-color);
+    &:hover {
+        background: var(--a-color);
+        color: var(--bg-color);
+    }
+}
+a:visited {
+    color:   var(--a-visited-color);
+    &:hover {
+        background: var(--a-visited-color);
+        color: var(--bg-color);
+    }
+}
+
+
 .update { color:   var(--update-color); }
 pre, code { color:  var(--code-color); }
 a.offscreen {
     &:focus, &:active, &:hover {
-        background-color:  var(--contrast-color);
+        background:  var(--a-color);
         color:   var(--bg-color);
         border: 1px dotted   var(--fg-color);
     }
 }
+
 
 .margin, .side, .update {
     color:   var(--commentary-color);
