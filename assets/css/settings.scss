@@ -3,8 +3,8 @@
 
 $body-font: Times, serif;
 $sans-font: Helvetica, sans-serif;
-$code-font: "JetBrains Mono", Courier, monospace;
-$counter-font: Times, serif;
+$code-font: Courier, monospace;
+$counter-font: $body-font;
 
 $fg-color-light: #000000;  // Operandi ORG fg-color
 $bg-color-light: #fffff8;  // Operandi ORG bg-color
@@ -13,15 +13,16 @@ $dfn-color-light: rgb(80,80,80); // Operandi ORG property drawer
 $abbr-color-light: $dfn-color-light;
 $dt-color-light: $dfn-color-light;
 $contrast-color-light: $dfn-color-light;
-$a-color-light:  rgb(127,16,16);  // Operandi ORG link color
-$a-visited-color-light: darken($a-color-light, 10%);
+$a-color-light:  #0000c0;  // Operandi ORG link color
+$a-visited-color-light: #005a5f;
 $summary-color-light: $a-color-light;
 $sidenote-number-color-light: $a-color-light;
 $h1-color-light: $fg-color-light; // Operandi ORG Header 1
 $h2-color-light: rgb(93,48,38);  // Operandi ORG Header 2
 $h3-color-light: rgb(9,48,96); // Operandi ORG Header 3
 $h4-color-light: rgb(0,64,0);  // Operandi ORG Header 4
-$code-color-light: rgb(0, 90, 95); // Operandi Elisp Hash key
+$code-color-light: rgb(143, 1, 117); // Operandi Elisp Hash key
+$code-color-light: rgb(166, 0, 0); // Operandi Elisp Hash key
 $blockquote-color-light: rgb(42,72,106); // Operandi Elisp docstring
 $commentary-color-light: rgb(95,68,0); // Operandi comment color
 $table-th-fg-color-light: rgb(9,48,96); // Operandi ORG Table Lines
@@ -40,15 +41,16 @@ $dfn-color-dark: rgb(168,168,168);
 $abbr-color-dark: $dfn-color-dark;
 $dt-color-dark: $dfn-color-dark;
 $contrast-color-dark: $dfn-color-dark;
-$a-color-dark: rgb(255,161,162);
-$a-visited-color-dark: lighten($a-color-dark, 10%);
+$a-color-dark: #00bcff;
+$a-visited-color-dark: #6ae4b9;
 $summary-color-dark: $a-color-dark;
 $sidenote-number-color-dark: $a-color-dark;
 $h1-color-dark: $fg-color-dark;
 $h2-color-dark: rgb(248,222,192);
 $h3-color-dark: rgb(198,234,255);
 $h4-color-dark: rgb(191,235,224);
-$code-color-dark: rgb(68,188,68);
+$code-color-dark: rgb(247,143,231);
+$code-color-dark: rgb(255,128,90);
 $blockquote-color-dark: rgb(176,214,245);
 $commentary-color-dark: rgb(203,185,143);
 $border-color-light: $table-bg-thead-color-light;
