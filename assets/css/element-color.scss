@@ -37,6 +37,9 @@ blockquote, .license, blockquote p { color: $blockquote-color-light; }
 .ogc, details > *:not(summary):not([role="note"]) {
     border-left: 1px dotted $summary-color-light;
 }
+dt { color: $dt-color-light; }
+dfn { color: $dfn-color-light; }
+abbr { color: $abbr-color-light; }
 a, .contrast { color: $a-color-light;}
 a:visited { color: $a-visited-color-light; }
 .update { color: $update-color-light; }
@@ -117,6 +120,9 @@ ins[role=note] { border-color: $commentary-color-light; }
     .ogc, details > *:not(summary):not([role="note"]) {
         border-left: 1px dotted $summary-color-dark;
     }
+    dt { color: $dt-color-dark; }
+    dfn { color: $dfn-color-dark; }
+    abbr { color: $abbr-color-dark; }
     a, .contrast { color: $a-color-dark;}
     a:visited { color: $a-visited-color-dark; }
     .update { color: $update-color-dark; }
