@@ -3,8 +3,10 @@
 {{- with $.Site.Params.pingbackUrl }}<link rel="pingback" href="{{ . }}" />{{ end }}
 <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+{{- $tufteCssResource := resources.Get "css/tufte.scss" | resources.ToCSS | resources.Minify }}
+<meta name="amp-css-name" content="{{ ($tufteCssResource | resources.Fingerprint ).RelPermalink }}">
 <style media="screen,print">
-  {{ (resources.Get "css/tufte.scss" | resources.ToCSS | resources.Minify).Content | safeCSS }}
+  {{ ($tufteCssResource).Content | safeCSS }}
 </style>
 <style media="print">
   {{ (resources.Get "css/print.scss" | resources.ToCSS | resources.Minify).Content | safeCSS }}
