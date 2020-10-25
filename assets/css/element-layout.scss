@@ -50,16 +50,6 @@ blockquote {
   }
 }
 
-// Helping the mark highlight extend just pass the letters
-article {
-    abbr:hover, mark, s, a:visited:hover, a:hover {
-        padding-left: 0.1rem;
-        padding-right: 0.1rem;
-        margin-left: -0.1rem;
-        margin-right: -0.1rem;
-    }
-}
-
 /* BEGIN Epigraphs */
 div.epigraph > blockquote {
   width: 45%; padding-left: 5%;
@@ -85,7 +75,6 @@ div.epigraph > blockquote {
 
 /* Basic Layout stuff --*/
 ul, ol { padding: 1rem 0 0 5%; }
-article section > ul, article section > ol { width: 45%; }
 
 /* ------------------------------------------------------------------------ */
 /* Styling for listing pages. */
@@ -114,40 +103,41 @@ figcaption {
   max-width: 40%;
   width: 40%
 }
-.fullwidth { max-width: 90%; }
 
+.full-width {
+    max-width: 90%;
+    section > ul, section > ol, h2, .h2, h3, h4, summary, .p, p, footer, .table-wrapper, pre, dl { width: 85%; }
+}
 // Without this setting, when the header would wrap, the letters would overlap
 h2, .h2, h3, h4, summary, .p, p, .table-wrapper, pre, dl { width: 55%; }
 article header, body > footer { width: 85%; }
-.full-width {
-  section > ul, section > ol, h2, .h2, h3, h4, summary, .p, p, footer, .table-wrapper, pre, dl { width: 85%; }
-}
 
-
-body > header {
-  hr { display: none; }
-  &> nav {
-    h1 { display: inline-block; margin: 0; }
-    padding: 1rem 0;
-    a {
-        &.hide-when-javascript-disabled { display: none; }
-        // This is a hack to prevent the underline from overflowing
-        // into empty space.  Instead the underline is only under the
-        // character.
-        u { letter-spacing: 0; margin-right: .15rem; }
-        letter-spacing: 0.15em;
-        font-style: normal;
-        font-size: 1.2rem;
-        font-family: $sans-font;
-        text-decoration: none;
-        display: inline-block;
-        margin: 1.5rem 2rem 0 auto;
-        vertical-align: baseline;
-        font-variant: small-caps;
+body {
+    > header {
+        hr { display: none; }
+        &> nav {
+            h1 { display: inline-block; margin: 0; }
+            padding: 1rem 0;
+            a {
+                &.hide-when-javascript-disabled { display: none; }
+                // This is a hack to prevent the underline from overflowing
+                // into empty space.  Instead the underline is only under the
+                // character.
+                u { letter-spacing: 0; margin-right: .15rem; }
+                letter-spacing: 0.15em;
+                font-style: normal;
+                font-size: 1.2rem;
+                font-family: $sans-font;
+                text-decoration: none;
+                display: inline-block;
+                margin: 1.5rem 2rem 0 auto;
+                vertical-align: baseline;
+                font-variant: small-caps;
+            }
+        }
     }
-  }
+    > footer { padding-top: 2rem; }
 }
-body > footer { padding-top: 2rem; }
 
 pre, pre code { font-family: $code-font; padding: 0 1.5%; overflow-x: auto; }
 code { font-family: $code-font; font-size: 1.1rem; }
@@ -233,9 +223,6 @@ dl.group {
 
 .group:not(dl):after { content: "" ;}
 
-
-article footer nav ul { width: 87.5% }
-
 main .home {
   ol {
     width: 100%; padding: 0;
@@ -250,9 +237,21 @@ main .home {
 }
 
 // metadata of articles, either on the index or in the aside
-article li { padding-bottom: 0.5rem; }
 
-article hgroup h2 { margin-bottom: 1.2rem; }
+article {
+    section > ul, section > ol { width: 45%; }
+
+    // Helping the mark highlight extend just pass the letters
+    abbr:hover, mark, s, a:visited:hover, a:hover {
+        padding-left: 0.1rem;
+        padding-right: 0.1rem;
+        margin-left: -0.1rem;
+        margin-right: -0.1rem;
+    }
+    footer nav ul { width: 87.5% }
+    li { padding-bottom: 0.5rem; }
+    hgroup h2 { margin-bottom: 1.2rem; }
+}
 
 // breadcrumb
 .breadcrumbs, .paginator, .feeds {
@@ -261,8 +260,16 @@ article hgroup h2 { margin-bottom: 1.2rem; }
 }
 
 .breadcrumbs a {
-  margin-right: 0.33333333rem;
-  &:not(:first-of-type) { margin-left: 0.3333333rem; }
+    &:hover {
+        margin-right: 0.23333333rem;
+        padding-left: 0.1rem;
+        margin-left: -0.1rem;
+        padding-right: 0.1rem;
+    }
+    margin-right: 0.33333333rem;
+    &:not(:first-of-type) {
+        margin-left: 0.3333333rem;
+    }
 }
 .paginator {
   clear: both;
