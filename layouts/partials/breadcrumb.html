@@ -12,7 +12,7 @@
 {{- $title := .title }}
 <nav aria-labelledby="series-label" class="series breadcrumbs">
   {{- $series := where $.Site.Pages "Params.series" .key }}
-  <span id="series-label"><a accesskey="s" rel="tag" href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark"><u>S</u>eries: {{ $title }}</a></span> |&nbsp;&nbsp;
+  <span class="label">Part of </span><span id="series-label"><a accesskey="s" rel="tag" href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark"><u>S</u>eries: {{ $title }}</a></span> |&nbsp;&nbsp;
   {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
   {{- range first 1 $prev }}<a accesskey="r" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">P<u>r</u>evious in Series</a>&nbsp;{{- end }}
   {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
