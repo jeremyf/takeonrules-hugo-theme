@@ -23,9 +23,11 @@
 }
 
 [role="note"] {
-
     pre, code { font-size: 1rem; }
     ins *:first-of-type { margin-bottom: -1.5rem; margin-top: 0rem; }
+
+    p { margin-top: 0rem; }
+    p:not(:first-of-type) { padding-top: 0rem; }
 }
 
 figure[role="note"] {
