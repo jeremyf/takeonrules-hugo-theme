@@ -72,8 +72,11 @@ li, blockquote {
 
 ins.margin[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; }
 @media screen and (max-width: 760px) {
+    blockquote { clear: both; }
   [role="note"] {
-    display: block;
+      display: block;
+      // Adjustment is to ensure that the border renders without extra lines above
+      > *:first-of-type { margin-top: 0rem; padding-top: 1.4rem;}
   }
   ins[role="note"] {
       *:first-of-type { padding-top: 0; }
@@ -81,6 +84,7 @@ ins.margin[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; 
     margin: 1rem 10% 1rem 2.5%; // Note, the 12.5% + 87.5% from below
   }
   ins.margin[role="note"], aside[role="note"], figure[role="note"], ins[role="note"] {
+
     width: 87.5%;
     float: left;
     clear: both;
