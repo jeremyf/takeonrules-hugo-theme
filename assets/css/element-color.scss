@@ -39,6 +39,8 @@ blockquote, .license, blockquote p { color:   var(--blockquote-color); }
 }
 dt { color:   var(--dt-color); }
 dfn { color:   var(--dfn-color); }
+
+.sidenote-number:hover *, [role=note]:hover { background: var(--tor-bg-special-warm); }
 abbr {
     color:   var(--abbr-color);
     &:hover {
@@ -62,8 +64,6 @@ a:visited {
 }
 
 
-.update { color:   var(--update-color); }
-pre, code { color:  var(--code-color); }
 a.offscreen {
     &:focus, &:active, &:hover {
         background:  var(--a-color) !important;
@@ -72,18 +72,12 @@ a.offscreen {
     }
 }
 
+pre, code { color:  var(--code-color); }
 
-.margin, .side, .update {
+// BEGIN COMMENTARY TYPE MARKS
+.margin, .side, .update, s, del, ins {
     color:   var(--commentary-color);
     p { color:   var(--commentary-color); }
-}
-time { color:   var(--time-color); }
-mark { color:   var(--mark-fg-color); background-color:   var(--mark-bg-color); }
-del { text-decoration-thickness: 1px; text-decoration-color:   var(--commentary-color); }
-summary { color:   var(--summary-color); }
-del, ins { color:   var(--commentary-color); }
-.sidenote-number:after, ins.side[role="note"]:before {
-    color:   var(--sidenote-number-color);
 }
 
 ins[role=note] { border-color:   var(--commentary-color); }
@@ -92,6 +86,21 @@ ins[role=note] { border-color:   var(--commentary-color); }
     ins[role="note"] {
         border-left: thin dotted   var(--commentary-color);
     }
+}
+s, del {
+    text-decoration-thickness: 1px; text-decoration-color:   var(--commentary-color);
+    &:hover { text-decoration: none; }
+}
+// END COMMENTARY
+
+
+time { color:   var(--time-color); }
+mark { color:   var(--mark-fg-color); background-color:   var(--mark-bg-color); }
+
+summary { color:   var(--summary-color); }
+
+.sidenote-number:after, ins.side[role="note"]:before {
+    color:   var(--sidenote-number-color);
 }
 // END Light Color Definition
 ////////////////////////////////////////////////////////////////////////////////

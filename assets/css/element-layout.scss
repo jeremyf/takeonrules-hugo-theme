@@ -50,11 +50,9 @@ blockquote {
   }
 }
 
-.sidenote-number:hover *, [role=note]:hover { background: var(--tor-bg-special-warm); }
-
 // Helping the mark highlight extend just pass the letters
 article {
-    abbr:hover, mark, a:visited:hover, a:hover {
+    abbr:hover, mark, s, a:visited:hover, a:hover {
         padding-left: 0.1rem;
         padding-right: 0.1rem;
         margin-left: -0.1rem;
