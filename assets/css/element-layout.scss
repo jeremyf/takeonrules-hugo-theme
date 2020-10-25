@@ -28,7 +28,7 @@ h3, .h3 { font-size: 1.8rem; margin-top: 2.1778rem; }
 h4 { font-size: 1.5rem; margin-top: 1.6778rem; }
 
 p, summary, ol, ul, dl { font-size: 1.4rem; }
-p, summary { padding-top: 1.4rem; }
+p, summary { margin-top: 1.4rem; }
 p, summary, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
 blockquote {
   width: 55%;
@@ -300,15 +300,15 @@ q:after, q:before { content: none; }
   & pre { margin-top: 1rem; }
 }
 
-details p:first-of-type { padding-top: 0; margin-top: 1.4rem; }
-details > *:not(summary) {
-  margin-left: 0.5% ; // Aligns left border with center of down caret
-  padding-left: 2.5%;
-  width: 52%;
-}
-
-details ul, details ol {
-    padding-left: 5%;
+details {
+    & > p:not(:first-of-type) { padding-top: 1.4rem; margin-top: 0rem; }
+    ul, ol { padding-left: 5%; }
+    & > *:not(summary) {
+            margin-left: 0.5% ; // Aligns left border with center of down caret
+            padding-left: 2.5%;
+            width: 52%;
+            &:p { padding-top: 1.4rem; margin-top: 1.4rem;}
+    }
 }
 
 @media screen and (max-width: 760px) {
