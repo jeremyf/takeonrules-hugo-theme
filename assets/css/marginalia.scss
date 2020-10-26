@@ -77,6 +77,8 @@ ins.margin[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; 
         margin: 1rem 10% 1rem 2.5%; // Note, the 12.5% + 87.5% from below
     }
 
+    figcaption { width: 100%; }
+
     // NOTE: The specificity of the selectors is required; They echo the above specific selector
     ins.margin[role="note"], figure[role="note"], ins[role="note"] {
         width: 87.5%;
