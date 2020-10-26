@@ -1,4 +1,6 @@
 {{- if isset .Params "licenses" }}
+{{- $licenses := .Params.licenses }}
+{{- if gt (len $licenses) 0 }}
 <nav aria-labelledby="skip-to-licenses">
   <h2 id="skip-to-licenses">License(s)</h2>
   <link itemprop="mainEntityOfPage" href={{ .RelPermalink }}>
@@ -10,4 +12,4 @@
       {{ end }}
     </p>
   {{ end }}
-</nav>{{- end }}
+</nav>{{- end }}{{- end }}
