@@ -203,13 +203,10 @@ a.offscreen {
 
 // Working with lists, especially navigation
 
-dl:not(.group) {
-  dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
-  dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; line-height: 1.5rem; }
-}
 
 /* clearfix hack after Cederholm (group class name) */
 .group:after { display: table; clear: both; }
+.group:not(dl):after { content: "" ;}
 
 dl.group {
   font-size: 1.2rem;
@@ -221,7 +218,10 @@ dl.group {
   dt:after { content: ":"; }
 }
 
-.group:not(dl):after { content: "" ;}
+dl.changelog {
+  dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
+  dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; line-height: 1.5rem; }
+}
 
 main .home {
   ol {
@@ -324,8 +324,6 @@ details {
   }
 }
 
-dfn {
-  font-weight: bold;
-}
+dfn { font-weight: bold; }
 
 .license { font-size: 1rem; }
