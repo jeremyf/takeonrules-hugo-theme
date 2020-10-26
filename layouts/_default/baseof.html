@@ -18,9 +18,6 @@
       <nav itemprop="hasPart" class="group" aria-label="Site-wide navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <section id="skip-links">
           <a href="#skip-to-content" accesskey="c" title="Skip to Content" class="offscreen">Skip to <u>C</u>ontent</a>
-          {{- with .Params.series }}
-            <a href="#skip-to-series-navigation" accesskey="s" title="Skip to Page's Series Navigation" class="offscreen">Skip to Page's <u>S</u>eries Navigation</a>
-          {{- end }}
           {{- if eq .Type "post" }}
             <a href="#skip-to-related-posts" accesskey="r" title="Skip to Page's Related Posts" class="offscreen">Skip to Page's <u>R</u>elated Posts</a>
           {{- end }}

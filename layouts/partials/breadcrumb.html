@@ -14,9 +14,9 @@
   {{- $series := where $.Site.Pages "Params.series" .key }}
   <span class="label">Part of </span><span id="series-label"><a accesskey="s" rel="tag" href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark"><u>S</u>eries: {{ $title }}</a></span> |&nbsp;&nbsp;
   {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
-  {{- range first 1 $prev }}<a accesskey="r" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">P<u>r</u>evious in Series</a>&nbsp;{{- end }}
+  {{- range first 1 $prev }}<a accesskey="v" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Pre<u>v</u>ious in Series</a>&nbsp;{{- end }}
   {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
-  {{- range last 1 $next }}|&nbsp;<a accesskey="e" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">N<u>e</u>xt in Series</a>{{- end }}
+  {{- range last 1 $next }}|&nbsp;<a accesskey="x" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Ne<u>x</u>t in Series</a>{{- end }}
 </nav>
 {{- end }}{{- end }}
 {{- define "breadcrumbnav" }}
