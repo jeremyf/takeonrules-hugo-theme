@@ -6,8 +6,9 @@
 {{ partial "paragraphy.html" .Inner }}
 {{- if .IsNamedParams }}
 <footer>
+&mdash;
 {{- with .Get "pre" }}
-&mdash; <span class="p-author h-card">{{ . | markdownify }}{{- if(or (or $cite $cite_url) $post) }}, {{ end }}</span>
+ <span class="p-author h-card">{{ . | markdownify }}{{- if(or (or $cite $cite_url) $post) }}, {{ end }}</span>
 {{- end }}
 {{- if($cite) }}
 <cite>
