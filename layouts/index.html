@@ -17,7 +17,7 @@
     </nav>
     <aside class="feeds" role="complimentary" aria-labelledby="site-feeds-label">
       <span id="site-feeds-label" class="label">Site feeds: </span>
-      <a type="application/atom+xml" rel="alternate" href="{{ .Site.BaseURL }}index.atom">ATOM feed</a> | <a type="application/rss+xml" rel="alternate" type=""href="{{ .Site.BaseURL }}index.xml">RSS feed</a> | <a type="application/json" rel="alternate" href="{{ .Site.BaseURL }}index.json">JSON feed</a>
+      <a rel="alternate" href="{{ .Site.BaseURL }}index.atom">ATOM feed</a> | <a rel="alternate" type=""href="{{ .Site.BaseURL }}index.xml">RSS feed</a> | <a rel="alternate" href="{{ .Site.BaseURL }}index.json">JSON feed</a>
     </aside>
 {{ end }}
 {{ define "main" }}
