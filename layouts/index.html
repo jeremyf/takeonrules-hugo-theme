@@ -51,7 +51,6 @@
     {{- else if isset .Params "description" }}
       <p itemprop="description">{{ partial "unparagraphy.html" .Params.description }}</p>
     {{- end }}
-    <p><a href="{{ .RelPermalink }}">Read More…</a></p>
   </li>
   {{- end }}
   {{- end }}
