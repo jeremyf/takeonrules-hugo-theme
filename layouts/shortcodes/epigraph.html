@@ -1,8 +1,7 @@
 {{- $cite := .Get "cite" }}
 {{- $cite_url := .Get "cite_url" }}
 {{- $post := .Get "post" }}
-<div class="epigraph">
-<blockquote itemprop="citation" class="h-cite" {{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
+<blockquote itemprop="citation" class="epigraph h-cite" {{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
 {{ partial "paragraphy.html" .Inner }}
 {{- if .IsNamedParams }}
 <footer>
@@ -25,4 +24,3 @@
 </footer>
 {{- end }}
 </blockquote>
-</div>
