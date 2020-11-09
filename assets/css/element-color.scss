@@ -101,7 +101,17 @@ s, del {
 time { color:   var(--time-color); }
 mark { color:   var(--mark-fg-color); background-color:   var(--mark-bg-color); }
 
-summary { color:   var(--summary-color); }
+summary {
+    color:   var(--summary-color);
+    &:hover {
+        code {
+            background: var(--code-color) !important;
+            color: var(--bg-color) !important;
+        }
+        background: var(--a-color) !important;
+        color: var(--bg-color) !important;
+    }
+}
 
 .sidenote-number:after, ins.side[role="note"]:before {
     color:   var(--sidenote-number-color);
