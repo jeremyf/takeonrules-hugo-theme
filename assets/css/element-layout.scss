@@ -6,7 +6,7 @@ html, body { height: 100%; }
 
 html { scroll-behavior: smooth; vertical-align: baseline; font-size: 12px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: $body-font; max-width: 1400px; counter-reset: sidenote-counter; }
-body, article hgroup > *, .list-page ul { width: 87.5%; }
+body, article header h1, article header h2, .list-page ul { width: 87.5%; }
 
 @media screen and (min-width: 800px){ html{ font-size: 12px;} }
 @media screen and (min-width: 900px){ html{ font-size: 13px;} }
@@ -248,7 +248,7 @@ article {
     }
     footer nav ul { width: 87.5% }
     li { padding-bottom: 0.5rem; }
-    hgroup h2 { margin-bottom: 1.2rem; }
+    header h2 { margin-bottom: 1.2rem; }
 }
 
 // breadcrumb
