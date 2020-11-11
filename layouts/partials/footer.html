@@ -8,7 +8,7 @@
     <br /><br />
     <span itemprop="contactPoint" itemscope itemType="http://schema.org/ContactPoint">
       <a accesskey="o" itemprop="url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
-    </span>
+    </span> | <a{{ if ne .URL "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a>
   </span>
   <span itemid='#microdata-org' itemscope itemType='http://schema.org/Organization' >
     <meta itemprop="name" content="Take on Rules" />
