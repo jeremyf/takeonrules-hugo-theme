@@ -7,7 +7,6 @@ $code-font: Courier, monospace;
 $counter-font: $body-font;
 
 :root {
-    --tor-black: #000000;
     --tor-black: #172637;
     --fg-color: var(--tor-black);
     --tor-white: #fffff8;
@@ -15,10 +14,11 @@ $counter-font: $body-font;
     --tor-cyan-alt-faint: #354f6f;
     --time-color: var(--tor-cyan-alt-faint);
     --tor-black-alt: #505050;
-    --tor-dfn-color: #505050;
-    --dfn-color: var(--tor-dfn-color);
-    --abbr-color: var(--tor-dfn-color);
-    --dt-color: var(--tor-dfn-color);
+    --tor-fg-dim: #282828;
+    --em-color: var(--tor-fg-dim);
+    --dfn-color: var(--tor-black-alt);
+    --abbr-color: var(--tor-black-alt);
+    --dt-color: var(--tor-black-alt);
     --tor-blue: #0000BB;
     --a-color: var(--tor-blue);
     --sidenote-number-color: var(--tor-blue);
@@ -62,9 +62,11 @@ $counter-font: $body-font;
     :root {
         --fg-color: var(--tor-white);
         --bg-color: var(--tor-black);
+        --tor-fg-dim: #282828;
         --tor-cyan-faint: #a0bfdf;
         --tor-cyan-alt-faint: #90c4ed;
-        --tor-dfn-color: #a8a8a8;
+        --tor-black-alt: #a8a8a8;
+        --em-color: #e0e6f0;
         --tor-black-alt: #181a20;
         --tor-blue: #00bdfa;
         --tor-magenta-alt: #b6a0ff;

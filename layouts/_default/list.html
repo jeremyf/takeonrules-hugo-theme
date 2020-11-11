@@ -8,7 +8,7 @@
       {{ partial "footer/image.html" . }}
     </header>
     <section itemprop="text" class="e-content content">
-      <p>Below are all of the posts with the <dfn>{{ .Title }}</dfn> {{ .Type | singularize }}:</p>
+      <p>Below are all of the posts with the <em>{{ .Title }}</em> {{ .Type | singularize }}:</p>
       <ul>
         {{- range sort .Data.Pages "Date" "asc" }}
         <li><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time> :: <a href="{{ .Permalink}}">{{ .Title }}</a></li>
