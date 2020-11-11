@@ -102,7 +102,7 @@ figcaption {
   width: 40%
 }
 
-.full-width {
+.type-series, .type-tags, .type-series, .full-width {
     max-width: 90%;
     section > ul, section > ol, h2, .h2, h3, h4, summary, .p, p, footer, .table-wrapper, pre, dl { width: 85%; }
 }
@@ -138,8 +138,8 @@ body {
 }
 
 pre, pre code { font-family: $code-font; padding: 0 1.5%; overflow-x: auto; }
-code { font-family: $code-font; font-size: 1.1rem; }
-pre code { font-size: 1.0rem; line-height: 1.7142; margin-top: 1.7142rem; display: block; white-space: pre; }
+kbd, code { font-family: $code-font; font-size: 1.1rem; }
+pre code { line-height: 1.7142; display: block; white-space: pre; margin-top: 1.7142rem; }
 
 .newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.05rem; }
 

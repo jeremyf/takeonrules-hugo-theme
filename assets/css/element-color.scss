@@ -77,6 +77,7 @@ a.offscreen {
 }
 
 pre, code { color:  var(--code-color); }
+kbd { color: var(--kbd-color); }
 
 // BEGIN COMMENTARY TYPE MARKS
 .margin, .side, .update, s, del, ins {
