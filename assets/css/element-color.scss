@@ -110,6 +110,11 @@ summary {
             background: var(--code-color) !important;
             color: var(--bg-color) !important;
         }
+        a {
+            &:hover { background: var(--summary-color) !important; }
+            background: var(--summary-color) !important;
+            color: var(--bg-color) !important;
+        }
         background: var(--summary-color) !important;
         color: var(--bg-color) !important;
     }
