@@ -3,20 +3,20 @@
   {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3) }}
 </nav>
 {{- if in .Site.Params.paginatedSections .Type -}}
-<nav aria-labelledby="post-neighbors-label" class="paginator breadcrumbs" role="list">
+<nav aria-labelledby="post-neighbors-label" class="paginator breadcrumbs">
   <span id="post-neighbors-label" class="label">Post Neighbors: </span>
-  {{- with .PrevInSection }}<a itemprop="relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev" role="listitem"><u>P</u>revious post</a>&nbsp;{{- end }}{{- with .NextInSection }}|&nbsp;<a itemprop="relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next" role="listitem"><u>N</u>ext post</a>{{- end }}
+  {{- with .PrevInSection }}<a itemprop="relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev"><u>P</u>revious post</a>&nbsp;{{- end }}{{- with .NextInSection }}|&nbsp;<a itemprop="relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next"><u>N</u>ext post</a>{{- end }}
 </nav>
 {{- end }}
 {{- with .Params.series -}}{{- range (where $.Site.Data.series "key" "eq" .) }}
 {{- $title := .title }}
-<nav aria-labelledby="series-label" class="series breadcrumbs" role="list">
+<nav aria-labelledby="series-label" class="series breadcrumbs">
   {{- $series := where $.Site.Pages "Params.series" .key }}
-  <span class="label">Part of </span><span id="series-label"><a accesskey="s" rel="tag" href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark" role="listitem"><u>S</u>eries: {{ $title }}</a></span> |&nbsp;&nbsp;
+  <span class="label">Part of </span><span id="series-label"><a accesskey="s" rel="tag" href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark"><u>S</u>eries: {{ $title }}</a></span> |&nbsp;&nbsp;
   {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
-  {{- range first 1 $prev }}<a itemprop="relatedLink" accesskey="v" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}" role="listitem">Pre<u>v</u>ious in Series</a>&nbsp;{{- end }}
+  {{- range first 1 $prev }}<a itemprop="relatedLink" accesskey="v" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Pre<u>v</u>ious in Series</a>&nbsp;{{- end }}
   {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
-  {{- range last 1 $next }}|&nbsp;<a itemprop="relatedLink" accesskey="x" rel="next" title="{{ .Title }}" href="{{ .Permalink }}" role="listitem">Ne<u>x</u>t in Series</a>{{- end }}
+  {{- range last 1 $next }}|&nbsp;<a itemprop="relatedLink" accesskey="x" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Ne<u>x</u>t in Series</a>{{- end }}
 </nav>
 {{- end }}{{- end }}
 {{- define "breadcrumbnav" }}
@@ -25,7 +25,7 @@
   {{- else if not .p1.IsHome }}
     {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) ) }} /
   {{- end }}
-  <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" role="listitem">
+  <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
     <a itemprop="item" href="{{ .p1.Permalink }}" class="{{ if eq .p1 .p2 }}active{{ end }}">
       <span itemprop="name">{{ if eq .p1.Permalink .p1.Site.BaseURL }}<u>H</u>ome{{ else }}{{ .p1.Title }}{{ end }}</span>
       <meta itemprop="position" content="{{ .depth }}" />

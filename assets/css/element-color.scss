@@ -43,14 +43,14 @@ dfn { color:   var(--dfn-color); }
 .sidenote-number:hover *, [role=note]:hover { background: var(--tor-bg-special-warm); }
 abbr {
     color:   var(--abbr-color);
-    &:hover {
+    &:hover, &:focus, &:active {
         background: var(--abbr-color) !important;
         color: var(--bg-color) !important;
     }
 }
 a, .contrast {
     color:   var(--a-color);
-    &:hover {
+    &:hover, &:focus, &:active {
         code {
             background: var(--code-color) !important;
             color: var(--bg-color) !important;
@@ -61,7 +61,7 @@ a, .contrast {
 }
 a:visited {
     color:   var(--a-visited-color);
-    &:hover {
+    &:hover, &:focus, &:active {
         background: var(--a-visited-color) !important;
         color: var(--bg-color) !important;
     }
@@ -95,7 +95,7 @@ ins[role=note] { border-color:   var(--commentary-color); }
 }
 s, del {
     text-decoration-thickness: 1px; text-decoration-color:   var(--commentary-color);
-    &:hover { text-decoration: none; }
+    &:hover, &:focus { text-decoration: none; }
 }
 // END COMMENTARY
 

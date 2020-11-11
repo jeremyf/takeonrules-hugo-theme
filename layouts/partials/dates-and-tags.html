@@ -2,7 +2,7 @@
 <link itemprop="publisher" href="#microdata-org" />
 By <span class="u-author p-author"><a rel="author" class="u-url" href="{{ .Site.BaseURL }}">{{ .Site.Params.copyrightHolder }}</a></span> on
 {{ if eq .Lastmod .Date }}
-  <time itemprop="datePublished" class="dt-published" aria-label="Published On" datetime="{{ dateFormat $.Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
+  <time itemprop="datePublished" class="dt-published" datetime="{{ dateFormat $.Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
   <meta itemprop="dateModified" content="{{ dateFormat $.Site.Params.iso8601_format .Date }}" />
 {{ else }}
   <del datetime="{{ .Lastmod.Format $.Site.Params.iso8601_format }}"><time itemprop="datePublished" class="dt-published" aria-label="Published On" datetime="{{ dateFormat $.Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date }}</time></del>

@@ -15,9 +15,9 @@
       Page {{ .PageNumber }} of {{ .TotalPages }}
     {{- end }}
     </nav>
-    <aside class="feeds" role="complementary" aria-labelledby="site-feeds-label">
+    <aside class="feeds" aria-labelledby="site-feeds-label">
       <span id="site-feeds-label" class="label">Site feeds: </span>
-      <a rel="alternate" href="{{ .Site.BaseURL }}index.atom">ATOM feed</a> | <a rel="alternate" type=""href="{{ .Site.BaseURL }}index.xml">RSS feed</a> | <a rel="alternate" href="{{ .Site.BaseURL }}index.json">JSON feed</a>
+      <a rel="alternate" href="{{ .Site.BaseURL }}index.atom">ATOM feed</a> | <a rel="alternate" href="{{ .Site.BaseURL }}index.xml">RSS feed</a> | <a rel="alternate" href="{{ .Site.BaseURL }}index.json">JSON feed</a>
     </aside>
 {{ end }}
 {{ define "main" }}
@@ -33,7 +33,7 @@
         <cite itemprop="name">{{ .Title }}</cite>
       </a>
     </h2>
-    <p aria-label="Publication date and tags">
+    <p>
       <link itemprop="author" href="#microdata-author" />
       <link itemprop="publisher" href="#microdata-org" />
       <meta itemprop="wordCount" content="{{ .WordCount }}" />
