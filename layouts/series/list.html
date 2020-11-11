@@ -13,22 +13,13 @@
     </header>
     <section itemprop="text" class="e-content content">
       {{ partial "paragraphy.html" .description }}
-      <div class="table-wrapper" itemscope itemtype="http://schema.org/Table">
-        <table id="table-{{ $data.Singular | anchorize }}-{{ .key | anchorize }}" class="stripe data-tables">
-          <caption itemprop="about">Table "{{ .title | title }}" {{ $data.Singular | title }}: Posts in "{{ .title }}" {{ $data.Singular }}</caption>
-          <thead>
-            <tr><th scope="col">Title</th><th scope="col">Date</th></tr>
-          </thead>
-          <tbody>
-            {{- range $data.Pages }}
-            <tr>
-              <td><a href="{{ .Permalink}}">{{ .Title }}</a></td>
-              <td><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</td>
-            </tr>
-            {{- end }}
-          </tbody>
-        </table>
-      </div>
+
+      <p>Below are all of the posts in this series:</p>
+      <ol>
+        {{- range sort $data.Pages "Date" "asc" }}
+        <li><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time> :: <a href="{{ .Permalink}}">{{ .Title }}</a></li>
+        {{- end }}
+      </ol>
     </section>
   {{- end }}
   </article>
