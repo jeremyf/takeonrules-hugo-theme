@@ -22,17 +22,20 @@
         var siteSearch = document.getElementById('cse-search-box');
       </script>
       <noscript>
-        <p>I see you've disabled Javascript. You'll need to use <a href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost}}">DuckDuckGo</a> or some other Search Engine to search {{ .Site.Title }}.</p>
+        <p>You've disabled Javascript. You'll need to use <a href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost}}">DuckDuckGo</a> or some other Search Engine to search {{ .Site.Title }}.</p>
       </noscript>
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.4.1.min.js">
+
       {{ $searchJs := resources.Get "js/search.json" | resources.ExecuteAsTemplate "search.json" . }}
       <link rel="preload" as="script" href="/search.json">
       <script type="text/javascript" src="{{ $searchJs.Permalink }}" integrity="{{ $searchJs.Data.Integrity }}"></script>
-      {{ $js := resources.Get "js/lunr.js" | resources.Minify }}
-      {{ $secureJS := $js | resources.Fingerprint "sha512" }}
-      <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
-      <link rel="preload" as="script" href="{{ $secureJS.Permalink }}">
+
+      {{ $secureJqueryJS := resources.Get "js/jquery-3.5.1.min.js" | resources.Minify | resources.Fingerprint "sha512" }}
+      <script type="text/javascript" src="{{ $secureJqueryJS.Permalink }}" integrity="{{ $secureJqueryJS.Data.Integrity }}"></script>
+      <link rel="preload" as="script" href="{{ $secureJqueryJS.Permalink }}">
+
+      {{ $secureLunrJS := resources.Get "js/lunr-2.3.9.js" | resources.Minify | resources.Fingerprint "sha512"}}
+      <script type="text/javascript" src="{{ $secureLunrJS.Permalink }}" integrity="{{ $secureLunrJS.Data.Integrity }}"></script>
+      <link rel="preload" as="script" href="{{ $secureLunrJS.Permalink }}">
       <script type="text/javascript">
         var lunrIndex, $results, pagesIndex;
 
@@ -89,7 +92,7 @@
 
                 // Only trigger a search when 2 chars. at least have been provided
                 var query = $(this).val();
-                if (query.length < 2) {
+              if (query.length < {{ $minLength }}) {
                     return;
                 }
 

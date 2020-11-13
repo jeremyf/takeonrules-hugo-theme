@@ -32,13 +32,12 @@
     ```shell
     openssl dgst -sha384 -binary FILENAME.js | openssl base64 -A
     ```
+  From https://datatables.net/download/index, I chose Semantic UI, jQuery 3, Datatables
   */}}
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.4.1.min.js">
-
-  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" integrity="sha384-L74JDRkaoB7PWnReNepwX6+kSckc13TJXrka4EerY9jxQxSDl0dTguSLcA7dEfq8" crossorigin="anonymous"></script>
-  <link rel="preload" as="script" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js">
+  {{ $js := resources.Get "js/semantic-ui-jquery-3.3.1-datatables-1.10.22.min.js" | resources.Minify }}
+  {{ $secureJS := $js | resources.Fingerprint "sha512" }}
+  <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+  <link rel="preload" as="script" href="{{ $secureJS.Permalink }}">
 
   <script type="text/javascript">
     $(document).ready(function() {
