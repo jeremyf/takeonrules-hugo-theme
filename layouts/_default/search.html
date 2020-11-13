@@ -11,10 +11,10 @@
       <div class="hide-js" id="lunr-search-result-container" role="search">
         <label for="search">Search for:</label>
         {{ $minLength := 2 }}
-        <input minlength="{{ $minLength }}" autofocus="true" inputmode="search" id="search" aria-describedby="search-help" type="text" name="q" class="site-search-input" placeholder="Start typing&hellip;">
+        <input minlength="{{ $minLength }}" aria-controls="results" autofocus="true" inputmode="search" id="search" aria-describedby="search-help" type="text" name="q" class="site-search-input" placeholder="Start typing&hellip;">
         <p id="search-help">This search uses <code>Lunr.js</code>; <a rel="help external opener nofollow" href="https://lunrjs.com/guides/searching.html">Their searching documentation</a> may be useful for helping refine your search.</p>
         <h2>Results</h2>
-        <ul id="results"></ul>
+        <ul aria-live="polite" id="results"></ul>
       </div>
       <script>
         var container = document.getElementById('lunr-search-result-container');
