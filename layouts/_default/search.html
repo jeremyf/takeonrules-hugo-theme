@@ -10,8 +10,10 @@
     <section itemprop="text" class="e-content">
       <div class="hide-js" id="lunr-search-result-container" role="search">
         <label for="search">Search for:</label>
-        <input id="search" type="text" name="q" class="site-search-input" placeholder="Start typing&hellip;">
-        <h3>Results:</h3>
+        {{ $minLength := 2 }}
+        <input minlength="{{ $minLength }}" autofocus="true" inputmode="search" id="search" aria-describedby="search-help" type="text" name="q" class="site-search-input" placeholder="Start typing&hellip;">
+        <p id="search-help">This search uses <code>Lunr.js</code>; <a rel="help external opener nofollow" href="https://lunrjs.com/guides/searching.html">Their searching documentation</a> may be useful for helping refine your search.</p>
+        <h2>Results</h2>
         <ul id="results"></ul>
       </div>
       <script>
