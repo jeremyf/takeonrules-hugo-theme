@@ -19,18 +19,18 @@
         <div id="skip-links">
           <a href="#skip-to-content" accesskey="c" class="offscreen">Skip to <u>C</u>ontent</a>
           {{- if eq .Type "post" }}
-            <a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Page's <u>R</u>elated Posts</a>
+            <span class="hidden"> | </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Page's <u>R</u>elated Posts</a>
           {{- end }}
           {{- with .Params.licenses }}
-            <a href="#skip-to-licenses" accesskey="l" class="offscreen">Skip to Page's <u>L</u>icenses</a>
+            <span class="hidden"> | </span><a href="#skip-to-licenses" accesskey="l" class="offscreen">Skip to Page's <u>L</u>icenses</a>
           {{- end }}
           {{- with .Params.webmentions }}
-            <a href="#skip-to-webmentions" accesskey="w" class="offscreen">Skip to Page's <u>W</u>eb Mentions</a>
+            <span class="hidden"> | </span><a href="#skip-to-webmentions" accesskey="w" class="offscreen">Skip to Page's <u>W</u>eb Mentions</a>
           {{- end }}
         </div>
         <h1><a itemprop="url" accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
-          <a itemprop="url" accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a>
+          <a itemprop="url" accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> | </span>
         {{- end }}
         <a itemprop="url" accesskey="/" {{ if eq (string $.Page.RelPermalink) "/search/" }}class="active"{{ end }} id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a>
       </nav>

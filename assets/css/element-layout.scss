@@ -254,6 +254,7 @@ article {
 }
 
 // breadcrumb
+.hidden { display: none; }
 .breadcrumbs, .paginator, .feeds {
   .label { display: none; }
   width: 85%; font-family: $sans-font; padding-bottom: 1rem;
