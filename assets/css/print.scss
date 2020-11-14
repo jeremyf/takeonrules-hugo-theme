@@ -12,6 +12,8 @@ body {
   overflow-wrap: break-word;
 }
 
+a { text-decoration: none; }
+
 article {
   .table-wrapper, h2, h3, h4, summary { page-break-after: avoid; }
 }

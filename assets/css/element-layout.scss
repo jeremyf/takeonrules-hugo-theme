@@ -16,7 +16,8 @@ body, article header h1, article header h2, .list-page ul { width: 87.5%; }
 @media screen and (min-width: 1300px){ html{ font-size: 17px; } }
 
 // sets link style according to values in _settings.scss
-a { text-decoration: none; }
+article a { text-decoration: underline; }
+a, sup a { text-decoration: none; }
 
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
