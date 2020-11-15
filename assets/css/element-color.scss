@@ -55,6 +55,10 @@ a, .contrast {
             background: var(--code-color) !important;
             color: var(--bg-color) !important;
         }
+        abbr {
+            background: var(--abbr-color) !important;
+            color: var(--bg-color) !important;
+        }
         background: var(--a-color) !important;
         color: var(--bg-color) !important;
     }
