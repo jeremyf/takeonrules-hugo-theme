@@ -1,64 +1,18 @@
 {{ define "breadcrumb" }}
-  {{ partial "breadcrumb.html" . }}
+{{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
-    <header>
-      <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
-      {{ partial "footer/image.html" . }}
-    </header>
-    <section itemprop="text" itemscope itemtype="http://schema.org/WebPageElement" class="e-content content">
-      {{ $data := .Data }}
-      <details open>
-        <summary>By Frequency</summary>
-        <div class="table-wrapper" itemscope itemtype="http://schema.org/Table">
-        <table role="contents">
-          <caption itemprop="about">{{ .Title }} by Frequency</caption>
-        <thead>
-          <tr>
-            <th scope="col">Term</th>
-            <th scope="col">Count</th>
-          </tr>
-        </thead>
-        <tbody>
-        {{ range $key, $value := .Data.Terms.ByCount }}
-          <tr>
-            <td>
-            <a href="{{ $value.Name| urlize }}">
-              {{ index (index $.Site.Data.licenses $value.Name) "Name" }}
-            </a>
-            </td>
-            <td>{{  $value.Count }}</td>
-          </tr>
-        {{ end }}
-        </tbody>
-        </table>
-      </div>
-    </details>
-    <details open>
-      <summary>By Alphabetical Order</summary>
-      <div class="table-wrapper" itemscope itemtype="http://schema.org/Table">
-        <table role="contents">
-          <caption itemprop="about">{{ .Title }} by Alphabetical Order</caption>
-        <thead>
-          <tr>
-            <th scope="col">Term</th>
-            <th scope="col">Count</th>
-          </tr>
-        </thead>
-        <tbody>
-        {{ range $key, $value := .Data.Terms.Alphabetical}}
-          <tr>
-            <td><a href="{{ $value.Name| urlize }}">
-              {{ index (index $.Site.Data.licenses $value.Name) "Name" }}
-            </a></td>
-            <td>{{  $value.Count }}</td>
-          </tr>
-        {{ end }}
-        </tbody>
-        </table>
-        </div>
-      </details>
-    </section>
-  </article>
+<article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
+  <header>
+    <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+    {{ partial "footer/image.html" . }}
+  </header>
+  <section itemprop="text" itemscope itemtype="http://schema.org/WebPageElement" class="e-content content">
+    <ul>
+      {{- range $key, $value := .Data.Terms.Alphabetical }}
+      <li><a href="{{ $value.Name| urlize }}">{{ index (index $.Site.Data.licenses $value.Name) "Name" }}</a> (count {{ $value.Count }})</li>
+      {{- end }}
+    </ul>
+  </section>
+</article>
 {{ end }}
