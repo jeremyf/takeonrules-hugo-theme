@@ -25,7 +25,7 @@
   {{- else if not .p1.IsHome }}
     {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) ) }} /
   {{- end }}
-  <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+  <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
     <a itemprop="item" href="{{ .p1.Permalink }}" class="{{ if eq .p1 .p2 }}active{{ end }}">
       <span itemprop="name">{{ if eq .p1.Permalink .p1.Site.BaseURL }}<u>H</u>ome{{ else }}{{ .p1.Title }}{{ end }}</span>
       <meta itemprop="position" content="{{ .depth }}" />
