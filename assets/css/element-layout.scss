@@ -311,7 +311,10 @@ q:after, q:before { content: none; }
 
 details {
     & > p:not(:first-of-type) { padding-top: 1.4rem; margin-top: 0rem; }
-    ul, ol { padding-left: 5%; }
+    ul, ol {
+        padding-left: 5%;
+        li { margin-left: 2rem; }
+    }
     & > *:not(summary) {
             margin-left: 0.5% ; // Aligns left border with center of down caret
             padding-left: 2.5%;
