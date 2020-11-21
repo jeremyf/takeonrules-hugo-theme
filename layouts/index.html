@@ -21,14 +21,14 @@
     </aside>
 {{ end }}
 {{ define "main" }}
-<article class="home" itemscope itemtype="http://schema.org/Blog">
+<article class="home" aria-labelledby="skip-to-content" itemscope itemtype="http://schema.org/Blog">
   <h1 id="skip-to-content">Blog Posts</h1>
   <ol  aria-labelledby="skip-to-content">
   {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
-  <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-    <h2>
+  <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="{{ anchorize .Title }}">
+    <h2 id="{{ anchorize .Title }}">
       <a itemprop="mainEntityOfPage" href="{{ .RelPermalink }}" accesskey="{{ mod (add 1 $index) 10 }}" rel="bookmark">
         <cite itemprop="name">{{ .Title }}</cite>
       </a>
