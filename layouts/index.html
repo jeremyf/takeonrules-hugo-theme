@@ -53,7 +53,7 @@
   {{- end }}
   {{- end }}
   </ol>
-  <nav class="paginator">
+  <nav class="paginator" aria-labelledby="blog-pagination-label">
     {{- with $paginator }}
       {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
       Page {{ .PageNumber }} of {{ .TotalPages }}
