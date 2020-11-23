@@ -7,7 +7,7 @@
         <title>{{ .Title }}</title>
       {{- else if (and (eq .Kind "term") (eq .Type "series")) }}
         {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
-        <title>{{ .title }} // {{ .Site.Title  }}</title>
+        <title>{{ .title }} // {{ $.Site.Title  }}</title>
         {{- end }}
       {{- else }}
         <title>{{ .Title }} // {{ .Site.Title  }}</title>
