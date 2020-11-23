@@ -10,13 +10,12 @@ By <span class="u-author p-author"><a rel="author" class="u-url" href="{{ .Site.
 {{ end }}
 ::
 {{- define "tagmd" }}
-  <a rel="tag" aria-label="Posts tagged with “{{ .tag }}”" href="{{ "tags" | absURL }}/{{ .tag | urlize }}">
     {{- if isset .site.Data.tags .tag }}{{- $tag := index .site.Data.tags .tag }}{{- $itemid := $tag.itemid }}{{- $alternateName := $tag.abbr }}{{- if isset $tag "abbr"}}{{- $abbr := index .site.Data.abbrs $tag.abbr }}{{- if isset $abbr "itemid" }}{{- $itemid = $abbr.itemid }}{{- $alternateName = $abbr.title }}{{- end }}{{- end }}
-    #<span class="p-category" itemprop="keywords" itemscope itemtype="http://schema.org/DefinedTerm"><span itemprop="name">{{ .tag | anchorize }}</span>{{- with $alternateName }}<meta itemprop="alternateName" content="{{ . }}" />{{- end }}<link itemprop="url" href="{{ $itemid }}" /></span>
+  <a rel="tag" aria-label="Posts tagged with “{{ .tag }}”" href="{{ "tags" | absURL }}/{{ .tag | urlize }}">
+    #<span class="p-category" itemprop="keywords" itemscope itemtype="http://schema.org/DefinedTerm"><span itemprop="name">{{ .tag | anchorize }}</span>{{- with $alternateName }}<meta itemprop="alternateName" content="{{ . }}" />{{- end }}<link itemprop="url" href="{{ $itemid }}" /></span></a>
     {{- else }}
-    #<span class="p-category" itemprop="keywords">{{ .tag | anchorize }}</span>
+  <a rel="tag" aria-label="Posts tagged with “{{ .tag }}”" href="{{ "tags" | absURL }}/{{ .tag | urlize }}">#<span class="p-category" itemprop="keywords">{{ .tag | anchorize }}</span></a>
     {{- end }}
-  </a>
 {{- end }}{{- with .Params.tags }}
 {{- $tags := . }}{{- $last_tag := . | last 1 }}
 {{- range ($tags | complement $last_tag) }}{{ template "tagmd" (dict "tag" . "page" $.Page "site" $.Site )}}&nbsp;{{- end }}{{- range $last_tag }}{{ template "tagmd" (dict "tag" . "page" $.Page "site" $.Site )}}{{- end }}{{- end }}
