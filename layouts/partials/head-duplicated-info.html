@@ -1,8 +1,8 @@
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 {{- with $.Site.Params.webmentionUrl }}<link rel="webmention" href="{{ . }}" />{{ end }}
 {{- with $.Site.Params.pingbackUrl }}<link rel="pingback" href="{{ . }}" />{{ end }}
 <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <style media="screen,print">
   {{ (resources.Get "css/tufte.scss" | resources.ToCSS | resources.Minify ).Content | safeCSS }}
 </style>
@@ -13,5 +13,5 @@
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title | safeHTML }} {{ .Name }} Feed" />
 {{ end -}}
 {{- range .Site.Menus.me_elsewhere }}
-<link rel="me" href="{{ .URL }}" title="{{ .Name }}">
+<link rel="me" href="{{ .URL }}" title="{{ .Name }}" />
 {{- end }}
