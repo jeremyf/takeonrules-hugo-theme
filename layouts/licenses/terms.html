@@ -10,7 +10,7 @@
   <section itemprop="text" itemscope itemtype="http://schema.org/WebPageElement" class="e-content content">
     <ul>
       {{- range $key, $value := .Data.Terms.Alphabetical }}
-      <li><a href="{{ $value.Name| urlize }}">{{ index (index $.Site.Data.licenses $value.Name) "Name" }}</a> (count {{ $value.Count }})</li>
+      <li>{{ $value.Count }} published under <a href="{{ $value.Name| urlize }}">{{ index (index $.Site.Data.licenses $value.Name) "Name" }}</a></li>
       {{- end }}
     </ul>
   </section>
