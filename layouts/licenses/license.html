@@ -1,34 +1,31 @@
 {{ define "breadcrumb" }}
-  {{ partial "breadcrumb.html" . }}
+{{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
 <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
   {{- $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
   {{- $title := .Title }}
   {{ with index $.Site.Data.licenses $slug }}
-    <header>
-      <h1 itemprop="name" class="p-name" id="{{ anchorize $title }}">{{ .Name }}</h1>
-      {{ partial "footer/image.html" . }}
-    </header>
-    {{ with index . "Description" }}
-      <section itemprop="about">
-        {{ . | safeHTML }}
-      </section>
-    {{ end }}
-  {{ end }}
+  <header>
+    <h1 itemprop="name" class="p-name" id="{{ anchorize $title }}">{{ .Name }}</h1>
+    {{ partial "footer/image.html" . }}
+  </header>
+  {{- with index . "Description" }}
+  <section itemprop="about">
+    {{ . | safeHTML }}
+  </section>
+  {{- end }}
+  {{- end }}
   <section>
-  {{ range .Data.Pages.GroupByDate "2006" }}
+    {{- range .Data.Pages.GroupByDate "2006" }}
     <details>
-    <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
-          {{ range .Pages }}
-            <ul>
-              <li>
-                <time datetime="{{ .Date.Format "2006-01-02" }}" class="list-date">{{ .Date.Format "Jan 2" }}</time> &middot;
-                <a href="{{ .RelPermalink }}">{{.Title}}</a>
-              </li>
-            </ul>
-          {{ end }}
-      </details>
+      <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
+      <dl class="group">
+        {{- range .Pages }}
+        <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><a href="{{ .Permalink}}">{{ .Title }}</a></dd>
+        {{- end }}
+            </dll>
+    </details>
     {{ end }}
   </section>
 </article>
