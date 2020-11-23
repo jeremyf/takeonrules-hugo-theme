@@ -14,12 +14,13 @@
     <section itemprop="text" class="e-content content">
       {{ partial "paragraphy.html" .description }}
 
-      <p>Below are all of the posts in this series:</p>
-      <ol>
+      <p>Below are all of the posts in this series.  I ordered the posts from oldest to newest:</p>
+
+      <dl class="group">
         {{- range sort $data.Pages "Date" "asc" }}
-        <li><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time> :: <a href="{{ .Permalink}}">{{ .Title }}</a></li>
+        <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><a href="{{ .Permalink}}">{{ .Title }}</a></dd>
         {{- end }}
-      </ol>
+      </dl>
     </section>
   {{- end }}
   </article>
