@@ -51,13 +51,15 @@ abbr {
 a, .contrast {
     color:   var(--a-color);
     &:hover, &:focus, &:active {
+        > * { color: var(--bg-color) !important; }
+        time {
+            background: var(--time-color) !important;
+        }
         code {
             background: var(--code-color) !important;
-            color: var(--bg-color) !important;
         }
         abbr {
             background: var(--abbr-color) !important;
-            color: var(--bg-color) !important;
         }
         background: var(--a-color) !important;
         color: var(--bg-color) !important;
