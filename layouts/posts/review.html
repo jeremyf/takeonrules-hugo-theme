@@ -9,9 +9,11 @@
       <link itemprop="author" href="#microdata-author" />
       <link itemprop="publisher" href="#microdata-org" />
       <link itemprop="isPartOf" href="{{ .Site.BaseURL }}" />
+      <link itemprop="url" href="{{ .Permalink }}" />
       <link itemprop="speakable" href="#skip-to-content" />
       <meta itemprop="wordCount" content="{{ .WordCount }}" />
       <meta itemprop="inLanguage" content="en-US" />
+      <meta itemprop="description">{{ .Params.description }}</meta>
       {{- with .Params.ratingValue }}
       <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
         <meta itemprop="ratingValue">{{ . }}</meta>
@@ -19,11 +21,14 @@
       {{- end }}
       <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .Params.itemReviewedType }}{{ . }}{{ else }}Book{{ end }}">
         {{ with .Params.itemReviewed }}
-          <link itemprop="url" href="{{ .url }}">
-          <meta itemprop="name" content="{{ .name }}">
+          <link itemprop="url" href="{{ .url }}" />
+          <meta itemprop="name" content="{{ .name }}" />
           {{ range .authors }}
-          <meta itemprop="author" content="{{ . }}">
+          <meta itemprop="author" content="{{ . }}" />
           {{ end }}
+          {{- with .isbn }}
+          <meta itemprop="isbn" content="{{ . }}" />
+          {{- end }}
         {{ else }}
           {{ .Get }}
         {{ end }}

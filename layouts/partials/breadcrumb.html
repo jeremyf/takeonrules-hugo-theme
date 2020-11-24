@@ -1,5 +1,5 @@
 <nav aria-labelledby="breadcrumbs-label" class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList" role="list">
-  <span id="breadcrumbs-label" class="label">Breadcrumbs: </span>
+  <span id="breadcrumbs-label" itemprop="name" class="label">Breadcrumbs: </span>
   {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3 "site" .Site) }}
 </nav>
 {{- if in .Site.Params.paginatedSections .Type -}}
@@ -29,7 +29,7 @@
     <a itemprop="item" href="{{ .p1.Permalink }}" class="{{ if eq .p1 .p2 }}active{{ end }}">
       <span itemprop="name">
         {{- if eq .p1.Permalink .p1.Site.BaseURL }}
-        <u>H</u>ome
+        Home
         {{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}
         {{- range (where .site.Data.series "key" .p1.Title) }}
         {{ .title }}
