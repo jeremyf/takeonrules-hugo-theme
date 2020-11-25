@@ -28,6 +28,10 @@ footer.group {
   .footer-links { display: none; }
 }
 
+details > * {
+  border-left: none !important;
+}
+
 tr, img { page-break-inside: avoid; }
 img { max-width: 100% !important; }
 p, h2, h3, h4, summary { orphans: 4; widows: 4; }
