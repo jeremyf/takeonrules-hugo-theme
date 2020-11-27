@@ -10,12 +10,9 @@
     line-height: 1.96;
     vertical-align: baseline;
     position: relative;
-    &.margin-table {
+    &.margin-table.table-wrapper {
         margin-right: 11%; width: 29%;
-        .table-wrapper {
-            width: 100%;
-            table { width: 100%; }
-        }
+        table { width: 100%; }
     }
     p, ul, dl, blockquote {
         font-size: 1.0rem; width:100%;
@@ -74,7 +71,14 @@ ins.margin[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; 
 
 @media screen and (max-width: 760px) {
     blockquote { clear: both; }
-    [role="note"] { display: block; }
+    [role="note"] {
+        display: block;
+        &.margin-table.table-wrapper {
+            width: 87.5%;
+            table { width: 100%; }
+    }
+
+    }
     ins[role="note"] {
         padding-left: 0.5rem;
         margin: 1rem 10% 1rem 2.5%; // Note, the 12.5% + 87.5% from below
