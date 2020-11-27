@@ -112,14 +112,16 @@ mark { color:   var(--mark-fg-color); background-color:   var(--mark-bg-color); 
 summary {
     color:   var(--summary-color);
     &:hover {
+        > * { color: var(--bg-color) !important; }
+        time {
+            background: var(--summary-color) !important;
+        }
         code {
             background: var(--code-color) !important;
-            color: var(--bg-color) !important;
         }
         a {
             &:hover { background: var(--summary-color) !important; }
             background: var(--summary-color) !important;
-            color: var(--bg-color) !important;
         }
         background: var(--summary-color) !important;
         color: var(--bg-color) !important;
