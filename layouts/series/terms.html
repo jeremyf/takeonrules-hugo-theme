@@ -11,7 +11,7 @@
       {{ .Content }}
       <div class="table-wrapper" itemscope itemtype="http://schema.org/Table" role="region" tabindex="0" aria-labelledby="caption-{{ anchorize .Title }}">
         <table id="table-{{ anchorize .Title }}" class="data-tables stripe">
-          <caption itemprop="about" id="caption-{{ anchorize .Title }}">Table {{ .Title }}: All {{ .Title }} in {{ .Site.Title }}</caption>
+          <caption itemprop="about" id="caption-{{ anchorize .Title }}">Table: All {{ .Title }} in {{ .Site.Title }}</caption>
           <thead>
             <tr><th scope="col">Title</th><th class="r" scope="col">Count</th><th class="c" scope="col">First Post</th><th class="c" scope="col">Last Post</th></tr>
           </thead>
