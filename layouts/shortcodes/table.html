@@ -1,5 +1,5 @@
-{{- $caption := .Get "caption" }}{{- $table_number := .Get "table_number" }}<div class="table-wrapper{{- if .Params.margin }} marginnote margin-table{{ end }}" {{- if .Params.margin }}role="note"{{ end }} itemscope itemtype="http://schema.org/Table" role="region" tabindex="0" aria-labelledby="caption-{{ $table_number }}">
-<table id="table-{{ $table_number }}" {{ with .Get "unstriped" }}class="unstriped" {{ end }}aria-label="Table {{ $table_number }}{{ if $caption}}: {{ $caption }}{{ end }}">
-{{- if $caption }}<caption id="caption-{{ $table_number }}" itemprop="about">Table {{ $table_number}}: {{ $caption | markdownify }}</caption>{{- end }}
+{{- $caption := .Get "caption" }}{{- $table_number := .Get "table_number" }}<div class="table-wrapper{{- if .Params.margin }} marginnote{{- end }}" itemscope itemtype="http://schema.org/Table" role="{{- if .Params.margin }}note{{ else }}region{{ end }}" tabindex="0" aria-labelledby="caption-{{ $table_number }}">
+<table id="table-{{ $table_number }}" {{ with .Get "unstriped" }}class="unstriped" {{ end }}aria-labelledby="caption-{{ $table_number }}">
+{{- if $caption }}<caption id="caption-{{ $table_number }}" itemprop="about">Table {{ $table_number}}: {{ partial "unparagraphy.html" $caption }}</caption>{{- end }}
 {{ .Inner }}
 </table></div>
