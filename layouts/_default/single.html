@@ -2,16 +2,23 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
+  <article itemprop="mainEntityOfPage" class="h-entry" itemid="metadata-blogposting" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
     <header aria-labelledby="{{ anchorize .Title }}">
       {{ partial "header/post.html" . }}
-      <link itemprop="author" href="#microdata-author" />
-      <link itemprop="publisher" href="#microdata-org" />
-      <link itemprop="isPartOf" href="{{ .Site.BaseURL }}" />
-      <link itemprop="speakable" href="#skip-to-content" />
-      <meta itemprop="wordCount" content="{{ .WordCount }}" />
-      <meta itemprop="inLanguage" content="en-US" />
     </header>
+    {{- with .Params.sessionReport }}
+    <section itemprop="about" itemscope itemtype="http://schema.org/SocialEvent">
+      <link itemprop="subjectOf" href="#metadata-blogposting" />
+      <p>This is a session report of a
+        {{- range first 1 (where $.Site.Data.games "game" "eq" .game) }}
+        <span itemprop="workFeatured" itemscope itemtype="http://schema.org/CreativeWork">
+          <a itemprop="url" href="{{ .url }}"><span itemprop="name">{{ .name }}</span></a>
+          <link itemprop="identifier" href="{{ .identifier }}" />
+        </span>
+        {{- end }}
+         game played on <time itemprop="startDate" datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.</p>
+    </section>
+    {{- end }}
     <section itemprop="articleBody" class="content e-content" aria-label="Content">
       {{ .Content }}
     </section>

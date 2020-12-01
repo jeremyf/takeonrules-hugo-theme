@@ -6,13 +6,6 @@
   <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/Review">
     <header aria-labelledby="{{ anchorize .Title }}">
       {{ partial "header/post.html" . }}
-      <link itemprop="author" href="#microdata-author" />
-      <link itemprop="publisher" href="#microdata-org" />
-      <link itemprop="isPartOf" href="{{ .Site.BaseURL }}" />
-      <link itemprop="url" href="{{ .Permalink }}" />
-      <link itemprop="speakable" href="#skip-to-content" />
-      <meta itemprop="wordCount" content="{{ .WordCount }}" />
-      <meta itemprop="inLanguage" content="en-US" />
       <meta itemprop="description">{{ .Params.description }}</meta>
       {{- with .Params.ratingValue }}
       <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
