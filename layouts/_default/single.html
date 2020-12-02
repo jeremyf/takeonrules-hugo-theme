@@ -2,7 +2,7 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntity" class="h-entry" itemid="#metadata-blogposting" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
+  <article itemprop="mainEntityOfPage" class="h-entry" itemid="#metadata-blogposting" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
     <header aria-labelledby="{{ anchorize .Title }}">
       {{ partial "header/post.html" . }}
     </header>

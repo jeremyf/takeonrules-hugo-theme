@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <article itemprop="mainEntity" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/Review">
+  <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/Review">
     <header aria-labelledby="{{ anchorize .Title }}">
       {{ partial "header/post.html" . }}
       <meta itemprop="description">{{ .Params.description }}</meta>

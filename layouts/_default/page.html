@@ -2,7 +2,7 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntity" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemtype="http://schema.org/WebPageElement">
+  <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemtype="http://schema.org/WebPageElement">
     <header>
       <h1 itemprop="headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
     {{- with .Params.headline }}

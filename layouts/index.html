@@ -21,7 +21,7 @@
     </aside>
 {{ end }}
 {{ define "main" }}
-<article itemprop="mainEntity" class="home" aria-labelledby="skip-to-content" itemscope itemtype="http://schema.org/Blog">
+<article itemprop="mainEntityOfPage" class="home" aria-labelledby="skip-to-content" itemscope itemtype="http://schema.org/Blog">
   <h1 id="skip-to-content">Blog Posts</h1>
   <ol aria-labelledby="skip-to-content">
   {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
@@ -30,7 +30,7 @@
   <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="{{ anchorize .Title }}">
     <h2 id="{{ anchorize .Title }}">
       <cite itemprop="headline">
-        <a itemprop="mainEntityOfPage" href="{{ .RelPermalink }}" accesskey="{{ mod (add 1 $index) 10 }}" rel="bookmark">
+        <a itemprop="mainEntity" href="{{ .RelPermalink }}" accesskey="{{ mod (add 1 $index) 10 }}" rel="bookmark">
           {{ .Title }}
         </a>
       </cite>

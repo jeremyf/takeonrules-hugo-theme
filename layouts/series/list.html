@@ -3,7 +3,7 @@
 {{ end }}
 {{ define "main" }}
   {{- $context := . }}
-  <article itemprop="mainEntity" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
+  <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
   {{- $termTitle := .Title }}
   {{- $data := .Data }}
   {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
