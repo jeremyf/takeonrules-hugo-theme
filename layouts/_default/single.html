@@ -1,13 +1,14 @@
 {{ define "breadcrumb" }}
-  {{ partial "breadcrumb.html" . }}
+{{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntity" class="h-entry" itemid="#metadata-blogposting" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
-    <header aria-labelledby="{{ anchorize .Title }}">
-      {{ partial "header/post.html" . }}
-    </header>
+<article itemprop="mainEntity" class="h-entry" itemid="#metadata-blogposting" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
+  <link itemprop="mainEntityOfPage" href="{{ .RelPermalink }}#skip-to-content" />
+  <header aria-labelledby="{{ anchorize .Title }}">
+    {{ partial "header/post.html" . }}
+  </header>
 
-    <section itemprop="articleBody" class="content e-content" aria-label="Content">
+  <section itemprop="articleBody" class="content e-content" aria-label="Content">
     {{- with .Params.sessionReport }}
     <section itemprop="about" itemscope itemtype="http://schema.org/SocialEvent">
       <link itemprop="subjectOf" href="#metadata-blogposting" />
@@ -23,13 +24,13 @@
     </section>
     {{- end }}
     {{ .Content }}
-    </section>
-    <footer>
-      {{ partial "footer/webmentions.html" . }}
-      {{ partial "footer/series.html" . }}
-      {{ partial "footer/related-posts.html" . }}
-      {{ partial "footer/licenses.html" . }}
-      {{ partial "footer/image.html" . }}
-    </footer>
-  </article>
+  </section>
+  <footer>
+    {{ partial "footer/webmentions.html" . }}
+    {{ partial "footer/series.html" . }}
+    {{ partial "footer/related-posts.html" . }}
+    {{ partial "footer/licenses.html" . }}
+    {{ partial "footer/image.html" . }}
+  </footer>
+</article>
 {{ end }}

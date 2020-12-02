@@ -7,6 +7,7 @@
   {{- $title := .Title }}
   {{ with index $.Site.Data.licenses $slug }}
   <header>
+    <link itemprop="mainEntityOfPage" href="{{ $.Page.RelPermalink }}" />
     <h1 itemprop="name" class="p-name" id="{{ anchorize $title }}">{{ .Name }}</h1>
     {{ partial "footer/image.html" . }}
   </header>
