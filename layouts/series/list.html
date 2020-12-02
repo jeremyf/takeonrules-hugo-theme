@@ -3,7 +3,7 @@
 {{ end }}
 {{ define "main" }}
   {{- $context := . }}
-  <article itemprop="mainEntityOfPage" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
+  <article itemprop="mainEntity" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
   {{- $termTitle := .Title }}
   {{- $data := .Data }}
   {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
@@ -18,7 +18,7 @@
 
       <dl class="group">
         {{- range sort $data.Pages "Date" "asc" }}
-        <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><a href="{{ .Permalink}}">{{ .Title }}</a></dd>
+        <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><cite><a href="{{ .Permalink}}" rel="bookmark">{{ .Title }}</a></cite></dd>
         {{- end }}
       </dl>
     </section>

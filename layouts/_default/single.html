@@ -2,7 +2,7 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntityOfPage" class="h-entry" itemid="#metadata-blogposting" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
+  <article itemprop="mainEntity" class="h-entry" itemid="#metadata-blogposting" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
     <header aria-labelledby="{{ anchorize .Title }}">
       {{ partial "header/post.html" . }}
     </header>
@@ -13,7 +13,7 @@
       <link itemprop="subjectOf" href="#metadata-blogposting" />
       <link itemprop="name" href="#{{ anchorize $.Page.Title }}" />
       <meta itemprop="endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
-      <p>This post is a session report
+      <p><span itemprop="name"><cite>{{ $.Page.Title }}</cite> is a session report</span>
         {{- range first 1 (where $.Site.Data.games "game" "eq" .game) }}
         for <span itemprop="workFeatured" itemscope itemtype="http://schema.org/CreativeWork">
         <link itemprop="identifier" href="{{ .identifier }}" /><a itemprop="url" href="{{ .url }}"><span itemprop="name">{{ .name }}</span></a></span>
