@@ -19,7 +19,7 @@
   </head>
   <body class="type-{{ .Type }} {{ if isset .Params "full_width"}}full{{ else }}{{ if .IsHome }}full{{ else }}default{{ end }}{{ end }}-width" itemscope itemtype="http://schema.org/{{ with .Params.schema_dot_org_type }}{{ . }}{{ else }}WebPage{{ end }}">
     <header aria-label="Site-wide header">
-      <nav class="skip-links" aria-labels="Skip Links">
+      <nav id="skip-links" aria-labels="Skip Links">
         <a href="#skip-to-content" accesskey="c" class="offscreen">Skip to <u>C</u>ontent</a>
         {{- if eq .Type "post" }}
         <span class="hidden"> | </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Page's <u>R</u>elated Posts</a>
