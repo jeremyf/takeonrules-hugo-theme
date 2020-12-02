@@ -30,9 +30,12 @@
   <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="{{ anchorize .Title }}">
     <h2 id="{{ anchorize .Title }}">
       <a itemprop="mainEntityOfPage" href="{{ .RelPermalink }}" accesskey="{{ mod (add 1 $index) 10 }}" rel="bookmark">
-        <cite itemprop="name">{{ .Title }}</cite>
+        <cite itemprop="headline">{{ .Title }}</cite>
       </a>
     </h2>
+    {{- if isset .Params "headline" }}
+      <h3 itemprop="alternateHeadline">{{ partial "unparagraphy.html" .Params.headline }}</h3>
+    {{- end }}
     <p>
       <meta itemprop="wordCount" content="{{ .WordCount }}" />
       {{ partial "dates-and-tags.html" . }}
@@ -44,11 +47,6 @@
         {{ partial "footer/image.html" . }}
       {{ end }}
     </p>
-    {{- if isset .Params "headline" }}
-      <p itemprop="headline">{{ partial "unparagraphy.html" .Params.headline }}</p>
-    {{- else if isset .Params "description" }}
-      <p itemprop="description">{{ partial "unparagraphy.html" .Params.description }}</p>
-    {{- end }}
   </li>
   {{- end }}
   {{- end }}
