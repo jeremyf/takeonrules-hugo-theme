@@ -12,12 +12,11 @@
     {{- with .Params.sessionReport }}
     <section itemprop="about" itemscope itemtype="http://schema.org/SocialEvent">
       <link itemprop="subjectOf" href="#metadata-blogposting" />
-      <link itemprop="name" href="#{{ anchorize $.Page.Title }}" />
       <meta itemprop="endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
       <p><span itemprop="name"><cite>{{ $.Page.Title }}</cite> is a session report</span>
         {{- range first 1 (where $.Site.Data.games "game" "eq" .game) }}
         for <span itemprop="workFeatured" itemscope itemtype="http://schema.org/CreativeWork">
-        {{ with .identifier }}<link itemprop="identifier" href="{{ . }}" />{{ end }}{{ with .url }}<a itemprop="url" href="{{ . }}">{{ end }}<span itemprop="name">{{ .name }}</span>{{ with .url }}</a>{{ end }}</span>
+        {{ with .identifier }}<link itemprop="sameAs" href="{{ . }}" />{{ end }}{{ with .url }}<a itemprop="offers" href="{{ . }}">{{ end }}<span itemprop="name">{{ .name }}</span>{{ with .url }}</a>{{ end }}</span>
         {{- end }}.
         We played <span itemprop="location">{{ with .location }}{{ . }}{{ else }}around the table{{ end }}</span> on <time itemprop="startDate" datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.
       </p>
