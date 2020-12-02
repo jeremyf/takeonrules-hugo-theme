@@ -11,9 +11,9 @@
   </span>
   <br /><br />
   <nav aria-label="Footer links">
-    <address itemid="#microdata-contact-point" itemprop="contactPoint" itemscope itemType="http://schema.org/ContactPoint">
+    <span itemid="#microdata-contact-point" itemprop="contactPoint" itemscope itemType="http://schema.org/ContactPoint">
       <a accesskey="o" itemprop="url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
-    </address> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privac<u>y</u> Policy</a>
+    </span> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privac<u>y</u> Policy</a>
   </nav>
   <span itemid='#microdata-org' itemscope itemType='http://schema.org/Organization' >
     <meta itemprop="name" content="{{ $.Site.Params.title }}" />
