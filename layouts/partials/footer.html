@@ -1,18 +1,20 @@
 <footer class="group credits" aria-label="Site-wide footer">
   <hr class="slender">
-  <span itemid="#microdata-author" itemscope itemType="http://schema.org/Person">
-    &copy;{{ now.Format "2006" }}&nbsp;
+  &copy;<span itemprop="copyrightYear">{{ now.Format "2006" }}</span>&nbsp;
+  <span itemid="#microdata-author" itemprop="copyrightHolder" itemscope itemType="http://schema.org/Person">
     <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
       <span class="p-name" itemprop="name">{{ .Site.Params.copyrightHolder }}</span>
     </a>
     {{- range .Site.Params.identifiers }}
     <link itemprop="identifier" href="{{ . }}" />
     {{- end }}
-    <br /><br />
-    <span itemid="#microdata-contact-point" itemprop="contactPoint" itemscope itemType="http://schema.org/ContactPoint">
-      <a accesskey="o" itemprop="url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
-    </span> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privac<u>y</u> Policy</a>
   </span>
+  <br /><br />
+  <nav aria-label="Footer links">
+    <address itemid="#microdata-contact-point" itemprop="contactPoint" itemscope itemType="http://schema.org/ContactPoint">
+      <a accesskey="o" itemprop="url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
+    </address> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privac<u>y</u> Policy</a>
+  </nav>
   <span itemid='#microdata-org' itemscope itemType='http://schema.org/Organization' >
     <meta itemprop="name" content="{{ $.Site.Params.title }}" />
     <link itemprop="url" href="{{ $.Site.BaseURL }}" />

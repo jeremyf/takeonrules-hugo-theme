@@ -117,6 +117,7 @@ body {
     > header {
         hr { display: none; }
         &> nav {
+            &.skip-links { padding: 0rem; }
             h1 { display: inline-block; margin: 0; }
             padding: 1rem 0;
             a {

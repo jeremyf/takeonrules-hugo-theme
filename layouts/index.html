@@ -23,7 +23,7 @@
 {{ define "main" }}
 <article class="home" aria-labelledby="skip-to-content" itemscope itemtype="http://schema.org/Blog">
   <h1 id="skip-to-content">Blog Posts</h1>
-  <ol  aria-labelledby="skip-to-content">
+  <ol aria-labelledby="skip-to-content">
   {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}

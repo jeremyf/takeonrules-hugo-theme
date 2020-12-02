@@ -3,45 +3,45 @@
   <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# dct: http://purl.org/dc/terms/ cc: https://creativecommons.org/ns#">
     <meta charset="utf-8">
     {{ block "head-title" . }}
-      {{- if .IsHome }}
-        <title>{{ .Title }}</title>
-      {{- else if (and (eq .Kind "term") (eq .Type "series")) }}
-        {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
-        <title>{{ .title }} // {{ $.Site.Title  }}</title>
-        {{- end }}
-      {{- else }}
-        <title>{{ .Title }} // {{ .Site.Title  }}</title>
-      {{- end }}
+    {{- if .IsHome }}
+    <title>{{ .Title }}</title>
+    {{- else if (and (eq .Kind "term") (eq .Type "series")) }}
+    {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
+    <title>{{ .title }} // {{ $.Site.Title  }}</title>
+    {{- end }}
+    {{- else }}
+    <title>{{ .Title }} // {{ .Site.Title  }}</title>
+    {{- end }}
     {{ end }}
     {{ block "head" . }}
-      {{ partial "head" . }}
+    {{ partial "head" . }}
     {{ end }}
   </head>
   <body class="type-{{ .Type }} {{ if isset .Params "full_width"}}full{{ else }}{{ if .IsHome }}full{{ else }}default{{ end }}{{ end }}-width" itemscope itemtype="http://schema.org/{{ with .Params.schema_dot_org_type }}{{ . }}{{ else }}WebPage{{ end }}">
     <header aria-label="Site-wide header">
+      <nav class="skip-links" aria-labels="Skip Links">
+        <a href="#skip-to-content" accesskey="c" class="offscreen">Skip to <u>C</u>ontent</a>
+        {{- if eq .Type "post" }}
+        <span class="hidden"> | </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Page's <u>R</u>elated Posts</a>
+        {{- end }}
+        {{- with .Params.licenses }}
+        <span class="hidden"> | </span><a href="#skip-to-licenses" accesskey="l" class="offscreen">Skip to Page's <u>L</u>icenses</a>
+        {{- end }}
+        {{- with .Params.webmentions }}
+        <span class="hidden"> | </span><a href="#skip-to-webmentions" accesskey="w" class="offscreen">Skip to Page's <u>W</u>eb Mentions</a>
+        {{- end }}
+      </nav>
       <nav itemprop="hasPart" class="group" aria-label="Site-wide navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-        <div id="skip-links">
-          <a href="#skip-to-content" accesskey="c" class="offscreen">Skip to <u>C</u>ontent</a>
-          {{- if eq .Type "post" }}
-            <span class="hidden"> | </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Page's <u>R</u>elated Posts</a>
-          {{- end }}
-          {{- with .Params.licenses }}
-            <span class="hidden"> | </span><a href="#skip-to-licenses" accesskey="l" class="offscreen">Skip to Page's <u>L</u>icenses</a>
-          {{- end }}
-          {{- with .Params.webmentions }}
-            <span class="hidden"> | </span><a href="#skip-to-webmentions" accesskey="w" class="offscreen">Skip to Page's <u>W</u>eb Mentions</a>
-          {{- end }}
-        </div>
         <h1><a itemprop="url" accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
-          <a itemprop="url" accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> | </span>
+        <a itemprop="url" accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> | </span>
         {{- end }}
         <a itemprop="url" accesskey="/" {{ if eq (string $.Page.RelPermalink) "/search/" }}class="active"{{ end }} id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a>
       </nav>
       <script>
-        var form = document.getElementById('search-link');
-        form.setAttribute("href", "/search/");
-        form.setAttribute("title", "Site-wide search");
+       var form = document.getElementById('search-link');
+       form.setAttribute("href", "/search/");
+       form.setAttribute("title", "Site-wide search");
       </script>
       <hr>
     </header>
@@ -50,7 +50,7 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}
-      {{ partial "footer.html" . }}
+    {{ partial "footer.html" . }}
     {{ end }}
   </body>
 </html>
