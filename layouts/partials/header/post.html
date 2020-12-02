@@ -1,4 +1,4 @@
-<h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+<h1 itemprop="name" class="p-name" itemid="#{{ anchorize .Title }}" id="{{ anchorize .Title }}">{{ .Title }}</h1>
 {{- if .Params.title_sub }}
   <h2>{{ .Params.title_sub }}</h2>
   {{- with .Params.headline }}

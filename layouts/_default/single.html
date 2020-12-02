@@ -2,25 +2,27 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntityOfPage" class="h-entry" itemid="metadata-blogposting" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
+  <article itemprop="mainEntityOfPage" class="h-entry" itemid="#metadata-blogposting" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
     <header aria-labelledby="{{ anchorize .Title }}">
       {{ partial "header/post.html" . }}
     </header>
+
+    <section itemprop="articleBody" class="content e-content" aria-label="Content">
     {{- with .Params.sessionReport }}
     <section itemprop="about" itemscope itemtype="http://schema.org/SocialEvent">
       <link itemprop="subjectOf" href="#metadata-blogposting" />
-      <p>This is a session report of a
+      <link itemprop="name" href="#{{ anchorize $.Page.Title }}" />
+      <meta itemprop="endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
+      <p>This post is a session report
         {{- range first 1 (where $.Site.Data.games "game" "eq" .game) }}
-        <span itemprop="workFeatured" itemscope itemtype="http://schema.org/CreativeWork">
-          <a itemprop="url" href="{{ .url }}"><span itemprop="name">{{ .name }}</span></a>
-          <link itemprop="identifier" href="{{ .identifier }}" />
-        </span>
-        {{- end }}
-         game played on <time itemprop="startDate" datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.</p>
+        for <span itemprop="workFeatured" itemscope itemtype="http://schema.org/CreativeWork">
+        <link itemprop="identifier" href="{{ .identifier }}" /><a itemprop="url" href="{{ .url }}"><span itemprop="name">{{ .name }}</span></a></span>
+        {{- end }}.
+        We played on <time itemprop="startDate" datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time> <span itemprop="location">{{ with .location }}{{ . }}{{ else }}around the table{{ end }}</span>.
+      </p>
     </section>
     {{- end }}
-    <section itemprop="articleBody" class="content e-content" aria-label="Content">
-      {{ .Content }}
+    {{ .Content }}
     </section>
     <footer>
       {{ partial "footer/webmentions.html" . }}
