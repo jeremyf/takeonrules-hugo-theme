@@ -19,7 +19,7 @@
           </thead>
           <tbody>
           {{- range $key, $value := .Data.Terms.Alphabetical}}
-            <tr itemprop="mainEntity" itemscope itemtype="http://schema.org/CreativeWebSeries">
+            <tr itemprop="mainEntity" itemscope itemtype="http://schema.org/CreativeWorkSeries">
               {{- range first 1 (where $.Site.Data.series "key" "eq" $value.Name ) }}
                 <td><cite itemprop="headline"><a itemprop="url" href="{{ $.Page.RelPermalink }}{{ $value.Name | urlize }}">{{ .title }}</a></cite></td>
                 <td>{{ $value.Count }}</td>
