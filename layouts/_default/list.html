@@ -2,7 +2,7 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntity" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
+  <article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="{{ .RelPermalink }}#skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
     <header>
       <link itemprop="mainEntityOfPage" href="{{ .RelPermalink }}#skip-to-content" />
       <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title | title }}</h1>

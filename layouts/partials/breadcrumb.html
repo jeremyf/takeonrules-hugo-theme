@@ -10,13 +10,14 @@
 {{- end }}
 {{- with .Params.series -}}{{- range (where $.Site.Data.series "key" "eq" .) }}
 {{- $title := .title }}
-<nav aria-labelledby="series-label" class="series breadcrumbs">
+<nav aria-labelledby="series-itemscope" class="series breadcrumbs">
   {{- $series := where $.Site.Pages "Params.series" .key }}
-  <span class="label">Part of </span><span id="series-label"><a accesskey="s" rel="tag" href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark"><u>S</u>eries: {{ $title }}</a></span> |&nbsp;&nbsp;
+  {{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
+  <span class="label">Part of Series </span><span itemid="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" itemscope itemtype="http://schema.org/CreativeWorkSeries"><cite itemprop="headline"><a itemprop="url" accesskey="s" rel="tag" href="{{ $seriesUrl }}" rel="bookmark">{{ $title }}</a></cite></span>
   {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
-  {{- range first 1 $prev }}<a itemprop="relatedLink" accesskey="v" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Pre<u>v</u>ious in Series</a>&nbsp;{{- end }}
+  {{- range first 1 $prev }}| <a itemprop="relatedLink" accesskey="v" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Pre<u>v</u>ious in Series</a>&nbsp;{{- end }}
   {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
-  {{- range last 1 $next }}|&nbsp;<a itemprop="relatedLink" accesskey="x" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Ne<u>x</u>t in Series</a>{{- end }}
+  {{- range last 1 $next }}| <a itemprop="relatedLink" accesskey="x" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Ne<u>x</u>t in Series</a>{{- end }}
 </nav>
 {{- end }}{{- end }}
 {{- define "breadcrumbnav" }}

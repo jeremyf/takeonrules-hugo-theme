@@ -1,27 +1,31 @@
 {{ define "breadcrumb" }}
-  {{ partial "breadcrumb.html" . }}
+{{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  {{- $context := . }}
-  <article itemprop="mainEntity" class="h-entry" id="skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
-  {{- $termTitle := .Title }}
-  {{- $data := .Data }}
+{{- $context := . }}
+{{- $termTitle := .Title }}
+{{- $data := .Data }}
+<article itemprop="mainEntity" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize $termTitle }}" itemid="{{ .RelPermalink }}#skip-to-content" itemscope itemtype="http://schema.org/CreativeWorkSeries">
   {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
-    <header>
-      <h1 itemprop="name" class="p-name" id="{{ anchorize $termTitle }}">{{ .title }}</h1>
-      {{ partial "footer/image.html" . }}
-    </header>
-    <section itemprop="text" class="e-content content">
-      {{ partial "paragraphy.html" .description }}
+  <header>
+    <link itemprop="mainEntityOfPage" href="{{ .RelPermalink }}#skip-to-content" />
+    <h1 itemprop="headline" class="p-name" id="{{ anchorize $termTitle }}">{{ .title }}</h1>
+    {{ partial "footer/image.html" . }}
+  </header>
+  <section class="e-content content">
+    {{ partial "paragraphy.html" .description }}
 
-      <p>Below are all of the posts in this series.  I ordered the posts from oldest to newest:</p>
+    <p itemprop="about">A list of all of the posts in the <cite>{{ .title }}</cite> series.</p>
 
-      <dl class="group">
-        {{- range sort $data.Pages "Date" "asc" }}
-        <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><cite><a href="{{ .Permalink}}" rel="bookmark">{{ .Title }}</a></cite></dd>
-        {{- end }}
-      </dl>
-    </section>
+    <dl class="group">
+      {{ $lastInstance := sub (len $data.Pages) 1 }}
+      {{- range $index, $entry := sort $data.Pages "Date" "asc" }}
+      {{- with $entry }}
+      <dt><time {{ if eq $index 0 }}itemprop="startDate"{{ end }} {{ if eq $index $lastInstance }}itemprop="endDate"{{ end }} datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd itemprop="hasPart" itemscope itemtype="http://schema.org/CreativeWork"><cite itemprop="name"><a itemprop="url" href="{{ .Permalink}}" rel="bookmark">{{ .Title }}</a></cite></dd>
+      {{- end }}
+      {{- end }}
+    </dl>
+  </section>
   {{- end }}
-  </article>
+</article>
 {{ end }}

@@ -2,9 +2,12 @@
 {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-<article itemprop="mainEntity" class="h-entry" itemid="#metadata-blogposting" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
-  <link itemprop="mainEntityOfPage" href="{{ .RelPermalink }}#skip-to-content" />
+<article itemprop="mainEntity" class="h-entry" itemid="{{ .RelPermalink }}#skip-to-content" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
   <header aria-labelledby="{{ anchorize .Title }}">
+    <link itemprop="mainEntityOfPage" href="{{ .RelPermalink }}#skip-to-content" />
+    {{ if isset .Params "series" }}
+    <link itemprop="isPartOf" href="{{ .RelPermalink }}#series-itemscope" />
+    {{ end }}
     {{ partial "header/post.html" . }}
   </header>
   <section itemprop="articleBody" class="content e-content" itemid="#content" aria-label="Content">
