@@ -1,42 +1,41 @@
 {{ define "breadcrumb" }}
-{{ partial "breadcrumb.html" . }}
+  {{ partial "breadcrumb.html" . }}
 {{ end }}
 
 {{ define "main" }}
-<article itemprop="mainEntity" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/Review">
-  <link itemprop="mainEntityOfPage" href="{{ .RelPermalink }}#skip-to-content" />
-  <header aria-labelledby="{{ anchorize .Title }}">
-    {{ partial "header/post.html" . }}
-    <meta itemprop="description">{{ .Params.description }}</meta>
-    {{- with .Params.ratingValue }}
-    <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-      <meta itemprop="ratingValue">{{ . }}</meta>
-    </span>
-    {{- end }}
-    <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .Params.itemReviewedType }}{{ . }}{{ else }}Book{{ end }}">
-      {{ with .Params.itemReviewed }}
-      <link itemprop="url" href="{{ .url }}" />
-      <meta itemprop="name" content="{{ .name }}" />
-      {{ range .authors }}
-      <meta itemprop="author" content="{{ . }}" />
-      {{ end }}
-      {{- with .isbn }}
-      <meta itemprop="isbn" content="{{ . }}" />
+  <article itemprop="mainEntity" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/Review">
+    <header aria-labelledby="{{ anchorize .Title }}">
+      {{ partial "header/post.html" . }}
+      <meta itemprop="description">{{ .Params.description }}</meta>
+      {{- with .Params.ratingValue }}
+      <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+        <meta itemprop="ratingValue">{{ . }}</meta>
+      </span>
       {{- end }}
-      {{ else }}
-      {{ .Get }}
-      {{ end }}
-    </span>
-  </header>
-  <section itemprop="reviewBody" class="content e-content" aria-label="Content" >
-    {{ .Content }}
-  </section>
-  <footer>
-    {{ partial "footer/webmentions.html" . }}
-    {{ partial "footer/series.html" . }}
-    {{ partial "footer/related-posts.html" . }}
-    {{ partial "footer/licenses.html" . }}
-    {{ partial "footer/image.html" . }}
-  </footer>
-</article>
+      <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .Params.itemReviewedType }}{{ . }}{{ else }}Book{{ end }}">
+        {{ with .Params.itemReviewed }}
+          <link itemprop="url" href="{{ .url }}" />
+          <meta itemprop="name" content="{{ .name }}" />
+          {{ range .authors }}
+          <meta itemprop="author" content="{{ . }}" />
+          {{ end }}
+          {{- with .isbn }}
+          <meta itemprop="isbn" content="{{ . }}" />
+          {{- end }}
+        {{ else }}
+          {{ .Get }}
+        {{ end }}
+      </span>
+    </header>
+    <section itemprop="reviewBody" class="content e-content" aria-label="Content" >
+      {{ .Content }}
+    </section>
+    <footer>
+      {{ partial "footer/webmentions.html" . }}
+      {{ partial "footer/series.html" . }}
+      {{ partial "footer/related-posts.html" . }}
+      {{ partial "footer/licenses.html" . }}
+      {{ partial "footer/image.html" . }}
+    </footer>
+  </article>
 {{ end }}
