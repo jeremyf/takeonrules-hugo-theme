@@ -34,7 +34,7 @@
       <p itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">I give it <span itemprop="ratingValue">{{ .reviewRating }}</meta> of <span itemprop="bestRating">5</span> stars.</p>
 
         <p itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .type }}{{ . }}{{ else }}Book{{ end }}">
-          <cite>{{ $.Page.Title }}</cite> is a review of <a itemprop="sameAs" href="{{ .url }}"><span itemprop="name">{{ .name }}</span></a> by {{ delimit .authors ", " ", and " }}.
+          <cite>{{ $.Page.Title }}</cite> is a review of <a itemprop="sameAs" href="{{ .url }}"><span itemprop="name">{{ .name }}</span></a> by <span itemprop="author">{{ delimit .authors "</span>, <span itemprop='author'>"  "</span>, and <span itemprop='author'>" }}</span>.
         </p>
 
     </section>
