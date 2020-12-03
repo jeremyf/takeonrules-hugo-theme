@@ -2,7 +2,7 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="{{ .RelPermalink }}#skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
+  <article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="{{ .RelPermalink }}#skip-to-content" itemscope itemtype="http://schema.org/{{ with .Params.Schema }}{{ .type }}{{ else }}WebPageElement{{ end }}">
     <header>
       <link itemprop="mainEntityOfPage" href="{{ .RelPermalink }}#skip-to-content" />
       <h1 itemprop="headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
@@ -10,7 +10,7 @@
       <h2 itemprop="alternateHeadline">{{ . }}</h2>
     {{- end }}
     </header>
-    <section itemprop="text" class="e-content content" role="region" aria-label="article content">
+    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}itemprop="text"{{ end }}{{ end }} class="e-content content" role="region" aria-label="article content">
       {{ .Content }}
     </section>
     <footer>
