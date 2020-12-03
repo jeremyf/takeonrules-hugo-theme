@@ -10,7 +10,7 @@
   <section itemprop="articleBody" class="content e-content" itemid="#content" aria-label="Content">
     {{- with .Params.sessionReport }}
     <section aria-label="Session report summary" itemprop="about" itemscope itemtype="http://schema.org/SocialEvent">
-      <link itemprop="subjectOf" href="#metadata-blogposting" />
+      <link itemprop="subjectOf" href="{{ $.Page.Permalink }}#skip-to-content" />
       <meta itemprop="endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
       <p><span itemprop="name"><cite>{{ $.Page.Title }}</cite> is a game session</span> report
         {{- range first 1 (where $.Site.Data.games "game" "eq" .game) }}
@@ -24,6 +24,7 @@
     {{ .Content }}
     {{- with .Params.theItemReviewed }}
     <section aria-labelledby="#review-summary-{{ anchorize $.Page.Title }}" itemprop="hasPart" itemscope itemtype="http://schema.org/Review">
+      <link itemprop="isPartOf" href="{{ $.Page.Permalink }}#skip-to-content" />
       <h2 id="review-summary">Review Summary</h2>
       {{ with .reviewBody }}
       <p itemprop="reviewBody">{{ partial "unparagraphy.html" . }}</p>
