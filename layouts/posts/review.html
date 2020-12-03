@@ -3,9 +3,9 @@
 {{ end }}
 
 {{ define "main" }}
-<article itemprop="mainEntity" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemid="{{ .RelPermalink }}#skip-to-content" itemscope itemtype="http://schema.org/Review">
+<article itemprop="mainEntity" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemid="{{ .Permalink }}#skip-to-content" itemscope itemtype="http://schema.org/Review">
     <header aria-labelledby="{{ anchorize .Title }}">
-      <link itemprop="mainEntityOfPage" href="{{ .RelPermalink }}#skip-to-content" />
+      <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
       {{ partial "header/post.html" . }}
       <meta itemprop="description">{{ .Params.description }}</meta>
       {{- with .Params.ratingValue }}

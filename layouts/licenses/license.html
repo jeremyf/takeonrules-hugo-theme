@@ -2,7 +2,7 @@
 {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-<article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="{{ .RelPermalink }}#skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
+<article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="{{ .Permalink }}#skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
   {{- $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
   {{- $title := .Title }}
   {{ with index $.Site.Data.licenses $slug }}
