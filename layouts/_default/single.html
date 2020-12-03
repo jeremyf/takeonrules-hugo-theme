@@ -7,10 +7,9 @@
   <header aria-labelledby="{{ anchorize .Title }}">
     {{ partial "header/post.html" . }}
   </header>
-
-  <section itemprop="articleBody" class="content e-content" aria-label="Content">
+  <section itemprop="articleBody" class="content e-content" itemid="#content" aria-label="Content">
     {{- with .Params.sessionReport }}
-    <section itemprop="about" itemscope itemtype="http://schema.org/SocialEvent">
+    <section aria-label="Session report summary" itemprop="about" itemscope itemtype="http://schema.org/SocialEvent">
       <link itemprop="subjectOf" href="#metadata-blogposting" />
       <meta itemprop="endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
       <p><span itemprop="name"><cite>{{ $.Page.Title }}</cite> is a game session</span> report
@@ -23,6 +22,22 @@
     </section>
     {{- end }}
     {{ .Content }}
+    {{- with .Params.theItemReviewed }}
+    <section aria-labelledby="#review-summary-{{ anchorize $.Page.Title }}" itemprop="hasPart" itemscope itemtype="http://schema.org/Review">
+      <h2 id="review-summary">Review Summary</h2>
+      {{ with .reviewBody }}
+      <p itemprop="reviewBody">{{ partial "unparagraphy.html" . }}</p>
+      {{ else }}
+      <link itemprop="reviewBody" href="#content" />
+      {{ end }}
+      <p itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">I give it <span itemprop="ratingValue">{{ .reviewRating }}</meta> of <span itemprop="bestRating">5</span> stars.</p>
+
+        <p itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .type }}{{ . }}{{ else }}Book{{ end }}">
+          <cite>{{ $.Page.Title }}</cite> is a review of <a itemprop="sameAs" href="{{ .url }}"><span itemprop="name">{{ .name }}</span></a> by {{ delimit .authors ", " ", and " }}.
+        </p>
+
+    </section>
+    {{- end }}
   </section>
   <footer>
     {{ partial "footer/webmentions.html" . }}
