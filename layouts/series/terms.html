@@ -8,9 +8,10 @@
       <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
       {{ partial "footer/image.html" . }}
     </header>
-    <section itemprop="text" class="e-content content">
+    <section class="e-content content">
       {{ .Content }}
-      <div class="table-wrapper" itemscope itemtype="http://schema.org/Table" role="region" tabindex="0" aria-labelledby="caption-{{ anchorize .Title }}">
+      <div class="table-wrapper" itemprop="hasPart" itemscope itemtype="http://schema.org/Table" role="region" tabindex="0" aria-labelledby="caption-{{ anchorize .Title }}">
+        <link itemprop="isPartof" href="{{ .RelPermalink }}#skip-to-content" />
         <table id="table-{{ anchorize .Title }}" class="data-tables stripe">
           <caption itemprop="about" id="caption-{{ anchorize .Title }}">Table: All {{ .Title }} in {{ .Site.Title }}</caption>
           <thead>
@@ -18,15 +19,15 @@
           </thead>
           <tbody>
           {{- range $key, $value := .Data.Terms.Alphabetical}}
-            <tr>
+            <tr itemprop="mainEntity" itemscope itemtype="http://schema.org/CreativeWebSeries">
               {{- range first 1 (where $.Site.Data.series "key" "eq" $value.Name ) }}
-                <td><a href="{{ $value.Name| urlize }}">{{ .title }}</a></td>
+                <td><cite itemprop="headline"><a itemprop="url" href="{{ $.Page.RelPermalink }}{{ $value.Name | urlize }}">{{ .title }}</a></cite></td>
                 <td>{{ $value.Count }}</td>
                 {{- range first 1 $value.Pages.Reverse }}
-                <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
+                <td class="c"><a href="{{ .Permalink }}"><time itemprop="startDate" datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
                 {{- end }}
                 {{- range first 1 $value.Pages }}
-                <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
+                <td class="c"><a href="{{ .Permalink }}"><time itemprop="endDate" datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
                 {{- end }}
               {{- end }}
             </tr>
