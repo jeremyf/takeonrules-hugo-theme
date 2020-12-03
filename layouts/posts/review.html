@@ -7,21 +7,26 @@
   <link itemprop="mainEntityOfPage" href="{{ .RelPermalink }}#skip-to-content" />
   <header aria-labelledby="{{ anchorize .Title }}">
     {{ partial "header/post.html" . }}
-    {{ with .Params.itemReviewed }}
-    <meta itemprop="description" content="{{ .description }}" />
-    {{- with .ratingValue }}<meta itemprop="ratingValue" content="{{ . }}" />{{- end }}
-    <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ .type }}">
-      <link itemprop="url" itemid="#itemreviewed" href="{{ .url }}" />
+    <meta itemprop="description">{{ .Params.description }}</meta>
+    {{- with .Params.ratingValue }}
+    <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+      <meta itemprop="ratingValue">{{ . }}</meta>
+    </span>
+    {{- end }}
+    <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .Params.itemReviewedType }}{{ . }}{{ else }}Book{{ end }}">
+      {{ with .Params.itemReviewed }}
+      <link itemprop="url" href="{{ .url }}" />
       <meta itemprop="name" content="{{ .name }}" />
       {{ range .authors }}
       <meta itemprop="author" content="{{ . }}" />
       {{ end }}
-      {{- with .isbn }}<meta itemprop="isbn" content="{{ . }}" />{{- end }}
+      {{- with .isbn }}
+      <meta itemprop="isbn" content="{{ . }}" />
+      {{- end }}
+      {{ else }}
+      {{ .Get }}
+      {{ end }}
     </span>
-    <link itemprop="url" href="#itemreviewed" />
-    {{ else }}
-    {{ .Get }}
-    {{ end }}
   </header>
   <section itemprop="reviewBody" class="content e-content" aria-label="Content" >
     {{ .Content }}
