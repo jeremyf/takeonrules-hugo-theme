@@ -27,7 +27,7 @@
     {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) "site" .site) }} /
   {{- end }}
   <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-    <a itemprop="item" id="{{ .p1.Permalink}}" href="{{ .p1.Permalink }}" {{ if eq .p1 .p2 }}class="active"{{ end }} itemscope itemtype="http://schema.org/WebPage">
+    <a {{- if eq .p1.Permalink .p1.Site.BaseURL }}rel="home"{{- end }} itemprop="item" id="{{ .p1.Permalink}}" href="{{ .p1.Permalink }}" {{ if eq .p1 .p2 }}class="active"{{ end }} itemscope itemtype="http://schema.org/WebPage">
       <span itemprop="name">
         {{- if eq .p1.Permalink .p1.Site.BaseURL }}
         Home
