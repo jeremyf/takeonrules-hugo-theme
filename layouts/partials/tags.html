@@ -1,10 +1,10 @@
 {{- $tags := . }}{{- $last_tag := . | last 1 }}
 {{- range ($tags | complement $last_tag) }}
   <a rel="tag" aria-label="Posts tagged with “{{ . }}”" href="{{ "tags" | absURL }}/{{ . | urlize }}">
-    #<span class="p-category" itemprop="keywords">{{ . | anchorize }}</span>
+    #<span class="p-category" property="sc:keywords">{{ . | anchorize }}</span>
   </a>&nbsp;
 {{- end }}{{- range $last_tag }}
   <a rel="tag" aria-label="Posts tagged with “{{ . }}”" href="{{ "tags" | absURL }}/{{ . | urlize }}">
-    #<span class="p-category" itemprop="keywords">{{ . | anchorize }}</span>
+    #<span class="p-category" property="sc:keywords">{{ . | anchorize }}</span>
   </a>
 {{- end }}

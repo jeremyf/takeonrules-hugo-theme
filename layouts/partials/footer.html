@@ -1,26 +1,26 @@
 <footer class="group credits" aria-label="Site-wide footer">
   <hr class="slender">
-  &copy;<span itemprop="copyrightYear">{{ now.Format "2006" }}</span>&nbsp;
-  <span id="microdata-author" itemid="{{ $.Site.BaseURL }}#microdata-author" itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person">
+  &copy;<span property="sc:copyrightYear">{{ now.Format "2006" }}</span>&nbsp;
+  <span id="microdata-author" resource="{{ $.Site.BaseURL }}#microdata-author" property="sc:copyrightHolder" typeof="sc:Person">
     <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
-      <span class="p-name" itemprop="name">{{ .Site.Params.copyrightHolder }}</span>
+      <span class="p-name" property="sc:name">{{ .Site.Params.copyrightHolder }}</span>
     </a>
     {{- range .Site.Params.identifiers }}
-    <link itemprop="identifier" href="{{ . }}" />
+    <link property="sc:identifier" href="{{ . }}" />
     {{- end }}
   </span>
   <br /><br />
   <nav aria-label="Footer links">
-    <span id="microdata-contact-point" itemid="{{ $.Site.BaseURL }}#microdata-contact-point" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
-      <a accesskey="o" itemprop="url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
+    <span id="microdata-contact-point" resource="{{ $.Site.BaseURL }}#microdata-contact-point" property="sc:contactPoint" typeof="sc:ContactPoint">
+      <a accesskey="o" property="sc:url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
     </span> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privac<u>y</u> Policy</a>
   </nav>
-  <span id="microdata-org" itemid='{{ $.Site.BaseURL }}#microdata-org' itemscope itemtype="http://schema.org/Organization" >
-    <meta itemprop="name" content="{{ $.Site.Params.title }}" />
-    <link itemprop="url" href="{{ $.Site.BaseURL }}" />
-    <link itemprop="contactPoint" href="{{ $.Site.BaseURL }}#microdata-contact-point" />
-    <span id="microdata-logo" itemid="{{ $.Site.BaseURL }}#microdata-logo" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <link itemprop="url" href="{{ $.Site.BaseURL }}{{ $.Site.Params.organizationImagePath }}" />
+  <span id="microdata-org" resource='{{ $.Site.BaseURL }}#microdata-org' typeof="sc:Organization" >
+    <meta property="sc:name" content="{{ $.Site.Params.title }}" />
+    <link property="sc:url" href="{{ $.Site.BaseURL }}" />
+    <link property="sc:contactPoint" href="{{ $.Site.BaseURL }}#microdata-contact-point" />
+    <span id="microdata-logo" resource="{{ $.Site.BaseURL }}#microdata-logo" property="sc:logo" typeof="sc:ImageObject">
+      <link property="sc:url" href="{{ $.Site.BaseURL }}{{ $.Site.Params.organizationImagePath }}" />
     </span>
   </span>
 </footer>
