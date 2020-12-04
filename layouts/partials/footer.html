@@ -15,7 +15,7 @@
       <a accesskey="o" itemprop="url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
     </span> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privac<u>y</u> Policy</a>
   </nav>
-  <span id="microdata-org" itemid='{{ $.Site.BaseURL }}#microdata-org' itemscope itemtype='http://schema.org/Organization' >
+  <span id="microdata-org" itemid='{{ $.Site.BaseURL }}#microdata-org' itemscope itemtype="http://schema.org/Organization" >
     <meta itemprop="name" content="{{ $.Site.Params.title }}" />
     <link itemprop="url" href="{{ $.Site.BaseURL }}" />
     <link itemprop="contactPoint" href="{{ $.Site.BaseURL }}#microdata-contact-point" />
