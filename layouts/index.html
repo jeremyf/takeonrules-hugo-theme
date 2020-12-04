@@ -9,16 +9,16 @@
 {{ define "breadcrumb" }}
     {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
     <nav aria-labelledby="blog-pagination-label" class="paginator">
-      <span class="label" id="blog-pagination-label">Blog postings pagination: </span>
+      <span class="label" id="blog-pagination-label">Blog postings pagination </span>
       {{- with $paginator }}
       {{- if .HasNext }}<a accesskey="p" href="{{ .Next.URL }}" rel="prev"><u>P</u>revious posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a accesskey="n" href="{{ .Prev.URL }}" rel="next"><u>N</u>ext posts</a>{{- end }}
       Page {{ .PageNumber }} of {{ .TotalPages }}
     {{- end }}
     </nav>
-    <aside class="feeds" aria-labelledby="site-feeds-label">
-      <span id="site-feeds-label" class="label">Site feeds: </span>
-      <a href="{{ .Site.BaseURL }}index.atom">ATOM feed</a> | <a href="{{ .Site.BaseURL }}index.xml">RSS feed</a> | <a href="{{ .Site.BaseURL }}index.json">JSON feed</a>
-    </aside>
+    <div class="feeds" aria-labelledby="site-feeds-label" role="list">
+      <span id="site-feeds-label" class="label">Site feeds </span>
+      <a role="listitem" href="{{ .Site.BaseURL }}index.atom">ATOM feed</a> | <a role="listitem" href="{{ .Site.BaseURL }}index.xml">RSS feed</a> | <a role="listitem" href="{{ .Site.BaseURL }}index.json">JSON feed</a>
+    </div>
 {{ end }}
 {{ define "main" }}
 <article property="sc:mainEntity" class="home" aria-labelledby="blog-posts" id="skip-to-content" resource="#skip-to-content" typeof="sc:Blog">
