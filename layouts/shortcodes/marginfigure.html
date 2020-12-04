@@ -4,7 +4,7 @@
 {{- $imageResize := "360x" }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "360x r%s" .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
-<figure property="image" itemType="ImageObject" {{ if isSet .Params "hidden" }}aria-hidden="true" {{ end }} role="note">
+<figure property="image" typeof="ImageObject" {{ if isSet .Params "hidden" }}aria-hidden="true" {{ end }} role="note">
   <img property="url"
        src="{{ $result.RelPermalink }}"
        alt="{{ $alt }}"

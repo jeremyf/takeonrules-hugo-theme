@@ -1,7 +1,7 @@
 <footer class="group credits" aria-label="Site-wide footer">
   <hr class="slender">
   &copy;<span property="copyrightYear">{{ now.Format "2006" }}</span>&nbsp;
-  <span id="microdata-author" resource="{{ $.Site.BaseURL }}#microdata-author" property="copyrightHolder" itemType="Person">
+  <span id="microdata-author" resource="{{ $.Site.BaseURL }}#microdata-author" property="copyrightHolder" typeof="Person">
     <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
       <span class="p-name" property="name">{{ .Site.Params.copyrightHolder }}</span>
     </a>
@@ -11,15 +11,15 @@
   </span>
   <br /><br />
   <nav aria-label="Footer links">
-    <span id="microdata-contact-point" resource="{{ $.Site.BaseURL }}#microdata-contact-point" property="contactPoint" itemType="ContactPoint">
+    <span id="microdata-contact-point" resource="{{ $.Site.BaseURL }}#microdata-contact-point" property="contactPoint" typeof="ContactPoint">
       <a accesskey="o" property="url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
     </span> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privac<u>y</u> Policy</a>
   </nav>
-  <span id="microdata-org" resource='{{ $.Site.BaseURL }}#microdata-org' itemType='http://schema.org/Organization' >
+  <span id="microdata-org" resource='{{ $.Site.BaseURL }}#microdata-org' typeof='http://schema.org/Organization' >
     <meta property="name" content="{{ $.Site.Params.title }}" />
     <link property="url" href="{{ $.Site.BaseURL }}" />
     <link property="contactPoint" href="{{ $.Site.BaseURL }}#microdata-contact-point" />
-    <span id="microdata-logo" resource="{{ $.Site.BaseURL }}#microdata-logo" property="logo" itemType="ImageObject">
+    <span id="microdata-logo" resource="{{ $.Site.BaseURL }}#microdata-logo" property="logo" typeof="ImageObject">
       <link property="url" href="{{ $.Site.BaseURL }}{{ $.Site.Params.organizationImagePath }}" />
     </span>
   </span>
