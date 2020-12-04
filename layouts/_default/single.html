@@ -28,6 +28,7 @@
     {{- with .Params.theItemReviewed }}
     <section aria-labelledby="#review-summary-{{ anchorize $.Page.Title }}" itemprop="hasPart" itemscope itemtype="http://schema.org/Review">
       <link itemprop="isPartOf" href="{{ $.Page.Permalink }}#skip-to-content" />
+      <link itemprop="author" href="{{ $.Page.Permalink }}#microdata-author" />
       <h2 id="review-summary">Review Summary</h2>
       {{ with .reviewBody }}
       <p itemprop="reviewBody">{{ partial "unparagraphy.html" . }}</p>
