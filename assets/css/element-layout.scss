@@ -18,7 +18,7 @@ body, article header h1, article header h2, .list-page ul { width: 87.5%; }
 // sets link style according to values in _settings.scss
 article a { text-decoration: underline; }
 a, sup a { text-decoration: none; }
-span[property="keywords"][itemscope] { display: none; }
+span[itemprop="keywords"][itemscope] { display: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1, h2, h3, h4, .h2, .h3, .h4 { font-family: $sans-font; font-weight: 400; line-height: 1.0889; }

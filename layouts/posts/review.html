@@ -3,32 +3,32 @@
 {{ end }}
 
 {{ define "main" }}
-<article property="mainEntity" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" resource="{{ .Permalink }}#skip-to-content" typeof="Review">
+<article itemprop="mainEntity" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemid="{{ .Permalink }}#skip-to-content" itemscope itemtype="http://schema.org/Review">
     <header aria-labelledby="{{ anchorize .Title }}">
-      <link property="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
+      <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
       {{ partial "header/post.html" . }}
-      <meta property="description">{{ .Params.description }}</meta>
+      <meta itemprop="description">{{ .Params.description }}</meta>
       {{- with .Params.ratingValue }}
-      <span property="reviewRating" typeof="Rating">
-        <meta property="ratingValue">{{ . }}</meta>
+      <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+        <meta itemprop="ratingValue">{{ . }}</meta>
       </span>
       {{- end }}
-      <span property="itemReviewed" typeof="{{ with .Params.itemReviewedType }}{{ . }}{{ else }}Book{{ end }}">
+      <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .Params.itemReviewedType }}{{ . }}{{ else }}Book{{ end }}">
         {{ with .Params.itemReviewed }}
-          <link property="url" href="{{ .url }}" />
-          <meta property="name" content="{{ .name }}" />
+          <link itemprop="url" href="{{ .url }}" />
+          <meta itemprop="name" content="{{ .name }}" />
           {{ range .authors }}
-          <meta property="author" content="{{ . }}" />
+          <meta itemprop="author" content="{{ . }}" />
           {{ end }}
           {{- with .isbn }}
-          <meta property="isbn" content="{{ . }}" />
+          <meta itemprop="isbn" content="{{ . }}" />
           {{- end }}
         {{ else }}
           {{ .Get }}
         {{ end }}
       </span>
     </header>
-    <section property="reviewBody" class="content e-content" aria-label="Content" >
+    <section itemprop="reviewBody" class="content e-content" aria-label="Content" >
       {{ .Content }}
     </section>
     <footer>

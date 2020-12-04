@@ -14,29 +14,29 @@
   "about": [
     {{- range ($applied_tags | complement $last_tag) }}
       {{- $data := index $.Site.Data.tags . }}
-      {{- $resource := $data.resource }}
+      {{- $itemid := $data.itemid }}
       {{- $alternateName := $data.abbr }}
       {{- if isset $data "abbr" }}
         {{- $abbr := index $.Site.Data.abbrs $data.abbr }}
-        {{- if isset $abbr "resource" }}
-          {{- $resource = $abbr.resource }}
+        {{- if isset $abbr "itemid" }}
+          {{- $itemid = $abbr.itemid }}
           {{- $alternateName = $abbr.title }}
         {{- end }}
       {{- end }}
-      { "@type": "Thing", {{ with $alternateName}} "alternateName": "{{ . }}",{{ end }} "identifier": "{{ $resource }}" },
+      { "@type": "Thing", {{ with $alternateName}} "alternateName": "{{ . }}",{{ end }} "identifier": "{{ $itemid }}" },
     {{- end }}
     {{- range $last_tag }}
       {{- $data := index $.Site.Data.tags . }}
-      {{- $resource := $data.resource }}
+      {{- $itemid := $data.itemid }}
       {{- $alternateName := $data.abbr }}
       {{- if isset $data "abbr" }}
         {{- $abbr := index $.Site.Data.abbrs $data.abbr }}
-        {{- if isset $abbr "resource" }}
-          {{- $resource = $abbr.resource }}
+        {{- if isset $abbr "itemid" }}
+          {{- $itemid = $abbr.itemid }}
           {{- $alternateName = $abbr.title }}
         {{- end }}
       {{- end }}
-      { "@type": "Thing", {{ with $alternateName }} "alternateName": "{{ . }}",{{ end }} "identifier": "{{ $resource }}" }
+      { "@type": "Thing", {{ with $alternateName }} "alternateName": "{{ . }}",{{ end }} "identifier": "{{ $itemid }}" }
     {{- end }}
   ],
 {{- end }}

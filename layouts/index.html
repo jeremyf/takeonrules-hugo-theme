@@ -21,30 +21,30 @@
     </aside>
 {{ end }}
 {{ define "main" }}
-<article property="mainEntity" class="home" aria-labelledby="blog-posts" id="skip-to-content" resource="{{ .Permalink }}#skip-to-content" typeof="Blog">
-  <link property="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
+<article itemprop="mainEntity" class="home" aria-labelledby="blog-posts" id="skip-to-content" itemid="{{ .Permalink }}#skip-to-content" itemscope itemtype="http://schema.org/Blog">
+  <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
   <h1 id="blog-posts">Blog Posts</h1>
   <ol aria-labelledby="skip-to-content">
   {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
-  <li property="blogPost" typeof="BlogPosting" aria-labelledby="{{ anchorize .Title }}">
+  <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="{{ anchorize .Title }}">
     <h2 id="{{ anchorize .Title }}">
-      <cite property="headline">
-        <a property="mainEntityOfPage" href="{{ .RelPermalink }}" accesskey="{{ mod (add 1 $index) 10 }}" rel="bookmark">
+      <cite itemprop="headline">
+        <a itemprop="mainEntityOfPage" href="{{ .RelPermalink }}" accesskey="{{ mod (add 1 $index) 10 }}" rel="bookmark">
           {{ .Title }}
         </a>
       </cite>
     </h2>
     {{- if isset .Params "headline" }}
-      <h3 property="alternateHeadline">{{ partial "unparagraphy.html" .Params.headline }}</h3>
+      <h3 itemprop="alternateHeadline">{{ partial "unparagraphy.html" .Params.headline }}</h3>
     {{- end }}
     <p>
-      <meta property="wordCount" content="{{ .WordCount }}" />
+      <meta itemprop="wordCount" content="{{ .WordCount }}" />
       {{ partial "dates-and-tags.html" . }}
       {{ with .Params.images }}
         {{ range . }}
-          <link property="image" href="{{ .src }}" />
+          <link itemprop="image" href="{{ .src }}" />
         {{ end }}
       {{ else }}
         {{ partial "footer/image.html" . }}
