@@ -1,14 +1,14 @@
-<h1 itemprop="headline" class="p-name" itemid="{{ $.Site.BaseURL }}#{{ anchorize .Title }}" id="{{ anchorize .Title }}">{{ .Title }}</h1>
-<meta itemprop="name" content="{{ .Title }}" />
+<h1 property="headline" class="p-name" resource="{{ $.Site.BaseURL }}#{{ anchorize .Title }}" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+<meta property="name" content="{{ .Title }}" />
 {{- with .Params.headline }}
-<h2 itemprop="alternativeHeadline">{{ . }}</h2>
+<h2 property="alternativeHeadline">{{ . }}</h2>
 {{- end }}
-<link itemprop="author" href="{{ $.Site.BaseURL }}#microdata-author" />
-<link itemprop="publisher" href="{{ $.Site.BaseURL }}#microdata-org" />
-<link itemprop="url" href="{{ .Permalink }}" />
-<meta itemprop="speakable" content="#skip-to-content" />
-<meta itemprop="wordCount" content="{{ .WordCount }}" />
-<meta itemprop="inLanguage" content="en-US" />
+<link property="author" href="{{ $.Site.BaseURL }}#microdata-author" />
+<link property="publisher" href="{{ $.Site.BaseURL }}#microdata-org" />
+<link property="url" href="{{ .Permalink }}" />
+<meta property="speakable" content="#skip-to-content" />
+<meta property="wordCount" content="{{ .WordCount }}" />
+<meta property="inLanguage" content="en-US" />
 <section aria-label="Author, Dates, and Tags">
   {{ partial "dates-and-tags.html" . }}
 </section>

@@ -2,32 +2,32 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="{{ .Permalink }}#skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
+  <article property="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" resource="{{ .Permalink }}#skip-to-content" typeof="WebPageElement">
     <header>
-      <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-      <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      <link property="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
+      <h1 property="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
       {{ partial "footer/image.html" . }}
     </header>
     <section class="e-content content">
       {{ .Content }}
-      <div class="table-wrapper" itemprop="hasPart" itemscope itemtype="http://schema.org/Table" role="region" tabindex="0" aria-labelledby="caption-{{ anchorize .Title }}">
-        <link itemprop="isPartof" href="{{ .Permalink }}#skip-to-content" />
+      <div class="table-wrapper" property="hasPart" typeof="Table" role="region" tabindex="0" aria-labelledby="caption-{{ anchorize .Title }}">
+        <link property="isPartof" href="{{ .Permalink }}#skip-to-content" />
         <table id="table-{{ anchorize .Title }}" class="data-tables stripe">
-          <caption itemprop="about" id="caption-{{ anchorize .Title }}">Table: All {{ .Title }} in {{ .Site.Title }}</caption>
+          <caption property="about" id="caption-{{ anchorize .Title }}">Table: All {{ .Title }} in {{ .Site.Title }}</caption>
           <thead>
             <tr><th scope="col">Title</th><th class="r" scope="col">Count</th><th class="c" scope="col">First Post</th><th class="c" scope="col">Last Post</th></tr>
           </thead>
           <tbody>
           {{- range $key, $value := .Data.Terms.Alphabetical}}
-            <tr itemprop="mainEntityOfPage" itemscope itemtype="http://schema.org/CreativeWorkSeries">
+            <tr property="mainEntityOfPage" typeof="CreativeWorkSeries">
               {{- range first 1 (where $.Site.Data.series "key" "eq" $value.Name ) }}
-                <td><cite itemprop="headline"><a itemprop="url" href="{{ $.Page.RelPermalink }}{{ $value.Name | urlize }}">{{ .title }}</a></cite></td>
+                <td><cite property="headline"><a property="url" href="{{ $.Page.RelPermalink }}{{ $value.Name | urlize }}">{{ .title }}</a></cite></td>
                 <td>{{ $value.Count }}</td>
                 {{- range first 1 $value.Pages.Reverse }}
-                <td class="c"><a href="{{ .Permalink }}"><time itemprop="startDate" datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
+                <td class="c"><a href="{{ .Permalink }}"><time property="startDate" datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
                 {{- end }}
                 {{- range first 1 $value.Pages }}
-                <td class="c"><a href="{{ .Permalink }}"><time itemprop="endDate" datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
+                <td class="c"><a href="{{ .Permalink }}"><time property="endDate" datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
                 {{- end }}
               {{- end }}
             </tr>

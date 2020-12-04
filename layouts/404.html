@@ -1,13 +1,13 @@
 {{ define "main" }}
-  <article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="{{ .Permalink }}#skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
+  <article property="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" resource="{{ .Permalink }}#skip-to-content" typeof="WebPageElement">
     <header>
-      <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-      <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      <link property="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
+      <h1 property="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
     </header>
     <section class="e-content content">
-      <figure itemprop="image" itemscope itemType="http://schema.org/ImageObject" role="note">
-        <img itemprop="url" src="/images/logo.jpg"  data-widht="309" data-height="250" alt="An abstract wooden chicken surveys a chessboard littered with game pieces."/>
-        <figcatpion itemprop="caption">The Chicken of Discovery has found nothing.</figcatpion>
+      <figure property="image" itemType="ImageObject" role="note">
+        <img property="url" src="/images/logo.jpg"  data-widht="309" data-height="250" alt="An abstract wooden chicken surveys a chessboard littered with game pieces."/>
+        <figcatpion property="caption">The Chicken of Discovery has found nothing.</figcatpion>
       </figure>
 
       <p>Welp, it looks like we couldn't find what you requested.</p>

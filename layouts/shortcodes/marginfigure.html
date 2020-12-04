@@ -4,8 +4,8 @@
 {{- $imageResize := "360x" }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "360x r%s" .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
-<figure itemprop="image" itemscope itemType="http://schema.org/ImageObject" {{ if isSet .Params "hidden" }}aria-hidden="true" {{ end }} role="note">
-  <img itemprop="url"
+<figure property="image" itemType="ImageObject" {{ if isSet .Params "hidden" }}aria-hidden="true" {{ end }} role="note">
+  <img property="url"
        src="{{ $result.RelPermalink }}"
        alt="{{ $alt }}"
        data-original-url="{{ $original.RelPermalink}}"
@@ -13,5 +13,5 @@
        data-original-height="{{ $original.Height }}"
        data-width="{{ $result.Width }}"
        data-height="{{ $result.Height }}" />
-  {{ with .Get "caption" }}<figcaption itemprop="caption">{{ partial "unparagraphy.html" . }}</figcaption>{{ end }}
+  {{ with .Get "caption" }}<figcaption property="caption">{{ partial "unparagraphy.html" . }}</figcaption>{{ end }}
 </figure>
