@@ -21,7 +21,8 @@
       {{ $lastInstance := sub (len $data.Pages) 1 }}
       {{- range $index, $entry := sort $data.Pages "Date" "asc" }}
       {{- with $entry }}
-      <dt><time {{ if eq $index 0 }}itemprop="startDate"{{ end }} {{ if eq $index $lastInstance }}itemprop="endDate"{{ end }} datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd property="sc:hasPart" typeof="sc:CreativeWork"><cite property="sc:name"><a property="sc:url" href="{{ .Permalink}}" rel="bookmark">{{ .Title }}</a></cite></dd>
+      <dt><time {{ if (or (eq $index 0) (eq $index $lastInstance)) }}property="{{ if eq $index 0 }}sc:startDate{{ end }} {{ if eq $index $lastInstance }}sc:endDate{{ end }}"{{ end }} datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt>
+      <dd property="sc:hasPart" typeof="sc:CreativeWork"><cite property="sc:name"><a property="sc:url" href="{{ .Permalink}}" rel="bookmark">{{ .Title }}</a></cite></dd>
       {{- end }}
       {{- end }}
     </dl>

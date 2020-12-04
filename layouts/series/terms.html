@@ -24,10 +24,10 @@
                 <td><cite property="sc:headline"><a property="sc:url" href="{{ $.Page.RelPermalink }}{{ $value.Name | urlize }}">{{ .title }}</a></cite></td>
                 <td>{{ $value.Count }}</td>
                 {{- range first 1 $value.Pages.Reverse }}
-                <td class="c"><a href="{{ .Permalink }}"><time property="sc:startDate" datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
+                <td class="c"><a href="{{ .Permalink }}"><time property="sc:startDate" datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></a></td>
                 {{- end }}
                 {{- range first 1 $value.Pages }}
-                <td class="c"><a href="{{ .Permalink }}"><time property="sc:endDate" datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</a></td>
+                <td class="c"><a href="{{ .Permalink }}"><time property="sc:endDate" datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></a></td>
                 {{- end }}
               {{- end }}
             </tr>

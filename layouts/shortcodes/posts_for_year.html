@@ -3,7 +3,7 @@
 <div class="list-page">
 <p>There are {{ len $pages}} posts in {{ $year }}.</p>
 {{ range $pages.GroupByDate "January" }}
-<details open>
+<details open="open">
 <summary class="month">{{ .Key }}({{ len .Pages }})</summary>
 <ul>
 {{ range .Pages }}
