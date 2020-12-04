@@ -1,24 +1,23 @@
 {{- if isset .Params "webmentions" }}
 <nav aria-labelledby="skip-to-webmentions">
   <details>
-  <summary id="skip-to-webmentions" class="h2">Web Mentions</summary>
-  <p>Others mentions of <a href="{{.Permalink }}" rel="bookmark">this post</a>:</p>
-  <ul>
-    {{- range .Params.webmentions }}
+    <summary id="skip-to-webmentions" class="h2">Web Mentions</summary>
+    <p>Others mentions of <a href="{{.Permalink }}" rel="bookmark">this post</a>:</p>
+    <ul>
+      {{- range .Params.webmentions }}
       <li>
         <a href="{{ .source }}" rel="nofollow">{{ if isset . "source_page_name" }}{{ .source_page_name }}{{ else }}{{ .source }}{{ end }}</a>
         {{- if isset . "source_author_name" }}
-          by
-          {{- if isset . "source_author_url" }}
-            <a href="{{ .source_author_url}}" rel="nofollow">{{ .source_author_name }}</a>
-          {{- else }}
-            {{ .source_author_name }}
-          {{- end }}
+        by
+        {{- if isset . "source_author_url" }}
+        <a href="{{ .source_author_url}}" rel="nofollow">{{ .source_author_name }}</a>
+        {{- else }}
+        {{ .source_author_name }}
+        {{- end }}
         {{- end }}
       </li>
-    {{- end }}
-  </ul>
-</summary>
-</details>
+      {{- end }}
+    </ul>
+  </details>
 </nav>
 {{- end }}
