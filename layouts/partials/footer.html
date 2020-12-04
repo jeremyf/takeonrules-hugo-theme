@@ -1,7 +1,7 @@
 <footer class="group credits" aria-label="Site-wide footer">
   <hr class="slender">
   &copy;<span itemprop="copyrightYear">{{ now.Format "2006" }}</span>&nbsp;
-  <span id="microdata-author" itemid="{{ $.Site.BaseURL }}#microdata-author" itemprop="copyrightHolder" itemscope itemType="http://schema.org/Person">
+  <span id="microdata-author" itemid="{{ $.Site.BaseURL }}#microdata-author" itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person">
     <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
       <span class="p-name" itemprop="name">{{ .Site.Params.copyrightHolder }}</span>
     </a>
@@ -11,15 +11,15 @@
   </span>
   <br /><br />
   <nav aria-label="Footer links">
-    <span id="microdata-contact-point" itemid="{{ $.Site.BaseURL }}#microdata-contact-point" itemprop="contactPoint" itemscope itemType="http://schema.org/ContactPoint">
+    <span id="microdata-contact-point" itemid="{{ $.Site.BaseURL }}#microdata-contact-point" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
       <a accesskey="o" itemprop="url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
     </span> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privac<u>y</u> Policy</a>
   </nav>
-  <span id="microdata-org" itemid='{{ $.Site.BaseURL }}#microdata-org' itemscope itemType='http://schema.org/Organization' >
+  <span id="microdata-org" itemid='{{ $.Site.BaseURL }}#microdata-org' itemscope itemtype='http://schema.org/Organization' >
     <meta itemprop="name" content="{{ $.Site.Params.title }}" />
     <link itemprop="url" href="{{ $.Site.BaseURL }}" />
     <link itemprop="contactPoint" href="{{ $.Site.BaseURL }}#microdata-contact-point" />
-    <span id="microdata-logo" itemid="{{ $.Site.BaseURL }}#microdata-logo" itemprop="logo" itemscope itemType="http://schema.org/ImageObject">
+    <span id="microdata-logo" itemid="{{ $.Site.BaseURL }}#microdata-logo" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
       <link itemprop="url" href="{{ $.Site.BaseURL }}{{ $.Site.Params.organizationImagePath }}" />
     </span>
   </span>
