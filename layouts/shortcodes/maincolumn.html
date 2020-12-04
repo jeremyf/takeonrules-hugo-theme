@@ -7,7 +7,7 @@
 {{- $alt      := .Get "alt" }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "770x r%s" .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
-<figure property="image" typeof="ImageObject" {{ if isSet .Params "hidden" }} aria-hidden="true"{{ end }}>
+<figure property="image" itemType="ImageObject" {{ if isSet .Params "hidden" }} aria-hidden="true"{{ end }}>
 {{- with $caption }}<figcaption  property="caption">{{ partial "unparagraphy.html" . }}</figcaption>{{ end }}
 <img property="url" src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
 </figure>
