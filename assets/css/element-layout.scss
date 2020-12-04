@@ -50,6 +50,8 @@ blockquote {
   }
 }
 
+.p-category:before { content: "#"; }
+
 /* BEGIN Epigraphs */
 .epigraph {
 
