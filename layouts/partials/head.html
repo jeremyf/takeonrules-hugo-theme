@@ -1,15 +1,15 @@
 {{- if .Params.canonical_url }}
-  <link rel="canonical" href="{{ .Params.canonical_url }}">
+  <link rel="canonical" href="{{ .Params.canonical_url }}" />
 {{- else }}
   {{- if .RelPermalink }}
-    <link rel="canonical" href="{{ .RelPermalink }}">
+    <link rel="canonical" href="{{ .RelPermalink }}" />
   {{- end }}
 {{- end }}
 {{ partialCached "head-duplicated-info.html" . }}
 
-{{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}">{{ end }}
+{{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}" />{{ end }}
 {{- if in (slice "term" "taxonomy" "taxonomyTerm") .Kind }}
-<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml">
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml" />
 {{- end }}
 
 {{ partial "opengraph.html" . }}
@@ -37,7 +37,7 @@
   {{ $js := resources.Get "js/semantic-ui-jquery-3.3.1-datatables-1.10.22.min.js" | resources.Minify }}
   {{ $secureJS := $js | resources.Fingerprint "sha512" }}
   <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
-  <link rel="preload" as="script" href="{{ $secureJS.Permalink }}">
+  <link rel="preload" as="script" href="{{ $secureJS.Permalink }}" />
 
   <script type="text/javascript">
     $(document).ready(function() {

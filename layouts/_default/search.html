@@ -27,16 +27,16 @@
       </noscript>
 
       {{ $searchJs := resources.Get "js/search.json" | resources.ExecuteAsTemplate "search.json" . }}
-      <link rel="preload" as="script" href="/search.json">
+      <link rel="preload" as="script" href="/search.json" />
       <script type="text/javascript" src="{{ $searchJs.Permalink }}" integrity="{{ $searchJs.Data.Integrity }}"></script>
 
       {{ $secureJqueryJS := resources.Get "js/jquery-3.5.1.min.js" | resources.Minify | resources.Fingerprint "sha512" }}
       <script type="text/javascript" src="{{ $secureJqueryJS.Permalink }}" integrity="{{ $secureJqueryJS.Data.Integrity }}"></script>
-      <link rel="preload" as="script" href="{{ $secureJqueryJS.Permalink }}">
+      <link rel="preload" as="script" href="{{ $secureJqueryJS.Permalink }}" />
 
       {{ $secureLunrJS := resources.Get "js/lunr-2.3.9.js" | resources.Minify | resources.Fingerprint "sha512"}}
       <script type="text/javascript" src="{{ $secureLunrJS.Permalink }}" integrity="{{ $secureLunrJS.Data.Integrity }}"></script>
-      <link rel="preload" as="script" href="{{ $secureLunrJS.Permalink }}">
+      <link rel="preload" as="script" href="{{ $secureLunrJS.Permalink }}" />
       <script type="text/javascript">
         var lunrIndex, $results, pagesIndex;
 
