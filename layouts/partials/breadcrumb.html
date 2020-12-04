@@ -13,7 +13,7 @@
 <nav aria-labelledby="series-itemscope" class="series breadcrumbs">
   {{- $series := where $.Site.Pages "Params.series" .key }}
   {{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
-  <span class="label">Part of Series </span><span resource="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" typeof="sc:CreativeWorkSeries"><cite property="sc:headline"><a property="sc:url" accesskey="s" rel="tag" href="{{ $seriesUrl }}" rel="bookmark">{{ $title }}</a></cite></span>
+  <span class="label">Part of Series </span><span resource="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" typeof="sc:CreativeWorkSeries"><cite property="sc:headline"><a property="sc:url" accesskey="s" href="{{ $seriesUrl }}" rel="bookmark">{{ $title }}</a></cite></span>
   {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
   {{- range first 1 $prev }}| <a property="sc:relatedLink" accesskey="v" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Pre<u>v</u>ious in Series</a>&nbsp;{{- end }}
   {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
