@@ -35,7 +35,7 @@
       {{ else }}
       <link property="sc:reviewBody" href="#content" />
       {{ end }}
-      <p property="sc:reviewRating" typeof="sc:Rating">I give it <span property="sc:ratingValue">{{ .ratingValue }}</meta> of <span property="sc:bestRating">5</span> stars.</p>
+      <p property="sc:reviewRating" typeof="sc:Rating">I give it <span property="sc:ratingValue">{{ .ratingValue }}</span> of <span property="sc:bestRating">5</span> stars.</p>
 
         <p property="sc:itemReviewed" typeof="sc:{{ with .type }}{{ . }}{{ else }}Book{{ end }}">
           <cite>{{ $.Page.Title }}</cite> is a review of <a property="sc:sameAs" href="{{ .url }}"><span property="sc:name">{{ .name }}</span></a> by <span property="sc:author">
