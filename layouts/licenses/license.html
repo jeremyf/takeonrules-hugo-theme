@@ -23,9 +23,10 @@
       <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
       <dl class="group">
         {{- range .Pages }}
-        <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><a href="{{ .Permalink}}">{{ .Title }}</a></dd>
+        <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt>
+        <dd><cite><a href="{{ .Permalink}}">{{ .Title }}</a></cite></dd>
         {{- end }}
-            </dll>
+      </dl>
     </details>
     {{ end }}
   </section>
