@@ -1,0 +1,3 @@
+{{- $content := . | markdownify }}{{- if findRE "<p>" $content }}{{- else }}{{- $content = printf "<p>%s</p>" $content }}{{- end }}
+{{- $content = replaceRE "<(p|footer|figcaption)([^>]*)>" "<$1$2><small>" $content | replaceRE "</(p|footer|figcaption)>" "</small></$1>" }}
+{{ $content | safeHTML }}
