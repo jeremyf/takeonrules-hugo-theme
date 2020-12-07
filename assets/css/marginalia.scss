@@ -17,13 +17,12 @@
     p, ul, dl, blockquote {
         font-size: 1.0rem; width:100%;
     }
-    pre, code { font-size: 1rem; }
 
     * { padding-top: 1.4rem; margin-top: 0rem; }
     *:first-of-type { padding-top: 0rem; }
     // A fix for the hover state
     a { padding-top: 0rem; }
-    blockquote { width: 95%; }
+    pre, code, blockquote { font-size: 1.0rem; width: 95%; }
     li { padding: 0;}
 }
 
