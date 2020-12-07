@@ -6,8 +6,7 @@
     clear: right;
     margin: 0 -60% 1.96rem 0;
     width: 50%;
-    font-size: 1.0rem;
-    line-height: 1.5;
+
     vertical-align: baseline;
     position: relative;
     &.table-wrapper {
@@ -15,14 +14,14 @@
         table { width: 100%; }
     }
     p, ul, dl, blockquote {
-        font-size: 1.0rem; width:100%;
+        width:100%;
     }
-
-    * { padding-top: 1.4rem; margin-top: 0rem; }
+    font-size: 0.9rem;
+    * { padding-top: 1.4rem; margin-top: 0rem; font-size: 0.9rem; }
     *:first-of-type { padding-top: 0rem; }
     // A fix for the hover state
     a { padding-top: 0rem; }
-    pre, code, blockquote { font-size: 1.0rem; width: 95%; }
+    pre, code, blockquote { width: 95%; }
     li { padding: 0;}
 }
 
@@ -59,7 +58,7 @@ li, blockquote {
 }
 .sidenote-number:after {
     content: counter(sidenote-counter);
-    font-size: 1rem;
+    font-size: 0.75rem;
     top: -0.5rem;
     left: 0.1rem;
 }
