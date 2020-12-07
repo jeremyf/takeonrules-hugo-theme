@@ -1,5 +1,5 @@
 @import "settings";
-
+html { font-size: 12px; }
 * { -webkit-transition: none !important; transition: none !important; }
 *, *:before, *:after { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
 @page { margin: 0.75in 0.5in; orphans:4; widows:2; }

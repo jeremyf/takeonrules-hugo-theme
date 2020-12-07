@@ -4,16 +4,9 @@
 
 html, body { height: 100%; }
 
-html { scroll-behavior: smooth; vertical-align: baseline; font-size: 12px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { scroll-behavior: smooth; vertical-align: baseline; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: $body-font; max-width: 1400px; counter-reset: sidenote-counter; }
 body, article header h1, article header h2, .list-page ul { width: 87.5%; }
-
-@media screen and (min-width: 800px){ html{ font-size: 12px;} }
-@media screen and (min-width: 900px){ html{ font-size: 13px;} }
-@media screen and (min-width: 1000px){ html{ font-size: 14px;} }
-@media screen and (min-width: 1100px){ html{ font-size: 15px; } }
-@media screen and (min-width: 1200px){ html{ font-size: 16px; } }
-@media screen and (min-width: 1300px){ html{ font-size: 17px; } }
 
 // sets link style according to values in _settings.scss
 article a { text-decoration: underline; }
