@@ -14,7 +14,7 @@ a, sup a { text-decoration: none; }
 span[itemprop="keywords"][itemscope] { display: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
-h1, h2, h3, h4, .h2, .h3, .h4 { font-family: $sans-font; font-weight: 400; line-height: 1.0889; }
+h1, h2, h3, h4, .h2, .h3, .h4 { font-family: $sans-font; font-weight: 400; }
 h1 { font-size: 2.5rem; margin: 1.568rem 0; }
 h2, h3, h4, .h2, .h3, .h4 { margin-bottom: 0; }
 h2, .h2 { font-size: 2.1rem; margin-top: 1.8667rem; }
@@ -25,7 +25,7 @@ p, summary, ol, ul, dl { font-size: 1.4rem; }
 summary { cursor: pointer; }
 abbr { cursor: help; }
 p, summary { margin-top: 1.4rem; }
-p, summary, li { line-height: 2rem; padding-right: 2rem; vertical-align: baseline; }
+p, summary, li { padding-right: 2rem; vertical-align: baseline; }
 blockquote {
   width: 55%;
   margin-top: 1.4rem;
@@ -34,7 +34,7 @@ blockquote {
   p:first-of-type { padding-top: 0rem; }
   p { margin-top: 1.7819rem; }
   ul, ol { padding-top: 0; margin: 1.7819rem 1rem; }
-  *  { font-size: 1.1rem; line-height: 1.7819rem; }
+  *  { font-size: 1.1rem; }
   li { margin-left: 3.5%; }
   footer {
     margin-top: 1.4rem;
@@ -57,7 +57,6 @@ blockquote {
   p, ul { font-style: italic; margin: 1rem 0; }
   > footer {
     margin-top: 0rem; font-style: normal;
-    line-height: 1.5rem;
     > cite { font-style: italic; }
   }
 }
@@ -93,7 +92,6 @@ figcaption {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.0rem;
-  line-height: 1.6;
   vertical-align: baseline;
   position: relative;
   max-width: 40%;
@@ -138,7 +136,7 @@ body {
 
 pre, pre code { font-family: $code-font; padding: 0 1.5%; overflow-x: auto; }
 kbd, code { font-family: $code-font; font-size: 1.1rem; }
-pre code { line-height: 1.7142; display: block; white-space: pre; margin-top: 1.7142rem; }
+pre code { display: block; white-space: pre; margin-top: 1.7142rem; }
 
 .newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.05rem; }
 
@@ -209,7 +207,7 @@ dl.group {
   font-size: 1.2rem;
   display: table;
   ul { padding-left: 7%; font-size: 1.2rem; }
-  dt, dd { margin-top: 1rem; line-height: 1.5rem; float: left; }
+  dt, dd { margin-top: 1rem; float: left; }
   dd { margin-left: 1rem; }
   dt { font-weight: bold; clear: left; }
   dt:after { content: ":"; }
@@ -217,7 +215,7 @@ dl.group {
 
 dl.changelog {
   dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
-  dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; line-height: 1.5rem; }
+  dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; }
 }
 
 main .home {
@@ -294,7 +292,7 @@ article {
 }
 /*--- End of Basic Layout stuff from tufte.css ---*/
 
-sup { font-size: 51%; line-height: 1rem;} /* A weird rendering error happens when this is a set height or greater than 50% */
+sup { font-size: 51%;} /* A weird rendering error happens when this is a set height or greater than 50% */
 ins { text-decoration-line: none; }
 q:after, q:before { content: none; }
 
