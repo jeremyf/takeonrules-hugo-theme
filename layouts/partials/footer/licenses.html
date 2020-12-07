@@ -5,10 +5,12 @@
   <h2 id="skip-to-licenses">License(s)</h2>
   {{ $context := . }}
   {{ range .Params.licenses }}
-    <p class="license">
+  <p class="license">
+    <small>
       {{ with index $.Site.Data.licenses . }}
         {{ partial .PartialForLicenseFooter $context }}
       {{ end }}
-    </p>
+    </small>
+  </p>
   {{ end }}
 </nav>{{- end }}{{- end }}

@@ -11,7 +11,7 @@
     position: relative;
     &.table-wrapper {
         margin-right: 11%; width: 29%;
-        table { width: 100%; }
+        table { width: 95%; }
     }
     p, ul, dl, blockquote {
         width:100%;
@@ -53,7 +53,7 @@ li, blockquote {
 }
 
 .sidenote-number { counter-increment: sidenote-counter; }
-.sidenote-number:after, ins.side[role="note"]:before {
+.sidenote-number:after, .side[role="note"]:before {
     content: counter(sidenote-counter) ")\000a0";
     font-family: $counter-font;
     position: relative;
@@ -69,7 +69,9 @@ li, blockquote {
 // TODO: Must figure this out. I don't want to hide marginalia but instead
 //       render it similar to the print style
 .full-width { [role="note"], .sidenote-number { display: none; } }
-ins.margin[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; }
+.margin[role="note"], figure[role="note"] {
+    margin-right: 12.5%; width: 27%;
+}
 
 @media screen and (max-width: 760px) {
     blockquote { clear: both; }
@@ -78,10 +80,10 @@ ins.margin[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; 
         &.margin-table.table-wrapper {
             width: 87.5%;
             table { width: 100%; }
+        }
     }
-
-    }
-    ins[role="note"] {
+    [role="note"] {
+        width: 87.5%;
         padding-left: 0.5rem;
         margin: 1rem 10% 1rem 2.5%; // Note, the 12.5% + 87.5% from below
     }
@@ -93,7 +95,7 @@ ins.margin[role="note"], figure[role="note"] { margin-right: 12.5%; width: 27%; 
     }
 
     // NOTE: The specificity of the selectors is required; They echo the above specific selector
-    ins.margin[role="note"], figure[role="note"], ins[role="note"] {
+    figure[role="note"], .margin[role="note"] {
         width: 87.5%;
         float: left;
         clear: both;
