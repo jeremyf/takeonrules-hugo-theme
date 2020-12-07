@@ -5,7 +5,7 @@
 html, body { height: 100%; }
 
 html { scroll-behavior: smooth; vertical-align: baseline; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: $body-font; max-width: 1400px; counter-reset: sidenote-counter; }
+body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: $body-font; counter-reset: sidenote-counter; }
 body, article header h1, article header h2, .list-page ul { width: 87.5%; }
 
 // sets link style according to values in _settings.scss
@@ -15,11 +15,11 @@ span[itemprop="keywords"][itemscope] { display: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1, h2, h3, h4, .h2, .h3, .h4 { font-family: $sans-font; font-weight: 400; }
-h1 { font-size: 2.5rem; margin: 1.568rem 0; }
+h1 { font-size: 2.2rem; margin: 1.568rem 0; }
 h2, h3, h4, .h2, .h3, .h4 { margin-bottom: 0; }
-h2, .h2 { font-size: 2.1rem; margin-top: 1.8667rem; }
-h3, .h3 { font-size: 1.8rem; margin-top: 2.1778rem; }
-h4, .h4 { font-size: 1.5rem; margin-top: 1.6778rem; }
+h2, .h2 { font-size: 1.9rem; margin-top: 1.8667rem; }
+h3, .h3 { font-size: 1.6rem; margin-top: 2.1778rem; }
+h4, .h4 { font-size: 1.3rem; margin-top: 1.6778rem; }
 
 summary { cursor: pointer; }
 abbr { cursor: help; }
