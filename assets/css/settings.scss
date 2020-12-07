@@ -13,7 +13,9 @@ $counter-font: $body-font;
     --bg-color: var(--tor-white);
     --tor-cyan-alt-faint: #354f6f;
     --tor-cyan-alt-other-faint: #2e584f;
+
     --time-color: var(--tor-cyan-alt-other-faint);
+    --margin-color: #1f0f6f;
     --tor-black-alt: #505050;
     --tor-dfn-color: #505050;
     --tor-fg-dim: #282828;
@@ -76,6 +78,8 @@ $counter-font: $body-font;
         --tor-blue: #00bdfa;
         --tor-magenta-alt: #b6a0ff;
         --tor-cyan: #00d3d0;
+        --margin-color: #8fc5ff;
+        // --margin-color: #92baff;
         --tor-blue-alt: #79a8ff;
         --tor-warm: #f8dec0;
         --tor-cold: #c6eaff;

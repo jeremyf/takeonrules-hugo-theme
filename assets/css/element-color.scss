@@ -87,11 +87,14 @@ pre, code { color:  var(--code-color); }
 kbd { color: var(--kbd-color); }
 
 // BEGIN COMMENTARY TYPE MARKS
-.margin, .side, .update, s, del, ins {
+s, del, ins {
     color:   var(--commentary-color);
     p { color:   var(--commentary-color); }
 }
 
+.margin, .side, .update {
+    color:  var(--margin-color);
+}
 ins[role=note] { border-color:   var(--commentary-color); }
 
 @media screen and (max-width: 760px) {
