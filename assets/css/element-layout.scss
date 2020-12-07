@@ -207,10 +207,10 @@ dl.group {
   font-size: 1.2rem;
   display: table;
   ul { padding-left: 7%; font-size: 1.2rem; }
-  dt, dd { margin-top: 1rem; float: left; }
-  dd { margin-left: 1rem; }
-  dt { font-weight: bold; clear: left; }
+  dt { font-weight: bold; clear: left; padding-top: 1rem; }
+  dd { margin-top: 1rem; margin-left: 1rem; float: left; }
   dt:after { content: ":"; }
+  dd:before { content: "• "; }
 }
 
 dl.changelog {
