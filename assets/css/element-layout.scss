@@ -15,27 +15,26 @@ span[itemprop="keywords"][itemscope] { display: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1, h2, h3, h4, .h2, .h3, .h4 { font-family: $sans-font; font-weight: 400; }
-h1 { font-size: 2.2rem; margin: 1.568rem 0; }
+h1 { font-size: 1.8rem; margin: 1.4rem 0; }
 h2, h3, h4, .h2, .h3, .h4 { margin-bottom: 0; }
-h2, .h2 { font-size: 1.9rem; margin-top: 1.8667rem; }
-h3, .h3 { font-size: 1.6rem; margin-top: 2.1778rem; }
-h4, .h4 { font-size: 1.3rem; margin-top: 1.6778rem; }
+h2, .h2 { font-size: 1.6rem; margin-top: 1.6rem; }
+h3, .h3 { font-size: 1.4rem; margin-top: 1.4rem; }
+h4, .h4 { font-size: 1.2rem; margin-top: 1.2rem; }
 
 summary { cursor: pointer; }
 abbr { cursor: help; }
-p, summary { margin-top: 1.4rem; }
+p, summary { margin-top: 1.2rem; }
 p, summary, li { padding-right: 2rem; vertical-align: baseline; }
 blockquote {
   width: 55%;
-  margin-top: 1.4rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.2rem;
   p, .group, ul, ol, h2, h3, h4 { margin-left: 1rem; margin-right: 1rem; width: 90%; }
   p:first-of-type { padding-top: 0rem; }
-  p { margin-top: 1.7819rem; }
-  ul, ol { padding-top: 0; margin: 1.7819rem 1rem; }
+  p { margin-top: 1.2rem; }
+  ul, ol { padding-top: 0; margin: 1.2rem 1rem; }
   li { margin-left: 3.5%; }
   footer {
-    margin-top: 1.4rem;
+    margin-top: 1.2rem;
     width: 90%;
     text-align: right;
   }
@@ -240,7 +239,6 @@ article {
         margin-right: -0.1rem;
     }
     footer nav ul { width: 87.5% }
-    li { padding-bottom: 0.5rem; }
     header h2 { margin-bottom: 1.2rem; }
 }
 
