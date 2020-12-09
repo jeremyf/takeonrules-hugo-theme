@@ -15,11 +15,11 @@ span[itemprop="keywords"][itemscope] { display: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1, h2, h3, h4, .h2, .h3, .h4 { font-family: $sans-font; font-weight: 400; }
-h1 { font-size: 1.8rem; margin: 1.4rem 0; }
+h1 { font-size: 1.6rem; margin: 1.3rem 0; }
 h2, h3, h4, .h2, .h3, .h4 { margin-bottom: 0; }
-h2, .h2 { font-size: 1.6rem; margin-top: 1.6rem; }
-h3, .h3 { font-size: 1.4rem; margin-top: 1.4rem; }
-h4, .h4 { font-size: 1.2rem; margin-top: 1.2rem; }
+h2, .h2 { font-size: 1.45rem; margin-top: 1.45rem; }
+h3, .h3 { font-size: 1.3rem; margin-top: 1.3rem; }
+h4, .h4 { font-size: 1.15rem; margin-top: 1.15rem; }
 
 summary { cursor: pointer; }
 abbr { cursor: help; }
@@ -80,7 +80,7 @@ ul, ol { padding: 1rem 0 0 5%; }
 /* END Styling for listing pages. */
 /* ------------------------------------------------------------------------ */
 
-figure { margin: 1em 0 3em 0; max-width: 55%; }
+figure { margin: 1em 0 1em 0; max-width: 55%; }
 img { max-width: 100%; }
 figcaption {
   float: right;
