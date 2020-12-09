@@ -24,7 +24,7 @@ main { h1, h2, h3, h4 { clear: left; } }
 header, nav, article footer { display:none; }
 main header, blockquote footer { display: inherit; }
 footer.group {
-  font-family: $sans-font; font-size: 9pt; // border-top: 1px solid $text-color;
+  font-family: $header-font; font-size: 9pt; // border-top: 1px solid $text-color;
   .footer-links { display: none; }
 }
 

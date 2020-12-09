@@ -14,7 +14,7 @@ a, sup a { text-decoration: none; }
 span[itemprop="keywords"][itemscope] { display: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
-h1, h2, h3, h4, .h2, .h3, .h4 { font-family: $sans-font; font-weight: 400; }
+h1, h2, h3, h4, .h2, .h3, .h4 { font-family: $header-font; font-weight: 400; }
 h1 { font-size: 1.6rem; margin: 1.3rem 0; }
 h2, h3, h4, .h2, .h3, .h4 { margin-bottom: 0; }
 h2, .h2 { font-size: 1.45rem; margin-top: 1.45rem; }
@@ -118,7 +118,7 @@ body {
                 letter-spacing: 0.15em;
                 font-style: normal;
                 font-size: 1.2rem;
-                font-family: $sans-font;
+                font-family: $header-font;
                 text-decoration: none;
                 display: inline-block;
                 margin: 1.5rem 2rem 0 auto;
@@ -155,7 +155,7 @@ nav {
 .credits {
   text-align: center;
   padding: 1rem 0rem;
-  font-family: $sans-font;
+  font-family: $header-font;
 }
 
 // End of Nav and Footer styling area
@@ -246,7 +246,7 @@ article {
 .hidden { display: none; }
 .breadcrumbs, .paginator, .feeds {
   .label { display: none; }
-  width: 85%; font-family: $sans-font; padding-bottom: 1rem;
+  width: 85%; font-family: $header-font; padding-bottom: 1rem;
 }
 
 .breadcrumbs a {
