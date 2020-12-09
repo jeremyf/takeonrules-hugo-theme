@@ -56,7 +56,7 @@ li, blockquote {
 .sidenote-number { counter-increment: sidenote-counter; }
 .sidenote-number:after, .side[role="note"]:before {
     content: counter(sidenote-counter) ")\000a0";
-    font-family: $counter-font;
+    font-family: var(--counter-font);
     position: relative;
     vertical-align: baseline;
 }

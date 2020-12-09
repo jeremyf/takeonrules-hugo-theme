@@ -5,7 +5,7 @@
 html, body { height: 100%; }
 
 html { scroll-behavior: smooth; vertical-align: baseline; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: $body-font; counter-reset: sidenote-counter; }
+body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: var(--body-font); counter-reset: sidenote-counter; }
 body, article header h1, article header h2, .list-page ul { width: 87.5%; }
 
 // sets link style according to values in _settings.scss
@@ -14,7 +14,7 @@ a, sup a { text-decoration: none; }
 span[itemprop="keywords"][itemscope] { display: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
-h1, h2, h3, h4, .h2, .h3, .h4 { font-family: $header-font; font-weight: 400; }
+h1, h2, h3, h4, .h2, .h3, .h4 { font-family: var(--header-font); font-weight: 400; }
 h1 { font-size: 1.6rem; margin: 1.3rem 0; }
 h2, h3, h4, .h2, .h3, .h4 { margin-bottom: 0; }
 h2, .h2 { font-size: 1.45rem; margin-top: 1.45rem; }
@@ -118,7 +118,7 @@ body {
                 letter-spacing: 0.15em;
                 font-style: normal;
                 font-size: 1.2rem;
-                font-family: $header-font;
+                font-family: var(--header-font);
                 text-decoration: none;
                 display: inline-block;
                 margin: 1.5rem 2rem 0 auto;
@@ -130,8 +130,8 @@ body {
     > footer { padding-top: 2rem; }
 }
 
-pre, pre code { font-family: $code-font; padding: 0 1.5%; overflow-x: auto; }
-kbd, code { font-family: $code-font; }
+pre, pre code { font-family: var(--code-font); padding: 0 1.5%; overflow-x: auto; }
+kbd, code { font-family: var(--code-font); }
 pre code { display: block; white-space: pre; margin-top: 1.7142rem; }
 
 .newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.05rem; }
@@ -155,7 +155,7 @@ nav {
 .credits {
   text-align: center;
   padding: 1rem 0rem;
-  font-family: $header-font;
+  font-family: var(--header-font);
 }
 
 // End of Nav and Footer styling area
@@ -246,7 +246,7 @@ article {
 .hidden { display: none; }
 .breadcrumbs, .paginator, .feeds {
   .label { display: none; }
-  width: 85%; font-family: $header-font; padding-bottom: 1rem;
+  width: 85%; font-family: var(--header-font); padding-bottom: 1rem;
 }
 
 .breadcrumbs a {
