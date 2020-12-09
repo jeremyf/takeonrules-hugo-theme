@@ -11,7 +11,6 @@ body, article header h1, article header h2, .list-page ul { width: 87.5%; }
 // sets link style according to values in _settings.scss
 article a { text-decoration: underline; }
 a, sup a { text-decoration: none; }
-span[itemprop="keywords"][itemscope] { display: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1, h2, h3, h4, .h2, .h3, .h4 { font-family: var(--header-font); font-weight: 400; }
@@ -37,6 +36,7 @@ blockquote {
     margin-top: 1.2rem;
     width: 90%;
     text-align: right;
+    margin-left: 1rem;
   }
 }
 
@@ -47,14 +47,13 @@ blockquote {
 
   width: 45%; padding-left: 5%; margin-top: 3.2rem; margin-bottom: 2.2rem;
   @media screen and (max-width:760px) {
-    width: 75%; padding-left: 5%
+      width: 75%;
   }
   border-left: none;
   font-style: italic;
-  p, ul { font-style: italic; margin: 1rem 0; }
+  p, ul { margin: 1rem 0; }
   > footer {
-    margin-top: 0rem; font-style: normal;
-    > cite { font-style: italic; }
+    margin-top: 0rem;
   }
 }
 
@@ -138,19 +137,11 @@ pre code { display: block; white-space: pre; margin-top: 1.7142rem; }
 
 @import "marginalia";
 
-/* -- Jekyll specific styling --*/
-//helper classes
 
-
-//Nav and Footer styling area
-
-// For some reason AMP is mis-behaving around this
-/* BEGIN SKIP-AMP */
 nav {
   a.active:before { content:"« "; }
   a.active:after { content:" »"; }
 }
-/* END SKIP-AMP */
 
 .credits {
   text-align: center;

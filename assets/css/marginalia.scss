@@ -16,8 +16,9 @@
     p, ul, dl, blockquote {
         width:100%;
     }
+    blockquote { margin-top: 1.2rem; padding-top: 0rem; }
     p { padding-top: 1.2rem; margin-top: 0rem; }
-    p:first-of-type { padding-top: 0rem; }
+    > *:first-of-type { padding-top: 0rem; }
     th,td { padding-top: 0.1rem; padding-bottom: 0.1rem; }
     // A fix for the hover state
     a { padding-top: 0rem; }
