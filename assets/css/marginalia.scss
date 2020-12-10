@@ -63,8 +63,8 @@ li, blockquote {
 }
 .sidenote-number:after {
     content: counter(sidenote-counter);
-    font-size: 0.75rem;
-    top: -0.5rem;
+    font-size: 0.3rem;
+    top: -0.3rem;
     left: 0.1rem;
 }
 
