@@ -1,7 +1,7 @@
 {{- if isset .Params "webmentions" }}
 <nav aria-labelledby="skip-to-webmentions">
   <details>
-    <summary id="skip-to-webmentions" class="h2">Web Mentions</summary>
+    <summary id="skip-to-webmentions" class="h2">Mentions</summary>
     <p>Others mentions of <a href="{{.Permalink }}" rel="bookmark">this post</a>:</p>
     <ul>
       {{- range .Params.webmentions }}
