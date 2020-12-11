@@ -66,19 +66,6 @@ blockquote {
 
 /* Basic Layout stuff --*/
 ul, ol { padding: 1rem 0 0 5%; }
-
-/* ------------------------------------------------------------------------ */
-/* Styling for listing pages. */
-/* ------------------------------------------------------------------------ */
-.list-page {
-  ul { list-style-type: none; margin: -0.25em; max-width: 45rem; }
-  li { margin: 0; }
-}
-.list-date { display: inline; }
-/* ------------------------------------------------------------------------ */
-/* END Styling for listing pages. */
-/* ------------------------------------------------------------------------ */
-
 figure { margin: 1em 0 1em 0; max-width: 55%; }
 img { max-width: 100%; }
 figcaption {
@@ -292,7 +279,8 @@ details {
     & > p:not(:first-of-type) { padding-top: 1.4rem; margin-top: 0rem; }
     ul, ol {
         padding-left: 5%;
-        li { margin-left: 2rem; }
+        li { margin-left: 2rem; padding-left: 3rem; text-indent: -3rem; }
+
     }
     & > *:not(summary) {
             margin-left: 0.5% ; // Aligns left border with center of down caret

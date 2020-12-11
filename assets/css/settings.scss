@@ -1,10 +1,10 @@
 // This file contains all the constants for colors and font styles
 // Enter Hipster Fonts
-$code-font: monospace;
 :root {
     --body-font: serif;
     --header-font: sans-serif;
     --counter-font: sans-serif;
+    --code-font: monospace;
     --tor-black: #000000;
     --tor-white: #ffffff;
     --fg-color: var(--tor-black);
