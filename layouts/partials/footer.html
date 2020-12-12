@@ -1,22 +1,25 @@
 <footer class="group credits" aria-label="Site-wide footer">
   <hr class="slender" />
   <small>
-  &copy;<span property="sc:copyrightYear">{{ now.Format "2006" }}</span>&nbsp;
-  <span id="microdata-author" resource="{{ $.Site.BaseURL }}#microdata-author" property="sc:copyrightHolder" typeof="sc:Person">
-    <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
-      <span class="p-name" property="sc:name">{{ .Site.Params.copyrightHolder }}</span>
-    </a>
-    {{- range .Site.Params.identifiers }}
-    <link property="sc:identifier" href="{{ . }}" />
-    {{- end }}
-  </span>
+    &copy;<span property="sc:copyrightYear">{{ now.Format "2006" }}</span>&nbsp;
+    <span id="microdata-author" resource="{{ $.Site.BaseURL }}#microdata-author" property="sc:copyrightHolder" typeof="sc:Person">
+      <link property="sc:contactPoint" href="{{ $.Site.BaseURL}}contact-me/" />
+      <span class="p-name" property="sc:name">
+        <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
+          {{ .Site.Params.copyrightHolder }}
+        </a>
+      </span>
+      {{- range .Site.Params.identifiers }}
+      <link property="sc:identifier" href="{{ . }}" />
+      {{- end }}
+    </span>
   </small>
   <br /><br />
   <nav aria-label="Footer links">
     <small>
-    <span id="microdata-contact-point" resource="{{ $.Site.BaseURL }}#microdata-contact-point" property="sc:contactPoint" typeof="sc:ContactPoint">
-      <a accesskey="o" property="sc:url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
-    </span> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privac<u>y</u> Policy</a></small>
+      <span id="microdata-contact-point" resource="{{ $.Site.BaseURL }}#microdata-contact-point" property="sc:contactPoint" typeof="sc:ContactPoint">
+        <a accesskey="o" property="sc:url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
+      </span> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privac<u>y</u> Policy</a></small>
   </nav>
   <span id="microdata-org" resource='{{ $.Site.BaseURL }}#microdata-org' typeof="sc:Organization" >
     <meta property="sc:name" content="{{ $.Site.Params.title }}" />
