@@ -39,7 +39,6 @@
     {{- if isset .Params "headline" }}
       <h3 property="sc:alternateHeadline">{{ partial "unparagraphy.html" .Params.headline }}</h3>
     {{- end }}
-    <p>
       <meta property="sc:wordCount" content="{{ .WordCount }}" />
       {{ partial "dates-and-tags.html" . }}
       {{ with .Params.images }}
@@ -49,7 +48,6 @@
       {{ else }}
         {{ partial "footer/image.html" . }}
       {{ end }}
-    </p>
   </li>
   {{- end }}
   {{- end }}
