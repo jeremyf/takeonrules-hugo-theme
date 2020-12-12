@@ -4,8 +4,9 @@
     .fullwidth { max-width: 100%; }
     float: right;
     clear: right;
-    margin: 0 -60% 1.96rem 0;
-    width: 50%;
+    margin-right: 12.5%;
+    width: 27%;
+    margin-bottom: 1.5rem;
 
     vertical-align: baseline;
     position: relative;
@@ -24,7 +25,14 @@
     a { padding-top: 0rem; }
     pre, code, blockquote { width: 95%; }
     li { padding: 0;}
+
+    &.side {
+            margin: 0 -60% 1.96rem 0;
+            width: 50%;
+    }
 }
+
+
 
 figure[role="note"] {
     max-width: 100%;
@@ -71,9 +79,6 @@ li, blockquote {
 // TODO: Must figure this out. I don't want to hide marginalia but instead
 //       render it similar to the print style
 .full-width { [role="note"], .sidenote-number { display: none; } }
-.margin[role="note"], figure[role="note"] {
-    margin-right: 12.5%; width: 27%;
-}
 
 @media screen and (max-width: 760px) {
     blockquote { clear: both; }
@@ -83,8 +88,6 @@ li, blockquote {
             width: 87.5%;
             table { width: 100%; }
         }
-    }
-    [role="note"] {
         width: 87.5%;
         padding-left: 0.5rem;
         margin: 1rem 10% 1rem 2.5%; // Note, the 12.5% + 87.5% from below
