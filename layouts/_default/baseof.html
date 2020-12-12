@@ -31,8 +31,9 @@
         <span class="hidden"> | </span><a href="#skip-to-webmentions" accesskey="m" class="offscreen">Skip to Page's <u>M</u>entions</a>
         {{- end }}
       </nav>
-      <nav property="sc:hasPart" class="group" aria-label="Site-wide navigation" typeof="sc:SiteNavigationElement">
-        <h1><a property="sc:url" accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}" aria-label="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
+      <nav class="group" aria-label="Site-wide navigation" typeof="sc:SiteNavigationElement">
+        <meta property="sc:name" content="Site-wide navigation" />
+        <h1><a property="sc:url" accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
         <a property="sc:url" accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> | </span>
         {{- end }}
