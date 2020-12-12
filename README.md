@@ -24,7 +24,7 @@ The three primary paragraph management partials are:
 
 - [unparagraphy.html](layouts/partials/unparagraphy.html) :: ensures that the partial does not return wrap the content in a P-tag.  In otherwords, useful for ensuring inline content (see display [CSS Flow Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout)).
 - [paragraphy.html](layouts/partials/paragraphy.html) :: sibling to `unparagraphy.html`, this partial ensures that the returned content'a top-level DOM nodes are P-tags.  Useful for ensuring block content.
-- [smallPparagraphy.html](layouts/partials/smallParagraphy.html) :: sibling to `paragraphy.html`, this partial ensures that the top-level DOM nodes are block display elements, and the children of those elements are wrapped in [small](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small) tags.  This is useful for marginalia (e.g. side comments).
+- [smallParagraphy.html](layouts/partials/smallParagraphy.html) :: sibling to `paragraphy.html`, this partial ensures that the top-level DOM nodes are block display elements, and the children of those elements are wrapped in [small](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small) tags.  This is useful for marginalia (e.g. side comments).
 
 ### Dates and Tags
 
@@ -36,16 +36,19 @@ Similar to partials, I leverage several shortcodes to help manage my content.
 
 ### Marginalia
 
-- [sidenote.html](layouts/shortcodes/sidenote.html) :: this partial creates an inline numbered sidenote in the margins; It uses the `unparagraphy.html`
-- [marginnote.html](layouts/shortcodes/marginnote.html) :: this partial creates a block margin note;
-- [marginfigure.html](layouts/shortcodes/marginfigure.html) ::
-- [table.html](layouts/shortcodes/table.html) :: while not strictly something that contributes to marginalia, there is a parameter that allows for a table rendered in the margins.
+- [sidenote.html](layouts/shortcodes/sidenote.html) :: this shortcode creates an inline numbered sidenote in the margins; It uses the `unparagraphy.html`.
+- [marginnote.html](layouts/shortcodes/marginnote.html) :: this shortcode creates a block margin note.  It uses the `smallParagraphy.html`.
+- [marginfigure.html](layouts/shortcodes/marginfigure.html) :: a shortcode to ensure well formed images in the marginalia.
 
 Semantically, I don't treat these as an [ASIDE](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside); Though I do add the dom attribute `role="note"`.  I have found that reader plugins don't render an aside, and I consider the marginalia important to the document.
 
+Two other shortcodes (table.html and update.html) provide marginalia options.  See below for more on these two shortcodes.
+
 ### Other Stuff
 
-- [table.html](layouts/shortcodes/table.html) :: Helps ensure a well-formed table.
+- [table.html](layouts/shortcodes/table.html) :: Helps ensure a well-formed table; one parameter allows for table rendering in the margins.
 - [ogc.html](layouts/shortcodes/ogc.html) :: I sometimes write Open Game Content (OGC), released under the Open Game License (OGL).  This shortcode helps wrap that content.
 - [blockquote.html](layouts/shortcodes/blockquote.html) :: I quote sources, and this shortcode helps create well-formed quotes.
 - [epigraph.html](layouts/shortcodes/epigraph.html) :: One of my favorite books is <cite>Dune</cite> by Frank Herbert.  <cite>Dune</cite> introduces each chapter with an epigraph.  I like that style, and on occassion use that.
+- [update.html](layouts/shortcodes/update.html) :: a shortcode that helps create consistent document updates, via the [INS-tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins).  One parameter allows for updates rendered in the margins.
+- [maincolumn.html](layouts/shortcodes/maincolumn.html) :: a shortcode to help render an image in the maincolumn.
