@@ -8,7 +8,7 @@
     .fullwidth { max-width: 100%; }
     float: right;
     clear: right;
-    margin: 0 -59.5% 1.96rem 0;
+    margin: 0 -59.5% 1rem 0;
     width: 50%;
 
     vertical-align: baseline;
@@ -83,11 +83,8 @@ li, blockquote {
         }
         padding-left: 0.5rem;
 
-        // BEGIN ACCUMULATED PERCENTAGES: Note, the 10% + 2.5%  + 87.5% from below
-        margin-right: 10%;
-        margin-left: 2.5%;
+        margin-right: 2.5%;
         width: 87.5%;
-        // END ACCUMULATED PERCENTAGES
     }
 
     figcaption { width: 100%; }
@@ -105,8 +102,8 @@ li, blockquote {
 
     .side[role="note"] {
         clear: both;
-        margin: 0.5rem 0 1.96rem 0;
-        width: 95%
+        margin: 1rem 0;
+        width: 97.5%
     }
 
 
