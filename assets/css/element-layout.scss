@@ -65,7 +65,7 @@ blockquote {
 
 
 /* Basic Layout stuff --*/
-ul, ol { padding: 1rem 0 0 5%; }
+ul, ol { padding: 1rem 0 0 5%; margin-left: 1rem; }
 figure { margin: 1em 0 1em 0; max-width: 55%; }
 img { max-width: 100%; }
 figcaption {
@@ -86,7 +86,7 @@ figcaption {
 }
 // Without this setting, when the header would wrap, the letters would overlap
 h2, .h2, h3, h4, summary, p, .table-wrapper, pre, dl { width: 55%; }
-article header {
+article header, article footer nav {
     width: 90%;
     > * { width: auto; }
 }
@@ -116,7 +116,9 @@ body {
             }
         }
     }
-    > footer { padding-top: 2rem; width: 87.5%; }
+    > footer {
+        padding-top: 2rem; width: 87.5%;
+    }
 }
 
 pre, pre code { font-family: var(--code-font); padding: 0 1.5%; overflow-x: auto; }
@@ -126,7 +128,6 @@ pre code { display: block; white-space: pre; margin-top: 1.7142rem; }
 .newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.05rem; }
 
 @import "marginalia";
-
 
 nav {
   a.active:before { content:"« "; }
