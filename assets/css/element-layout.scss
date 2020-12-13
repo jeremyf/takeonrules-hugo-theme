@@ -23,6 +23,10 @@ blockquote {
   width: 55%;
   padding-left: 1rem;
   p, .group, ul, ol, h2, h3, h4, footer { width: 90%; }
+  pre.preWhiteSpace {
+      font-family: var(--body-font);
+      color: var(--blockquote-color);
+  }
   footer {
     text-align: right;
     margin-left: 1rem;
