@@ -103,6 +103,13 @@ li, blockquote {
         clear: both;
     }
 
+    .side[role="note"] {
+        clear: both;
+        margin: 0.5rem 0 1.96rem 0;
+        width: 95%
+    }
+
+
     figure[role="note"] {
         margin-left: 0;
         padding-left: 0;
