@@ -1,5 +1,3 @@
-* { margin: 0; padding: 0; }
-
 // First significant deviation from CSS on tufte.css site - variable font size as browser width expands or contracts
 
 html, body { height: 100%; }
@@ -14,27 +12,21 @@ a, sup a { text-decoration: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1, h2, h3, h4, .h2, .h3, .h4 { font-family: var(--header-font); font-weight: 400; }
-h1 { font-size: 1.6rem; margin: 1.3rem 0; }
-h2, h3, h4, .h2, .h3, .h4 { margin-bottom: 0; }
+h1 { font-size: 1.6rem; }
 h2, .h2 { font-size: 1.45rem; margin-top: 1.45rem; }
 h3, .h3 { font-size: 1.3rem; margin-top: 1.3rem; }
 h4, .h4 { font-size: 1.15rem; margin-top: 1.15rem; }
 
 summary { cursor: pointer; }
 abbr { cursor: help; }
-p, summary, .dates-and-tags { margin-top: 1.2rem; }
-p, summary, li { padding-right: 2rem; vertical-align: baseline; }
+p, summary, li {  vertical-align: baseline; }
+
+figure, blockquote { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
 blockquote {
   width: 55%;
-  margin-bottom: 1.2rem;
-  p, .group, ul, ol, h2, h3, h4 { margin-left: 1rem; margin-right: 1rem; width: 90%; }
-  p:first-of-type { padding-top: 0rem; }
-  p { margin-top: 1.2rem; }
-  ul, ol { padding-top: 0; margin: 1.2rem 1rem; }
-  li { margin-left: 3.5%; }
+  padding-left: 1rem;
+  p, .group, ul, ol, h2, h3, h4, footer { width: 90%; }
   footer {
-    margin-top: 1.2rem;
-    width: 90%;
     text-align: right;
     margin-left: 1rem;
   }
@@ -45,13 +37,12 @@ blockquote {
 /* BEGIN Epigraphs */
 .epigraph {
 
-  width: 45%; padding-left: 5%; margin-top: 3.2rem; margin-bottom: 2.2rem;
+  width: 45%; padding-left: 5%; margin-top: 2rem; margin-bottom: 2rem;
   @media screen and (max-width:760px) {
       width: 75%;
   }
   border-left: none;
   font-style: italic;
-  p, ul { margin: 1rem 0; }
   > footer {
     margin-top: 0rem;
   }
@@ -65,8 +56,7 @@ blockquote {
 
 
 /* Basic Layout stuff --*/
-ul, ol { padding: 1rem 0 0 5%; margin-left: 1rem; }
-figure { margin: 1em 0 1em 0; max-width: 55%; }
+figure { max-width: 55%; }
 img { max-width: 100%; }
 figcaption {
   float: right;
@@ -84,6 +74,8 @@ figcaption {
     max-width: 90%;
     section > ul, section > ol, h2, .h2, h3, h4, summary, .p, p, footer, .table-wrapper, pre, dl { width: 85%; }
 }
+article header, body > footer, .home ol, .home section { width: 85%; }
+
 // Without this setting, when the header would wrap, the letters would overlap
 h2, .h2, h3, h4, summary, p, .table-wrapper, pre, dl { width: 55%; }
 article header, article footer nav {
@@ -116,16 +108,13 @@ body {
             }
         }
     }
-    > footer {
-        padding-top: 2rem; width: 87.5%;
-    }
 }
 
 pre, pre code { font-family: var(--code-font); padding: 0 1.5%; overflow-x: auto; }
 kbd, code { font-family: var(--code-font); }
-pre code { display: block; white-space: pre; margin-top: 1.7142rem; }
+pre code { display: block; white-space: pre;  }
 
-.newthought { font-variant: small-caps; font-size: 1.2em; letter-spacing: 0.05rem; }
+.newthought { font-variant: small-caps; letter-spacing: 0.05rem; }
 
 @import "marginalia";
 
@@ -136,22 +125,8 @@ nav {
 
 .credits {
   text-align: center;
-  padding: 1rem 0rem;
   font-family: var(--header-font);
 }
-
-// End of Nav and Footer styling area
-
-hr.slender {
-    width: 55%;
-    margin: 1.4rem 0;
-}
-
-footer hr.slender {
-  width: 100%
-}
-// End of front listing page stuff
-
 
 // Printing ands screen media queries
 
@@ -184,31 +159,13 @@ a.offscreen {
 dl {
   display: table;
   ul { padding-left: 7%; }
-  dt { font-weight: bold; clear: left; padding-top: 1rem; }
-  dd { margin-top: 0.25rem; margin-left: 1rem; }
+  dt { font-weight: bold; clear: left; margin-top: 1rem; }
+  dd { margin-left: 1rem; text-indent: -0.6rem; }
   dt:after { content: ":"; }
   dd:before { content: "• "; }
 }
 
-dl.group dd { float: left; }
-
-dl.changelog {
-  dt { padding: 2rem 0 0.5rem 1.5rem; text-indent: -1.5rem; }
-  dd { padding: 0.5rem 0 0.5rem 3.5rem; text-indent: -2rem; clear: both; }
-}
-
-main .home {
-  ol {
-    width: 100%; padding: 0;
-    li {
-      margin-left: 1.2rem; padding-right: 0;
-      // I'd prefer to use padding-bottom, but because of the float nature of the
-      // elements this does not work.
-      &:not(:first-of-type) { padding-top: 1rem; }
-    }
-    &+nav { padding-top: 3rem; } // The last nav element on the listing page
-  }
-}
+dl.group dd { float: left; text-indent: 0; }
 
 // metadata of articles, either on the index or in the aside
 
@@ -223,7 +180,6 @@ article {
         margin-right: -0.1rem;
     }
     footer nav ul { width: 87.5% }
-    header h2 { margin-bottom: 1.2rem; }
 }
 
 // breadcrumb
@@ -234,12 +190,6 @@ article {
 }
 
 .breadcrumbs a {
-    &:hover {
-        margin-right: 0.23333333rem;
-        padding-left: 0.1rem;
-        margin-left: -0.1rem;
-        padding-right: 0.1rem;
-    }
     margin-right: 0.33333333rem;
     &:not(:first-of-type) {
         margin-left: 0.3333333rem;
@@ -261,8 +211,6 @@ article {
     width: 80%;
     > * {  width: 80%; }
   }
-  // Removed as it appears to not be used
-  hr.slender { width: 100%; }
 }
 
 @media (max-width: 760px) {
@@ -272,27 +220,25 @@ article {
 
 sup { font-size: 51%;} /* A weird rendering error happens when this is a set height or greater than 50% */
 ins { text-decoration-line: none; }
-q:after, q:before { content: none; }
 
 /* Hacks to better present */
 .ogc {
   ul, ol { width: 85%; }
-  padding-left: 1%;
-  & pre { margin-top: 1rem; }
+  padding-left: 1rem;
+  // & pre { margin-top: 1rem; }
 }
 
 details {
-    & > p:not(:first-of-type) { padding-top: 1.4rem; margin-top: 0rem; }
+    summary { margin-left: 0; padding-left: 0; }
     ul, ol {
-        padding-left: 5%;
-        li { margin-left: 2rem; padding-left: 3rem; text-indent: -3rem; }
+        margin-left: 2.5%;
+        // li { padding-left: 1rem; text-indent: -1rem; }
 
     }
-    & > *:not(summary) {
+    & > * {
             margin-left: 0.5% ; // Aligns left border with center of down caret
             padding-left: 2.5%;
             width: 52%;
-            &:p { padding-top: 1.4rem; margin-top: 1.4rem;}
     }
 }
 

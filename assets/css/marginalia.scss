@@ -1,6 +1,10 @@
 // Responsible for common rendering behavior of the marginalia. When tinkering
 // with this file, remember to review both the narrow version and the print version
 [role="note"] {
+    // The MARGIN TOP helps ensure more precise positioning of the element.
+    margin-top: 0rem;
+    > *:first-child { margin-top: 0rem; }
+
     .fullwidth { max-width: 100%; }
     float: right;
     clear: right;
@@ -9,21 +13,15 @@
 
     vertical-align: baseline;
     position: relative;
-    &.table-wrapper {
-        margin-right: 11%; width: 29%;
-        table { width: 95%; }
-    }
-    p, ul, dl, blockquote {
+    p, dl, &.table-wrapper table {
         width:100%;
     }
-    blockquote { margin-top: 1.2rem; padding-top: 0rem; }
-    p { padding-top: 1.2rem; margin-top: 0rem; }
-    > *:first-child { padding-top: 0rem; }
-    th,td { padding-top: 0.1rem; padding-bottom: 0.1rem; }
-    // A fix for the hover state
-    a { padding-top: 0rem; }
-    pre, code, blockquote { width: 95%; }
-    li { padding: 0;}
+
+    ol, ul, pre, code, blockquote { width: 87.5%; }
+    &.side {
+            margin: 0 -60% 1.96rem 0;
+            width: 50%;
+    }
 }
 
 figure[role="note"] {
@@ -83,15 +81,18 @@ li, blockquote {
             width: 87.5%;
             table { width: 100%; }
         }
-    }
-    [role="note"] {
+        padding-left: 0.5rem;
+
+        // BEGIN ACCUMULATED PERCENTAGES: Note, the 10% + 2.5%  + 87.5% from below
+        margin-right: 10%;
+        margin-left: 2.5%;
         width: 87.5%;
-        margin: 1rem 10% 1rem 2.5%; // Note, the 12.5% + 87.5% from below
+        // END ACCUMULATED PERCENTAGES
     }
 
     figcaption { width: 100%; }
 
-    .ogc .margin[role="note"] {
+    .ogc {
         width: 87.5%;
     }
 
@@ -100,9 +101,11 @@ li, blockquote {
         width: 87.5%;
         float: left;
         clear: both;
-        br {
-            margin-bottom: 0.66rem;
-            &:last-of-type { margin-bottom: 0rem; }
-        }
     }
+
+    figure[role="note"] {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
 }

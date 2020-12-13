@@ -34,9 +34,10 @@ table {
 blockquote { border-left: 1px dotted   var(--blockquote-color); }
 blockquote, .license, blockquote p { color:   var(--blockquote-color); }
 
-.ogc, details > *:not(summary):not([role="note"]) {
-    border-left: 1px dotted   var(--summary-color);
+.ogc {
+    border-left: 1px dotted   var(--code-color);
 }
+
 dt { color:   var(--dt-color); }
 dfn { color:   var(--dfn-color); }
 
