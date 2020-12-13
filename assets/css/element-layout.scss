@@ -6,7 +6,7 @@ html, body { height: 100%; }
 
 html { scroll-behavior: smooth; vertical-align: baseline; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: var(--body-font); counter-reset: sidenote-counter; }
-body, article header h1, article header h2, .list-page ul { width: 87.5%; }
+body, .list-page ul { width: 87.5%; }
 
 // sets link style according to values in _settings.scss
 article a { text-decoration: underline; }
@@ -85,8 +85,11 @@ figcaption {
     section > ul, section > ol, h2, .h2, h3, h4, summary, .p, p, footer, .table-wrapper, pre, dl { width: 85%; }
 }
 // Without this setting, when the header would wrap, the letters would overlap
-h2, .h2, h3, h4, summary, .p, p, .table-wrapper, pre, dl { width: 55%; }
-article header, body > footer { width: 85%; }
+h2, .h2, h3, h4, summary, p, .table-wrapper, pre, dl { width: 55%; }
+article header {
+    width: 90%;
+    > * { width: auto; }
+}
 
 body {
     > header {
@@ -113,7 +116,7 @@ body {
             }
         }
     }
-    > footer { padding-top: 2rem; }
+    > footer { padding-top: 2rem; width: 87.5%; }
 }
 
 pre, pre code { font-family: var(--code-font); padding: 0 1.5%; overflow-x: auto; }
