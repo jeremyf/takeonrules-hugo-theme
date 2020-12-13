@@ -1,21 +1,35 @@
 {{ define "breadcrumb" }}
-  {{ partial "breadcrumb.html" . }}
+{{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article property="sc:mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" resource="#skip-to-content" typeof="sc:WebPageElement">
-    <header>
-      <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-      <h1 property="sc:name" class="p-name" id="{{ anchorize .Title }}">{{ .Title | title }}</h1>
-      {{ partial "footer/image.html" . }}
-    </header>
-    <section property="sc:text" class="e-content content">
-      <p>Below are all of the posts with the <em>{{ .Title }}</em> {{ .Type | singularize }}. I ordered the posts from oldest to newest:</p>
+<article property="sc:mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" resource="#skip-to-content" typeof="sc:WebPageElement">
+  {{- $title := .Title }}
+  {{- $abbr := false }}
+  {{- with index (index .Site.Data (.Type | pluralize)) }}
+  {{- with index . $title }}
+  {{- with .abbr }}
+  {{- $abbr = index $.Site.Data.abbrs . }}
+  {{- $title = $abbr.title }}
+  {{- end }}
+  {{- end }}
+  {{- end }}
+  <header>
+    <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
+    <h1 property="sc:name" class="p-name" id="{{ anchorize $title }}">{{ if eq $title .Title }}{{ $title | title }}{{ else }}{{ $title }} (<abbr>{{ .Title }}</abbr>){{ end }}</h1>
+    {{ partial "footer/image.html" . }}
+  </header>
+  <section property="sc:text" class="e-content content">
+    {{- with $abbr.description }}
+    {{- partial "paragraphy.html" . }}
+    {{- end }}
 
-      <dl class="group">
-        {{- range sort .Pages "Date" "asc" }}
-        <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><cite><a href="{{ .Permalink}}" rel="bookmark">{{ .Title }}</a></cite></dd>
-        {{- end }}
-      </dl>
-    </section>
-  </article>
+    <p>Below are all of the posts with the <em>{{ .Title }}</em> {{ .Type | singularize }}. I ordered the posts from oldest to newest:</p>
+
+    <dl class="group">
+      {{- range sort .Pages "Date" "asc" }}
+      <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><cite><a href="{{ .Permalink}}" rel="bookmark">{{ .Title }}</a></cite></dd>
+      {{- end }}
+    </dl>
+  </section>
+</article>
 {{ end }}
