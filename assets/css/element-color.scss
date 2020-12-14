@@ -3,137 +3,137 @@
 //
 // When you need to edit colors, make changes within this region.
 // Then look to the Dark Color Definition instructions.
-body { background-color:  var(--bg-color); color:   var(--fg-color); }
+body { background-color:  var(--bg); color:   var(--fg); }
 
-h1 { color: var(--h1-color); }
-h2 { color: var(--h2-color); }
-h3 { color: var(--h3-color); }
-h4 { color: var(--h4-color); }
+h1 { color: var(--h1); }
+h2 { color: var(--h2); }
+h3 { color: var(--h3); }
+h4 { color: var(--h4); }
 
 table {
-    border-top: 2px solid   var(--table-bg-thead-color);
-    border-bottom: 2px solid   var(--table-bg-thead-color);
+    border-top: 2px solid   var(--table-bg-thead);
+    border-bottom: 2px solid   var(--table-bg-thead);
 
     &.unstriped tbody tr, .unstriped .subbody {
-        background-color:   var(--table-bg-thead-color);
+        background-color:   var(--table-bg-thead);
     }
 
     thead {
-        th { border-bottom: 1px solid var(--table-bg-thead-color); }
-        tr { background-color:   var(--table-bg-thead-color); }
+        th { border-bottom: 1px solid var(--table-bg-thead); }
+        tr { background-color:   var(--table-bg-thead); }
     }
-    th { font-weight: bold; color: var(--table-th-fg-color); }
-    td { color:   var(--table-td-fg-color); }
+    th { font-weight: bold; color: var(--table-th-fg); }
+    td { color:   var(--table-td-fg); }
     tbody {
         th { text-align: left; }
-        tr:nth-child(odd), &.subhead { background-color: var(--table-bg-tr-alt-color); }
+        tr:nth-child(odd), &.subhead { background-color: var(--table-bg-tr-alt); }
     }
-    tfoot td { border-top-color: var(--table-bg-thead-color); }
+    tfoot td { border-top-color: var(--table-bg-thead); }
 }
 
-blockquote { border-left: 1px dotted   var(--blockquote-color); }
-blockquote, .license, blockquote p { color:   var(--blockquote-color); }
+blockquote { border-left: 1px dotted   var(--blockquote); }
+blockquote, .license, blockquote p { color:   var(--blockquote); }
 
 .ogc {
-    border-left: 1px dotted   var(--code-color);
+    border-left: 1px dotted   var(--code);
 }
 
-dt { color:   var(--dt-color); }
-dfn { color:   var(--dfn-color); }
+dt { color:   var(--dt); }
+dfn { color:   var(--dfn); }
 
 .sidenote-number:hover *, [role=note]:hover { background: var(--bg-special-warm); }
 abbr {
-    color:   var(--abbr-color);
+    color:   var(--abbr);
     &:hover, &:focus, &:active {
-        background: var(--abbr-color) !important;
-        color: var(--bg-color) !important;
+        background: var(--abbr) !important;
+        color: var(--bg) !important;
     }
 }
 a, .contrast {
-    color:   var(--a-color);
+    color:   var(--a);
     &:hover, &:focus, &:active {
-        > * { color: var(--bg-color) !important; }
+        > * { color: var(--bg) !important; }
         time {
-            background: var(--time-color) !important;
+            background: var(--time) !important;
         }
         code {
-            background: var(--code-color) !important;
+            background: var(--code) !important;
         }
         abbr {
-            background: var(--abbr-color) !important;
+            background: var(--abbr) !important;
         }
-        background: var(--a-color) !important;
-        color: var(--bg-color) !important;
+        background: var(--a) !important;
+        color: var(--bg) !important;
     }
 }
 a:visited {
-    color:   var(--a-visited-color);
+    color:   var(--a-visited);
     &:hover, &:focus, &:active {
-        background: var(--a-visited-color) !important;
-        color: var(--bg-color) !important;
+        background: var(--a-visited) !important;
+        color: var(--bg) !important;
     }
 }
 
 
 a.offscreen {
     &:focus, &:active, &:hover {
-        background:  var(--a-color) !important;
-        color:   var(--bg-color) !important;
-        border: 1px dotted   var(--fg-color);
+        background:  var(--a) !important;
+        color:   var(--bg) !important;
+        border: 1px dotted   var(--fg);
     }
 }
 
-p em { color: var(--em-color); }
-pre, code { color:  var(--code-color); }
-kbd { color: var(--kbd-color); }
+p em { color: var(--em); }
+pre, code { color:  var(--code); }
+kbd { color: var(--kbd); }
 
 // BEGIN COMMENTARY TYPE MARKS
 s, del, ins {
-    color:   var(--commentary-color);
-    p { color:   var(--commentary-color); }
+    color:   var(--commentary);
+    p { color:   var(--commentary); }
 }
 
 .margin, .side, .update {
-    color:  var(--margin-color);
+    color:  var(--margin);
 }
-ins[role=note] { border-color:   var(--commentary-color); }
+ins[role=note] { border-color:   var(--commentary); }
 
 @media screen and (max-width: 760px) {
     ins[role="note"] {
-        border-left: thin dotted   var(--commentary-color);
+        border-left: thin dotted   var(--commentary);
     }
 }
 s, del {
-    text-decoration-thickness: 1px; text-decoration-color:   var(--commentary-color);
+    text-decoration-thickness: 1px; text-decoration-color:   var(--commentary);
     &:hover, &:focus { text-decoration: none; }
 }
 // END COMMENTARY
 
 
-time { color:   var(--time-color); }
-mark { color:   var(--mark-fg-color); background-color:   var(--mark-bg-color); }
+time { color:   var(--time); }
+mark { color:   var(--mark-fg); background-color:   var(--mark-bg); }
 
 summary {
-    color:   var(--summary-color);
+    color:   var(--summary);
     &:hover {
-        > * { color: var(--bg-color) !important; }
+        > * { color: var(--bg) !important; }
         time {
-            background: var(--summary-color) !important;
+            background: var(--summary) !important;
         }
         code {
-            background: var(--code-color) !important;
+            background: var(--code) !important;
         }
         a {
-            &:hover { background: var(--summary-color) !important; }
-            background: var(--summary-color) !important;
+            &:hover { background: var(--summary) !important; }
+            background: var(--summary) !important;
         }
-        background: var(--summary-color) !important;
-        color: var(--bg-color) !important;
+        background: var(--summary) !important;
+        color: var(--bg) !important;
     }
 }
 
 .sidenote-number:after, .side[role="note"]:before {
-    color:   var(--sidenote-number-color);
+    color:   var(--sidenote-number);
 }
 // END Light Color Definition
 ////////////////////////////////////////////////////////////////////////////////
