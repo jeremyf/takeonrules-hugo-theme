@@ -1,3 +1,3 @@
 {{/* Assumes a .Paginator object */}}
-{{- if .HasNext }}<a accesskey="p" href="{{ .Next.URL }}" rel="prev"><u>P</u>revious posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a accesskey="n" href="{{ .Prev.URL }}" rel="next"><u>N</u>ext posts</a>{{- end }}
+{{- if .HasNext }}<a accesskey="p" href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a accesskey="n" href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
 Page {{ .PageNumber }} of {{ .TotalPages }}

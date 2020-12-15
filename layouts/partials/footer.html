@@ -18,8 +18,8 @@
   <nav aria-label="Footer links">
     <small>
       <span id="microdata-contact-point" resource="{{ $.Site.BaseURL }}#microdata-contact-point" property="sc:contactPoint" typeof="sc:ContactPoint">
-        <a accesskey="o" property="sc:url" href="{{ $.Site.BaseURL }}contact-me/">C<u>o</u>ntact Me</a>
-      </span> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Chan<u>g</u>elog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privac<u>y</u> Policy</a></small>
+        <a accesskey="o" property="sc:url" href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a>
+      </span> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} href="/site-map/changelog/">Changelog</a> | <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} href="/privacy-policy/">Privacy Policy</a></small>
   </nav>
   <span id="microdata-org" resource='{{ $.Site.BaseURL }}#microdata-org' typeof="sc:Organization" >
     <meta property="sc:name" content="{{ $.Site.Params.title }}" />

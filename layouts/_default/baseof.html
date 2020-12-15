@@ -20,15 +20,15 @@
   <body class="type-{{ .Type }} {{ if isset .Params "full_width"}}full{{ else }}{{ if .IsHome }}full{{ else }}default{{ end }}{{ end }}-width" typeof="sc:{{ with .Params.schema_dot_org_type }}{{ . }}{{ else }}WebPage{{ end }}">
     <header aria-label="Site-wide header">
       <nav class="skip-links" aria-label="Skip Links">
-        <a href="#skip-to-content" accesskey="c" class="offscreen">Skip to <u>C</u>ontent</a>
+        <a href="#skip-to-content" accesskey="c" class="offscreen">Skip to Content</a>
         {{- if eq .Type "post" }}
-        <span class="hidden"> | </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Page's <u>R</u>elated Posts</a>
+        <span class="hidden"> | </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Page's Related Posts</a>
         {{- end }}
         {{- with .Params.licenses }}
-        <span class="hidden"> | </span><a href="#skip-to-licenses" accesskey="l" class="offscreen">Skip to Page's <u>L</u>icenses</a>
+        <span class="hidden"> | </span><a href="#skip-to-licenses" accesskey="l" class="offscreen">Skip to Page's Licenses</a>
         {{- end }}
         {{- with .Params.webmentions }}
-        <span class="hidden"> | </span><a href="#skip-to-webmentions" accesskey="m" class="offscreen">Skip to Page's <u>M</u>entions</a>
+        <span class="hidden"> | </span><a href="#skip-to-webmentions" accesskey="m" class="offscreen">Skip to Page's Mentions</a>
         {{- end }}
       </nav>
       <nav class="group" aria-label="Site-wide navigation" typeof="sc:SiteNavigationElement">

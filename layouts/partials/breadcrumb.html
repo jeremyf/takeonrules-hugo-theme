@@ -5,7 +5,7 @@
 {{- if in .Site.Params.paginatedSections .Type -}}
 <nav aria-labelledby="post-neighbors-label" class="paginator breadcrumbs">
   <span id="post-neighbors-label" class="label">Post Neighbors </span>
-  {{- with .PrevInSection }}<a property="sc:relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev"><u>P</u>revious post</a>&nbsp;{{- end }}{{- with .NextInSection }}|&nbsp;<a property="sc:relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next"><u>N</u>ext post</a>{{- end }}
+  {{- with .PrevInSection }}<a property="sc:relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>&nbsp;{{- end }}{{- with .NextInSection }}|&nbsp;<a property="sc:relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
 </nav>
 {{- end }}
 {{- with .Params.series -}}{{- range (where $.Site.Data.series "key" "eq" .) }}
@@ -15,9 +15,9 @@
   {{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
   <span class="label">Part of Series </span><span resource="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" typeof="sc:CreativeWorkSeries"><cite property="sc:headline"><a property="sc:url" accesskey="s" href="{{ $seriesUrl }}" rel="bookmark">{{ $title }}</a></cite></span>
   {{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}
-  {{- range first 1 $prev }}| <a property="sc:relatedLink" accesskey="v" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Pre<u>v</u>ious in Series</a>&nbsp;{{- end }}
+  {{- range first 1 $prev }}| <a property="sc:relatedLink" accesskey="v" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Previous in Series</a>&nbsp;{{- end }}
   {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}
-  {{- range last 1 $next }}| <a property="sc:relatedLink" accesskey="x" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Ne<u>x</u>t in Series</a>{{- end }}
+  {{- range last 1 $next }}| <a property="sc:relatedLink" accesskey="x" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Next in Series</a>{{- end }}
 </nav>
 {{- end }}{{- end }}
 {{- define "breadcrumbnav" }}
