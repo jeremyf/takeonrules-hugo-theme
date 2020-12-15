@@ -12,11 +12,11 @@ a, sup a { text-decoration: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 h1, h2, h3, h4 { font-family: var(--header-font); font-weight: 400; }
+h1 { font-size: 2rem; }
 
 summary { cursor: pointer; }
 abbr { cursor: help; }
 p, summary, li {  vertical-align: baseline; }
-
 figure, blockquote { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
 blockquote {
   width: 55%;
@@ -31,6 +31,7 @@ blockquote {
     margin-left: 1rem;
   }
 }
+
 
 .p-category { padding-right: 0.25rem; }
 .p-category:before { content: "#"; }
@@ -75,19 +76,14 @@ figcaption {
     max-width: 90%;
     section > ul, section > ol, h2, h3, h4, summary, p, footer, .table-wrapper, pre, dl { width: 85%; }
 }
-article header, body > footer, .home ol, .home section { width: 85%; }
+body > footer, .home ol, .home section { width: 85%; }
 
 // Needed for some visual separation between the article's main body and its footer
 article > footer { // padding-top: 1rem;
                    summary { margin-top: 0.83em; margin-bottom: 0.83em; }
                  }
-
 // Without this setting, when the header would wrap, the letters would overlap
 h2, h3, h4, summary, p, .table-wrapper, pre, dl { width: 55%; }
-article header, article footer nav {
-    width: 90%;
-    > * { width: auto; }
-}
 
 body {
     > header {
@@ -98,10 +94,6 @@ body {
             padding: 1rem 0;
             a {
                 &.hide-when-javascript-disabled { display: none; }
-                // This is a hack to prevent the underline from overflowing
-                // into empty space.  Instead the underline is only under the
-                // character.
-                u { letter-spacing: 0; margin-right: .15rem; }
                 letter-spacing: 0.15em;
                 font-style: normal;
                 font-size: 1.2rem;
@@ -164,7 +156,6 @@ a.offscreen {
 
 dl {
   display: table;
-  ul { padding-left: 7%; }
   dt { font-weight: bold; clear: left; padding-top: 1rem; }
   dd { margin-left: 1rem; text-indent: -1rem; }
   dt:after { content: ":"; }
@@ -175,17 +166,23 @@ dl.group dd { float: left; text-indent: 0; }
 
 // metadata of articles, either on the index or in the aside
 
+// Helping the mark highlight extend just pass the letters
+mark {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    margin-left: -0.1rem;
+    margin-right: -0.1rem;
+}
+
 article {
+    p { hyphens: auto; }
+
     section > ul, section > ol { width: 45%; }
 
-    // Helping the mark highlight extend just pass the letters
-    mark {
-        padding-left: 0.1rem;
-        padding-right: 0.1rem;
-        margin-left: -0.1rem;
-        margin-right: -0.1rem;
+    header, footer nav {
+        width: 90%;
+        > * { width: auto; }
     }
-    footer nav ul { width: 87.5% }
 }
 
 // breadcrumb
