@@ -161,7 +161,9 @@ dl {
   dd:before { content: "• "; }
 }
 
-dl.group dd { float: left; text-indent: 0; }
+dl.group dd { float: left; }
+
+dd li { padding-left: 1rem; }
 
 // metadata of articles, either on the index or in the aside
 
