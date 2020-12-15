@@ -79,9 +79,9 @@ figcaption {
 body > footer, .home ol, .home section { width: 85%; }
 
 // Needed for some visual separation between the article's main body and its footer
-article > footer { // padding-top: 1rem;
+
                    summary { margin-top: 0.83em; margin-bottom: 0.83em; }
-                 }
+
 // Without this setting, when the header would wrap, the letters would overlap
 h2, h3, h4, summary, p, .table-wrapper, pre, dl { width: 55%; }
 

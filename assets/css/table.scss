@@ -1,5 +1,5 @@
-.table-wrapper { overflow-x: auto;  padding-top: 1rem; } //changed all overflow values to 'auto' so scroll bars appear only as needed
-
+.table-wrapper { overflow-x: auto;  padding: 1rem 0; } //changed all overflow values to 'auto' so scroll bars appear only as needed
+blockquote .table-wrapper { width: auto; }
 table.full { width: 100%; max-width: 100%; }
 
 table {
