@@ -93,7 +93,6 @@ body {
             h1 { display: inline-block; margin: 0; }
             padding: 1rem 0;
             a {
-                &.hide-when-javascript-disabled { display: none; }
                 letter-spacing: 0.15em;
                 font-style: normal;
                 font-size: 1.2rem;
