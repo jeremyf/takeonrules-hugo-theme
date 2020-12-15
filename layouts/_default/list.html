@@ -19,10 +19,10 @@
     {{- partial "paragraphy.html" $abbr.description }}
     {{- end }}
 
-    <p>Below are all of the posts with the <em>{{ .Title }}</em> {{ .Type | singularize }}. I ordered the posts from oldest to newest:</p>
+    <p>Below are all of the posts with the <em>{{ .Title }}</em> {{ .Type | singularize }}. I ordered the posts from newest to oldest:</p>
 
     <dl class="group">
-      {{- range sort .Pages "Date" "asc" }}
+      {{- range sort .Pages "Date" "desc" }}
       <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><cite><a href="{{ .Permalink}}" rel="bookmark">{{ .Title }}</a></cite></dd>
       {{- end }}
     </dl>

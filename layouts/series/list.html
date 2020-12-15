@@ -15,7 +15,7 @@
   <section class="e-content content">
     {{ partial "paragraphy.html" .description }}
 
-    <p property="sc:about">A list of all of the posts in the <cite>{{ .title }}</cite> series.</p>
+    <p property="sc:about">A list of all of the posts in the <cite>{{ .title }}</cite> series.  I've ordered the posts from oldest to newest.</p>
 
     <dl class="group">
       {{ $lastInstance := sub (len $data.Pages) 1 }}
