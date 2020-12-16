@@ -52,7 +52,7 @@ abbr {
 a, .contrast {
     color:   var(--a);
     &:hover, &:focus, &:active {
-        > * { color: var(--bg) !important; }
+        * { color: var(--bg) !important; }
         time {
             background: var(--time) !important;
         }
