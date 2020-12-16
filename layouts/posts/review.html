@@ -7,7 +7,7 @@
     <header aria-labelledby="{{ anchorize .Title }}">
       <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
       {{ partial "header/post.html" . }}
-      <meta property="sc:description">{{ .Params.description }}</meta>
+      {{- with .Params.description }}<meta property="sc:description" content="{{ . | plainify }}" />{{- end }}
       {{- with .Params.ratingValue }}
       <span property="sc:reviewRating" typeof="sc:Rating">
         <meta property="sc:ratingValue">{{ . }}</meta>
