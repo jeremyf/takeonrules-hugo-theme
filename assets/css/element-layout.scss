@@ -45,9 +45,6 @@ blockquote {
   }
   border-left: none;
   font-style: italic;
-  > footer {
-    margin-top: 0rem;
-  }
 }
 
 /* END Epigraphs */
@@ -64,8 +61,6 @@ figcaption {
   float: right;
   clear: right;
   margin-right: -50%;
-  margin-top: 0;
-  margin-bottom: 0;
   vertical-align: baseline;
   position: relative;
   max-width: 40%;
@@ -80,7 +75,7 @@ body > footer, .home ol, .home section { width: 85%; }
 
 // Needed for some visual separation between the article's main body and its footer
 
-                   summary { margin-top: 0.83em; margin-bottom: 0.83em; }
+summary { margin-top: 0.83em; margin-bottom: 0.83em; }
 
 // Without this setting, when the header would wrap, the letters would overlap
 h2, h3, h4, summary, p, .table-wrapper, pre, dl { width: 55%; }
@@ -104,6 +99,9 @@ body {
                 font-variant: small-caps;
             }
         }
+    }
+    > footer {
+        padding-bottom: 1rem;
     }
 }
 
@@ -144,11 +142,6 @@ a.offscreen {
     overflow:visible; }
 }
 
-// END Skip Navigation
-
-// Working with lists, especially navigation
-
-
 /* clearfix hack after Cederholm (group class name) */
 .group:after { display: table; clear: both; }
 .group:not(dl):after { content: "" ;}
@@ -165,8 +158,6 @@ dl.group dd { float: left; }
 
 dd li { padding-left: 1rem; }
 
-// metadata of articles, either on the index or in the aside
-
 // Helping the mark highlight extend just pass the letters
 mark {
     padding-left: 0.1rem;
@@ -176,7 +167,7 @@ mark {
 }
 
 article {
-    p { hyphens: auto; }
+    * { hyphens: auto; }
 
     section > ul, section > ol { width: 45%; }
 
@@ -220,7 +211,6 @@ article {
 @media (max-width: 760px) {
   pre, pre code { width: 90%; padding: 0; }
 }
-/*--- End of Basic Layout stuff from tufte.css ---*/
 
 sup { font-size: 51%;} /* A weird rendering error happens when this is a set height or greater than 50% */
 ins { text-decoration-line: none; }
