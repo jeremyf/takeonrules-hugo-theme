@@ -42,12 +42,6 @@ figure[role="note"] {
     }
 }
 
-
-//added to allow for the fact that lists are indented and marginnotes and sidenotes push to right
-li, blockquote {
-    [role="note"] { margin-right: -80%; }
-}
-
 .ogc .margin[role=note] {
     width: 27.5%
 }
@@ -62,7 +56,7 @@ li, blockquote {
 .sidenote-number:after {
     content: counter(sidenote-counter);
     font-size: 0.3rem;
-    top: -0.3rem;
+    top: -0.2rem;
     left: 0.1rem;
 }
 
