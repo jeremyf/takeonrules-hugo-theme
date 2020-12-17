@@ -171,9 +171,9 @@ article {
 
     section > ul, section > ol { width: 45%; }
 
-    header, footer nav {
-        width: 90%;
-        > * { width: auto; }
+    > header, > footer {
+        width: 85%;
+        * { width: auto; }
     }
 }
 
