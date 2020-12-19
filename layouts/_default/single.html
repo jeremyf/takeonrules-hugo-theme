@@ -16,7 +16,7 @@
       <link property="sc:subjectOf" href="{{ $.Page.Permalink }}#skip-to-content" />
       <meta property="sc:endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
       <p><span property="sc:name"><cite>{{ $.Page.Title }}</cite> is a <a property="sc:isPartOf" href="{{ ref $.Page "/site-map/session-reports/index.md"  }}#skip-to-content">game session</a></span> report
-        {{- range first 1 (where $.Site.Data.games "game" "eq" .game) }}
+        {{- range first 1 (where $.Site.Data.glossary "game" "eq" .game) }}
         for <span property="sc:workFeatured" typeof="sc:CreativeWork">
         {{ with .identifier }}<link property="sc:sameAs" href="{{ . }}" />{{ end }}{{ with .url }}<a property="sc:offers" href="{{ . }}">{{ end }}<span property="sc:name">{{ .name }}</span>{{ with .url }}</a>{{ end }}</span>
         {{- end }}.

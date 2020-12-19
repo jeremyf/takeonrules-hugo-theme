@@ -3,24 +3,22 @@
 {{ end }}
 {{ define "main" }}
 <article property="sc:mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" resource="#skip-to-content" typeof="sc:WebPageElement">
-  {{- $title := .Title }}{{- $abbr := false }}
-  {{- $list := index .Site.Data (.Type | pluralize) }}
-  {{- with $list }}{{- with index . $title }}{{- with .abbr }}
-  {{- $abbr = index $.Site.Data.abbrs . }}
-  {{- $title = $abbr.title }}
-  {{- end }}{{- end }}{{- end }}
   <header>
     <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-    <h1 property="sc:name" class="p-name" id="{{ anchorize $title }}">{{ .Title }}</h1>
+    <h1 property="sc:name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
     {{ partial "footer/image.html" . }}
   </header>
   <section property="sc:text" class="e-content content">
-    {{- if isset $abbr "description" }}
-    {{- partial "paragraphy.html" $abbr.description }}
-    {{- end }}
-
-    <p>Below are all of the posts with the <em>{{ .Title }}</em> {{ .Type | singularize }}. I ordered the posts from newest to oldest:</p>
-
+    <p>
+      Below are all of the posts with the <em>{{ .Title }}</em> {{ .Type | singularize }}.
+      {{- $type := .Type }}
+      {{- range first 1 (where $.Site.Data.glossary (.Type | singularize) "eq" .Title) }}
+      {{- if isset . "itemid" }}
+      This {{ $type | singularize }} relates to <span property="sc:keywords" typeof="sc:DefinedTerm"><q property="sc:name">{{ if .offer }}<a href="{{ .offer }}">{{ .title }}</a></q><link property="sc:sameAs" href="{{ .itemid }}" />{{ else }}<a property="sc:sameAs" href="{{ .itemid }}" />{{ .title }}</a></q>{{ end }}</span>.{{- end }}{{- end }}
+    </p>
+    <p>
+      I have ordered the posts from newest to oldest:
+    </p>
     <dl class="group">
       {{- range sort .Pages "Date" "desc" }}
       <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><cite><a href="{{ .Permalink}}" rel="bookmark">{{ .Title }}</a></cite></dd>
