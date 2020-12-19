@@ -167,7 +167,8 @@ mark {
 }
 
 article {
-    * { hyphens: auto; }
+    // Excluding spans, which when rendered in tables look odd with hyphens: auto
+    *:span { hyphens: auto; }
 
     section > ul, section > ol { width: 45%; }
 
