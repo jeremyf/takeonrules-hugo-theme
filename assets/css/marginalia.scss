@@ -68,7 +68,8 @@ figure[role="note"] {
 }
 
 @media screen and (max-width: 760px) {
-    blockquote { clear: both; }
+    // Setup to ensure that the hover state for summary doesn't overlap with a preceding sidenote's location.
+    details, blockquote { clear: both; }
     [role="note"] {
         display: block;
         &.margin-table.table-wrapper {
@@ -89,8 +90,8 @@ figure[role="note"] {
     // NOTE: The specificity of the selectors is required; They echo the above specific selector
     figure[role="note"], .margin[role="note"] {
         width: 87.5%;
-        float: left;
         clear: both;
+        float: none;
     }
 
     .side[role="note"] {
