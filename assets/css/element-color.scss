@@ -33,6 +33,10 @@ table {
 
 blockquote { border-left: 1px dotted   var(--blockquote); }
 blockquote, .license, blockquote p { color:   var(--blockquote); }
+article aside {
+    &.margin { color: var(--aside); }
+    color: var(--aside);
+}
 
 .ogc {
     border-left: 1px dotted   var(--code);
