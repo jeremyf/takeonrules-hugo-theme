@@ -18,7 +18,7 @@
       <p><span property="sc:name"><cite>{{ $.Page.Title }}</cite> is a <a property="sc:isPartOf" href="{{ ref $.Page "/site-map/session-reports/index.md"  }}#skip-to-content">game session</a></span> report
         {{- range first 1 (where $.Site.Data.glossary "game" "eq" .game) }}
         for <span property="sc:workFeatured" typeof="sc:CreativeWork">
-        {{ with .identifier }}<link property="sc:sameAs" href="{{ . }}" />{{ end }}{{ with .url }}<a property="sc:offers" href="{{ . }}">{{ end }}<span property="sc:name">{{ .name }}</span>{{ with .url }}</a>{{ end }}</span>
+        {{ with .itemid }}<link property="sc:sameAs" href="{{ . }}" />{{ end }}{{ with .offer }}<a property="sc:offers" href="{{ . }}">{{ end }}<span property="sc:name">{{ .title }}</span>{{ with .offer }}</a>{{ end }}</span>
         {{- end }}.
         We played <span property="sc:location" typeof="sc:Place"><meta property="sc:address" content="{{ $.Site.Title }} HQ" /><span property="sc:name">{{ with .location }}{{ . }}{{ else }}around the table{{ end }}</span></span> on <time property="sc:startDate" datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.
       </p>
