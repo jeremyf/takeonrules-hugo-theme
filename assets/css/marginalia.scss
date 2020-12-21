@@ -55,7 +55,7 @@ figure[role="note"] {
 }
 .sidenote-number:after {
     content: counter(sidenote-counter);
-    font-size: 0.3rem;
+    font-size: 50%;
     top: -0.2rem;
     left: 0.1rem;
 }

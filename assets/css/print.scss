@@ -1,6 +1,7 @@
 @import "settings";
 
-* { -webkit-transition: none !important; transition: none !important; }
+* { -webkit-transition: none !important; transition: none !important; font-size: 90%; }
+
 *, *:before, *:after { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
 @page { margin: 0.75in 0.5in; orphans:4; widows:2; }
 // body header, body footer, body nav, body .content .margin-toggle:not(.sidenote-number) { display:none; }
@@ -11,6 +12,8 @@ body {
   // require more experimentation to see how things behave.
   overflow-wrap: break-word;
 }
+
+.book { display: none; }
 
 a { text-decoration: none; }
 
