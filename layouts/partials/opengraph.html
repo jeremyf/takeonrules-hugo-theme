@@ -32,7 +32,10 @@
     <meta property="og:updated_time" content="{{ .Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
   {{- end }}
 {{- else }}
-  {{- if not .Date.IsZero }}
+  {{- if not .Lastmod.IsZero }}
+    <meta property="article:modified_time" content="{{ .Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
+    <meta property="og:updated_time" content="{{ .Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
+  {{- else }}
     <meta property="article:modified_time" content="{{ .Date.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
     <meta property="og:updated_time" content="{{ .Date.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
   {{- end }}
