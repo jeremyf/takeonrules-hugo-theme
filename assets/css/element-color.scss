@@ -23,7 +23,7 @@ table {
         tr { background-color:   var(--table-bg-thead); }
     }
     th { font-weight: bold; color: var(--table-th-fg); }
-    td { color:   var(--table-td-fg); }
+    caption, td { color:   var(--table-td-fg); }
     tbody {
         th { text-align: left; }
         tr:nth-child(odd), &.subhead { background-color: var(--table-bg-tr-alt); }
