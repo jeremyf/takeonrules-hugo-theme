@@ -83,7 +83,6 @@ a.offscreen {
     &:focus, &:active, &:hover {
         background:  var(--a) !important;
         color:   var(--bg) !important;
-        border: 1px dotted   var(--fg);
     }
 }
 
