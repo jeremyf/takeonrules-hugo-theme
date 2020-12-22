@@ -20,7 +20,7 @@
     <uri>{{ .Site.BaseURL }}</uri>
     </author>
     {{- range .Params.tags }}<category term="{{ . | urlize }}" label="{{ . }}"/>{{- end }}
-    {{ `<content type="html"><![CDATA[` | safeHTML }}{{ .Content }}]]></content>
+    {{ `<content type="html"><![CDATA[` | safeHTML }}{{ with .Params.headline }}<h2>{{ . }}</h2>{{- end }}{{ .Content }}]]></content>
     <published>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</published>
     <updated>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>
   </entry>

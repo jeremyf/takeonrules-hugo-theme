@@ -34,11 +34,12 @@
         <category>{{ . | urlize }}</category>
       {{- end }}
       <description>
-        {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
-        {{ with $img }}
-        {{ $img := .Resize "640x" }}
-        {{ printf "<![CDATA[<img src=\"%s\" width=\"%d\" height=\"%d\"/>]]>" $img.Permalink $img.Width $img.Height | safeHTML }}
-        {{ end }}
+        {{- with .Params.headline }}&lt;h2&gt;{{ . }}&lt;/h2&gt;{{- end }}
+        {{- $img := (.Resources.ByType "image").GetMatch "*featured*" }}
+        {{- with $img }}
+        {{- $img := .Resize "640x" }}
+        {{- printf "<![CDATA[<img src=\"%s\" width=\"%d\" height=\"%d\"/>]]>" $img.Permalink $img.Width $img.Height | safeHTML }}
+        {{- end }}
         {{ .Content | html }}
       </description>
       <source url="{{ .Site.BaseURL }}index.xml">{{ .Site.Title }}</source>
