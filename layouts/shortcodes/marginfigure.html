@@ -5,8 +5,8 @@
 {{- with .Get "rotate" }}{{- $imageResize = (printf "360x r%s" .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
 <figure property="sc:image" typeof="sc:ImageObject" {{ if isSet .Params "hidden" }}aria-hidden="true" {{ end }} role="note">
-  <img property="sc:url"
-       src="{{ $result.RelPermalink }}"
+  <link property="sc:url" href="{{ $result.RelPermalink }}" />
+  <img src="{{ $result.RelPermalink }}"
        alt="{{ $alt }}"
        data-original-url="{{ $original.RelPermalink}}"
        data-original-width="{{ $original.Width }}"
