@@ -6,6 +6,8 @@ Since that time, I've made extensive changes, and consider this to be it's own t
 
 You can see this template at [Take on Rules](https://takeonrules.com).  _Note: To someone adopting this theme whole-cloth, there's a few pieces in my private repo that I also leverage.  If you are interested, [contact me](https://takeonrules.com/contact-me) and I can help._
 
+For colors, I've adopted the palette from [Protesilaos Stavrou](https://protesilaos.com/)'s [Modus themes](https://protesilaos.com/modus-themes/); The colors are WCAG compliant and bring me a bit of joy.
+
 ## Semantic Markup and Linked Data
 
 I strive for semantic markup; My goal is that I create an accessible site.  Also, as a benefit, if you disable the stylesheet the page will continue to render in a meaningful way.  _In fact, I encourage you to disable the stylesheet on most sites and see how they look._
