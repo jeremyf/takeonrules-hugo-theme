@@ -1,5 +1,11 @@
+{{- $game := .Get "game" }}
 {{- $cite := .Get "cite" }}
 {{- $cite_url := .Get "cite_url" }}
+{{- with $game }}
+{{- $entry := index (where $.Site.Data.glossary "game" "eq" $game) 0 }}
+{{- $cite = $entry.title }}
+{{- $cite_url = $entry.offer }}
+{{- end }}
 {{- $post := .Get "post" }}
 <blockquote property="sc:citation" class="h-cite {{- with .Get "epigraph" }} epigraph{{- end }}" {{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
 {{ if .Get "preWhiteSpace" }}
@@ -13,17 +19,10 @@
 <span class="p-author h-card">{{ partial "unparagraphy.html" . }}{{- if(or (or $cite $cite_url) $post) }}, {{ end }}</span>
 {{- end }}
 {{- if($cite) }}
-<cite>
-{{- if($cite_url) }}
-<a href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{ partial "unparagraphy.html" $cite }}</a>
-{{- else }}
-{{ partial "unparagraphy.html" $cite }}
-{{- end }}
-</cite>
+<cite>{{- if($cite_url) }}<a href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{- $cite }}</a>{{- else }}{{ $cite }}{{- end }}</cite>
 {{- else if($cite_url) }}
-<cite><a href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{ $cite_url }}</a></cite>
-{{- end }}
-{{- if($post) }}{{ partial "unparagraphy.html" $post }}{{ end }}
+<cite><a href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{- $cite_url }}</a></cite>{{- end }}
+{{- if($post) }}{{ partial "unparagraphy.html" $post }}{{- end }}
 </footer>
 {{- end }}
 </blockquote>

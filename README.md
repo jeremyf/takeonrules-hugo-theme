@@ -50,6 +50,6 @@ Two other shortcodes (table.html and update.html) provide marginalia options.  S
 
 - [table.html](layouts/shortcodes/table.html) :: Helps ensure a well-formed table; one parameter allows for table rendering in the margins.
 - [ogc.html](layouts/shortcodes/ogc.html) :: I sometimes write Open Game Content (OGC), released under the Open Game License (OGL).  This shortcode helps wrap that content.
-- [blockquote.html](layouts/shortcodes/blockquote.html) :: I quote sources, and this shortcode helps create well-formed quotes; I also repurpose it for epigraphs. One of my favorite books is <cite>Dune</cite> by Frank Herbert.  <cite>Dune</cite> introduces each chapter with an epigraph.  I like that style, and on occassion use that.
+- [blockquote.html](layouts/shortcodes/blockquote.html) :: I quote sources, and this shortcode helps create well-formed quotes; I also repurpose it for epigraphs.g One of my favorite books is <cite>Dune</cite> by Frank Herbert.  <cite>Dune</cite> introduces each chapter with an epigraph.  I like that style, and on occassion use that.
 - [update.html](layouts/shortcodes/update.html) :: a shortcode that helps create consistent document updates, via the [INS-tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins).  One parameter allows for updates rendered in the margins.
 - [maincolumn.html](layouts/shortcodes/maincolumn.html) :: a shortcode to help render an image in the maincolumn.
