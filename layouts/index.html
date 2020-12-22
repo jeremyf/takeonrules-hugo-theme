@@ -40,6 +40,8 @@
       <h3 property="sc:alternateHeadline">{{ partial "unparagraphy.html" .Params.headline }}</h3>
     {{- end }}
       <meta property="sc:wordCount" content="{{ .WordCount }}" />
+      <link property="sc:author" href="{{ $.Site.BaseURL }}#microdata-author" />
+      <link property="sc:publisher" href="{{ $.Site.BaseURL }}#microdata-org" />
       {{ partial "dates-and-tags.html" . }}
       {{ with .Params.images }}
         {{ range . }}
