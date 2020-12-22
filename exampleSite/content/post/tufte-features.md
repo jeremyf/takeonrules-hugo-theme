@@ -16,11 +16,11 @@ of this theme. One of them is \\( \LaTeX \\) via MathJax.
 {{< section "begin" >}}
 ## A Bit About Mathematics
 
-{{% epigraph pre="Shawn O'Hare, " cite="Math is Fun" %}}
+{{% blockquote epigraph="true" pre="Shawn O'Hare, " cite="Math is Fun" %}}
 This is an example of an epigraph with some math
 \\(\mathbb N \subseteq \mathbb R \\)
 to start the beginning of a section.
-{{% /epigraph %}}
+{{% /blockquote %}}
 
 <!--more-->
 

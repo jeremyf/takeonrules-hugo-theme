@@ -1,7 +1,7 @@
 {{- $cite := .Get "cite" }}
 {{- $cite_url := .Get "cite_url" }}
 {{- $post := .Get "post" }}
-<blockquote property="sc:citation" class="h-cite" {{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
+<blockquote property="sc:citation" class="h-cite {{- with .Get "epigraph" }} epigraph{{- end }}" {{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
 {{ if .Get "preWhiteSpace" }}
 <pre class="preWhiteSpace">{{ .Inner }}</pre>
 {{ else }}
