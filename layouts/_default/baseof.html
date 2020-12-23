@@ -22,17 +22,17 @@
       <nav class="skip-links" aria-label="Skip Links">
         <a href="#skip-to-content" accesskey="c" class="offscreen">Skip to Content</a>
         {{- if eq .Type "post" }}
-        <span class="hidden"> | </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Page's Related Posts</a>
+        <span class="hidden"> &middot; </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Page's Related Posts</a>
         {{- end }}
         {{- with .Params.webmentions }}
-        <span class="hidden"> | </span><a href="#skip-to-webmentions" accesskey="m" class="offscreen">Skip to Page's Mentions</a>
+        <span class="hidden"> &middot; </span><a href="#skip-to-webmentions" class="offscreen">Skip to Page's Mentions</a>
         {{- end }}
       </nav>
       <nav class="group" aria-label="Site-wide navigation" typeof="sc:SiteNavigationElement">
         <meta property="sc:name" content="Site-wide navigation" />
         <h1><a property="sc:url" accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
-        <a property="sc:url" accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> | </span>
+        <a property="sc:url" accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> &middot; </span>
         {{- end }}
         <a property="sc:url" accesskey="/" {{ if eq (string $.Page.RelPermalink) "/search/" }}class="active"{{ end }} id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a>
       </nav>
