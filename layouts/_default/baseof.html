@@ -24,9 +24,6 @@
         {{- if eq .Type "post" }}
         <span class="hidden"> | </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Page's Related Posts</a>
         {{- end }}
-        {{- with .Params.licenses }}
-        <span class="hidden"> | </span><a href="#skip-to-licenses" accesskey="l" class="offscreen">Skip to Page's Licenses</a>
-        {{- end }}
         {{- with .Params.webmentions }}
         <span class="hidden"> | </span><a href="#skip-to-webmentions" accesskey="m" class="offscreen">Skip to Page's Mentions</a>
         {{- end }}
