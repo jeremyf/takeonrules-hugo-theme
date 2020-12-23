@@ -22,7 +22,9 @@
       <nav class="skip-links" aria-label="Skip Links">
         <a href="#skip-to-content" accesskey="c" class="offscreen">Skip to Content</a>
         {{- if (or (in .Site.Params.paginatedSections .Type) (eq .Type "page")) }}
+        {{- if ne .Kind "404" }}
         <span class="hidden"> &middot; </span><a href="#skip-to-article-context-navigation" accesskey="x" class="offscreen">Skip to Articles's Contextual Navigation</a>
+        {{- end }}
         {{- end }}{{- if eq .Type "post" }}
         <span class="hidden"> &middot; </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Related Posts</a>
         {{- end }}{{- with .Params.webmentions }}
