@@ -186,12 +186,6 @@ article {
   width: 85%; font-family: var(--header-font); padding-bottom: 1rem;
 }
 
-.breadcrumbs a {
-    margin-right: 0.33333333rem;
-    &:not(:first-of-type) {
-        margin-left: 0.3333333rem;
-    }
-}
 .paginator {
   clear: both;
   a { margin-right: 0.5rem; }

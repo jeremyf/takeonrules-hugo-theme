@@ -21,10 +21,11 @@
     <header aria-label="Site-wide header">
       <nav class="skip-links" aria-label="Skip Links">
         <a href="#skip-to-content" accesskey="c" class="offscreen">Skip to Content</a>
-        {{- if eq .Type "post" }}
-        <span class="hidden"> &middot; </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Page's Related Posts</a>
-        {{- end }}
-        {{- with .Params.webmentions }}
+        {{- if (or (in .Site.Params.paginatedSections .Type) (eq .Type "page")) }}
+        <span class="hidden"> &middot; </span><a href="#skip-to-article-context-navigation" accesskey="x" class="offscreen">Skip to Articles's Contextual Navigation</a>
+        {{- end }}{{- if eq .Type "post" }}
+        <span class="hidden"> &middot; </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Related Posts</a>
+        {{- end }}{{- with .Params.webmentions }}
         <span class="hidden"> &middot; </span><a href="#skip-to-webmentions" class="offscreen">Skip to Page's Mentions</a>
         {{- end }}
       </nav>
@@ -43,8 +44,8 @@
       </script>
       <hr />
     </header>
-    {{ block "breadcrumb" . }}{{ end }}
     <main class="group" aria-label="Main Content">
+      {{ block "breadcrumb" . }}{{ end }}
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}

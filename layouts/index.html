@@ -7,6 +7,7 @@
   {{- end }}
 {{ end }}
 {{ define "breadcrumb" }}
+<section id="skip-to-article-context-navigation" aria-label="Context Navigation around Homepage">
     {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
     <nav aria-labelledby="blog-pagination-label" class="paginator">
       <span class="label" id="blog-pagination-label">Blog postings pagination </span>
@@ -19,6 +20,8 @@
       <span id="site-feeds-label" class="label">Site feeds </span>
       <a role="listitem" href="{{ .Site.BaseURL }}index.atom">ATOM feed</a> | <a role="listitem" href="{{ .Site.BaseURL }}index.xml">RSS feed</a> | <a role="listitem" href="{{ .Site.BaseURL }}index.json">JSON feed</a>
     </div>
+    <hr class="hidden">
+</section>
 {{ end }}
 {{ define "main" }}
 <article property="sc:mainEntity" aria-labelledby="blog-posts" id="skip-to-content" resource="#skip-to-content" typeof="sc:Blog">

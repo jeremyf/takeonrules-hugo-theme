@@ -3,7 +3,7 @@
 {{ end }}
 {{ define "main" }}
 <article property="sc:mainEntity" class="h-entry" resource="#skip-to-content" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" typeof="sc:BlogPosting">
-  <header aria-labelledby="{{ anchorize .Title }}">
+  <header aria-label="Article header">
     <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
     {{ if isset .Params "series" }}
     <link property="sc:isPartOf" href="{{ .RelPermalink }}#series-itemscope" />
@@ -44,7 +44,6 @@
     {{- end }}
   </section>
   <footer aria-label="Article footer">
-    <hr class="hidden">
     {{ partial "footer/webmentions.html" . }}
     {{ partial "footer/series.html" . }}
     {{ partial "footer/related-posts.html" . }}

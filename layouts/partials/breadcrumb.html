@@ -1,29 +1,32 @@
-<nav aria-labelledby="breadcrumbs-label" class="breadcrumbs" typeof="sc:BreadcrumbList" role="list">
-  <span id="breadcrumbs-label" property="sc:name" class="label">Breadcrumbs </span>
-  {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3 "site" .Site) }}
-</nav>
-{{- if in .Site.Params.paginatedSections .Type -}}
-<nav aria-labelledby="post-neighbors-label" class="paginator">
-  <span id="post-neighbors-label" class="label">Post Neighbors </span>
-  {{- with .PrevInSection }}<a property="sc:relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>&nbsp;{{- end }}{{- with .NextInSection }}&middot;&nbsp;<a property="sc:relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
-</nav>
-{{- end }}
-{{- with .Params.series -}}{{- range (where $.Site.Data.series "key" "eq" .) }}
-{{- $title := .title }}
-<nav aria-labelledby="series-itemscope" class="series">
-  {{- $series := where $.Site.Pages "Params.series" .key }}
-  {{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
-  <span class="label">Part of Series </span><span resource="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" typeof="sc:CreativeWorkSeries"><cite property="sc:headline"><a property="sc:url" accesskey="s" href="{{ $seriesUrl }}" rel="bookmark">{{ $title }}</a></cite></span>&nbsp;{{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}{{- range first 1 $prev }}&middot; <a property="sc:relatedLink" accesskey="v" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Previous in Series</a>&nbsp;{{- end }}{{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}{{- range last 1 $next }}&middot; <a property="sc:relatedLink" accesskey="x" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Next in Series</a>{{- end }}
-</nav>
-{{- end }}{{- end }}
-{{- define "breadcrumbnav" }}
+<section id="skip-to-article-context-navigation" aria-label="Context Navigation around «{{ .Title | markdownify | plainify }}»">
+  <nav aria-labelledby="breadcrumbs-label" class="breadcrumbs" typeof="sc:BreadcrumbList" role="list">
+    <span id="breadcrumbs-label" property="sc:name" class="label">Breadcrumbs </span>
+    {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3 "site" .Site) }}
+  </nav>
+  {{- if in .Site.Params.paginatedSections .Type -}}
+  <nav aria-labelledby="post-neighbors-label" class="paginator">
+    <span id="post-neighbors-label" class="label">Post Neighbors </span>
+    {{- with .PrevInSection }}<a property="sc:relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>&nbsp;{{- end }}{{- with .NextInSection }}&middot;&nbsp;<a property="sc:relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
+  </nav>
+  {{- end }}
+  {{- with .Params.series -}}{{- range (where $.Site.Data.series "key" "eq" .) }}
+  {{- $title := .title }}
+  <nav aria-labelledby="series-label" class="series">
+    {{- $series := where $.Site.Pages "Params.series" .key }}
+    {{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
+    <span id="series-label" class="label">Part of Series </span><span resource="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" typeof="sc:CreativeWorkSeries"><cite property="sc:headline"><a property="sc:url" accesskey="s" href="{{ $seriesUrl }}" rel="bookmark">{{ $title }}</a></cite></span>&nbsp;{{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}{{- range first 1 $prev }}&middot; <a property="sc:relatedLink" accesskey="v" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Previous in Series</a>&nbsp;{{- end }}{{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}{{- range last 1 $next }}&middot; <a property="sc:relatedLink" accesskey="x" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Next in Series</a>{{- end }}
+  </nav>
+  {{- end }}{{- end }}
+  {{- define "breadcrumbnav" }}
   {{- if .p1.Parent }}
-    {{- template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 "depth" (sub .depth 1) "site" .site )}} /
+  {{- template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 "depth" (sub .depth 1) "site" .site )}} /
   {{- else if not .p1.IsHome }}
-    {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) "site" .site) }} /
+  {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) "site" .site) }} /
   {{- end }}
   <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
     <a property="sc:item" id="{{ .p1.Permalink}}" href="{{ .p1.Permalink }}" {{ if eq .p1 .p2 }}class="active"{{ end }} typeof="sc:WebPage"><span property="sc:name">{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title }}{{- end }}{{- else }}{{ .p1.Title }}{{- end }}</span></a>
     <meta property="sc:position" content="{{ .depth }}" />
   </span>
-{{- end }}
+  {{- end }}
+</section>
+<hr class="hidden" />
