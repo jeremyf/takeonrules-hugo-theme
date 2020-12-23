@@ -37,7 +37,7 @@
       </cite>
     </h2>
     {{- if isset .Params "headline" }}
-      <h3 property="sc:alternateHeadline">{{ partial "unparagraphy.html" .Params.headline }}</h3>
+      <h3 property="sc:alternateHeadline">{{- .Params.headline | markdownify }}</h3>
     {{- end }}
       <meta property="sc:wordCount" content="{{ .WordCount }}" />
       <link property="sc:author" href="{{ $.Site.BaseURL }}#microdata-author" />
