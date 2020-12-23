@@ -2,11 +2,12 @@
   <article property="sc:mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" resource="#skip-to-content" typeof="sc:WebPageElement">
     <header>
       <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-      <h1 property="sc:name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      <h1 property="sc:headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
     </header>
-    <section class="e-content content">
+    <section class="e-content content" property="sc:text">
       <figure property="sc:image" typeof="sc:ImageObject" role="note">
-        <img property="sc:url" src="/images/logo.jpg"  data-widht="309" data-height="250" alt="An abstract wooden chicken surveys a chessboard littered with game pieces."/>
+        <link property="sc:url" href="/images/logo.jpg" />
+        <img src="/images/logo.jpg"  data-widht="309" data-height="250" alt="An abstract wooden chicken surveys a chessboard littered with game pieces."/>
         <figcatpion property="sc:caption">The Chicken of Discovery has found nothing.</figcatpion>
       </figure>
 
