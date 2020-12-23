@@ -10,7 +10,7 @@
       <h2 property="sc:alternateHeadline">{{ . }}</h2>
     {{- end }}
     </header>
-    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}itemprop="text"{{ end }}{{ end }} class="e-content content" role="region" aria-label="article content">
+    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}property="sc:text"{{ end }}{{ end }} class="e-content content" role="region" aria-label="article content">
       {{ .Content }}
     </section>
     <footer aria-label="Article footer">
