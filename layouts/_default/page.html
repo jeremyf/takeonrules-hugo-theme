@@ -13,7 +13,7 @@
     <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}itemprop="text"{{ end }}{{ end }} class="e-content content" role="region" aria-label="article content">
       {{ .Content }}
     </section>
-    <footer>
+    <footer aria-label="Article footer">
       <hr class="hidden">
       {{ partial "footer/webmentions.html" . }}
       {{ partial "footer/licenses.html" . }}
