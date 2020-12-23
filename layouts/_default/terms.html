@@ -1,37 +1,37 @@
 {{ define "breadcrumb" }}
-  {{ partial "breadcrumb.html" . }}
+{{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article property="sc:mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" resource="#skip-to-content" typeof="sc:WebPageElement">
-    <header>
-      <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-      <h1 property="sc:name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
-      {{ partial "footer/image.html" . }}
-    </header>
-    <section property="sc:text" class="e-content content">
-      {{ .Content }}
-      <div class="table-wrapper" typeof="sc:Table">
-        <table id="table-{{ anchorize .Title }}" class="data-tables stripe">
-          <caption property="sc:about">Table {{ .Title }}: All {{ .Title }} in {{ .Site.Title }}</caption>
-          <thead>
-            <tr><th scope="col">Title</th><th class="r" scope="col">Count</th><th class="c" scope="col">First Post</th><th class="c" scope="col">Last Post</th></tr>
-          </thead>
-          <tbody>
+<article property="sc:mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" resource="#skip-to-content" typeof="sc:WebPageElement">
+  <header>
+    <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
+    <h1 property="sc:name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+    {{ partial "footer/image.html" . }}
+  </header>
+  <section property="sc:text" class="e-content content">
+    {{ .Content }}
+    <div class="table-wrapper" typeof="sc:Table">
+      <table id="table-{{ anchorize .Title }}" class="data-tables stripe">
+        <caption property="sc:about">Table {{ .Title }}: All {{ .Title }} in {{ .Site.Title }}</caption>
+        <thead>
+          <tr><th scope="col">Title</th><th class="r" scope="col">Count</th><th class="c" scope="col">First Post</th><th class="c" scope="col">Last Post</th></tr>
+        </thead>
+        <tbody>
           {{- range $key, $value := .Data.Terms.Alphabetical}}
-            <tr>
-              <td><a href="{{ $value.Name| urlize }}">{{ $value.Name }}</a></td>
-              <td class="r">{{  $value.Count }}</td>
-              {{- range first 1 $value.Pages.Reverse }}
-              <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></a></td>
-              {{- end }}
-              {{- range first 1 $value.Pages }}
-              <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></a></td>
-              {{- end }}
-            </tr>
+          <tr>
+            <td><a href="{{ $value.Name| urlize }}">{{ $value.Name }}</a></td>
+            <td class="r">{{  $value.Count }}</td>
+            {{- range first 1 $value.Pages.Reverse }}
+            <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></a></td>
+            {{- end }}
+            {{- range first 1 $value.Pages }}
+            <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></a></td>
+            {{- end }}
+          </tr>
           {{- end }}
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </article>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</article>
 {{ end }}
