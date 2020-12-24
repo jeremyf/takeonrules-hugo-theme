@@ -44,7 +44,7 @@
     {{- end }}
       <meta property="sc:wordCount" content="{{ .WordCount }}" />
       <link property="sc:author" href="{{ $.Site.BaseURL }}#tor-author" />
-      <link property="sc:publisher" href="{{ $.Site.BaseURL }}#tor-organization" />
+      <link property="sc:publisher" href="{{ $.Site.BaseURL }}#tor-author" />
       {{ partial "dates-and-tags.html" . }}
       {{ with .Params.images }}
         {{ range . }}
