@@ -25,10 +25,10 @@
         {{- if ne .Kind "404" }}
         <span class="hidden"> &middot; </span><a href="#skip-to-article-context-navigation" accesskey="x" class="offscreen">Skip to Articles's Contextual Navigation</a>
         {{- end }}
-        {{- end }}{{- if eq .Type "post" }}
-        <span class="hidden"> &middot; </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Related Posts</a>
         {{- end }}{{- with .Params.webmentions }}
         <span class="hidden"> &middot; </span><a href="#skip-to-webmentions" class="offscreen">Skip to Page's Mentions</a>
+        {{- end }}{{- if eq .Type "post" }}
+        <span class="hidden"> &middot; </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Related Posts</a>
         {{- end }}
       </nav>
       <nav class="group" aria-label="Site-wide navigation" typeof="sc:SiteNavigationElement">
