@@ -28,7 +28,7 @@
     {{- with .Params.theItemReviewed }}
     <section aria-labelledby="#review-summary-{{ anchorize $.Page.Title }}" property="sc:hasPart" typeof="sc:Review">
       <link property="sc:isPartOf" href="{{ $.Page.Permalink }}#skip-to-content" />
-      <link property="sc:author" href="{{ $.Site.BaseURL }}#microdata-author" />
+      <link property="sc:author" href="{{ $.Site.BaseURL }}#tor-author" />
       <h2 id="review-summary">Review Summary</h2>
       {{ with .reviewBody }}
       <p property="sc:reviewBody">{{ partial "unparagraphy.html" . }}</p>
