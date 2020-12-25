@@ -17,6 +17,8 @@
         width:100%;
     }
 
+    dl { display: block; }
+
     ol, ul, pre, code, blockquote { width: 87.5%; }
     &.side {
             margin: 0 -60% 1.96rem 0;

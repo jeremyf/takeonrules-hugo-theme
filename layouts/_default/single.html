@@ -14,13 +14,13 @@
     {{- with .Params.sessionReport }}
     <section aria-label="Session report summary" property="sc:about" typeof="sc:SocialEvent">
       <link property="sc:subjectOf" href="{{ $.Page.Permalink }}#skip-to-content" />
-      <meta property="sc:endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
       <p><span property="sc:name"><cite>{{ $.Page.Title }}</cite> is a <a property="sc:isPartOf" href="{{ ref $.Page "/site-map/session-reports/index.md"  }}#skip-to-content">game session</a></span> report
         {{- range first 1 (where $.Site.Data.glossary "game" "eq" .game) }}
         for <span property="sc:workFeatured" typeof="sc:CreativeWork">
         {{ with .itemid }}<link property="sc:sameAs" href="{{ . }}" />{{ end }}{{ with .offer }}<a property="sc:offers" href="{{ . }}">{{ end }}<span property="sc:name">{{ .title }}</span>{{ with .offer }}</a>{{ end }}</span>
         {{- end }}.
         We played <span property="sc:location" typeof="sc:Place"><meta property="sc:address" content="{{ $.Site.Title }} HQ" /><span property="sc:name">{{ with .location }}{{ . }}{{ else }}around the table{{ end }}</span></span> on <time property="sc:startDate" datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.
+        <meta property="sc:endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
       </p>
     </section>
     {{- end }}
@@ -37,7 +37,7 @@
       {{ end }}
       <p property="sc:reviewRating" typeof="sc:Rating">I give it <span property="sc:ratingValue">{{ .ratingValue }}</span> of <span property="sc:bestRating">5</span> stars.</p>
       <p property="sc:itemReviewed" typeof="sc:{{ with .type }}{{ . }}{{ else }}Book{{ end }}">
-        <cite>{{ $.Page.Title }}</cite> is a review of <a property="sc:sameAs" href="{{ .url }}"><span property="sc:name">{{ .name }}</span></a> by <span property="sc:author">
+        <cite>{{ $.Page.Title }}</cite> is a review of <span property="sc:name"><a property="sc:sameAs" href="{{ .url }}">{{ .name }}</a></span> by <span property="sc:author">
           {{ if eq (len .authors) 2 }}{{ delimit .authors "</span> and <span property='sc:author'>"}}{{ else }}{{ delimit .authors "</span>, <span property='sc:author'>"  "</span>, and <span property='sc:author'>" }}{{ end }}</span>.
       </p>
     </section>
