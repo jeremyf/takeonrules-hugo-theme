@@ -3,7 +3,7 @@
   <small>
     &copy;<time datetime="{{ now.Format "2006" }}" property="sc:copyrightYear">{{ now.Format "2006" }}</time>&nbsp;
     <span id="tor-author" resource="{{ $.Site.BaseURL }}#tor-author" property="sc:copyrightHolder" typeof="sc:Person">
-      <link property="sc:contactPoint" href="{{ $.Site.BaseURL}}contact-me/" />
+      <link property="sc:contactPoint" href="{{ $.Site.BaseURL}}#tor-contact-point" />
       <span class="p-name" property="sc:name">
         <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
           {{ .Site.Params.copyrightHolder }}
@@ -19,10 +19,21 @@
   <nav aria-label="Site-wide Footer Links" typeof="sc:SiteNavigationElement">
     <meta property="sc:name" content="Site-wide Footer Links" />
     <small>
-      <a accesskey="o" property="sc:hasPart" href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a> &middot; <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} property="sc:hasPart" href="/site-map/changelog/">Changelog</a> &middot; <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} property="sc:hasPart" href="/privacy-policy/">Privacy Policy</a></small>
+      <span id="tor-contact-point" resource="{{ $.Site.BaseURL }}#tor-contact-point" property="sc:contactPoint" typeof="sc:ContactPoint">
+        <link property="sc:email" href="mailto:{{ $.Site.Params.copyrightHolderEmail }}" />
+        <a accesskey="o" property="sc:url" href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a>
+      </span> &middot; <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} property="sc:hasPart" href="/site-map/changelog/">Changelog</a> &middot; <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} property="sc:hasPart" href="/privacy-policy/">Privacy Policy</a></small>
   </nav>
   <span property="sc:isPartOf" typeof="sc:WebSite">
     <link property="sc:url" href="{{ $.Site.BaseURL }}" />
     <meta property="sc:name" content="{{ $.Site.Params.title }}" />
+  </span>
+  <span id="tor-organization" resource='{{ $.Site.BaseURL }}#tor-organization' typeof="sc:Organization" >
+    <meta property="sc:name" content="{{ $.Site.Params.title }}" />
+    <link property="sc:url" href="{{ $.Site.BaseURL }}" />
+    <link property="sc:contactPoint" href="{{ $.Site.BaseURL }}#tor-contact-point" />
+    <span id="microdata-logo" resource="{{ $.Site.BaseURL }}#microdata-logo" property="sc:logo" typeof="sc:ImageObject">
+      <link property="sc:url" href="{{ $.Site.BaseURL }}{{ $.Site.Params.organizationImagePath }}" />
+    </span>
   </span>
 </footer>
