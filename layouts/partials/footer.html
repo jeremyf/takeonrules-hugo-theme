@@ -1,5 +1,9 @@
 <footer class="group credits" aria-label="Site-wide footer">
   <hr  />
+  <span id="tor-contact-point" resource="{{ $.Site.BaseURL }}#tor-contact-point" property="sc:contactPoint" typeof="sc:ContactPoint">
+    <link property="sc:email" href="mailto:{{ $.Site.Params.copyrightHolderEmail }}" />
+    <link property="sc:sameAs" href="{{ $.Site.BaseURL }}contact-me/" />
+  </span>
   <small>
     &copy;<time datetime="{{ now.Format "2006" }}" property="sc:copyrightYear">{{ now.Format "2006" }}</time>&nbsp;
     <span id="tor-author" resource="{{ $.Site.BaseURL }}#tor-author" property="sc:copyrightHolder" typeof="sc:Person">
@@ -9,7 +13,7 @@
           {{ .Site.Params.copyrightHolder }}
         </a>
         {{- range .Site.Params.identifiers }}
-        <link property="sc:identifier" href="{{ . }}" />
+        <link property="sc:sameAs" href="{{ . }}" />
         {{- end }}
       </span>
     </span>
@@ -19,10 +23,7 @@
   <nav aria-label="Site-wide Footer Links" typeof="sc:SiteNavigationElement">
     <meta property="sc:name" content="Site-wide Footer Links" />
     <small>
-      <span id="tor-contact-point" resource="{{ $.Site.BaseURL }}#tor-contact-point" property="sc:contactPoint" typeof="sc:ContactPoint">
-        <link property="sc:email" href="mailto:{{ $.Site.Params.copyrightHolderEmail }}" />
-        <a accesskey="o" property="sc:url" href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a>
-      </span> &middot; <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} property="sc:hasPart" href="/site-map/changelog/">Changelog</a> &middot; <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} property="sc:hasPart" href="/privacy-policy/">Privacy Policy</a></small>
+      <a accesskey="o" property="sc:hasPart" href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a> &middot; <a{{ if ne .RelPermalink "/site-map/" }} accesskey="g"{{ end }} property="sc:hasPart" href="/site-map/changelog/">Changelog</a> &middot; <a{{ if ne .RelPermalink "/site-map/" }} accesskey="y"{{ end }} property="sc:hasPart" href="/privacy-policy/">Privacy Policy</a></small>
   </nav>
   <span property="sc:isPartOf" typeof="sc:WebSite">
     <link property="sc:url" href="{{ $.Site.BaseURL }}" />
