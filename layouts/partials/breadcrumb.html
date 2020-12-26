@@ -7,10 +7,12 @@
       <a property="sc:item" href="{{ .Site.BaseURL }}" typeof="sc:WebPage"><span property="sc:name">Home</span></a>
       <meta property="sc:position" content="1" />
     </span> /
+    {{ with .Site.GetPage (printf "/%s" $year) }}
     <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
-      <a property="sc:item" href="{{ .Site.BaseURL }}{{ $year }}/" typeof="sc:WebPage"><span property="sc:name">Posts for {{ $year }}</span></a>
+      <a property="sc:item" href="{{ .Permalink }}" id="{{ .Permalink}}" typeof="sc:WebPage"><span property="sc:name">{{ .Title }}</span></a>
       <meta property="sc:position" content="2" />
     </span> /
+    {{ end }}
     <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
       <a property="sc:item" id="{{ .Permalink }}" href="{{ .Permalink }}" typeof="sc:WebPage" class="active"><span property="sc:name">{{ .Title }}</span></a>
       <meta property="sc:position" content="3" />
