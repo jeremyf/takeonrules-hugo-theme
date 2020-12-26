@@ -222,8 +222,8 @@ details {
     & > * {
             margin-left: 0.5% ; // Aligns left border with center of down caret
             padding-left: 2.5%;
-            width: 52%;
     }
+    & > *:not(details) { width: 52%; }
 }
 
 @media screen and (max-width: 760px) {

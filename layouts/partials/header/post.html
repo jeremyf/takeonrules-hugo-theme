@@ -1,4 +1,4 @@
-<h1 property="sc:headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+<h1 property="sc:headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title | safeHTML }}</h1>
 <meta property="sc:name" content="{{ .Title }}" />
 {{- with .Params.headline }}
 <h2 property="sc:alternativeHeadline">{{ . }}</h2>

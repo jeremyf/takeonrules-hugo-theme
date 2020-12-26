@@ -1,18 +1,130 @@
-{{ $year := .Get 0 | int }}
-{{ $pages := where (where .Site.Pages "Type" "eq" "post") "Date.Year" "eq" $year }}
-<div class="list-page">
-<p>There are {{ len $pages}} posts in {{ $year }}.</p>
-{{ range $pages.GroupByDate "January" }}
-<details open="open">
-<summary class="month">{{ .Key }}({{ len .Pages }})</summary>
+{{ $year := .Get 0 }}
+{{ $data := index .Site.Data.yearEndReports $year }}
+
+<p>This page provides an overview into what happened on <cite>{{ .Site.Title }}</cite> during <time datetime="{{ $year}}">{{ $year }}</time>.</p>
+
+<section  aria-labelledby="overview-posts-{{ $year }}">
+  <h2 id="overview-posts-{{ $year }}">All Posts</h2>
+  <p>Each year, most of what I write is blog posts.</p>
+  <details>
+  {{- $posts := where (where (where .Site.Pages "Type" "eq" "post") "Date.Year" "eq" (int $year)) "Draft" "eq" false  }}
+    <summary>In <time datetime="{{ $year }}">{{ $year }}</time>, I wrote {{ len $posts }} posts&hellip;</summary>
+    {{- range $posts.GroupByDate "January" }}
+    <details>
+      <summary class="month">{{ .Key }}({{ len .Pages }})</summary>
+      <ul>
+        {{- range .Pages }}
+        <li>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time> &middot;
+          <cite><a href="{{ .RelPermalink }}">{{ .Title }}</a></cite>
+        </li>
+        {{- end }}
+      </ul>
+    </details>
+    {{- end }}
+  </details>
+</section>
+
+{{- with index $data "series" }}
+{{- $series := . }}
+<section aria-labelledby="overview-series-{{ $year }}">
+<h2 id="overview-series-{{ $year }}">For a Series</h2>
+
+<p>Some of these posts, I've written as part of a series.</p>
+
+<div role="note" class="margin"><small>Read about <a href="/series/">all of the series on <q>Take on Rules</q></a>.</small></div>
+
+<details>
+<summary>I've Posted into {{ len $series }} Series&hellip;</h2></summary>
+{{ range $series }}
+{{ $seriesData := index (where $.Site.Data.series "key" "eq" .key) 0 }}
+<details>
+<summary><cite>{{ $seriesData.title }}</cite> ({{ with (len .entries) }}{{ . }} post{{- if gt . 1 }}s{{- end }}{{- end }})&hellip;</summary>
 <ul>
-{{ range .Pages }}
-<li>
-<time datetime="{{ .Date.Format "2006-01-02" }}" class="list-date">{{ .Date.Format "Jan 2" }}</time> &middot;
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+{{- range .entries }}
+  <li>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time> &middot; <cite><a href="{{ .permalink }}">{{ .title }}</a></cite>
 </li>
-{{ end }}
-</ul>
+{{- end }}
+<ul>
+</details>
+{{- end }}
+</details>
+</section>
+{{- end }}
+
+<section aria-labelledby="overview-tags-{{ $year }}">
+{{ $tags :=  index $data "tags" }}
+<h2 id="overview-tags-{{ $year }}">Tagged</h2>
+
+<p>Every post I write, I tag with one or more tags.  This year, I used {{ len $tags }} tags.</p>
+
+<div role="note" class="margin"><small>Read about <a href="/tags/">all of the tags on <q>Take on Rules</q></a>.</small></div>
+
+<details>
+<summary>I've Tagged Posts with {{ len $tags }} Tags&hellip;</summary>
+<p>Below, I list the date I published the tagged post, and a link to that post.</p>
+{{ range $tags }}
+<details>
+<summary><em>{{ index . "key" }}</em> ({{ with (len .entries) }}{{ . }} post{{- if gt . 1 }}s{{- end }}{{- end }})&hellip;</summary>
+<ul>
+{{- range .entries }}
+<li>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time> &middot; <cite><a href="{{ .permalink }}">{{ .title }}</a></cite>
+</li>
+{{- end }}
+<ul>
 </details>
 {{ end }}
-</div>
+</details>
+</section>
+
+{{ with (where .Site.Data.list_of_all_updates "year" "eq" (string $year)) }}
+<section  aria-labelledby="overview-updates-{{ $year }}">
+<h2 id="overview-updates-{{ $year }}">Updates</h2>
+
+<p>Sometimes I go back and update posts with new information or corrections.</p>
+
+<div role="note" class="margin"><small>Read about <a href="/site-map/updates/">all of the updates on <q>Take on Rules</q></a>.</small></div>
+
+<details>
+<summary>I wrote {{ len . }} updates&hellip;</summary>
+
+<p>Below, I list the date of the updates and a link to the updated page.</p>
+
+<ul>
+{{- range . }}
+<li><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time> &middot; <cite><a href="{{ .permalink }}">{{ .page_title }}</a></cite></li>
+{{- end }}
+<ul>
+</details>
+</section>
+{{- end }}
+
+{{- $beginDate := printf "%s-00-00" $year }}
+{{- $endDate := printf "%s-99-99" $year }}
+{{- $changes := where (where .Site.Data.changelog "date" "gt" $beginDate) "date" "lt" $endDate }}
+{{- with $changes }}
+<section  aria-labelledby="overview-changes-{{ $year }}">
+  <h2 id="overview-updates-{{ $year }}">Changes</h2>
+
+<p>Sometimes I tinker with the structure or layout of the site.</p>
+
+<div role="note" class="margin"><small>Read <a href="/site-map/changelog/">the changelog for <q>Take on Rules</q></a>.</small></div>
+
+<details>
+<summary>I made and recorded {{ len $changes }} changes&hellip;</summary>
+
+<p>Below, I list the date of the updates and a link to the updated page.</p>
+
+<dl>
+  {{- range $changes }}
+  <dt><time datetime="{{ .date }}">{{ .date }}</time></dt>
+  {{- range sort .entries }}
+  <dd>{{ partial "unparagraphy.html" . }}</dd>
+  {{- end }}
+  {{- end }}
+</dl>
+</details>
+</section>
+{{- end }}
