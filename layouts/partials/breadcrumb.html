@@ -6,7 +6,7 @@
   {{- if in .Site.Params.paginatedSections .Type -}}
   <nav aria-labelledby="post-neighbors-label" class="paginator">
     <span id="post-neighbors-label" class="label">Post Neighbors </span>
-    {{- with .PrevInSection }}<a property="sc:relatedLink" accesskey="p" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>&nbsp;{{- end }}{{- with .NextInSection }}&middot;&nbsp;<a property="sc:relatedLink" accesskey="n" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
+    {{- with .PrevInSection }}<a property="sc:relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>&nbsp;{{- end }}{{- with .NextInSection }}&middot;&nbsp;<a property="sc:relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
   </nav>
   {{- end }}
   {{- with .Params.series -}}{{- range (where $.Site.Data.series "key" "eq" .) }}
@@ -14,7 +14,7 @@
   <nav aria-labelledby="series-label" class="series">
     {{- $series := where $.Site.Pages "Params.series" .key }}
     {{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
-    <span id="series-label" class="label">Part of Series </span><span resource="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" typeof="sc:CreativeWorkSeries"><cite property="sc:headline"><a property="sc:url" accesskey="s" href="{{ $seriesUrl }}" rel="bookmark">{{ $title }}</a></cite></span>&nbsp;{{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}{{- range first 1 $prev }}&middot; <a property="sc:relatedLink" accesskey="v" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Previous in Series</a>&nbsp;{{- end }}{{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}{{- range last 1 $next }}&middot; <a property="sc:relatedLink" accesskey="x" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Next in Series</a>{{- end }}
+    <span id="series-label" class="label">Part of Series </span><span resource="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" typeof="sc:CreativeWorkSeries"><cite property="sc:headline"><a property="sc:url" href="{{ $seriesUrl }}" rel="bookmark">{{ $title }}</a></cite></span>&nbsp;{{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}{{- range first 1 $prev }}&middot; <a property="sc:relatedLink" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Previous in Series</a>&nbsp;{{- end }}{{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}{{- range last 1 $next }}&middot; <a property="sc:relatedLink" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Next in Series</a>{{- end }}
   </nav>
   {{- end }}{{- end }}
   {{- define "breadcrumbnav" }}

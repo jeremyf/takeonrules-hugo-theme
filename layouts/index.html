@@ -12,7 +12,7 @@
     <nav aria-labelledby="blog-pagination-label" class="paginator">
       <span class="label" id="blog-pagination-label">Blog postings pagination </span>
       {{- with $paginator }}
-      {{- if .HasNext }}<a accesskey="p" href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a accesskey="n" href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
+      {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
       Page {{ .PageNumber }} of {{ .TotalPages }}
     {{- end }}
     </nav>
@@ -34,7 +34,7 @@
   <li property="sc:blogPost" typeof="sc:BlogPosting" aria-labelledby="{{ anchorize .Title }}">
     <h2 id="{{ anchorize .Title }}">
       <cite property="sc:headline">
-        <a property="sc:mainEntityOfPage" href="{{ .RelPermalink }}" accesskey="{{ mod (add 1 $index) 10 }}" rel="bookmark">
+        <a property="sc:mainEntityOfPage" href="{{ .RelPermalink }}" rel="bookmark">
           {{ .Title }}
         </a>
       </cite>

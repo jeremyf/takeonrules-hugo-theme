@@ -20,24 +20,24 @@
   <body class="type-{{ .Type }} {{ if isset .Params "full_width"}}full{{ else }}{{ if .IsHome }}full{{ else }}default{{ end }}{{ end }}-width" typeof="sc:{{ with .Params.schema_dot_org_type }}{{ . }}{{ else }}WebPage{{ end }}">
     <header aria-label="Site-wide header">
       <nav class="skip-links" aria-label="Skip Links">
-        <a href="#skip-to-content" accesskey="c" class="offscreen">Skip to Content</a>
+        <a href="#skip-to-content" class="offscreen">Skip to Content</a>
         {{- if (or (in .Site.Params.paginatedSections .Type) (eq .Type "page")) }}
         {{- if ne .Kind "404" }}
-        <span class="hidden"> &middot; </span><a href="#skip-to-article-context-navigation" accesskey="x" class="offscreen">Skip to Articles's Contextual Navigation</a>
+        <span class="hidden"> &middot; </span><a href="#skip-to-article-context-navigation" class="offscreen">Skip to Articles's Contextual Navigation</a>
         {{- end }}
         {{- end }}{{- with .Params.webmentions }}
         <span class="hidden"> &middot; </span><a href="#skip-to-webmentions" class="offscreen">Skip to Page's Mentions</a>
         {{- end }}{{- if eq .Type "post" }}
-        <span class="hidden"> &middot; </span><a href="#skip-to-related-posts" accesskey="r" class="offscreen">Skip to Related Posts</a>
+        <span class="hidden"> &middot; </span><a href="#skip-to-related-posts" class="offscreen">Skip to Related Posts</a>
         {{- end }}
       </nav>
       <nav class="group" aria-label="Site-wide navigation" typeof="sc:SiteNavigationElement">
         <meta property="sc:name" content="Site-wide navigation" />
-        <h1><a property="sc:hasPart" accesskey="h" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
+        <h1><a property="sc:hasPart" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
-        <a property="sc:hasPart" accesskey="{{ $item.Identifier }}" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> &middot; </span>
+        <a property="sc:hasPart" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> &middot; </span>
         {{- end }}
-        <a property="sc:hasPart" accesskey="/" {{ if eq (string $.Page.RelPermalink) "/search/" }}class="active"{{ end }} rel="search" id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a>
+        <a property="sc:hasPart" {{ if eq (string $.Page.RelPermalink) "/search/" }}class="active"{{ end }} rel="search" id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a>
       </nav>
       <script>
        var form = document.getElementById('search-link');
