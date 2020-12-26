@@ -7,7 +7,7 @@
   {{- end }}
 {{ end }}
 {{ define "breadcrumb" }}
-<section id="skip-to-article-context-navigation" aria-label="Context Navigation around Homepage">
+<section id="skip-to-page-context-navigation" aria-label="Context Navigation around Homepage">
     {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
     <nav aria-labelledby="blog-pagination-label" class="paginator">
       <span class="label" id="blog-pagination-label">Blog postings pagination </span>
@@ -40,7 +40,7 @@
       </cite>
     </h2>
     {{- if isset .Params "headline" }}
-      <h3 property="sc:alternateHeadline">{{- .Params.headline | markdownify }}</h3>
+      <p property="sc:alternateHeadline">{{- .Params.headline | markdownify }}</p>
     {{- end }}
       <meta property="sc:wordCount" content="{{ .WordCount }}" />
       <link property="sc:author" href="{{ $.Site.BaseURL }}#tor-author" />

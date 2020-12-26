@@ -19,20 +19,9 @@
   </head>
   <body class="type-{{ .Type }} {{ if isset .Params "full_width"}}full{{ else }}{{ if .IsHome }}full{{ else }}default{{ end }}{{ end }}-width" typeof="sc:{{ with .Params.schema_dot_org_type }}{{ . }}{{ else }}WebPage{{ end }}">
     <header aria-label="Site-wide header">
-      <nav class="skip-links" aria-label="Skip Links">
-        <a href="#skip-to-content" class="offscreen">Skip to Content</a>
-        {{- if (or (in .Site.Params.paginatedSections .Type) (eq .Type "page")) }}
-        {{- if ne .Kind "404" }}
-        <span class="hidden"> &middot; </span><a href="#skip-to-article-context-navigation" class="offscreen">Skip to Articles's Contextual Navigation</a>
-        {{- end }}
-        {{- end }}{{- with .Params.webmentions }}
-        <span class="hidden"> &middot; </span><a href="#skip-to-webmentions" class="offscreen">Skip to Page's Mentions</a>
-        {{- end }}{{- if eq .Type "post" }}
-        <span class="hidden"> &middot; </span><a href="#skip-to-related-posts" class="offscreen">Skip to Related Posts</a>
-        {{- end }}
-      </nav>
       <nav class="group" aria-label="Site-wide navigation" typeof="sc:SiteNavigationElement">
         <meta property="sc:name" content="Site-wide navigation" />
+        <a href="#skip-to-content"  property="sc:hasPart" class="offscreen">Skip to Main Content</a>
         <h1><a property="sc:hasPart" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
         <a property="sc:hasPart" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> &middot; </span>
