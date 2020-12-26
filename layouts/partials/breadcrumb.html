@@ -1,4 +1,4 @@
-<section id="skip-to-article-context-navigation" aria-label="Context Navigation around «{{ .Title | markdownify | plainify }}»">
+<section id="skip-to-page-context-navigation" aria-label="Context Navigation around «{{ .Title | markdownify | plainify }}»">
   <nav aria-labelledby="breadcrumbs-label" class="breadcrumbs" typeof="sc:BreadcrumbList" role="list">
     <span id="breadcrumbs-label" property="sc:name" class="label">Breadcrumbs </span>
     {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3 "site" .Site) }}
