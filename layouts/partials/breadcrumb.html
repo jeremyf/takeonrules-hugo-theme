@@ -14,7 +14,7 @@
     </span> /
     {{ end }}
     <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
-      <a property="sc:item" id="{{ .Permalink }}" href="{{ .Permalink }}" typeof="sc:WebPage" class="active"><cite property="sc:name">{{ .Title }}</cite></a>
+      <a property="sc:item" href="{{ .Permalink }}" id="{{ .Permalink}}" typeof="sc:WebPage" class="active"><span property="sc:name">{{ .Title }}</span></a>
       <meta property="sc:position" content="3" />
     </span>
     {{ else }}
