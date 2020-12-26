@@ -1,7 +1,23 @@
 <section id="skip-to-page-context-navigation" aria-label="Context Navigation around «{{ .Title | markdownify | plainify }}»">
   <nav aria-labelledby="breadcrumbs-label" class="breadcrumbs" typeof="sc:BreadcrumbList" role="list">
     <span id="breadcrumbs-label" property="sc:name" class="label">Breadcrumbs </span>
+    {{- if eq .Type "post" }}
+    {{- $year := .Date.Format "2006" }}
+    <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
+      <a property="sc:item" href="{{ .Site.BaseURL }}" typeof="sc:WebPage"><span property="sc:name">Home</span></a>
+      <meta property="sc:position" content="1" />
+    </span> /
+    <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
+      <a property="sc:item" href="{{ .Site.BaseURL }}{{ $year }}/" typeof="sc:WebPage"><span property="sc:name">Posts for {{ $year }}</span></a>
+      <meta property="sc:position" content="2" />
+    </span> /
+    <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
+      <a property="sc:item" id="{{ .Permalink }}" href="{{ .Permalink }}" typeof="sc:WebPage" class="active"><span property="sc:name">{{ .Title }}</span></a>
+      <meta property="sc:position" content="3" />
+    </span>
+    {{ else }}
     {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3 "site" .Site) }}
+    {{ end }}
   </nav>
   {{- if in .Site.Params.paginatedSections .Type -}}
   <nav aria-labelledby="post-neighbors-label" class="paginator">

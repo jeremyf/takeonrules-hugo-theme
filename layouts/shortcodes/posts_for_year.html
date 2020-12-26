@@ -5,7 +5,7 @@
 
 <section  aria-labelledby="overview-posts-{{ $year }}">
   <h2 id="overview-posts-{{ $year }}">All Posts</h2>
-  <p>Each year, most of what I write is blog posts.</p>
+  <p>Each year, most of what I write are blog posts.</p>
   <details>
   {{- $posts := where (where (where .Site.Pages "Type" "eq" "post") "Date.Year" "eq" (int $year)) "Draft" "eq" false  }}
     <summary>In <time datetime="{{ $year }}">{{ $year }}</time>, I wrote {{ len $posts }} posts&hellip;</summary>
