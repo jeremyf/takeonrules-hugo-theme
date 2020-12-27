@@ -15,7 +15,7 @@
       <ul>
         {{- range .Pages }}
         <li>
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time> &middot;
+          <time datetime="{{  .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time> &middot;
           <cite><a href="{{ .RelPermalink }}">{{ .Title }}</a></cite>
         </li>
         {{- end }}
@@ -43,7 +43,7 @@
 <ul>
 {{- range .entries }}
   <li>
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time> &middot; <cite><a href="{{ .permalink }}">{{ .title }}</a></cite>
+    <time datetime="{{ .datePublished }}">{{ .datePublished }}</time> &middot; <cite><a href="{{ .permalink }}">{{ .title }}</a></cite>
 </li>
 {{- end }}
 <ul>
@@ -70,7 +70,7 @@
 <ul>
 {{- range .entries }}
 <li>
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time> &middot; <cite><a href="{{ .permalink }}">{{ .title }}</a></cite>
+      <time datetime="{{ .datePublished }}">{{ .datePublished }}</time> &middot; <cite><a href="{{ .permalink }}">{{ .title }}</a></cite>
 </li>
 {{- end }}
 <ul>
@@ -94,7 +94,7 @@
 
 <ul>
 {{- range . }}
-<li><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time> &middot; <cite><a href="{{ .permalink }}">{{ .page_title }}</a></cite></li>
+<li><time datetime="{{ .date }}">{{ .date }}</time> &middot; <cite><a href="{{ .permalink }}">{{ .page_title }}</a></cite></li>
 {{- end }}
 <ul>
 </details>
