@@ -1,5 +1,6 @@
 {{ $year := .Get 0 }}
 {{ $data := index .Site.Data.yearEndReports $year }}
+{{- $posts := where (where (where .Site.Pages "Type" "in" .Site.Params.paginatedSections) "Date.Year" "eq" (int $year)) "Draft" "eq" false  }}
 
 <p>This page provides an overview into what happened on <cite>{{ .Site.Title }}</cite> during <time datetime="{{ $year}}">{{ $year }}</time>.</p>
 
@@ -7,7 +8,6 @@
   <h2 id="overview-posts-{{ $year }}">All Posts</h2>
   <p>Each year, most of what I write are blog posts.</p>
   <details>
-  {{- $posts := where (where (where .Site.Pages "Type" "eq" "post") "Date.Year" "eq" (int $year)) "Draft" "eq" false  }}
     <summary>In <time datetime="{{ $year }}">{{ $year }}</time>, I wrote {{ len $posts }} posts&hellip;</summary>
     {{- range $posts.GroupByDate "January" }}
     <details>
