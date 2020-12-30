@@ -17,15 +17,15 @@
 
     <p property="sc:about">A list of all of the posts in the <cite>{{ .title }}</cite> series.  I've ordered the posts from oldest to newest.</p>
 
-    <dl class="group">
+    <ul>
       {{ $lastInstance := sub (len $data.Pages) 1 }}
       {{- range $index, $entry := sort $data.Pages "Date" "asc" }}
       {{- with $entry }}
-      <dt><time {{ if (or (eq $index 0) (eq $index $lastInstance)) }}property="{{ if eq $index 0 }}sc:startDate{{ end }} {{ if eq $index $lastInstance }}sc:endDate{{ end }}"{{ end }} datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt>
-      <dd property="sc:hasPart" typeof="sc:CreativeWork"><cite property="sc:name"><a property="sc:url" href="{{ .Permalink}}" rel="bookmark">{{ .Title }}</a></cite></dd>
+      <li><time {{ if (or (eq $index 0) (eq $index $lastInstance)) }}property="{{ if eq $index 0 }}sc:startDate{{ end }} {{ if eq $index $lastInstance }}sc:endDate{{ end }}"{{ end }} datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time> &middot;
+      <span property="sc:hasPart" typeof="sc:CreativeWork"><cite property="sc:name"><a property="sc:url" href="{{ .Permalink}}" rel="bookmark">{{ .Title }}</a></cite></span></li>
       {{- end }}
       {{- end }}
-    </dl>
+    </ul>
   </section>
   {{- end }}
 </article>
