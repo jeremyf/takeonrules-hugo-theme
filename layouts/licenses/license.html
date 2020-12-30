@@ -5,13 +5,13 @@
 <article property="sc:mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" resource="#skip-to-content" typeof="sc:WebPageElement">
   {{- $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
   {{- $title := .Title }}
-  {{ with index $.Site.Data.licenses $slug }}
+  {{ with index (where $.Site.Data.licenses "Key" "eq" $slug) 0 }}
   <header>
     <link property="sc:mainEntityOfPage" href="{{ $.Page.RelPermalink }}" />
     <h1 property="sc:name" class="p-name" id="{{ anchorize $title }}">{{ .Name }}</h1>
     {{ partial "footer/image.html" . }}
   </header>
-  {{- with index . "Description" }}
+  {{- with .Description }}
   <section property="sc:about">
     {{ . | safeHTML }}
   </section>

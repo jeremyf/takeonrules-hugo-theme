@@ -7,7 +7,7 @@
   {{ range .Params.licenses }}
   <p class="license">
     <small>
-      {{ with index $.Site.Data.licenses . }}
+      {{ with index (where $.Site.Data.licenses "Key" "eq" .) 0 }}
         {{ partial .PartialForLicenseFooter $context }}
       {{ end }}
     </small>

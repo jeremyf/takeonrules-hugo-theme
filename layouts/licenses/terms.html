@@ -11,7 +11,8 @@
   <section property="sc:text" typeof="sc:WebPageElement" class="e-content content">
     <ul>
       {{- range $key, $value := .Data.Terms.Alphabetical }}
-      <li>{{ $value.Count }} published under <a href="{{ $value.Name| urlize }}">{{ index (index $.Site.Data.licenses $value.Name) "Name" }}</a></li>
+      {{- $license := (index (where $.Site.Data.licenses "Key" "eq" $value.Name) 0) }}
+      <li>{{ $value.Count }} published under <a href="{{ $value.Name| urlize }}">{{ $license.Name }}</a></li>
       {{- end }}
     </ul>
   </section>
