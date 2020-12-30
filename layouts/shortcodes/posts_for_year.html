@@ -4,19 +4,19 @@
 
 <p>This page provides an overview into what happened on <cite>{{ .Site.Title }}</cite> during <time datetime="{{ $year}}">{{ $year }}</time>.</p>
 
-<section  aria-labelledby="overview-posts-{{ $year }}">
+<section  aria-labelledby="overview-posts-{{ $year }}" class="year-summary">
   <h2 id="overview-posts-{{ $year }}">All Posts</h2>
   <p>Each year, most of what I write are blog posts.</p>
-  <details>
+  <details open="true">
     <summary>In <time datetime="{{ $year }}">{{ $year }}</time>, I wrote {{ len $posts }} posts&hellip;</summary>
     {{- range $posts.GroupByDate "January" }}
-    <details>
+    <details open="true">
       <summary class="month">{{ .Key }}({{ len .Pages }})</summary>
       <ul>
         {{- range .Pages }}
-        <li>
-          <time datetime="{{  .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time> &middot;
-          <cite><a href="{{ .RelPermalink }}">{{ .Title }}</a></cite>
+        <li property="sc:blogPost" typeof="sc:BlogPosting">
+          <time property="sc:datePublished" datetime="{{  .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time> &middot;
+          <cite property="sc:headline"><a property="sc:mainEntityOfPage" href="{{ .RelPermalink }}">{{ .Title }}</a></cite>
         </li>
         {{- end }}
       </ul>
@@ -39,12 +39,13 @@
 {{ range $series }}
 {{ $seriesData := index (where $.Site.Data.series "key" "eq" .key) 0 }}
 <details>
-<summary><cite>{{ $seriesData.title }}</cite> ({{ with (len .entries) }}{{ . }} post{{- if gt . 1 }}s{{- end }}{{- end }})&hellip;</summary>
+  <summary><cite>{{ $seriesData.title }}</cite> ({{ with (len .entries) }}{{ . }} post{{- if gt . 1 }}s{{- end }}{{- end }})&hellip;</summary>
+  <div role="note" class="margin"><small>All posts in <cite><a href="{{ $.Site.BaseURL }}series/{{ $seriesData.key | urlize }}">{{ $seriesData.title }}</a></cite> series.</small></div>
 <ul>
 {{- range .entries }}
   <li>
     <time datetime="{{ .datePublished }}">{{ .datePublished }}</time> &middot; <cite><a href="{{ .permalink }}">{{ .title }}</a></cite>
-</li>
+  </li>
 {{- end }}
 <ul>
 </details>
@@ -66,7 +67,8 @@
 <p>Below, I list the date I published the tagged post, and a link to that post.</p>
 {{ range $tags }}
 <details>
-<summary><em>{{ index . "key" }}</em> ({{ with (len .entries) }}{{ . }} post{{- if gt . 1 }}s{{- end }}{{- end }})&hellip;</summary>
+  <summary><em>{{ index . "key" }}</em> ({{ with (len .entries) }}{{ . }} post{{- if gt . 1 }}s{{- end }}{{- end }})&hellip;</summary>
+  <div role="note" class="margin"><small>Link to all posts tagged with <a href="{{ $.Site.BaseURL }}tags/{{ .key }}">{{ .key }}</a>.</small></div>
 <ul>
 {{- range .entries }}
 <li>
