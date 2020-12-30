@@ -46,6 +46,19 @@ Semantically, I don't treat these as an [ASIDE](https://developer.mozilla.org/en
 
 Two other shortcodes (table.html and update.html) provide marginalia options.  See below for more on these two shortcodes.
 
+### Glossary
+
+Throughout TakeOnRules.com, I make extensive use of the ABBR tag. I use this markup to improve the accessibility of my site.
+
+- [abbr.html](layouts/shortcodes/abbr.html) :: Creates the [ABBR](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr) tag and links to the glossary.
+- [dfn.html](layouts/shortcodes/dfn.html) :: Creates a [DFN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn) along with an ABBR tag and link to glossary.
+
+_**Note:** The `abbr.html` shortcode preceeded the `dfn.html` shortcode.  They include somewhat duplicated logic, which could be further normalized._
+
+Related is the [data/glossary.yml](data/glossary.yml) file which contains the data which I use for the `abbr.html` and `dfn.html` shortcodes.  This is a live data set that I use for TakeOnRules.com.
+
+I wrote about the Glossary in <cite><a href="http://takeonrules.com/2020/12/20/many-small-tools-make-light-work-in-emacs/" class="u-url p-name" rel="cite">Many Small Tools Make Light Work (in Emacs)</a></cite>.
+
 ### Other Stuff
 
 - [table.html](layouts/shortcodes/table.html) :: Helps ensure a well-formed table; one parameter allows for table rendering in the margins.
