@@ -59,6 +59,8 @@ Related is the [data/glossary.yml](data/glossary.yml) file which contains the da
 
 I wrote about the Glossary in <cite><a href="http://takeonrules.com/2020/12/20/many-small-tools-make-light-work-in-emacs/" class="u-url p-name" rel="cite">Many Small Tools Make Light Work (in Emacs)</a></cite>.
 
+These short codes are written such that I won't render the same help link twice; Hence the use of testing a Page's Scratch variable.
+
 ### Other Stuff
 
 - [table.html](layouts/shortcodes/table.html) :: Helps ensure a well-formed table; one parameter allows for table rendering in the margins.
