@@ -18,7 +18,7 @@
 {{- if .IsNamedParams }}
 <footer>&mdash;
 {{- with .Get "pre" }}
-<span class="p-author h-card">{{ partial "unparagraphy.html" . }}{{- if(or (or $cite $cite_url) $post) }}, {{ end }}</span>
+<span class="p-author h-card">{{ . | markdownify }}{{- if(or (or $cite $cite_url) $post) }}, {{ end }}</span>
 {{- end }}{{- if $scratchKey }}<cite>{{- if (.Page.Scratch.Get $scratchKey) }}<cite>{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</cite>{{- else }}<a href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</a>{{- end }}</cite>
 {{- else if $cite_url }}<cite><a href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</a></cite>{{- else }}<cite>{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</cite>{{- end }}
 {{- if($post) }}{{ partial "unparagraphy.html" $post }}{{- end }}
