@@ -40,7 +40,7 @@
 {{ $seriesData := index (where $.Site.Data.series "key" "eq" .key) 0 }}
 <details>
   <summary><cite>{{ $seriesData.title }}</cite> ({{ with (len .entries) }}{{ . }} post{{- if gt . 1 }}s{{- end }}{{- end }})&hellip;</summary>
-  <div role="note" class="margin"><small>All posts in <cite><a href="{{ $.Site.BaseURL }}series/{{ $seriesData.key | urlize }}">{{ $seriesData.title }}</a></cite> series.</small></div>
+  <p>All posts in <cite><a href="{{ $.Site.BaseURL }}series/{{ $seriesData.key | urlize }}">{{ $seriesData.title }}</a></cite> series.</p>
 <ul>
 {{- range .entries }}
   <li>
@@ -68,7 +68,7 @@
 {{ range $tags }}
 <details>
   <summary><em>{{ index . "key" }}</em> ({{ with (len .entries) }}{{ . }} post{{- if gt . 1 }}s{{- end }}{{- end }})&hellip;</summary>
-  <div role="note" class="margin"><small>Link to all posts tagged with <a href="{{ $.Site.BaseURL }}tags/{{ .key }}">{{ .key }}</a>.</small></div>
+  <p><a href="{{ $.Site.BaseURL }}tags/{{ .key }}">All posts tagged with {{ .key }}</a>.</p>
 <ul>
 {{- range .entries }}
 <li>
