@@ -1,9 +1,7 @@
 {{- define "abbrInner" }}
 {{- $title := .data.title }}
 {{- $text := .text }}
-{{- if isset .data "abbr" }}
-{{- $text = .data.abbr }}
-{{- end }}
+{{- if isset .data "abbr" }}{{- $text = .data.abbr }}{{- end }}
 {{- $scratchKey := printf "abbr-%s" .data.key }}
 {{- if .Page.Scratch.Get $scratchKey }}
 <abbr title="{{ $title }}">{{ $text }}</abbr>

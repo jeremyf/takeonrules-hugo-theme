@@ -1,5 +1,10 @@
 {{- define "dfnInner" }}
-{{- $title := .data.title }}{{- $dfn := $title }}{{- if isset .data "dfn" }}{{- $dfn = .data.dfn }}{{- end }}{{- $text := .text }}{{- if isset .data "abbr" }}{{- $text := .data.abbr }}{{- end }}{{- $scratchKey := printf "abbr-%s" .data.key }}
+{{- $title := .data.title }}
+{{- $text := .text }}
+{{- if isset .data "abbr" }}{{- $text = .data.abbr }}{{- end }}
+{{- $dfn := $title }}
+{{- if isset .data "dfn" }}{{- $dfn = .data.dfn }}{{- end }}
+{{- $scratchKey := printf "abbr-%s" .data.key }}
 {{- if .Page.Scratch.Get $scratchKey }}
 <abbr title="{{ $title }}">{{ $text }}</abbr>
 {{- else }}{{- if isset .data "itemid" }}
