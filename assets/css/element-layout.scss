@@ -207,6 +207,7 @@ ins { text-decoration-line: none; }
 
 /* Hacks to better present */
 .licensed {
+    .wrapper { font-family: var(--code-font); font-variant: small-caps; }
   padding-left: 1rem;
 }
 

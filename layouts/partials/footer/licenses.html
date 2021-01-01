@@ -1,7 +1,7 @@
 {{- if isset .Params "licenses" }}
 {{- $licenses := .Params.licenses }}
 {{- if gt (len $licenses) 0 }}
-<nav aria-labelledby="licenses">
+<nav property="sc:copyrightNotice" aria-labelledby="licenses">
   <h2 id="licenses">License(s)</h2>
   {{ $context := . }}
   {{ range .Params.licenses }}

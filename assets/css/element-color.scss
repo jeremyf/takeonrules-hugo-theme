@@ -39,6 +39,7 @@ article aside {
 }
 
 .licensed {
+    .wrapper { color: var(--code) ; }
     border-left: 1px dotted   var(--code);
 }
 
