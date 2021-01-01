@@ -1,5 +1,6 @@
-{{ $year := .Get 0 }}
-{{ $data := index .Site.Data.yearEndReports $year }}
+{{- $year := .Get 0 }}
+{{- $data := index .Site.Data.yearEndReports $year }}
+{{- if $data }}
 {{- $posts := where (where (where .Site.Pages "Type" "in" .Site.Params.paginatedSections) "Date.Year" "eq" (int $year)) "Draft" "eq" false  }}
 
 <p>This page provides an overview into what happened on <cite>{{ .Site.Title }}</cite> during <time datetime="{{ $year}}">{{ $year }}</time>.</p>
@@ -129,4 +130,5 @@
 </dl>
 </details>
 </section>
+{{- end }}
 {{- end }}

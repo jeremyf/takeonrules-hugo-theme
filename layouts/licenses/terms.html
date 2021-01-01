@@ -9,12 +9,13 @@
     {{ partial "footer/image.html" . }}
   </header>
   <section property="sc:text" typeof="sc:WebPageElement" class="e-content content">
-    <ul>
+    <dl class="group">
       {{- range $key, $value := .Data.Terms.Alphabetical }}
       {{- $license := (index (where $.Site.Data.licenses "Key" "eq" $value.Name) 0) }}
-      <li>{{ $value.Count }} published under <a href="{{ $value.Name| urlize }}">{{ $license.Name }}</a></li>
+      <dt><a href="{{ $value.Name| urlize }}">{{ $license.Name }}</a></dt>
+      <dd>{{ $value.Count }} pages</dd>
       {{- end }}
-    </ul>
+    </dl>
   </section>
 </article>
 {{ end }}
