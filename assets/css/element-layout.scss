@@ -164,9 +164,12 @@ mark {
     margin-right: -0.1rem;
 }
 
-article {
-    section > ul, section > ol { width: 45%; }
 
+article { section > ul, section > ol { width: 45%; } }
+
+// The main article has a bound region
+// Note: https://takeonrules.com/2020/12/31/a-refinement-to-the-ubiquitous-initiative-procedure/ introduced nested articles.
+main > article {
     > header, > footer {
         width: 85%;
         * { width: auto; }
