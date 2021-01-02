@@ -529,6 +529,9 @@
 - title: ENnie Awards
   itemid: https://www.wikidata.org/wiki/Q5323772
   tag: ennies
+- title: Essay
+  key: ESSAY
+  tag: essay
 - title: Experience Points
   key: XP
   itemid: https://www.wikidata.org/wiki/Q604973
@@ -1111,6 +1114,9 @@
 - title: Probability
   itemid: https://www.wikidata.org/wiki/Q9492
   tag: probability
+- title: Product Identity
+  key: PI
+  abbr: PI
 - title: Programming
   key: PROGRAMMING
   itemid: https://www.wikidata.org/wiki/Q80006
@@ -1532,6 +1538,10 @@
   abbr: D66
 - title: Two Six-Sided Dice
   key: 2D6
+- title: Ultraviolet
+  key: UV
+  abbr: UV
+  itemid: https://www.wikidata.org/wiki/Q11391
 - title: Undying
   itemid: https://rpggeek.com/rpg/37860/undying
   tag: undying
@@ -1591,6 +1601,9 @@
   tag: whitehack
 - title: Willpower
   key: WILL
+- title: Winter
+  key: WINTER
+  tag: winter
 - title: Wisdom
   key: WIS
 - title: Witchburner
@@ -1600,7 +1613,7 @@
   game: witchburner
 - title: 'Wizards of the Coast; Publisher of Dungeons & Dragons as well as Magic:
     The Gathering'
-  dfn: 'Wizards of the Coast'
+  dfn: Wizards of the Coast
   key: WOTC
   itemid: https://www.wikidata.org/wiki/Q1135204
   abbr: WotC
@@ -1609,6 +1622,11 @@
 - title: Wordpress
   itemid: https://www.wikidata.org/wiki/Q13166
   tag: wordpress
+- title: World of Ardu
+  key: WOA
+  abbr: WoA
+  itemid: https://takeonrules.com/series/a-grain-of-truth-in-the-world-of-ardu/
+  tag: world of ardu
 - title: World of Dungeons
   key: WOD
   itemid: https://www.wikidata.org/wiki/Q68522321
@@ -1653,15 +1671,3 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- title: World of Ardu
-  key: WOA
-  abbr: WoA
-  itemid: https://takeonrules.com/series/a-grain-of-truth-in-the-world-of-ardu/
-  tag: world of ardu
-- title: Ultraviolet
-  key: UV
-  abbr: UV
-  itemid: https://www.wikidata.org/wiki/Q11391
-- title: Product Identity
-  key: PI
-  abbr: PI
