@@ -11,11 +11,11 @@
 {{- with $caption }}<figcaption  property="sc:caption">{{ partial "unparagraphy.html" . }}</figcaption>{{ end }}
 {{- if .Get "link" }}
   <a property="sc:isBasedOn" href="{{ $original.RelPermalink }}">
-    <img property="sc:url" src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
+    <img property="sc:url" src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" width="{{ $result.Width }}" height="{{ $result.Height }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
   </a>
 {{- else }}
   <link property="sc:url" href="{{ $result.RelPermalink }}" />
   <link property="sc:isBasedOn" href="{{ $original.RelPermalink }}">
-  <img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
+  <img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" width="{{ $result.Width }}" height="{{ $result.Height }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
 {{- end }}
 </figure>
