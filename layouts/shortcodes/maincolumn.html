@@ -8,7 +8,13 @@
 {{- with .Get "rotate" }}{{- $imageResize = (printf "770x r%s" .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
 <figure property="sc:image" typeof="sc:ImageObject" {{ if isSet .Params "hidden" }} aria-hidden="true"{{ end }}>
-  <link property="sc:url" href="{{ $result.RelPermalink }}" />
 {{- with $caption }}<figcaption  property="sc:caption">{{ partial "unparagraphy.html" . }}</figcaption>{{ end }}
-<img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
+{{- if .Get "link" }}
+  <a property="sc:url" href="{{ $original.RelPermalink }}">
+    <img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
+  </a>
+{{- else }}
+  <link property="sc:url" href="{{ $result.RelPermalink }}" />
+  <img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
+{{- end }}
 </figure>

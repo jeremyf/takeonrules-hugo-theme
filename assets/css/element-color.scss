@@ -54,6 +54,11 @@ abbr {
         color: var(--bg) !important;
     }
 }
+
+a, [role="note"], dfn, abbr, code, time, summary {
+    transition: all 300ms;
+}
+
 a, .contrast {
     color:   var(--a);
     &:hover, &:focus, &:active {
