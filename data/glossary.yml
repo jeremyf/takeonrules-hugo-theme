@@ -971,6 +971,10 @@
 - title: Non-Player Character
   key: NPC
   itemid: https://www.wikidata.org/wiki/Q466466
+- title: Non-Player Characters
+  key: NPCS
+  itemid: https://www.wikidata.org/wiki/Q466466
+  abbr: NPCs
 - title: Note Quite Gaming
   tag: not quite gaming
 - title: Obstacle
@@ -1085,6 +1089,9 @@
   tag: playbooks
 - title: Player Character
   key: PC
+  itemid: https://www.wikidata.org/wiki/Q1062345
+- title: Player Characters
+  key: PCS
   itemid: https://www.wikidata.org/wiki/Q1062345
 - title: Player's Handbook
   key: PHB
@@ -1675,6 +1682,7 @@
   key: DEAD-NAMES
   offer: https://www.drivethrurpg.com/product/130967/Dead-Names-Lost-Races-and-Forgotten-Ruins?affiliate_id=318171
   game: dead names
+  abbr: Dead Names
 - title: "Tomb of Adventure Design"
   key: TOAD
   game: tome of adventure design
