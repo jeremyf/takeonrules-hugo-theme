@@ -9,7 +9,7 @@
     </span> /
     {{ with .Site.GetPage (printf "/%s" $year) }}
     <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
-      <a property="sc:item" href="{{ .Permalink }}" id="{{ .Permalink}}" typeof="sc:WebPage"><span property="sc:name">{{ .Title }}</span></a>
+      <a property="sc:item" rel="up" href="{{ .Permalink }}" id="{{ .Permalink}}" typeof="sc:WebPage"><span property="sc:name">{{ .Title }}</span></a>
       <meta property="sc:position" content="2" />
     </span> /
     {{ end }}
@@ -42,7 +42,7 @@
   {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) "site" .site) }} /
   {{- end }}
   <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
-    <a property="sc:item" id="{{ .p1.Permalink}}" href="{{ .p1.Permalink }}" {{ if eq .p1 .p2 }}class="active"{{ end }} typeof="sc:WebPage"><span property="sc:name">{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}</span></a>
+    <a property="sc:item" id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}" {{ if eq .p1 .p2 }}class="active"{{ end }} typeof="sc:WebPage"><span property="sc:name">{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}</span></a>
     <meta property="sc:position" content="{{ .depth }}" />
   </span>
   {{- end }}
