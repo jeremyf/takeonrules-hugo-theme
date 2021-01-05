@@ -27,6 +27,14 @@
     {{- with .PrevInSection }}<a property="sc:relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>&nbsp;{{- end }}{{- with .NextInSection }}&middot;&nbsp;<a property="sc:relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
   </nav>
   {{- end }}
+  {{- if or .Params.relPrevious .Params.relNext }}
+  <nav aria-labelledby="{{ .Type }}-neighbors-label" class="paginator">
+    <span id="{{ .Type }}-neighbors-label" class="label">{{ title .Type }} Neighbors </span>
+    {{- with .Params.relPrevious }}<a property="sc:relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous {{ with .Label }}{{ . }}{{ end }}</a>{{- end }}
+    {{- if and .Params.relPrevious .Params.relNext }}&nbsp;&middot;&nbsp{{ end }}
+    {{- with .Params.relNext }}<a property="sc:relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next {{ with .Label }}{{ . }}{{ end }}</a>{{- end }}
+  </nav>
+  {{- end }}
   {{- with .Params.series -}}{{- range (where $.Site.Data.series "key" "eq" .) }}
   {{- $title := .title }}
   <nav aria-labelledby="series-label" class="series">
