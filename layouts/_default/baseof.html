@@ -22,7 +22,7 @@
       <nav class="group" aria-label="Site-wide navigation" typeof="sc:SiteNavigationElement">
         <meta property="sc:name" content="Site-wide navigation" />
         <a href="#skip-to-content"  property="sc:hasPart" class="offscreen">Skip to Main Content</a>
-        <h1><a property="sc:hasPart" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
+        <h1><a property="sc:hasPart" rel="top" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
         <a property="sc:hasPart" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> &middot; </span>
         {{- end }}
