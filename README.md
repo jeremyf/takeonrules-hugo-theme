@@ -52,6 +52,7 @@ Throughout TakeOnRules.com, I make extensive use of the ABBR tag. I use this mar
 
 - [abbr.html](layouts/shortcodes/abbr.html) :: Creates the [ABBR](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr) tag and links to the glossary.
 - [dfn.html](layouts/shortcodes/dfn.html) :: Creates a [DFN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn) along with an ABBR tag and link to glossary.
+- [linkToGame.html](layouts/shortcodes/linkToGame.html) :: Creates a [CITE](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite) tag with a link to an offer to purchase (as defined in the [data/glossary.yml](data/glossary.yml) file).
 
 _**Note:** The `abbr.html` shortcode preceeded the `dfn.html` shortcode.  They include somewhat duplicated logic, which could be further normalized._
 
@@ -60,6 +61,16 @@ Related is the [data/glossary.yml](data/glossary.yml) file which contains the da
 I wrote about the Glossary in <cite><a href="http://takeonrules.com/2020/12/20/many-small-tools-make-light-work-in-emacs/" class="u-url p-name" rel="cite">Many Small Tools Make Light Work (in Emacs)</a></cite>.
 
 These short codes are written such that I won't render the same help link twice; Hence the use of testing a Page's Scratch variable.
+
+#### Todo
+
+The `linkToGame.html` shortcode does similar work as the `dfn.html` shortcode; Which does similar work to `abbr.html`.  I believe I can consolidate these.  Here are the scenarios:
+
+- When I first reference a game, then it should cite the work, link to the offer, and introduce an abbreviation. For example: `<cite><a>Stars without Number: Revised Edition</a></cite> (<abbr title="Stars without Number: Revised Edition">SWN</abbr>). In <abbr title="Stars without Number: Revised Edition">SWN</abbr>...`
+- When I first reference an abbreviation, then it should render the RDFa information.
+- On the first rendering of an abbreviation OR game; In other words, both of these should use the same cache key to determine if I've already rendered the assistive links to content.
+
+In further reading of DFN, I need to remove that shortcode from my blog posts and instead use it for the glossary page.
 
 ### Other Stuff
 
