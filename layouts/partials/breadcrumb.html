@@ -4,17 +4,17 @@
     {{- if eq .Type "post" }}
     {{- $year := .Date.Format "2006" }}
     <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
-      <a property="sc:item" href="{{ .Site.BaseURL }}" typeof="sc:WebPage"><span property="sc:name">Home</span></a>
+      <span property="sc:name"><a property="sc:item" href="{{ .Site.BaseURL }}">Home</a></span>
       <meta property="sc:position" content="1" />
     </span> /
     {{ with .Site.GetPage (printf "/%s" $year) }}
     <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
-      <a property="sc:item" rel="up" href="{{ .Permalink }}" id="{{ .Permalink}}" typeof="sc:WebPage"><span property="sc:name">{{ .Title }}</span></a>
+      <span property="sc:name"><a property="sc:item" rel="up" href="{{ .Permalink }}" id="{{ .Permalink}}">{{ .Title }}</a></span>
       <meta property="sc:position" content="2" />
     </span> /
     {{ end }}
     <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
-      <a property="sc:item" href="{{ .Permalink }}" id="{{ .Permalink}}" typeof="sc:WebPage" class="active"><span property="sc:name">{{ .Title }}</span></a>
+      <span property="sc:name"><a property="sc:item" href="{{ .Permalink }}" id="{{ .Permalink}}" class="active">{{ .Title }}</a></span>
       <meta property="sc:position" content="3" />
     </span>
     {{ else }}
