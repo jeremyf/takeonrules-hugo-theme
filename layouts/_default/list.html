@@ -2,19 +2,19 @@
 {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-<article property="sc:mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" resource="#skip-to-content" typeof="sc:WebPageElement">
+<article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
   <header>
-    <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-    <h1 property="sc:name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+    <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
+    <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
     {{ partial "footer/image.html" . }}
   </header>
-  <section property="sc:text" class="e-content content">
+  <section itemprop="text" class="e-content content">
     <p>
       Below are all of the posts with the <em>{{ .Title }}</em> {{ .Type | singularize }}.
       {{- $type := .Type }}
       {{- range first 1 (where $.Site.Data.glossary (.Type | singularize) "eq" .Title) }}
       {{- if isset . "itemid" }}
-      This {{ $type | singularize }} relates to <span property="sc:keywords" typeof="sc:DefinedTerm"><q property="sc:name">{{ if .offer }}<a href="{{ .offer }}">{{ .title }}</a></q><link property="sc:sameAs" href="{{ .itemid }}" />{{ else }}<a property="sc:sameAs" href="{{ .itemid }}" />{{ .title }}</a></q>{{ end }}</span>.{{- end }}{{- end }}
+      This {{ $type | singularize }} relates to <span itemprop="keywords" itemscope itemtype="http://schema.org/DefinedTerm"><q itemprop="name">{{ if .offer }}<a href="{{ .offer }}">{{ .title }}</a></q><link itemprop="sameAs" href="{{ .itemid }}" />{{ else }}<a itemprop="sameAs" href="{{ .itemid }}" />{{ .title }}</a></q>{{ end }}</span>.{{- end }}{{- end }}
     </p>
     <p>
       I have ordered the posts from newest to oldest:

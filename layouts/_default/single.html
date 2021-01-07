@@ -2,43 +2,43 @@
 {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-<article property="sc:mainEntity" class="h-entry" resource="#skip-to-content" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" typeof="sc:BlogPosting">
+<article itemprop="mainEntity" class="h-entry" itemid="#skip-to-content" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
   <header aria-label="Article header">
-    <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
+    <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
     {{ if isset .Params "series" }}
-    <link property="sc:isPartOf" href="{{ .RelPermalink }}#series-itemscope" />
+    <link itemprop="isPartOf" href="{{ .RelPermalink }}#series-itemscope" />
     {{ end }}
     {{ partial "header/post.html" . }}
   </header>
-  <section property="sc:articleBody" class="content e-content" resource="#content" aria-label="Content">
+  <section itemprop="articleBody" class="content e-content" itemid="#content" aria-label="Content">
     {{- with .Params.sessionReport }}
-    <section aria-label="Session report summary" property="sc:about" typeof="sc:SocialEvent">
-      <link property="sc:subjectOf" href="{{ $.Page.Permalink }}#skip-to-content" />
-      <p><span property="sc:name"><cite>{{ $.Page.Title }}</cite> is a <a property="sc:isPartOf" href="{{ ref $.Page "/site-map/session-reports/index.md"  }}#skip-to-content">game session</a></span> report
+    <section aria-label="Session report summary" itemprop="about" itemscope itemtype="http://schema.org/SocialEvent">
+      <link itemprop="subjectOf" href="{{ $.Page.Permalink }}#skip-to-content" />
+      <p><span itemprop="name"><cite>{{ $.Page.Title }}</cite> is a <a itemprop="isPartOf" href="{{ ref $.Page "/site-map/session-reports/index.md"  }}#skip-to-content">game session</a></span> report
         {{- range first 1 (where $.Site.Data.glossary "game" "eq" .game) }}
-        for <span property="sc:workFeatured" typeof="sc:CreativeWork">
-        {{ with .itemid }}<link property="sc:sameAs" href="{{ . }}" />{{ end }}{{ with .offer }}<a property="sc:offers" href="{{ . }}">{{ end }}<span property="sc:name">{{ .title }}</span>{{ with .offer }}</a>{{ end }}</span>
+        for <span itemprop="workFeatured" itemscope itemtype="http://schema.org/CreativeWork">
+        {{ with .itemid }}<link itemprop="sameAs" href="{{ . }}" />{{ end }}{{ with .offer }}<a itemprop="offers" href="{{ . }}">{{ end }}<span itemprop="name">{{ .title }}</span>{{ with .offer }}</a>{{ end }}</span>
         {{- end }}.
-        We played <span property="sc:location" typeof="sc:Place"><meta property="sc:address" content="{{ $.Site.Title }} HQ" /><span property="sc:name">{{ with .location }}{{ . }}{{ else }}around the table{{ end }}</span></span> on <time property="sc:startDate" datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.
-        <meta property="sc:endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
+        We played <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="{{ $.Site.Title }} HQ" /><span itemprop="name">{{ with .location }}{{ . }}{{ else }}around the table{{ end }}</span></span> on <time itemprop="startDate" datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.
+        <meta itemprop="endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
       </p>
     </section>
     {{- end }}
     {{ .Content }}
     {{- with .Params.theItemReviewed }}
-    <section aria-labelledby="#review-summary-{{ anchorize $.Page.Title }}" property="sc:hasPart" typeof="sc:Review">
-      <link property="sc:isPartOf" href="{{ $.Page.Permalink }}#skip-to-content" />
-      <link property="sc:author" href="{{ $.Site.BaseURL }}#tor-author" />
+    <section aria-labelledby="#review-summary-{{ anchorize $.Page.Title }}" itemprop="hasPart" itemscope itemtype="http://schema.org/Review">
+      <link itemprop="isPartOf" href="{{ $.Page.Permalink }}#skip-to-content" />
+      <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />
       <h2 id="review-summary">Review Summary</h2>
       {{ with .reviewBody }}
-      <p property="sc:reviewBody">{{ partial "unparagraphy.html" . }}</p>
+      <p itemprop="reviewBody">{{ partial "unparagraphy.html" . }}</p>
       {{ else }}
-      <link property="sc:reviewBody" href="#content" />
+      <link itemprop="reviewBody" href="#content" />
       {{ end }}
-      <p property="sc:reviewRating" typeof="sc:Rating">I give it <span property="sc:ratingValue">{{ .ratingValue }}</span> of <span property="sc:bestRating">5</span> stars.</p>
-      <p property="sc:itemReviewed" typeof="sc:{{ with .type }}{{ . }}{{ else }}Book{{ end }}">
-        <cite>{{ $.Page.Title }}</cite> is a review of <span property="sc:name"><a property="sc:sameAs" href="{{ .url }}">{{ .name }}</a></span> by <span property="sc:author">
-          {{ if eq (len .authors) 2 }}{{ delimit .authors "</span> and <span property='sc:author'>"}}{{ else }}{{ delimit .authors "</span>, <span property='sc:author'>"  "</span>, and <span property='sc:author'>" }}{{ end }}</span>.
+      <p itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">I give it <span itemprop="ratingValue">{{ .ratingValue }}</span> of <span itemprop="bestRating">5</span> stars.</p>
+      <p itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .type }}{{ . }}{{ else }}Book{{ end }}">
+        <cite>{{ $.Page.Title }}</cite> is a review of <span itemprop="name"><a itemprop="sameAs" href="{{ .url }}">{{ .name }}</a></span> by <span itemprop="author">
+          {{ if eq (len .authors) 2 }}{{ delimit .authors "</span> and <span itemprop='author'>"}}{{ else }}{{ delimit .authors "</span>, <span itemprop='author'>"  "</span>, and <span itemprop='author'>" }}{{ end }}</span>.
       </p>
     </section>
     {{- end }}

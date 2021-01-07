@@ -2,15 +2,15 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article property="sc:mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" resource="#skip-to-content" typeof="sc:{{ with .Params.Schema }}{{ .type }}{{ else }}WebPageElement{{ end }}">
+  <article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/{{ with .Params.Schema }}{{ .type }}{{ else }}WebPageElement{{ end }}">
     <header>
-      <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-      <h1 property="sc:headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title | safeHTML }}</h1>
+      <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
+      <h1 itemprop="headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title | safeHTML }}</h1>
     {{- with .Params.headline }}
-      <h2 property="sc:alternateHeadline">{{ . }}</h2>
+      <h2 itemprop="alternateHeadline">{{ . }}</h2>
     {{- end }}
     </header>
-    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}property="sc:text"{{ end }}{{ end }} class="e-content content" role="region" aria-label="article content">
+    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}property="text"{{ end }}{{ end }} class="e-content content" role="region" aria-label="article content">
       {{ .Content }}
     </section>
     <footer aria-label="Article footer">

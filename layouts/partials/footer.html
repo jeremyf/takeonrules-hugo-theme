@@ -1,40 +1,40 @@
 <footer class="group credits" aria-label="Site-wide footer">
   <hr  />
-  <span id="tor-contact-point" resource="{{ $.Site.BaseURL }}#tor-contact-point" property="sc:contactPoint" typeof="sc:ContactPoint">
-    <link property="sc:email" href="mailto:{{ $.Site.Params.copyrightHolderEmail }}" />
-    <link property="sc:sameAs" href="{{ $.Site.BaseURL }}contact-me/" />
+  <span id="tor-contact-point" itemid="{{ $.Site.BaseURL }}#tor-contact-point" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
+    <link itemprop="email" href="mailto:{{ $.Site.Params.copyrightHolderEmail }}" />
+    <link itemprop="sameAs" href="{{ $.Site.BaseURL }}contact-me/" />
   </span>
   <small>
-    &copy;<time datetime="{{ now.Format "2006" }}" property="sc:copyrightYear">{{ now.Format "2006" }}</time>&nbsp;
-    <span id="tor-author" resource="{{ $.Site.BaseURL }}#tor-author" property="sc:copyrightHolder" typeof="sc:Person">
-      <link property="sc:contactPoint" href="{{ $.Site.BaseURL}}#tor-contact-point" />
-      <span class="p-name" property="sc:name">
+    &copy;<time datetime="{{ now.Format "2006" }}" itemprop="copyrightYear">{{ now.Format "2006" }}</time>&nbsp;
+    <span id="tor-author" itemid="{{ $.Site.BaseURL }}#tor-author" itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person">
+      <link itemprop="contactPoint" href="{{ $.Site.BaseURL}}#tor-contact-point" />
+      <span class="p-name" itemprop="name">
         <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
           {{ .Site.Params.copyrightHolder }}
         </a>
         {{- range .Site.Params.identifiers }}
-        <link property="sc:sameAs" href="{{ . }}" />
+        <link itemprop="sameAs" href="{{ . }}" />
         {{- end }}
       </span>
     </span>
   </small>
   <br />
   <br />
-  <nav aria-label="Site-wide Footer Links" typeof="sc:SiteNavigationElement">
-    <meta property="sc:name" content="Site-wide Footer Links" />
+  <nav aria-label="Site-wide Footer Links" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <meta itemprop="name" content="Site-wide Footer Links" />
     <small>
-      <a property="sc:hasPart" href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a> &middot; <a property="sc:hasPart" href="/site-map/changelog/">Changelog</a> &middot; <a property="sc:hasPart" href="/privacy-policy/">Privacy Policy</a></small>
+      <a itemprop="hasPart" href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a> &middot; <a itemprop="hasPart" href="/site-map/changelog/">Changelog</a> &middot; <a itemprop="hasPart" href="/privacy-policy/">Privacy Policy</a></small>
   </nav>
-  <span property="sc:isPartOf" typeof="sc:WebSite">
-    <link property="sc:url" href="{{ $.Site.BaseURL }}" />
-    <meta property="sc:name" content="{{ $.Site.Params.title }}" />
+  <span itemprop="isPartOf" itemscope itemtype="http://schema.org/WebSite">
+    <link itemprop="url" href="{{ $.Site.BaseURL }}" />
+    <meta itemprop="name" content="{{ $.Site.Params.title }}" />
   </span>
-  <span id="tor-organization" resource='{{ $.Site.BaseURL }}#tor-organization' typeof="sc:Organization" >
-    <meta property="sc:name" content="{{ $.Site.Params.title }}" />
-    <link property="sc:url" href="{{ $.Site.BaseURL }}" />
-    <link property="sc:contactPoint" href="{{ $.Site.BaseURL }}#tor-contact-point" />
-    <span id="microdata-logo" resource="{{ $.Site.BaseURL }}#microdata-logo" property="sc:logo" typeof="sc:ImageObject">
-      <link property="sc:url" href="{{ $.Site.BaseURL }}{{ $.Site.Params.organizationImagePath }}" />
+  <span id="tor-organization" itemid='{{ $.Site.BaseURL }}#tor-organization' itemscope itemtype="http://schema.org/Organization" >
+    <meta itemprop="name" content="{{ $.Site.Params.title }}" />
+    <link itemprop="url" href="{{ $.Site.BaseURL }}" />
+    <link itemprop="contactPoint" href="{{ $.Site.BaseURL }}#tor-contact-point" />
+    <span id="microdata-logo" itemid="{{ $.Site.BaseURL }}#microdata-logo" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <link itemprop="url" href="{{ $.Site.BaseURL }}{{ $.Site.Params.organizationImagePath }}" />
     </span>
   </span>
 </footer>

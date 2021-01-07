@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" prefix="sc: http://schema.org/ og: http://ogp.me/ns# article: http://ogp.me/ns/article# dct: http://purl.org/dc/terms/ cc: https://creativecommons.org/ns#">
+<html lang="en-us" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# dct: http://purl.org/dc/terms/ cc: https://creativecommons.org/ns#">
   <head>
     <meta charset="utf-8" />
     {{ block "head-title" . }}
@@ -17,16 +17,16 @@
     {{ partial "head" . }}
     {{ end }}
   </head>
-  <body class="type-{{ .Type }} {{ if isset .Params "full_width"}}full{{ else }}{{ if .IsHome }}full{{ else }}default{{ end }}{{ end }}-width" typeof="sc:{{ with .Params.schema_dot_org_type }}{{ . }}{{ else }}WebPage{{ end }}">
+  <body class="type-{{ .Type }} {{ if isset .Params "full_width"}}full{{ else }}{{ if .IsHome }}full{{ else }}default{{ end }}{{ end }}-width" itemscope itemtype="http://schema.org/{{ with .Params.schema_dot_org_type }}{{ . }}{{ else }}WebPage{{ end }}">
     <header aria-label="Site-wide header">
-      <nav class="group" aria-label="Site-wide navigation" typeof="sc:SiteNavigationElement">
-        <meta property="sc:name" content="Site-wide navigation" />
-        <a href="#skip-to-content"  property="sc:hasPart" class="offscreen">Skip to Main Content</a>
-        <h1><a property="sc:hasPart" rel="home" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
+      <nav class="group" aria-label="Site-wide navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <meta itemprop="name" content="Site-wide navigation" />
+        <a href="#skip-to-content"  itemprop="hasPart" class="offscreen">Skip to Main Content</a>
+        <h1><a itemprop="hasPart" rel="home" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}class="active"{{end}} title="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
-        <a property="sc:hasPart" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> &middot; </span>
+        <a itemprop="hasPart" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}class="active"{{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a><span class="hidden"> &middot; </span>
         {{- end }}
-        <a property="sc:hasPart" {{ if eq (string $.Page.RelPermalink) "/search/" }}class="active"{{ end }} rel="search" id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a>
+        <a itemprop="hasPart" {{ if eq (string $.Page.RelPermalink) "/search/" }}class="active"{{ end }} rel="search" id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a>
       </nav>
       <script>
        var form = document.getElementById('search-link');

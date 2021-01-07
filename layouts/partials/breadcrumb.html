@@ -1,21 +1,21 @@
 <section id="skip-to-page-context-navigation" aria-label="Context Navigation around «{{ .Title | markdownify | plainify }}»">
-  <nav aria-labelledby="breadcrumbs-label" class="breadcrumbs" typeof="sc:BreadcrumbList" role="list">
-    <span id="breadcrumbs-label" property="sc:name" class="label">Breadcrumbs </span>
+  <nav aria-labelledby="breadcrumbs-label" class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList" role="list">
+    <span id="breadcrumbs-label" itemprop="name" class="label">Breadcrumbs </span>
     {{- if eq .Type "post" }}
     {{- $year := .Date.Format "2006" }}
-    <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
-      <span property="sc:name"><a property="sc:item" href="{{ .Site.BaseURL }}">Home</a></span>
-      <meta property="sc:position" content="1" />
+    <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <span itemprop="name"><a itemprop="item" href="{{ .Site.BaseURL }}">Home</a></span>
+      <meta itemprop="position" content="1" />
     </span> /
     {{ with .Site.GetPage (printf "/%s" $year) }}
-    <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
-      <span property="sc:name"><a property="sc:item" rel="up" href="{{ .Permalink }}" id="{{ .Permalink}}">{{ .Title }}</a></span>
-      <meta property="sc:position" content="2" />
+    <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <span itemprop="name"><a itemprop="item" rel="up" href="{{ .Permalink }}" id="{{ .Permalink}}">{{ .Title }}</a></span>
+      <meta itemprop="position" content="2" />
     </span> /
     {{ end }}
-    <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
-      <span property="sc:name"><a property="sc:item" href="{{ .Permalink }}" id="{{ .Permalink}}" class="active">{{ .Title }}</a></span>
-      <meta property="sc:position" content="3" />
+    <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <span itemprop="name"><a itemprop="item" href="{{ .Permalink }}" id="{{ .Permalink}}" class="active">{{ .Title }}</a></span>
+      <meta itemprop="position" content="3" />
     </span>
     {{ else }}
     {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3 "site" .Site) }}
@@ -24,15 +24,15 @@
   {{- if in .Site.Params.paginatedSections .Type -}}
   <nav aria-labelledby="post-neighbors-label" class="paginator">
     <span id="post-neighbors-label" class="label">Post Neighbors </span>
-    {{- with .PrevInSection }}<a property="sc:relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>&nbsp;{{- end }}{{- with .NextInSection }}&middot;&nbsp;<a property="sc:relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
+    {{- with .PrevInSection }}<a itemprop="relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous post</a>&nbsp;{{- end }}{{- with .NextInSection }}&middot;&nbsp;<a itemprop="relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next post</a>{{- end }}
   </nav>
   {{- end }}
   {{- if or .Params.relPrevious .Params.relNext }}
   <nav aria-labelledby="{{ .Type }}-neighbors-label" class="paginator">
     <span id="{{ .Type }}-neighbors-label" class="label">{{ title .Type }} Neighbors </span>
-    {{- with .Params.relPrevious }}<a property="sc:relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous {{ with .Label }}{{ . }}{{ end }}</a>{{- end }}
+    {{- with .Params.relPrevious }}<a itemprop="relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev">Previous {{ with .Label }}{{ . }}{{ end }}</a>{{- end }}
     {{- if and .Params.relPrevious .Params.relNext }}&nbsp;&middot;&nbsp{{ end }}
-    {{- with .Params.relNext }}<a property="sc:relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next {{ with .Label }}{{ . }}{{ end }}</a>{{- end }}
+    {{- with .Params.relNext }}<a itemprop="relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">Next {{ with .Label }}{{ . }}{{ end }}</a>{{- end }}
   </nav>
   {{- end }}
   {{- with .Params.series -}}{{- range (where $.Site.Data.series "key" "eq" .) }}
@@ -40,7 +40,7 @@
   <nav aria-labelledby="series-label" class="series">
     {{- $series := where $.Site.Pages "Params.series" .key }}
     {{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
-    <span id="series-label" class="label">Part of Series </span><span resource="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" typeof="sc:CreativeWorkSeries"><cite property="sc:headline"><a property="sc:url" href="{{ $seriesUrl }}" rel="bookmark">{{ $title }}</a></cite></span>&nbsp;{{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}{{- range first 1 $prev }}&middot; <a property="sc:relatedLink" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Previous in Series</a>&nbsp;{{- end }}{{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}{{- range last 1 $next }}&middot; <a property="sc:relatedLink" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Next in Series</a>{{- end }}
+    <span id="series-label" class="label">Part of Series </span><span itemid="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" itemscope itemtype="http://schema.org/CreativeWorkSeries"><cite itemprop="headline"><a itemprop="url" href="{{ $seriesUrl }}" rel="bookmark">{{ $title }}</a></cite></span>&nbsp;{{- $prev := where $series ".PublishDate" "lt" $.Page.PublishDate }}{{- range first 1 $prev }}&middot; <a itemprop="relatedLink" rel="prev" title="{{ .Title }}" href="{{ .Permalink }}">Previous in Series</a>&nbsp;{{- end }}{{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}{{- range last 1 $next }}&middot; <a itemprop="relatedLink" rel="next" title="{{ .Title }}" href="{{ .Permalink }}">Next in Series</a>{{- end }}
   </nav>
   {{- end }}{{- end }}
   {{- define "breadcrumbnav" }}
@@ -49,9 +49,9 @@
   {{- else if not .p1.IsHome }}
   {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) "site" .site) }} /
   {{- end }}
-  <span role="listitem" property="sc:itemListElement" typeof="sc:ListItem">
-    <a property="sc:item" id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}" {{ if eq .p1 .p2 }}class="active"{{ end }}><span property="sc:name">{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}</span></a>
-    <meta property="sc:position" content="{{ .depth }}" />
+  <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <a itemprop="item" id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}" {{ if eq .p1 .p2 }}class="active"{{ end }}><span itemprop="name">{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}</span></a>
+    <meta itemprop="position" content="{{ .depth }}" />
   </span>
   {{- end }}
 </section>

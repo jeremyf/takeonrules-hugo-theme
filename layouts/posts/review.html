@@ -3,32 +3,32 @@
 {{ end }}
 
 {{ define "main" }}
-<article property="sc:mainEntity" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" resource="#skip-to-content" typeof="sc:Review">
+<article itemprop="mainEntity" class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemid="#skip-to-content" itemscope itemtype="http://schema.org/Review">
     <header aria-labelledby="{{ anchorize .Title }}">
-      <link property="sc:mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
+      <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
       {{ partial "header/post.html" . }}
-      {{- with .Params.description }}<meta property="sc:description" content="{{ . | plainify }}" />{{- end }}
+      {{- with .Params.description }}<meta itemprop="description" content="{{ . | plainify }}" />{{- end }}
       {{- with .Params.ratingValue }}
-      <span property="sc:reviewRating" typeof="sc:Rating">
-        <meta property="sc:ratingValue">{{ . }}</meta>
+      <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+        <meta itemprop="ratingValue">{{ . }}</meta>
       </span>
       {{- end }}
-      <span property="sc:itemReviewed" typeof="sc:{{ with .Params.itemReviewedType }}{{ . }}{{ else }}Book{{ end }}">
+      <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .Params.itemReviewedType }}{{ . }}{{ else }}Book{{ end }}">
         {{ with .Params.itemReviewed }}
-          <link property="sc:url" href="{{ .url }}" />
-          <meta property="sc:name" content="{{ .name }}" />
+          <link itemprop="url" href="{{ .url }}" />
+          <meta itemprop="name" content="{{ .name }}" />
           {{ range .authors }}
-          <meta property="sc:author" content="{{ . }}" />
+          <meta itemprop="author" content="{{ . }}" />
           {{ end }}
           {{- with .isbn }}
-          <meta property="sc:isbn" content="{{ . }}" />
+          <meta itemprop="isbn" content="{{ . }}" />
           {{- end }}
         {{ else }}
           {{ .Get }}
         {{ end }}
       </span>
     </header>
-    <section property="sc:reviewBody" class="content e-content" aria-label="Content" >
+    <section itemprop="reviewBody" class="content e-content" aria-label="Content" >
       {{ .Content }}
     </section>
     <footer>

@@ -1,6 +1,6 @@
 {{- with .Params.dreprecated_partial_series }}<nav aria-labelledby="skip-to-series-navigation">
   {{- range (where $.Site.Data.series "key" "eq" .) }}  {{- $title := .title }}
-  <h2 property="sc:articleSection" id="skip-to-series-navigation">
+  <h2 itemprop="articleSection" id="skip-to-series-navigation">
     Series: <a href="{{ "series" | absURL }}/{{ .key | urlize }}" rel="bookmark"><cite>{{ $title }}</cite></a>
   </h2>
   <p>

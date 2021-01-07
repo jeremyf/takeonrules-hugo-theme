@@ -1,17 +1,18 @@
-<article property="sc:citation" class="licensed" aria-labelledby="{{- with .Get "h2"}}{{ . | anchorize }}{{- end }}" typeof="sc:CreativeWork">
+<article itemprop="citation" class="licensed" aria-labelledby="{{- with .Get "h2"}}{{ . | anchorize }}{{- end }}" itemscope itemtype="http://schema.org/CreativeWork">
   <header aria-label="Embedded article header">
   <p class="wrapper"><small>Begin <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) Content</a></small></p>
-  {{ with .Get "h2"}}<h2 property="sc:Headline" id="{{ . | anchorize }}">{{ . }}</h2>{{ end }}
+  {{ with .Get "h2"}}<h2 itemprop="Headline" id="{{ . | anchorize }}">{{ . }}</h2>{{ end }}
   </header>
-  <section property="sc:text" aria-label="Embedded content">
+  <section itemprop="text" aria-label="Embedded content">
     {{ .Inner | markdownify }}
   </section>
   <footer aria-label="Embedded article header">
     <p class="wrapper"><small>End <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) Content</a></small></p>
-    <p property="sc:copyrightNotice">
+    <p itemprop="copyrightNotice">
     <small>
-      <cite xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">{{ with .Get "h2"}}{{ . }}{{ end }}</cite> by <a xmlns:cc="http://creativecommons.org/ns#" href="{{ $.Site.BaseURL }}" property="cc:attributionName" rel="cc:attributionURL">{{ $.Site.Params.copyrightHolder }}</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="{{ $.Page.Permalink }}" rel="dct:source">{{ $.Page.Permalink }}</a>.{{ if isset .Site.Params "morepermissionspermalink" }} Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" property="acquireLicensePage" href="{{ .Site.Params.morePermissionsPermalink }}" rel="cc:morePermissions">{{ .Site.Params.morePermissionsPermalink }}</a>.{{ end }}
+      <cite xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">{{ with .Get "h2"}}{{ . }}{{ end }}</cite> by <a xmlns:cc="http://creativecommons.org/ns#" href="{{ $.Site.BaseURL }}" property="cc:attributionName" rel="cc:attributionURL">{{ $.Site.Params.copyrightHolder }}</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="{{ $.Page.Permalink }}" rel="dct:source">{{ $.Page.Permalink }}</a>.{{ if isset .Site.Params "morepermissionspermalink" }} Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" itemprop="acquireLicensePage" href="{{ .Site.Params.morePermissionsPermalink }}" rel="cc:morePermissions">{{ .Site.Params.morePermissionsPermalink }}</a>.{{ end }}
     </small>
     </p>
   </footer>
 </article>
+535-9100
