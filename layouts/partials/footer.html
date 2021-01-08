@@ -4,27 +4,6 @@
     <link itemprop="email" href="mailto:{{ $.Site.Params.copyrightHolderEmail }}" />
     <link itemprop="sameAs" href="{{ $.Site.BaseURL }}contact-me/" />
   </span>
-  <small>
-    &copy;<time datetime="{{ now.Format "2006" }}" itemprop="copyrightYear">{{ now.Format "2006" }}</time>&nbsp;
-    <span id="tor-author" itemid="{{ $.Site.BaseURL }}#tor-author" itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person">
-      <link itemprop="contactPoint" href="{{ $.Site.BaseURL}}#tor-contact-point" />
-      <span class="p-name" itemprop="name">
-        <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
-          {{ .Site.Params.copyrightHolder }}
-        </a>
-        {{- range .Site.Params.identifiers }}
-        <link itemprop="sameAs" href="{{ . }}" />
-        {{- end }}
-      </span>
-    </span>
-  </small>
-  <br />
-  <br />
-  <nav aria-label="Site-wide Footer Links" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <meta itemprop="name" content="Site-wide Footer Links" />
-    <small>
-      <a itemprop="hasPart" href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a> &middot; <a itemprop="hasPart" href="/site-map/changelog/">Changelog</a> &middot; <a itemprop="hasPart" href="/privacy-policy/">Privacy Policy</a></small>
-  </nav>
   <span itemprop="isPartOf" itemscope itemtype="http://schema.org/WebSite">
     <link itemprop="url" href="{{ $.Site.BaseURL }}" />
     <meta itemprop="name" content="{{ $.Site.Params.title }}" />
@@ -37,4 +16,22 @@
       <link itemprop="url" href="{{ $.Site.BaseURL }}{{ $.Site.Params.organizationImagePath }}" />
     </span>
   </span>
+  <small>
+    &copy;<time datetime="{{ now.Format "2006" }}" itemprop="copyrightYear">{{ now.Format "2006" }}</time>&nbsp;
+    <span id="tor-author" itemid="{{ $.Site.BaseURL }}#tor-author" itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person">
+      <link itemprop="contactPoint" href="{{ $.Site.BaseURL}}#tor-contact-point" />
+      {{- range .Site.Params.identifiers }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}
+      <span class="p-name" itemprop="name">
+        <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
+          {{ .Site.Params.copyrightHolder }}
+        </a>
+      </span>
+    </span>
+  </small>
+  <br />
+  <nav aria-label="Site-wide Footer Links" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <meta itemprop="name" content="Site-wide Footer Links" />
+    <small>
+      <a itemprop="hasPart" href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a> &middot; <a itemprop="hasPart" href="/site-map/changelog/">Changelog</a> &middot; <a itemprop="hasPart" href="/privacy-policy/">Privacy Policy</a></small>
+  </nav>
 </footer>
