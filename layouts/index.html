@@ -7,7 +7,7 @@
   {{- end }}
 {{ end }}
 {{ define "breadcrumb" }}
-<section id="skip-to-page-context-navigation" aria-label="Context Navigation around Homepage">
+<section aria-label="Context Navigation around Homepage">
     {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
     <nav aria-labelledby="blog-pagination-label" class="paginator">
       <span class="label" id="blog-pagination-label">Blog postings pagination </span>
