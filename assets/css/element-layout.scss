@@ -25,10 +25,12 @@ blockquote {
   pre.preWhiteSpace {
       font-family: var(--body-font);
       color: var(--blockquote);
+      width: auto;
   }
   footer {
     text-align: right;
     margin-left: 1rem;
+    margin-top: 1rem;
   }
 }
 
