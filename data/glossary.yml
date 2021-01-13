@@ -365,6 +365,11 @@
   abbr: d20
 - title: 'Dark Six: A Primal Eberron Pantheon'
   tag: dark six
+- title: 'Dead Names: Lost Races and Forgotten Ruins'
+  key: DEAD-NAMES
+  offer: https://www.drivethrurpg.com/product/130967/Dead-Names-Lost-Races-and-Forgotten-Ruins?affiliate_id=318171
+  game: dead names
+  abbr: Dead Names
 - title: Death
   tag: death
 - title: Defund the Police
@@ -427,6 +432,9 @@
   itemid: https://www.wikidata.org/wiki/Q2607653
   tag: dogs in the vineyard
   abbr: DitV
+- title: Domain Name System
+  key: DNS
+  itemid: https://www.wikidata.org/wiki/Q8767
 - title: Doom of the Savage King
   itemid: https://rpggeek.com/rpgitem/125110/doom-savage-kings
   offer: https://www.drivethrurpg.com/product/129075/Dungeon-Crawl-Classics-665-Doom-of-the-Savage-King?affiliate_id=318171
@@ -689,6 +697,10 @@
   itemid: https://www.wikidata.org/wiki/Q24415127
   tag: hugo
   abbr: Hugo
+- title: Human Resources
+  key: HR
+  abbr: HR
+  itemid: https://www.wikidata.org/wiki/Q5467169
 - title: Hypertext Markup Language
   key: HTML
   itemid: https://www.wikidata.org/wiki/Q8811
@@ -897,6 +909,9 @@
   abbr: MCr
 - title: Megadungeon
   tag: megadungeon
+- title: Mentorship
+  tag: mentorship
+  itemid: https://www.wikidata.org/wiki/Q967647
 - title: Meta
   tag: meta
 - title: Micro Culture
@@ -1276,6 +1291,12 @@
 - title: Secure Hypertext Transfer Protocol
   key: HTTPS
   itemid: https://www.wikidata.org/wiki/Q277919
+- title: Secure Shell
+  key: SSH
+  itemid: https://www.wikidata.org/wiki/Q170460
+  description: cryptographic network protocol for secure data communication, remote
+    shell services or command execution and other secure network services between
+    two networked computers
 - title: Secure Sockets Layer
   key: SSL
   itemid: https://www.wikidata.org/wiki/Q206494
@@ -1503,6 +1524,11 @@
   itemid: https://www.wikidata.org/wiki/Q104254746
 - title: Today I Learned
   tag: today i learned
+- title: Tomb of Adventure Design
+  key: TOAD
+  game: tome of adventure design
+  offer: https://www.drivethrurpg.com/product/97423/Tome-of-Adventure-Design?affiliate_id=318171
+  abbr: ToAD
 - title: Tomb of Annihilation
   key: TOA
   itemid: https://www.wikidata.org/wiki/Q67311483
@@ -1678,19 +1704,3 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- title: "Dead Names: Lost Races and Forgotten Ruins"
-  key: DEAD-NAMES
-  offer: https://www.drivethrurpg.com/product/130967/Dead-Names-Lost-Races-and-Forgotten-Ruins?affiliate_id=318171
-  game: dead names
-  abbr: Dead Names
-- title: "Tomb of Adventure Design"
-  key: TOAD
-  game: tome of adventure design
-  offer: https://www.drivethrurpg.com/product/97423/Tome-of-Adventure-Design?affiliate_id=318171
-  abbr: ToAD
-- title: Domain Name System
-  key: DNS
-  itemid: https://www.wikidata.org/wiki/Q8767
-- title: Mentorship
-  tag: mentorship
-  itemid: https://www.wikidata.org/wiki/Q967647
