@@ -3,7 +3,7 @@
   <ul>
     {{ range first 5 (.Site.RegularPages.Related .) }}
       <li>
-        <cite><a aria-label="Related post: {{ .Title }}" rel="bookmark" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></cite>
+        <cite><a rel="bookmark" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></cite>
       </li>
     {{ end }}
   </ul>
