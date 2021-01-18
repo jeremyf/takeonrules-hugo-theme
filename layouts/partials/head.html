@@ -1,15 +1,17 @@
 {{- if .Params.canonical_url }}
   <link rel="canonical" href="{{ .Params.canonical_url }}" />
-{{- else }}
-  {{- if .RelPermalink }}
-    <link rel="canonical" href="{{ .RelPermalink }}" />
-  {{- end }}
+{{- else if .RelPermalink }}
+  <link rel="canonical" href="{{ .RelPermalink }}" />
 {{- end }}
 {{ partialCached "head-duplicated-info.html" . }}
 
 {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}" />{{ end }}
 {{- if in (slice "term" "taxonomy" "taxonomyTerm") .Kind }}
 <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml" />
+{{- end }}
+
+{{- range .Params.AlternativeOutputFormats }}
+  <link rel="{{ .Rel }}" type="{{ .Type }}" href="{{ .Permalink }}" title="{{ .Title }}" />
 {{- end }}
 
 {{ partial "opengraph.html" . }}
