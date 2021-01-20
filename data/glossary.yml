@@ -1704,3 +1704,7 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
+- key: ATOM-FEED
+  itemid: https://www.wikidata.org/wiki/Q267956
+  title: Atom Syndication Format
+  abbr: Atom
