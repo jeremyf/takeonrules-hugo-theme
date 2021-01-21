@@ -99,6 +99,10 @@
 - title: Arts and Crafts
   itemid: https://www.wikidata.org/wiki/Q810592
   tag: arts and crafts
+- key: ATOM-FEED
+  itemid: https://www.wikidata.org/wiki/Q267956
+  title: Atom Syndication Format
+  abbr: Atom
 - title: Atom text editor
   key: ATOM
   itemid: https://www.wikidata.org/wiki/Q16766305
@@ -995,6 +999,11 @@
 - title: Obstacle
   key: OB
   abbr: Ob
+- game: ose
+  title: Old School Essentials
+  abbr: OSE
+  key: OSE
+  offer: https://www.drivethrurpg.com/product/279183/OldSchool-Essentials-Classic-Fantasy-Rules-Tome?affiliate_id=318171
 - title: Old School Hack
   itemid: https://rpggeek.com/rpg/9453/old-school-hack
   tag: old school hack
@@ -1704,7 +1713,3 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- key: ATOM-FEED
-  itemid: https://www.wikidata.org/wiki/Q267956
-  title: Atom Syndication Format
-  abbr: Atom
