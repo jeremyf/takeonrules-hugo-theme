@@ -971,6 +971,11 @@
 - title: Mouse Guard RPG
   itemid: https://www.wikidata.org/wiki/Q17142058
   tag: mouse guard
+- title: Mouseguard
+  key: MG
+  game: mouseguard
+  offer: https://www.burningwheel.com/mouse-guard/
+  itemid: https://www.wikidata.org/wiki/Q17142058
 - title: Movement
   key: MV
 - title: Necromancer's Maze
@@ -1620,6 +1625,12 @@
   itemid: https://www.wikidata.org/wiki/Q5490
   tag: warhammer fantasy
   abbr: WHF
+- title: Warhammer Fantasy Setting
+  key: WHFS
+  abbr: WHFS
+  offer: https://www.drivethrurpg.com/browse.php?filters=0_0_44232_0_0&term=warhammer%20fantasy&affiliate_id=318171
+  itemid: https://www.wikidata.org/wiki/Q15831558
+  game: whfs
 - title: Weapon Speed
   key: WS
 - title: Web Content Accessibility Guidelines
@@ -1713,9 +1724,3 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- title: Warhammer Fantasy Setting
-  key: WHFS
-  abbr: WHFS
-  offer: https://www.drivethrurpg.com/browse.php?filters=0_0_44232_0_0&term=warhammer%20fantasy&affiliate_id=318171
-  itemid: https://www.wikidata.org/wiki/Q15831558
-  game: whfs
