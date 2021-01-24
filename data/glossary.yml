@@ -1713,3 +1713,9 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
+- title: Warhammer Fantasy Setting
+  key: WHFS
+  abbr: WHFS
+  offer: https://www.drivethrurpg.com/browse.php?filters=0_0_44232_0_0&term=warhammer%20fantasy&affiliate_id=318171
+  itemid: https://www.wikidata.org/wiki/Q15831558
+  game: whfs
