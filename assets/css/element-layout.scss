@@ -172,6 +172,8 @@ main > article {
         width: 85%;
         * { width: auto; }
     }
+    // Necessary for the lengthy footer and possible marginalia over-run
+    > footer > * { width: 60%; }
 }
 
 // breadcrumb
