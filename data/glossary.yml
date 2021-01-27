@@ -972,11 +972,8 @@
   itemid: https://www.wikidata.org/wiki/Q17142058
   game: mouseguard
   tag: mouse guard
-- title: Mouseguard
   key: MG
-  game: mouseguard
   offer: https://www.burningwheel.com/mouse-guard/
-  itemid: https://www.wikidata.org/wiki/Q17142058
 - title: Movement
   key: MV
 - title: Necromancer's Maze
