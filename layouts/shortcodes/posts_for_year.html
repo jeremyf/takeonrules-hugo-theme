@@ -2,6 +2,7 @@
 {{- $data := index .Site.Data.yearEndReports $year }}
 {{- if $data }}
 {{- $posts := where (where (where .Site.Pages "Type" "in" .Site.Params.paginatedSections) "Date.Year" "eq" (int $year)) "Draft" "eq" false  }}
+{{- $wordCount := 0 }}{{- range $posts }}{{- $wordCount = add $wordCount .WordCount }}{{- end }}
 
 <p>This page provides an overview into what happened on <cite>{{ .Site.Title }}</cite> during <time datetime="{{ $year}}">{{ $year }}</time>.</p>
 
@@ -10,6 +11,7 @@
   <p>Each year, most of what I write are blog posts.</p>
   <details open="true">
     <summary>In <time datetime="{{ $year }}">{{ $year }}</time>, I wrote {{ len $posts }} posts&hellip;</summary>
+    <div role="note" class="margin"><p><small>The {{ len $posts }} posts have about {{ $wordCount }} words, for an average of {{ div $wordCount (len $posts ) }} words per post.</small></p></div>
     <ul>
       {{- range $posts.GroupByDate "January" }}
       <li><details open="true">
@@ -35,7 +37,7 @@
 
   <p>Some of these posts, I've written as part of a series.</p>
 
-  <div role="note" class="margin"><small>Read about <a href="/series/">all of the series on <q>Take on Rules</q></a>.</small></div>
+  <div role="note" class="margin"><p><small>Read about <a href="/series/">all of the series on <q>Take on Rules</q></a>.</small></p></div>
 
   <details>
     <summary>I've Posted into {{ len $series }} Series&hellip;</h2></summary>
