@@ -14,13 +14,13 @@
     {{- with .Params.sessionReport }}
     <section aria-label="Session report summary" itemprop="about" itemscope itemtype="http://schema.org/SocialEvent">
       <link itemprop="subjectOf" href="{{ $.Page.Permalink }}#skip-to-content" />
-      <p><span itemprop="name"><cite>{{ $.Page.Title }}</cite> is a <a itemprop="isPartOf" href="{{ ref $.Page "/site-map/session-reports/index.md"  }}#skip-to-content">game session</a></span> report
+      <p><small><span itemprop="name"><cite>{{ $.Page.Title }}</cite> is a <a itemprop="isPartOf" href="{{ ref $.Page "/site-map/session-reports/index.md"  }}#skip-to-content">game session</a></span> report
         {{- range first 1 (where $.Site.Data.glossary "game" "eq" .game) }}
-        for <span itemprop="workFeatured" itemscope itemtype="http://schema.org/CreativeWork">
-        {{ with .itemid }}<link itemprop="sameAs" href="{{ . }}" />{{ end }}{{ with .offer }}<a itemprop="offers" href="{{ . }}">{{ end }}<span itemprop="name">{{ .title }}</span>{{ with .offer }}</a>{{ end }}</span>
+        for <cite itemprop="workFeatured" itemscope itemtype="http://schema.org/CreativeWork">
+        {{ with .itemid }}<link itemprop="sameAs" href="{{ . }}" />{{ end }}{{ with .offer }}<a itemprop="offers" href="{{ . }}">{{ end }}<span itemprop="name">{{ .title }}</span>{{ with .offer }}</a>{{ end }}</cite>
         {{- end }}.
         We played <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="{{ $.Site.Title }} HQ" /><span itemprop="name">{{ with .location }}{{ . }}{{ else }}around the table{{ end }}</span></span> on <time itemprop="startDate" datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.
-        <meta itemprop="endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
+        <meta itemprop="endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" /></small>
       </p>
     </section>
     {{- end }}
