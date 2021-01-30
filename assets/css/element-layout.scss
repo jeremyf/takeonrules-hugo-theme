@@ -143,7 +143,7 @@ a.offscreen {
 
 dl {
   display: table;
-  dt { font-weight: bold; clear: left; padding-top: 1rem; }
+  dt { font-weight: bold; clear: left; }
   dd { margin-left: 2rem; text-indent: -1rem; }
   dt:after { content: ":"; }
   dd:before { content: "· "; }
@@ -172,8 +172,6 @@ main > article {
         width: 85%;
         * { width: auto; }
     }
-    // Necessary for the lengthy footer and possible marginalia over-run
-    > footer > * { width: 60%; }
 }
 
 // breadcrumb
