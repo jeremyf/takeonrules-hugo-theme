@@ -60,13 +60,13 @@
 {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
   <div class="feeds" aria-labelledby="series-feed-label" role="list">
     <span id="series-feed-label" class="label">Series feed </span>
-    <a role="listitem" href="{{ $.Page.Permalink }}index.xml"><q>{{ .title }}</q> series RSS feed</a>
+    <a role="listitem" href="{{ $.Page.Permalink }}index.xml"> RSS feed for <q>{{ .title }}</q> series</a>
   </div>
   {{- end }}
 {{- else if eq .Type "tags" }}
   <div class="feeds" aria-labelledby="tag-feed-label" role="list">
     <span id="tag-feed-label" class="label">Tag feed </span>
-    <a role="listitem" href="{{ $.Page.Permalink }}index.xml"><q>{{ .Title }}</q> tag RSS feed</a>
+    <a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .Title }}</q> tag</a>
   </div>
 {{- end }}
 {{- end }}
