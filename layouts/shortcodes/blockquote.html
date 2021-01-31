@@ -10,8 +10,8 @@
 {{- end }}
 {{- $post := .Get "post" }}
 <blockquote itemprop="citation" class="h-cite {{- with .Get "epigraph" }} epigraph{{- end }}" {{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
-{{ if .Get "preWhiteSpace" }}
-<pre class="preWhiteSpace">{{ .Inner }}</pre>
+{{ if .Get "poem" }}
+<pre class="poem">{{ .Inner }}</pre>
 {{ else }}
 {{ .Inner | markdownify }}
 {{ end }}
