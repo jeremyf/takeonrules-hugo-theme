@@ -63,12 +63,17 @@
     <a role="listitem" href="{{ $.Page.Permalink }}index.xml"> RSS feed for <q>{{ .title }}</q> series</a>
   </div>
   {{- end }}
-{{- else if eq .Type "tags" }}
-  <div class="feeds" aria-labelledby="tag-feed-label" role="list">
-    <span id="tag-feed-label" class="label">Tag feed </span>
-    <a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .Title }}</q> tag</a>
+{{- else }}
+  <div class="feeds" aria-labelledby="{{ .Type | singularize | anchorize }}-feed-label" role="list">
+    <span id="{{ .Type | singularize | anchorize }}-feed-label" class="label">{{ .Type | singularize | title }} feed </span>
+    <a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .Title }}</q></a>
   </div>
 {{- end }}
+{{- else if eq .Kind "taxonomy" }}
+  <div class="feeds" aria-labelledby="{{ .Type | anchorize }}-feed-label" role="list">
+    <span id="{{ .Type | anchorize }}-feed-label" class="label">{{ .Type | title }} feed </span>
+    <a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for the list of {{ .Type | title }}</a>
+  </div>
 {{- end }}
 </section>
 <hr class="hidden" />
