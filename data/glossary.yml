@@ -447,6 +447,9 @@
 - title: Dragonknights
   game: dragonknights
   tag: dragonknights
+- title: Dreams
+  tag: dreams
+  itemid: https://www.wikidata.org/wiki/Q36348
 - title: Dreams of Adventure
   tag: dreams of adventure
 - title: Dresden Files
@@ -600,6 +603,9 @@
   tag: open source
 - title: Friendly Local Game Store
   key: FLGS
+- title: Friendship
+  tag: friendship
+  itemid: https://www.wikidata.org/wiki/Q491
 - title: Fritz Leiber
   itemid: https://www.wikidata.org/wiki/Q313185
   tag: leiber
