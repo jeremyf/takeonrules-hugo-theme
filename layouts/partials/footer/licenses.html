@@ -1,7 +1,7 @@
 {{- if isset .Params "licenses" }}
 {{- $licenses := .Params.licenses }}
 {{- if gt (len $licenses) 0 }}
-<nav itemprop="copyrightNotice" aria-labelledby="licenses">
+<section itemprop="copyrightNotice" aria-labelledby="licenses">
   <h2 id="licenses">License(s)</h2>
   {{ $context := . }}
   {{ range .Params.licenses }}
@@ -13,4 +13,4 @@
     </small>
   </p>
   {{ end }}
-</nav>{{- end }}{{- end }}
+</section>{{- end }}{{- end }}

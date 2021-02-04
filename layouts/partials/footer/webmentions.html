@@ -1,9 +1,18 @@
 {{- if isset .Params "webmentions" }}
-<nav aria-labelledby="header-webmentions">
-  <h2>Mentions</h2>
-  <details>
-    <summary id="header-webmentions">There {{ with .Params.webmentions | len }}{{ if eq . 1}} is {{ . }} mention{{ else }} are {{ . }} mentions{{ end }}{{ end }} of this post&hellip;</summary>
-    <ul>
+<section aria-labelledby="header-webmentions">
+  <h2 id="header-webmentions">Mentions</h2>
+  <form aria-label="Submit your mention URL" id="webmention-form" action="https://webmention.io/takeonrules.com/webmention" method="POST" >
+    <fieldset>
+      <legend id="mention-legend">Did you reply somewhere else to this post? Submit your reply's URL as a <a href="https://indieweb.org/webmention">webmention</a>.</legend>
+    <input name="target" value="{{ .RelPermalink}}" type="hidden">
+    <label for="mention-source">Your Reploy URL</label>: <input id="mention-source" class="input" name="source" placeholder="Your reply URL" required="required">
+    <button type="submit" aria-describedby="mention-legend">Submit</button>
+    <small><strong>Note:</strong> Any submitted <em>webmention</em> won't show up until I next "build" my site.</small>
+    </fieldset>
+  </form>
+  <details aria-labelledby="mentions-summary">
+    <summary id="mentions-summary">There {{ with .Params.webmentions | len }}{{ if eq . 1}} is {{ . }} mention{{ else }} are {{ . }} mentions{{ end }}{{ end }} of this post&hellip;</summary>
+    <ul aria-labelledby="header-webmentions">
       {{- range .Params.webmentions }}
       <li>
         <a href="{{ .source }}" rel="nofollow">{{ if isset . "source_page_name" }}{{ .source_page_name }}{{ else }}{{ .source }}{{ end }}</a>
@@ -19,5 +28,5 @@
       {{- end }}
     </ul>
   </details>
-</nav>
+</section>
 {{- end }}

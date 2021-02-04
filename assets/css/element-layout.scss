@@ -118,8 +118,8 @@ pre code { display: block; white-space: pre;  }
 @import "marginalia";
 
 nav {
-  a.active:before { content:"« "; }
-  a.active:after { content:" »"; }
+    a[aria-current="page"]:before { content:"« "; }
+    a[aria-current="page"]:after { content:" »"; }
 }
 
 
@@ -179,9 +179,11 @@ main > article {
     }
 }
 
+main > article > footer input { width: 80%; }
+
 // breadcrumb
 .hidden { display: none; }
-.breadcrumbs, .paginator, .feeds {
+.breadcrumb, .paginator, .feeds {
   .label { display: none; }
   width: 85%; font-family: var(--header-font); padding-bottom: 1rem;
 }

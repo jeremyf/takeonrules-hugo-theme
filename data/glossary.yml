@@ -166,6 +166,7 @@
   tag: blogging
 - title: Blogging Engine
   tag: blogging engine
+  itemid: https://www.wikidata.org/wiki/Q1810858
 - title: 'Bloodstone: H-Series'
   key: BLOODSTONE
   itemid: https://rpggeek.com/rpgseries/223/h-bloodstone-pass-saga
@@ -1661,6 +1662,7 @@
 - title: Winter
   key: WINTER
   tag: winter
+  itemid: https://www.wikidata.org/wiki/Q1311
 - title: Wisdom
   key: WIS
 - title: Witchburner
