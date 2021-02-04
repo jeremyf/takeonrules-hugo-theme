@@ -1,5 +1,5 @@
-<section aria-label="Contextual Navigation">
-  <nav aria-labelledby="breadcrumbs-label" class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="list">
+  <nav aria-labelledby="breadcrumbs-label" class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <span role="list">
     <span id="breadcrumbs-label" itemprop="name" class="label">Breadcrumb </span>
     {{- if eq .Type "post" }}
     {{- $year := .Date.Format "2006" }}
@@ -20,6 +20,7 @@
     {{ else }}
     {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3 "site" .Site) }}
     {{ end }}
+    </span>
   </nav>
   {{- if in .Site.Params.paginatedSections .Type -}}
   <nav aria-labelledby="post-neighbors-label" class="paginator">
@@ -75,5 +76,4 @@
     <a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for the list of {{ .Type | title }}</a>
   </div>
 {{- end }}
-</section>
 <hr class="hidden" />

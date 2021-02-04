@@ -12,7 +12,7 @@
     <nav aria-labelledby="blog-pagination-label" class="paginator">
       <span class="label" id="blog-pagination-label">Blog postings pagination </span>
       {{- with $paginator }}
-      {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
+      {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&middot;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
       Page {{ .PageNumber }} of {{ .TotalPages }}
     {{- end }}
     </nav>
@@ -27,7 +27,7 @@
 <article itemprop="mainEntity" aria-labelledby="blog-posts" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/Blog">
   <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
   <h1 id="blog-posts">Blog Posts</h1>
-  <ol aria-labelledby="skip-to-content">
+  <ol aria-labelledby="blog-posts">
   {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
