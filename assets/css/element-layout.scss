@@ -111,6 +111,7 @@ body {
 
 pre, pre code { font-family: var(--code-font); padding: 0 1.5%; overflow-x: auto; }
 kbd, code { font-family: var(--code-font); }
+kbd { padding: 0 2px; margin: 0 1px; border-radius: 4px; background: var(--bg-dim); }
 pre code { display: block; white-space: pre;  }
 
 .newthought { font-variant: small-caps; letter-spacing: 0.05rem; }
