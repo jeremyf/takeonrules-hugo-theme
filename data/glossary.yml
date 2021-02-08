@@ -676,6 +676,10 @@
   tag: gumshoe
 - title: Hack
   tag: hack
+- title: Haiku
+  key: HAIKU
+  itemid: https://www.wikidata.org/wiki/Q37707
+  tag: haiku
 - title: Head Quarters
   key: HQ
 - title: Hit Die
