@@ -1734,3 +1734,7 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
+- title: Prose
+  key: PROSE
+  itemid: https://www.wikidata.org/wiki/Q676
+  tag: prose
