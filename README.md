@@ -53,6 +53,7 @@ Throughout TakeOnRules.com, I make extensive use of the ABBR tag. I use this mar
 - [abbr.html](layouts/shortcodes/abbr.html) :: Creates the [ABBR](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr) tag and links to the glossary.
 - [dfn.html](layouts/shortcodes/dfn.html) :: Creates a [DFN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn) along with an ABBR tag and link to glossary.
 - [linkToGame.html](layouts/shortcodes/linkToGame.html) :: Creates a [CITE](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite) tag with a link to an offer to purchase (as defined in the [data/glossary.yml](data/glossary.yml) file).
+- [citePage.html](layouts/shortcodes/citePage.html) :: A shortcode to conditionally generate a `cite a` or `a` tag to the page at the given filename (relative to the Hugo content directory).  **Note:** I use [`tor-page-relative-pathname-list`](https://github.com/jeremyf/dotzshrc/blob/dd289492248b0b2719297220e4dc1127ee7c89df/emacs/jnf-blogging.el#L100-L106) to generate a list of all the filenames.
 
 _**Note:** The `abbr.html` shortcode preceeded the `dfn.html` shortcode.  They include somewhat duplicated logic, which could be further normalized._
 
