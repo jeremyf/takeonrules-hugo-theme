@@ -194,6 +194,11 @@
   tag: burning empires
   abbr: BE
   game: be
+- title: Burning Wheel Codex
+  game: bwc
+  key: BWC
+  abbr: BWC
+  itemid: https://rpggeek.com/rpgitem/191252/burning-wheel-codex
 - title: Burning Wheel Gold
   game: bwg
   key: BWG
@@ -1150,6 +1155,10 @@
   key: PDF
   itemid: https://www.wikidata.org/wiki/Q42332
   abbr: PDF
+- title: Powered by the Apocalypse
+  key: PBTA
+  abbr: PbtA
+  itemid: https://www.wikidata.org/wiki/Q17149214
 - title: Print on Demand
   key: POD
   itemid: https://www.wikidata.org/wiki/Q288666
@@ -1169,6 +1178,10 @@
 - title: 'Project: Dark'
   itemid: https://rpggeek.com/rpg/26734/project-dark
   tag: project dark
+- title: Prose
+  key: PROSE
+  itemid: https://www.wikidata.org/wiki/Q676
+  tag: prose
 - title: Psionic Strength
   key: PSI
 - title: Publish (on your) Own Site, Syndicate Elsewhere
@@ -1413,6 +1426,10 @@
   tag: swn
   game: swn
   abbr: SWN
+- title: Static Site Generator
+  key: SSG
+  abbr: SSG
+  itemid: https://www.wikidata.org/wiki/Q77916592
 - title: Stats
   tag: stats
 - title: Steel Test
@@ -1734,7 +1751,3 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- title: Prose
-  key: PROSE
-  itemid: https://www.wikidata.org/wiki/Q676
-  tag: prose
