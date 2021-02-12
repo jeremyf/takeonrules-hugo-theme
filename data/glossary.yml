@@ -277,6 +277,9 @@
   offer: https://www.drivethrurpg.com/product/160660/Champions-of-ZED-Zero-Edition-Dungeoneering?affiliate_id=318171
   tag: champions of zed
   game: champions of zed
+- title: Change Management
+  itemid: https://www.wikidata.org/wiki/Q116348
+  tag: change management
 - title: Chaotic
   key: C
 - title: Character Creation
@@ -295,6 +298,8 @@
   tag: circle of hands
   abbr: CoH
   game: coh
+- title: Coalition Building
+  tag: coalition building
 - title: 'Codex of the Black Sun: Sorcery for Stars Without Number'
   key: COTBS
   itemid: https://rpggeek.com/rpgitem/275472/codex-black-sun
@@ -1176,6 +1181,9 @@
   key: PROGRAMMING
   itemid: https://www.wikidata.org/wiki/Q80006
   tag: programming
+- title: Project Management
+  tag: project management
+  itemid: https://www.wikidata.org/wiki/Q179012
 - title: 'Project: Dark'
   itemid: https://rpggeek.com/rpg/26734/project-dark
   tag: project dark
@@ -1337,6 +1345,9 @@
 - title: Secure Sockets Layer
   key: SSL
   itemid: https://www.wikidata.org/wiki/Q206494
+- title: Self-Assessment
+  itemid: https://www.wikidata.org/wiki/Q1602656
+  tag: self assessment
 - title: Services
   tag: services
 - title: Session
