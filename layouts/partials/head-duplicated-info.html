@@ -3,6 +3,7 @@
 {{- with $.Site.Params.pingbackUrl }}<link rel="pingback" href="{{ . }}" />{{ end }}
 <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+{{ with $.Site.Params.searchMySiteVerification }}<meta name="searchmysite-verification" content="{{ . }}" />{{- end }}
 
 {{ $screen := resources.Get "css/tufte.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $screen.RelPermalink }}" integrity="{{ $screen.Data.Integrity }}" rel="preload stylesheet" as="style" media="screen, print"/>
