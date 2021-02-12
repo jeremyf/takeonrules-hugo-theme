@@ -202,6 +202,7 @@
 - title: Burning Wheel Gold
   game: bwg
   key: BWG
+  abbr: BWG
   itemid: https://www.wikidata.org/wiki/Q68247397
   offer: https://burningwheel.com
   tag: burning wheel
