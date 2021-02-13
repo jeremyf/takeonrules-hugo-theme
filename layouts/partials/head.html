@@ -15,7 +15,7 @@
 {{- end }}
 
 {{ partial "opengraph.html" . }}
-<meta name="Description" content="{{ with .Description }}{{ . | markdownify | plainify }}{{ else }}{{if .IsPage}}{{ .Summary | markdownify | plainify }}{{ else }}{{ with .Site.Params.description }}{{ . | markdownify | plainify }}{{ end }}{{ end }}{{ end }}" />
+<meta name="description" content="{{ with .Description }}{{ . | markdownify | plainify }}{{ else }}{{if .IsPage}}{{ .Summary | markdownify | plainify }}{{ else }}{{ with .Site.Params.description }}{{ . | markdownify | plainify }}{{ end }}{{ end }}{{ end }}" />
 {{ if .IsHome }}
 <meta name="dateModified" content="{{ .Site.LastChange.Format .Site.Params.iso8601_format }}" />
 <meta name="datePublished" content="{{ .Site.Params.firstPostDate }}" />
@@ -23,6 +23,9 @@
 <meta name="dateModified" content="{{ .Lastmod.Format .Site.Params.iso8601_format }}" />
 <meta name="datePublished" content="{{ .Date.Format .Site.Params.iso8601_format }}" />
 {{ end }}
+{{- range .Params.tags }}
+<meta name="keywords" content="{{ . }}" />
+{{- end}}
 
 {{ partial "twitter_cards.html" . }}
 
