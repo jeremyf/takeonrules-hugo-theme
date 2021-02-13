@@ -23,9 +23,16 @@
 <meta name="dateModified" content="{{ .Lastmod.Format .Site.Params.iso8601_format }}" />
 <meta name="datePublished" content="{{ .Date.Format .Site.Params.iso8601_format }}" />
 {{ end }}
+{{- if .IsHome }}
+{{ $tags := (slice false) }}{{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}{{- range $index, $object := $paginator.Pages }}{{- $tags = $tags | union $object.Params.tags }}{{- end }}
+{{- range $tags }}
+<meta name="keywords" content="{{ . }}" />
+{{- end }}
+{{- else }}
 {{- range .Params.tags }}
 <meta name="keywords" content="{{ . }}" />
 {{- end}}
+{{- end }}
 
 {{ partial "twitter_cards.html" . }}
 
