@@ -92,7 +92,10 @@ a.offscreen {
     }
 }
 
-p em { color: var(--em); }
+article em { color: var(--em); }
+article cite { color: var(--cite); }
+article cite:hover { border-bottom: thin dotted var(--cite); }
+
 pre, code { color:  var(--code); }
 kbd { color: var(--kbd); }
 
