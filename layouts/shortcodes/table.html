@@ -1,5 +1,5 @@
 {{- $caption := .Get "caption" }}{{- $table_number := .Get "table_number" }}<div class="table-wrapper{{- if .Params.margin }} margin{{- end }}" itemscope itemtype="http://schema.org/Table" role="{{- if .Params.margin }}note{{ else }}region{{ end }}" tabindex="0" aria-labelledby="caption-{{ $table_number }}">
-<table id="table-{{ $table_number }}" {{ with .Get "unstriped" }}class="unstriped" {{ end }}aria-labelledby="caption-{{ $table_number }}">
+<table id="table-{{ $table_number }}" class="{{ with .Get "unstriped" }}unstriped {{ end }}{{ with .Get "full" }}full{{ end }}" aria-labelledby="caption-{{ $table_number }}">
 {{- if $caption }}<caption id="caption-{{ $table_number }}" itemprop="about">Table {{ $table_number}}: {{ partial "unparagraphy.html" $caption }}</caption>{{- end }}
 {{ .Inner }}
 </table></div>
