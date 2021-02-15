@@ -24,7 +24,7 @@ article {
 // This appeared to resolve that issue
 main { h1, h2, h3, h4 { clear: left; } }
 
-header, nav, article footer, .feeds { display:none; }
+body > footer nav, header, main > nav, main > section, article footer, .feeds, .paginator { display:none; }
 main header, blockquote footer { display: inherit; }
 
 footer.group {

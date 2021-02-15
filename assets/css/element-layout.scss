@@ -39,9 +39,6 @@ blockquote {
   }
 }
 
-.p-category { margin-right: 0.25rem; }
-.p-category:before { content: "#"; }
-
 /* BEGIN Epigraphs */
 .epigraph {
 
@@ -189,11 +186,7 @@ main > article > footer input { width: 80%; }
   width: 85%; font-family: var(--header-font); padding-bottom: 1rem;
 }
 
-.paginator {
-  clear: both;
-  a { margin-right: 0.5rem; }
-  a:not(:first-of-type) { margin-left: 0.5rem; }
-}
+.label { display: none; }
 
 .hide-js { display: none; }
 
