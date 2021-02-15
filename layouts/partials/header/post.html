@@ -9,4 +9,9 @@
 <meta itemprop="speakable" content="#skip-to-content" />
 <meta itemprop="wordCount" content="{{ .WordCount }}" />
 <meta itemprop="inLanguage" content="en-US" />
-{{ partial "dates-and-tags.html" . }}
+<nav aria-label="Content's metadata and navigation">
+  {{ partial "postAuthorWithLink.html" . }}
+  {{ partial "postDate.html" . }}
+  {{ partial "postTags.html" . }}
+  {{ partial "postSeries.html" . }}
+</nav>

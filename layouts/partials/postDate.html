@@ -1,0 +1,7 @@
+ on {{ if eq .Lastmod .Date }}
+  <time itemprop="datePublished" datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
+  <meta itemprop="dateModified" content="{{ dateFormat "2006-01-02" .Date }}" />
+{{ else }}
+  <del datetime="{{ .Lastmod.Format "2006-01-02" }}"><time itemprop="datePublished" aria-label="Published On" datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006-01-02" .Date }}</time></del>
+  <ins datetime="{{ .Lastmod.Format "2006-01-02" }}"><time itemprop="dateModified" aria-label="Updated On" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time></ins>
+{{- end }}

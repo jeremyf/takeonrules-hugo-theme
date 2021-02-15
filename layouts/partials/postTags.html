@@ -1,0 +1,15 @@
+{{- define "tagmd" }}
+  {{ $entry := (index (where .site.Data.glossary "tag" "eq" .tag) 0) }}
+  {{ $pages := false }}
+  {{ if eq .site.Params.withTagRels true }}{{- $pages = where .site.Pages "Params.tags" "intersect" (slice .tag) }}{{- end }}
+  {{ if $pages }}{{- $prev := index (where $pages ".PublishDate" "lt" .page.PublishDate) 0 }}
+  {{- if $prev }}<a rel="prev" href="{{ $prev.RelPermalink }}" title="Previous post tagged with &ldquo;{{ $entry.tag }}&rdquo; is &ldquo;{{ $prev.Title }}&rdquo;"><small>&lt;</small></a> {{- else }}<small role="presentation">&lt;</small> {{- end }}{{- end }}
+  {{ if isset $entry "itemid" }}
+  <a rel="tag" href="{{ "tags" | absURL }}/{{ .tag | urlize }}" title="All posts tagged with &ldquo;{{ .tag }}&rdquo;" role="listitem" class="p-category">{{ .tag | anchorize }}</a><span itemprop="keywords" itemscope itemtype="http://schema.org/DefinedTerm"><meta itemprop="name" content="{{ .tag | anchorize }}" />{{- with $entry.title }}<meta itemprop="alternateName" content="{{ . }}" />{{- end }}<link itemprop="sameAs" href="{{ $entry.itemid }}" /></span>
+  {{- else }}
+  <a rel="tag" href="{{ "tags" | absURL }}/{{ .tag | urlize }}" class="p-category" role="listitem" title="All posts tagged with &ldquo;{{ .tag }}&rdquo;" itemprop="keywords">{{ .tag | anchorize }}</a>
+  {{- end }}
+  {{- if $pages }}{{- $next := index (where $pages ".PublishDate" "gt" .page.PublishDate) 0 }}
+  {{- if $next }} <a rel="next" href="{{ $next.RelPermalink }}" title="Next post tagged with &ldquo;{{ $entry.tag }}&rdquo; is &ldquo;{{ $next.Title }}&rdquo;"><small>&gt;</small></a>{{- else }} <small role="presentation">&gt;</small>{{- end }}{{- end }}
+{{- end }}
+  {{- with .Params.tags }}:: <span class="label">Tags:</span> <span role="list" aria-label="Tags for “{{ $.Page.Title }}”">{{- $tags := . }}{{- $last_tag := . | last 1 }}{{- range ($tags | complement $last_tag) }}{{- template "tagmd" (dict "tag" . "page" $.Page "site" $.Site )}} <span> &middot; </span> {{- end }}{{- range $last_tag }}{{- template "tagmd" (dict "tag" . "page" $.Page "site" $.Site )}}{{- end }}</span>{{- end }}

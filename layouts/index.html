@@ -3,35 +3,33 @@
   {{- if eq 1 $paginator.PageNumber }}
     <title>{{ .Title }}</title>
   {{- else }}
-    <title>{{ .Title }} (page {{ $paginator.PageNumber }})</title>
+    <title>{{ .Title }} (Page {{ $paginator.PageNumber }})</title>
   {{- end }}
 {{ end }}
 {{ define "breadcrumb" }}
-<section aria-label="Context Navigation around Homepage">
-    {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
-    <nav aria-labelledby="blog-pagination-label" class="paginator">
-      <span class="label" id="blog-pagination-label">Blog postings pagination </span>
-      {{- with $paginator }}
-      {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&middot;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
-      Page {{ .PageNumber }} of {{ .TotalPages }}
-    {{- end }}
-    </nav>
     <div class="feeds" aria-labelledby="site-feeds-label" role="list">
       <span id="site-feeds-label" class="label">Site feeds </span>
       <a role="listitem" href="{{ .Site.BaseURL }}index.atom">ATOM feed</a> &middot; <a role="listitem" href="{{ .Site.BaseURL }}index.xml">RSS feed</a> &middot; <a role="listitem" href="{{ .Site.BaseURL }}index.json">JSON feed</a>
     </div>
-    <hr class="hidden">
-</section>
+    <hr class="hidden" />
 {{ end }}
 {{ define "main" }}
 <article itemprop="mainEntity" aria-labelledby="blog-posts" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/Blog">
-  <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-  <h1 id="blog-posts">Blog Posts</h1>
-  <ol aria-labelledby="blog-posts">
   {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
+  <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
+  <h1 id="blog-posts">Blog Posts{{- if eq 1 $paginator.PageNumber }}{{- else }} (Page {{ $paginator.PageNumber }}){{- end }}</h1>
+  {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
+  <nav aria-labelledby="blog-pagination-label" class="paginator">
+    <span class="label" id="blog-pagination-label">Blog posts pagination </span>
+    {{- with $paginator }}
+    {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;&middot;&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}<smal> Page {{ .PageNumber }} of {{ .TotalPages }}</small>
+      {{- end }}
+  </nav>
+  <ol aria-labelledby="blog-posts">
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
-  <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="{{ anchorize .Title }}">
+  <li aria-labelledby="{{ anchorize .Title }}">
+  <section itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="{{ anchorize .Title }}">
     <h2 id="{{ anchorize .Title }}">
       <cite itemprop="headline">
         <a itemprop="mainEntityOfPage" href="{{ .RelPermalink }}" rel="bookmark">
@@ -40,28 +38,35 @@
       </cite>
     </h2>
     {{- if isset .Params "headline" }}
-      <p itemprop="alternateHeadline">{{- .Params.headline | markdownify }}</p>
+    <h3 itemprop="alternateHeadline">{{- .Params.headline | markdownify }}</h3>
     {{- end }}
-      <meta itemprop="wordCount" content="{{ .WordCount }}" />
-      <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />
-      <link itemprop="publisher" href="{{ $.Site.BaseURL }}#tor-organization" />
-      {{ partial "dates-and-tags.html" . }}
-      {{ with .Params.images }}
-        {{ range . }}
-          <link itemprop="image" href="{{ .src }}" />
-        {{ end }}
-      {{ else }}
-        {{ partial "footer/image.html" . }}
-      {{ end }}
+    <meta itemprop="wordCount" content="{{ .WordCount }}" />
+    <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />
+    <link itemprop="publisher" href="{{ $.Site.BaseURL }}#tor-organization" />
+    <nav aria-label="Content's metadata and navigation">
+      {{ partial "postAuthorWithoutLink.html" . }}
+      {{ partial "postDate.html" . }}
+      {{ partial "postTags.html" . }}
+      {{ partial "postSeries.html" . }}
+    </nav>
+    {{ with .Params.images }}
+    {{ range . }}
+    <link itemprop="image" href="{{ .src }}" />
+    {{ end }}
+    {{ else }}
+    {{ partial "footer/image.html" . }}
+    {{ end }}
+  </section>
   </li>
   {{- end }}
   {{- end }}
   </ol>
-  <nav class="paginator" aria-labelledby="blog-pagination-label">
-    {{- with $paginator }}
-      {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;|&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}
-      Page {{ .PageNumber }} of {{ .TotalPages }}
-    {{- end }}
-  </nav>
+  <footer aria-hidden  aria-labelledby="blog-pagination-label">
+    <nav class="paginator" aria-labelledby="blog-pagination-label">
+      {{- with $paginator }}
+      {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;&middot;&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}<small> Page {{ .PageNumber }} of {{ .TotalPages }}</small>
+      {{- end }}
+    </nav>
+  </footer>
 </article>
 {{ end }}

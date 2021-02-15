@@ -3,14 +3,22 @@
 {{ end }}
 {{ define "main" }}
   <article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/{{ with .Params.Schema }}{{ .type }}{{ else }}WebPageElement{{ end }}">
-    <header>
+    <header aria-label="Article header">
       <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
       <h1 itemprop="headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title | safeHTML }}</h1>
     {{- with .Params.headline }}
       <h2 itemprop="alternateHeadline">{{ . }}</h2>
-    {{- end }}
+      {{- end }}
+      {{- if or .Params.relPrevious .Params.relNext }}
+      <nav aria-labelledby="{{ .Type }}-neighbors-label" class="paginator">
+        <span id="{{ .Type }}-neighbors-label" class="label">{{ title .Type }} Neighbors </span>
+        {{- with .Params.relPrevious }}<a itemprop="relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev"><small role="presentation">&lt;</small> {{ with .Label }}{{ . }}{{ end }}</a>{{- end }}
+        {{- if and .Params.relPrevious .Params.relNext }}&nbsp;&middot;&nbsp{{ end }}
+        {{- with .Params.relNext }}<a itemprop="relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">{{- with .Label }}{{ . }}{{- end }} <small role="presentation">&gt;</small></a>{{- end }}
+      </nav>
+      {{- end }}
     </header>
-    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}property="text"{{ end }}{{ end }} class="e-content content" role="region" aria-label="article content">
+    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}property="text"{{ end }}{{ end }} class="e-content content" role="region" aria-label="Article content">
       {{ .Content }}
     </section>
     <footer aria-label="Article footer">
