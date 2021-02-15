@@ -144,7 +144,6 @@ dl {
   dd { margin-left: 2rem; text-indent: -1rem; }
   dt:after { content: ":"; }
   dd:before { content: "· "; }
-  dt + dd { padding-top: 0.25rem; }
 }
 
 dl.group dd { float: left; }
