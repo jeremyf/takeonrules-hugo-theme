@@ -14,7 +14,7 @@
     </span> /
     {{ end }}
     <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <span itemprop="name"><a itemprop="item" href="{{ .Permalink }}" id="{{ .Permalink}}" aria-current="page">{{ .Title }}</a></span>
+      <span itemprop="name"><cite itemprop="item" id="{{ .Permalink}}" aria-current="page">{{ .Title }}</cite></span>
       <meta itemprop="position" content="3" />
     </span>
     {{ else }}
@@ -51,7 +51,7 @@
   {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) "site" .site) }} /
   {{- end }}
   <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-    <a itemprop="item" id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}" {{ if eq .p1 .p2 }}aria-current="page"{{ end }}><span itemprop="name">{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}</span></a>
+    {{- if eq .p1 .p2 }}<cite itemprop="item" id="{{ .p1.Permalink}}" aria-current="page">{{- else }}<a itemprop="item" id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}">{{- end }}<span itemprop="name">{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}</span>{{- if eq .p1 .p2 }}</cite>{{- else }}</a>{{- end }}
     <meta itemprop="position" content="{{ .depth }}" />
   </span>
   {{- end }}

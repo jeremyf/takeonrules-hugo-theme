@@ -115,12 +115,6 @@ pre code { display: block; white-space: pre;  }
 
 @import "marginalia";
 
-nav {
-    a[aria-current="page"]:before { content:"« "; }
-    a[aria-current="page"]:after { content:" »"; }
-}
-
-
 // Printing ands screen media queries
 
 // Does not display a print-footer for screen display
