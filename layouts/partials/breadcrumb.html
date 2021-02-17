@@ -1,5 +1,5 @@
-  <nav aria-labelledby="breadcrumbs-label" class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
-    <span role="list">
+<nav aria-labelledby="breadcrumbs-label" class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+  <span role="list">
     <span id="breadcrumbs-label" itemprop="name" class="label">Breadcrumb </span>
     {{- if eq .Type "post" }}
     {{- $year := .Date.Format "2006" }}
@@ -14,48 +14,48 @@
     </span> /
     {{ end }}
     <cite id="{{ .Permalink}}" aria-current="page">{{ .Title }}</cite>
-    </span>
-    {{ else }}
-    {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3 "site" .Site) }}
-    {{ end }}
-    </span>
-  </nav>
-  {{- define "breadcrumbnav" }}
-  {{- if .p1.Parent }}
-  {{- template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 "depth" (sub .depth 1) "site" .site )}} /
-  {{- else if not .p1.IsHome }}
-  {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) "site" .site) }} /
-  {{- end }}
-  {{- if eq .p1 .p2 }}
-  <cite id="{{ .p1.Permalink}}" aria-current="page">{{ .p1.Title }}</cite>
-  {{- else }}
-  <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-    <a itemprop="item" id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}">
-      <span itemprop="name">{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}</span>
-      </a>
-    <meta itemprop="position" content="{{ .depth }}" />
   </span>
-  {{- end }}
-  {{- end }}
+  {{ else }}
+  {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3 "site" .Site) }}
+  {{ end }}
+  </span>
+</nav>
+{{- define "breadcrumbnav" }}
+{{- if .p1.Parent }}
+{{- template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 "depth" (sub .depth 1) "site" .site )}} /
+{{- else if not .p1.IsHome }}
+{{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) "site" .site) }} /
+{{- end }}
+{{- if eq .p1 .p2 }}
+<cite id="{{ .p1.Permalink}}" aria-current="page">{{ .p1.Title }}</cite>
+{{- else }}
+<span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+  <a itemprop="item" id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}">
+    <span itemprop="name">{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}</span>
+  </a>
+  <meta itemprop="position" content="{{ .depth }}" />
+</span>
+{{- end }}
+{{- end }}
 
 {{- if eq .Kind "term" }}
 {{- if eq .Type "series" }}
 {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
-  <div class="feeds" aria-labelledby="series-feed-label" role="list">
-    <span id="series-feed-label" class="label">Series feed </span>
-    <a role="listitem" href="{{ $.Page.Permalink }}index.xml"> RSS feed for <q>{{ .title }}</q> series</a>
-  </div>
-  {{- end }}
+<div class="feeds" aria-labelledby="series-feed-label" role="list">
+  <span id="series-feed-label" class="label">Series feed </span>
+  <a role="listitem" href="{{ $.Page.Permalink }}index.xml"> RSS feed for <q>{{ .title }}</q> series</a>
+</div>
+{{- end }}
 {{- else }}
-  <div class="feeds" aria-labelledby="{{ .Type | singularize | anchorize }}-feed-label" role="list">
-    <span id="{{ .Type | singularize | anchorize }}-feed-label" class="label">{{ .Type | singularize | title }} feed </span>
-    <a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .Title }}</q></a>
-  </div>
+<div class="feeds" aria-labelledby="{{ .Type | singularize | anchorize }}-feed-label" role="list">
+  <span id="{{ .Type | singularize | anchorize }}-feed-label" class="label">{{ .Type | singularize | title }} feed </span>
+  <a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .Title }}</q></a>
+</div>
 {{- end }}
 {{- else if eq .Kind "taxonomy" }}
-  <div class="feeds" aria-labelledby="{{ .Type | anchorize }}-feed-label" role="list">
-    <span id="{{ .Type | anchorize }}-feed-label" class="label">{{ .Type | title }} feed </span>
-    <a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for the list of {{ .Type | title }}</a>
-  </div>
+<div class="feeds" aria-labelledby="{{ .Type | anchorize }}-feed-label" role="list">
+  <span id="{{ .Type | anchorize }}-feed-label" class="label">{{ .Type | title }} feed </span>
+  <a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for the list of {{ .Type | title }}</a>
+</div>
 {{- end }}
 <hr class="hidden" />
