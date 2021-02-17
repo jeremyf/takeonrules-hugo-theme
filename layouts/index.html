@@ -22,7 +22,7 @@
   <nav aria-labelledby="blog-pagination-label" class="paginator">
     <span class="label" id="blog-pagination-label">Blog posts pagination </span>
     {{- with $paginator }}
-    {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;&middot;&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}<smal> Page {{ .PageNumber }} of {{ .TotalPages }}</small>
+    {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;&middot;&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}<small> Page {{ .PageNumber }} of {{ .TotalPages }}</small>
       {{- end }}
   </nav>
   <ol aria-labelledby="blog-posts">
