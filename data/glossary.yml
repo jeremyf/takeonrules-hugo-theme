@@ -1279,6 +1279,9 @@
 - title: Rules as Written
   key: RAW
   abbr: RaW
+- title: 'Résumé: Summary of Career'
+  tag: resume
+  itemid: https://www.wikidata.org/wiki/Q950511
 - title: Saga of the Icelanders
   itemid: https://rpggeek.com/rpg/20480/sagas-icelanders
   offer: https://www.drivethrurpg.com/product/254224/Sagas-of-the-Icelanders?affiliate_id=318171
