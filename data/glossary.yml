@@ -902,6 +902,10 @@
 - title: Loviatar Fanzine
   itemid: https://rpggeek.com/rpgperiodical/17799/loviatar
   tag: loviatar
+- title: Machine Learning
+  key: MLEARN
+  itemid: https://www.wikidata.org/wiki/Q2539
+  tag: machine learning
 - title: Macintosh Operating System X
   key: OSX
   itemid: https://www.wikidata.org/wiki/Q14116
@@ -1639,6 +1643,10 @@
 - title: United States
   key: US
   itemid: https://www.wikidata.org/wiki/Q30
+- title: United States dollar
+  key: USD
+  itemid: https://www.wikidata.org/wiki/Q4917
+  abbr: USD
 - title: Universal Planet Profile
   key: UPP
 - title: Universal World Profile
