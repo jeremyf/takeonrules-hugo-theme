@@ -6,6 +6,6 @@
 
 {{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
 <span itemid="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" itemscope itemtype="http://schema.org/CreativeWorkSeries"><cite itemprop="headline"><a itemprop="url" href="{{ $seriesUrl }}">{{ $title }}</a></cite></span>
-{{- $next := index (where $series ".PublishDate" "gt" $.Page.PublishDate) 0 }}
-{{- if $next }} <a rel="next" href="{{ $next.RelPermalink }}" title="Next post in &ldquo;{{ $title }}&rdquo; is &ldquo;{{ $next.Title }}&rdquo;"><small>&gt;</small></a>{{- else }} <small role="presentation">&gt;</small>{{- end }}
+{{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}{{- range last 1 $next }}
+<a rel="next" href="{{ .RelPermalink }}" title="Next post in &ldquo;{{ $title }}&rdquo; is &ldquo;{{ .Title }}&rdquo;"><small>&gt;</small></a>{{- else }} <small role="presentation">&gt;</small>{{- end }}
 {{- end }}{{- end }}
