@@ -591,6 +591,9 @@
   offer: https://www.drivethrurpg.com/product/78548/Fiasco-Classic?affiliate_id=318171
   tag: fiasco
   game: fiasco
+- title: Fields of Related Knowledge
+  key: FORKS
+  abbr: FoRKs
 - title: First Play
   tag: first play
 - title: Five Torches Deep
@@ -1472,6 +1475,8 @@
   key: SUBLIME
   itemid: https://www.wikidata.org/wiki/Q267193
   abbr: Sublime Text
+- title: Submission Information Package
+  key: SIP
 - title: Survey
   tag: survey
 - title: Sword and Wizardry
@@ -1777,5 +1782,3 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- title: Submission Information Package
-  key: SIP
