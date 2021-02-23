@@ -1423,6 +1423,10 @@
   key: SWAT
   itemid: https://www.wikidata.org/wiki/Q324563
   abbr: SWAT
+- title: Spring
+  key: SPRING
+  itemid: https://www.wikidata.org/wiki/Q1312
+  tag: spring
 - title: Square
   itemid: https://www.wikidata.org/wiki/Q7581990?wprov=srpw1_12
   tag: square
