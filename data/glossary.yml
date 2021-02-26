@@ -60,6 +60,10 @@
   abbr: 'Android: Netrunner'
 - title: Anglerre
   tag: anglerre
+- title: ante meridiem
+  key: AM
+  abbr: am
+  itemid: https://www.wikidata.org/wiki/Q55313888
 - title: Apocalypse Galactica
   tag: apocalypse galactica
 - title: Apocalypse World
@@ -387,6 +391,7 @@
   game: dead names
   abbr: Dead Names
 - title: Death
+  itemid: https://www.wikidata.org/wiki/Q4
   tag: death
 - title: Defund the Police
   itemid: https://www.wikidata.org/wiki/Q96150192
@@ -416,6 +421,9 @@
   abbr: DM
 - title: Difficulty Class
   key: DC
+- title: Divorce
+  itemid: https://www.wikidata.org/wiki/Q93190
+  tag: divorce
 - title: 'Django: Python Web Framework'
   key: DJANGO
   itemid: https://www.wikidata.org/wiki/Q842014
@@ -1171,6 +1179,10 @@
   key: PDF
   itemid: https://www.wikidata.org/wiki/Q42332
   abbr: PDF
+- title: post meridiem
+  key: PM
+  abbr: pm
+  itemid: https://www.wikidata.org/wiki/Q55313907
 - title: Powered by the Apocalypse
   key: PBTA
   abbr: PbtA
