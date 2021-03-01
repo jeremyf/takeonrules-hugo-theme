@@ -97,6 +97,7 @@
   game: ars-magica
 - title: Artha
   tag: artha
+  contentWarning: burningwheel
 - title: Artificial Intelligence
   key: AI
   itemid: https://www.wikidata.org/wiki/Q25933185
@@ -143,6 +144,7 @@
   tag: battletech
 - title: Beliefs, Instincts, and Traits
   key: BITS
+  contentWarning: burningwheels
 - title: Better World Books
   key: BWB
   itemid: https://www.wikidata.org/wiki/Q4898566
@@ -198,11 +200,13 @@
   tag: burning empires
   abbr: BE
   game: be
+  contentWarning: burningwheel
 - title: Burning Wheel Codex
   game: bwc
   key: BWC
   abbr: BWC
   itemid: https://rpggeek.com/rpgitem/191252/burning-wheel-codex
+  contentWarning: burningwheel
 - title: Burning Wheel Gold
   game: bwg
   key: BWG
@@ -210,8 +214,10 @@
   itemid: https://www.wikidata.org/wiki/Q68247397
   offer: https://burningwheel.com
   tag: burning wheel
+  contentWarning: burningwheel
 - title: Burning Wheel Headquarters
   key: BWHQ
+  contentWarning: burningwheel
 - title: Burnout (Occupational)
   itemid: https://www.wikidata.org/wiki/Q327988
   tag: burnout
@@ -342,6 +348,8 @@
 - title: Content Management System
   key: CMS
   itemid: https://www.wikidata.org/wiki/Q131093
+- title: Content Warning
+  tag: content warning
 - title: Contest
   tag: contest
 - title: Conversion
@@ -500,6 +508,7 @@
   offer: https://www.drivethrurpg.com/product/108028/Dungeon-World?affiliate_id=318171
   tag: dungeon world
   abbr: DW
+  contentWarning: dungeonworld
 - title: Dungeoncraft
   tag: dungeoncraft
 - title: Dungeons
@@ -602,6 +611,7 @@
 - title: Fields of Related Knowledge
   key: FORKS
   abbr: FoRKs
+  contentWarning: dungeonworld
 - title: First Play
   tag: first play
 - title: Five Torches Deep
@@ -884,6 +894,7 @@
   itemid: https://www.wikidata.org/wiki/Q27102827
   tag: lamentations of the flame princess
   abbr: LotFP
+  contentWarning: lotfp
 - title: Lankhmar
   itemid: https://www.wikidata.org/wiki/Q6487218
   tag: lankhmar
@@ -899,6 +910,7 @@
 - title: Lifepaths
   key: LP
   tag: lifepaths
+  contentwarning: dungeonworld
 - title: Live Action Role Playing
   key: LARP
   itemid: https://www.wikidata.org/wiki/Q216749
@@ -913,6 +925,9 @@
 - title: Loviatar Fanzine
   itemid: https://rpggeek.com/rpgperiodical/17799/loviatar
   tag: loviatar
+- title: Luke Crane
+  itemid: https://www.wikidata.org/wiki/Q66831262
+  tag: luke crane
 - title: Machine Learning
   key: MLEARN
   itemid: https://www.wikidata.org/wiki/Q2539
@@ -1014,6 +1029,7 @@
   tag: mouse guard
   key: MG
   offer: https://www.burningwheel.com/mouse-guard/
+  contentWarning: burningwheel
 - title: Movement
   key: MV
 - title: Necromancer's Maze
@@ -1042,6 +1058,7 @@
 - title: Obstacle
   key: OB
   abbr: Ob
+  contentWarning: burningwheel
 - game: ose
   title: Old School Essentials
   abbr: OSE
@@ -1352,6 +1369,9 @@
   itemid: https://www.wikidata.org/wiki/Q24925
   tag: sci fi
   abbr: Sci-Fi
+- title: Script Change
+  itemid: https://www.wikidata.org/wiki/Q105716989
+  tag: script change
 - title: Scripted Conflict
   tag: scripted conflict
 - title: Search Engine Optimization
@@ -1475,6 +1495,7 @@
   tag: stats
 - title: Steel Test
   tag: steel test
+  contentWarning: burningwheel
 - title: Stonehell Dungeon
   itemid: https://rpggeek.com/rpgseries/26518/stonehell-dungeon
   tag: stonehell dungeon
@@ -1628,6 +1649,7 @@
   itemid: https://www.wikidata.org/wiki/Q66830849
   offer: https://www.drivethrurpg.com/product/116482/Torchbearer?affiliate_id=318171
   tag: torchbearer
+  contentWarning: burningwheel
 - title: Total Party Kill
   key: TPK
   itemid: https://www.wikidata.org/wiki/Q7828047
@@ -1759,6 +1781,7 @@
   itemid: https://www.wikidata.org/wiki/Q68522321
   tag: world of dungeons
   abbr: WoD
+  contentWarning: dungeonworld
 - title: World of Steve
   tag: world of steve
 - title: World War Two
@@ -1798,5 +1821,3 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- title: Content Warning
-  tag: content warning
