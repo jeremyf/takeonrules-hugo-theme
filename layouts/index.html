@@ -38,7 +38,7 @@
       </cite>
     </h2>
     {{- if isset .Params "headline" }}
-    <p itemprop="alternateHeadline">{{- .Params.headline | markdownify }}</p>
+    <h3 itemprop="alternateHeadline">{{- .Params.headline | markdownify }}</h3>
     {{- end }}
     <meta itemprop="wordCount" content="{{ .WordCount }}" />
     <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />

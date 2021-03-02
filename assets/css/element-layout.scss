@@ -39,6 +39,8 @@ blockquote {
   }
 }
 
+nav [role="list"] [role="listitem"] { display: inline-block; }
+
 /* BEGIN Epigraphs */
 .epigraph {
 
