@@ -9,6 +9,7 @@
     <link itemprop="isPartOf" href="{{ .RelPermalink }}#series-itemscope" />
     {{ end }}
     {{ partial "header/post.html" . }}
+    {{ partial "header/contentDisclaimers.html" . }}
   </header>
   <section itemprop="articleBody" class="content e-content" itemid="#content" aria-label="Content">
     {{- with .Params.sessionReport }}
@@ -24,6 +25,7 @@
       </p>
     </section>
     {{- end }}
+
     {{ .Content }}
     {{- with .Params.theItemReviewed }}
     <section aria-labelledby="#review-summary-{{ anchorize $.Page.Title }}" itemprop="hasPart" itemscope itemtype="http://schema.org/Review">
@@ -44,6 +46,7 @@
     {{- end }}
   </section>
   <footer aria-label="Article footer">
+    {{ partial "footer/contentDisclaimers.html" . }}
     {{ partial "footer/webmentions.html" . }}
     {{ partial "footer/related-posts.html" . }}
     {{ partial "footer/licenses.html" . }}

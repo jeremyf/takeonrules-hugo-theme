@@ -38,6 +38,11 @@ article aside {
     color: var(--aside);
 }
 
+.disclaimer {
+    background-color: var(--disclaimer);
+    padding: 1rem;
+}
+
 .licensed {
     .wrapper { color: var(--code) ; }
     border-left: 1px dotted   var(--code);

@@ -1,0 +1,19 @@
+{{- $contentWarningTags := .Page.Scratch.Get "contentDisclaimers" }}
+{{- if gt (len $contentWarningTags) 0 }}
+{{- $partials := slice false }}{{- range $contentWarningTags }}{{- $partials = $partials | append .contentDisclaimers }}{{- end }}
+<section itemprop="comment" itemscope itemtype="http://schema.org/Comment" aria-labelledby="disclaimer-for-{{ $.Page.File.UniqueID }}">
+  <h2 id="disclaimer-for-{{ $.Page.File.UniqueID }}" itemprop="headline">Disclaimers</h2>
+  <div itemprop="text">
+    <p>This post references content created by:</p>
+    <ul aria-label="Content Creators">
+      {{- range uniq $partials }}{{- if . }}{{- with index $.Site.Data.contentDisclaimers . }}
+      <li itemprop="about" itemscope itemtype="http://schema.org/Person">
+        <link itemprop="sameAs" href="{{ .sameAs }}" />
+        <span itemprop="name">{{ .name }}</span>
+      </li>
+      {{- end }}{{- end }}{{- end }}
+    </ul>
+    <p>You can <a itemprop="isPartOf" href="{{ $.Page.RelPermalink }}#skip-to-content">jump back to content</a> or read about the <a href="/site-map/content-disclaimers/">disclaimers regarding content creators</a>.</p>
+  </div>
+</section>
+{{- end }}
