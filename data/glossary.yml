@@ -1414,6 +1414,8 @@
 - title: seneschal
   tag: seneschal
   game: seneschal
+  key: SENESCHAL
+  abbr: seneschal
   offer: https://vsca.blog/2021/02/26/seneschal/
 - title: Services
   tag: services
@@ -1621,6 +1623,8 @@
 - title: The Scaffold System
   tag: scaffold system
   game: scaffold
+  key: SCAFFOLD
+  abbr: Scaffold
   offer: https://vsca.blog/2021/02/20/the-scaffold-system/
 - title: The Silver Searcher (ag)
   key: AG
