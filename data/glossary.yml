@@ -98,7 +98,7 @@
 - title: Artha
   tag: artha
   contentDisclaimers:
-  -  lukecrane
+  - lukecrane
 - title: Artificial Intelligence
   key: AI
   itemid: https://www.wikidata.org/wiki/Q25933185
@@ -1182,6 +1182,11 @@
 - title: 'Planarch Codex: Dark Heart of the Dreamer'
   itemid: https://rpggeek.com/rpgitem/138130/planarch-codex-dark-heart-dreamer
   tag: planarch codex
+- title: Play by Post
+  tag: play by post
+  itemid: https://www.wikidata.org/wiki/Q751838
+  abbr: PbP
+  key: PBP
 - title: Playbooks
   tag: playbooks
 - title: Player Character
@@ -1406,6 +1411,10 @@
 - title: Self-Assessment
   itemid: https://www.wikidata.org/wiki/Q1602656
   tag: self assessment
+- title: seneschal
+  tag: seneschal
+  game: seneschal
+  offer: https://vsca.blog/2021/02/26/seneschal/
 - title: Services
   tag: services
 - title: Session
@@ -1609,6 +1618,10 @@
 - title: The Regiment
   itemid: https://rpggeek.com/rpg/27316/regiment
   tag: the regiment
+- title: The Scaffold System
+  tag: scaffold system
+  game: scaffold
+  offer: https://vsca.blog/2021/02/20/the-scaffold-system/
 - title: The Silver Searcher (ag)
   key: AG
   itemid: https://github.com/ggreer/the_silver_searcher
