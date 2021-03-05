@@ -15,6 +15,9 @@
   tag: a few acres of snow
 - title: A-Z Challenge
   tag: a z challenge
+- title: Academia
+  itemid: https://www.wikidata.org/wiki/Q1211427
+  tag: academia
 - title: Accelerated Mobile Pages
   key: AMP
   itemid: https://www.wikidata.org/wiki/Q25452619
@@ -1803,6 +1806,8 @@
 - title: Wordpress
   itemid: https://www.wikidata.org/wiki/Q13166
   tag: wordpress
+- title: Work Experiments
+  tag: work experiments
 - title: World of Ardu
   key: WOA
   abbr: WoA
