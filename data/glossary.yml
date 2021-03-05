@@ -36,6 +36,9 @@
   itemid: https://www.wikidata.org/wiki/Q39057114
   tag: adventures in middle earth
   abbr: AiME
+- title: Agile
+  tag: agile
+  itemid: https://www.wikidata.org/wiki/Q30232
 - title: Albert Camus
   key: CAMUS
   itemid: https://www.wikidata.org/wiki/Q34670
