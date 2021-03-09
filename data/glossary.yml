@@ -1864,3 +1864,7 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
+- title: Non-Disclosure Agreement
+  description: contractual agreement not to disclose specified information
+  key: NDA
+  itemid: https://www.wikidata.org/wiki/Q1053818
