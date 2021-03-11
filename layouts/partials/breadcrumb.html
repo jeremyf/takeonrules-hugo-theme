@@ -18,7 +18,6 @@
   {{ else }}
   {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3 "site" .Site) }}
   {{ end }}
-  </span>
 </nav>
 {{- define "breadcrumbnav" }}
 {{- if .p1.Parent }}
