@@ -1,0 +1,21 @@
+{{- $path     := .Get "src" }}
+{{- $alt      := .Get "alt" }}
+{{- $caption  := .Get "caption" }}
+{{- $original := resources.Get $path  }}
+{{- $title    := .Get "title" }}
+{{- $imageResize := "770x" }}
+{{- $alt      := .Get "alt" }}
+{{- with .Get "rotate" }}{{- $imageResize = (printf "770x r%s" .) }}{{- end }}
+{{- $result   := $original.Resize $imageResize }}
+<figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" {{ if isSet .Params "hidden" }} aria-hidden="true"{{ end }}>
+{{- with .Inner }}<figcaption  itemprop="caption">{{ partial "unparagraphy.html" . }}</figcaption>{{ end }}
+{{- if .Get "link" }}
+  <a itemprop="isBasedOn" href="{{ $original.RelPermalink }}">
+    <img itemprop="url" src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" width="{{ $result.Width }}" height="{{ $result.Height }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
+  </a>
+{{- else }}
+  <link itemprop="url" href="{{ $result.RelPermalink }}" />
+  <link itemprop="isBasedOn" href="{{ $original.RelPermalink }}">
+  <img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" width="{{ $result.Width }}" height="{{ $result.Height }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
+{{- end }}
+</figure>
