@@ -11,7 +11,8 @@
     --bg: var(--white);
     --cyan-alt-other-faint: #125458;
     --time: var(--cyan-alt-other-faint);
-    --margin: #001087;
+    --blue-alt-other-faint: #001087;
+    --margin: var(--blue-alt-other-faint);
     --bg-dim: #e0e6f0;
     --fg-dim: #282828;
     --em: var(--fg-dim);
@@ -19,7 +20,8 @@
     --dfn: var(--fg-alt);
     --abbr: var(--dfn);
     --dt: var(--dfn);
-    --blue: #0031a9;
+    --blue: #2544bb;
+    --blue-alt-other: #0000c0;
     --a: var(--blue);
     --sidenote-number: var(--blue);
     --cyan: #00538b;
@@ -28,7 +30,7 @@
     --blue-alt-faint: #001087;
     --a-external: var(--blue-alt-faint);
     --a-external-visited: var(--cyan-alt-faint);
-    --magenta-alt: #5317ac;
+    --magenta-alt: #8f0075;
     --summary: var(--magenta-alt);
     --h1: var(--fg);
     --warm: #5d3026;
@@ -71,13 +73,14 @@
         --fg-dim: #e0e6f0;
         --bg-dim: #282828;
         --blue: #2fafff;
+        --blue-alt-other: #00bcff;
         --blue-alt-faint: #87c8ff;
         --cyan-alt-faint: #a0bfdf;
         --cyan-alt-other-faint: #a4d0bb;
         --fg-alt: #a8a8a8;
-        --magenta-alt: #b6a0ff;
+        --magenta-alt: #f78fe7;
         --cyan: #00d3d0;
-        --margin: #87c8ff;
+        --blue-alt-other-faint: #87c8ff;
         --warm: #f8dec0;
         --cold: #c6eaff;
         --mild: #bfebe0;
