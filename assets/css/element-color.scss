@@ -81,6 +81,20 @@ a, .contrast {
         color: var(--bg) !important;
     }
 }
+
+a[href^=https]:not([href^="https://takeonrules.com"]) {
+    color: var(--a-external);
+    &:visited {
+        &:hover, &:focus, &:active {
+            background: var(--a-external-visited) !important;
+        }
+
+        color: var(--a-external-visited); }
+    &:hover, &:focus, &:active {
+        background: var(--a) !important;
+    }
+}
+
 a:visited {
     color:   var(--a-visited);
     &:hover, &:focus, &:active {
