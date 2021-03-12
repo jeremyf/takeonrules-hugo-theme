@@ -11,11 +11,9 @@
 {{- $post := .Get "post" }}
 <blockquote itemprop="citation" itemscope itemtype="http://schema.org/CreativeWork" class="h-cite {{- with .Get "epigraph" }} epigraph{{- end }}" {{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
 {{ if .Get "poem" }}
-<pre itemprop="text" class="poem">{{ .Inner }}</pre>
+<pre class="poem">{{ .Inner }}</pre>
 {{ else }}
-<span itemprop="text">
-  {{ .Inner | markdownify }}
-</span>
+{{ .Inner | markdownify }}
 {{ end }}
 {{- if .IsNamedParams }}
 <footer>&mdash;

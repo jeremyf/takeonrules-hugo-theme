@@ -1,6 +1,10 @@
 {{ define "breadcrumb" }}
 {{ partial "breadcrumb.html" . }}
 {{ end }}
+{{ define "pageRelatedLinks" }}
+{{- with .PrevInSection }}<link itemprop="relatedLink" href="{{ .Permalink }}" />{{- end }}
+{{- with .NextInSection }}<link itemprop="relatedLink" href="{{ .Permalink }}" />{{- end }}
+{{ end }}
 {{ define "main" }}
 <article itemprop="mainEntity" class="h-entry" itemid="#skip-to-content" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
   <header aria-label="Article header">
