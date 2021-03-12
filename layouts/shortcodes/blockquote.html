@@ -13,7 +13,9 @@
 {{ if .Get "poem" }}
 <pre itemprop="text" class="poem">{{ .Inner }}</pre>
 {{ else }}
-<span itemprop="text">{{ .Inner | markdownify }}</span>
+<span itemprop="text">
+  {{ .Inner | markdownify }}
+</span>
 {{ end }}
 {{- if .IsNamedParams }}
 <footer>&mdash;
