@@ -5,7 +5,7 @@
 {{- if $prev }} <a rel="prev" href="{{ $prev.RelPermalink }}" title="Previous post in &ldquo;{{ $title }}&rdquo; is &ldquo;{{ $prev.Title }}&rdquo;"><small>&lt;</small></a>{{- else }} <small aria-hidden="true">&lt;</small>{{- end }}
 
 {{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
-<span itemid="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" itemscope itemtype="http://schema.org/CreativeWorkSeries"><cite itemprop="headline"><a itemprop="url" href="{{ $seriesUrl }}">{{ $title }}</a></cite></span>
+<span itemid="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" itemprop="isPartOf" itemscope itemtype="http://schema.org/CreativeWorkSeries"><cite itemprop="headline"><a itemprop="url" href="{{ $seriesUrl }}">{{ $title }}</a></cite></span>
 {{- $next := where $series ".PublishDate" "gt" $.Page.PublishDate }}{{- range last 1 $next }}
 <a rel="next" href="{{ .RelPermalink }}" title="Next post in &ldquo;{{ $title }}&rdquo; is &ldquo;{{ .Title }}&rdquo;"><small>&gt;</small></a>{{- else }} <small aria-hidden="true">&gt;</small>{{- end }}</span>
 {{- end }}{{- end }}

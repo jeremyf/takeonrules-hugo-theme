@@ -12,9 +12,9 @@
       {{- if or .Params.relPrevious .Params.relNext }}
       <nav aria-labelledby="{{ .Type }}-neighbors-label" class="paginator">
         <span id="{{ .Type }}-neighbors-label" class="label">{{ title .Type }} Neighbors </span>
-        {{- with .Params.relPrevious }}<a itemprop="relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="prev"><small aria-hidden="true">&lt;</small> {{ with .Label }}{{ . }}{{ end }}</a>{{- end }}
+        {{- with .Params.relPrevious }}<a href="{{ .Permalink }}" title="{{ .Title }}" rel="prev"><small aria-hidden="true">&lt;</small> {{ with .Label }}{{ . }}{{ end }}</a>{{- end }}
         {{- if and .Params.relPrevious .Params.relNext }}&nbsp;&middot;&nbsp{{ end }}
-        {{- with .Params.relNext }}<a itemprop="relatedLink" href="{{ .Permalink }}" title="{{ .Title }}" rel="next">{{- with .Label }}{{ . }}{{- end }} <small aria-hidden="true">&gt;</small></a>{{- end }}
+        {{- with .Params.relNext }}<a href="{{ .Permalink }}" title="{{ .Title }}" rel="next">{{- with .Label }}{{ . }}{{- end }} <small aria-hidden="true">&gt;</small></a>{{- end }}
       </nav>
       {{- end }}
     </header>

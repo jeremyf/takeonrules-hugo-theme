@@ -21,8 +21,13 @@
       {{ $lastInstance := sub (len $data.Pages) 1 }}
       {{- range $index, $entry := sort $data.Pages "Date" "asc" }}
       {{- with $entry }}
-      <li><time {{ if (or (eq $index 0) (eq $index $lastInstance)) }}itemprop="{{ if eq $index 0 }}sc:startDate{{ end }} {{ if eq $index $lastInstance }}sc:endDate{{ end }}"{{ end }} datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time> &middot;
-      <span itemprop="hasPart" itemscope itemtype="http://schema.org/CreativeWork"><cite itemprop="name"><a itemprop="url" href="{{ .Permalink}}">{{ .Title }}</a></cite></span></li>
+      <li>
+        <time {{ if (or (eq $index 0) (eq $index $lastInstance)) }}itemprop="{{ if eq $index 0 }}startDate{{ end }} {{ if eq $index $lastInstance }}endDate{{ end }}"{{ end }} datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time> &middot;
+        <span itemprop="hasPart" itemscope itemtype="http://schema.org/CreativeWork">
+          <meta itemprop="position" content="{{ $index }}" />
+          <cite itemprop="name"><a itemprop="url" href="{{ .Permalink}}">{{ .Title }}</a></cite>
+        </span>
+      </li>
       {{- end }}
       {{- end }}
     </ul>

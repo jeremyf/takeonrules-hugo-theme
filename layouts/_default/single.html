@@ -5,9 +5,6 @@
 <article itemprop="mainEntity" class="h-entry" itemid="#skip-to-content" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
   <header aria-label="Article header">
     <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-    {{ if isset .Params "series" }}
-    <link itemprop="isPartOf" href="{{ .RelPermalink }}#series-itemscope" />
-    {{ end }}
     {{ partial "header/post.html" . }}
     {{ partial "header/contentDisclaimers.html" . }}
   </header>

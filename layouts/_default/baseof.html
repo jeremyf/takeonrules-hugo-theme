@@ -19,6 +19,7 @@
   </head>
   <body class="type-{{ .Type }} {{ if isset .Params "full_width"}}full{{ else }}{{ if .IsHome }}full{{ else }}default{{ end }}{{ end }}-width" itemscope itemtype="http://schema.org/{{ with .Params.schema_dot_org_type }}{{ . }}{{ else }}WebPage{{ end }}">
     <header aria-label="Site header">
+      <meta itemprop="speakable" content="{{ .Permalink }}#skip-to-content" />
       <nav class="group" role="list" aria-label="Site navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <meta itemprop="name" content="Site navigation" />
         <a href="#skip-to-content"  itemprop="hasPart" class="offscreen">Skip to Main Content</a>

@@ -1,4 +1,4 @@
-<nav aria-labelledby="breadcrumbs-label" class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+<nav itemprop="breadcrumb" aria-labelledby="breadcrumbs-label" class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
   <span role="list">
     <span id="breadcrumbs-label" itemprop="name" class="label">Breadcrumb </span>
     {{- if eq .Type "post" }}
@@ -15,6 +15,22 @@
     {{ end }}
     <cite id="{{ .Permalink}}" aria-current="page">{{ .Title }}</cite>
   </span>
+  {{ else if eq .Type "series" }}
+    <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <span itemprop="name"><a itemprop="item" href="{{ .Site.BaseURL }}">Home</a></span>
+      <meta itemprop="position" content="1" />
+    </span> /
+    {{- if eq .Kind "taxonomy" }}
+    <cite>Series</cite>
+    {{- else }}
+    <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <span itemprop="name"><a itemprop="item" href="{{ .Site.BaseURL }}series/">Series</a></span>
+      <meta itemprop="position" content="2" />
+    </span>
+    {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
+    / <cite>{{ .title }}</cite>
+    {{- end }}
+    {{- end }}
   {{ else }}
   {{ template "breadcrumbnav" (dict "p1" . "p2" . "depth" 3 "site" .Site) }}
   {{ end }}
