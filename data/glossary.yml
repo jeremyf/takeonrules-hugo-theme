@@ -1834,9 +1834,13 @@
   game: wwn
   key: WWN
   itemid: https://www.wikidata.org/wiki/Q104153924
-  offer: https://www.kickstarter.com/projects/1637945166/worlds-without-number/
+  offer: https://www.drivethrurpg.com/product/348791/Worlds-Without-Number?affiliate_id=318171
   tag: wwn
   abbr: WWN
+- title: 'Worlds without Number: Free Edition'
+  game: wwn-free
+  itemid: https://www.wikidata.org/wiki/Q104153924
+  offer: https://www.drivethrurpg.com/product/348809/Worlds-Without-Number-Free-Edition?affiliate_id=318171
 - title: Wrath of the Autarch
   key: WOTA
   itemid: https://www.wikidata.org/wiki/Q104150978
