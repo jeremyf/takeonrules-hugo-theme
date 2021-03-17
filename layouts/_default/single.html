@@ -40,7 +40,7 @@
       {{ end }}
       <p itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">I give it <span itemprop="ratingValue">{{ .ratingValue }}</span> of <span itemprop="bestRating">5</span> stars.</p>
       <p itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .type }}{{ . }}{{ else }}Book{{ end }}">
-        <cite>{{ $.Page.Title }}</cite> is a review of <span itemprop="name"><a itemprop="sameAs" href="{{ .url }}">{{ .name }}</a></span> by <span itemprop="author">
+        <cite>{{ $.Page.Title }}</cite> is a review of <cite itemprop="name"><a itemprop="sameAs" href="{{ .url }}">{{ .name }}</a></cite> by <span itemprop="author">
           {{ if eq (len .authors) 2 }}{{ delimit .authors "</span> and <span itemprop='author'>"}}{{ else }}{{ delimit .authors "</span>, <span itemprop='author'>"  "</span>, and <span itemprop='author'>" }}{{ end }}</span>.
       </p>
     </section>
