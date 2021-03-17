@@ -689,6 +689,8 @@
 - title: Gen Con
   itemid: https://www.wikidata.org/wiki/Q550430
   tag: gencon
+- title: Gene Wolfe
+  itemid: https://www.wikidata.org/wiki/Q361149
 - title: General Games
   tag: general games
 - title: Ghostlines
@@ -835,6 +837,8 @@
   offer: https://www.drivethrurpg.com/product/128281/Inverse-World--A-Dungeon-World-Supplement?affiliate_id=318171
   tag: inverse world
   game: inverse world
+- title: Jack Vance
+  itemid: https://www.wikidata.org/wiki/Q312632
 - title: Javascript
   key: JS
   itemid: https://www.wikidata.org/wiki/Q2005
@@ -862,6 +866,9 @@
 - title: Kenku
   itemid: https://www.wikidata.org/wiki/Q6389420
   tag: kenku
+- title: Kevin Crawford
+  itemid: https://www.wikidata.org/wiki/Q67963897
+  key: kevin-crawford
 - title: Kickstarter
   itemid: https://www.wikidata.org/wiki/Q34755
   tag: kickstarter
@@ -943,6 +950,7 @@
 - title: Luke Crane
   itemid: https://www.wikidata.org/wiki/Q66831262
   tag: luke crane
+  key: luke-crane
   contentDisclaimers:
   - lukecrane
 - title: Machine Learning
@@ -1064,6 +1072,10 @@
   offer: https://www.drivethrurpg.com/product/17087/Night-Below-An-Underdark-Campaign-2e?affiliate_id=318171
   tag: night below
   game: night below
+- title: Non-Disclosure Agreement
+  description: contractual agreement not to disclose specified information
+  key: NDA
+  itemid: https://www.wikidata.org/wiki/Q1053818
 - title: Non-Player Character
   key: NPC
   itemid: https://www.wikidata.org/wiki/Q466466
@@ -1868,7 +1880,3 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- title: Non-Disclosure Agreement
-  description: contractual agreement not to disclose specified information
-  key: NDA
-  itemid: https://www.wikidata.org/wiki/Q1053818
