@@ -1880,3 +1880,12 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
+- title: Dying Earth
+  note: Sci-fi Sub-Genre
+  itemid: https://www.wikidata.org/wiki/Q5318627
+- title: Kahlil Gibran
+  itemid: https://www.wikidata.org/wiki/Q47737
+  itemtype: Person
+- title: The Prophet
+  itemid: https://www.wikidata.org/wiki/Q1196302
+  itemtype: Book
