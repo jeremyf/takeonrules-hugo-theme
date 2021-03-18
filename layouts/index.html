@@ -20,6 +20,9 @@
 {{- end }}
 {{- end }}
 {{ define "main" }}
+<section itemprop="about">
+  {{ .Content }}
+</section>
 <article itemprop="mainEntity" aria-labelledby="blog-posts" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/Blog">
   {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
