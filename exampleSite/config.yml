@@ -1,0 +1,144 @@
+baseURL: 'https://your-site-here.com/'
+canonifyURLs: true
+canonifyurls: true
+enableRobotsTXT: true
+languageCode: en-us
+enableInlineShortcodes: true
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  highlight:
+    codeFences: false
+    hl_Lines: ''
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: false
+    noClasses: true
+    style: tango
+    tabWidth: 2
+menu:
+  me_elsewhere:
+    - identifier: github
+      name: github.com/your-handle-here
+      url: 'https://github.com/your-handle-here'
+  topnav:
+    - identifier: a
+      name: About
+      title: About Your Site Here
+      url: /about/
+    - identifier: s
+      name: Services
+      title: "The consulting services I provide"
+      url: /services/
+    - identifier: m
+      name: Site Map
+      title: 'An index of various pages on Your Site Here'
+      url: /site-map/
+
+outputs:
+  home:
+    - HTML
+    - JSON
+    - RSS
+    - ATOM
+  page:
+    - HTML
+  section:
+    - HTML
+  taxonomies:
+    - HTML
+    - XML
+mediaTypes:
+  application/atom:
+    suffixes:
+    - "atom"
+outputFormats:
+  Atom:
+    mediaType: application/atom
+    baseName: index
+    isPlainText: false
+params:
+  # Note: This parameter dictates if you want to render the rel="next"
+  # and rel="prev" for all tag instances.  When withTagRels == true,
+  # it almost triples the build time.
+  withTagRels: true
+  searchMySiteVerification: your-search-verification-here
+  Authors:
+    - twitter: your-twitter-handle-here
+  CopyrightRelation:
+    - name: Your Org Relation Here
+      relationship: alumniOf
+      type: EducationalOrganization
+      url: 'https://your-university-here'
+  organizationImagePath: '/images/path-to-your-personal-orgs-image.jpg'
+  authorName: Your Name
+  copyrightHolder: Your Name
+  copyrightHolderEmail: your-email@here.com
+  copyrightHolderURL: 'https://your-site-here.com/about/'
+  description: >-
+    Your Name's personal blog, with a focus on table-top role-playing
+    games.
+  docsUrlForRssV2: 'https://cyber.harvard.edu/rss/rss.html'
+  firstPostDate: 2011-02-02
+  googleSiteVerification: your-site-verification-here
+  headline: Your Site Here Blog Posts and Other Web Pages
+  images:
+    - /images/path-to-your-personal-orgs-image.jpg
+  iso8601_format: '2006-01-02'
+  morePermissionsPermalink: 'https://your-site-here.com/more_permissions/'
+  pagination_size: 10
+  paginatedSections:
+    - post
+    - reviews
+  pingbackUrl: 'https://webmention.io/your-site-here.com/xmlrpc'
+  sameAs:
+    - 'https://github.com/your-handle-here'
+  identifiers:
+    - 'https://orcid.org/dddd-dddd-dddd-dddd'
+  siteHost: your-site-here.com
+  title: Your Site Here
+  webmentionUrl: 'https://webmention.io/your-site-here.com/webmention'
+  withJsonLd: true
+  foundingDate: "2021-02-02"
+permalinks:
+  posts: '/:year/:month/:day/:slug/'
+  pages: '/:slug/'
+related:
+  includeNewer: true
+  indices:
+    - name: tags
+      weight: 100
+    - name: keywords
+      weight: 100
+    - name: date
+      pattern: '2006'
+      weight: 10
+    - name: title
+      weight: 100
+  threshold: 20
+  toLower: false
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+taxonomies:
+  license: licenses
+  series: series
+  tag: tags
+theme: hugo-tufte
+title: Your Site Here

@@ -8,6 +8,10 @@ You can see this template at [Take on Rules](https://takeonrules.com).  _Note: T
 
 For colors, I've adopted the palette from [Protesilaos Stavrou](https://protesilaos.com/)'s [Modus themes](https://protesilaos.com/modus-themes/); The colors are WCAG compliant and bring me a bit of joy.
 
+## ExampleSite
+
+No care has been taken to update the exampleSite; I have, however, uploaded a re-dacted copy of my config.yml; Hopefully that helps with working through the site.
+
 ## Semantic Markup and Linked Data
 
 I strive for semantic markup; My goal is that I create an accessible site.  Also, as a benefit, if you disable the stylesheet the page will continue to render in a meaningful way.  _In fact, I encourage you to disable the stylesheet on most sites and see how they look._
