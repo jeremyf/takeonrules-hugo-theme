@@ -1,5 +1,7 @@
 {{- if .Params.canonical_url }}
-  <link rel="canonical" href="{{ .Params.canonical_url }}" />
+<link rel="canonical" href="{{ .Params.canonical_url }}" />
+{{- else if .Params.hive }}
+<link rel="canonical" href="{{ .Params.hive.url }}" />
 {{- else if .RelPermalink }}
   <link rel="canonical" href="{{ .RelPermalink }}" />
 {{- end }}
