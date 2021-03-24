@@ -12,18 +12,18 @@
     {{ partial "header/post.html" . }}
     {{ partial "header/contentDisclaimers.html" . }}
   </header>
+  {{- with .Params.hive }}
+  <section aria-label="Summary of this post's basis" itemprop="isBasedOn" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="{{ $.Page.Title }}" />
+    <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />
+    <aside>
+      <p>
+        <cite>{{ $.Page.Title }}</cite> expands on <a href="{{ .url }}" itemprop="url">a post I made</a> on <time itemprop="dateCreated" datetime="{{ .postedDate }}">{{ .postedDate }}</time> into the <a href="https://hive.io/">Hive ecosystem</a>.
+      </p>
+    </aside>
+  </section>
+  {{- end }}
   <section itemprop="articleBody" class="content e-content" itemid="#content" aria-label="Content">
-    {{- with .Params.hive }}
-    <section aria-label="Summary of this post's basis" itemprop="isBasedOn" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="headline" content="{{ $.Page.Title }}" />
-      <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />
-      <aside>
-        <p>
-          <cite>{{ $.Page.Title }}</cite> is based on <a href="{{ .url }}" itemprop="url">a post I made</a> on <time itemprop="dateCreated" datetime="{{ .postedDate }}">{{ .postedDate }}</time> into the <a href="https://hive.io/">Hive ecosystem</a>.
-        </p>
-      </aside>
-    </section>
-    {{- end }}
     {{- with .Params.sessionReport }}
     <section aria-label="Session report summary" itemprop="about" itemscope itemtype="http://schema.org/SocialEvent">
       <link itemprop="subjectOf" href="{{ $.Page.Permalink }}#skip-to-content" />
