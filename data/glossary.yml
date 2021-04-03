@@ -405,6 +405,14 @@
   abbr: d20
 - title: 'Dark Six: A Primal Eberron Pantheon'
   tag: dark six
+- title: Dark Sun
+  key: DS
+  itemid: https://www.wikidata.org/wiki/Q584169
+  offer: https://www.dmsguild.com/browse.php?filters=0_0_0_0_45353_0_0_0&affiliate_id=318171
+  game: darksun
+  tag: dark sun
+- title: Dave Arneson
+  itemid: https://www.wikidata.org/wiki/Q1381
 - title: 'Dead Names: Lost Races and Forgotten Ruins'
   key: DEAD-NAMES
   offer: https://www.drivethrurpg.com/product/130967/Dead-Names-Lost-Races-and-Forgotten-Ruins?affiliate_id=318171
@@ -557,6 +565,11 @@
   offer: https://www.drivethrurpg.com/product/133746/Dwimmermount-Labyrinth-Lord-version?affiliate_id=318171
   tag: dwimmermount
   game: dwimmermount
+- title: Dying Earth
+  note: Sci-fi Sub-Genre
+  itemid: https://www.wikidata.org/wiki/Q5318627
+- title: Dying Earth Saga
+  itemid: https://www.wikidata.org/wiki/Q303490
 - title: e-book file format standard by the International Digital Publishing Forum
   key: EPUB
   itemid: https://www.wikidata.org/wiki/Q475488
@@ -604,6 +617,10 @@
   tag: family
 - title: Family Gaming
   tag: family gaming
+- title: Fantasy
+  key: FANTASY
+  tag: fantasy
+  itemid: https://www.wikidata.org/wiki/Q132311
 - title: Faster than Light
   key: FTL
   itemid: https://www.wikidata.org/wiki/Q44207
@@ -686,6 +703,8 @@
   tag: gaming
 - title: Gaming Group
   tag: gaming group
+- title: Gary Gygax
+  itemid: https://www.wikidata.org/wiki/Q25550430
 - title: Gen Con
   itemid: https://www.wikidata.org/wiki/Q550430
   tag: gencon
@@ -861,6 +880,9 @@
   tag: just arrived
 - title: Justice
   tag: justice
+- title: Kahlil Gibran
+  itemid: https://www.wikidata.org/wiki/Q47737
+  itemtype: Person
 - title: Keith Baker Presents
   key: KB PRESENTS
 - title: Kenku
@@ -1400,6 +1422,8 @@
 - title: School Resource Officer
   key: SRO
   itemid: https://www.wikidata.org/wiki/Q7432625
+- title: Science Fantasy
+  itemid: https://www.wikidata.org/wiki/Q1080374
 - title: Science Fiction
   key: SF
   itemid: https://www.wikidata.org/wiki/Q24925
@@ -1613,6 +1637,9 @@
 - title: Textmate
   key: TEXTMATE
   itemid: https://www.wikidata.org/wiki/Q2297533
+- title: The Book of the New Sun
+  itemid: https://www.wikidata.org/wiki/Q3269840
+  itemtype: Book
 - title: The Empire Strikes Back
   itemid: https://www.wikidata.org/wiki/Q181795
   tag: empire strikes back
@@ -1635,6 +1662,9 @@
   itemid: https://www.wikidata.org/wiki/Q2028764
   tag: the one ring
   abbr: TOR
+- title: The Prophet
+  itemid: https://www.wikidata.org/wiki/Q1196302
+  itemtype: Book
 - title: The Regiment
   itemid: https://rpggeek.com/rpg/27316/regiment
   tag: the regiment
@@ -1677,6 +1707,8 @@
   itemid: https://www.wikidata.org/wiki/Q104254746
 - title: Today I Learned
   tag: today i learned
+- title: Tom Moldvay
+  itemid: https://www.wikidata.org/wiki/Q3530805
 - title: Tomb of Adventure Design
   key: TOAD
   game: tome of adventure design
@@ -1876,16 +1908,9 @@
   itemid: https://www.wikidata.org/wiki/Q281876
 - title: Young Offender
   key: YO
+- title: Zeb Cook
+  itemid: https://www.wikidata.org/wiki/Q5232538
 - title: Zettelkasten
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- title: Dying Earth
-  note: Sci-fi Sub-Genre
-  itemid: https://www.wikidata.org/wiki/Q5318627
-- title: Kahlil Gibran
-  itemid: https://www.wikidata.org/wiki/Q47737
-  itemtype: Person
-- title: The Prophet
-  itemid: https://www.wikidata.org/wiki/Q1196302
-  itemtype: Book
