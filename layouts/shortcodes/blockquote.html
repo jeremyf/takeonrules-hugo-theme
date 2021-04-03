@@ -21,7 +21,7 @@
 <span class="p-author h-card" itemprop="author">{{ . | markdownify }}</span>{{- if(or (or $cite $cite_url) $post) }}, {{ end }}
 {{- end }}
 
-{{- if $scratchKey }}{{- if (.Page.Scratch.Get $scratchKey) }}<cite itemprop="headline">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</cite><link itemprop="mainEntityOfPage" href="{{ $cite_url }}" />{{- else }}<cite><a itemprop="mainEntityOfPage" href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</a></cite>{{- end }}
+{{- if $scratchKey }}{{- if (.Page.Scratch.Get $scratchKey) }}<cite itemprop="headline">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</cite><link itemprop="mainEntityOfPage" href="{{ $cite_url }}" />{{- else }}<cite itemprop="headline"><a itemprop="mainEntityOfPage" href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</a></cite>{{- end }}
 {{- else if $cite_url }}<cite itemprop="headline"><a itemprop="mainEntityOfPage" href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</a></cite>{{- else }}{{- if $cite }}<cite itemprop="headline">{{- $cite }}</cite>{{- end }}{{- end }}
 {{- if($post) }}{{ partial "unparagraphy.html" $post }}{{- end }}
 </footer>
