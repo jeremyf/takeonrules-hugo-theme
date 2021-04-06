@@ -39,7 +39,7 @@ blockquote {
   }
 }
 
-nav [role="list"] [role="listitem"] { display: inline-block; }
+nav [role="list"] [role="listitem"], nav .series-navigation { display: inline-block; }
 
 /* BEGIN Epigraphs */
 .epigraph {
@@ -170,7 +170,7 @@ article { section > ul, section > ol { width: 45%; } }
 // The main article has a bound region
 // Note: https://takeonrules.com/2020/12/31/a-refinement-to-the-ubiquitous-initiative-procedure/ introduced nested articles.
 main > article {
-    > header, > footer {
+    > header, > footer, > ol {
         width: 85%;
         * { width: auto; }
     }
