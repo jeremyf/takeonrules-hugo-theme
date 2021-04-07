@@ -194,6 +194,8 @@
   key: BITFS
 - title: Book Review
   tag: book review
+- title: Brown Thrasher
+  itemid: https://www.wikidata.org/wiki/Q928134
 - title: 'Bulldogs: Sci-Fi That Kicks Ass'
   itemid: https://rpggeek.com/rpgfamily/11030/bulldogs
   offer: https://www.drivethrurpg.com/product/166518/Bulldogs-Fate-Core-Edition?affiliate_id=318171
@@ -989,6 +991,8 @@
   itemid: https://www.wikidata.org/wiki/Q14116
   tag: osx
   abbr: OS X
+- title: Magnolia
+  itemid: https://www.wikidata.org/wiki/Q157017
 - title: Manouevre Drive
   key: M-DRIVE
 - title: Marvel Heroic RPG
