@@ -753,6 +753,8 @@
   tag: haiku
 - title: Head Quarters
   key: HQ
+- title: Hesburgh Libraries
+  itemid: https://www.wikidata.org/wiki/Q30289521
 - title: Hit Die
   key: HD
 - title: Hit Point
@@ -952,6 +954,8 @@
   abbr: LH
 - title: Let's Read
   tag: let's read
+- title: Letter of Marque
+  itemid: https://www.wikidata.org/wiki/Q1414906
 - title: Lifepaths
   key: LP
   tag: lifepaths
@@ -1095,6 +1099,10 @@
   offer: https://www.drivethrurpg.com/product/17087/Night-Below-An-Underdark-Campaign-2e?affiliate_id=318171
   tag: night below
   game: night below
+- title: Non-Disclosure Agreement
+  description: contractual agreement not to disclose specified information
+  key: NDA
+  itemid: https://www.wikidata.org/wiki/Q1053818
 - title: Non-Disclosure Agreement
   description: contractual agreement not to disclose specified information
   key: NDA
@@ -1272,6 +1280,9 @@
 - title: Probability
   itemid: https://www.wikidata.org/wiki/Q9492
   tag: probability
+- title: Problem Solving
+  tag: problem solving
+  itemid: https://www.wikidata.org/wiki/Q730920
 - title: Product Identity
   key: PI
   abbr: PI
@@ -1547,6 +1558,10 @@
   key: STAR-WARS
   itemid: https://www.wikidata.org/wiki/Q462
   tag: star wars
+- title: 'Stars without Number: Revised (Free Edition)'
+  game: swn-free
+  offer: https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version?affiliate_id=318171
+  itemid: https://rpggeek.com/rpgitem/243271/stars-without-number-revised-edition-free-edition
 - title: 'Stars without Number: Revised Edition'
   key: SWN
   itemid: https://www.wikidata.org/wiki/Q67963569
@@ -1915,15 +1930,3 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- title: Non-Disclosure Agreement
-  description: contractual agreement not to disclose specified information
-  key: NDA
-  itemid: https://www.wikidata.org/wiki/Q1053818
-- title: 'Stars without Number: Revised (Free Edition)'
-  game: swn-free
-  offer: https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version?affiliate_id=318171
-  itemid: https://rpggeek.com/rpgitem/243271/stars-without-number-revised-edition-free-edition
-- title: Hesburgh Libraries
-  itemid: https://www.wikidata.org/wiki/Q30289521
-- title: Letter of Marque
-  itemid: https://www.wikidata.org/wiki/Q1414906
