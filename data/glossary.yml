@@ -1382,6 +1382,9 @@
   tag: rolemaster
 - title: RPG Reward
   tag: rpg reward
+- title: Ruby
+  itemid: https://www.wikidata.org/wiki/Q161053
+  tag: ruby
 - title: 'Ruby on Rails: Open Source Web Application Framework'
   key: ROR
   itemid: https://www.wikidata.org/wiki/Q190478
