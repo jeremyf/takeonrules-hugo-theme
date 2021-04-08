@@ -67,6 +67,27 @@ I wrote about the Glossary in <cite><a href="http://takeonrules.com/2020/12/20/m
 
 These short codes are written such that I won't render the same help link twice; Hence the use of testing a Page's Scratch variable.
 
+#### Data Dictionary
+
+Each glossary entry must have two keys:
+
+- **key**: This is how you look them up; this is human understandable
+- **title**: This is how you will most often refer to the thing; this is human readable and how you'd write it out in a sentence
+
+There additional optional keys are as follows:
+
+- **verboseTitle**: This is the lengthier title; you know, if there's a colon/subtitle in play use that.
+- **tag**: If this entry represents a tag, this will be the tags name
+- **itemid**: If this entry has a "sameAs" itemprop value, that will be the itemid (e.g. how to disambiguate)
+- **abbr**: If you reference the entry for an ABBR, but the given key is not good for the innerHTML of the ABBR tags. (see `abbr.html` shortcode)
+- **offer**: The URL where the thing is on offer (e.g. where you can buy it)
+- **game**: Indicates that this thing is a game (and linkable via `linkToGame.html` shortcode)
+- **contentDisclaimers**: (Array) Indicates that this entry has some associated content disclaimer
+- **note**: A human readable note to help disambiguate (deprecated?)
+- **itemtype**: The schema.org itemtype for this entry (see `mention.html` for implementation details)
+- **description**: Similar to note, treat as `itemprop="description"`
+- **dfn**: deprecate
+
 #### Todo
 
 The `linkToGame.html` shortcode does similar work as the `dfn.html` shortcode; Which does similar work to `abbr.html`.  I believe I can consolidate these.  Here are the scenarios:
