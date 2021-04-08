@@ -1,21 +1,26 @@
 ---
 - title: 1001 Nights
+  key: 1001-NIGHTS
   itemid: https://rpggeek.com/rpg/763/thousand-and-one-nights-game-enticing-stories
   offer: https://www.drivethrurpg.com/product/194488/1001-Nights?affiliate_id=318171
   tag: 1001 nights
   game: 1001 nights
 - title: 3-Dimensional
   key: 3D
-- title: A common six-sided die.
+- title: Six-sided die
   key: D6
+  mentionAs: d6
   itemid: https://www.wikidata.org/wiki/Q17639282
   abbr: d6
 - title: A Few Acres of Snow
+  key: A-FEW-ACRES-OF-SNOW
   itemid: https://www.wikidata.org/wiki/Q4656713
   tag: a few acres of snow
 - title: A-Z Challenge
+  key: A-Z-CHALLENGE
   tag: a z challenge
 - title: Academia
+  key: ACADEMIA
   itemid: https://www.wikidata.org/wiki/Q1211427
   tag: academia
 - title: Accelerated Mobile Pages
@@ -25,11 +30,14 @@
   key: ACT
 - title: 'Advanced Dungeons and Dragons: First Edition'
   key: 1E
+  mentionAs: AD&D 1E
   itemid: https://www.wikidata.org/wiki/Q64597405
 - title: 'Advanced Dungeons and Dragons: Second Edition'
   key: 2E
+  mentionAs: AD&D 2E
   itemid: https://www.wikidata.org/wiki/Q64620925
 - title: Adventure
+  key: ADVENTURE
   tag: adventure
 - title: Adventures in Middle Earth
   key: AIME
@@ -37,8 +45,9 @@
   tag: adventures in middle earth
   abbr: AiME
 - title: Agile
-  tag: agile
+  key: AGILE
   itemid: https://www.wikidata.org/wiki/Q30232
+  tag: agile
 - title: Albert Camus
   key: CAMUS
   itemid: https://www.wikidata.org/wiki/Q34670
@@ -51,41 +60,46 @@
   itemid: https://www.wikidata.org/wiki/Q764265
   offer: https://www.drivethrurpg.com/product/245263/Alternity-Core-Rulebook?affiliate_id=318171
   tag: alternity
-  abbr: Alterntiy
   game: alternity
+  abbr: Alterntiy
 - title: American Sign Language
   key: ASL
   itemid: https://www.wikidata.org/wiki/Q14759
 - title: American Standard Code for Information Interchange
   key: ASCII
+  mentionAs: ASCII
   itemid: https://www.wikidata.org/wiki/Q8815
-- title: 'Android: Netrunner (Living Card Game)'
+- title: 'Android: Netrunner'
   key: NETRUNNER
   itemid: https://www.wikidata.org/wiki/Q4759447
   tag: android netrunner
   abbr: 'Android: Netrunner'
 - title: Anglerre
+  key: ANGLERRE
   tag: anglerre
 - title: ante meridiem
   key: AM
-  abbr: am
   itemid: https://www.wikidata.org/wiki/Q55313888
+  abbr: am
 - title: Apocalypse Galactica
+  key: APOCALYPSE-GALACTICA
   tag: apocalypse galactica
 - title: Apocalypse World
   key: AW
   itemid: https://www.wikidata.org/wiki/Q16382540
   tag: apocalypse world
 - title: 'Apocalypse World: Dark Ages'
-  game: awda
   key: AWDA
-- title: 'Appendix N: Dungeons & Dragons inspirational bibliography'
+  game: awda
+- title: Appendix N
   key: APPENDIX-N
   itemid: https://www.wikidata.org/wiki/Q70483411
   tag: appendix n
   abbr: Appendix N
+  description: Dungeons & Dragons inspirational bibliography
 - title: Application Programming Interface
   key: API
+  mentionAs: API
   itemid: https://www.wikidata.org/wiki/Q165194
 - title: Armor Class
   key: AC
@@ -99,24 +113,27 @@
   itemid: https://www.wikidata.org/wiki/Q5453
   offer: https://www.drivethrurpg.com/browse.php?keywords=ars+magica&affiliate_id=318171
   tag: ars magica
-  abbr: Ars Magica
   game: ars-magica
+  abbr: Ars Magica
 - title: Artha
+  key: ARTHA
   tag: artha
-  contentDisclaimers:
-  - lukecrane
+  contentDisclaimers: '["lukecrane"]'
 - title: Artificial Intelligence
   key: AI
   itemid: https://www.wikidata.org/wiki/Q25933185
 - title: Arts and Crafts
+  key: ARTS-AND-CRAFTS
   itemid: https://www.wikidata.org/wiki/Q810592
   tag: arts and crafts
-- key: ATOM-FEED
+- title: Atom Syndication Format
+  key: ATOM-FEED
+  mentionAs: Atom
   itemid: https://www.wikidata.org/wiki/Q267956
-  title: Atom Syndication Format
   abbr: Atom
 - title: Atom text editor
   key: ATOM
+  mentionAs: Atom
   itemid: https://www.wikidata.org/wiki/Q16766305
   tag: atom
   abbr: Atom
@@ -124,8 +141,9 @@
   key: ATK
 - title: Attack Value
   key: AV
-- title: 'Barbarians of Lemuria: Mythic Edition'
+- title: Barbarians of Lemuria
   key: BOL
+  verboseTitle: 'Barbarians of Lemuria: Mythic Edition'
   itemid: https://www.wikidata.org/wiki/Q67799891
   offer: https://www.drivethrurpg.com/product/144526/Barbarians-of-Lemuria-Mythic-Edition?affiliate_id=318171
   tag: barbarians of lemuria
@@ -133,6 +151,7 @@
 - title: Barrel Rider Games
   key: BRG
 - title: Barrowmaze Complete
+  key: BARROWMAZE-COMPLETE
   itemid: https://rpggeek.com/rpgitem/175318/barrowmaze-complete
   offer: https://www.drivethrurpg.com/product/139762/Barrowmaze-Complete?affiliate_id=318171
   tag: barrowmaze
@@ -144,15 +163,15 @@
   itemid: https://www.wikidata.org/wiki/Q4866969
   offer: https://www.drivethrurpg.com/product/140455/Basic-Fantasy-RPG-3rd-Edition?affiliate_id=318171
   tag: basic fantasy rpg
-  abbr: BFRPG
   game: bfrpg
+  abbr: BFRPG
 - title: Battletech
+  key: BATTLETECH
   itemid: https://www.wikidata.org/wiki/Q810983
   tag: battletech
 - title: Beliefs, Instincts, and Traits
   key: BITS
-  contentDisclaimers:
-  - lukecrane
+  contentDisclaimers: '["lukecrane"]'
 - title: Better World Books
   key: BWB
   itemid: https://www.wikidata.org/wiki/Q4898566
@@ -163,24 +182,28 @@
 - title: Black and White
   key: B&W
 - title: Black Author
+  key: BLACK-AUTHOR
   tag: black author
 - title: Black Out Tuesday
+  key: BLACK-OUT-TUESDAY
   tag: black out tuesday
 - title: Black, Indigenous, Multi-racial, or Person of Color
   key: BIMPOC
 - title: Blades in the Dark
   key: BITD
   itemid: https://www.wikidata.org/wiki/Q39045543
+  offer: https://www.drivethrurpg.com/product/170689/Blades-in-the-Dark?affiliate_id=318171
   tag: blades in the dark
   game: bitd
-  offer: https://www.drivethrurpg.com/product/170689/Blades-in-the-Dark?affiliate_id=318171
   abbr: BitD
 - title: Blogging
+  key: BLOGGING
   itemid: https://www.wikidata.org/wiki/Q21124681
   tag: blogging
 - title: Blogging Engine
-  tag: blogging engine
+  key: BLOGGING-ENGINE
   itemid: https://www.wikidata.org/wiki/Q1810858
+  tag: blogging engine
 - title: 'Bloodstone: H-Series'
   key: BLOODSTONE
   itemid: https://rpggeek.com/rpgseries/223/h-bloodstone-pass-saga
@@ -188,53 +211,57 @@
   tag: bloodstone
   game: bloodstone
 - title: Bluebird
+  key: BLUEBIRD
   itemid: https://www.wikidata.org/wiki/Q853286
 - title: Board Game
+  key: BOARD-GAME
   itemid: https://www.wikidata.org/wiki/Q131436
   tag: boardgame
 - title: Bonds, Ideals, Traits, and Flaws
   key: BITFS
 - title: Book Review
+  key: BOOK-REVIEW
   tag: book review
 - title: Brown Thrasher
+  key: BROWN-THRASHER
   itemid: https://www.wikidata.org/wiki/Q928134
 - title: 'Bulldogs: Sci-Fi That Kicks Ass'
+  key: BULLDOGS
   itemid: https://rpggeek.com/rpgfamily/11030/bulldogs
   offer: https://www.drivethrurpg.com/product/166518/Bulldogs-Fate-Core-Edition?affiliate_id=318171
   tag: bulldogs
   game: bulldogs
 - title: Burning Beards
+  key: BURNING-BEARDS
   tag: burning beards
 - title: Burning Empires
   key: BE
   itemid: https://www.wikidata.org/wiki/Q4999841
   offer: https://www.drivethrurpg.com/product/50260/Burning-Empires?affiliate_id=318171
   tag: burning empires
-  abbr: BE
   game: be
-  contentDisclaimers:
-  - lukecrane
+  abbr: BE
+  contentDisclaimers: '["lukecrane"]'
 - title: Burning Wheel Codex
-  game: bwc
   key: BWC
-  abbr: BWC
   itemid: https://rpggeek.com/rpgitem/191252/burning-wheel-codex
-  contentDisclaimers:
-  - lukecrane
+  game: bwc
+  abbr: BWC
+  contentDisclaimers: '["lukecrane"]'
 - title: Burning Wheel Gold
-  game: bwg
   key: BWG
-  abbr: BWG
   itemid: https://www.wikidata.org/wiki/Q68247397
   offer: https://burningwheel.com
   tag: burning wheel
-  contentDisclaimers:
-  - lukecrane
+  game: bwg
+  abbr: BWG
+  contentDisclaimers: '["lukecrane"]'
 - title: Burning Wheel Headquarters
   key: BWHQ
-  contentDisclaimers:
-  - lukecrane
-- title: Burnout (Occupational)
+  contentDisclaimers: '["lukecrane"]'
+- title: Burnout
+  key: BURNOUT
+  verboseTitle: Burnout (Occupational)
   itemid: https://www.wikidata.org/wiki/Q327988
   tag: burnout
 - title: Call of Cthulhu
@@ -243,43 +270,57 @@
   tag: call of cthulhu
   abbr: CoC
 - title: Campaign
+  key: CAMPAIGN
   itemid: https://www.wikidata.org/wiki/Q2608176
   tag: campaign
 - title: Campaign Notes
+  key: CAMPAIGN-NOTES
   tag: campaign notes
 - title: Campaign Planning
+  key: CAMPAIGN-PLANNING
   tag: campaign planning
 - title: Campaign Preparation
+  key: CAMPAIGN-PREPARATION
   tag: campaign preparation
 - title: Campaign Setting
+  key: CAMPAIGN-SETTING
   itemid: https://www.wikidata.org/wiki/Q4418079
   tag: campaign setting
 - title: 'Campaign: Burning Sanctuary'
+  key: BURNING-SANCTUARY
   itemid: https://takeonrules.com/series/burning-sanctuary
   tag: burning sanctuary
 - title: 'Campaign: DCC Better World Gaming'
+  key: DCC-BETTER-WORLD-GAMING
   itemid: https://takeonrules.com/series/dcc-better-world-gaming/
   tag: dcc better world gaming
 - title: 'Campaign: Fade into Fey'
+  key: FADE-INTO-FEY
   itemid: https://takeonrules.com/series/fade-into-fey/
   tag: fade into fey
 - title: 'Campaign: The Butcher, the Baker, and the Candlestick Maker'
+  key: THE-BUTCHER-THE-BAKER-AND-THE-CANDLESTICK-MAKER
   itemid: https://takeonrules.com/series/butcher-baker-candlestick-maker/
   tag: butcher baker and candlestick maker
 - title: 'Campaign: The Precious Few'
+  key: THE-PRECIOUS-FEW
   itemid: https://takeonrules.com/series/diaspora/
   tag: the precious few
 - title: Carcosa
+  key: CARCOSA
   itemid: https://www.wikidata.org/wiki/Q68393330
   tag: carcosa
 - title: Card Game
+  key: CARD-GAME
   itemid: https://www.wikidata.org/wiki/Q142714
   tag: card game
 - title: Cartography
+  key: CARTOGRAPHY
   itemid: https://www.wikidata.org/wiki/Q42515
   tag: cartography
 - title: Cascading Stylesheet
   key: CSS
+  mentionAs: CSS
   itemid: https://www.wikidata.org/wiki/Q46441
 - title: Caster Level
   key: CL
@@ -292,68 +333,80 @@
   itemid: https://rpggeek.com/rpg/38235/cepheus-engine-system
   offer: https://www.drivethrurpg.com/browse.php?keywords=cepheus+engine&affiliate_id=318171
   tag: cepheus engine
-  abbr: CE
   game: ceng
+  abbr: CE
 - title: Certified Space Accountant
   key: CSA
 - title: Challenge Rating
   key: CR
 - title: Champions of Zed
+  key: CHAMPIONS-OF-ZED
   itemid: https://rpggeek.com/rpg/28365/champions-zed
   offer: https://www.drivethrurpg.com/product/160660/Champions-of-ZED-Zero-Edition-Dungeoneering?affiliate_id=318171
   tag: champions of zed
   game: champions of zed
 - title: Change Management
+  key: CHANGE-MANAGEMENT
   itemid: https://www.wikidata.org/wiki/Q116348
   tag: change management
 - title: Chaotic
   key: C
 - title: Character Creation
+  key: CHARACTER-CREATION
   itemid: https://www.wikidata.org/wiki/Q5073735
   tag: character creation
 - title: Character Funnel
+  key: CHARACTER-FUNNEL
   tag: character funnel
 - title: Charisma
   key: CHA
 - title: Chubby Monster Games
+  key: CHUBBY-MONSTER-GAMES
   tag: chubby monster games
 - title: Circle of Hands
   key: COH
   itemid: https://rpggeek.com/rpg/26660/circle-hands
   offer: http://indie-rpgs.com/unstore/games/title/Circle_of_Hands
   tag: circle of hands
-  abbr: CoH
   game: coh
+  abbr: CoH
 - title: Coalition Building
+  key: COALITION-BUILDING
   tag: coalition building
-- title: 'Codex of the Black Sun: Sorcery for Stars Without Number'
+- title: Codex of the Black Sun
   key: COTBS
   itemid: https://rpggeek.com/rpgitem/275472/codex-black-sun
   offer: https://www.drivethrurpg.com/product/259700/The-Codex-of-the-Black-Sun-Sorcery-for-Stars-Without-Number?affiliate_id=318171
   tag: codex of the black sun
-  abbr: CotBS
   game: cotbs
+  abbr: CotBS
 - title: Cognitive Load
+  key: COGNITIVE-LOAD
   itemid: https://www.wikidata.org/wiki/Q1107019
   tag: cognitive load
 - title: Combat as Sport
+  key: COMBAT-AS-SPORT
   tag: combat as sport
 - title: Combat as War
+  key: COMBAT-AS-WAR
   tag: combat as war
 - title: Comma Separated Value
   key: CSV
+  mentionAs: CSV
   itemid: https://www.wikidata.org/wiki/Q935809
 - title: Command Line Integration
   key: CLI
 - title: Command Points
   key: CP
 - title: Community
+  key: COMMUNITY
   itemid: https://www.wikidata.org/wiki/Q177634
   tag: community
 - title: Computer Role Playing Game
   key: CRPG
   itemid: https://www.wikidata.org/wiki/Q744038
 - title: Conflict
+  key: CONFLICT
   tag: conflict
 - title: Constitution
   key: CON
@@ -365,10 +418,13 @@
   key: CMS
   itemid: https://www.wikidata.org/wiki/Q131093
 - title: Content Warning
+  key: CONTENT-WARNING
   tag: content warning
 - title: Contest
+  key: CONTEST
   tag: contest
 - title: Conversion
+  key: CONVERSION
   tag: conversion
 - title: Covid-19
   key: COVID
@@ -384,38 +440,45 @@
   key: CREDITS
   abbr: Cr
 - title: Crowd funding
+  key: CROWD-FUNDING
   itemid: https://www.wikidata.org/wiki/Q348303
   tag: crowdfunding
 - title: Cthulhu
+  key: CTHULHU
   tag: cthulhu
 - title: Cthulhu Dark
   key: CD
   itemid: https://www.wikidata.org/wiki/Q68624889
   offer: https://www.drivethrurpg.com/product/98137/Cthulhu-Dark?affiliate_id=318171
   tag: cthulhu dark
-  abbr: CD
   game: cd
+  abbr: CD
 - title: Custom Moves
+  key: CUSTOM-MOVES
   tag: custom moves
 - title: Customer Service Experience
+  key: CUSTOMER-SERVICE-EXPERIENCE
   tag: customer service experience
-- key: UNIX-CUT
-  abbr: cut
+- title: cut (Unix command)
+  key: UNIX-CUT
   itemid: https://www.wikidata.org/wiki/Q283916
-  title: 'cut: Unix command to remove sections from each line of files'
+  abbr: cut
 - title: d20 System
   key: D20SYS
   itemid: https://www.wikidata.org/wiki/Q284471
   abbr: d20
-- title: 'Dark Six: A Primal Eberron Pantheon'
+- title: Dark Six
+  key: DARK-SIX
+  verboseTitle: 'Dark Six: A Primal Eberron Pantheon'
   tag: dark six
 - title: Dark Sun
   key: DS
   itemid: https://www.wikidata.org/wiki/Q584169
   offer: https://www.dmsguild.com/browse.php?filters=0_0_0_0_45353_0_0_0&affiliate_id=318171
-  game: darksun
   tag: dark sun
+  game: darksun
 - title: Dave Arneson
+  key: DAVE-ARNESON
   itemid: https://www.wikidata.org/wiki/Q1381
 - title: 'Dead Names: Lost Races and Forgotten Ruins'
   key: DEAD-NAMES
@@ -423,12 +486,15 @@
   game: dead names
   abbr: Dead Names
 - title: Death
+  key: DEATH
   itemid: https://www.wikidata.org/wiki/Q4
   tag: death
 - title: Defund the Police
+  key: DEFUND-THE-POLICE
   itemid: https://www.wikidata.org/wiki/Q96150192
   tag: defund the police
 - title: Deluge
+  key: DELUGE
   itemid: https://rpggeek.com/rpgsetting/4500/deluge
   offer: https://www.drivethrurpg.com/product/78622/Deluge?affiliate_id=318171
   tag: deluge
@@ -443,20 +509,21 @@
 - title: Dexterity
   key: DEX
 - title: Diaspora
-  game: diaspora
   key: DIASPORA
   itemid: https://www.wikidata.org/wiki/Q18206449
   offer: https://www.drivethrurpg.com/product/79933/Diaspora?affiliate_id=318171"
   tag: diaspora
+  game: diaspora
 - title: Dice Modifier
   key: DIM
   abbr: DM
 - title: Difficulty Class
   key: DC
 - title: Divorce
+  key: DIVORCE
   itemid: https://www.wikidata.org/wiki/Q93190
   tag: divorce
-- title: 'Django: Python Web Framework'
+- title: Django
   key: DJANGO
   itemid: https://www.wikidata.org/wiki/Q842014
   abbr: Django
@@ -464,23 +531,26 @@
   key: DIY
   itemid: https://www.wikidata.org/wiki/Q26384
 - title: 'Do: Pilgrims of the Flying Temple'
+  key: DO-PILGRIMS-OF-THE-FLYING-TEMPLE
   itemid: https://www.wikidata.org/wiki/Q16962084
   offer: https://www.drivethrurpg.com/product/92348/Do-Pilgrims-of-the-Flying-Temple?affiliate_id=318171
   tag: 'do: pilgrims of the flying temple'
   game: 'do: pilgrims of the flying temple'
-- title: 'Docstring: A special string literal used in source code to provide documentation'
+- title: Docstring
   key: DOCSTRING
   itemid: https://www.wikidata.org/wiki/Q5287262
   abbr: Docstring
 - title: Doctor of Arcanography
   key: AXD
 - title: Doctor Who
+  key: DOCTOR-WHO
   itemid: https://www.wikidata.org/wiki/Q34316
   tag: doctor who
 - title: Document Object Model
   key: DOM
   itemid: https://www.wikidata.org/wiki/Q2093
 - title: Documentation
+  key: DOCUMENTATION
   itemid: https://www.wikidata.org/wiki/Q788790
   tag: documentation
 - title: Dogs in the Vineyard
@@ -492,33 +562,40 @@
   key: DNS
   itemid: https://www.wikidata.org/wiki/Q8767
 - title: Doom of the Savage King
+  key: DOOM-OF-THE-SAVAGE-KING
   itemid: https://rpggeek.com/rpgitem/125110/doom-savage-kings
   offer: https://www.drivethrurpg.com/product/129075/Dungeon-Crawl-Classics-665-Doom-of-the-Savage-King?affiliate_id=318171
   tag: doom of the savage kings
   game: doom of the savage kings
 - title: Dragonknights
-  game: dragonknights
+  key: DRAGONKNIGHTS
   tag: dragonknights
+  game: dragonknights
 - title: Dreams
-  tag: dreams
+  key: DREAMS
   itemid: https://www.wikidata.org/wiki/Q36348
+  tag: dreams
 - title: Dreams of Adventure
+  key: DREAMS-OF-ADVENTURE
   tag: dreams of adventure
 - title: Dresden Files
+  key: DRESDEN-FILES
   tag: dresden files
 - title: Droaam
+  key: DROAAM
   tag: droaam
 - title: Duel of Wits
   key: DOW
   tag: duel of wits
   abbr: DoW
 - title: Dungeon Crawl Classics
-  game: dcc
   key: DCC
   itemid: https://www.wikidata.org/wiki/Q16992123
   offer: https://www.drivethrurpg.com/product/101050/Dungeon-Crawl-Classics-RPG-DCC-RPG?affiliate_id=318171
   tag: dungeon crawl classics
+  game: dcc
 - title: Dungeon Delving
+  key: DUNGEON-DELVING
   tag: dungeon delving
 - title: Dungeon Master
   key: DM
@@ -526,17 +603,18 @@
 - title: Dungeon Master's Guide
   key: DMG
 - title: Dungeon World
-  game: dw
   key: DW
   itemid: https://www.wikidata.org/wiki/Q15221892
   offer: https://www.drivethrurpg.com/product/108028/Dungeon-World?affiliate_id=318171
   tag: dungeon world
+  game: dw
   abbr: DW
-  contentDisclaimers:
-  - adamkoebel
+  contentDisclaimers: '["adamkoebel"]'
 - title: Dungeoncraft
+  key: DUNGEONCRAFT
   tag: dungeoncraft
 - title: Dungeons
+  key: DUNGEONS
   itemid: https://www.wikidata.org/wiki/Q69827715
   tag: dungeons
 - title: Dungeons and Dragons
@@ -547,11 +625,11 @@
   key: B/X
   itemid: https://rpggeek.com/rpg/389/basic-dungeons-dragons
 - title: 'Dungeons and Dragons: Fifth Edition'
-  game: 5e
   key: 5E
   itemid: https://www.wikidata.org/wiki/Q64706124
   offer: https://www.dmsguild.com/browse.php?affiliate_id=318171
   tag: 5e
+  game: 5e
 - title: 'Dungeons and Dragons: Fifth Edition Playtest'
   key: D&D NEXT
   itemid: https://www.wikidata.org/wiki/Q64706142
@@ -565,27 +643,34 @@
   key: 3E
   itemid: https://www.wikidata.org/wiki/Q64623234
 - title: Dwimmermount
+  key: DWIMMERMOUNT
   itemid: https://rpggeek.com/rpgitem/137904/dwimmermount-labyrinth-lord
   offer: https://www.drivethrurpg.com/product/133746/Dwimmermount-Labyrinth-Lord-version?affiliate_id=318171
   tag: dwimmermount
   game: dwimmermount
 - title: Dying Earth
-  note: Sci-fi Sub-Genre
+  key: DYING-EARTH
   itemid: https://www.wikidata.org/wiki/Q5318627
   tag: dying earth
+  description: Sci-fi Sub-Genre
 - title: Dying Earth Saga
+  key: DYING-EARTH-SAGA
   itemid: https://www.wikidata.org/wiki/Q303490
-- title: e-book file format standard by the International Digital Publishing Forum
+- title: ePub
   key: EPUB
+  verboseTitle: e-book file format standard by the International Digital Publishing
+    Forum
   itemid: https://www.wikidata.org/wiki/Q475488
 - title: Eastern Daylight Time
   key: EDT
   itemid: https://www.wikidata.org/wiki/Q15080196
 - title: Eberron
+  key: EBERRON
   itemid: https://www.wikidata.org/wiki/Q1378808
   tag: eberron
-- title: 'Editor MACroS: A family of text editors first implemented in 1976'
+- title: Emacs
   key: EMACS
+  verboseTitle: 'Emacs: Editor MACroS'
   itemid: https://www.wikidata.org/wiki/Q189722
   tag: emacs
   abbr: Emacs
@@ -597,11 +682,13 @@
   key: EW
 - title: 'Elisp: dialect of Lisp used in GNU Emacs'
   key: ELISP
+  mentionAs: Elisp
   itemid: https://www.wikidata.org/wiki/Q1334586
   abbr: elisp
 - title: Endurance
   key: END
 - title: ENnie Awards
+  key: ENNIE-AWARDS
   itemid: https://www.wikidata.org/wiki/Q5323772
   tag: ennies
 - title: Essay
@@ -612,20 +699,24 @@
   itemid: https://www.wikidata.org/wiki/Q604973
 - title: Extensible Markup Language
   key: XML
+  mentionAs: XML
   itemid: https://www.wikidata.org/wiki/Q2115
 - title: Extra Vehicular Activity
   key: EVA
 - title: Fables Bookshop
+  key: FABLES-BOOKSHOP
   itemid: https://fablesbooks.com/
   tag: fables bookshop
 - title: Family
+  key: FAMILY
   tag: family
 - title: Family Gaming
+  key: FAMILY-GAMING
   tag: family gaming
 - title: Fantasy
   key: FANTASY
-  tag: fantasy
   itemid: https://www.wikidata.org/wiki/Q132311
+  tag: fantasy
 - title: Faster than Light
   key: FTL
   itemid: https://www.wikidata.org/wiki/Q44207
@@ -635,20 +726,23 @@
   offer: https://www.drivethrurpg.com/product/114903/Fate-Core-System?affiliate_id=318171
   tag: fate core
   game: fate
-- title: Feet (unit of measurement)
+- title: Feet
   key: FT
+  verboseTitle: Feet (unit of measurement)
   itemid: https://www.wikidata.org/wiki/Q3710
 - title: Fiasco
+  key: FIASCO
   itemid: https://www.wikidata.org/wiki/Q3744369
   offer: https://www.drivethrurpg.com/product/78548/Fiasco-Classic?affiliate_id=318171
   tag: fiasco
   game: fiasco
-- title: Fields of Related Knowledge
+- title: FoRKs
   key: FORKS
+  verboseTitle: Fields of Related Knowledge
   abbr: FoRKs
-  contentDisclaimers:
-  - lukecrane
+  contentDisclaimers: '["lukecrane"]'
 - title: First Play
+  key: FIRST-PLAY
   tag: first play
 - title: Five Torches Deep
   key: FTD
@@ -656,8 +750,10 @@
   offer: https://www.drivethrurpg.com/product/264584/Five-Torches-Deep?affiliate_id=318171
   game: ftd
 - title: For My Children
+  key: FOR-MY-CHILDREN
   tag: for my children
 - title: Forced Play
+  key: FORCED-PLAY
   tag: forced play
 - title: Fork
   key: FORK
@@ -673,17 +769,22 @@
 - title: Friendly Local Game Store
   key: FLGS
 - title: Friendship
-  tag: friendship
+  key: FRIENDSHIP
   itemid: https://www.wikidata.org/wiki/Q491
+  tag: friendship
 - title: Fritz Leiber
+  key: FRITZ-LEIBER
   itemid: https://www.wikidata.org/wiki/Q313185
   tag: leiber
 - title: Game Balance
+  key: GAME-BALANCE
   itemid: https://www.wikidata.org/wiki/Q4197737
   tag: game balance
 - title: Game Day
+  key: GAME-DAY
   tag: game day
 - title: Game Design
+  key: GAME-DESIGN
   itemid: https://www.wikidata.org/wiki/Q858057
   tag: game design
 - title: Game Master
@@ -691,44 +792,60 @@
   itemid: https://www.wikidata.org/wiki/Q930701
   tag: gamemastering
 - title: Game Master Advice
+  key: GAME-MASTER-ADVICE
   tag: game master advice
 - title: Game Procedures
+  key: GAME-PROCEDURES
   tag: game procedures
 - title: Game Purchases
+  key: GAME-PURCHASES
   tag: game purchases
 - title: Game Store Gaming
+  key: GAME-STORE-GAMING
   tag: game store gaming
 - title: Game Supplement
+  key: GAME-SUPPLEMENT
   tag: game supplement
 - title: Game Theory
+  key: GAME-THEORY
   tag: game theory
 - title: Games on Demand
+  key: GAMES-ON-DEMAND
   tag: games on demand
 - title: Gaming
+  key: GAMING
   tag: gaming
 - title: Gaming Group
+  key: GAMING-GROUP
   tag: gaming group
 - title: Gary Gygax
+  key: GARY-GYGAX
   itemid: https://www.wikidata.org/wiki/Q25550430
 - title: Gen Con
+  key: GEN-CON
   itemid: https://www.wikidata.org/wiki/Q550430
   tag: gencon
 - title: Gene Wolfe
+  key: GENE-WOLFE
   itemid: https://www.wikidata.org/wiki/Q361149
 - title: General Games
+  key: GENERAL-GAMES
   tag: general games
 - title: Ghostlines
+  key: GHOSTLINES
   tag: ghostlines
 - title: GIPF Project
+  key: GIPF-PROJECT
   itemid: https://www.wikidata.org/wiki/Q734162
   tag: gipf project
-- title: 'Git: Free and open source revision control software'
+- title: Git
   key: GIT
+  verboseTitle: 'Git: distributed version control system'
   itemid: https://www.wikidata.org/wiki/Q186055
 - title: GNU General Public License
   key: GPL
   itemid: https://www.wikidata.org/wiki/Q7603
-- title: 'GNU: free software project'
+- title: GNU
   key: GNU
   itemid: https://www.wikidata.org/wiki/Q7598
 - title: Gold Piece
@@ -739,17 +856,21 @@
   tag: goodman games world tour
   abbr: GGWT
 - title: Google Hangouts
+  key: GOOGLE-HANGOUTS
   itemid: https://www.wikidata.org/wiki/Q13231451
   tag: google hangouts
 - title: Goshen Game Day
+  key: GOSHEN-GAME-DAY
   tag: goshen game day
 - title: Graphical User Interface
   key: GUI
   itemid: https://www.wikidata.org/wiki/Q782543
 - title: GUMSHOE System
+  key: GUMSHOE-SYSTEM
   itemid: https://www.wikidata.org/wiki/Q3756321
   tag: gumshoe
 - title: Hack
+  key: HACK
   tag: hack
 - title: Haiku
   key: HAIKU
@@ -758,48 +879,58 @@
 - title: Head Quarters
   key: HQ
 - title: Hesburgh Libraries
+  key: HESBURGH-LIBRARIES
   itemid: https://www.wikidata.org/wiki/Q30289521
 - title: Hit Die
   key: HD
 - title: Hit Point
   key: HP
   itemid: https://www.wikidata.org/wiki/Q668136
-- title: 'Hive: Strategic Boardgame'
+- title: Hive
+  key: HIVE
   itemid: https://www.wikidata.org/wiki/Q1399188
   tag: hive
 - title: Hollowpoint
+  key: HOLLOWPOINT
   itemid: https://rpggeek.com/rpg/11213/hollowpoint
   offer: https://www.drivethrurpg.com/product/93880/Hollowpoint?affiliate_id=318171
   tag: hollowpoint
   game: hollowpoint
 - title: Hot Springs Island
+  key: HOT-SPRINGS-ISLAND
   itemid: https://rpggeek.com/rpgitem/235448/dark-hot-springs-island
   offer: https://www.drivethrurpg.com/product/215340/The-Dark-of-Hot-Springs-Island?affiliate_id=318171
   tag: hot springs island
   game: hot springs island
 - title: House Rules
+  key: HOUSE-RULES
   tag: house rules
 - title: Houses of the Blooded
+  key: HOUSES-OF-THE-BLOODED
   itemid: https://www.wikidata.org/wiki/Q5915977
   offer: https://www.drivethrurpg.com/product/61061/Houses-of-the-Blooded?affiliate_id=318171
   tag: houses of the blooded
   game: houses of the blooded
-- title: 'Hugo: Static Site Generator'
+- title: Hugo
   key: HUGO
+  verboseTitle: 'Hugo: Static Site Generator'
   itemid: https://www.wikidata.org/wiki/Q24415127
   tag: hugo
   abbr: Hugo
 - title: Human Resources
   key: HR
-  abbr: HR
   itemid: https://www.wikidata.org/wiki/Q5467169
+  abbr: HR
 - title: Hypertext Markup Language
   key: HTML
+  mentionAs: HTML
   itemid: https://www.wikidata.org/wiki/Q8811
 - title: Hypertext Transfer Protocol
   key: HTTP
+  mentionAs: HTTP
   itemid: https://www.wikidata.org/wiki/Q8777
 - title: HârnMaster
+  key: HARNMASTER
   itemid: https://www.wikidata.org/wiki/Q1641831
   offer: https://www.drivethrurpg.com/browse.php?keywords=H%C3%A2rnMaster&affiliate_id=318171
   tag: harnmaster
@@ -807,33 +938,38 @@
 - title: I Owe You
   key: IOU
   itemid: https://www.wikidata.org/wiki/Q534910
-- title: IBM System i
+- title: IBM System iSeries
   key: AS400
   itemid: https://www.wikidata.org/wiki/Q433406
   abbr: AS/400
 - title: Illinois
   key: IL
   itemid: https://www.wikidata.org/wiki/Q1204
-- title: Improved version of the Vi keyboard-oriented text editor
+- title: VIM Text Editor
   key: VIM
+  mentionAs: vim
+  verboseTitle: Improved version of the Vi keyboard-oriented text editor
   itemid: https://www.wikidata.org/wiki/Q131382
   tag: vim
   abbr: vim
-- key: IED
-  abbr: IED
+- title: Improvised Explosive Device
+  key: IED
   itemid: https://www.wikidata.org/wiki/Q1249453
-  title: Improvised Explosive Device
+  abbr: IED
 - title: Indiana
   key: IN
   itemid: https://www.wikidata.org/wiki/Q1415
 - title: Indieweb
+  key: INDIEWEB
   tag: indieweb
 - title: Initiative
   key: INIT
   itemid: https://www.wikidata.org/wiki/Q2413723
 - title: Initiative Systems
+  key: INITIATIVE-SYSTEMS
   tag: initiative systems
 - title: InSpectres
+  key: INSPECTRES
   itemid: https://www.wikidata.org/wiki/Q2613589
   offer: https://www.drivethrurpg.com/product/17891/InSpectres?affiliate_id=318171
   tag: inspectres
@@ -847,27 +983,31 @@
 - title: Intelligence
   key: INT
 - title: International Business Machines Corporation
-  abbr: IBM
-  itemid: https://www.wikidata.org/wiki/Q37156
   key: IBM
+  mentionAs: IBM
+  itemid: https://www.wikidata.org/wiki/Q37156
+  abbr: IBM
 - title: International Standard Book Number
   key: ISBN
   itemid: https://www.wikidata.org/wiki/Q33057
 - title: Interview
+  key: INTERVIEW
   tag: interview
-- key: IV
-  abbr: IVv
+- title: Intravenous Infusion and Defusion
+  key: IV
   itemid: https://www.wikidata.org/wiki/Q640448
-  title: Intravenous Infusion and Defusion
+  abbr: IVv
 - title: Intrusion Countermeasures Electronics
   key: ICE
   itemid: https://www.wikidata.org/wiki/Q1122382
 - title: Inverse World
+  key: INVERSE-WORLD
   itemid: https://rpggeek.com/rpgitem/142766/inverse-world-dungeon-world-sourcebook
   offer: https://www.drivethrurpg.com/product/128281/Inverse-World--A-Dungeon-World-Supplement?affiliate_id=318171
   tag: inverse world
   game: inverse world
 - title: Jack Vance
+  key: JACK-VANCE
   itemid: https://www.wikidata.org/wiki/Q312632
 - title: Javascript
   key: JS
@@ -885,24 +1025,30 @@
 - title: Jump Drive
   key: J-DRIVE
 - title: Jungle Speed
+  key: JUNGLE-SPEED
   itemid: https://www.wikidata.org/wiki/Q17270
   tag: jungle speed
 - title: Just Arrived
+  key: JUST-ARRIVED
   tag: just arrived
 - title: Justice
+  key: JUSTICE
   tag: justice
 - title: Kahlil Gibran
+  key: KAHLIL-GIBRAN
   itemid: https://www.wikidata.org/wiki/Q47737
   itemtype: Person
 - title: Keith Baker Presents
   key: KB PRESENTS
 - title: Kenku
+  key: KENKU
   itemid: https://www.wikidata.org/wiki/Q6389420
   tag: kenku
 - title: Kevin Crawford
-  itemid: https://www.wikidata.org/wiki/Q67963897
   key: kevin-crawford
+  itemid: https://www.wikidata.org/wiki/Q67963897
 - title: Kickstarter
+  key: KICKSTARTER
   itemid: https://www.wikidata.org/wiki/Q34755
   tag: kickstarter
 - title: KiloByte
@@ -923,24 +1069,28 @@
 - title: Kindergarten through 12th Grade
   key: K-12
 - title: Knockspell
+  key: KNOCKSPELL
   itemid: https://www.wikidata.org/wiki/Q70485546
   offer: https://www.drivethrurpg.com/product/63737/Knockspell-Magazine-1?affiliate_id=318171
   tag: knockspell
   game: knockspell
 - title: Kristcon
+  key: KRISTCON
   tag: kristacon
 - title: Labyrinth Lord
-  game: ll
   key: LL
   itemid: https://www.wikidata.org/wiki/Q3214557
   offer: https://www.drivethrurpg.com/product/259983/Advanced-Labyrinth-Lord-Dragon-Cover?affiliate_id=318171
   tag: labyrinth lord
+  game: ll
 - title: Lacuna Part 1.
+  key: LACUNA-PART-1
   itemid: https://www.wikidata.org/wiki/Q64531008
   offer: https://www.drivethrurpg.com/product/95893/Lacuna-Part-I-second-attempt?affiliate_id=318171
   tag: lacuna part i
   game: lacuna part i
 - title: Lady Blackbird
+  key: LADY-BLACKBIRD
   itemid: https://www.wikidata.org/wiki/Q67174687
   tag: lady blackbird
 - title: Lamentations of the Flame Princess
@@ -948,26 +1098,27 @@
   itemid: https://www.wikidata.org/wiki/Q27102827
   tag: lamentations of the flame princess
   abbr: LotFP
-  contentDisclaimers:
-  - jamesraggi
+  contentDisclaimers: '["jamesraggi"]'
 - title: Lankhmar
+  key: LANKHMAR
   itemid: https://www.wikidata.org/wiki/Q6487218
   tag: lankhmar
 - title: Lavender Hack
-  game: lh
   key: LH
   itemid: https://rpggeek.com/rpg/61133/lavender-hack
   offer: https://www.drivethrurpg.com/product/308733/Lavender-Hack-Tarantula-Hawk-Wasp-Edition?affiliate_id=318171
   tag: lavender hack
+  game: lh
   abbr: LH
 - title: Let's Read
+  key: LETS-READ
   tag: let's read
 - title: Letter of Marque
+  key: LETTER-OF-MARQUE
   itemid: https://www.wikidata.org/wiki/Q1414906
 - title: Lifepaths
   key: LP
   tag: lifepaths
-  contentwarning: dungeonworld
 - title: Live Action Role Playing
   key: LARP
   itemid: https://www.wikidata.org/wiki/Q216749
@@ -980,14 +1131,14 @@
   tag: lord of the rings
   abbr: LotR
 - title: Loviatar Fanzine
+  key: LOVIATAR-FANZINE
   itemid: https://rpggeek.com/rpgperiodical/17799/loviatar
   tag: loviatar
 - title: Luke Crane
+  key: luke-crane
   itemid: https://www.wikidata.org/wiki/Q66831262
   tag: luke crane
-  key: luke-crane
-  contentDisclaimers:
-  - lukecrane
+  contentDisclaimers: '["lukecrane"]'
 - title: Machine Learning
   key: MLEARN
   itemid: https://www.wikidata.org/wiki/Q2539
@@ -998,6 +1149,7 @@
   tag: osx
   abbr: OS X
 - title: Magnolia
+  key: MAGNOLIA
   itemid: https://www.wikidata.org/wiki/Q157017
 - title: Manouevre Drive
   key: M-DRIVE
@@ -1005,17 +1157,19 @@
   key: MHRPG
   itemid: https://www.wikidata.org/wiki/Q16161486
   tag: marvel heroic rpg
-  abbr: MHRPG
   game: mhrpg
+  abbr: MHRPG
 - title: Massachusetts Institute of Technology License
   key: MIT
   itemid: https://www.wikidata.org/wiki/Q334661
 - title: Master of Ceremonies
   key: MC
 - title: Mayfair Games
+  key: MAYFAIR-GAMES
   itemid: https://www.wikidata.org/wiki/Q921302
   tag: mayfair games
 - title: Medieval Demographics Made Easy
+  key: MEDIEVAL-DEMOGRAPHICS-MADE-EASY
   itemid: https://rpggeek.com/rpgitem/205861/medieval-demographics-made-easy
   tag: medieval demographics made easy
 - title: Megabyte
@@ -1029,15 +1183,20 @@
   key: MCR
   abbr: MCr
 - title: Megadungeon
+  key: MEGADUNGEON
   tag: megadungeon
 - title: Mentorship
-  tag: mentorship
+  key: MENTORSHIP
   itemid: https://www.wikidata.org/wiki/Q967647
+  tag: mentorship
 - title: Meta
+  key: META
   tag: meta
 - title: Micro Culture
+  key: MICRO-CULTURE
   tag: micro culture
 - title: Microscope
+  key: MICROSCOPE
   itemid: https://rpggeek.com/rpg/9789/microscope
   offer: https://www.drivethrurpg.com/product/91183/Microscope?affiliate_id=318171
   tag: microscope
@@ -1047,6 +1206,7 @@
   itemid: https://www.wikidata.org/wiki/Q5473
   tag: middle earth role playing game
 - title: Migration
+  key: MIGRATION
   tag: migration
 - title: Milliseconds
   key: MS
@@ -1057,27 +1217,30 @@
   itemid: https://rpggeek.com/rpg/6344/misspent-youth
   offer: https://www.drivethrurpg.com/product/229713/Misspent-Youth-12?affiliate_id=318171
   tag: misspent youth
-  abbr: MY
   game: my
+  abbr: MY
 - title: Mongoose Publishing
   key: MONGOOSE
   itemid: https://www.wikidata.org/wiki/Q1575373
   tag: mongoose publishing
 - title: Monster
+  key: MONSTER
   tag: monster
 - title: Monster of the Week
   key: MOTW
   itemid: https://www.wikidata.org/wiki/Q77272478
   offer: https://www.drivethrurpg.com/product/143518/Monster-of-the-Week?affiliate_id=318171
   tag: monster of the week
-  abbr: MotW
   game: motw
+  abbr: MotW
 - title: Monsterhearts
+  key: MONSTERHEARTS
   itemid: https://www.wikidata.org/wiki/Q17154019
   offer: https://www.drivethrurpg.com/product/212511/Monsterhearts-2?affiliate_id=318171
   tag: monsterhearts
   game: monsterhearts
 - title: Morale check
+  key: MORALE-CHECK
   itemid: https://www.wikidata.org/wiki/Q104253592
   tag: morale
 - title: Morale Level
@@ -1086,33 +1249,37 @@
 - title: Most Valuable Player
   key: MVP
 - title: Mouse Guard RPG
-  itemid: https://www.wikidata.org/wiki/Q17142058
-  game: mouseguard
-  tag: mouse guard
   key: MG
+  itemid: https://www.wikidata.org/wiki/Q17142058
   offer: https://www.burningwheel.com/mouse-guard/
-  contentDisclaimers:
-  - lukecrane
+  tag: mouse guard
+  game: mouseguard
+  contentDisclaimers: '["lukecrane"]'
 - title: Movement
   key: MV
 - title: Necromancer's Maze
+  key: NECROMANCER'S-MAZE
   tag: necromancers maze
 - title: Neutral
   key: NEU
 - title: New Year
+  key: NEW-YEAR
   tag: new year
 - title: Newsboat
+  key: NEWSBOAT
   itemid: https://www.wikidata.org/wiki/Q70014271
   tag: newsboat
-- title: 'Night Below: An Underdark Campaign'
+- title: Night Below
+  key: NIGHT-BELOW
+  verboseTitle: 'Night Below: An Underdark Campaign'
   itemid: https://www.wikidata.org/wiki/Q7033219
   offer: https://www.drivethrurpg.com/product/17087/Night-Below-An-Underdark-Campaign-2e?affiliate_id=318171
   tag: night below
   game: night below
 - title: Non-Disclosure Agreement
-  description: contractual agreement not to disclose specified information
   key: NDA
   itemid: https://www.wikidata.org/wiki/Q1053818
+  description: contractual agreement not to disclose specified information
 - title: Non-Player Character
   key: NPC
   itemid: https://www.wikidata.org/wiki/Q466466
@@ -1121,35 +1288,38 @@
   itemid: https://www.wikidata.org/wiki/Q466466
   abbr: NPCs
 - title: Note Quite Gaming
+  key: NOTE-QUITE-GAMING
   tag: not quite gaming
 - title: Obstacle
   key: OB
   abbr: Ob
-  contentDisclaimers:
-  - lukecrane
-- game: ose
-  title: Old School Essentials
-  abbr: OSE
+  contentDisclaimers: '["lukecrane"]'
+- title: Old School Essentials
   key: OSE
   offer: https://www.drivethrurpg.com/product/279183/OldSchool-Essentials-Classic-Fantasy-Rules-Tome?affiliate_id=318171
+  game: ose
+  abbr: OSE
 - title: Old School Hack
+  key: OLD-SCHOOL-HACK
   itemid: https://rpggeek.com/rpg/9453/old-school-hack
   tag: old school hack
 - title: Old School Reference and Index Compilation
   key: OSRIC
   itemid: https://www.wikidata.org/wiki/Q3347723
-  abbr: OSRIC
   tag: osric
+  abbr: OSRIC
 - title: Old School Renaissance
   key: OSR
   itemid: https://www.wikidata.org/wiki/Q15991289
   tag: osr
   abbr: OSR
 - title: One Shot
+  key: ONE-SHOT
   tag: one shot
 - title: One Six-Sided Die
   key: 1D6
 - title: Online Gaming
+  key: ONLINE-GAMING
   tag: online gaming
 - title: Open Game Content
   key: OGC
@@ -1159,29 +1329,36 @@
   itemid: https://www.wikidata.org/wiki/Q1752744
   tag: open game license
 - title: Open Letter
+  key: OPEN-LETTER
   itemid: https://www.wikidata.org/wiki/Q646754
   tag: open letter
 - title: Open Standards
+  key: OPEN-STANDARDS
   tag: open standards
 - title: Open Table
+  key: OPEN-TABLE
   tag: open table
 - title: Operating System
   key: OS
   itemid: https://www.wikidata.org/wiki/Q9135
   abbr: OS
-- title: 'Org-mode: Emacs mode for task managing and notetaking'
+- title: Org-mode
   key: ORG-MODE
+  verboseTitle: 'Org-mode: Emacs mode for task managing and notetaking'
   itemid: https://www.wikidata.org/wiki/Q307228
   tag: org mode
   abbr: Org-mode
-- title: 'Org-roam: A plain-text personal knowledge management system.'
+- title: Org-roam
   key: ORG-ROAM
+  verboseTitle: 'Org-roam: A plain-text personal knowledge management system.'
   itemid: https://orgroam.com
   tag: org roam
   abbr: Org-roam
 - title: Organizing
+  key: ORGANIZING
   tag: organizing
 - title: Origins Game Fair
+  key: ORIGINS-GAME-FAIR
   itemid: https://www.wikidata.org/wiki/Q1114177
   tag: origins
 - title: Our Last Best Hope
@@ -1189,9 +1366,10 @@
   itemid: https://rpggeek.com/rpg/18490/our-last-best-hope
   offer: https://www.drivethrurpg.com/product/107734/Our-Last-Best-Hope?affiliate_id=318171
   tag: our last best hope
-  abbr: OLBH
   game: olbh
+  abbr: OLBH
 - title: Out of the Abyss
+  key: OUT-OF-THE-ABYSS
   itemid: https://www.wikidata.org/wiki/Q28453304
   offer: https://www.dmsguild.com/browse.php?keywords=Out+of+the+Abyss+Storyline&affiliate_id=318171
   tag: out of the abyss
@@ -1206,6 +1384,7 @@
 - title: Pain Tolerances Grayscales
   key: PTGS
 - title: Pandemic
+  key: PANDEMIC
   itemid: https://www.wikidata.org/wiki/Q12184
   tag: pandemic
 - title: Parental Guidance
@@ -1213,6 +1392,7 @@
   itemid: https://www.wikidata.org/wiki/Q52382294
   abbr: PG
 - title: Part Time Gods
+  key: PART-TIME-GODS
   itemid: https://www.wikidata.org/wiki/Q77995878
   offer: https://www.drivethrurpg.com/product/92731/PartTime-Gods?affiliate_id=318171
   tag: part time gods
@@ -1220,29 +1400,35 @@
 - title: Pay What You Want
   key: PWYW
   itemid: https://www.wikidata.org/wiki/Q846616
-- title: 'Peer to Peer: A decentralized and distributed network architecture'
+- title: Peer to Peer
   key: P2P
+  verboseTitle: 'Peer to Peer: A decentralized and distributed network architecture'
   itemid: https://www.wikidata.org/wiki/Q161410
 - title: Person of Color
   key: POC
   itemid: https://www.wikidata.org/wiki/Q2072081
   abbr: PoC
 - title: Personal
+  key: PERSONAL
   tag: personal
 - title: Philosophy
+  key: PHILOSOPHY
   tag: philosophy
 - title: PHP Programming Language
   key: PHP
   itemid: https://www.wikidata.org/wiki/Q59
-- title: 'Planarch Codex: Dark Heart of the Dreamer'
+- title: Planarch Codex
+  key: PLANARCH-CODEX
+  verboseTitle: 'Planarch Codex: Dark Heart of the Dreamer'
   itemid: https://rpggeek.com/rpgitem/138130/planarch-codex-dark-heart-dreamer
   tag: planarch codex
 - title: Play by Post
-  tag: play by post
-  itemid: https://www.wikidata.org/wiki/Q751838
-  abbr: PbP
   key: PBP
+  itemid: https://www.wikidata.org/wiki/Q751838
+  tag: play by post
+  abbr: PbP
 - title: Playbooks
+  key: PLAYBOOKS
   tag: playbooks
 - title: Player Character
   key: PC
@@ -1253,12 +1439,15 @@
 - title: Player's Handbook
   key: PHB
 - title: Playtest
+  key: PLAYTEST
   itemid: https://www.wikidata.org/wiki/Q7203549
   tag: playtest
 - title: Podcasts
+  key: PODCASTS
   itemid: https://www.wikidata.org/wiki/Q20899
   tag: podcasts
 - title: Poetry
+  key: POETRY
   itemid: https://www.wikidata.org/wiki/Q482
   tag: poetry
 - title: Point of Sales
@@ -1271,24 +1460,27 @@
   abbr: PDF
 - title: post meridiem
   key: PM
-  abbr: pm
   itemid: https://www.wikidata.org/wiki/Q55313907
+  abbr: pm
 - title: Powered by the Apocalypse
   key: PBTA
-  abbr: PbtA
   itemid: https://www.wikidata.org/wiki/Q17149214
+  abbr: PbtA
 - title: Print on Demand
   key: POD
   itemid: https://www.wikidata.org/wiki/Q288666
   abbr: PoD
 - title: Privacy
+  key: PRIVACY
   tag: privacy
 - title: Probability
+  key: PROBABILITY
   itemid: https://www.wikidata.org/wiki/Q9492
   tag: probability
 - title: Problem Solving
-  tag: problem solving
+  key: PROBLEM-SOLVING
   itemid: https://www.wikidata.org/wiki/Q730920
+  tag: problem solving
 - title: Product Identity
   key: PI
   abbr: PI
@@ -1297,9 +1489,11 @@
   itemid: https://www.wikidata.org/wiki/Q80006
   tag: programming
 - title: Project Management
-  tag: project management
+  key: PROJECT-MANAGEMENT
   itemid: https://www.wikidata.org/wiki/Q179012
+  tag: project management
 - title: 'Project: Dark'
+  key: PROJECT-DARK
   itemid: https://rpggeek.com/rpg/26734/project-dark
   tag: project dark
 - title: Prose
@@ -1311,6 +1505,7 @@
 - title: Publish (on your) Own Site, Syndicate Elsewhere
   key: POSSE
 - title: Questionaire
+  key: QUESTIONAIRE
   tag: questionnaire
 - title: Race for the Galaxy
   key: RFTG
@@ -1318,27 +1513,35 @@
   tag: race for the galaxy
   abbr: RftG
 - title: Random
+  key: RANDOM
   tag: random
 - title: Random Encounter
   key: RANDOM-ENCOUNTER
   itemid: https://www.wikidata.org/wiki/Q4136241
   tag: random encounter
 - title: Random Encounters
+  key: RANDOM-ENCOUNTERS
   tag: random encounters
 - title: Random Names
+  key: RANDOM-NAMES
   tag: random names
 - title: Random Tables
+  key: RANDOM-TABLES
   tag: random tables
 - title: Rappan Athuk
+  key: RAPPAN-ATHUK
   itemid: https://rpggeek.com/rpgfamily/47890/rappan-athuk
   offer: https://www.drivethrurpg.com/product/112605/2012-Rappan-Athuk-SW?affiliate_id=318171
   tag: rappan athuk
   game: rappan athuk
-- key: RDFA
-  abbr: RDFa
+- title: Resource Description Framework in Attributes
+  key: RDFA
+  mentionAs: RDFa
+  verboseTitle: 'RDFa: A format for expressing RDF statements in HTML documents'
   itemid: https://www.wikidata.org/wiki/Q507673
-  title: 'RDFa: A format for expressing RDF statements in HTML documents'
+  abbr: RDFa
 - title: Reading
+  key: READING
   itemid: https://www.wikidata.org/wiki/Q199657
   tag: reading
 - title: Real New Mexico
@@ -1346,6 +1549,7 @@
 - title: Reflex
   key: REF
 - title: 'Reign: Enchiridion'
+  key: REIGN-ENCHIRIDION
   itemid: https://www.wikidata.org/wiki/Q66603524
   offer: https://www.drivethrurpg.com/product/79955/Reign-Enchiridion?affiliate_id=318171
   tag: reign enchiridion
@@ -1355,12 +1559,14 @@
   itemid: https://www.wikidata.org/wiki/Q840543
   abbr: IBM RPG
 - title: Response to Other Blogs
+  key: RESPONSE-TO-OTHER-BLOGS
   tag: response to other blogs
 - title: Responsibility matrix assignment
-  itemid: https://www.wikidata.org/wiki/Q1850420
   key: RACI
+  itemid: https://www.wikidata.org/wiki/Q1850420
   abbr: RACI
 - title: Review
+  key: REVIEW
   itemid: https://www.wikidata.org/wiki/Q265158
   tag: review
 - title: Rich Site Summary
@@ -1369,8 +1575,10 @@
   tag: rss
   abbr: RSS
 - title: Robert Bohl
+  key: ROBERT-BOHL
   tag: robert bohl
 - title: Role
+  key: ROLE
   tag: role
 - title: Role Playing Game
   key: RPG
@@ -1381,23 +1589,32 @@
   itemid: https://www.wikidata.org/wiki/Q680764
   tag: rolemaster
 - title: RPG Reward
+  key: RPG-REWARD
   tag: rpg reward
 - title: Ruby
+  key: RUBY
+  verboseTitle: Ruby programming language
   itemid: https://www.wikidata.org/wiki/Q161053
   tag: ruby
-- title: 'Ruby on Rails: Open Source Web Application Framework'
+- title: Ruby on Rails
   key: ROR
+  verboseTitle: 'Ruby on Rails: Open Source Web Application Framework'
   itemid: https://www.wikidata.org/wiki/Q190478
   abbr: Ruby on Rails
 - title: Rules Agnostic
+  key: RULES-AGNOSTIC
   tag: rules agnostic
 - title: Rules as Written
   key: RAW
   abbr: RaW
-- title: 'Résumé: Summary of Career'
-  tag: resume
+- title: Resume
+  key: RESUME-SUMMARY-OF-CAREER
+  mentionAs: Résumé
+  verboseTitle: 'Résumé: Summary of Career'
   itemid: https://www.wikidata.org/wiki/Q950511
+  tag: resume
 - title: Saga of the Icelanders
+  key: SAGA-OF-THE-ICELANDERS
   itemid: https://rpggeek.com/rpg/20480/sagas-icelanders
   offer: https://www.drivethrurpg.com/product/254224/Sagas-of-the-Icelanders?affiliate_id=318171
   tag: saga of the icelanders
@@ -1411,11 +1628,13 @@
   itemid: https://rpggeek.com/rpg/55536/sand-dogs
   offer: https://www.drivethrurpg.com/product/269946/Sand-Dogs?affiliate_id=318171
   tag: sand dogs
-  abbr: SD
   game: sd
+  abbr: SD
 - title: Sandbox
+  key: SANDBOX
   tag: sandbox
 - title: Savage Worlds
+  key: SAVAGE-WORLDS
   itemid: https://www.wikidata.org/wiki/Q916623
   tag: savage worlds
 - title: Saving Throw
@@ -1427,19 +1646,23 @@
   itemid: https://www.wikidata.org/wiki/Q2078
   abbr: SVG
 - title: Scales of War
+  key: SCALES-OF-WAR
   itemid: https://www.wikidata.org/wiki/Q104253098
   tag: scales of war
 - title: Scarlet Heroes
+  key: SCARLET-HEROES
   itemid: https://www.wikidata.org/wiki/Q104253139
   offer: https://www.drivethrurpg.com/product/127180/Scarlet-Heroes?affiliate_id=318171
   tag: scarlet heroes
   game: scarlet heroes
 - title: Scenic Dunnsmouth
+  key: SCENIC-DUNNSMOUTH
   itemid: https://rpggeek.com/rpgitem/156018/scenic-dunnsmouth
   offer: https://www.drivethrurpg.com/product/127039/Scenic-Dunnsmouth?affiliate_id=318171
   tag: scenic dunnsmouth
   game: scenic dunnsmouth
 - title: School Daze
+  key: SCHOOL-DAZE
   itemid: https://rpggeek.com/rpg/18420/school-daze-role-playing-game
   offer: https://www.drivethrurpg.com/product/104650/School-Daze?affiliate_id=318171
   tag: school daze
@@ -1448,6 +1671,7 @@
   key: SRO
   itemid: https://www.wikidata.org/wiki/Q7432625
 - title: Science Fantasy
+  key: SCIENCE-FANTASY
   itemid: https://www.wikidata.org/wiki/Q1080374
 - title: Science Fiction
   key: SF
@@ -1455,9 +1679,11 @@
   tag: sci fi
   abbr: Sci-Fi
 - title: Script Change
+  key: SCRIPT-CHANGE
   itemid: https://www.wikidata.org/wiki/Q105716989
   tag: script change
 - title: Scripted Conflict
+  key: SCRIPTED-CONFLICT
   tag: scripted conflict
 - title: Search Engine Optimization
   key: SEO
@@ -1468,6 +1694,7 @@
   itemid: https://www.wikidata.org/wiki/Q277919
 - title: Secure Shell
   key: SSH
+  mentionAs: HTTPS
   itemid: https://www.wikidata.org/wiki/Q170460
   description: cryptographic network protocol for secure data communication, remote
     shell services or command execution and other secure network services between
@@ -1476,69 +1703,91 @@
   key: SSL
   itemid: https://www.wikidata.org/wiki/Q206494
 - title: Self-Assessment
+  key: SELF-ASSESSMENT
   itemid: https://www.wikidata.org/wiki/Q1602656
   tag: self assessment
 - title: seneschal
+  key: SENESCHAL
+  offer: https://vsca.blog/2021/02/26/seneschal/
   tag: seneschal
   game: seneschal
-  key: SENESCHAL
   abbr: seneschal
-  offer: https://vsca.blog/2021/02/26/seneschal/
 - title: Services
+  key: SERVICES
   tag: services
 - title: Session
+  key: SESSION
   tag: session
 - title: Session Analysis
+  key: SESSION-ANALYSIS
   tag: session analysis
 - title: Session Planning
+  key: SESSION-PLANNING
   tag: session planning
 - title: Session Report
+  key: SESSION-REPORT
   tag: session report
 - title: Shadow World
+  key: SHADOW-WORLD
   itemid: https://www.wikidata.org/wiki/Q3481166
   tag: shadow world
 - title: Shadowrun
+  key: SHADOWRUN
   itemid: https://www.wikidata.org/wiki/Q1042442
   tag: shadowrun
 - title: Shopify
+  key: SHOPIFY
   itemid: https://www.wikidata.org/wiki/Q7501150
   tag: shopify
 - title: Show not Tell
+  key: SHOW-NOT-TELL
   tag: show not tell
 - title: Shutdown Academia
+  key: SHUTDOWN-ACADEMIA
   tag: shutdown academia
 - title: Shutdown STEM
+  key: SHUTDOWN-STEM
   tag: shutdown stem
 - title: Silver piece(s)
   key: SP
 - title: Simplicity
+  key: SIMPLICITY
   tag: simplicity
 - title: Situation Mining
+  key: SITUATION-MINING
   tag: situation mining
 - title: Soapgy Gnome
+  key: SOAPGY-GNOME
   itemid: https://soapygnome.com
   tag: soapy gnome
 - title: Social Standing
   key: SOC
   abbr: SOC
 - title: Soft Horizon
-  game: shsrd
+  key: SOFT-HORIZON
   itemid: https://vsca.blog/2019/02/12/soft-horizon-srd/
   tag: soft horizon
+  game: shsrd
 - title: Software
+  key: SOFTWARE
   itemid: https://www.wikidata.org/wiki/Q7397
   tag: software
 - title: Solo
+  key: SOLO
   tag: solo
 - title: Solo Gaming
+  key: SOLO-GAMING
   tag: solo gaming
 - title: Sophont
+  key: SOPHONT
   tag: sophont
-- key: UNIX-SORT
-  abbr: sort
+- title: sort (Unix command)
+  key: UNIX-SORT
+  verboseTitle: 'sort: Unix command to sort lines of text files'
   itemid: https://www.wikidata.org/wiki/Q709123
-  title: 'sort: Unix command to sort lines of text files'
+  abbr: sort
 - title: Spaceships
+  key: SPACESHIPS
   tag: spaceships
 - title: Special Property
   key: SPP
@@ -1551,18 +1800,22 @@
   itemid: https://www.wikidata.org/wiki/Q1312
   tag: spring
 - title: Square
+  key: SQUARE
   itemid: https://www.wikidata.org/wiki/Q7581990?wprov=srpw1_12
   tag: square
 - title: Standards
+  key: STANDARDS
   tag: standards
 - title: Star Frontiers
+  key: STAR-FRONTIERS
   itemid: https://www.wikidata.org/wiki/Q7600723
   tag: star frontiers
 - title: 'Star Frontiers: Alpha Dawn'
-  game: sfad
+  key: SF-ALPHA-DAWN
   itemid: https://rpggeek.com/rpgitemversion/43/alpha-dawn-box-set
   offer: https://www.drivethrurpg.com/product/226710/Star-Frontiers-Alpha-Dawn?affiliate_id=318171
   tag: alpha dawn
+  game: sfad
 - title: Star Trek
   key: STAR-TREK
   itemid: https://www.wikidata.org/wiki/Q1092
@@ -1572,11 +1825,14 @@
   itemid: https://www.wikidata.org/wiki/Q462
   tag: star wars
 - title: Starling
+  key: STARLING
   itemid: https://www.wikidata.org/wiki/Q25469
 - title: 'Stars without Number: Revised (Free Edition)'
-  game: swn-free
-  offer: https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version?affiliate_id=318171
+  key: SWN-FREE
+  verboseTitle: 'Stars without Number: Revised (Free Edition)'
   itemid: https://rpggeek.com/rpgitem/243271/stars-without-number-revised-edition-free-edition
+  offer: https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version?affiliate_id=318171
+  game: swn-free
 - title: 'Stars without Number: Revised Edition'
   key: SWN
   itemid: https://www.wikidata.org/wiki/Q67963569
@@ -1586,15 +1842,17 @@
   abbr: SWN
 - title: Static Site Generator
   key: SSG
-  abbr: SSG
   itemid: https://www.wikidata.org/wiki/Q77916592
+  abbr: SSG
 - title: Stats
+  key: STATS
   tag: stats
 - title: Steel Test
+  key: STEEL-TEST
   tag: steel test
-  contentDisclaimers:
-  - lukecrane
+  contentDisclaimers: '["lukecrane"]'
 - title: Stonehell Dungeon
+  key: STONEHELL-DUNGEON
   itemid: https://rpggeek.com/rpgseries/26518/stonehell-dungeon
   tag: stonehell dungeon
 - title: Stop Online Piracy Act
@@ -1605,14 +1863,17 @@
   key: STR
   abbr: Str
 - title: Strike 4 Black Lives
+  key: STRIKE-4-BLACK-LIVES
   tag: strike 4 black lives
-- title: 'Sublime Text: A sophisticated text editor for code, markup and prose'
+- title: Sublime Text
   key: SUBLIME
+  verboseTitle: 'Sublime Text: A sophisticated text editor for code, markup and prose'
   itemid: https://www.wikidata.org/wiki/Q267193
   abbr: Sublime Text
 - title: Submission Information Package
   key: SIP
 - title: Survey
+  key: SURVEY
   tag: survey
 - title: Sword and Wizardry
   key: S&W
@@ -1620,13 +1881,17 @@
   tag: sword and wizardry
   abbr: S&W
 - title: Swords and Strongholds
+  key: SWORDS-AND-STRONGHOLDS
   itemid: https://boardgamegeek.com/boardgame/162315/mouse-guard-swords-strongholds
   tag: swords and strongholds
 - title: System Comparison
+  key: SYSTEM-COMPARISON
   tag: system comparison
 - title: System Hack
+  key: SYSTEM-HACK
   tag: system hack
 - title: System Neutral
+  key: SYSTEM-NEUTRAL
   tag: system neutral
 - title: System Reference Document
   key: SRD
@@ -1639,21 +1904,25 @@
   tag: tsr
   abbr: TSR
 - title: Take on Establishments
+  key: TAKE-ON-ESTABLISHMENTS
   itemid: https://rpggeek.com/rpgitem/133489/take-establishments
   offer: https://www.drivethrurpg.com/product/107759/Take-on-Establishments?affiliate_id=318171
   tag: take on establishments
   game: take on establishments
 - title: Take on Magic Items
+  key: TAKE-ON-MAGIC-ITEMS
   itemid: https://rpggeek.com/rpgitem/132193/take-magic-items
   offer: https://www.drivethrurpg.com/product/106849/Take-on-Magic-Items?affiliate_id=318171
   tag: take on magic items
   game: take on magic items
 - title: Take on the Lower Depths
+  key: TAKE-ON-THE-LOWER-DEPTHS
   itemid: https://rpggeek.com/rpgitem/143067/take-lower-depths
   offer: https://www.drivethrurpg.com/product/114740/Take-on-the-Lower-Depths?affiliate_id=318171
   tag: take on the lower depths
   game: take on the lower depths
 - title: Technoir
+  key: TECHNOIR
   itemid: https://www.wikidata.org/wiki/Q78091391
   offer: https://www.drivethrurpg.com/product/93378/Technoir?affiliate_id=318171
   tag: technoir
@@ -1669,23 +1938,27 @@
   key: TEXTMATE
   itemid: https://www.wikidata.org/wiki/Q2297533
 - title: The Book of the New Sun
+  key: THE-BOOK-OF-THE-NEW-SUN
   itemid: https://www.wikidata.org/wiki/Q3269840
   itemtype: Book
 - title: The Empire Strikes Back
+  key: THE-EMPIRE-STRIKES-BACK
   itemid: https://www.wikidata.org/wiki/Q181795
   tag: empire strikes back
 - title: The Hero's Journey
   key: THJ
   itemid: https://rpggeek.com/rpg/34736/heros-journey-fantasy-roleplaying
   offer: https://www.drivethrurpg.com/product/295279/The-Heros-Journey-Second-Edition?affiliate_id=318171
-  abbr: THJ
   game: thj
+  abbr: THJ
 - title: The King Machine
+  key: THE-KING-MACHINE
   itemid: https://rpggeek.com/rpgitem/262253/king-machine
   offer: https://www.drivethrurpg.com/product/253064/The-King-Machine?affiliate_id=318171
   tag: the king machine
   game: the king machine
 - title: The Magnificent Seven
+  key: THE-MAGNIFICENT-SEVEN
   itemid: https://www.wikidata.org/wiki/Q19069
   tag: magnificent seven
 - title: The One Ring
@@ -1694,18 +1967,20 @@
   tag: the one ring
   abbr: TOR
 - title: The Prophet
+  key: THE-PROPHET
   itemid: https://www.wikidata.org/wiki/Q1196302
   itemtype: Book
 - title: The Regiment
+  key: THE-REGIMENT
   itemid: https://rpggeek.com/rpg/27316/regiment
   tag: the regiment
 - title: The Scaffold System
+  key: SCAFFOLD
+  offer: https://vsca.blog/2021/02/20/the-scaffold-system/
   tag: scaffold system
   game: scaffold
-  key: SCAFFOLD
   abbr: Scaffold
-  offer: https://vsca.blog/2021/02/20/the-scaffold-system/
-- title: The Silver Searcher (ag)
+- title: The Silver Searcher
   key: AG
   itemid: https://github.com/ggreer/the_silver_searcher
   abbr: ag
@@ -1714,86 +1989,98 @@
   itemid: https://www.wikidata.org/wiki/Q7768362
   offer: https://www.drivethrurpg.com/product/17068/T14-Temple-of-Elemental-Evil-1e?affiliate_id=318171
   tag: temple of elemental evil
-  abbr: ToEE
   game: toee
+  abbr: ToEE
 - title: Thel Sector
+  key: THEL-SECTOR
   tag: thel sector
 - title: Theory
+  key: THEORY
   tag: theory
 - title: Third Eye Games
+  key: THIRD-EYE-GAMES
   itemid: https://rpggeek.com/rpgpublisher/10637/third-eye-games
   tag: third eye games
 - title: Thirteen (13)
   key: XIII
 - title: Thornburg
+  key: THORNBURG
   itemid: https://rpggeek.com/rpgitem/137524/thornburg
   offer: https://www.drivethrurpg.com/product/106582/Thornburg--A-Dungeon-World-Adventure?affiliate_id=318171
   tag: thornburg
   game: thornburg
 - title: Tichu
+  key: TICHU
   itemid: https://www.wikidata.org/wiki/Q851937
   tag: tichu
 - title: To Hit Armor Class 0
   key: THAC0
   itemid: https://www.wikidata.org/wiki/Q104254746
 - title: Today I Learned
+  key: TODAY-I-LEARNED
   tag: today i learned
 - title: Tom Moldvay
+  key: TOM-MOLDVAY
   itemid: https://www.wikidata.org/wiki/Q3530805
 - title: Tomb of Adventure Design
   key: TOAD
-  game: tome of adventure design
   offer: https://www.drivethrurpg.com/product/97423/Tome-of-Adventure-Design?affiliate_id=318171
+  game: tome of adventure design
   abbr: ToAD
 - title: Tomb of Annihilation
   key: TOA
   itemid: https://www.wikidata.org/wiki/Q67311483
   offer: https://www.dmsguild.com/browse.php?filters=0_45682_0_0_0_0_0_0&src=fid45682?affiliate_id=318171
   tag: tomb of annihilation
-  abbr: ToA
   game: toa
+  abbr: ToA
 - title: Too Long; Didn't Read
   key: TL;DR
   itemid: https://www.wikidata.org/wiki/Q16886840
 - title: Torchbearer
-  game: torchbearer
   key: TB
   itemid: https://www.wikidata.org/wiki/Q66830849
   offer: https://www.drivethrurpg.com/product/116482/Torchbearer?affiliate_id=318171
   tag: torchbearer
-  contentDisclaimers:
-  - lukecrane
+  game: torchbearer
+  contentDisclaimers: '["lukecrane"]'
 - title: Total Party Kill
   key: TPK
   itemid: https://www.wikidata.org/wiki/Q7828047
-- key: UNIX-TR
-  abbr: tr
-  title: 'tr: Unix command to translate or delete characters'
+- title: 'tr: Unix command to translate or delete characters'
+  key: UNIX-TR
   itemid: https://www.wikidata.org/wiki/Q709372
+  abbr: tr
 - title: Tracey Barnett
+  key: TRACEY-BARNETT
   tag: tracey barnett
 - title: Trail of Cthulhu
   key: TOC
   itemid: https://www.wikidata.org/wiki/Q3210775
   offer: https://www.drivethrurpg.com/product/55567/Trail-of-Cthulhu?affiliate_id=318171
   tag: trail of cthulhu
-  abbr: ToC
   game: toc
+  abbr: ToC
 - title: 'Traveller: Core Rulebook'
-  game: traveller
+  key: TRAVELLER-CORE-RULEBOOK
   itemid: https://www.wikidata.org/wiki/Q2164069
   offer: https://www.drivethrurpg.com/product/171643/Traveller-Core-Rulebook?affiliate_id=318171
   tag: traveller
-- title: Two six-dice, one signifying the "tens" digit, the other the "ones" digit.
+  game: traveller
+- title: D66
   key: D66
+  verboseTitle: Two six-dice, one signifying the "tens" digit, the other the "ones"
+    digit.
   abbr: D66
-- title: Two Six-Sided Dice
+- title: 2D6
   key: 2D6
+  verboseTitle: Two Six-Sided Dice
 - title: Ultraviolet
   key: UV
-  abbr: UV
   itemid: https://www.wikidata.org/wiki/Q11391
+  abbr: UV
 - title: Undying
+  key: UNDYING
   itemid: https://rpggeek.com/rpg/37860/undying
   tag: undying
 - title: Uniform Resource Locator
@@ -1801,6 +2088,7 @@
   itemid: https://www.wikidata.org/wiki/Q42253
 - title: United States
   key: US
+  verboseTitle: United States of America
   itemid: https://www.wikidata.org/wiki/Q30
 - title: United States dollar
   key: USD
@@ -1813,6 +2101,7 @@
 - title: Versus Armor
   key: VA
 - title: Violence
+  key: VIOLENCE
   tag: violence
 - title: Virtual Intelligence
   key: VI
@@ -1821,12 +2110,15 @@
   itemid: https://www.wikidata.org/wiki/Q19841877
   abbr: VS Code
 - title: VSCA
+  key: VSCA
   itemid: https://vsca.ca
   tag: vsca
 - title: Walking
+  key: WALKING
   itemid: https://www.wikidata.org/wiki/Q6537379
   tag: walking
 - title: Wampus County
+  key: WAMPUS-COUNTY
   tag: wampus county
 - title: Warhammer Fantasy
   key: WHF
@@ -1835,87 +2127,98 @@
   abbr: WHF
 - title: Warhammer Fantasy Setting
   key: WHFS
-  abbr: WHFS
-  offer: https://www.drivethrurpg.com/browse.php?filters=0_0_44232_0_0&term=warhammer%20fantasy&affiliate_id=318171
   itemid: https://www.wikidata.org/wiki/Q15831558
+  offer: https://www.drivethrurpg.com/browse.php?filters=0_0_44232_0_0&term=warhammer%20fantasy&affiliate_id=318171
   game: whfs
+  abbr: WHFS
 - title: Weapon Speed
   key: WS
 - title: Web Content Accessibility Guidelines
   key: WCAG
   itemid: https://www.wikidata.org/wiki/Q5364439
 - title: Webmention
+  key: WEBMENTION
   tag: webmention
 - title: Weird Fantasy
+  key: WEIRD-FANTASY
   tag: weird fantasy
 - title: Welcome
+  key: WELCOME
   tag: welcome
 - title: What You See is What You Get
   key: WYSIWYG
   itemid: https://www.wikidata.org/wiki/Q170542
 - title: White Fragility
+  key: WHITE-FRAGILITY
   tag: white fragility
 - title: White Privilege
+  key: WHITE-PRIVILEGE
   tag: white privilege
 - title: Whitehack
+  key: WHITEHACK
   itemid: https://rpggeek.com/rpg/23260/whitehack
   offer: https://www.drivethrurpg.com/product/348152/Whitehack-Third-Edition?affiliate_id=318171
-  game: whitehack
   tag: whitehack
+  game: whitehack
 - title: Willpower
   key: WILL
 - title: Winter
   key: WINTER
-  tag: winter
   itemid: https://www.wikidata.org/wiki/Q1311
+  tag: winter
 - title: Wisdom
   key: WIS
 - title: Witchburner
+  key: WITCHBURNER
   itemid: https://rpggeek.com/rpgseries/60860/witchburner
   offer: https://www.drivethrurpg.com/product/256916/Witchburner?affiliate_id=318171
   tag: witchburner
   game: witchburner
-- title: 'Wizards of the Coast; Publisher of Dungeons & Dragons as well as Magic:
-    The Gathering'
-  dfn: Wizards of the Coast
+- title: Wizards of the Coast
   key: WOTC
+  verboseTitle: 'Wizards of the Coast; Publisher of Dungeons & Dragons as well as
+    Magic: The Gathering'
   itemid: https://www.wikidata.org/wiki/Q1135204
   abbr: WotC
 - title: Woman Author
+  key: WOMAN-AUTHOR
   tag: woman author
 - title: Wordpress
+  key: WORDPRESS
   itemid: https://www.wikidata.org/wiki/Q13166
   tag: wordpress
 - title: Work Experiments
+  key: WORK-EXPERIMENTS
   tag: work experiments
 - title: World of Ardu
   key: WOA
-  abbr: WoA
   itemid: https://takeonrules.com/series/a-grain-of-truth-in-the-world-of-ardu/
   tag: world of ardu
+  abbr: WoA
 - title: World of Dungeons
   key: WOD
   itemid: https://www.wikidata.org/wiki/Q68522321
   tag: world of dungeons
   abbr: WoD
-  contentDisclaimers:
-  - adamkoebel
+  contentDisclaimers: '["adamkoebel"]'
 - title: World of Steve
+  key: WORLD-OF-STEVE
   tag: world of steve
 - title: World War Two
   key: WWII
   itemid: https://www.wikidata.org/wiki/Q362
 - title: Worlds without Number
-  game: wwn
   key: WWN
   itemid: https://www.wikidata.org/wiki/Q104153924
   offer: https://www.drivethrurpg.com/product/348791/Worlds-Without-Number?affiliate_id=318171
   tag: wwn
+  game: wwn
   abbr: WWN
 - title: 'Worlds without Number: Free Edition'
-  game: wwn-free
+  key: WWN-FREE
   itemid: https://www.wikidata.org/wiki/Q104153924
   offer: https://www.drivethrurpg.com/product/348809/Worlds-Without-Number-Free-Edition?affiliate_id=318171
+  game: wwn-free
 - title: Wrath of the Autarch
   key: WOTA
   itemid: https://www.wikidata.org/wiki/Q104150978
@@ -1923,23 +2226,26 @@
   tag: wrath of the autarch
   game: wota
 - title: Wyatt Earp
+  key: WYATT-EARP
   itemid: https://boardgamegeek.com/boardgame/878/wyatt-earp
   tag: wyatt earp
 - title: Xanathar's Guide to Everything
   key: XGTE
   itemid: https://www.wikidata.org/wiki/Q65049759
   abbr: XGtE
-- title: 'YASnippet: Yet Another Snippet Extension'
-  tag: yasnippet
-  itemid: https://github.com/joaotavora/yasnippet
-  abbr: YASnippet
+- title: YASnippet
   key: YASNIPPET
+  verboseTitle: 'YASnippet: Yet Another Snippet Extension'
+  itemid: https://github.com/joaotavora/yasnippet
+  tag: yasnippet
+  abbr: YASnippet
 - title: Yet Another Markup Language
   key: YAML
   itemid: https://www.wikidata.org/wiki/Q281876
 - title: Young Offender
   key: YO
 - title: Zeb Cook
+  key: ZEB-COOK
   itemid: https://www.wikidata.org/wiki/Q5232538
 - title: Zettelkasten
   key: ZK
