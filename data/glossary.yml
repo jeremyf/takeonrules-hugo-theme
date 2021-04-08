@@ -844,6 +844,10 @@
   abbr: Int
 - title: Intelligence
   key: INT
+- title: International Business Machines Corporation
+  abbr: IBM
+  itemid: https://www.wikidata.org/wiki/Q37156
+  key: IBM
 - title: International Standard Book Number
   key: ISBN
   itemid: https://www.wikidata.org/wiki/Q33057
@@ -1354,6 +1358,10 @@
   abbr: IBM RPG
 - title: Response to Other Blogs
   tag: response to other blogs
+- title: Responsibility matrix assignment
+  itemid: https://www.wikidata.org/wiki/Q1850420
+  key: RACI
+  abbr: RACI
 - title: Review
   itemid: https://www.wikidata.org/wiki/Q265158
   tag: review
@@ -1934,7 +1942,3 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- title: Responsibility matrix assignment
-  itemid: https://www.wikidata.org/wiki/Q1850420
-  key: RACI
-  abbr: RACI
