@@ -1113,10 +1113,6 @@
   description: contractual agreement not to disclose specified information
   key: NDA
   itemid: https://www.wikidata.org/wiki/Q1053818
-- title: Non-Disclosure Agreement
-  description: contractual agreement not to disclose specified information
-  key: NDA
-  itemid: https://www.wikidata.org/wiki/Q1053818
 - title: Non-Player Character
   key: NPC
   itemid: https://www.wikidata.org/wiki/Q466466
