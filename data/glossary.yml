@@ -1934,3 +1934,7 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
+- title: Responsibility matrix assignment
+  itemid: https://www.wikidata.org/wiki/Q1850420
+  key: RACI
+  abbr: RACI
