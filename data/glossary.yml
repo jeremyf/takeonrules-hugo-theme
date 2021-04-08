@@ -187,6 +187,8 @@
   offer: https://www.drivethrurpg.com/product/16800/H1-Bloodstone-Pass-1e?affiliate_id=318171
   tag: bloodstone
   game: bloodstone
+- title: Bluebird
+  itemid: https://www.wikidata.org/wiki/Q853286
 - title: Board Game
   itemid: https://www.wikidata.org/wiki/Q131436
   tag: boardgame
@@ -1570,6 +1572,8 @@
   key: STAR-WARS
   itemid: https://www.wikidata.org/wiki/Q462
   tag: star wars
+- title: Starling
+  itemid: https://www.wikidata.org/wiki/Q25469
 - title: 'Stars without Number: Revised (Free Edition)'
   game: swn-free
   offer: https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version?affiliate_id=318171
