@@ -7,6 +7,7 @@
   game: 1001 nights
 - title: 3-Dimensional
   key: 3D
+  abbr: 3d
 - title: Six-sided die
   key: D6
   mentionAs: d6
@@ -25,16 +26,19 @@
   tag: academia
 - title: Accelerated Mobile Pages
   key: AMP
+  abbr: AMP
   itemid: https://www.wikidata.org/wiki/Q25452619
 - title: Action(s)
   key: ACT
 - title: 'Advanced Dungeons and Dragons: First Edition'
   key: 1E
   mentionAs: AD&D 1E
+  abbr: '1E'
   itemid: https://www.wikidata.org/wiki/Q64597405
 - title: 'Advanced Dungeons and Dragons: Second Edition'
   key: 2E
   mentionAs: AD&D 2E
+  abbr: '2E'
   itemid: https://www.wikidata.org/wiki/Q64620925
 - title: Adventure
   key: ADVENTURE
@@ -100,6 +104,7 @@
   description: Dungeons & Dragons inspirational bibliography
 - title: Application Programming Interface
   key: API
+  abbr: API
   mentionAs: API
   itemid: https://www.wikidata.org/wiki/Q165194
 - title: Armor Class
@@ -163,6 +168,7 @@
   game: barrowmaze
 - title: Base Attack Bonus
   key: BAB
+  abbr: BAB
 - title: Basic Fantasy RPG
   key: BFRPG
   itemid: https://www.wikidata.org/wiki/Q4866969
@@ -194,6 +200,7 @@
   key: BLACK-OUT-TUESDAY
   tag: black out tuesday
 - title: Black, Indigenous, Multi-racial, or Person of Color
+  abbr: BIMPoC
   key: BIMPOC
 - title: Blades in the Dark
   key: BITD
@@ -332,6 +339,7 @@
   itemid: https://www.wikidata.org/wiki/Q46441
 - title: Caster Level
   key: CL
+  abbr: CL
 - title: Celcius
   key: CEL
   itemid: https://www.wikidata.org/wiki/Q25267
@@ -416,6 +424,7 @@
   tag: community
 - title: Computer Role Playing Game
   key: CRPG
+  abbr: CRPG
   itemid: https://www.wikidata.org/wiki/Q744038
 - title: Conflict
   key: CONFLICT
@@ -547,6 +556,7 @@
   itemid: https://www.wikidata.org/wiki/Q26384
   abbr: DIY
 - title: 'Do: Pilgrims of the Flying Temple'
+  abbr: "Do: PotFT"
   key: DO-PILGRIMS-OF-THE-FLYING-TEMPLE
   itemid: https://www.wikidata.org/wiki/Q16962084
   offer: https://www.drivethrurpg.com/product/92348/Do-Pilgrims-of-the-Flying-Temple?affiliate_id=318171
@@ -693,6 +703,7 @@
   itemid: https://www.wikidata.org/wiki/Q475488
 - title: Eastern Daylight Time
   key: EDT
+  abbr: EDT
   itemid: https://www.wikidata.org/wiki/Q15080196
 - title: Eberron
   key: EBERRON
@@ -708,8 +719,10 @@
   key: EDU
 - title: Electronic Counter Measures
   key: ECM
+  abbr: ECM
 - title: Electronic Warfare
   key: EW
+  abbr: EW
 - title: 'Elisp: dialect of Lisp used in GNU Emacs'
   key: ELISP
   mentionAs: Elisp
@@ -734,6 +747,7 @@
   abbr: XML
   itemid: https://www.wikidata.org/wiki/Q2115
 - title: Extra Vehicular Activity
+  abbr: EVA
   key: EVA
 - title: Fables Bookshop
   key: FABLES-BOOKSHOP
@@ -751,6 +765,7 @@
   tag: fantasy
 - title: Faster than Light
   key: FTL
+  abbr: FtL
   itemid: https://www.wikidata.org/wiki/Q44207
 - title: Fate Core
   key: FATE
@@ -778,6 +793,7 @@
   tag: first play
 - title: Five Torches Deep
   key: FTD
+  abbr: FTD
   itemid: https://www.wikidata.org/wiki/Q70791655
   offer: https://www.drivethrurpg.com/product/264584/Five-Torches-Deep?affiliate_id=318171
   game: ftd
@@ -792,8 +808,9 @@
   itemid: https://www.wikidata.org/wiki/Q332903
 - title: Fortitude
   key: FORT
-- title: Four Fudge/Face Dice
+- title: Four Fudge/Fate Dice
   key: 4DF
+  abbr: 4DF
 - title: Free Open Source Software
   key: FOSS
   abbr: FOSS
@@ -976,6 +993,7 @@
   game: harnmaster
 - title: I Owe You
   key: IOU
+  abbr: IOU
   itemid: https://www.wikidata.org/wiki/Q534910
 - title: IBM System iSeries
   key: AS400
@@ -1031,6 +1049,7 @@
   abbr: IBM
 - title: International Standard Book Number
   key: ISBN
+  abbr: ISBN
   itemid: https://www.wikidata.org/wiki/Q33057
 - title: Interview
   key: INTERVIEW
@@ -1172,6 +1191,7 @@
   itemid: https://www.wikidata.org/wiki/Q216749
 - title: Living Card Game
   key: LCG
+  abbr: LCG
   itemid: https://www.wikidata.org/wiki/Q15113641
 - title: Lord of the Rings
   key: LOTR
@@ -1300,6 +1320,7 @@
   abbr: ML
 - title: Most Valuable Player
   key: MVP
+  abbr: MVP
 - title: Mouse Guard RPG
   key: MG
   itemid: https://www.wikidata.org/wiki/Q17142058
@@ -1441,6 +1462,7 @@
   abbr: PBR
 - title: Pain Tolerances Grayscales
   key: PTGS
+  abbr: PTGS
 - title: Pandemic
   key: PANDEMIC
   itemid: https://www.wikidata.org/wiki/Q12184
@@ -1475,6 +1497,7 @@
   tag: philosophy
 - title: PHP Programming Language
   key: PHP
+  abbr: PHP
   itemid: https://www.wikidata.org/wiki/Q59
 - title: Planarch Codex
   key: PLANARCH-CODEX
@@ -1566,6 +1589,7 @@
   key: PSI
 - title: Publish (on your) Own Site, Syndicate Elsewhere
   key: POSSE
+  abbr: POSSE
 - title: Questionaire
   key: QUESTIONAIRE
   tag: questionnaire
@@ -1659,6 +1683,7 @@
   verboseTitle: Ruby programming language
   itemid: https://www.wikidata.org/wiki/Q161053
   tag: ruby
+  abbr: Ruby
 - title: Ruby on Rails
   key: ROR
   verboseTitle: 'Ruby on Rails: Open Source Web Application Framework'
@@ -1817,6 +1842,7 @@
   tag: shutdown stem
 - title: Silver piece(s)
   key: SP
+  abbr: sp
 - title: Simplicity
   key: SIMPLICITY
   tag: simplicity
@@ -2117,6 +2143,7 @@
   contentDisclaimers: '["lukecrane"]'
 - title: Total Party Kill
   key: TPK
+  abbr: TPK
   itemid: https://www.wikidata.org/wiki/Q7828047
 - title: 'tr (Unix command)'
   key: UNIX-TR
@@ -2147,6 +2174,7 @@
 - title: 2D6
   key: 2D6
   verboseTitle: Two Six-Sided Dice
+  abbr: 2d6
 - title: Ultraviolet
   key: UV
   itemid: https://www.wikidata.org/wiki/Q11391
