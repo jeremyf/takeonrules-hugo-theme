@@ -549,6 +549,10 @@
 - title: Difficulty Class
   key: DC
   abbr: DC
+- title: Diversity, Equity, and Inclusion
+  key: DEI
+  abbr: DEI
+  tag: diversity equity inclusion
 - title: Divorce
   key: DIVORCE
   itemid: https://www.wikidata.org/wiki/Q93190
@@ -1088,6 +1092,10 @@
   key: JSON+LD
   itemid: https://www.wikidata.org/wiki/Q6108942
   abbr: JSON+LD
+- title: Jekyll
+  key: JEKYLL
+  itemid: https://www.wikidata.org/wiki/Q17067385
+  verboseTitle: 'Jekyll: Ruby-based Static Site Generator'
 - title: John F. Kennedy
   key: JFK
   abbr: JFK
@@ -1649,6 +1657,11 @@
   key: RPGP
   itemid: https://www.wikidata.org/wiki/Q840543
   abbr: IBM RPG
+- title: Resource Description Framework
+  key: RDF
+  mentionAs: RDF
+  itemid: https://www.wikidata.org/wiki/Q507673
+  abbr: RDFa
 - title: Resource Description Framework in Attributes
   key: RDFA
   mentionAs: RDFa
@@ -1974,6 +1987,10 @@
 - title: Strike 4 Black Lives
   key: STRIKE-4-BLACK-LIVES
   tag: strike 4 black lives
+- title: Structured Query Language
+  key: SQL
+  abbr: SQL
+  itemid: https://www.wikidata.org/wiki/Q47607
 - title: Sublime Text
   key: SUBLIME
   verboseTitle: 'Sublime Text: A sophisticated text editor for code, markup and prose'
