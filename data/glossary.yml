@@ -1398,6 +1398,10 @@
   key: NOTRE-DAME
   abbr: ND
   itemid: https://www.wikidata.org/wiki/Q178848
+- title: Oak Tree
+  key: OAK-TREE
+  tag: oak tree
+  itemid: https://www.wikidata.org/wiki/Q33036816
 - title: Obstacle
   key: OB
   abbr: Ob
