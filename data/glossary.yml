@@ -2392,3 +2392,15 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
+- title: Quality Assurance
+  key: QA
+  itemid: https://www.wikidata.org/wiki/Q836575
+  abbr: QA
+- title: Emotional Intelligence
+  abbr: EQ
+  key: EQ
+  itemid: https://www.wikidata.org/wiki/Q191591
+- title: Intsitutional Repository
+  abbr: IR
+  key: IR
+  itemid: https://www.wikidata.org/wiki/Q1065413
