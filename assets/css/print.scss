@@ -48,3 +48,5 @@ table {
 // A hack to address the rather unfortunate margin issues with lists.
 // Without this, the margin was aggressively set in.
 [role="note"] > ul { margin-left: -23px; }
+
+.print-only { display: block; }
