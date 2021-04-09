@@ -350,7 +350,8 @@
   itemid: https://www.wikidata.org/wiki/Q116348
   tag: change management
 - title: Chaotic
-  key: C
+  key: CHAOTIC
+  abbr: C
 - title: Character Creation
   key: CHARACTER-CREATION
   itemid: https://www.wikidata.org/wiki/Q5073735
