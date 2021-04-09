@@ -77,6 +77,7 @@ Each glossary entry must have two keys:
 There additional optional keys are as follows:
 
 - **verboseTitle**: This is the lengthier title; you know, if there's a colon/subtitle in play use that.
+- **mentionAs**: When we "mention" something (see `mention.html`) use mentionAs and fall back to title.
 - **tag**: If this entry represents a tag, this will be the tags name
 - **itemid**: If this entry has a "sameAs" itemprop value, that will be the itemid (e.g. how to disambiguate)
 - **abbr**: If you reference the entry for an ABBR, but the given key is not good for the innerHTML of the ABBR tags. (see `abbr.html` shortcode)
