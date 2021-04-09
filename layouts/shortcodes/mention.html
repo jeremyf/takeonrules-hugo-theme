@@ -1,1 +1,8 @@
-{{ $key := .Get "key"}}{{- $tag := default "span" (.Get "tag") }}{{- $itemprop := default "mentions" (.Get "itemprop")}}{{- $data := index (where $.Site.Data.glossary "key" "eq" $key) 0 }}{{- $title := default $data.title ($data.mentionAs) }}{{- $itemtype := default "Thing" ($data.itemtype) }}{{ printf "<%s itemprop=\"%s\" itemscope itemtype=\"http://schema.org/%s\">" $tag $itemprop $itemtype | safeHTML }}{{- if isset $data "itemid" }}<link itemprop="sameAs" href="{{ $data.itemid }}" />{{- end }}<span itemprop="name">{{ if .Get "downcase" }}{{ lower $title }}{{ else }}{{ $title }}{{ end }}</span>{{- printf "</%s>" $tag | safeHTML }}
+{{ $key := .Get "key"}}{{- $tag := default "span" (.Get "tag") }}
+{{- $itemprop := default "mentions" (.Get "itemprop")}}
+{{- $data := index (where $.Site.Data.glossary "key" "eq" $key) 0 }}
+{{- $title := default $data.title ($data.mentionAs) }}{{- $name := $title }}
+{{- if .Get "downcase" }}{{- $name = lower $name}}{{- end }}
+{{- $itemtype := default "Thing" ($data.itemtype) }}
+{{- if .Get "abbr" }}{{ $name = default $name ($data.abbr) }}{{- end }}
+{{- printf "<%s itemprop=\"%s\" itemscope itemtype=\"http://schema.org/%s\">" $tag $itemprop $itemtype | safeHTML }}{{- if isset $data "itemid" }}<link itemprop="sameAs" href="{{ $data.itemid }}" />{{- end }}<span itemprop="name">{{ $name }}</span>{{- if ne $name $title }}<meta itemprop="alternateName" content="{{ $title }}">{{- end }}{{- printf "</%s>" $tag | safeHTML }}
