@@ -74,6 +74,9 @@
   mentionAs: ASCII
   abbr: ASCII
   itemid: https://www.wikidata.org/wiki/Q8815
+- title: Andrew W. Mellon Foundation
+  key: ANDREW-W-MELLON-FOUNDATION
+  itemid: https://www.wikidata.org/wiki/Q4758812
 - title: 'Android: Netrunner'
   key: NETRUNNER
   itemid: https://www.wikidata.org/wiki/Q4759447
@@ -505,6 +508,9 @@
   offer: https://www.dmsguild.com/browse.php?filters=0_0_0_0_45353_0_0_0&affiliate_id=318171
   tag: dark sun
   game: darksun
+- title: Data Modeling
+  key: DATA-MODELING
+  itemid: https://www.wikidata.org/wiki/Q367664
 - title: Dave Arneson
   key: DAVE-ARNESON
   itemid: https://www.wikidata.org/wiki/Q1381
@@ -731,6 +737,10 @@
   itemid: https://www.wikidata.org/wiki/Q189722
   tag: emacs
   abbr: Emacs
+- title: Emotional Intelligence
+  abbr: EQ
+  key: EQ
+  itemid: https://www.wikidata.org/wiki/Q191591
 - title: Endurance
   key: END
 - title: ENnie Awards
@@ -1070,6 +1080,10 @@
   key: ICE
   abbr: ICE
   itemid: https://www.wikidata.org/wiki/Q1122382
+- title: Intsitutional Repository
+  abbr: IR
+  key: IR
+  itemid: https://www.wikidata.org/wiki/Q1065413
 - title: Inverse World
   key: INVERSE-WORLD
   itemid: https://rpggeek.com/rpgitem/142766/inverse-world-dungeon-world-sourcebook
@@ -1588,6 +1602,10 @@
 - title: Product Identity
   key: PI
   abbr: PI
+- title: Product Manager
+  key: PRODUCT-MANAGER
+  abbr: PM
+  itemid: https://www.wikidata.org/wiki/Q2552738
 - title: Programming
   key: PROGRAMMING
   itemid: https://www.wikidata.org/wiki/Q80006
@@ -1609,6 +1627,10 @@
 - title: Publish (on your) Own Site, Syndicate Elsewhere
   key: POSSE
   abbr: POSSE
+- title: Quality Assurance
+  key: QA
+  itemid: https://www.wikidata.org/wiki/Q836575
+  abbr: QA
 - title: Questionaire
   key: QUESTIONAIRE
   tag: questionnaire
@@ -1653,6 +1675,10 @@
   offer: https://www.drivethrurpg.com/product/79955/Reign-Enchiridion?affiliate_id=318171
   tag: reign enchiridion
   game: reign enchiridion
+- title: Relational Database Management System
+  abbr: RDBMS
+  key: RDBMS
+  itemid: https://www.wikidata.org/wiki/Q3932296
 - title: Report Program Generator programming language from IBM
   key: RPGP
   itemid: https://www.wikidata.org/wiki/Q840543
@@ -1708,6 +1734,10 @@
 - title: RPG Reward
   key: RPG-REWARD
   tag: rpg reward
+- title: RSpec
+  abbr: RSpec
+  key: RSPEC
+  itemid: https://www.wikidata.org/wiki/Q3463141
 - title: Ruby
   key: RUBY
   verboseTitle: Ruby programming language
@@ -1773,6 +1803,9 @@
   offer: https://www.drivethrurpg.com/product/127039/Scenic-Dunnsmouth?affiliate_id=318171
   tag: scenic dunnsmouth
   game: scenic dunnsmouth
+- title: Schema.org
+  key: SCHEMA-ORG
+  itemid: https://www.wikidata.org/wiki/Q3475322
 - title: School Daze
   key: SCHOOL-DAZE
   itemid: https://rpggeek.com/rpg/18420/school-daze-role-playing-game
@@ -1878,6 +1911,10 @@
   mentionAs: d6
   itemid: https://www.wikidata.org/wiki/Q17639282
   abbr: d6
+- title: Snite Museum of Art
+  key: SNITE-MUSEUM-OF-ART
+  abbr: Snite
+  itemid: https://www.wikidata.org/wiki/Q12069361
 - title: Soapgy Gnome
   key: SOAPGY-GNOME
   itemid: https://soapygnome.com
@@ -2063,6 +2100,10 @@
   key: TV
   itemid: https://www.wikidata.org/wiki/Q289
   abbr: TV
+- title: Test Driven Development
+  abbr: TDD
+  key: TDD
+  itemid: https://www.wikidata.org/wiki/Q950250
 - title: Textmate
   key: TEXTMATE
   itemid: https://www.wikidata.org/wiki/Q2297533
@@ -2392,15 +2433,3 @@
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
-- title: Quality Assurance
-  key: QA
-  itemid: https://www.wikidata.org/wiki/Q836575
-  abbr: QA
-- title: Emotional Intelligence
-  abbr: EQ
-  key: EQ
-  itemid: https://www.wikidata.org/wiki/Q191591
-- title: Intsitutional Repository
-  abbr: IR
-  key: IR
-  itemid: https://www.wikidata.org/wiki/Q1065413
