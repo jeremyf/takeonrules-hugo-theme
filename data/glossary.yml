@@ -63,10 +63,12 @@
   game: alternity
 - title: American Sign Language
   key: ASL
+  abbr: ASL
   itemid: https://www.wikidata.org/wiki/Q14759
 - title: American Standard Code for Information Interchange
   key: ASCII
   mentionAs: ASCII
+  abbr: ASCII
   itemid: https://www.wikidata.org/wiki/Q8815
 - title: 'Android: Netrunner'
   key: NETRUNNER
@@ -84,6 +86,7 @@
   tag: apocalypse galactica
 - title: Apocalypse World
   key: AW
+  abbr: AW
   itemid: https://www.wikidata.org/wiki/Q16382540
   tag: apocalypse world
 - title: 'Apocalypse World: Dark Ages'
@@ -101,18 +104,19 @@
   itemid: https://www.wikidata.org/wiki/Q165194
 - title: Armor Class
   key: AC
+  abbr: AC
   itemid: https://www.wikidata.org/wiki/Q4793703
 - title: Armor Hit
   key: AH
 - title: Armor Penetration
   key: AP
+  abbr: AP
 - title: Ars Magica
   key: ARS-MAGICA
   itemid: https://www.wikidata.org/wiki/Q5453
   offer: https://www.drivethrurpg.com/browse.php?keywords=ars+magica&affiliate_id=318171
   tag: ars magica
   game: ars-magica
-  abbr: Ars Magica
 - title: Artha
   key: ARTHA
   tag: artha
@@ -120,6 +124,7 @@
 - title: Artificial Intelligence
   key: AI
   itemid: https://www.wikidata.org/wiki/Q25933185
+  abbr: AI
 - title: Arts and Crafts
   key: ARTS-AND-CRAFTS
   itemid: https://www.wikidata.org/wiki/Q810592
@@ -139,8 +144,10 @@
   key: ATK
 - title: Attack Value
   key: AV
+  abbr: AV
 - title: Barbarians of Lemuria
   key: BOL
+  abbr: BoL
   verboseTitle: 'Barbarians of Lemuria: Mythic Edition'
   itemid: https://www.wikidata.org/wiki/Q67799891
   offer: https://www.drivethrurpg.com/product/144526/Barbarians-of-Lemuria-Mythic-Edition?affiliate_id=318171
@@ -169,6 +176,7 @@
   tag: battletech
 - title: Beliefs, Instincts, and Traits
   key: BITS
+  abbr: BITs
   contentDisclaimers: '["lukecrane"]'
 - title: Better World Books
   key: BWB
@@ -217,6 +225,7 @@
   tag: boardgame
 - title: Bonds, Ideals, Traits, and Flaws
   key: BITFS
+  abbr: BITFs
 - title: Book Review
   key: BOOK-REVIEW
   tag: book review
@@ -318,6 +327,7 @@
   tag: cartography
 - title: Cascading Stylesheet
   key: CSS
+  abbr: CSS
   mentionAs: CSS
   itemid: https://www.wikidata.org/wiki/Q46441
 - title: Caster Level
@@ -336,6 +346,7 @@
 - title: Certified Space Accountant
   key: CSA
 - title: Challenge Rating
+  abbr: CR
   key: CR
 - title: Champions of Zed
   key: CHAMPIONS-OF-ZED
@@ -392,9 +403,11 @@
 - title: Comma Separated Value
   key: CSV
   mentionAs: CSV
+  abbr: CSV
   itemid: https://www.wikidata.org/wiki/Q935809
 - title: Command Line Integration
   key: CLI
+  abbr: CLI
 - title: Command Points
   key: CP
 - title: Community
@@ -415,6 +428,7 @@
   abbr: CDN
 - title: Content Management System
   key: CMS
+  abbr: CMS
   itemid: https://www.wikidata.org/wiki/Q131093
 - title: Content Warning
   key: CONTENT-WARNING
@@ -500,6 +514,7 @@
   game: deluge
 - title: Deoxyribonucleic Acid
   key: DNA
+  abbr: DNA
   itemid: https://www.wikidata.org/wiki/Q7430
 - title: Detective Comics
   key: DCH
@@ -518,6 +533,7 @@
   abbr: DM
 - title: Difficulty Class
   key: DC
+  abbr: DC
 - title: Divorce
   key: DIVORCE
   itemid: https://www.wikidata.org/wiki/Q93190
@@ -529,6 +545,7 @@
 - title: Do It Yourself
   key: DIY
   itemid: https://www.wikidata.org/wiki/Q26384
+  abbr: DIY
 - title: 'Do: Pilgrims of the Flying Temple'
   key: DO-PILGRIMS-OF-THE-FLYING-TEMPLE
   itemid: https://www.wikidata.org/wiki/Q16962084
@@ -547,6 +564,7 @@
   tag: doctor who
 - title: Document Object Model
   key: DOM
+  abbr: DOM
   itemid: https://www.wikidata.org/wiki/Q2093
 - title: Documentation
   key: DOCUMENTATION
@@ -559,6 +577,7 @@
   abbr: DitV
 - title: Domain Name System
   key: DNS
+  abbr: DNS
   itemid: https://www.wikidata.org/wiki/Q8767
 - title: Doom of the Savage King
   key: DOOM-OF-THE-SAVAGE-KING
@@ -589,6 +608,7 @@
   abbr: DoW
 - title: Dungeon Crawl Classics
   key: DCC
+  abbr: DCC
   itemid: https://www.wikidata.org/wiki/Q16992123
   offer: https://www.drivethrurpg.com/product/101050/Dungeon-Crawl-Classics-RPG-DCC-RPG?affiliate_id=318171
   tag: dungeon crawl classics
@@ -598,11 +618,14 @@
   tag: dungeon delving
 - title: Dungeon Master
   key: DM
+  abbr: DM
   itemid: https://www.wikidata.org/wiki/Q1773301
 - title: Dungeon Master's Guide
   key: DMG
+  abbr: DMG
 - title: Dungeon World
   key: DW
+  abbr: DW
   itemid: https://www.wikidata.org/wiki/Q15221892
   offer: https://www.drivethrurpg.com/product/108028/Dungeon-World?affiliate_id=318171
   tag: dungeon world
@@ -618,9 +641,11 @@
   tag: dungeons
 - title: Dungeons and Dragons
   key: D&D
+  abbr: D&D
   itemid: https://www.wikidata.org/wiki/Q1375
   tag: dungeons and dragons
 - title: 'Dungeons and Dragons: Basic/Expert'
+  abbr: B/X
   key: B/X
   itemid: https://rpggeek.com/rpg/389/basic-dungeons-dragons
 - title: 'Dungeons and Dragons: Fifth Edition'
@@ -628,18 +653,23 @@
   itemid: https://www.wikidata.org/wiki/Q64706124
   offer: https://www.dmsguild.com/browse.php?affiliate_id=318171
   tag: 5e
+  abbr: 5E
   game: 5e
 - title: 'Dungeons and Dragons: Fifth Edition Playtest'
   key: D&D NEXT
+  abbr: D&D Next
   itemid: https://www.wikidata.org/wiki/Q64706142
 - title: 'Dungeons and Dragons: Fourth Edition'
   key: 4E
+  abbr: 4E
   itemid: https://www.wikidata.org/wiki/Q64706119
 - title: 'Dungeons and Dragons: Original Edition'
   key: 0E
+  abbr: 0E
   itemid: https://www.wikidata.org/wiki/Q64596978
 - title: 'Dungeons and Dragons: Third Edition'
   key: 3E
+  abbr: 3E
   itemid: https://www.wikidata.org/wiki/Q64623234
 - title: Dwimmermount
   key: DWIMMERMOUNT
@@ -659,6 +689,7 @@
   key: EPUB
   verboseTitle: e-book file format standard by the International Digital Publishing
     Forum
+  abbr: ePub
   itemid: https://www.wikidata.org/wiki/Q475488
 - title: Eastern Daylight Time
   key: EDT
@@ -696,9 +727,11 @@
 - title: Experience Points
   key: XP
   itemid: https://www.wikidata.org/wiki/Q604973
+  abbr: XP
 - title: Extensible Markup Language
   key: XML
   mentionAs: XML
+  abbr: XML
   itemid: https://www.wikidata.org/wiki/Q2115
 - title: Extra Vehicular Activity
   key: EVA
@@ -763,6 +796,7 @@
   key: 4DF
 - title: Free Open Source Software
   key: FOSS
+  abbr: FOSS
   itemid: https://www.wikidata.org/wiki/Q506883
   tag: open source
 - title: Friendly Local Game Store
@@ -788,6 +822,7 @@
   tag: game design
 - title: Game Master
   key: GM
+  abbr: GM
   itemid: https://www.wikidata.org/wiki/Q930701
   tag: gamemastering
 - title: Game Master Advice
@@ -863,6 +898,7 @@
   tag: goshen game day
 - title: Graphical User Interface
   key: GUI
+  abbr: GUI
   itemid: https://www.wikidata.org/wiki/Q782543
 - title: GUMSHOE System
   key: GUMSHOE-SYSTEM
@@ -882,8 +918,10 @@
   itemid: https://www.wikidata.org/wiki/Q30289521
 - title: Hit Die
   key: HD
+  abbr: HD
 - title: Hit Point
   key: HP
+  abbr: HP
   itemid: https://www.wikidata.org/wiki/Q668136
 - title: Hive
   key: HIVE
@@ -922,10 +960,12 @@
   abbr: HR
 - title: Hypertext Markup Language
   key: HTML
+  abbr: HTML
   mentionAs: HTML
   itemid: https://www.wikidata.org/wiki/Q8811
 - title: Hypertext Transfer Protocol
   key: HTTP
+  abbr: HTTP
   mentionAs: HTTP
   itemid: https://www.wikidata.org/wiki/Q8777
 - title: HârnMaster
@@ -943,6 +983,7 @@
   abbr: AS/400
 - title: Illinois
   key: IL
+  abbr: IL
   itemid: https://www.wikidata.org/wiki/Q1204
 - title: VIM Text Editor
   key: VIM
@@ -957,6 +998,7 @@
   abbr: IED
 - title: Indiana
   key: IN
+  abbr: IN
   itemid: https://www.wikidata.org/wiki/Q1415
 - title: Indieweb
   key: INDIEWEB
@@ -975,6 +1017,7 @@
   game: inspectres
 - title: Integrated Development Environment
   key: IDE
+  abbr: IDE
   itemid: https://www.wikidata.org/wiki/Q13741
 - title: Intellect
   key: INTL
@@ -998,6 +1041,7 @@
   abbr: IVv
 - title: Intrusion Countermeasures Electronics
   key: ICE
+  abbr: ICE
   itemid: https://www.wikidata.org/wiki/Q1122382
 - title: Inverse World
   key: INVERSE-WORLD
@@ -1010,16 +1054,20 @@
   itemid: https://www.wikidata.org/wiki/Q312632
 - title: Javascript
   key: JS
+  abbr: JS
   itemid: https://www.wikidata.org/wiki/Q2005
   tag: javascript
 - title: Javascript Object Notation
   key: JSON
+  abbr: JSON
   itemid: https://www.wikidata.org/wiki/Q2063
 - title: Javascript Object Notation for Linking Data
   key: JSON+LD
   itemid: https://www.wikidata.org/wiki/Q6108942
+  abbr: JSON+LD
 - title: John F. Kennedy
   key: JFK
+  abbr: JFK
   itemid: https://www.wikidata.org/wiki/Q9696
 - title: Jump Drive
   key: J-DRIVE
@@ -1120,6 +1168,7 @@
   tag: lifepaths
 - title: Live Action Role Playing
   key: LARP
+  abbr: LARP
   itemid: https://www.wikidata.org/wiki/Q216749
 - title: Living Card Game
   key: LCG
@@ -1140,6 +1189,7 @@
   contentDisclaimers: '["lukecrane"]'
 - title: Machine Learning
   key: MLEARN
+  abbr: ML
   itemid: https://www.wikidata.org/wiki/Q2539
   tag: machine learning
 - title: Macintosh Operating System X
@@ -1160,9 +1210,11 @@
   abbr: MHRPG
 - title: Massachusetts Institute of Technology License
   key: MIT
+  abbr: MIT License
   itemid: https://www.wikidata.org/wiki/Q334661
 - title: Master of Ceremonies
   key: MC
+  abbr: MoC
 - title: Mayfair Games
   key: MAYFAIR-GAMES
   itemid: https://www.wikidata.org/wiki/Q921302
@@ -1202,6 +1254,7 @@
   game: microscope
 - title: Middle Earth Role Playing Game
   key: MERP
+  abbr: MERP
   itemid: https://www.wikidata.org/wiki/Q5473
   tag: middle earth role playing game
 - title: Migration
@@ -1277,10 +1330,12 @@
   game: night below
 - title: Non-Disclosure Agreement
   key: NDA
+  abbr: NDA
   itemid: https://www.wikidata.org/wiki/Q1053818
   description: contractual agreement not to disclose specified information
 - title: Non-Player Character
   key: NPC
+  abbr: NPC
   itemid: https://www.wikidata.org/wiki/Q466466
 - title: Non-Player Characters
   key: NPCS
@@ -1317,14 +1372,17 @@
   tag: one shot
 - title: One Six-Sided Die
   key: 1D6
+  abbr: d6
 - title: Online Gaming
   key: ONLINE-GAMING
   tag: online gaming
 - title: Open Game Content
   key: OGC
+  abbr: OGC
   tag: open game content
 - title: Open Game License
   key: OGL
+  abbr: OGL
   itemid: https://www.wikidata.org/wiki/Q1752744
   tag: open game license
 - title: Open Letter
@@ -1369,6 +1427,7 @@
   abbr: OLBH
 - title: Out of the Abyss
   key: OUT-OF-THE-ABYSS
+  abbr: OotA
   itemid: https://www.wikidata.org/wiki/Q28453304
   offer: https://www.dmsguild.com/browse.php?keywords=Out+of+the+Abyss+Storyline&affiliate_id=318171
   tag: out of the abyss
@@ -1398,6 +1457,7 @@
   game: part time gods
 - title: Pay What You Want
   key: PWYW
+  abbr: PWYW
   itemid: https://www.wikidata.org/wiki/Q846616
 - title: Peer to Peer
   key: P2P
@@ -1431,12 +1491,15 @@
   tag: playbooks
 - title: Player Character
   key: PC
+  abbr: PC
   itemid: https://www.wikidata.org/wiki/Q1062345
 - title: Player Characters
   key: PCS
+  abbr: PCs
   itemid: https://www.wikidata.org/wiki/Q1062345
 - title: Player's Handbook
   key: PHB
+  abbr: PHB
 - title: Playtest
   key: PLAYTEST
   itemid: https://www.wikidata.org/wiki/Q7203549
@@ -1581,6 +1644,7 @@
   tag: role
 - title: Role Playing Game
   key: RPG
+  abbr: RPG
   itemid: https://www.wikidata.org/wiki/Q160738
   tag: rpg
 - title: Rolemaster
@@ -1667,6 +1731,7 @@
   tag: school daze
   game: school daze
 - title: School Resource Officer
+  abbr: SRO
   key: SRO
   itemid: https://www.wikidata.org/wiki/Q7432625
 - title: Science Fantasy
@@ -1690,16 +1755,19 @@
   abbr: SEO
 - title: Secure Hypertext Transfer Protocol
   key: HTTPS
+  abbr: HTTPS
+  mentionAs: HTTPS
   itemid: https://www.wikidata.org/wiki/Q277919
 - title: Secure Shell
   key: SSH
-  mentionAs: HTTPS
+  abbr: SSH
   itemid: https://www.wikidata.org/wiki/Q170460
   description: cryptographic network protocol for secure data communication, remote
     shell services or command execution and other secure network services between
     two networked computers
 - title: Secure Sockets Layer
   key: SSL
+  abbr: SSL
   itemid: https://www.wikidata.org/wiki/Q206494
 - title: Self-Assessment
   key: SELF-ASSESSMENT
@@ -1871,6 +1939,7 @@
   abbr: Sublime Text
 - title: Submission Information Package
   key: SIP
+  abbr: SIP
 - title: Survey
   key: SURVEY
   tag: survey
@@ -1894,9 +1963,11 @@
   tag: system neutral
 - title: System Reference Document
   key: SRD
+  abbr: SRD
   itemid: https://www.wikidata.org/wiki/Q1091693
 - title: 'System Reference Document: Fifth Edition'
   key: SRD5
+  abbr: SRD5
 - title: Tactical Rules Studies
   key: TSR
   itemid: https://www.wikidata.org/wiki/Q1543201
@@ -2014,6 +2085,7 @@
   tag: tichu
 - title: To Hit Armor Class 0
   key: THAC0
+  abbr: THAC0
   itemid: https://www.wikidata.org/wiki/Q104254746
 - title: Today I Learned
   key: TODAY-I-LEARNED
@@ -2085,9 +2157,11 @@
   tag: undying
 - title: Uniform Resource Locator
   key: URL
+  abbr: URL
   itemid: https://www.wikidata.org/wiki/Q42253
 - title: United States
   key: US
+  abbr: USA
   verboseTitle: United States of America
   itemid: https://www.wikidata.org/wiki/Q30
 - title: United States dollar
@@ -2096,8 +2170,10 @@
   abbr: USD
 - title: Universal Planet Profile
   key: UPP
+  abbr: UPP
 - title: Universal World Profile
   key: UWP
+  abbr: UWP
 - title: Versus Armor
   key: VA
 - title: Violence
@@ -2105,6 +2181,7 @@
   tag: violence
 - title: Virtual Intelligence
   key: VI
+  abbr: VI
 - title: Visual Studio Code
   key: VSC
   itemid: https://www.wikidata.org/wiki/Q19841877
@@ -2135,6 +2212,7 @@
   key: WS
 - title: Web Content Accessibility Guidelines
   key: WCAG
+  abbr: WCAG
   itemid: https://www.wikidata.org/wiki/Q5364439
 - title: Webmention
   key: WEBMENTION
@@ -2147,6 +2225,7 @@
   tag: welcome
 - title: What You See is What You Get
   key: WYSIWYG
+  abbr: WYSIWYG
   itemid: https://www.wikidata.org/wiki/Q170542
 - title: White Fragility
   key: WHITE-FRAGILITY
@@ -2206,6 +2285,7 @@
   tag: world of steve
 - title: World War Two
   key: WWII
+  abbr: WWII
   itemid: https://www.wikidata.org/wiki/Q362
 - title: Worlds without Number
   key: WWN
@@ -2222,7 +2302,8 @@
 - title: Wrath of the Autarch
   key: WOTA
   itemid: https://www.wikidata.org/wiki/Q104150978
-  offer: WotA
+  abbr: WotA
+  offer: https://www.drivethrurpg.com/product/191025/Wrath-of-the-Autarch?affiliate_id=318171
   tag: wrath of the autarch
   game: wota
 - title: Wyatt Earp
@@ -2241,6 +2322,7 @@
   abbr: YASnippet
 - title: Yet Another Markup Language
   key: YAML
+  abbr: YAML
   itemid: https://www.wikidata.org/wiki/Q281876
 - title: Young Offender
   key: YO
