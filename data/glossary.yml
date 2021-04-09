@@ -2047,10 +2047,11 @@
 - title: Total Party Kill
   key: TPK
   itemid: https://www.wikidata.org/wiki/Q7828047
-- title: 'tr: Unix command to translate or delete characters'
+- title: 'tr (Unix command)'
   key: UNIX-TR
   itemid: https://www.wikidata.org/wiki/Q709372
   abbr: tr
+  verboseTitle: 'tr: Unix command to translate or delete characters'
 - title: Tracey Barnett
   key: TRACEY-BARNETT
   tag: tracey barnett
