@@ -49,7 +49,7 @@ article aside {
 }
 
 dt { color:   var(--dt); }
-dfn { color:   var(--dfn); }
+dfn, .dfn { color:   var(--dfn); }
 
 .sidenote-number:hover *, [role=note]:hover { background: var(--bg-special-warm); }
 abbr {
@@ -60,7 +60,7 @@ abbr {
     }
 }
 
-a, [role="note"], dfn, abbr, code, time, summary {
+a, [role="note"], dfn, .dfn, abbr, code, time, summary {
     transition: all 300ms;
 }
 

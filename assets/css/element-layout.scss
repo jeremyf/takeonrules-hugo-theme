@@ -235,4 +235,5 @@ summary { margin-top: 0.83em; margin-bottom: 0.83em; }
   }
 }
 
-dfn { font-weight: bold; }
+dfn, .dfn { font-weight: bold; }
+.dfn { font-style: italic; }
