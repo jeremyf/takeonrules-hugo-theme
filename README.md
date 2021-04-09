@@ -83,7 +83,6 @@ There additional optional keys are as follows:
 - **offer**: The URL where the thing is on offer (e.g. where you can buy it)
 - **game**: Indicates that this thing is a game (and linkable via `linkToGame.html` shortcode)
 - **contentDisclaimers**: (Array) Indicates that this entry has some associated content disclaimer
-- **note**: A human readable note to help disambiguate (deprecated?)
 - **itemtype**: The schema.org itemtype for this entry (see `mention.html` for implementation details)
 - **description**: Similar to note, treat as `itemprop="description"`
 - **dfn**: deprecate
