@@ -52,16 +52,14 @@ Two other shortcodes (table.html and update.html) provide marginalia options.  S
 
 ### Glossary
 
-Throughout TakeOnRules.com, I make extensive use of the ABBR tag. I use this markup to improve the accessibility of my site.
+Throughout TakeOnRules.com, I make extensive use of a glossary. I use this markup to improve the accessibility of my site.
 
 - [abbr.html](layouts/shortcodes/abbr.html) :: Creates the [ABBR](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr) tag and links to the glossary.
-- [dfn.html](layouts/shortcodes/dfn.html) :: Creates a [DFN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn) along with an ABBR tag and link to glossary.
 - [linkToGame.html](layouts/shortcodes/linkToGame.html) :: Creates a [CITE](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite) tag with a link to an offer to purchase (as defined in the [data/glossary.yml](data/glossary.yml) file).
 - [citePage.html](layouts/shortcodes/citePage.html) :: A shortcode to conditionally generate a `cite a` or `a` tag to the page at the given filename (relative to the Hugo content directory).  **Note:** I use [`tor-page-relative-pathname-list`](https://github.com/jeremyf/dotzshrc/blob/dd289492248b0b2719297220e4dc1127ee7c89df/emacs/jnf-blogging.el#L100-L106) to generate a list of all the filenames.
+- [mention.html](layouts/shortcodes/mention.html) :: A shortcode to drop a `itemprop="mention"` onto the page using the glossary.
 
-_**Note:** The `abbr.html` shortcode preceeded the `dfn.html` shortcode.  They include somewhat duplicated logic, which could be further normalized._
-
-Related is the [data/glossary.yml](data/glossary.yml) file which contains the data which I use for the `abbr.html` and `dfn.html` shortcodes.  This is a live data set that I use for TakeOnRules.com.
+Related is the [data/glossary.yml](data/glossary.yml) file which contains the data which I use for the `abbr.html`, `mention.html`, and `linkToGame.html` shortcodes.  This is a live data set that I use for TakeOnRules.com.
 
 I wrote about the Glossary in <cite><a href="http://takeonrules.com/2020/12/20/many-small-tools-make-light-work-in-emacs/" class="u-url p-name" rel="cite">Many Small Tools Make Light Work (in Emacs)</a></cite>.
 
@@ -86,17 +84,6 @@ There additional optional keys are as follows:
 - **contentDisclaimers**: (Array) Indicates that this entry has some associated content disclaimer
 - **itemtype**: The schema.org itemtype for this entry (see `mention.html` for implementation details)
 - **description**: Similar to note, treat as `itemprop="description"`
-- **dfn**: deprecate
-
-#### Todo
-
-The `linkToGame.html` shortcode does similar work as the `dfn.html` shortcode; Which does similar work to `abbr.html`.  I believe I can consolidate these.  Here are the scenarios:
-
-- When I first reference a game, then it should cite the work, link to the offer, and introduce an abbreviation. For example: `<cite><a>Stars without Number: Revised Edition</a></cite> (<abbr title="Stars without Number: Revised Edition">SWN</abbr>). In <abbr title="Stars without Number: Revised Edition">SWN</abbr>...`
-- When I first reference an abbreviation, then it should render the RDFa information.
-- On the first rendering of an abbreviation OR game; In other words, both of these should use the same cache key to determine if I've already rendered the assistive links to content.
-
-In further reading of DFN, I need to remove that shortcode from my blog posts and instead use it for the glossary page.
 
 ### Other Stuff
 
