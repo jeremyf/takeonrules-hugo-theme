@@ -61,7 +61,6 @@
   offer: https://www.drivethrurpg.com/product/245263/Alternity-Core-Rulebook?affiliate_id=318171
   tag: alternity
   game: alternity
-  abbr: Alterntiy
 - title: American Sign Language
   key: ASL
   itemid: https://www.wikidata.org/wiki/Q14759
@@ -73,7 +72,6 @@
   key: NETRUNNER
   itemid: https://www.wikidata.org/wiki/Q4759447
   tag: android netrunner
-  abbr: 'Android: Netrunner'
 - title: Anglerre
   key: ANGLERRE
   tag: anglerre
