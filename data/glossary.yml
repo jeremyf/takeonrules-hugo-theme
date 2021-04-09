@@ -897,6 +897,7 @@
   key: GIT
   verboseTitle: 'Git: distributed version control system'
   itemid: https://www.wikidata.org/wiki/Q186055
+  abbr: git
 - title: GNU
   key: GNU
   verboseTitle: GNU's Not Unix
