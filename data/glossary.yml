@@ -5,14 +5,13 @@
   offer: https://www.drivethrurpg.com/product/194488/1001-Nights?affiliate_id=318171
   tag: 1001 nights
   game: 1001 nights
+- title: 2D6
+  key: 2D6
+  verboseTitle: Two Six-Sided Dice
+  abbr: 2d6
 - title: 3-Dimensional
   key: 3D
   abbr: 3d
-- title: Six-sided die
-  key: D6
-  mentionAs: d6
-  itemid: https://www.wikidata.org/wiki/Q17639282
-  abbr: d6
 - title: A Few Acres of Snow
   key: A-FEW-ACRES-OF-SNOW
   itemid: https://www.wikidata.org/wiki/Q4656713
@@ -33,12 +32,12 @@
 - title: 'Advanced Dungeons and Dragons: First Edition'
   key: 1E
   mentionAs: AD&D 1E
-  abbr: '1E'
+  abbr: 1E
   itemid: https://www.wikidata.org/wiki/Q64597405
 - title: 'Advanced Dungeons and Dragons: Second Edition'
   key: 2E
   mentionAs: AD&D 2E
-  abbr: '2E'
+  abbr: 2E
   itemid: https://www.wikidata.org/wiki/Q64620925
 - title: Adventure
   key: ADVENTURE
@@ -273,6 +272,7 @@
 - title: Burning Wheel Headquarters
   key: BWHQ
   contentDisclaimers: '["lukecrane"]'
+  abbr: BWHQ
 - title: Burnout
   key: BURNOUT
   verboseTitle: Burnout (Occupational)
@@ -489,6 +489,11 @@
   key: D20SYS
   itemid: https://www.wikidata.org/wiki/Q284471
   abbr: d20
+- title: D66
+  key: D66
+  verboseTitle: Two six-dice, one signifying the "tens" digit, the other the "ones"
+    digit.
+  abbr: D66
 - title: Dark Six
   key: DARK-SIX
   verboseTitle: 'Dark Six: A Primal Eberron Pantheon'
@@ -556,7 +561,7 @@
   itemid: https://www.wikidata.org/wiki/Q26384
   abbr: DIY
 - title: 'Do: Pilgrims of the Flying Temple'
-  abbr: "Do: PotFT"
+  abbr: 'Do: PotFT'
   key: DO-PILGRIMS-OF-THE-FLYING-TEMPLE
   itemid: https://www.wikidata.org/wiki/Q16962084
   offer: https://www.drivethrurpg.com/product/92348/Do-Pilgrims-of-the-Flying-Temple?affiliate_id=318171
@@ -640,7 +645,6 @@
   offer: https://www.drivethrurpg.com/product/108028/Dungeon-World?affiliate_id=318171
   tag: dungeon world
   game: dw
-  abbr: DW
   contentDisclaimers: '["adamkoebel"]'
 - title: Dungeoncraft
   key: DUNGEONCRAFT
@@ -695,12 +699,6 @@
 - title: Dying Earth Saga
   key: DYING-EARTH-SAGA
   itemid: https://www.wikidata.org/wiki/Q303490
-- title: ePub
-  key: EPUB
-  verboseTitle: e-book file format standard by the International Digital Publishing
-    Forum
-  abbr: ePub
-  itemid: https://www.wikidata.org/wiki/Q475488
 - title: Eastern Daylight Time
   key: EDT
   abbr: EDT
@@ -709,12 +707,6 @@
   key: EBERRON
   itemid: https://www.wikidata.org/wiki/Q1378808
   tag: eberron
-- title: Emacs
-  key: EMACS
-  verboseTitle: 'Emacs: Editor MACroS'
-  itemid: https://www.wikidata.org/wiki/Q189722
-  tag: emacs
-  abbr: Emacs
 - title: Education
   key: EDU
 - title: Electronic Counter Measures
@@ -728,12 +720,24 @@
   mentionAs: Elisp
   itemid: https://www.wikidata.org/wiki/Q1334586
   abbr: elisp
+- title: Emacs
+  key: EMACS
+  verboseTitle: 'Emacs: Editor MACroS'
+  itemid: https://www.wikidata.org/wiki/Q189722
+  tag: emacs
+  abbr: Emacs
 - title: Endurance
   key: END
 - title: ENnie Awards
   key: ENNIE-AWARDS
   itemid: https://www.wikidata.org/wiki/Q5323772
   tag: ennies
+- title: ePub
+  key: EPUB
+  verboseTitle: e-book file format standard by the International Digital Publishing
+    Forum
+  abbr: ePub
+  itemid: https://www.wikidata.org/wiki/Q475488
 - title: Essay
   key: ESSAY
   tag: essay
@@ -783,11 +787,6 @@
   offer: https://www.drivethrurpg.com/product/78548/Fiasco-Classic?affiliate_id=318171
   tag: fiasco
   game: fiasco
-- title: FoRKs
-  key: FORKS
-  verboseTitle: Fields of Related Knowledge
-  abbr: FoRKs
-  contentDisclaimers: '["lukecrane"]'
 - title: First Play
   key: FIRST-PLAY
   tag: first play
@@ -806,6 +805,11 @@
 - title: Fork
   key: FORK
   itemid: https://www.wikidata.org/wiki/Q332903
+- title: FoRKs
+  key: FORKS
+  verboseTitle: Fields of Related Knowledge
+  abbr: FoRKs
+  contentDisclaimers: '["lukecrane"]'
 - title: Fortitude
   key: FORT
 - title: Four Fudge/Fate Dice
@@ -893,12 +897,15 @@
   key: GIT
   verboseTitle: 'Git: distributed version control system'
   itemid: https://www.wikidata.org/wiki/Q186055
-- title: GNU General Public License
-  key: GPL
-  itemid: https://www.wikidata.org/wiki/Q7603
 - title: GNU
   key: GNU
+  verboseTitle: GNU's Not Unix
+  abbr: GNU
   itemid: https://www.wikidata.org/wiki/Q7598
+- title: GNU General Public License
+  key: GPL
+  abbr: GPL
+  itemid: https://www.wikidata.org/wiki/Q7603
 - title: Gold Piece
   key: GP
   abbr: gp
@@ -930,9 +937,11 @@
   tag: haiku
 - title: Head Quarters
   key: HQ
+  abbr: HQ
 - title: Hesburgh Libraries
   key: HESBURGH-LIBRARIES
   itemid: https://www.wikidata.org/wiki/Q30289521
+  abbr: HL
 - title: Hit Die
   key: HD
   abbr: HD
@@ -1003,13 +1012,6 @@
   key: IL
   abbr: IL
   itemid: https://www.wikidata.org/wiki/Q1204
-- title: VIM Text Editor
-  key: VIM
-  mentionAs: vim
-  verboseTitle: Improved version of the Vi keyboard-oriented text editor
-  itemid: https://www.wikidata.org/wiki/Q131382
-  tag: vim
-  abbr: vim
 - title: Improvised Explosive Device
   key: IED
   itemid: https://www.wikidata.org/wiki/Q1249453
@@ -1111,7 +1113,7 @@
   itemid: https://www.wikidata.org/wiki/Q6389420
   tag: kenku
 - title: Kevin Crawford
-  key: kevin-crawford
+  key: KEVIN-CRAWFORD
   itemid: https://www.wikidata.org/wiki/Q67963897
 - title: Kickstarter
   key: KICKSTARTER
@@ -1134,6 +1136,7 @@
   abbr: kph
 - title: Kindergarten through 12th Grade
   key: K-12
+  abbr: K-12
 - title: Knockspell
   key: KNOCKSPELL
   itemid: https://www.wikidata.org/wiki/Q70485546
@@ -1335,6 +1338,7 @@
   tag: necromancers maze
 - title: Neutral
   key: NEU
+  abbr: N
 - title: New Year
   key: NEW-YEAR
   tag: new year
@@ -1365,6 +1369,11 @@
 - title: Note Quite Gaming
   key: NOTE-QUITE-GAMING
   tag: not quite gaming
+- title: Notre Dame
+  verboseTitle: University of Notre Dame
+  key: NOTRE-DAME
+  abbr: ND
+  itemid: https://www.wikidata.org/wiki/Q178848
 - title: Obstacle
   key: OB
   abbr: Ob
@@ -1620,12 +1629,6 @@
   offer: https://www.drivethrurpg.com/product/112605/2012-Rappan-Athuk-SW?affiliate_id=318171
   tag: rappan athuk
   game: rappan athuk
-- title: Resource Description Framework in Attributes
-  key: RDFA
-  mentionAs: RDFa
-  verboseTitle: 'RDFa: A format for expressing RDF statements in HTML documents'
-  itemid: https://www.wikidata.org/wiki/Q507673
-  abbr: RDFa
 - title: Reading
   key: READING
   itemid: https://www.wikidata.org/wiki/Q199657
@@ -1644,6 +1647,12 @@
   key: RPGP
   itemid: https://www.wikidata.org/wiki/Q840543
   abbr: IBM RPG
+- title: Resource Description Framework in Attributes
+  key: RDFA
+  mentionAs: RDFa
+  verboseTitle: 'RDFa: A format for expressing RDF statements in HTML documents'
+  itemid: https://www.wikidata.org/wiki/Q507673
+  abbr: RDFa
 - title: Response to Other Blogs
   key: RESPONSE-TO-OTHER-BLOGS
   tag: response to other blogs
@@ -1651,6 +1660,12 @@
   key: RACI
   itemid: https://www.wikidata.org/wiki/Q1850420
   abbr: RACI
+- title: Resume
+  key: RESUME-SUMMARY-OF-CAREER
+  mentionAs: Résumé
+  verboseTitle: 'Résumé: Summary of Career'
+  itemid: https://www.wikidata.org/wiki/Q950511
+  tag: resume
 - title: Review
   key: REVIEW
   itemid: https://www.wikidata.org/wiki/Q265158
@@ -1695,12 +1710,6 @@
 - title: Rules as Written
   key: RAW
   abbr: RaW
-- title: Resume
-  key: RESUME-SUMMARY-OF-CAREER
-  mentionAs: Résumé
-  verboseTitle: 'Résumé: Summary of Career'
-  itemid: https://www.wikidata.org/wiki/Q950511
-  tag: resume
 - title: Saga of the Icelanders
   key: SAGA-OF-THE-ICELANDERS
   itemid: https://rpggeek.com/rpg/20480/sagas-icelanders
@@ -1849,6 +1858,11 @@
 - title: Situation Mining
   key: SITUATION-MINING
   tag: situation mining
+- title: Six-sided die
+  key: D6
+  mentionAs: d6
+  itemid: https://www.wikidata.org/wiki/Q17639282
+  abbr: d6
 - title: Soapgy Gnome
   key: SOAPGY-GNOME
   itemid: https://soapygnome.com
@@ -2145,7 +2159,7 @@
   key: TPK
   abbr: TPK
   itemid: https://www.wikidata.org/wiki/Q7828047
-- title: 'tr (Unix command)'
+- title: tr (Unix command)
   key: UNIX-TR
   itemid: https://www.wikidata.org/wiki/Q709372
   abbr: tr
@@ -2166,15 +2180,6 @@
   offer: https://www.drivethrurpg.com/product/171643/Traveller-Core-Rulebook?affiliate_id=318171
   tag: traveller
   game: traveller
-- title: D66
-  key: D66
-  verboseTitle: Two six-dice, one signifying the "tens" digit, the other the "ones"
-    digit.
-  abbr: D66
-- title: 2D6
-  key: 2D6
-  verboseTitle: Two Six-Sided Dice
-  abbr: 2d6
 - title: Ultraviolet
   key: UV
   itemid: https://www.wikidata.org/wiki/Q11391
@@ -2204,6 +2209,13 @@
   abbr: UWP
 - title: Versus Armor
   key: VA
+- title: VIM Text Editor
+  key: VIM
+  mentionAs: vim
+  verboseTitle: Improved version of the Vi keyboard-oriented text editor
+  itemid: https://www.wikidata.org/wiki/Q131382
+  tag: vim
+  abbr: vim
 - title: Violence
   key: VIOLENCE
   tag: violence
