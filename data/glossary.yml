@@ -449,6 +449,11 @@
 - title: Contest
   key: CONTEST
   tag: contest
+- title: Continuous Improvement
+  key: CONTINUOUS-IMPROVEMENT
+  itemid: https://www.wikidata.org/wiki/Q1318104
+  verboseTitle: Continuous Process Improvement
+  tag: continuous improvement
 - title: Conversion
   key: CONVERSION
   tag: conversion
