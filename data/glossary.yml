@@ -1769,6 +1769,7 @@
   key: SAMVERA
   itemid: https://samvera.org/
   tag: samvera
+  itemtype: Organization
 - title: Sand Dogs
   key: SD
   itemid: https://rpggeek.com/rpg/55536/sand-dogs
