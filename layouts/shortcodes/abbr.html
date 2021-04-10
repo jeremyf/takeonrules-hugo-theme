@@ -1,1 +1,18 @@
-{{- $text := .Get "key" }}{{- $key := $text | upper }}{{- $expanded := true }}{{- if .Get "compact" }}{{- $expanded = false }}{{- end }}{{- $dfn := .Get "dfn" }}{{- $simple := .Get "simple" }}{{- $data := index (where $.Site.Data.glossary "key" "eq" $key) 0 }}{{- if not $data }}{{- $singularized := replaceRE "S$" "" $key }}{{- $data = index (where $.Site.Data.glossary "key" "eq" $singularized) 0 }}{{- end }}{{- $title := default $data.title ($data.verboseTitle) }}{{- $text := default $text ($data.abbr) }}{{- $scratchKey := printf "abbr-%s" $data.key }}{{- if .Page.Scratch.Get $scratchKey }}<abbr title="{{ $title }}">{{ $text }}</abbr>{{- else }}{{- if isset $data "itemid" }}<span itemprop="{{ default "mentions" (.Get "itemprop") }}" itemscope itemtype="http://schema.org/Thing"><link href="{{ $data.itemid }}" itemprop="sameAs" /><meta content="{{ $title }}" itemprop="name" />{{- end }}{{- if $dfn }}<dfn id="{{ $text }}">{{ $data.title }}</dfn> ({{- else if $expanded }}<span class="dfn">{{ $data.title }}</span> ({{- end }}<abbr title="{{ $title }}">{{ $text }}</abbr>{{- if not $simple }} <a class="book" rel="tag opener" aria-label="Other site-wide references of “{{ $title }}”" title="Other site-wide references of “{{ $title }}”" href="/site-map/glossary/#abbr-dfn-{{ $data.key }}">&#128214;</a>{{- end }}{{- if or $dfn $expanded }}){{- end }}{{- if isset $data "itemid" }}</span>{{- end }}{{- end }}{{- .Page.Scratch.Set $scratchKey "t" }}
+{{- $text := .Get "key" }}
+{{- $key := $text | upper }}
+{{- $dfn := .Get "dfn" }}
+{{- $simple := .Get "simple" }}
+{{- $expanded := true }}
+{{- if .Get "compact" }}{{- $expanded = false }}{{- end }}
+{{- $data := index (where $.Site.Data.glossary "key" "eq" $key) 0 }}
+{{- if not $data }}{{- $singularized := replaceRE "S$" "" $key }}{{- $data = index (where $.Site.Data.glossary "key" "eq" $singularized) 0 }}{{- end }}
+{{- $title := default $data.title ($data.verboseTitle) }}
+{{- $text := default $text ($data.abbr) }}
+{{- $scratchKey := printf "abbr-%s" $data.key }}
+{{- if .Page.Scratch.Get $scratchKey }}<abbr title="{{ $title }}">{{ $text }}</abbr>{{- else }}
+{{- .Page.Scratch.Set $scratchKey "t" }}
+{{- if isset $data "itemid" }}<span itemprop="{{ default "mentions" (.Get "itemprop") }}" itemscope itemtype="http://schema.org/Thing"><link href="{{ $data.itemid }}" itemprop="sameAs" /><meta content="{{ $title }}" itemprop="name" />{{- end }}
+{{- if $dfn }}<dfn id="{{ $text }}">{{ $data.title }}</dfn> ({{- else if $expanded }}<span class="dfn">{{ $data.title }}</span> ({{- end }}<abbr title="{{ $title }}">{{ $text }}</abbr>{{- if not $simple }} <a class="book" rel="tag opener" aria-label="Other site-wide references of “{{ $title }}”" title="Other site-wide references of “{{ $title }}”" href="/site-map/glossary/#abbr-dfn-{{ $data.key }}">&#128214;</a>{{- end }}
+{{- if or $dfn $expanded }}){{- end }}
+{{- if isset $data "itemid" }}</span>{{- end }}
+{{- end }}
