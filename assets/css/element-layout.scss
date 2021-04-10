@@ -146,14 +146,23 @@ a.offscreen {
 .group:not(dl):after { content: "" ;}
 
 dl {
+    dt:after { content: ":"; font-weight: bold; }
+    dd { margin-left: 2rem; text-indent: -1rem; }
+    dd:before { content: "· "; }
+}
+
+dl:not(.flex-box) {
   display: table;
-  dt { font-weight: bold; clear: left; }
-  dd { margin-left: 2rem; text-indent: -1rem; }
-  dt:after { content: ":"; }
-  dd:before { content: "· "; }
+  dt { clear: left; }
 }
 
 dl.group dd { float: left; }
+
+dl.grid {
+    display: grid;
+    dt { grid-column: 1; }
+    dd { grid-column: 2; }
+}
 
 dd li { padding-left: 1rem; }
 
