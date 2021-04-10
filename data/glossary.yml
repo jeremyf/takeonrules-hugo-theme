@@ -338,6 +338,9 @@
   key: CARD-GAME
   itemid: https://www.wikidata.org/wiki/Q142714
   tag: card game
+- title: Carroburg
+  key: WARHAMMER-CARROBURG
+  itemid: https://whfb.lexicanum.com/wiki/Carroburg
 - title: Cartography
   key: CARTOGRAPHY
   itemid: https://www.wikidata.org/wiki/Q42515
@@ -814,6 +817,12 @@
   offer: https://www.drivethrurpg.com/product/78548/Fiasco-Classic?affiliate_id=318171
   tag: fiasco
   game: fiasco
+- title: Fields of Related Knowledge
+  key: FORKS
+  verboseTitle: Fields of Related Knowledge
+  abbr: FoRKs
+  contentDisclaimers:
+  - lukecrane
 - title: First Play
   key: FIRST-PLAY
   tag: first play
@@ -832,12 +841,6 @@
 - title: Fork
   key: FORK
   itemid: https://www.wikidata.org/wiki/Q332903
-- title: Fields of Related Knowledge
-  key: FORKS
-  verboseTitle: Fields of Related Knowledge
-  abbr: FoRKs
-  contentDisclaimers:
-  - lukecrane
 - title: Fortitude
   key: FORT
 - title: Four Fudge/Fate Dice
@@ -1535,6 +1538,9 @@
   key: PWYW
   abbr: PWYW
   itemid: https://www.wikidata.org/wiki/Q846616
+- title: Peach
+  key: PEACH
+  itemid: https://www.wikidata.org/wiki/Q13189
 - title: Peer to Peer
   key: P2P
   verboseTitle: 'Peer to Peer: A decentralized and distributed network architecture'
@@ -2134,6 +2140,9 @@
   key: THE-BOOK-OF-THE-NEW-SUN
   itemid: https://www.wikidata.org/wiki/Q3269840
   itemtype: Book
+- title: The Empire
+  key: WARHAMMER-THE-EMPIRE
+  itemid: https://warhammerfantasy.fandom.com/wiki/The_Empire
 - title: The Empire Strikes Back
   key: THE-EMPIRE-STRIKES-BACK
   itemid: https://www.wikidata.org/wiki/Q181795
