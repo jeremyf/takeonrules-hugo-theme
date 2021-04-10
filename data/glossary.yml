@@ -128,7 +128,8 @@
 - title: Artha
   key: ARTHA
   tag: artha
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
 - title: Artificial Intelligence
   key: AI
   itemid: https://www.wikidata.org/wiki/Q25933185
@@ -186,7 +187,8 @@
 - title: Beliefs, Instincts, and Traits
   key: BITS
   abbr: BITs
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
 - title: Better World Books
   key: BWB
   itemid: https://www.wikidata.org/wiki/Q4898566
@@ -258,13 +260,15 @@
   tag: burning empires
   game: be
   abbr: BE
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
 - title: Burning Wheel Codex
   key: BWC
   itemid: https://rpggeek.com/rpgitem/191252/burning-wheel-codex
   game: bwc
   abbr: BWC
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
 - title: Burning Wheel Gold
   key: BWG
   itemid: https://www.wikidata.org/wiki/Q68247397
@@ -272,10 +276,12 @@
   tag: burning wheel
   game: bwg
   abbr: BWG
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
 - title: Burning Wheel Headquarters
   key: BWHQ
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
   abbr: BWHQ
 - title: Burnout
   key: BURNOUT
@@ -661,7 +667,8 @@
   offer: https://www.drivethrurpg.com/product/108028/Dungeon-World?affiliate_id=318171
   tag: dungeon world
   game: dw
-  contentDisclaimers: '["adamkoebel"]'
+  contentDisclaimers:
+  - adamkoebel
 - title: Dungeoncraft
   key: DUNGEONCRAFT
   tag: dungeoncraft
@@ -829,7 +836,8 @@
   key: FORKS
   verboseTitle: Fields of Related Knowledge
   abbr: FoRKs
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
 - title: Fortitude
   key: FORT
 - title: Four Fudge/Fate Dice
@@ -1196,7 +1204,8 @@
   itemid: https://www.wikidata.org/wiki/Q27102827
   tag: lamentations of the flame princess
   abbr: LotFP
-  contentDisclaimers: '["jamesraggi"]'
+  contentDisclaimers:
+  - jamesraggi
 - title: Lankhmar
   key: LANKHMAR
   itemid: https://www.wikidata.org/wiki/Q6487218
@@ -1238,7 +1247,8 @@
   key: luke-crane
   itemid: https://www.wikidata.org/wiki/Q66831262
   tag: luke crane
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
 - title: Machine Learning
   key: MLEARN
   abbr: ML
@@ -1359,7 +1369,8 @@
   offer: https://www.burningwheel.com/mouse-guard/
   tag: mouse guard
   game: mouseguard
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
 - title: Movement
   key: MV
 - title: Necromancer's Maze
@@ -1410,7 +1421,8 @@
 - title: Obstacle
   key: OB
   abbr: Ob
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
 - title: Old School Essentials
   key: OSE
   offer: https://www.drivethrurpg.com/product/279183/OldSchool-Essentials-Classic-Fantasy-Rules-Tome?affiliate_id=318171
@@ -2019,7 +2031,8 @@
 - title: Steel Test
   key: STEEL-TEST
   tag: steel test
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
 - title: Stonehell Dungeon
   key: STONEHELL-DUNGEON
   itemid: https://rpggeek.com/rpgseries/26518/stonehell-dungeon
@@ -2224,7 +2237,8 @@
   offer: https://www.drivethrurpg.com/product/116482/Torchbearer?affiliate_id=318171
   tag: torchbearer
   game: torchbearer
-  contentDisclaimers: '["lukecrane"]'
+  contentDisclaimers:
+  - lukecrane
 - title: Total Party Kill
   key: TPK
   abbr: TPK
