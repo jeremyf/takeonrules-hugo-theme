@@ -640,7 +640,7 @@
   key: DROAAM
   tag: droaam
 - title: Duel of Wits
-  key: DOW
+  key: DUEL-OF-WITS
   tag: duel of wits
   abbr: DoW
 - title: Dungeon Crawl Classics
@@ -832,7 +832,7 @@
 - title: Fork
   key: FORK
   itemid: https://www.wikidata.org/wiki/Q332903
-- title: FoRKs
+- title: Fields of Related Knowledge
   key: FORKS
   verboseTitle: Fields of Related Knowledge
   abbr: FoRKs
