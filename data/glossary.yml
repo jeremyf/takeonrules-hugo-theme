@@ -59,6 +59,9 @@
   key: AL
   itemid: https://www.wikidata.org/wiki/Q2722365
   abbr: Al
+- title: Altdorf
+  key: WARHAMMER-ALTDORF
+  itemid: https://warhammerfantasy.fandom.com/wiki/Altdorf
 - title: Alternity RPG
   key: ALTERNITY
   itemid: https://www.wikidata.org/wiki/Q764265
@@ -1267,6 +1270,9 @@
   itemid: https://www.wikidata.org/wiki/Q157017
 - title: Manouevre Drive
   key: M-DRIVE
+- title: Marienburg
+  key: WARHAMMER-MARIENBURG
+  itemid: https://warhammerfantasy.fandom.com/wiki/Marienburg
 - title: Marvel Heroic RPG
   key: MHRPG
   itemid: https://www.wikidata.org/wiki/Q16161486
