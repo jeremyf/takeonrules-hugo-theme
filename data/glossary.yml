@@ -1547,6 +1547,7 @@
 - title: Peach
   key: PEACH
   itemid: https://www.wikidata.org/wiki/Q13189
+  tag: peach
 - title: Peer to Peer
   key: P2P
   verboseTitle: 'Peer to Peer: A decentralized and distributed network architecture'
