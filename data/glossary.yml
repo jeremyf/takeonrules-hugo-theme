@@ -4,7 +4,7 @@
   itemid: https://rpggeek.com/rpg/763/thousand-and-one-nights-game-enticing-stories
   offer: https://www.drivethrurpg.com/product/194488/1001-Nights?affiliate_id=318171
   tag: 1001 nights
-  game: 1001 nights
+  game: 1001-NIGHTS
 - title: 2D6
   key: 2D6
   verboseTitle: Two Six-Sided Dice
@@ -67,7 +67,7 @@
   itemid: https://www.wikidata.org/wiki/Q764265
   offer: https://www.drivethrurpg.com/product/245263/Alternity-Core-Rulebook?affiliate_id=318171
   tag: alternity
-  game: alternity
+  game: ALTERNITY
 - title: American Sign Language
   key: ASL
   abbr: ASL
@@ -101,7 +101,7 @@
   tag: apocalypse world
 - title: 'Apocalypse World: Dark Ages'
   key: AWDA
-  game: awda
+  game: AWDA
 - title: Appendix N
   key: APPENDIX-N
   itemid: https://www.wikidata.org/wiki/Q70483411
@@ -127,7 +127,7 @@
   itemid: https://www.wikidata.org/wiki/Q5453
   offer: https://www.drivethrurpg.com/browse.php?keywords=ars+magica&affiliate_id=318171
   tag: ars magica
-  game: ars-magica
+  game: ARS-MAGICA
 - title: Artha
   key: ARTHA
   tag: artha
@@ -164,7 +164,7 @@
   itemid: https://www.wikidata.org/wiki/Q67799891
   offer: https://www.drivethrurpg.com/product/144526/Barbarians-of-Lemuria-Mythic-Edition?affiliate_id=318171
   tag: barbarians of lemuria
-  game: bol
+  game: BOL
 - title: Barrel Rider Games
   key: BRG
 - title: Barrowmaze Complete
@@ -172,7 +172,7 @@
   itemid: https://rpggeek.com/rpgitem/175318/barrowmaze-complete
   offer: https://www.drivethrurpg.com/product/139762/Barrowmaze-Complete?affiliate_id=318171
   tag: barrowmaze
-  game: barrowmaze
+  game: BARROWMAZE-COMPLETE
 - title: Base Attack Bonus
   key: BAB
   abbr: BAB
@@ -181,7 +181,7 @@
   itemid: https://www.wikidata.org/wiki/Q4866969
   offer: https://www.drivethrurpg.com/product/140455/Basic-Fantasy-RPG-3rd-Edition?affiliate_id=318171
   tag: basic fantasy rpg
-  game: bfrpg
+  game: BFRPG
   abbr: BFRPG
 - title: Battletech
   key: BATTLETECH
@@ -215,7 +215,7 @@
   itemid: https://www.wikidata.org/wiki/Q39045543
   offer: https://www.drivethrurpg.com/product/170689/Blades-in-the-Dark?affiliate_id=318171
   tag: blades in the dark
-  game: bitd
+  game: BITD
   abbr: BitD
 - title: Blogging
   key: BLOGGING
@@ -230,7 +230,7 @@
   itemid: https://rpggeek.com/rpgseries/223/h-bloodstone-pass-saga
   offer: https://www.drivethrurpg.com/product/16800/H1-Bloodstone-Pass-1e?affiliate_id=318171
   tag: bloodstone
-  game: bloodstone
+  game: BLOODSTONE
 - title: Bluebird
   key: BLUEBIRD
   itemid: https://www.wikidata.org/wiki/Q853286
@@ -252,7 +252,7 @@
   itemid: https://rpggeek.com/rpgfamily/11030/bulldogs
   offer: https://www.drivethrurpg.com/product/166518/Bulldogs-Fate-Core-Edition?affiliate_id=318171
   tag: bulldogs
-  game: bulldogs
+  game: BULLDOGS
 - title: Burning Beards
   key: BURNING-BEARDS
   tag: burning beards
@@ -261,14 +261,14 @@
   itemid: https://www.wikidata.org/wiki/Q4999841
   offer: https://www.drivethrurpg.com/product/50260/Burning-Empires?affiliate_id=318171
   tag: burning empires
-  game: be
+  game: BE
   abbr: BE
   contentDisclaimers:
   - lukecrane
 - title: Burning Wheel Codex
   key: BWC
   itemid: https://rpggeek.com/rpgitem/191252/burning-wheel-codex
-  game: bwc
+  game: BWC
   abbr: BWC
   contentDisclaimers:
   - lukecrane
@@ -277,7 +277,7 @@
   itemid: https://www.wikidata.org/wiki/Q68247397
   offer: https://burningwheel.com
   tag: burning wheel
-  game: bwg
+  game: BWG
   abbr: BWG
   contentDisclaimers:
   - lukecrane
@@ -365,7 +365,7 @@
   itemid: https://rpggeek.com/rpg/38235/cepheus-engine-system
   offer: https://www.drivethrurpg.com/browse.php?keywords=cepheus+engine&affiliate_id=318171
   tag: cepheus engine
-  game: ceng
+  game: CENG
   abbr: CE
 - title: Certified Space Accountant
   key: CSA
@@ -377,7 +377,7 @@
   itemid: https://rpggeek.com/rpg/28365/champions-zed
   offer: https://www.drivethrurpg.com/product/160660/Champions-of-ZED-Zero-Edition-Dungeoneering?affiliate_id=318171
   tag: champions of zed
-  game: champions of zed
+  game: CHAMPIONS-OF-ZED
 - title: Change Management
   key: CHANGE-MANAGEMENT
   itemid: https://www.wikidata.org/wiki/Q116348
@@ -402,7 +402,7 @@
   itemid: https://rpggeek.com/rpg/26660/circle-hands
   offer: http://indie-rpgs.com/unstore/games/title/Circle_of_Hands
   tag: circle of hands
-  game: coh
+  game: COH
   abbr: CoH
 - title: Coalition Building
   key: COALITION-BUILDING
@@ -412,7 +412,7 @@
   itemid: https://rpggeek.com/rpgitem/275472/codex-black-sun
   offer: https://www.drivethrurpg.com/product/259700/The-Codex-of-the-Black-Sun-Sorcery-for-Stars-Without-Number?affiliate_id=318171
   tag: codex of the black sun
-  game: cotbs
+  game: COTBS
   abbr: CotBS
 - title: Cognitive Load
   key: COGNITIVE-LOAD
@@ -494,7 +494,7 @@
   itemid: https://www.wikidata.org/wiki/Q68624889
   offer: https://www.drivethrurpg.com/product/98137/Cthulhu-Dark?affiliate_id=318171
   tag: cthulhu dark
-  game: cd
+  game: CD
   abbr: CD
 - title: Custom Moves
   key: CUSTOM-MOVES
@@ -524,7 +524,7 @@
   itemid: https://www.wikidata.org/wiki/Q584169
   offer: https://www.dmsguild.com/browse.php?filters=0_0_0_0_45353_0_0_0&affiliate_id=318171
   tag: dark sun
-  game: darksun
+  game: DS
 - title: Data Modeling
   key: DATA-MODELING
   itemid: https://www.wikidata.org/wiki/Q367664
@@ -534,7 +534,7 @@
 - title: 'Dead Names: Lost Races and Forgotten Ruins'
   key: DEAD-NAMES
   offer: https://www.drivethrurpg.com/product/130967/Dead-Names-Lost-Races-and-Forgotten-Ruins?affiliate_id=318171
-  game: dead names
+  game: DEAD-NAMES
   abbr: Dead Names
 - title: Death
   key: DEATH
@@ -549,7 +549,7 @@
   itemid: https://rpggeek.com/rpgsetting/4500/deluge
   offer: https://www.drivethrurpg.com/product/78622/Deluge?affiliate_id=318171
   tag: deluge
-  game: deluge
+  game: DELUGE
 - title: Deoxyribonucleic Acid
   key: DNA
   abbr: DNA
@@ -565,7 +565,7 @@
   itemid: https://www.wikidata.org/wiki/Q18206449
   offer: https://www.drivethrurpg.com/product/79933/Diaspora?affiliate_id=318171"
   tag: diaspora
-  game: diaspora
+  game: DIASPORA
 - title: Dice Modifier
   key: DIM
   abbr: DM
@@ -594,7 +594,7 @@
   itemid: https://www.wikidata.org/wiki/Q16962084
   offer: https://www.drivethrurpg.com/product/92348/Do-Pilgrims-of-the-Flying-Temple?affiliate_id=318171
   tag: 'do: pilgrims of the flying temple'
-  game: 'do: pilgrims of the flying temple'
+  game: DO-PILGRIMS-OF-THE-FLYING-TEMPLE
 - title: Docstring
   key: DOCSTRING
   itemid: https://www.wikidata.org/wiki/Q5287262
@@ -627,11 +627,11 @@
   itemid: https://rpggeek.com/rpgitem/125110/doom-savage-kings
   offer: https://www.drivethrurpg.com/product/129075/Dungeon-Crawl-Classics-665-Doom-of-the-Savage-King?affiliate_id=318171
   tag: doom of the savage kings
-  game: doom of the savage kings
+  game: DOOM-OF-THE-SAVAGE-KING
 - title: Dragonknights
   key: DRAGONKNIGHTS
   tag: dragonknights
-  game: dragonknights
+  game: DRAGONKNIGHTS
 - title: Dreams
   key: DREAMS
   itemid: https://www.wikidata.org/wiki/Q36348
@@ -655,7 +655,7 @@
   itemid: https://www.wikidata.org/wiki/Q16992123
   offer: https://www.drivethrurpg.com/product/101050/Dungeon-Crawl-Classics-RPG-DCC-RPG?affiliate_id=318171
   tag: dungeon crawl classics
-  game: dcc
+  game: DCC
 - title: Dungeon Delving
   key: DUNGEON-DELVING
   tag: dungeon delving
@@ -672,7 +672,7 @@
   itemid: https://www.wikidata.org/wiki/Q15221892
   offer: https://www.drivethrurpg.com/product/108028/Dungeon-World?affiliate_id=318171
   tag: dungeon world
-  game: dw
+  game: DW
   contentDisclaimers:
   - adamkoebel
 - title: Dungeoncraft
@@ -697,7 +697,7 @@
   offer: https://www.dmsguild.com/browse.php?affiliate_id=318171
   tag: 5e
   abbr: 5E
-  game: 5e
+  game: 5E
 - title: 'Dungeons and Dragons: Fifth Edition Playtest'
   key: D&D NEXT
   abbr: D&D Next
@@ -719,7 +719,7 @@
   itemid: https://rpggeek.com/rpgitem/137904/dwimmermount-labyrinth-lord
   offer: https://www.drivethrurpg.com/product/133746/Dwimmermount-Labyrinth-Lord-version?affiliate_id=318171
   tag: dwimmermount
-  game: dwimmermount
+  game: DWIMMERMOUNT
 - title: Dying Earth
   key: DYING-EARTH
   itemid: https://www.wikidata.org/wiki/Q5318627
@@ -809,7 +809,7 @@
   itemid: https://www.wikidata.org/wiki/Q1350935
   offer: https://www.drivethrurpg.com/product/114903/Fate-Core-System?affiliate_id=318171
   tag: fate core
-  game: fate
+  game: FATE
 - title: Feet
   key: FT
   verboseTitle: Feet (unit of measurement)
@@ -819,7 +819,7 @@
   itemid: https://www.wikidata.org/wiki/Q3744369
   offer: https://www.drivethrurpg.com/product/78548/Fiasco-Classic?affiliate_id=318171
   tag: fiasco
-  game: fiasco
+  game: FIASCO
 - title: Fields of Related Knowledge
   key: FORKS
   verboseTitle: Fields of Related Knowledge
@@ -834,7 +834,7 @@
   abbr: FTD
   itemid: https://www.wikidata.org/wiki/Q70791655
   offer: https://www.drivethrurpg.com/product/264584/Five-Torches-Deep?affiliate_id=318171
-  game: ftd
+  game: FTD
 - title: For My Children
   key: FOR-MY-CHILDREN
   tag: for my children
@@ -993,13 +993,13 @@
   itemid: https://rpggeek.com/rpg/11213/hollowpoint
   offer: https://www.drivethrurpg.com/product/93880/Hollowpoint?affiliate_id=318171
   tag: hollowpoint
-  game: hollowpoint
+  game: HOLLOWPOINT
 - title: Hot Springs Island
   key: HOT-SPRINGS-ISLAND
   itemid: https://rpggeek.com/rpgitem/235448/dark-hot-springs-island
   offer: https://www.drivethrurpg.com/product/215340/The-Dark-of-Hot-Springs-Island?affiliate_id=318171
   tag: hot springs island
-  game: hot springs island
+  game: HOT-SPRINGS-ISLAND
 - title: House Rules
   key: HOUSE-RULES
   tag: house rules
@@ -1008,7 +1008,7 @@
   itemid: https://www.wikidata.org/wiki/Q5915977
   offer: https://www.drivethrurpg.com/product/61061/Houses-of-the-Blooded?affiliate_id=318171
   tag: houses of the blooded
-  game: houses of the blooded
+  game: HOUSES-OF-THE-BLOODED
 - title: Hugo
   key: HUGO
   verboseTitle: 'Hugo: Static Site Generator'
@@ -1034,7 +1034,7 @@
   itemid: https://www.wikidata.org/wiki/Q1641831
   offer: https://www.drivethrurpg.com/browse.php?keywords=H%C3%A2rnMaster&affiliate_id=318171
   tag: harnmaster
-  game: harnmaster
+  game: HARNMASTER
 - title: I Owe You
   key: IOU
   abbr: IOU
@@ -1069,7 +1069,7 @@
   itemid: https://www.wikidata.org/wiki/Q2613589
   offer: https://www.drivethrurpg.com/product/17891/InSpectres?affiliate_id=318171
   tag: inspectres
-  game: inspectres
+  game: INSPECTRES
 - title: Integrated Development Environment
   key: IDE
   abbr: IDE
@@ -1108,7 +1108,7 @@
   itemid: https://rpggeek.com/rpgitem/142766/inverse-world-dungeon-world-sourcebook
   offer: https://www.drivethrurpg.com/product/128281/Inverse-World--A-Dungeon-World-Supplement?affiliate_id=318171
   tag: inverse world
-  game: inverse world
+  game: INVERSE-WORLD
 - title: Jack Vance
   key: JACK-VANCE
   itemid: https://www.wikidata.org/wiki/Q312632
@@ -1185,7 +1185,7 @@
   itemid: https://www.wikidata.org/wiki/Q70485546
   offer: https://www.drivethrurpg.com/product/63737/Knockspell-Magazine-1?affiliate_id=318171
   tag: knockspell
-  game: knockspell
+  game: KNOCKSPELL
 - title: Kristcon
   key: KRISTCON
   tag: kristacon
@@ -1194,13 +1194,13 @@
   itemid: https://www.wikidata.org/wiki/Q3214557
   offer: https://www.drivethrurpg.com/product/259983/Advanced-Labyrinth-Lord-Dragon-Cover?affiliate_id=318171
   tag: labyrinth lord
-  game: ll
+  game: LL
 - title: Lacuna Part 1.
   key: LACUNA-PART-1
   itemid: https://www.wikidata.org/wiki/Q64531008
   offer: https://www.drivethrurpg.com/product/95893/Lacuna-Part-I-second-attempt?affiliate_id=318171
   tag: lacuna part i
-  game: lacuna part i
+  game: LACUNA-PART-1
 - title: Lady Blackbird
   key: LADY-BLACKBIRD
   itemid: https://www.wikidata.org/wiki/Q67174687
@@ -1221,7 +1221,7 @@
   itemid: https://rpggeek.com/rpg/61133/lavender-hack
   offer: https://www.drivethrurpg.com/product/308733/Lavender-Hack-Tarantula-Hawk-Wasp-Edition?affiliate_id=318171
   tag: lavender hack
-  game: lh
+  game: LH
   abbr: LH
 - title: Let's Read
   key: LETS-READ
@@ -1277,7 +1277,7 @@
   key: MHRPG
   itemid: https://www.wikidata.org/wiki/Q16161486
   tag: marvel heroic rpg
-  game: mhrpg
+  game: MHRPG
   abbr: MHRPG
 - title: Massachusetts Institute of Technology License
   key: MIT
@@ -1322,7 +1322,7 @@
   itemid: https://rpggeek.com/rpg/9789/microscope
   offer: https://www.drivethrurpg.com/product/91183/Microscope?affiliate_id=318171
   tag: microscope
-  game: microscope
+  game: MICROSCOPE
 - title: Middle Earth Role Playing Game
   key: MERP
   abbr: MERP
@@ -1340,7 +1340,7 @@
   itemid: https://rpggeek.com/rpg/6344/misspent-youth
   offer: https://www.drivethrurpg.com/product/229713/Misspent-Youth-12?affiliate_id=318171
   tag: misspent youth
-  game: my
+  game: MY
   abbr: MY
 - title: Mongoose Publishing
   key: MONGOOSE
@@ -1354,14 +1354,14 @@
   itemid: https://www.wikidata.org/wiki/Q77272478
   offer: https://www.drivethrurpg.com/product/143518/Monster-of-the-Week?affiliate_id=318171
   tag: monster of the week
-  game: motw
+  game: MOTW
   abbr: MotW
 - title: Monsterhearts
   key: MONSTERHEARTS
   itemid: https://www.wikidata.org/wiki/Q17154019
   offer: https://www.drivethrurpg.com/product/212511/Monsterhearts-2?affiliate_id=318171
   tag: monsterhearts
-  game: monsterhearts
+  game: MONSTERHEARTS
 - title: Morale check
   key: MORALE-CHECK
   itemid: https://www.wikidata.org/wiki/Q104253592
@@ -1377,7 +1377,7 @@
   itemid: https://www.wikidata.org/wiki/Q17142058
   offer: https://www.burningwheel.com/mouse-guard/
   tag: mouse guard
-  game: mouseguard
+  game: MG
   contentDisclaimers:
   - lukecrane
 - title: Movement
@@ -1401,7 +1401,7 @@
   itemid: https://www.wikidata.org/wiki/Q7033219
   offer: https://www.drivethrurpg.com/product/17087/Night-Below-An-Underdark-Campaign-2e?affiliate_id=318171
   tag: night below
-  game: night below
+  game: NIGHT-BELOW
 - title: Non-Disclosure Agreement
   key: NDA
   abbr: NDA
@@ -1435,7 +1435,7 @@
 - title: Old School Essentials
   key: OSE
   offer: https://www.drivethrurpg.com/product/279183/OldSchool-Essentials-Classic-Fantasy-Rules-Tome?affiliate_id=318171
-  game: ose
+  game: OSE
   abbr: OSE
 - title: Old School Hack
   key: OLD-SCHOOL-HACK
@@ -1507,7 +1507,7 @@
   itemid: https://rpggeek.com/rpg/18490/our-last-best-hope
   offer: https://www.drivethrurpg.com/product/107734/Our-Last-Best-Hope?affiliate_id=318171
   tag: our last best hope
-  game: olbh
+  game: OLBH
   abbr: OLBH
 - title: Out of the Abyss
   key: OUT-OF-THE-ABYSS
@@ -1515,7 +1515,7 @@
   itemid: https://www.wikidata.org/wiki/Q28453304
   offer: https://www.dmsguild.com/browse.php?keywords=Out+of+the+Abyss+Storyline&affiliate_id=318171
   tag: out of the abyss
-  game: out of the abyss
+  game: OUT-OF-THE-ABYSS
 - title: Outline Processor Markup Language
   key: OPML
   itemid: https://www.wikidata.org/wiki/Q836370
@@ -1539,7 +1539,7 @@
   itemid: https://www.wikidata.org/wiki/Q77995878
   offer: https://www.drivethrurpg.com/product/92731/PartTime-Gods?affiliate_id=318171
   tag: part time gods
-  game: part time gods
+  game: PART-TIME-GODS
 - title: Pay What You Want
   key: PWYW
   abbr: PWYW
@@ -1694,7 +1694,7 @@
   itemid: https://rpggeek.com/rpgfamily/47890/rappan-athuk
   offer: https://www.drivethrurpg.com/product/112605/2012-Rappan-Athuk-SW?affiliate_id=318171
   tag: rappan athuk
-  game: rappan athuk
+  game: RAPPAN-ATHUK
 - title: Reading
   key: READING
   itemid: https://www.wikidata.org/wiki/Q199657
@@ -1708,7 +1708,7 @@
   itemid: https://www.wikidata.org/wiki/Q66603524
   offer: https://www.drivethrurpg.com/product/79955/Reign-Enchiridion?affiliate_id=318171
   tag: reign enchiridion
-  game: reign enchiridion
+  game: REIGN-ENCHIRIDION
 - title: Relational Database Management System
   abbr: RDBMS
   key: RDBMS
@@ -1794,7 +1794,7 @@
   itemid: https://rpggeek.com/rpg/20480/sagas-icelanders
   offer: https://www.drivethrurpg.com/product/254224/Sagas-of-the-Icelanders?affiliate_id=318171
   tag: saga of the icelanders
-  game: saga of the icelanders
+  game: SAGA-OF-THE-ICELANDERS
 - title: Samvera
   key: SAMVERA
   itemid: https://samvera.org/
@@ -1805,7 +1805,7 @@
   itemid: https://rpggeek.com/rpg/55536/sand-dogs
   offer: https://www.drivethrurpg.com/product/269946/Sand-Dogs?affiliate_id=318171
   tag: sand dogs
-  game: sd
+  game: SD
   abbr: SD
 - title: Sandbox
   key: SANDBOX
@@ -1831,13 +1831,13 @@
   itemid: https://www.wikidata.org/wiki/Q104253139
   offer: https://www.drivethrurpg.com/product/127180/Scarlet-Heroes?affiliate_id=318171
   tag: scarlet heroes
-  game: scarlet heroes
+  game: SCARLET-HEROES
 - title: Scenic Dunnsmouth
   key: SCENIC-DUNNSMOUTH
   itemid: https://rpggeek.com/rpgitem/156018/scenic-dunnsmouth
   offer: https://www.drivethrurpg.com/product/127039/Scenic-Dunnsmouth?affiliate_id=318171
   tag: scenic dunnsmouth
-  game: scenic dunnsmouth
+  game: SCENIC-DUNNSMOUTH
 - title: Schema.org
   key: SCHEMA-ORG
   itemid: https://www.wikidata.org/wiki/Q3475322
@@ -1846,7 +1846,7 @@
   itemid: https://rpggeek.com/rpg/18420/school-daze-role-playing-game
   offer: https://www.drivethrurpg.com/product/104650/School-Daze?affiliate_id=318171
   tag: school daze
-  game: school daze
+  game: SCHOOL-DAZE
 - title: School Resource Officer
   abbr: SRO
   key: SRO
@@ -1894,7 +1894,7 @@
   key: SENESCHAL
   offer: https://vsca.blog/2021/02/26/seneschal/
   tag: seneschal
-  game: seneschal
+  game: SENESCHAL
   abbr: seneschal
 - title: Services
   key: SERVICES
@@ -1961,7 +1961,7 @@
   key: SOFT-HORIZON
   itemid: https://vsca.blog/2019/02/12/soft-horizon-srd/
   tag: soft horizon
-  game: shsrd
+  game: SOFT-HORIZON
 - title: Software
   key: SOFTWARE
   itemid: https://www.wikidata.org/wiki/Q7397
@@ -2009,7 +2009,7 @@
   itemid: https://rpggeek.com/rpgitemversion/43/alpha-dawn-box-set
   offer: https://www.drivethrurpg.com/product/226710/Star-Frontiers-Alpha-Dawn?affiliate_id=318171
   tag: alpha dawn
-  game: sfad
+  game: SF-ALPHA-DAWN
 - title: Star Trek
   key: STAR-TREK
   itemid: https://www.wikidata.org/wiki/Q1092
@@ -2026,13 +2026,13 @@
   verboseTitle: 'Stars without Number: Revised (Free Edition)'
   itemid: https://rpggeek.com/rpgitem/243271/stars-without-number-revised-edition-free-edition
   offer: https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version?affiliate_id=318171
-  game: swn-free
+  game: SWN-FREE
 - title: 'Stars without Number: Revised Edition'
   key: SWN
   itemid: https://www.wikidata.org/wiki/Q67963569
   offer: https://www.drivethrurpg.com/product/226996/Stars-Without-Number-Revised-Edition?affiliate_id=318171
   tag: swn
-  game: swn
+  game: SWN
   abbr: SWN
 - title: Static Site Generator
   key: SSG
@@ -2110,25 +2110,25 @@
   itemid: https://rpggeek.com/rpgitem/133489/take-establishments
   offer: https://www.drivethrurpg.com/product/107759/Take-on-Establishments?affiliate_id=318171
   tag: take on establishments
-  game: take on establishments
+  game: TAKE-ON-ESTABLISHMENTS
 - title: Take on Magic Items
   key: TAKE-ON-MAGIC-ITEMS
   itemid: https://rpggeek.com/rpgitem/132193/take-magic-items
   offer: https://www.drivethrurpg.com/product/106849/Take-on-Magic-Items?affiliate_id=318171
   tag: take on magic items
-  game: take on magic items
+  game: TAKE-ON-MAGIC-ITEMS
 - title: Take on the Lower Depths
   key: TAKE-ON-THE-LOWER-DEPTHS
   itemid: https://rpggeek.com/rpgitem/143067/take-lower-depths
   offer: https://www.drivethrurpg.com/product/114740/Take-on-the-Lower-Depths?affiliate_id=318171
   tag: take on the lower depths
-  game: take on the lower depths
+  game: TAKE-ON-THE-LOWER-DEPTHS
 - title: Technoir
   key: TECHNOIR
   itemid: https://www.wikidata.org/wiki/Q78091391
   offer: https://www.drivethrurpg.com/product/93378/Technoir?affiliate_id=318171
   tag: technoir
-  game: technoir
+  game: TECHNOIR
 - title: Technology Level
   key: TL
   abbr: TL
@@ -2158,14 +2158,14 @@
   key: THJ
   itemid: https://rpggeek.com/rpg/34736/heros-journey-fantasy-roleplaying
   offer: https://www.drivethrurpg.com/product/295279/The-Heros-Journey-Second-Edition?affiliate_id=318171
-  game: thj
+  game: THJ
   abbr: THJ
 - title: The King Machine
   key: THE-KING-MACHINE
   itemid: https://rpggeek.com/rpgitem/262253/king-machine
   offer: https://www.drivethrurpg.com/product/253064/The-King-Machine?affiliate_id=318171
   tag: the king machine
-  game: the king machine
+  game: THE-KING-MACHINE
 - title: The Magnificent Seven
   key: THE-MAGNIFICENT-SEVEN
   itemid: https://www.wikidata.org/wiki/Q19069
@@ -2187,7 +2187,7 @@
   key: SCAFFOLD
   offer: https://vsca.blog/2021/02/20/the-scaffold-system/
   tag: scaffold system
-  game: scaffold
+  game: SCAFFOLD
   abbr: Scaffold
 - title: The Silver Searcher
   key: AG
@@ -2198,7 +2198,7 @@
   itemid: https://www.wikidata.org/wiki/Q7768362
   offer: https://www.drivethrurpg.com/product/17068/T14-Temple-of-Elemental-Evil-1e?affiliate_id=318171
   tag: temple of elemental evil
-  game: toee
+  game: TOEE
   abbr: ToEE
 - title: Thel Sector
   key: THEL-SECTOR
@@ -2217,7 +2217,7 @@
   itemid: https://rpggeek.com/rpgitem/137524/thornburg
   offer: https://www.drivethrurpg.com/product/106582/Thornburg--A-Dungeon-World-Adventure?affiliate_id=318171
   tag: thornburg
-  game: thornburg
+  game: THORNBURG
 - title: Tichu
   key: TICHU
   itemid: https://www.wikidata.org/wiki/Q851937
@@ -2235,14 +2235,14 @@
 - title: Tomb of Adventure Design
   key: TOAD
   offer: https://www.drivethrurpg.com/product/97423/Tome-of-Adventure-Design?affiliate_id=318171
-  game: tome of adventure design
+  game: TOAD
   abbr: ToAD
 - title: Tomb of Annihilation
   key: TOA
   itemid: https://www.wikidata.org/wiki/Q67311483
   offer: https://www.dmsguild.com/browse.php?filters=0_45682_0_0_0_0_0_0&src=fid45682?affiliate_id=318171
   tag: tomb of annihilation
-  game: toa
+  game: TOA
   abbr: ToA
 - title: Too Long; Didn't Read
   key: TL;DR
@@ -2252,7 +2252,7 @@
   itemid: https://www.wikidata.org/wiki/Q66830849
   offer: https://www.drivethrurpg.com/product/116482/Torchbearer?affiliate_id=318171
   tag: torchbearer
-  game: torchbearer
+  game: TB
   contentDisclaimers:
   - lukecrane
 - title: Total Party Kill
@@ -2272,14 +2272,14 @@
   itemid: https://www.wikidata.org/wiki/Q3210775
   offer: https://www.drivethrurpg.com/product/55567/Trail-of-Cthulhu?affiliate_id=318171
   tag: trail of cthulhu
-  game: toc
+  game: TOC
   abbr: ToC
 - title: 'Traveller: Core Rulebook'
   key: TRAVELLER-CORE-RULEBOOK
   itemid: https://www.wikidata.org/wiki/Q2164069
   offer: https://www.drivethrurpg.com/product/171643/Traveller-Core-Rulebook?affiliate_id=318171
   tag: traveller
-  game: traveller
+  game: TRAVELLER-CORE-RULEBOOK
 - title: Ultraviolet
   key: UV
   itemid: https://www.wikidata.org/wiki/Q11391
@@ -2346,7 +2346,7 @@
   key: WHFS
   itemid: https://www.wikidata.org/wiki/Q15831558
   offer: https://www.drivethrurpg.com/browse.php?filters=0_0_44232_0_0&term=warhammer%20fantasy&affiliate_id=318171
-  game: whfs
+  game: WHFS
   abbr: WHFS
 - title: Weapon Speed
   key: WS
@@ -2378,7 +2378,7 @@
   itemid: https://rpggeek.com/rpg/23260/whitehack
   offer: https://www.drivethrurpg.com/product/348152/Whitehack-Third-Edition?affiliate_id=318171
   tag: whitehack
-  game: whitehack
+  game: WHITEHACK
 - title: Willpower
   key: WILL
 - title: Winter
@@ -2392,7 +2392,7 @@
   itemid: https://rpggeek.com/rpgseries/60860/witchburner
   offer: https://www.drivethrurpg.com/product/256916/Witchburner?affiliate_id=318171
   tag: witchburner
-  game: witchburner
+  game: WITCHBURNER
 - title: Wizards of the Coast
   key: WOTC
   verboseTitle: 'Wizards of the Coast; Publisher of Dungeons & Dragons as well as
@@ -2432,20 +2432,20 @@
   itemid: https://www.wikidata.org/wiki/Q104153924
   offer: https://www.drivethrurpg.com/product/348791/Worlds-Without-Number?affiliate_id=318171
   tag: wwn
-  game: wwn
+  game: WWN
   abbr: WWN
 - title: 'Worlds without Number: Free Edition'
   key: WWN-FREE
   itemid: https://www.wikidata.org/wiki/Q104153924
   offer: https://www.drivethrurpg.com/product/348809/Worlds-Without-Number-Free-Edition?affiliate_id=318171
-  game: wwn-free
+  game: WWN-FREE
 - title: Wrath of the Autarch
   key: WOTA
   itemid: https://www.wikidata.org/wiki/Q104150978
   abbr: WotA
   offer: https://www.drivethrurpg.com/product/191025/Wrath-of-the-Autarch?affiliate_id=318171
   tag: wrath of the autarch
-  game: wota
+  game: WOTA
 - title: Wyatt Earp
   key: WYATT-EARP
   itemid: https://boardgamegeek.com/boardgame/878/wyatt-earp
