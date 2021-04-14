@@ -13,6 +13,8 @@
   key: 3D
   abbr: 3d
   itemid: https://www.wikidata.org/wiki/Q34929
+  sameAs: https://en.wikipedia.org/wiki/Three-dimensional_space
+  description: geometric model in which a point is specified by three parameters
 - title: A Few Acres of Snow
   key: A-FEW-ACRES-OF-SNOW
   itemid: https://www.wikidata.org/wiki/Q4656713
@@ -25,7 +27,8 @@
   key: ACADEMIA
   itemid: https://www.wikidata.org/wiki/Q1211427
   tag: academia
-  description: community of students and scholars engaged in higher education and research
+  description: community of students and scholars engaged in higher education and
+    research
 - title: Accelerated Mobile Pages
   key: AMP
   abbr: AMP
@@ -75,8 +78,8 @@
   itemid: https://www.wikidata.org/wiki/Q2722365
   abbr: Al
   sameAs: https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons)
-  description: way of categorizing the ethical and moral perspective of characters in
-    the Dungeons & Dragons role-playing game
+  description: way of categorizing the ethical and moral perspective of characters
+    in the Dungeons & Dragons role-playing game
 - title: Altdorf
   key: WARHAMMER-ALTDORF
   itemid: https://warhammerfantasy.fandom.com/wiki/Altdorf
@@ -295,8 +298,8 @@
   key: BLUEBIRD
   itemid: https://www.wikidata.org/wiki/Q853286
   sameAs: https://en.wikipedia.org/wiki/Bluebird
-  description: group of medium-sized, mostly insectivorous or omnivorous birds of North
-    and Central America, in the genus Sialia of the thrush family
+  description: group of medium-sized, mostly insectivorous or omnivorous birds of
+    North and Central America, in the genus Sialia of the thrush family
 - title: Board Game
   key: BOARD-GAME
   itemid: https://www.wikidata.org/wiki/Q131436
@@ -364,9 +367,10 @@
   itemid: https://www.wikidata.org/wiki/Q327988
   tag: burnout
   sameAs: https://en.wikipedia.org/wiki/Occupational_burnout
-  description: type of work-related stress, with symptoms characterized by feelings of
-    energy depletion or exhaustion; increased mental distance from one’s job, or feelings
-    of negativism or cynicism related to one's job; and reduced professional efficacy
+  description: type of work-related stress, with symptoms characterized by feelings
+    of energy depletion or exhaustion; increased mental distance from one’s job, or
+    feelings of negativism or cynicism related to one's job; and reduced professional
+    efficacy
 - title: Call of Cthulhu
   key: COC
   itemid: https://www.wikidata.org/wiki/Q1027121
@@ -394,8 +398,8 @@
   itemid: https://www.wikidata.org/wiki/Q4418079
   tag: campaign setting
   sameAs: https://en.wikipedia.org/wiki/Campaign_setting
-  description: fictional world which serves as a setting for a role-playing game or wargame
-    campaign
+  description: fictional world which serves as a setting for a role-playing game or
+    wargame campaign
 - title: 'Campaign: Burning Sanctuary'
   key: BURNING-SANCTUARY
   itemid: https://takeonrules.com/series/burning-sanctuary
@@ -596,8 +600,8 @@
   tag: creative commons
   abbr: CC
   sameAs: https://en.wikipedia.org/wiki/Creative_Commons
-  description: organisation creating copyright licenses for the public release of creative
-    works
+  description: organisation creating copyright licenses for the public release of
+    creative works
 - title: Credits
   key: CREDITS
   abbr: Cr
@@ -657,8 +661,8 @@
   key: DATA-MODELING
   itemid: https://www.wikidata.org/wiki/Q367664
   sameAs: https://en.wikipedia.org/wiki/Data_modeling
-  description: "(in software engineering) process of creating a data model for an information
-    system by applying certain formal techniques"
+  description: "(in software engineering) process of creating a data model for an
+    information system by applying certain formal techniques"
 - title: Dave Arneson
   key: DAVE-ARNESON
   itemid: https://www.wikidata.org/wiki/Q1381
@@ -787,8 +791,8 @@
   abbr: DNS
   itemid: https://www.wikidata.org/wiki/Q8767
   sameAs: https://en.wikipedia.org/wiki/Domain_Name_System
-  description: hierarchical distributed naming system for computers, services, or any
-    resource connected to the Internet or a private network
+  description: hierarchical distributed naming system for computers, services, or
+    any resource connected to the Internet or a private network
 - title: Doom of the Savage King
   key: DOOM-OF-THE-SAVAGE-KING
   itemid: https://rpggeek.com/rpgitem/125110/doom-savage-kings
@@ -909,6 +913,7 @@
   itemid: https://www.wikidata.org/wiki/Q5318627
   tag: dying earth
   description: Sci-fi Sub-Genre
+  sameAs: https://en.wikipedia.org/wiki/Dying_Earth_genre
 - title: Dying Earth Saga
   key: DYING-EARTH-SAGA
   itemid: https://www.wikidata.org/wiki/Q303490
@@ -918,7 +923,8 @@
   key: EDT
   abbr: EDT
   itemid: https://www.wikidata.org/wiki/Q15080196
-  description: time zone of Eastern Time Zone when observing daylight saving time (UTC−04:00)
+  description: time zone of Eastern Time Zone when observing daylight saving time
+    (UTC−04:00)
 - title: Eberron
   key: EBERRON
   itemid: https://www.wikidata.org/wiki/Q1378808
@@ -954,8 +960,8 @@
   key: EQ
   itemid: https://www.wikidata.org/wiki/Q191591
   sameAs: https://en.wikipedia.org/wiki/Emotional_intelligence
-  description: ability to identify, assess, and control the emotions of oneself, of others,
-    and of groups
+  description: ability to identify, assess, and control the emotions of oneself, of
+    others, and of groups
 - title: Endurance
   key: END
 - title: ENnie Awards
@@ -963,7 +969,8 @@
   itemid: https://www.wikidata.org/wiki/Q5323772
   tag: ennies
   sameAs: https://en.wikipedia.org/wiki/ENnie_Awards
-  description: set of awards given annually in the field of tabletop role-playing games
+  description: set of awards given annually in the field of tabletop role-playing
+    games
 - title: ePub
   key: EPUB
   verboseTitle: e-book file format standard by the International Digital Publishing
@@ -971,7 +978,8 @@
   abbr: ePub
   itemid: https://www.wikidata.org/wiki/Q475488
   sameAs: https://en.wikipedia.org/wiki/EPUB
-  description: e-book file format standard by the International Digital Publishing Forum
+  description: e-book file format standard by the International Digital Publishing
+    Forum
 - title: Essay
   key: ESSAY
   tag: essay
@@ -980,8 +988,9 @@
   itemid: https://www.wikidata.org/wiki/Q604973
   abbr: XP
   sameAs: https://en.wikipedia.org/wiki/Experience_point
-  description: unit of measurement used in tabletop role-playing games (RPGs) and role-playing
-    video games to quantify a player character's progression through the game
+  description: unit of measurement used in tabletop role-playing games (RPGs) and
+    role-playing video games to quantify a player character's progression through
+    the game
 - title: Extensible Markup Language
   key: XML
   mentionAs: XML
@@ -1292,8 +1301,8 @@
   mentionAs: HTML
   itemid: https://www.wikidata.org/wiki/Q8811
   sameAs: https://en.wikipedia.org/wiki/HTML
-  description: family of markup languages for displaying information viewable in a web
-    browser
+  description: family of markup languages for displaying information viewable in a
+    web browser
 - title: Hypertext Transfer Protocol
   key: HTTP
   abbr: HTTP
@@ -1575,8 +1584,8 @@
   abbr: LARP
   itemid: https://www.wikidata.org/wiki/Q216749
   sameAs: https://en.wikipedia.org/wiki/Live_action_role-playing_game
-  description: form of role-playing game where the participants physically act out their
-    characters' actions
+  description: form of role-playing game where the participants physically act out
+    their characters' actions
 - title: Living Card Game
   key: LCG
   abbr: LCG
@@ -1605,8 +1614,8 @@
   itemid: https://www.wikidata.org/wiki/Q2539
   tag: machine learning
   sameAs: https://en.wikipedia.org/wiki/Machine_learning
-  description: Scientific study of algorithms and statistical models that computer systems
-    use to perform tasks without explicit instructions
+  description: Scientific study of algorithms and statistical models that computer
+    systems use to perform tasks without explicit instructions
 - title: Macintosh Operating System X
   key: OSX
   itemid: https://www.wikidata.org/wiki/Q14116
@@ -1785,20 +1794,21 @@
   abbr: NDA
   itemid: https://www.wikidata.org/wiki/Q1053818
   description: contractual agreement not to disclose specified information
+  sameAs: https://en.wikipedia.org/wiki/Non-disclosure_agreement
 - title: Non-Player Character
   key: NPC
   abbr: NPC
   itemid: https://www.wikidata.org/wiki/Q466466
   sameAs: https://en.wikipedia.org/wiki/Non-player_character
-  description: fictional character in a role-playing or video game that cannot be played
-    or controlled by a real-world person
+  description: fictional character in a role-playing or video game that cannot be
+    played or controlled by a real-world person
 - title: Non-Player Characters
   key: NPCS
   itemid: https://www.wikidata.org/wiki/Q466466
   abbr: NPCs
   sameAs: https://en.wikipedia.org/wiki/Non-player_character
-  description: fictional character in a role-playing or video game that cannot be played
-    or controlled by a real-world person
+  description: fictional character in a role-playing or video game that cannot be
+    played or controlled by a real-world person
 - title: Note Quite Gaming
   key: NOTE-QUITE-GAMING
   tag: not quite gaming
@@ -1938,8 +1948,8 @@
   itemid: https://www.wikidata.org/wiki/Q12184
   tag: pandemic
   sameAs: https://en.wikipedia.org/wiki/Pandemic
-  description: epidemic of infectious disease that has spread across a large region with
-    global health impact
+  description: epidemic of infectious disease that has spread across a large region
+    with global health impact
 - title: Parental Guidance
   key: PG
   itemid: https://www.wikidata.org/wiki/Q52382294
@@ -2074,8 +2084,8 @@
   itemid: https://www.wikidata.org/wiki/Q9492
   tag: probability
   sameAs: https://en.wikipedia.org/wiki/Probability
-  description: measure of the expectation that an event will occur or a statement is
-    true
+  description: measure of the expectation that an event will occur or a statement
+    is true
 - title: Problem Solving
   key: PROBLEM-SOLVING
   itemid: https://www.wikidata.org/wiki/Q730920
@@ -2127,10 +2137,10 @@
   itemid: https://www.wikidata.org/wiki/Q836575
   abbr: QA
   sameAs: https://en.wikipedia.org/wiki/Quality_assurance
-  description: way of preventing mistakes or defects in manufactured products and avoiding
-    problems when delivering solutions or services to customers; (ISO 9000) part of
-    quality management focused on providing confidence that quality requirements will
-    be fulfilled
+  description: way of preventing mistakes or defects in manufactured products and
+    avoiding problems when delivering solutions or services to customers; (ISO 9000)
+    part of quality management focused on providing confidence that quality requirements
+    will be fulfilled
 - title: Questionaire
   key: QUESTIONAIRE
   tag: questionnaire
@@ -2170,8 +2180,8 @@
   itemid: https://www.wikidata.org/wiki/Q199657
   tag: reading
   sameAs: https://en.wikipedia.org/wiki/Reading
-  description: cognitive process of decoding symbols to derive meaning; a form of language
-    processing
+  description: cognitive process of decoding symbols to derive meaning; a form of
+    language processing
 - title: Real New Mexico
   key: RNM
 - title: Reflex
@@ -2252,8 +2262,8 @@
   itemid: https://www.wikidata.org/wiki/Q160738
   tag: rpg
   sameAs: https://en.wikipedia.org/wiki/Role-playing_game
-  description: game in which players assume the roles of characters in a fictional setting.
-    Use Tabletop role-playing game (Q1643932) for the leasure activity.
+  description: game in which players assume the roles of characters in a fictional
+    setting. Use Tabletop role-playing game (Q1643932) for the leasure activity.
 - title: Rolemaster
   key: ROLEMASTER
   itemid: https://www.wikidata.org/wiki/Q680764
@@ -2350,8 +2360,8 @@
   key: SCHEMA-ORG
   itemid: https://www.wikidata.org/wiki/Q3475322
   sameAs: https://en.wikipedia.org/wiki/Schema.org
-  description: project to create, maintain, and promote schemas for structured data on
-    the Internet, on web pages, in email messages, and beyond
+  description: project to create, maintain, and promote schemas for structured data
+    on the Internet, on web pages, in email messages, and beyond
 - title: School Daze
   key: SCHOOL-DAZE
   itemid: https://rpggeek.com/rpg/18420/school-daze-role-playing-game
@@ -2404,6 +2414,7 @@
   description: cryptographic network protocol for secure data communication, remote
     shell services or command execution and other secure network services between
     two networked computers
+  sameAs: https://en.wikipedia.org/wiki/Secure_Shell_Protocol
 - title: Secure Sockets Layer
   key: SSL
   abbr: SSL
@@ -2536,8 +2547,8 @@
   itemid: https://www.wikidata.org/wiki/Q1312
   tag: spring
   sameAs: https://en.wikipedia.org/wiki/Spring_(season)
-  description: one of the Earth's four temperate seasons, occurring between winter and
-    summer
+  description: one of the Earth's four temperate seasons, occurring between winter
+    and summer
 - title: Square
   key: SQUARE
   itemid: https://www.wikidata.org/wiki/Q7581990?wprov=srpw1_12
@@ -2964,9 +2975,9 @@
   itemid: https://www.wikidata.org/wiki/Q6537379
   tag: walking
   sameAs: https://en.wikipedia.org/wiki/Walking
-  description: one of the main gaits of locomotion among legged animals, typically slower
-    than running and other gaits; characterized by a 'vaulting' movement of the body
-    over the legs, frequently described as an inverted pendulum
+  description: one of the main gaits of locomotion among legged animals, typically
+    slower than running and other gaits; characterized by a 'vaulting' movement of
+    the body over the legs, frequently described as an inverted pendulum
 - title: Wampus County
   key: WAMPUS-COUNTY
   tag: wampus county
@@ -3007,8 +3018,8 @@
   abbr: WYSIWYG
   itemid: https://www.wikidata.org/wiki/Q170542
   sameAs: https://en.wikipedia.org/wiki/WYSIWYG
-  description: display of a document during editing in a form closely corresponding to
-    its appearance when printed or displayed as a finished product
+  description: display of a document during editing in a form closely corresponding
+    to its appearance when printed or displayed as a finished product
 - title: White Fragility
   key: WHITE-FRAGILITY
   tag: white fragility
@@ -3028,8 +3039,8 @@
   itemid: https://www.wikidata.org/wiki/Q1311
   tag: winter
   sameAs: https://en.wikipedia.org/wiki/Winter
-  description: one of the Earth's four temperate seasons, occurring between autumn and
-    spring
+  description: one of the Earth's four temperate seasons, occurring between autumn
+    and spring
 - title: Wisdom
   key: WIS
 - title: Witchburner
