@@ -24,13 +24,13 @@
   key: ACADEMIA
   itemid: https://www.wikidata.org/wiki/Q1211427
   tag: academia
-  describe: community of students and scholars engaged in higher education and research
+  description: community of students and scholars engaged in higher education and research
 - title: Accelerated Mobile Pages
   key: AMP
   abbr: AMP
   itemid: https://www.wikidata.org/wiki/Q25452619
   sameAs: https://en.wikipedia.org/wiki/Accelerated_Mobile_Pages
-  describe: website publishing technology developed by Google
+  description: website publishing technology developed by Google
 - title: Action(s)
   key: ACT
 - title: 'Advanced Dungeons and Dragons: First Edition'
@@ -38,13 +38,13 @@
   mentionAs: AD&D 1E
   abbr: 1E
   itemid: https://www.wikidata.org/wiki/Q64597405
-  describe: tabletop role-playing game AD&D 1st edition
+  description: tabletop role-playing game AD&D 1st edition
 - title: 'Advanced Dungeons and Dragons: Second Edition'
   key: 2E
   mentionAs: AD&D 2E
   abbr: 2E
   itemid: https://www.wikidata.org/wiki/Q64620925
-  describe: tabletop role-playing game AD&D 2nd edition
+  description: tabletop role-playing game AD&D 2nd edition
 - title: Adventure
   key: ADVENTURE
   tag: adventure
@@ -54,13 +54,13 @@
   tag: adventures in middle earth
   abbr: AiME
   sameAs: https://en.wikipedia.org/wiki/Adventures_in_Middle-earth
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Agile
   key: AGILE
   itemid: https://www.wikidata.org/wiki/Q30232
   tag: agile
   sameAs: https://en.wikipedia.org/wiki/Agile_software_development
-  describe: group of iterative and incremental development methods that encourage
+  description: group of iterative and incremental development methods that encourage
     flexible responses to changes and advocate adaptive planning, evolutionary development,
     early delivery, and continual improvement
 - title: Albert Camus
@@ -68,13 +68,13 @@
   itemid: https://www.wikidata.org/wiki/Q34670
   tag: camus
   sameAs: https://en.wikipedia.org/wiki/Albert_Camus
-  describe: Algerian-French author and journalist (1913-1960)
+  description: Algerian-French author and journalist (1913-1960)
 - title: Alignment
   key: AL
   itemid: https://www.wikidata.org/wiki/Q2722365
   abbr: Al
   sameAs: https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons)
-  describe: way of categorizing the ethical and moral perspective of characters in
+  description: way of categorizing the ethical and moral perspective of characters in
     the Dungeons & Dragons role-playing game
 - title: Altdorf
   key: WARHAMMER-ALTDORF
@@ -86,31 +86,31 @@
   tag: alternity
   game: ALTERNITY
   sameAs: https://en.wikipedia.org/wiki/Alternity
-  describe: science fiction role-playing game
+  description: science fiction role-playing game
 - title: American Sign Language
   key: ASL
   abbr: ASL
   itemid: https://www.wikidata.org/wiki/Q14759
   sameAs: https://en.wikipedia.org/wiki/American_Sign_Language
-  describe: sign language used predominately in the United States
+  description: sign language used predominately in the United States
 - title: American Standard Code for Information Interchange
   key: ASCII
   mentionAs: ASCII
   abbr: ASCII
   itemid: https://www.wikidata.org/wiki/Q8815
   sameAs: https://en.wikipedia.org/wiki/ASCII
-  describe: American character encoding standard
+  description: American character encoding standard
 - title: Andrew W. Mellon Foundation
   key: ANDREW-W-MELLON-FOUNDATION
   itemid: https://www.wikidata.org/wiki/Q4758812
   sameAs: https://en.wikipedia.org/wiki/Andrew_W._Mellon_Foundation
-  describe: private foundation in New York City
+  description: private foundation in New York City
 - title: 'Android: Netrunner'
   key: NETRUNNER
   itemid: https://www.wikidata.org/wiki/Q4759447
   tag: android netrunner
   sameAs: https://en.wikipedia.org/wiki/Android:_Netrunner
-  describe: Living Card Game
+  description: Living Card Game
 - title: Anglerre
   key: ANGLERRE
   tag: anglerre
@@ -118,7 +118,7 @@
   key: AM
   itemid: https://www.wikidata.org/wiki/Q55313888
   abbr: am
-  describe: period of the day after midnight and before noon
+  description: period of the day after midnight and before noon
 - title: Apocalypse Galactica
   key: APOCALYPSE-GALACTICA
   tag: apocalypse galactica
@@ -128,7 +128,7 @@
   itemid: https://www.wikidata.org/wiki/Q16382540
   tag: apocalypse world
   sameAs: https://en.wikipedia.org/wiki/Apocalypse_World
-  describe: tabletop role-playing game (rpg family and 1st ed.)
+  description: tabletop role-playing game (rpg family and 1st ed.)
 - title: 'Apocalypse World: Dark Ages'
   key: AW-DARK-AGES
   game: AW-DARK-AGES
@@ -144,14 +144,14 @@
   mentionAs: API
   itemid: https://www.wikidata.org/wiki/Q165194
   sameAs: https://en.wikipedia.org/wiki/API
-  describe: set of subroutine definitions, protocols, and tools for building software
+  description: set of subroutine definitions, protocols, and tools for building software
     and applications
 - title: Armor Class
   key: AC
   abbr: AC
   itemid: https://www.wikidata.org/wiki/Q4793703
   sameAs: https://en.wikipedia.org/wiki/Armor_class
-  describe: derived statistic of RPG character
+  description: derived statistic of RPG character
 - title: Armor Hit
   key: AH
 - title: Armor Penetration
@@ -164,7 +164,7 @@
   tag: ars magica
   game: ARS-MAGICA
   sameAs: https://en.wikipedia.org/wiki/Ars_Magica
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Artha
   key: ARTHA
   tag: artha
@@ -175,20 +175,20 @@
   itemid: https://www.wikidata.org/wiki/Q25933185
   abbr: AI
   sameAs: https://en.wikipedia.org/wiki/Artificial_intelligence_in_fiction
-  describe: artificial intelligence as depicted in works of fiction
+  description: artificial intelligence as depicted in works of fiction
 - title: Arts and Crafts
   key: ARTS-AND-CRAFTS
   itemid: https://www.wikidata.org/wiki/Q810592
   tag: arts and crafts
   sameAs: https://en.wikipedia.org/wiki/Arts_and_crafts
-  describe: hobby using hands to make small-scale objects
+  description: hobby using hands to make small-scale objects
 - title: Atom Syndication Format
   key: ATOM-FEED
   mentionAs: Atom
   itemid: https://www.wikidata.org/wiki/Q267956
   abbr: Atom
   sameAs: https://en.wikipedia.org/wiki/Atom_(Web_standard)
-  describe: Atom Syndication Format (XML)-used for web feeds                                                                    Atom
+  description: Atom Syndication Format (XML)-used for web feeds                                                                    Atom
     Publishing Protocol (HTTP)-protocol for creating and updating web resources
 - title: Atom text editor
   key: ATOM
@@ -197,7 +197,7 @@
   tag: atom
   abbr: Atom
   sameAs: https://en.wikipedia.org/wiki/Atom_(text_editor)
-  describe: free and open-source text and source code editor
+  description: free and open-source text and source code editor
 - title: Attack
   key: ATK
 - title: Attack Value
@@ -211,7 +211,7 @@
   offer: https://www.drivethrurpg.com/product/144526/Barbarians-of-Lemuria-Mythic-Edition?affiliate_id=318171
   tag: barbarians of lemuria
   game: BARBARIANS-OF-LEMURIA
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Barrel Rider Games
   key: BRG
 - title: Barrowmaze Complete
@@ -231,13 +231,13 @@
   game: BASIC-FANTASY-RPG
   abbr: BFRPG
   sameAs: https://en.wikipedia.org/wiki/Basic_Fantasy
-  describe: OSR tabletop role-playing game
+  description: OSR tabletop role-playing game
 - title: Battletech
   key: BATTLETECH
   itemid: https://www.wikidata.org/wiki/Q810983
   tag: battletech
   sameAs: https://en.wikipedia.org/wiki/BattleTech
-  describe: wargaming and science fiction franchise
+  description: wargaming and science fiction franchise
 - title: Beliefs, Instincts, and Traits
   key: BITS
   abbr: BITs
@@ -247,13 +247,13 @@
   key: BWB
   itemid: https://www.wikidata.org/wiki/Q4898566
   sameAs: https://en.wikipedia.org/wiki/Better_World_Books
-  describe: online used book seller
+  description: online used book seller
 - title: Birthright
   key: BIRTHRIGHT
   itemid: https://www.wikidata.org/wiki/Q2384770
   tag: birthright
   sameAs: https://en.wikipedia.org/wiki/Birthright_(campaign_setting)
-  describe: Dungeons & Dragons campaign setting
+  description: Dungeons & Dragons campaign setting
 - title: Black and White
   key: B&W
 - title: Black Author
@@ -273,17 +273,17 @@
   game: BLADES-IN-THE-DARK
   abbr: BitD
   sameAs: https://en.wikipedia.org/wiki/Blades_in_the_Dark
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Blogging
   key: BLOGGING
   itemid: https://www.wikidata.org/wiki/Q21124681
   tag: blogging
-  describe: action of writing articles or maintaining a weblog
+  description: action of writing articles or maintaining a weblog
 - title: Blogging Engine
   key: BLOGGING-ENGINE
   itemid: https://www.wikidata.org/wiki/Q1810858
   tag: blogging engine
-  describe: software designed to simplify creating and maintaining weblogs
+  description: software designed to simplify creating and maintaining weblogs
 - title: 'Bloodstone: H-Series'
   key: BLOODSTONE
   itemid: https://rpggeek.com/rpgseries/223/h-bloodstone-pass-saga
@@ -294,14 +294,14 @@
   key: BLUEBIRD
   itemid: https://www.wikidata.org/wiki/Q853286
   sameAs: https://en.wikipedia.org/wiki/Bluebird
-  describe: group of medium-sized, mostly insectivorous or omnivorous birds of North
+  description: group of medium-sized, mostly insectivorous or omnivorous birds of North
     and Central America, in the genus Sialia of the thrush family
 - title: Board Game
   key: BOARD-GAME
   itemid: https://www.wikidata.org/wiki/Q131436
   tag: boardgame
   sameAs: https://en.wikipedia.org/wiki/Board_game
-  describe: game that involves counters or pieces moved or placed on a pre-marked
+  description: game that involves counters or pieces moved or placed on a pre-marked
     surface or "board", according to a set of rules
 - title: Bonds, Ideals, Traits, and Flaws
   key: BITFS
@@ -313,7 +313,7 @@
   key: BROWN-THRASHER
   itemid: https://www.wikidata.org/wiki/Q928134
   sameAs: https://en.wikipedia.org/wiki/Brown_thrasher
-  describe: species of bird
+  description: species of bird
 - title: 'Bulldogs: Sci-Fi That Kicks Ass'
   key: BULLDOGS
   itemid: https://rpggeek.com/rpgfamily/11030/bulldogs
@@ -333,7 +333,7 @@
   contentDisclaimers:
   - lukecrane
   sameAs: https://en.wikipedia.org/wiki/Burning_Empires_(role-playing_game)
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Burning Wheel Codex
   key: BURNING-WHEEL-CODEX
   itemid: https://rpggeek.com/rpgitem/191252/burning-wheel-codex
@@ -351,7 +351,7 @@
   contentDisclaimers:
   - lukecrane
   sameAs: https://en.wikipedia.org/wiki/The_Burning_Wheel
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Burning Wheel Headquarters
   key: BWHQ
   contentDisclaimers:
@@ -363,7 +363,7 @@
   itemid: https://www.wikidata.org/wiki/Q327988
   tag: burnout
   sameAs: https://en.wikipedia.org/wiki/Occupational_burnout
-  describe: type of work-related stress, with symptoms characterized by feelings of
+  description: type of work-related stress, with symptoms characterized by feelings of
     energy depletion or exhaustion; increased mental distance from one’s job, or feelings
     of negativism or cynicism related to one's job; and reduced professional efficacy
 - title: Call of Cthulhu
@@ -372,13 +372,13 @@
   tag: call of cthulhu
   abbr: CoC
   sameAs: https://en.wikipedia.org/wiki/Call_of_Cthulhu_(role-playing_game)
-  describe: horror tabletop role-playing game (rpg family and 1st ed.)
+  description: horror tabletop role-playing game (rpg family and 1st ed.)
 - title: Campaign
   key: CAMPAIGN
   itemid: https://www.wikidata.org/wiki/Q2608176
   tag: campaign
   sameAs: https://en.wikipedia.org/wiki/Campaign_(role-playing_games)
-  describe: role-playing game term
+  description: role-playing game term
 - title: Campaign Notes
   key: CAMPAIGN-NOTES
   tag: campaign notes
@@ -393,7 +393,7 @@
   itemid: https://www.wikidata.org/wiki/Q4418079
   tag: campaign setting
   sameAs: https://en.wikipedia.org/wiki/Campaign_setting
-  describe: fictional world which serves as a setting for a role-playing game or wargame
+  description: fictional world which serves as a setting for a role-playing game or wargame
     campaign
 - title: 'Campaign: Burning Sanctuary'
   key: BURNING-SANCTUARY
@@ -419,13 +419,13 @@
   key: CARCOSA
   itemid: https://www.wikidata.org/wiki/Q68393330
   tag: carcosa
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Card Game
   key: CARD-GAME
   itemid: https://www.wikidata.org/wiki/Q142714
   tag: card game
   sameAs: https://en.wikipedia.org/wiki/Card_game
-  describe: game using playing cards as the primary device
+  description: game using playing cards as the primary device
 - title: Carroburg
   key: WARHAMMER-CARROBURG
   itemid: https://whfb.lexicanum.com/wiki/Carroburg
@@ -434,14 +434,14 @@
   itemid: https://www.wikidata.org/wiki/Q42515
   tag: cartography
   sameAs: https://en.wikipedia.org/wiki/Cartography
-  describe: study of making maps
+  description: study of making maps
 - title: Cascading Stylesheet
   key: CSS
   abbr: CSS
   mentionAs: CSS
   itemid: https://www.wikidata.org/wiki/Q46441
   sameAs: https://en.wikipedia.org/wiki/CSS
-  describe: declarative language for styling
+  description: declarative language for styling
 - title: Caster Level
   key: CL
   abbr: CL
@@ -450,7 +450,7 @@
   itemid: https://www.wikidata.org/wiki/Q25267
   abbr: C
   sameAs: https://en.wikipedia.org/wiki/Celsius
-  describe: SI unit of Celsius temperature
+  description: SI unit of Celsius temperature
 - title: Cepheus Engine
   key: CEPHEUS-ENGINE
   itemid: https://rpggeek.com/rpg/38235/cepheus-engine-system
@@ -474,7 +474,7 @@
   itemid: https://www.wikidata.org/wiki/Q116348
   tag: change management
   sameAs: https://en.wikipedia.org/wiki/Change_management
-  describe: collective term for all approaches to prepare, support, and help individuals,
+  description: collective term for all approaches to prepare, support, and help individuals,
     teams, and organizations in making organizational change
 - title: Chaotic
   key: CHAOTIC
@@ -484,7 +484,7 @@
   itemid: https://www.wikidata.org/wiki/Q5073735
   tag: character creation
   sameAs: https://en.wikipedia.org/wiki/Character_creation
-  describe: process of defining a game character
+  description: process of defining a game character
 - title: Character Funnel
   key: CHARACTER-FUNNEL
   tag: character funnel
@@ -515,7 +515,7 @@
   itemid: https://www.wikidata.org/wiki/Q1107019
   tag: cognitive load
   sameAs: https://en.wikipedia.org/wiki/Cognitive_load
-  describe: 'effort being used in the working memory, which can be differentiated
+  description: 'effort being used in the working memory, which can be differentiated
     into three types: intrinsic, extraneous, and germane'
 - title: Combat as Sport
   key: COMBAT-AS-SPORT
@@ -529,7 +529,7 @@
   abbr: CSV
   itemid: https://www.wikidata.org/wiki/Q935809
   sameAs: https://en.wikipedia.org/wiki/Comma-separated_values
-  describe: file format used to store data
+  description: file format used to store data
 - title: Command Line Integration
   key: CLI
   abbr: CLI
@@ -540,13 +540,13 @@
   itemid: https://www.wikidata.org/wiki/Q177634
   tag: community
   sameAs: https://en.wikipedia.org/wiki/Community
-  describe: social unit of human organisms who share common values
+  description: social unit of human organisms who share common values
 - title: Computer Role Playing Game
   key: CRPG
   abbr: CRPG
   itemid: https://www.wikidata.org/wiki/Q744038
   sameAs: https://en.wikipedia.org/wiki/Role-playing_video_game
-  describe: video game genre
+  description: video game genre
 - title: Conflict
   key: CONFLICT
   tag: conflict
@@ -557,13 +557,13 @@
   itemid: https://www.wikidata.org/wiki/Q72588
   abbr: CDN
   sameAs: https://en.wikipedia.org/wiki/Content_delivery_network
-  describe: umbrella term spanning different types of content delivery services
+  description: umbrella term spanning different types of content delivery services
 - title: Content Management System
   key: CMS
   abbr: CMS
   itemid: https://www.wikidata.org/wiki/Q131093
   sameAs: https://en.wikipedia.org/wiki/Content_management_system
-  describe: software
+  description: software
 - title: Content Warning
   key: CONTENT-WARNING
   tag: content warning
@@ -576,7 +576,7 @@
   verboseTitle: Continuous Process Improvement
   tag: continuous improvement
   sameAs: https://en.wikipedia.org/wiki/Continual_improvement_process
-  describe: ongoing effort to improve products, services, or processes, by constantly
+  description: ongoing effort to improve products, services, or processes, by constantly
     evaluating and improving in the light of their efficiency, effectiveness and flexibility
 - title: Conversion
   key: CONVERSION
@@ -587,7 +587,7 @@
   tag: covid19
   abbr: Covid
   sameAs: https://en.wikipedia.org/wiki/COVID-19
-  describe: respiratory syndrome and infectious disease in humans, caused by SARS
+  description: respiratory syndrome and infectious disease in humans, caused by SARS
     coronavirus 2
 - title: Creative Commons
   key: CC
@@ -595,7 +595,7 @@
   tag: creative commons
   abbr: CC
   sameAs: https://en.wikipedia.org/wiki/Creative_Commons
-  describe: organisation creating copyright licenses for the public release of creative
+  description: organisation creating copyright licenses for the public release of creative
     works
 - title: Credits
   key: CREDITS
@@ -605,7 +605,7 @@
   itemid: https://www.wikidata.org/wiki/Q348303
   tag: crowdfunding
   sameAs: https://en.wikipedia.org/wiki/Crowdfunding
-  describe: collection of finance from backers
+  description: collection of finance from backers
 - title: Cthulhu
   key: CTHULHU
   tag: cthulhu
@@ -616,7 +616,7 @@
   tag: cthulhu dark
   game: CTHULHU-DARK
   abbr: CD
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Custom Moves
   key: CUSTOM-MOVES
   tag: custom moves
@@ -628,13 +628,13 @@
   itemid: https://www.wikidata.org/wiki/Q283916
   abbr: cut
   sameAs: https://en.wikipedia.org/wiki/Cut_(Unix)
-  describe: Unix command line utility
+  description: Unix command line utility
 - title: d20 System
   key: D20SYS
   itemid: https://www.wikidata.org/wiki/Q284471
   abbr: d20
   sameAs: https://en.wikipedia.org/wiki/D20_System
-  describe: role-playing game system
+  description: role-playing game system
 - title: D66
   key: D66
   verboseTitle: Two six-dice, one signifying the "tens" digit, the other the "ones"
@@ -651,18 +651,18 @@
   tag: dark sun
   game: DARK-SUN
   sameAs: https://en.wikipedia.org/wiki/Dark_Sun
-  describe: Dungeons & Dragons campaign setting
+  description: Dungeons & Dragons campaign setting
 - title: Data Modeling
   key: DATA-MODELING
   itemid: https://www.wikidata.org/wiki/Q367664
   sameAs: https://en.wikipedia.org/wiki/Data_modeling
-  describe: "(in software engineering) process of creating a data model for an information
+  description: "(in software engineering) process of creating a data model for an information
     system by applying certain formal techniques"
 - title: Dave Arneson
   key: DAVE-ARNESON
   itemid: https://www.wikidata.org/wiki/Q1381
   sameAs: https://en.wikipedia.org/wiki/Dave_Arneson
-  describe: American game designer
+  description: American game designer
 - title: 'Dead Names: Lost Races and Forgotten Ruins'
   key: DEAD-NAMES
   offer: https://www.drivethrurpg.com/product/130967/Dead-Names-Lost-Races-and-Forgotten-Ruins?affiliate_id=318171
@@ -673,13 +673,13 @@
   itemid: https://www.wikidata.org/wiki/Q4
   tag: death
   sameAs: https://en.wikipedia.org/wiki/Death
-  describe: permanent cessation of vital functions
+  description: permanent cessation of vital functions
 - title: Defund the Police
   key: DEFUND-THE-POLICE
   itemid: https://www.wikidata.org/wiki/Q96150192
   tag: defund the police
   sameAs: https://en.wikipedia.org/wiki/Defund_the_police
-  describe: slogan that supports divesting funds from police departments
+  description: slogan that supports divesting funds from police departments
 - title: Deluge
   key: DELUGE
   itemid: https://rpggeek.com/rpgsetting/4500/deluge
@@ -691,14 +691,14 @@
   abbr: DNA
   itemid: https://www.wikidata.org/wiki/Q7430
   sameAs: https://en.wikipedia.org/wiki/DNA
-  describe: molecule that encodes the genetic instructions used in the development
+  description: molecule that encodes the genetic instructions used in the development
     and functioning of all known living organisms and many viruses
 - title: Detective Comics
   key: DCH
   itemid: https://www.wikidata.org/wiki/Q2924461
   abbr: DC
   sameAs: https://en.wikipedia.org/wiki/DC_Comics
-  describe: American comic book publisher
+  description: American comic book publisher
 - title: Dexterity
   key: DEX
 - title: Diaspora
@@ -708,7 +708,7 @@
   tag: diaspora
   game: DIASPORA
   sameAs: https://en.wikipedia.org/wiki/Diaspora_(role-playing_game)
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Dice Modifier
   key: DIM
   abbr: DM
@@ -724,19 +724,19 @@
   itemid: https://www.wikidata.org/wiki/Q93190
   tag: divorce
   sameAs: https://en.wikipedia.org/wiki/Divorce
-  describe: termination of a marital union
+  description: termination of a marital union
 - title: Django
   key: DJANGO
   itemid: https://www.wikidata.org/wiki/Q842014
   abbr: Django
   sameAs: https://en.wikipedia.org/wiki/Django_(web_framework)
-  describe: Python web framework
+  description: Python web framework
 - title: Do It Yourself
   key: DIY
   itemid: https://www.wikidata.org/wiki/Q26384
   abbr: DIY
   sameAs: https://en.wikipedia.org/wiki/Do_it_yourself
-  describe: building, modifying, or repairing something without the aid of experts
+  description: building, modifying, or repairing something without the aid of experts
     or professionals
 - title: 'Do: Pilgrims of the Flying Temple'
   abbr: 'Do: PotFT'
@@ -746,13 +746,13 @@
   tag: 'do: pilgrims of the flying temple'
   game: DO-PILGRIMS-OF-THE-FLYING-TEMPLE
   sameAs: https://en.wikipedia.org/wiki/Do:_Pilgrims_of_the_Flying_Temple
-  describe: tabletop role-playing game and storygame
+  description: tabletop role-playing game and storygame
 - title: Docstring
   key: DOCSTRING
   itemid: https://www.wikidata.org/wiki/Q5287262
   abbr: Docstring
   sameAs: https://en.wikipedia.org/wiki/Docstring
-  describe: special string literal used in source code to provide documentation
+  description: special string literal used in source code to provide documentation
 - title: Doctor of Arcanography
   key: AXD
 - title: Doctor Who
@@ -760,33 +760,33 @@
   itemid: https://www.wikidata.org/wiki/Q34316
   tag: doctor who
   sameAs: https://en.wikipedia.org/wiki/Doctor_Who
-  describe: British science fiction TV series
+  description: British science fiction TV series
 - title: Document Object Model
   key: DOM
   abbr: DOM
   itemid: https://www.wikidata.org/wiki/Q2093
   sameAs: https://en.wikipedia.org/wiki/Document_Object_Model
-  describe: convention for representing and interacting with objects in HTML, XHTML
+  description: convention for representing and interacting with objects in HTML, XHTML
     and XML documents
 - title: Documentation
   key: DOCUMENTATION
   itemid: https://www.wikidata.org/wiki/Q788790
   tag: documentation
   sameAs: https://en.wikipedia.org/wiki/Documentation
-  describe: set of documents providing knowledge
+  description: set of documents providing knowledge
 - title: Dogs in the Vineyard
   key: DITV
   itemid: https://www.wikidata.org/wiki/Q2607653
   tag: dogs in the vineyard
   abbr: DitV
   sameAs: https://en.wikipedia.org/wiki/Dogs_in_the_Vineyard
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Domain Name System
   key: DNS
   abbr: DNS
   itemid: https://www.wikidata.org/wiki/Q8767
   sameAs: https://en.wikipedia.org/wiki/Domain_Name_System
-  describe: hierarchical distributed naming system for computers, services, or any
+  description: hierarchical distributed naming system for computers, services, or any
     resource connected to the Internet or a private network
 - title: Doom of the Savage King
   key: DOOM-OF-THE-SAVAGE-KING
@@ -803,7 +803,7 @@
   itemid: https://www.wikidata.org/wiki/Q36348
   tag: dreams
   sameAs: https://en.wikipedia.org/wiki/Dream
-  describe: imaginary events seen in the mind while sleeping
+  description: imaginary events seen in the mind while sleeping
 - title: Dreams of Adventure
   key: DREAMS-OF-ADVENTURE
   tag: dreams of adventure
@@ -825,7 +825,7 @@
   tag: dungeon crawl classics
   game: DUNGEON-CRAWL-CLASSICS
   sameAs: https://en.wikipedia.org/wiki/Dungeon_Crawl_Classics
-  describe: tabletop role-playing game and modules series
+  description: tabletop role-playing game and modules series
 - title: Dungeon Delving
   key: DUNGEON-DELVING
   tag: dungeon delving
@@ -834,7 +834,7 @@
   abbr: DM
   itemid: https://www.wikidata.org/wiki/Q1773301
   sameAs: https://en.wikipedia.org/wiki/Dungeon_Master
-  describe: role in role-playing game Dungeons & Dragons
+  description: role in role-playing game Dungeons & Dragons
 - title: Dungeon Master's Guide
   key: DMG
   abbr: DMG
@@ -848,7 +848,7 @@
   contentDisclaimers:
   - adamkoebel
   sameAs: https://en.wikipedia.org/wiki/Dungeon_World
-  describe: fantasy tabletop role-playing game
+  description: fantasy tabletop role-playing game
 - title: Dungeoncraft
   key: DUNGEONCRAFT
   tag: dungeoncraft
@@ -856,7 +856,7 @@
   key: DUNGEONS
   itemid: https://www.wikidata.org/wiki/Q69827715
   tag: dungeons
-  describe: localised built or mixed built/natural setting in the context of role-playing
+  description: localised built or mixed built/natural setting in the context of role-playing
     games, in particular Dungeons & Dragons
 - title: Dungeons and Dragons
   key: D&D
@@ -864,7 +864,7 @@
   itemid: https://www.wikidata.org/wiki/Q1375
   tag: dungeons and dragons
   sameAs: https://en.wikipedia.org/wiki/Dungeons_%26_Dragons
-  describe: first fantasy tabletop role-playing game
+  description: first fantasy tabletop role-playing game
 - title: 'Dungeons and Dragons: Basic/Expert'
   abbr: B/X
   key: B/X
@@ -876,27 +876,27 @@
   tag: 5e
   abbr: 5E
   game: 5E
-  describe: tabletop role-playing game D&D edition
+  description: tabletop role-playing game D&D edition
 - title: 'Dungeons and Dragons: Fifth Edition Playtest'
   key: D&D NEXT
   abbr: D&D Next
   itemid: https://www.wikidata.org/wiki/Q64706142
-  describe: tabletop role-playing game D&D Next beta version
+  description: tabletop role-playing game D&D Next beta version
 - title: 'Dungeons and Dragons: Fourth Edition'
   key: 4E
   abbr: 4E
   itemid: https://www.wikidata.org/wiki/Q64706119
-  describe: tabletop role-playing game edition
+  description: tabletop role-playing game edition
 - title: 'Dungeons and Dragons: Original Edition'
   key: 0E
   abbr: 0E
   itemid: https://www.wikidata.org/wiki/Q64596978
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: 'Dungeons and Dragons: Third Edition'
   key: 3E
   abbr: 3E
   itemid: https://www.wikidata.org/wiki/Q64623234
-  describe: tabletop role-playing game D&D 3rd edition
+  description: tabletop role-playing game D&D 3rd edition
 - title: Dwimmermount
   key: DWIMMERMOUNT
   itemid: https://rpggeek.com/rpgitem/137904/dwimmermount-labyrinth-lord
@@ -912,18 +912,18 @@
   key: DYING-EARTH-SAGA
   itemid: https://www.wikidata.org/wiki/Q303490
   sameAs: https://en.wikipedia.org/wiki/Dying_Earth
-  describe: science fantasy saga by Jack Vance
+  description: science fantasy saga by Jack Vance
 - title: Eastern Daylight Time
   key: EDT
   abbr: EDT
   itemid: https://www.wikidata.org/wiki/Q15080196
-  describe: time zone of Eastern Time Zone when observing daylight saving time (UTC−04:00)
+  description: time zone of Eastern Time Zone when observing daylight saving time (UTC−04:00)
 - title: Eberron
   key: EBERRON
   itemid: https://www.wikidata.org/wiki/Q1378808
   tag: eberron
   sameAs: https://en.wikipedia.org/wiki/Eberron
-  describe: fictional world in Dungeons & Dragons
+  description: fictional world in Dungeons & Dragons
 - title: Education
   key: EDU
 - title: Electronic Counter Measures
@@ -938,7 +938,7 @@
   itemid: https://www.wikidata.org/wiki/Q1334586
   abbr: elisp
   sameAs: https://en.wikipedia.org/wiki/Emacs_Lisp
-  describe: dialect of Lisp used in GNU Emacs
+  description: dialect of Lisp used in GNU Emacs
 - title: Emacs
   key: EMACS
   verboseTitle: 'Emacs: Editor MACroS'
@@ -946,14 +946,14 @@
   tag: emacs
   abbr: Emacs
   sameAs: https://en.wikipedia.org/wiki/Emacs
-  describe: family of text editors; first implementation in 1976; for the GNU version,
+  description: family of text editors; first implementation in 1976; for the GNU version,
     see  GNU Emacs (Q1252773)
 - title: Emotional Intelligence
   abbr: EQ
   key: EQ
   itemid: https://www.wikidata.org/wiki/Q191591
   sameAs: https://en.wikipedia.org/wiki/Emotional_intelligence
-  describe: ability to identify, assess, and control the emotions of oneself, of others,
+  description: ability to identify, assess, and control the emotions of oneself, of others,
     and of groups
 - title: Endurance
   key: END
@@ -962,7 +962,7 @@
   itemid: https://www.wikidata.org/wiki/Q5323772
   tag: ennies
   sameAs: https://en.wikipedia.org/wiki/ENnie_Awards
-  describe: set of awards given annually in the field of tabletop role-playing games
+  description: set of awards given annually in the field of tabletop role-playing games
 - title: ePub
   key: EPUB
   verboseTitle: e-book file format standard by the International Digital Publishing
@@ -970,7 +970,7 @@
   abbr: ePub
   itemid: https://www.wikidata.org/wiki/Q475488
   sameAs: https://en.wikipedia.org/wiki/EPUB
-  describe: e-book file format standard by the International Digital Publishing Forum
+  description: e-book file format standard by the International Digital Publishing Forum
 - title: Essay
   key: ESSAY
   tag: essay
@@ -979,7 +979,7 @@
   itemid: https://www.wikidata.org/wiki/Q604973
   abbr: XP
   sameAs: https://en.wikipedia.org/wiki/Experience_point
-  describe: unit of measurement used in tabletop role-playing games (RPGs) and role-playing
+  description: unit of measurement used in tabletop role-playing games (RPGs) and role-playing
     video games to quantify a player character's progression through the game
 - title: Extensible Markup Language
   key: XML
@@ -987,7 +987,7 @@
   abbr: XML
   itemid: https://www.wikidata.org/wiki/Q2115
   sameAs: https://en.wikipedia.org/wiki/XML
-  describe: markup language developed by the W3C for encoding of data
+  description: markup language developed by the W3C for encoding of data
 - title: Extra Vehicular Activity
   abbr: EVA
   key: EVA
@@ -1006,14 +1006,14 @@
   itemid: https://www.wikidata.org/wiki/Q132311
   tag: fantasy
   sameAs: https://en.wikipedia.org/wiki/Fantasy
-  describe: genre of speculative fiction set in a fictional universe, often inspired
+  description: genre of speculative fiction set in a fictional universe, often inspired
     by real world myth and folklore
 - title: Faster than Light
   key: FTL
   abbr: FtL
   itemid: https://www.wikidata.org/wiki/Q44207
   sameAs: https://en.wikipedia.org/wiki/Faster-than-light
-  describe: propagation of information or matter faster than the speed of light
+  description: propagation of information or matter faster than the speed of light
 - title: Fate Core
   key: FATE
   itemid: https://www.wikidata.org/wiki/Q1350935
@@ -1021,13 +1021,13 @@
   tag: fate core
   game: FATE
   sameAs: https://en.wikipedia.org/wiki/Fate_(role-playing_game_system)
-  describe: generic tabletop role-playing game system
+  description: generic tabletop role-playing game system
 - title: Feet
   key: FT
   verboseTitle: Feet (unit of measurement)
   itemid: https://www.wikidata.org/wiki/Q3710
   sameAs: https://en.wikipedia.org/wiki/Foot_(unit)
-  describe: customary unit of length
+  description: customary unit of length
 - title: Fiasco
   key: FIASCO
   itemid: https://www.wikidata.org/wiki/Q3744369
@@ -1035,7 +1035,7 @@
   tag: fiasco
   game: FIASCO
   sameAs: https://en.wikipedia.org/wiki/Fiasco_(role-playing_game)
-  describe: tabletop role-playing game and storygame
+  description: tabletop role-playing game and storygame
 - title: Fields of Related Knowledge
   key: FORKS
   verboseTitle: Fields of Related Knowledge
@@ -1051,7 +1051,7 @@
   itemid: https://www.wikidata.org/wiki/Q70791655
   offer: https://www.drivethrurpg.com/product/264584/Five-Torches-Deep?affiliate_id=318171
   game: FIVE-TORCHES-DEEP
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: For My Children
   key: FOR-MY-CHILDREN
   tag: for my children
@@ -1062,7 +1062,7 @@
   key: FORK
   itemid: https://www.wikidata.org/wiki/Q332903
   sameAs: https://en.wikipedia.org/wiki/Fork_(software_development)
-  describe: new program, and line of software development, derived from an existing
+  description: new program, and line of software development, derived from an existing
     one
 - title: Fortitude
   key: FORT
@@ -1075,7 +1075,7 @@
   itemid: https://www.wikidata.org/wiki/Q506883
   tag: open source
   sameAs: https://en.wikipedia.org/wiki/Free_and_open-source_software
-  describe: software that is both free (as in freedom) and open source
+  description: software that is both free (as in freedom) and open source
 - title: Friendly Local Game Store
   key: FLGS
 - title: Friendship
@@ -1083,19 +1083,19 @@
   itemid: https://www.wikidata.org/wiki/Q491
   tag: friendship
   sameAs: https://en.wikipedia.org/wiki/Friendship
-  describe: relationship between people who have mutual affection for each other
+  description: relationship between people who have mutual affection for each other
 - title: Fritz Leiber
   key: FRITZ-LEIBER
   itemid: https://www.wikidata.org/wiki/Q313185
   tag: leiber
   sameAs: https://en.wikipedia.org/wiki/Fritz_Leiber
-  describe: American writer of fantasy, horror, and science fiction
+  description: American writer of fantasy, horror, and science fiction
 - title: Game Balance
   key: GAME-BALANCE
   itemid: https://www.wikidata.org/wiki/Q4197737
   tag: game balance
   sameAs: https://en.wikipedia.org/wiki/Game_balance
-  describe: in game design, tuning a game's rules
+  description: in game design, tuning a game's rules
 - title: Game Day
   key: GAME-DAY
   tag: game day
@@ -1104,14 +1104,14 @@
   itemid: https://www.wikidata.org/wiki/Q858057
   tag: game design
   sameAs: https://en.wikipedia.org/wiki/Game_design
-  describe: game development process of designing the content and rules of a game
+  description: game development process of designing the content and rules of a game
 - title: Game Master
   key: GM
   abbr: GM
   itemid: https://www.wikidata.org/wiki/Q930701
   tag: gamemastering
   sameAs: https://en.wikipedia.org/wiki/Gamemaster
-  describe: person who acts as an organizer in role-playing games
+  description: person who acts as an organizer in role-playing games
 - title: Game Master Advice
   key: GAME-MASTER-ADVICE
   tag: game master advice
@@ -1143,18 +1143,18 @@
   key: GARY-GYGAX
   itemid: https://www.wikidata.org/wiki/Q25550430
   sameAs: https://en.wikipedia.org/wiki/Gary_Gygax
-  describe: American writer and game designer
+  description: American writer and game designer
 - title: Gen Con
   key: GEN-CON
   itemid: https://www.wikidata.org/wiki/Q550430
   tag: gencon
   sameAs: https://en.wikipedia.org/wiki/Gen_Con
-  describe: tabletop game convention in North America
+  description: tabletop game convention in North America
 - title: Gene Wolfe
   key: GENE-WOLFE
   itemid: https://www.wikidata.org/wiki/Q361149
   sameAs: https://en.wikipedia.org/wiki/Gene_Wolfe
-  describe: American science fiction and fantasy writer
+  description: American science fiction and fantasy writer
 - title: General Games
   key: GENERAL-GAMES
   tag: general games
@@ -1172,20 +1172,20 @@
   itemid: https://www.wikidata.org/wiki/Q186055
   abbr: git
   sameAs: https://en.wikipedia.org/wiki/Git
-  describe: distributed version control system
+  description: distributed version control system
 - title: GNU
   key: GNU
   verboseTitle: GNU's Not Unix
   abbr: GNU
   itemid: https://www.wikidata.org/wiki/Q7598
   sameAs: https://en.wikipedia.org/wiki/GNU_Project
-  describe: free software project
+  description: free software project
 - title: GNU General Public License
   key: GPL
   abbr: GPL
   itemid: https://www.wikidata.org/wiki/Q7603
   sameAs: https://en.wikipedia.org/wiki/GNU_General_Public_License
-  describe: set of free software licenses
+  description: set of free software licenses
 - title: Gold Piece
   key: GP
   abbr: gp
@@ -1198,7 +1198,7 @@
   itemid: https://www.wikidata.org/wiki/Q13231451
   tag: google hangouts
   sameAs: https://en.wikipedia.org/wiki/Google_Hangouts
-  describe: communication software developed by Google
+  description: communication software developed by Google
 - title: Goshen Game Day
   key: GOSHEN-GAME-DAY
   tag: goshen game day
@@ -1207,14 +1207,14 @@
   abbr: GUI
   itemid: https://www.wikidata.org/wiki/Q782543
   sameAs: https://en.wikipedia.org/wiki/Graphical_user_interface
-  describe: user interface allowing interaction through graphical icons and visual
+  description: user interface allowing interaction through graphical icons and visual
     indicators
 - title: GUMSHOE System
   key: GUMSHOE-SYSTEM
   itemid: https://www.wikidata.org/wiki/Q3756321
   tag: gumshoe
   sameAs: https://en.wikipedia.org/wiki/Gumshoe_System
-  describe: role-playing game system
+  description: role-playing game system
 - title: Hack
   key: HACK
   tag: hack
@@ -1223,7 +1223,7 @@
   itemid: https://www.wikidata.org/wiki/Q37707
   tag: haiku
   sameAs: https://en.wikipedia.org/wiki/Haiku
-  describe: very short form of Japanese poetry
+  description: very short form of Japanese poetry
 - title: Head Quarters
   key: HQ
   abbr: HQ
@@ -1232,7 +1232,7 @@
   itemid: https://www.wikidata.org/wiki/Q30289521
   sameAs: https://library.nd.edu
   abbr: HL
-  describe: academic library system of the University of Notre Dame, Indiana
+  description: academic library system of the University of Notre Dame, Indiana
 - title: Hit Die
   key: HD
   abbr: HD
@@ -1241,13 +1241,13 @@
   abbr: HP
   itemid: https://www.wikidata.org/wiki/Q668136
   sameAs: https://en.wikipedia.org/wiki/Health_(game_terminology)
-  describe: gaming-related attribute
+  description: gaming-related attribute
 - title: Hive
   key: HIVE
   itemid: https://www.wikidata.org/wiki/Q1399188
   tag: hive
   sameAs: https://en.wikipedia.org/wiki/Hive_(game)
-  describe: strategic board game
+  description: strategic board game
 - title: Hollowpoint
   key: HOLLOWPOINT
   itemid: https://rpggeek.com/rpg/11213/hollowpoint
@@ -1270,7 +1270,7 @@
   tag: houses of the blooded
   game: HOUSES-OF-THE-BLOODED
   sameAs: https://en.wikipedia.org/wiki/Houses_of_the_Blooded
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Hugo
   key: HUGO
   verboseTitle: 'Hugo: Static Site Generator'
@@ -1278,20 +1278,20 @@
   tag: hugo
   abbr: Hugo
   sameAs: https://en.wikipedia.org/wiki/Hugo_(software)
-  describe: static site generator written in Go
+  description: static site generator written in Go
 - title: Human Resources
   key: HR
   itemid: https://www.wikidata.org/wiki/Q5467169
   abbr: HR
   sameAs: https://en.wikipedia.org/wiki/Human_resources
-  describe: professional in human resources
+  description: professional in human resources
 - title: Hypertext Markup Language
   key: HTML
   abbr: HTML
   mentionAs: HTML
   itemid: https://www.wikidata.org/wiki/Q8811
   sameAs: https://en.wikipedia.org/wiki/HTML
-  describe: family of markup languages for displaying information viewable in a web
+  description: family of markup languages for displaying information viewable in a web
     browser
 - title: Hypertext Transfer Protocol
   key: HTTP
@@ -1299,7 +1299,7 @@
   mentionAs: HTTP
   itemid: https://www.wikidata.org/wiki/Q8777
   sameAs: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
-  describe: application protocol for distributed, collaborative, hypermedia information
+  description: application protocol for distributed, collaborative, hypermedia information
     systems
 - title: HârnMaster
   key: HARNMASTER
@@ -1308,37 +1308,37 @@
   tag: harnmaster
   game: HARNMASTER
   sameAs: https://en.wikipedia.org/wiki/H%C3%A2rn
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: I Owe You
   key: IOU
   abbr: IOU
   itemid: https://www.wikidata.org/wiki/Q534910
   sameAs: https://en.wikipedia.org/wiki/IOU
-  describe: informal document acknowledging debt
+  description: informal document acknowledging debt
 - title: IBM System iSeries
   key: AS400
   itemid: https://www.wikidata.org/wiki/Q433406
   abbr: AS/400
   sameAs: https://en.wikipedia.org/wiki/IBM_System_i
-  describe: generation of midrange computer systems
+  description: generation of midrange computer systems
 - title: Illinois
   key: IL
   abbr: IL
   itemid: https://www.wikidata.org/wiki/Q1204
   sameAs: https://en.wikipedia.org/wiki/Illinois
-  describe: state of the United States of America
+  description: state of the United States of America
 - title: Improvised Explosive Device
   key: IED
   itemid: https://www.wikidata.org/wiki/Q1249453
   abbr: IED
   sameAs: https://en.wikipedia.org/wiki/Improvised_explosive_device
-  describe: homemade bomb
+  description: homemade bomb
 - title: Indiana
   key: IN
   abbr: IN
   itemid: https://www.wikidata.org/wiki/Q1415
   sameAs: https://en.wikipedia.org/wiki/Indiana
-  describe: state of the United States of America
+  description: state of the United States of America
 - title: Indieweb
   key: INDIEWEB
   tag: indieweb
@@ -1346,7 +1346,7 @@
   key: INIT
   itemid: https://www.wikidata.org/wiki/Q2413723
   sameAs: https://en.wikipedia.org/wiki/Initiative_(role-playing_games)
-  describe: determiner of who goes first in an RPG
+  description: determiner of who goes first in an RPG
 - title: Initiative Systems
   key: INITIATIVE-SYSTEMS
   tag: initiative systems
@@ -1357,13 +1357,13 @@
   tag: inspectres
   game: INSPECTRES
   sameAs: https://en.wikipedia.org/wiki/InSpectres
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Integrated Development Environment
   key: IDE
   abbr: IDE
   itemid: https://www.wikidata.org/wiki/Q13741
   sameAs: https://en.wikipedia.org/wiki/Integrated_development_environment
-  describe: software application used to develop software
+  description: software application used to develop software
 - title: Intellect
   key: INTL
   abbr: Int
@@ -1375,13 +1375,13 @@
   itemid: https://www.wikidata.org/wiki/Q37156
   abbr: IBM
   sameAs: https://en.wikipedia.org/wiki/IBM
-  describe: American multinational technology and consulting corporation
+  description: American multinational technology and consulting corporation
 - title: International Standard Book Number
   key: ISBN
   abbr: ISBN
   itemid: https://www.wikidata.org/wiki/Q33057
   sameAs: https://en.wikipedia.org/wiki/International_Standard_Book_Number
-  describe: unique numeric book identifier
+  description: unique numeric book identifier
 - title: Interview
   key: INTERVIEW
   tag: interview
@@ -1390,7 +1390,7 @@
   itemid: https://www.wikidata.org/wiki/Q640448
   abbr: IVv
   sameAs: https://en.wikipedia.org/wiki/Intravenous_therapy
-  describe: Delivery of fluids directly into the circulatory system.
+  description: Delivery of fluids directly into the circulatory system.
 - title: Intrusion Countermeasures Electronics
   key: ICE
   abbr: ICE
@@ -1401,7 +1401,7 @@
   key: IR
   itemid: https://www.wikidata.org/wiki/Q1065413
   sameAs: https://en.wikipedia.org/wiki/Institutional_repository
-  describe: archive of publications by an institution's staff
+  description: archive of publications by an institution's staff
 - title: Inverse World
   key: INVERSE-WORLD
   itemid: https://rpggeek.com/rpgitem/142766/inverse-world-dungeon-world-sourcebook
@@ -1412,38 +1412,38 @@
   key: JACK-VANCE
   itemid: https://www.wikidata.org/wiki/Q312632
   sameAs: https://en.wikipedia.org/wiki/Jack_Vance
-  describe: American mystery and speculative fiction writer
+  description: American mystery and speculative fiction writer
 - title: Javascript
   key: JS
   abbr: JS
   itemid: https://www.wikidata.org/wiki/Q2005
   tag: javascript
   sameAs: https://en.wikipedia.org/wiki/JavaScript
-  describe: programming language
+  description: programming language
 - title: Javascript Object Notation
   key: JSON
   abbr: JSON
   itemid: https://www.wikidata.org/wiki/Q2063
   sameAs: https://en.wikipedia.org/wiki/JSON
-  describe: text-based open standard designed for human-readable data interchange
+  description: text-based open standard designed for human-readable data interchange
 - title: Javascript Object Notation for Linking Data
   key: JSON+LD
   itemid: https://www.wikidata.org/wiki/Q6108942
   abbr: JSON+LD
   sameAs: https://en.wikipedia.org/wiki/JSON-LD
-  describe: a method of encoding Linked Data using JSON
+  description: a method of encoding Linked Data using JSON
 - title: Jekyll
   key: JEKYLL
   itemid: https://www.wikidata.org/wiki/Q17067385
   verboseTitle: 'Jekyll: Ruby-based Static Site Generator'
   sameAs: https://en.wikipedia.org/wiki/Jekyll_(software)
-  describe: Ruby-based static website generator
+  description: Ruby-based static website generator
 - title: John F. Kennedy
   key: JFK
   abbr: JFK
   itemid: https://www.wikidata.org/wiki/Q9696
   sameAs: https://en.wikipedia.org/wiki/John_F._Kennedy
-  describe: 35th president of the United States (1917-1963)
+  description: 35th president of the United States (1917-1963)
 - title: Jump Drive
   key: J-DRIVE
 - title: Jungle Speed
@@ -1451,7 +1451,7 @@
   itemid: https://www.wikidata.org/wiki/Q17270
   tag: jungle speed
   sameAs: https://en.wikipedia.org/wiki/Jungle_Speed
-  describe: card game
+  description: card game
 - title: Just Arrived
   key: JUST-ARRIVED
   tag: just arrived
@@ -1463,7 +1463,7 @@
   itemid: https://www.wikidata.org/wiki/Q47737
   itemtype: Person
   sameAs: https://en.wikipedia.org/wiki/Kahlil_Gibran
-  describe: Lebanese-American writer, poet, and painter (1883–1931)
+  description: Lebanese-American writer, poet, and painter (1883–1931)
 - title: Keith Baker Presents
   key: KB PRESENTS
 - title: Kenku
@@ -1471,36 +1471,36 @@
   itemid: https://www.wikidata.org/wiki/Q6389420
   tag: kenku
   sameAs: https://en.wikipedia.org/wiki/Kenku
-  describe: a fictional race of creatures in the Dungeons & Dragons fantasy roleplaying
+  description: a fictional race of creatures in the Dungeons & Dragons fantasy roleplaying
     game
 - title: Kevin Crawford
   key: KEVIN-CRAWFORD
   itemid: https://www.wikidata.org/wiki/Q67963897
-  describe: role-playing game designer
+  description: role-playing game designer
 - title: Kickstarter
   key: KICKSTARTER
   itemid: https://www.wikidata.org/wiki/Q34755
   tag: kickstarter
   sameAs: https://en.wikipedia.org/wiki/Kickstarter
-  describe: crowdfunding platform
+  description: crowdfunding platform
 - title: KiloByte
   key: KB
   itemid: https://www.wikidata.org/wiki/Q79726
   abbr: kB
   sameAs: https://en.wikipedia.org/wiki/Kilobyte
-  describe: multiple of the unit byte
+  description: multiple of the unit byte
 - title: Kilogram
   key: KG
   itemid: https://www.wikidata.org/wiki/Q11570
   abbr: kg
   sameAs: https://en.wikipedia.org/wiki/Kilogram
-  describe: SI unit of mass
+  description: SI unit of mass
 - title: Kilometer
   key: KM
   itemid: https://www.wikidata.org/wiki/Q828224
   abbr: km
   sameAs: https://en.wikipedia.org/wiki/Kilometre
-  describe: unit of length equal to 1,000 meters
+  description: unit of length equal to 1,000 meters
 - title: Kilometers per Hour
   key: KPH
   abbr: kph
@@ -1513,7 +1513,7 @@
   offer: https://www.drivethrurpg.com/product/63737/Knockspell-Magazine-1?affiliate_id=318171
   tag: knockspell
   game: KNOCKSPELL
-  describe: tabletop role-playing game magazine
+  description: tabletop role-playing game magazine
 - title: Kristcon
   key: KRISTCON
   tag: kristacon
@@ -1524,19 +1524,19 @@
   tag: labyrinth lord
   game: LABYRINTH-LORD
   sameAs: https://en.wikipedia.org/wiki/Labyrinth_Lord
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Lacuna Part 1.
   key: LACUNA-PART-1
   itemid: https://www.wikidata.org/wiki/Q64531008
   offer: https://www.drivethrurpg.com/product/95893/Lacuna-Part-I-second-attempt?affiliate_id=318171
   tag: lacuna part i
   game: LACUNA-PART-1
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Lady Blackbird
   key: LADY-BLACKBIRD
   itemid: https://www.wikidata.org/wiki/Q67174687
   tag: lady blackbird
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Lamentations of the Flame Princess
   key: LOTFP
   itemid: https://www.wikidata.org/wiki/Q27102827
@@ -1544,13 +1544,13 @@
   abbr: LotFP
   contentDisclaimers:
   - jamesraggi
-  describe: OSR tabletop role-playing game
+  description: OSR tabletop role-playing game
 - title: Lankhmar
   key: LANKHMAR
   itemid: https://www.wikidata.org/wiki/Q6487218
   tag: lankhmar
   sameAs: https://en.wikipedia.org/wiki/Lankhmar
-  describe: fictional universe
+  description: fictional universe
 - title: Lavender Hack
   key: LAVENDER-HACH
   itemid: https://rpggeek.com/rpg/61133/lavender-hack
@@ -1565,7 +1565,7 @@
   key: LETTER-OF-MARQUE
   itemid: https://www.wikidata.org/wiki/Q1414906
   sameAs: https://en.wikipedia.org/wiki/Letter_of_marque
-  describe: governmental authorization of privateering
+  description: governmental authorization of privateering
 - title: Lifepaths
   key: LP
   tag: lifepaths
@@ -1574,7 +1574,7 @@
   abbr: LARP
   itemid: https://www.wikidata.org/wiki/Q216749
   sameAs: https://en.wikipedia.org/wiki/Live_action_role-playing_game
-  describe: form of role-playing game where the participants physically act out their
+  description: form of role-playing game where the participants physically act out their
     characters' actions
 - title: Living Card Game
   key: LCG
@@ -1586,7 +1586,7 @@
   tag: lord of the rings
   abbr: LotR
   sameAs: https://en.wikipedia.org/wiki/The_Lord_of_the_Rings
-  describe: 1954–1955 fantasy novel by J. R. R. Tolkien
+  description: 1954–1955 fantasy novel by J. R. R. Tolkien
 - title: Loviatar Fanzine
   key: LOVIATAR-FANZINE
   itemid: https://rpggeek.com/rpgperiodical/17799/loviatar
@@ -1597,14 +1597,14 @@
   tag: luke crane
   contentDisclaimers:
   - lukecrane
-  describe: role-playing game designer
+  description: role-playing game designer
 - title: Machine Learning
   key: MLEARN
   abbr: ML
   itemid: https://www.wikidata.org/wiki/Q2539
   tag: machine learning
   sameAs: https://en.wikipedia.org/wiki/Machine_learning
-  describe: Scientific study of algorithms and statistical models that computer systems
+  description: Scientific study of algorithms and statistical models that computer systems
     use to perform tasks without explicit instructions
 - title: Macintosh Operating System X
   key: OSX
@@ -1612,12 +1612,12 @@
   tag: osx
   abbr: OS X
   sameAs: https://en.wikipedia.org/wiki/MacOS
-  describe: operating system for Apple computers, launched in 2001 as Mac OS X
+  description: operating system for Apple computers, launched in 2001 as Mac OS X
 - title: Magnolia
   key: MAGNOLIA
   itemid: https://www.wikidata.org/wiki/Q157017
   sameAs: https://en.wikipedia.org/wiki/Magnolia
-  describe: genus of plants
+  description: genus of plants
 - title: Manouevre Drive
   key: M-DRIVE
 - title: Marienburg
@@ -1630,13 +1630,13 @@
   game: MARVEL-HEROIC-RPG
   abbr: MHRPG
   sameAs: https://en.wikipedia.org/wiki/Marvel_Heroic_Roleplaying
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Massachusetts Institute of Technology License
   key: MIT
   abbr: MIT License
   itemid: https://www.wikidata.org/wiki/Q334661
   sameAs: https://en.wikipedia.org/wiki/MIT_License
-  describe: series or any of several permissive free software licenses originating
+  description: series or any of several permissive free software licenses originating
     at the Massachusetts Institute of Technology
 - title: Master of Ceremonies
   key: MC
@@ -1646,7 +1646,7 @@
   itemid: https://www.wikidata.org/wiki/Q921302
   tag: mayfair games
   sameAs: https://en.wikipedia.org/wiki/Mayfair_Games
-  describe: game publisher
+  description: game publisher
 - title: Medieval Demographics Made Easy
   key: MEDIEVAL-DEMOGRAPHICS-MADE-EASY
   itemid: https://rpggeek.com/rpgitem/205861/medieval-demographics-made-easy
@@ -1656,7 +1656,7 @@
   itemid: https://www.wikidata.org/wiki/Q79735
   abbr: MB
   sameAs: https://en.wikipedia.org/wiki/Megabyte
-  describe: multiple of the unit byte
+  description: multiple of the unit byte
 - title: Megabytes per second
   key: MBPS
   abbr: MBps
@@ -1671,7 +1671,7 @@
   itemid: https://www.wikidata.org/wiki/Q967647
   tag: mentorship
   sameAs: https://en.wikipedia.org/wiki/Mentorship
-  describe: guidance relationship in which a more experienced or more knowledgeable
+  description: guidance relationship in which a more experienced or more knowledgeable
     person helps to guide a less experienced or less knowledgeable person
 - title: Meta
   key: META
@@ -1691,7 +1691,7 @@
   itemid: https://www.wikidata.org/wiki/Q5473
   tag: middle earth role playing game
   sameAs: https://en.wikipedia.org/wiki/Middle-earth_Role_Playing
-  describe: tabletop fantasy role-playing game
+  description: tabletop fantasy role-playing game
 - title: Migration
   key: MIGRATION
   tag: migration
@@ -1700,7 +1700,7 @@
   itemid: https://www.wikidata.org/wiki/Q723733
   abbr: ms
   sameAs: https://en.wikipedia.org/wiki/Millisecond
-  describe: SI unit of time
+  description: SI unit of time
 - title: Misspent Youth
   key: MISSPENT-YOUTH
   itemid: https://rpggeek.com/rpg/6344/misspent-youth
@@ -1713,7 +1713,7 @@
   itemid: https://www.wikidata.org/wiki/Q1575373
   tag: mongoose publishing
   sameAs: https://en.wikipedia.org/wiki/Mongoose_Publishing
-  describe: tabletop role-playing game publisher
+  description: tabletop role-playing game publisher
 - title: Monster
   key: MONSTER
   tag: monster
@@ -1724,7 +1724,7 @@
   tag: monster of the week
   game: MONSTER-OF-THE-WEEK
   abbr: MotW
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Monsterhearts
   key: MONSTERHEARTS
   itemid: https://www.wikidata.org/wiki/Q17154019
@@ -1732,12 +1732,12 @@
   tag: monsterhearts
   game: MONSTERHEARTS
   sameAs: https://en.wikipedia.org/wiki/Monsterhearts
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Morale check
   key: MORALE-CHECK
   itemid: https://www.wikidata.org/wiki/Q104253592
   tag: morale
-  describe: character game mechanic
+  description: character game mechanic
 - title: Morale Level
   key: ML
   abbr: ML
@@ -1753,7 +1753,7 @@
   contentDisclaimers:
   - lukecrane
   sameAs: https://en.wikipedia.org/wiki/Mouse_Guard_Roleplaying_Game
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Movement
   key: MV
 - title: Necromancer's Maze
@@ -1769,7 +1769,7 @@
   key: NEWSBOAT
   itemid: https://www.wikidata.org/wiki/Q70014271
   tag: newsboat
-  describe: RSS/Atom feed reader for text terminals
+  description: RSS/Atom feed reader for text terminals
 - title: Night Below
   key: NIGHT-BELOW
   verboseTitle: 'Night Below: An Underdark Campaign'
@@ -1778,7 +1778,7 @@
   tag: night below
   game: NIGHT-BELOW
   sameAs: https://en.wikipedia.org/wiki/Night_Below
-  describe: D&D campaign by Carl Sargent
+  description: D&D campaign by Carl Sargent
 - title: Non-Disclosure Agreement
   key: NDA
   abbr: NDA
@@ -1789,14 +1789,14 @@
   abbr: NPC
   itemid: https://www.wikidata.org/wiki/Q466466
   sameAs: https://en.wikipedia.org/wiki/Non-player_character
-  describe: fictional character in a role-playing or video game that cannot be played
+  description: fictional character in a role-playing or video game that cannot be played
     or controlled by a real-world person
 - title: Non-Player Characters
   key: NPCS
   itemid: https://www.wikidata.org/wiki/Q466466
   abbr: NPCs
   sameAs: https://en.wikipedia.org/wiki/Non-player_character
-  describe: fictional character in a role-playing or video game that cannot be played
+  description: fictional character in a role-playing or video game that cannot be played
     or controlled by a real-world person
 - title: Note Quite Gaming
   key: NOTE-QUITE-GAMING
@@ -1807,12 +1807,12 @@
   abbr: ND
   itemid: https://www.wikidata.org/wiki/Q178848
   sameAs: https://en.wikipedia.org/wiki/University_of_Notre_Dame
-  describe: Catholic university in Notre Dame, Indiana, United States
+  description: Catholic university in Notre Dame, Indiana, United States
 - title: Oak Tree
   key: OAK-TREE
   tag: oak tree
   itemid: https://www.wikidata.org/wiki/Q33036816
-  describe: deciduous tree
+  description: deciduous tree
 - title: Obstacle
   key: OB
   abbr: Ob
@@ -1833,14 +1833,14 @@
   tag: osric
   abbr: OSRIC
   sameAs: https://en.wikipedia.org/wiki/OSRIC
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Old School Renaissance
   key: OSR
   itemid: https://www.wikidata.org/wiki/Q15991289
   tag: osr
   abbr: OSR
   sameAs: https://en.wikipedia.org/wiki/Old_School_Revival
-  describe: tabletop role-playing game movement
+  description: tabletop role-playing game movement
 - title: One Shot
   key: ONE-SHOT
   tag: one shot
@@ -1860,13 +1860,13 @@
   itemid: https://www.wikidata.org/wiki/Q1752744
   tag: open game license
   sameAs: https://en.wikipedia.org/wiki/Open_Game_License
-  describe: public copyright license for tabletop role-playing games of 2000
+  description: public copyright license for tabletop role-playing games of 2000
 - title: Open Letter
   key: OPEN-LETTER
   itemid: https://www.wikidata.org/wiki/Q646754
   tag: open letter
   sameAs: https://en.wikipedia.org/wiki/Open_letter
-  describe: type of letter
+  description: type of letter
 - title: Open Standards
   key: OPEN-STANDARDS
   tag: open standards
@@ -1878,7 +1878,7 @@
   itemid: https://www.wikidata.org/wiki/Q9135
   abbr: OS
   sameAs: https://en.wikipedia.org/wiki/Operating_system
-  describe: software that manages computer hardware resources
+  description: software that manages computer hardware resources
 - title: Org-mode
   key: ORG-MODE
   verboseTitle: 'Org-mode: Emacs mode for task managing and notetaking'
@@ -1886,7 +1886,7 @@
   tag: org mode
   abbr: Org-mode
   sameAs: https://en.wikipedia.org/wiki/Org-mode
-  describe: Emacs mode for task managing and notetaking
+  description: Emacs mode for task managing and notetaking
 - title: Org-roam
   key: ORG-ROAM
   verboseTitle: 'Org-roam: A plain-text personal knowledge management system.'
@@ -1901,7 +1901,7 @@
   itemid: https://www.wikidata.org/wiki/Q1114177
   tag: origins
   sameAs: https://en.wikipedia.org/wiki/Origins_Game_Fair
-  describe: annual gaming convention
+  description: annual gaming convention
 - title: Our Last Best Hope
   key: OUR-LAST-BEST-HOPE
   itemid: https://rpggeek.com/rpg/18490/our-last-best-hope
@@ -1917,18 +1917,18 @@
   tag: out of the abyss
   game: OUT-OF-THE-ABYSS
   sameAs: https://en.wikipedia.org/wiki/Out_of_the_Abyss_(Dungeons_%26_Dragons)
-  describe: Dungeons & Dragons adventure module
+  description: Dungeons & Dragons adventure module
 - title: Outline Processor Markup Language
   key: OPML
   itemid: https://www.wikidata.org/wiki/Q836370
   sameAs: https://en.wikipedia.org/wiki/OPML
-  describe: an XML format for structured outlines
+  description: an XML format for structured outlines
 - title: Pabst Blue Ribbon
   key: PBR
   itemid: https://www.wikidata.org/wiki/Q2045297
   abbr: PBR
   sameAs: https://en.wikipedia.org/wiki/Pabst_Blue_Ribbon
-  describe: brand of beer
+  description: brand of beer
 - title: Pain Tolerances Grayscales
   key: PTGS
   abbr: PTGS
@@ -1937,7 +1937,7 @@
   itemid: https://www.wikidata.org/wiki/Q12184
   tag: pandemic
   sameAs: https://en.wikipedia.org/wiki/Pandemic
-  describe: epidemic of infectious disease that has spread across a large region with
+  description: epidemic of infectious disease that has spread across a large region with
     global health impact
 - title: Parental Guidance
   key: PG
@@ -1949,31 +1949,31 @@
   offer: https://www.drivethrurpg.com/product/92731/PartTime-Gods?affiliate_id=318171
   tag: part time gods
   game: PART-TIME-GODS
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Pay What You Want
   key: PWYW
   abbr: PWYW
   itemid: https://www.wikidata.org/wiki/Q846616
   sameAs: https://en.wikipedia.org/wiki/Pay_what_you_want
-  describe: Pricing strategy
+  description: Pricing strategy
 - title: Peach
   key: PEACH
   itemid: https://www.wikidata.org/wiki/Q13189
   tag: peach
   sameAs: https://en.wikipedia.org/wiki/Peach
-  describe: species of fruit tree (for the fruit use Q13411121)
+  description: species of fruit tree (for the fruit use Q13411121)
 - title: Peer to Peer
   key: P2P
   verboseTitle: 'Peer to Peer: A decentralized and distributed network architecture'
   itemid: https://www.wikidata.org/wiki/Q161410
   sameAs: https://en.wikipedia.org/wiki/Peer-to-peer
-  describe: type of decentralized and distributed network architecture
+  description: type of decentralized and distributed network architecture
 - title: Person of Color
   key: POC
   itemid: https://www.wikidata.org/wiki/Q2072081
   abbr: PoC
   sameAs: https://en.wikipedia.org/wiki/Person_of_color
-  describe: person who is not white, mostly used in the United States
+  description: person who is not white, mostly used in the United States
 - title: Personal
   key: PERSONAL
   tag: personal
@@ -1985,7 +1985,7 @@
   abbr: PHP
   itemid: https://www.wikidata.org/wiki/Q59
   sameAs: https://en.wikipedia.org/wiki/PHP
-  describe: scripting language focused on web development
+  description: scripting language focused on web development
 - title: Planarch Codex
   key: PLANARCH-CODEX
   verboseTitle: 'Planarch Codex: Dark Heart of the Dreamer'
@@ -1997,7 +1997,7 @@
   tag: play by post
   abbr: PbP
   sameAs: https://en.wikipedia.org/wiki/Play-by-post_role-playing_game
-  describe: video game genre
+  description: video game genre
 - title: Playbooks
   key: PLAYBOOKS
   tag: playbooks
@@ -2006,14 +2006,14 @@
   abbr: PC
   itemid: https://www.wikidata.org/wiki/Q1062345
   sameAs: https://en.wikipedia.org/wiki/Player_character
-  describe: fictional character in a role-playing or video game that can be played
+  description: fictional character in a role-playing or video game that can be played
     or controlled by a real-world person
 - title: Player Characters
   key: PCS
   abbr: PCs
   itemid: https://www.wikidata.org/wiki/Q1062345
   sameAs: https://en.wikipedia.org/wiki/Player_character
-  describe: fictional character in a role-playing or video game that can be played
+  description: fictional character in a role-playing or video game that can be played
     or controlled by a real-world person
 - title: Player's Handbook
   key: PHB
@@ -2023,48 +2023,48 @@
   itemid: https://www.wikidata.org/wiki/Q7203549
   tag: playtest
   sameAs: https://en.wikipedia.org/wiki/Playtest
-  describe: process of testing in game design
+  description: process of testing in game design
 - title: Podcasts
   key: PODCASTS
   itemid: https://www.wikidata.org/wiki/Q20899
   tag: podcasts
   sameAs: https://en.wikipedia.org/wiki/Podcast
-  describe: type of digital media
+  description: type of digital media
 - title: Poetry
   key: POETRY
   itemid: https://www.wikidata.org/wiki/Q482
   tag: poetry
   sameAs: https://en.wikipedia.org/wiki/Poetry
-  describe: form of literary art
+  description: form of literary art
 - title: Point of Sales
   key: POS
   itemid: https://www.wikidata.org/wiki/Q386147
   abbr: PoS
   sameAs: https://en.wikipedia.org/wiki/Point_of_sale
-  describe: event where retail transaction is completed
+  description: event where retail transaction is completed
 - title: Portable Document Format
   key: PDF
   itemid: https://www.wikidata.org/wiki/Q42332
   abbr: PDF
   sameAs: https://en.wikipedia.org/wiki/PDF
-  describe: family of file formats used to present documents
+  description: family of file formats used to present documents
 - title: post meridiem
   key: PM
   itemid: https://www.wikidata.org/wiki/Q55313907
   abbr: pm
-  describe: period of the day after noon and before midnight
+  description: period of the day after noon and before midnight
 - title: Powered by the Apocalypse
   key: PBTA
   itemid: https://www.wikidata.org/wiki/Q17149214
   abbr: PbtA
   sameAs: https://en.wikipedia.org/wiki/Powered_by_the_Apocalypse
-  describe: game system for tabletop role-playing game
+  description: game system for tabletop role-playing game
 - title: Print on Demand
   key: POD
   itemid: https://www.wikidata.org/wiki/Q288666
   abbr: PoD
   sameAs: https://en.wikipedia.org/wiki/Print_on_demand
-  describe: printing technology
+  description: printing technology
 - title: Privacy
   key: PRIVACY
   tag: privacy
@@ -2073,14 +2073,14 @@
   itemid: https://www.wikidata.org/wiki/Q9492
   tag: probability
   sameAs: https://en.wikipedia.org/wiki/Probability
-  describe: measure of the expectation that an event will occur or a statement is
+  description: measure of the expectation that an event will occur or a statement is
     true
 - title: Problem Solving
   key: PROBLEM-SOLVING
   itemid: https://www.wikidata.org/wiki/Q730920
   tag: problem solving
   sameAs: https://en.wikipedia.org/wiki/Problem_solving
-  describe: using generic or ad hoc methods in an orderly manner to find solutions
+  description: using generic or ad hoc methods in an orderly manner to find solutions
     to problems
 - title: Product Identity
   key: PI
@@ -2090,19 +2090,19 @@
   abbr: PM
   itemid: https://www.wikidata.org/wiki/Q2552738
   sameAs: https://en.wikipedia.org/wiki/Product_manager
-  describe: profession involving investigating and driving the development of products
+  description: profession involving investigating and driving the development of products
 - title: Programming
   key: PROGRAMMING
   itemid: https://www.wikidata.org/wiki/Q80006
   tag: programming
   sameAs: https://en.wikipedia.org/wiki/Computer_programming
-  describe: occupational field
+  description: occupational field
 - title: Project Management
   key: PROJECT-MANAGEMENT
   itemid: https://www.wikidata.org/wiki/Q179012
   tag: project management
   sameAs: https://en.wikipedia.org/wiki/Project_management
-  describe: the practice of initiating, planning, executing, controlling, and closing
+  description: the practice of initiating, planning, executing, controlling, and closing
     the work of a team to achieve specific goals and meet specific success criteria
     at the specified time
 - title: 'Project: Dark'
@@ -2114,7 +2114,7 @@
   itemid: https://www.wikidata.org/wiki/Q676
   tag: prose
   sameAs: https://en.wikipedia.org/wiki/Prose
-  describe: form of language which applies ordinary grammatical structure and natural
+  description: form of language which applies ordinary grammatical structure and natural
     flow of speech
 - title: Psionic Strength
   key: PSI
@@ -2126,7 +2126,7 @@
   itemid: https://www.wikidata.org/wiki/Q836575
   abbr: QA
   sameAs: https://en.wikipedia.org/wiki/Quality_assurance
-  describe: way of preventing mistakes or defects in manufactured products and avoiding
+  description: way of preventing mistakes or defects in manufactured products and avoiding
     problems when delivering solutions or services to customers; (ISO 9000) part of
     quality management focused on providing confidence that quality requirements will
     be fulfilled
@@ -2139,7 +2139,7 @@
   tag: race for the galaxy
   abbr: RftG
   sameAs: https://en.wikipedia.org/wiki/Race_for_the_Galaxy
-  describe: board game
+  description: board game
 - title: Random
   key: RANDOM
   tag: random
@@ -2148,7 +2148,7 @@
   itemid: https://www.wikidata.org/wiki/Q4136241
   tag: random encounter
   sameAs: https://en.wikipedia.org/wiki/Random_encounter
-  describe: game mechanic of RPG
+  description: game mechanic of RPG
 - title: Random Encounters
   key: RANDOM-ENCOUNTERS
   tag: random encounters
@@ -2169,7 +2169,7 @@
   itemid: https://www.wikidata.org/wiki/Q199657
   tag: reading
   sameAs: https://en.wikipedia.org/wiki/Reading
-  describe: cognitive process of decoding symbols to derive meaning; a form of language
+  description: cognitive process of decoding symbols to derive meaning; a form of language
     processing
 - title: Real New Mexico
   key: RNM
@@ -2181,26 +2181,26 @@
   offer: https://www.drivethrurpg.com/product/79955/Reign-Enchiridion?affiliate_id=318171
   tag: reign enchiridion
   game: REIGN-ENCHIRIDION
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Relational Database Management System
   abbr: RDBMS
   key: RDBMS
   itemid: https://www.wikidata.org/wiki/Q3932296
   sameAs: https://en.wikipedia.org/wiki/Relational_database_management_system
-  describe: DBMS that is based on the relational model
+  description: DBMS that is based on the relational model
 - title: Report Program Generator programming language from IBM
   key: RPGP
   itemid: https://www.wikidata.org/wiki/Q840543
   abbr: IBM RPG
   sameAs: https://en.wikipedia.org/wiki/IBM_RPG
-  describe: programming language from IBM
+  description: programming language from IBM
 - title: Resource Description Framework
   key: RDF
   mentionAs: RDF
   itemid: https://www.wikidata.org/wiki/Q54872
   abbr: RDFa
   sameAs: https://en.wikipedia.org/wiki/Resource_Description_Framework
-  describe: formal language
+  description: formal language
 - title: Resource Description Framework in Attributes
   key: RDFA
   mentionAs: RDFa
@@ -2208,7 +2208,7 @@
   itemid: https://www.wikidata.org/wiki/Q507673
   abbr: RDFa
   sameAs: https://en.wikipedia.org/wiki/RDFa
-  describe: format for expressing RDF statements in HTML documents
+  description: format for expressing RDF statements in HTML documents
 - title: Response to Other Blogs
   key: RESPONSE-TO-OTHER-BLOGS
   tag: response to other blogs
@@ -2217,7 +2217,7 @@
   itemid: https://www.wikidata.org/wiki/Q1850420
   abbr: RACI
   sameAs: https://en.wikipedia.org/wiki/Responsibility_assignment_matrix
-  describe: tool used for project and business process management
+  description: tool used for project and business process management
 - title: Resume
   key: RESUME-SUMMARY-OF-CAREER
   mentionAs: Résumé
@@ -2225,20 +2225,20 @@
   itemid: https://www.wikidata.org/wiki/Q950511
   tag: resume
   sameAs: https://en.wikipedia.org/wiki/R%C3%A9sum%C3%A9
-  describe: summary of career, also known as a CV
+  description: summary of career, also known as a CV
 - title: Review
   key: REVIEW
   itemid: https://www.wikidata.org/wiki/Q265158
   tag: review
   sameAs: https://en.wikipedia.org/wiki/Review
-  describe: evaluation
+  description: evaluation
 - title: Rich Site Summary
   key: RSS
   itemid: https://www.wikidata.org/wiki/Q45432
   tag: rss
   abbr: RSS
   sameAs: https://en.wikipedia.org/wiki/RSS
-  describe: family of web feed formats
+  description: family of web feed formats
 - title: Robert Bohl
   key: ROBERT-BOHL
   tag: robert bohl
@@ -2251,14 +2251,14 @@
   itemid: https://www.wikidata.org/wiki/Q160738
   tag: rpg
   sameAs: https://en.wikipedia.org/wiki/Role-playing_game
-  describe: game in which players assume the roles of characters in a fictional setting.
+  description: game in which players assume the roles of characters in a fictional setting.
     Use Tabletop role-playing game (Q1643932) for the leasure activity.
 - title: Rolemaster
   key: ROLEMASTER
   itemid: https://www.wikidata.org/wiki/Q680764
   tag: rolemaster
   sameAs: https://en.wikipedia.org/wiki/Rolemaster
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: RPG Reward
   key: RPG-REWARD
   tag: rpg reward
@@ -2274,14 +2274,14 @@
   tag: ruby
   abbr: Ruby
   sameAs: https://en.wikipedia.org/wiki/Ruby_(programming_language)
-  describe: programming language
+  description: programming language
 - title: Ruby on Rails
   key: ROR
   verboseTitle: 'Ruby on Rails: Open Source Web Application Framework'
   itemid: https://www.wikidata.org/wiki/Q190478
   abbr: Ruby on Rails
   sameAs: https://en.wikipedia.org/wiki/Ruby_on_Rails
-  describe: open source web application framework
+  description: open source web application framework
 - title: Rules Agnostic
   key: RULES-AGNOSTIC
   tag: rules agnostic
@@ -2314,31 +2314,31 @@
   itemid: https://www.wikidata.org/wiki/Q916623
   tag: savage worlds
   sameAs: https://en.wikipedia.org/wiki/Savage_Worlds
-  describe: American generic role-playing game
+  description: American generic role-playing game
 - title: Saving Throw
   key: ST
   itemid: https://www.wikidata.org/wiki/Q1400142
   abbr: ST
   sameAs: https://en.wikipedia.org/wiki/Saving_throw
-  describe: character game mechanic
+  description: character game mechanic
 - title: Scalable Vector Graphics
   key: SVG
   itemid: https://www.wikidata.org/wiki/Q2078
   abbr: SVG
   sameAs: https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
-  describe: open standard for two-dimensional vector graphics
+  description: open standard for two-dimensional vector graphics
 - title: Scales of War
   key: SCALES-OF-WAR
   itemid: https://www.wikidata.org/wiki/Q104253098
   tag: scales of war
-  describe: 4th Edition Dungeons & Dragons Adventure Path
+  description: 4th Edition Dungeons & Dragons Adventure Path
 - title: Scarlet Heroes
   key: SCARLET-HEROES
   itemid: https://www.wikidata.org/wiki/Q104253139
   offer: https://www.drivethrurpg.com/product/127180/Scarlet-Heroes?affiliate_id=318171
   tag: scarlet heroes
   game: SCARLET-HEROES
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Scenic Dunnsmouth
   key: SCENIC-DUNNSMOUTH
   itemid: https://rpggeek.com/rpgitem/156018/scenic-dunnsmouth
@@ -2349,7 +2349,7 @@
   key: SCHEMA-ORG
   itemid: https://www.wikidata.org/wiki/Q3475322
   sameAs: https://en.wikipedia.org/wiki/Schema.org
-  describe: project to create, maintain, and promote schemas for structured data on
+  description: project to create, maintain, and promote schemas for structured data on
     the Internet, on web pages, in email messages, and beyond
 - title: School Daze
   key: SCHOOL-DAZE
@@ -2362,24 +2362,24 @@
   key: SRO
   itemid: https://www.wikidata.org/wiki/Q7432625
   sameAs: https://en.wikipedia.org/wiki/School_resource_officer
-  describe: police officer assigned to a school
+  description: police officer assigned to a school
 - title: Science Fantasy
   key: SCIENCE-FANTASY
   itemid: https://www.wikidata.org/wiki/Q1080374
   sameAs: https://en.wikipedia.org/wiki/Science_fantasy
-  describe: science fiction genre
+  description: science fiction genre
 - title: Science Fiction
   key: SF
   itemid: https://www.wikidata.org/wiki/Q24925
   tag: sci fi
   abbr: Sci-Fi
   sameAs: https://en.wikipedia.org/wiki/Science_fiction
-  describe: genre of fiction
+  description: genre of fiction
 - title: Script Change
   key: SCRIPT-CHANGE
   itemid: https://www.wikidata.org/wiki/Q105716989
   tag: script change
-  describe: tabletop role-playing game safety tool
+  description: tabletop role-playing game safety tool
 - title: Scripted Conflict
   key: SCRIPTED-CONFLICT
   tag: scripted conflict
@@ -2388,14 +2388,14 @@
   itemid: https://www.wikidata.org/wiki/Q180711
   abbr: SEO
   sameAs: https://en.wikipedia.org/wiki/Search_engine_optimization
-  describe: practice of increasing online visibility in search engine results pages
+  description: practice of increasing online visibility in search engine results pages
 - title: Secure Hypertext Transfer Protocol
   key: HTTPS
   abbr: HTTPS
   mentionAs: HTTPS
   itemid: https://www.wikidata.org/wiki/Q277919
   sameAs: https://en.wikipedia.org/wiki/Secure_Hypertext_Transfer_Protocol
-  describe: web encryption method similar to HTTPS
+  description: web encryption method similar to HTTPS
 - title: Secure Shell
   key: SSH
   abbr: SSH
@@ -2408,13 +2408,13 @@
   abbr: SSL
   itemid: https://www.wikidata.org/wiki/Q206494
   sameAs: https://en.wikipedia.org/wiki/Transport_Layer_Security
-  describe: cryptographic protocols for securing data in transit
+  description: cryptographic protocols for securing data in transit
 - title: Self-Assessment
   key: SELF-ASSESSMENT
   itemid: https://www.wikidata.org/wiki/Q1602656
   tag: self assessment
   sameAs: https://en.wikipedia.org/wiki/Self-assessment
-  describe: the process of looking at oneself in order to assess aspects that are
+  description: the process of looking at oneself in order to assess aspects that are
     important to one's identity
 - title: seneschal
   key: SENESCHAL
@@ -2442,19 +2442,19 @@
   itemid: https://www.wikidata.org/wiki/Q3481166
   tag: shadow world
   sameAs: https://en.wikipedia.org/wiki/Shadow_World_(role-playing_game)
-  describe: tabletop role-playing game setting
+  description: tabletop role-playing game setting
 - title: Shadowrun
   key: SHADOWRUN
   itemid: https://www.wikidata.org/wiki/Q1042442
   tag: shadowrun
   sameAs: https://en.wikipedia.org/wiki/Shadowrun
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Shopify
   key: SHOPIFY
   itemid: https://www.wikidata.org/wiki/Q7501150
   tag: shopify
   sameAs: https://en.wikipedia.org/wiki/Shopify
-  describe: Canadian e-commerce company
+  description: Canadian e-commerce company
 - title: Show not Tell
   key: SHOW-NOT-TELL
   tag: show not tell
@@ -2478,13 +2478,13 @@
   mentionAs: d6
   itemid: https://www.wikidata.org/wiki/Q17639282
   abbr: d6
-  describe: type of die
+  description: type of die
 - title: Snite Museum of Art
   key: SNITE-MUSEUM-OF-ART
   abbr: Snite
   itemid: https://www.wikidata.org/wiki/Q12069361
   sameAs: https://en.wikipedia.org/wiki/Snite_Museum_of_Art
-  describe: art museum in Notre Dame, Indiana
+  description: art museum in Notre Dame, Indiana
 - title: Soapgy Gnome
   key: SOAPGY-GNOME
   itemid: https://soapygnome.com
@@ -2502,7 +2502,7 @@
   itemid: https://www.wikidata.org/wiki/Q7397
   tag: software
   sameAs: https://en.wikipedia.org/wiki/Software
-  describe: non-tangible executable component of a computer
+  description: non-tangible executable component of a computer
 - title: Solo
   key: SOLO
   tag: solo
@@ -2518,7 +2518,7 @@
   itemid: https://www.wikidata.org/wiki/Q709123
   abbr: sort
   sameAs: https://en.wikipedia.org/wiki/Sort_(Unix)
-  describe: standard UNIX utility
+  description: standard UNIX utility
 - title: Spaceships
   key: SPACESHIPS
   tag: spaceships
@@ -2529,13 +2529,13 @@
   itemid: https://www.wikidata.org/wiki/Q324563
   abbr: SWAT
   sameAs: https://en.wikipedia.org/wiki/SWAT
-  describe: special forces
+  description: special forces
 - title: Spring
   key: SPRING
   itemid: https://www.wikidata.org/wiki/Q1312
   tag: spring
   sameAs: https://en.wikipedia.org/wiki/Spring_(season)
-  describe: one of the Earth's four temperate seasons, occurring between winter and
+  description: one of the Earth's four temperate seasons, occurring between winter and
     summer
 - title: Square
   key: SQUARE
@@ -2549,7 +2549,7 @@
   itemid: https://www.wikidata.org/wiki/Q7600723
   tag: star frontiers
   sameAs: https://en.wikipedia.org/wiki/Star_Frontiers
-  describe: science fiction tabletop role-playing game
+  description: science fiction tabletop role-playing game
 - title: 'Star Frontiers: Alpha Dawn'
   key: SF-ALPHA-DAWN
   itemid: https://rpggeek.com/rpgitemversion/43/alpha-dawn-box-set
@@ -2561,18 +2561,18 @@
   itemid: https://www.wikidata.org/wiki/Q1092
   tag: star trek
   sameAs: https://en.wikipedia.org/wiki/Star_Trek
-  describe: science fiction media franchise
+  description: science fiction media franchise
 - title: Star Wars
   key: STAR-WARS
   itemid: https://www.wikidata.org/wiki/Q462
   tag: star wars
   sameAs: https://en.wikipedia.org/wiki/Star_Wars
-  describe: epic science fantasy space opera saga and media franchise
+  description: epic science fantasy space opera saga and media franchise
 - title: Starling
   key: STARLING
   itemid: https://www.wikidata.org/wiki/Q25469
   sameAs: https://en.wikipedia.org/wiki/Common_starling
-  describe: species of bird
+  description: species of bird
 - title: 'Stars without Number: Revised (Free Edition)'
   key: SWN-FREE
   verboseTitle: 'Stars without Number: Revised (Free Edition)'
@@ -2586,12 +2586,12 @@
   tag: swn
   game: SWN
   abbr: SWN
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Static Site Generator
   key: SSG
   itemid: https://www.wikidata.org/wiki/Q77916592
   abbr: SSG
-  describe: software to generate static websites
+  description: software to generate static websites
 - title: Stats
   key: STATS
   tag: stats
@@ -2622,7 +2622,7 @@
   itemid: https://www.wikidata.org/wiki/Q171322
   abbr: SOPA
   sameAs: https://en.wikipedia.org/wiki/Stop_Online_Piracy_Act
-  describe: unpassed United States bill
+  description: unpassed United States bill
 - title: Strength
   key: STR
   abbr: Str
@@ -2634,14 +2634,14 @@
   abbr: SQL
   itemid: https://www.wikidata.org/wiki/Q47607
   sameAs: https://en.wikipedia.org/wiki/SQL
-  describe: programming language for management and use of relational databases
+  description: programming language for management and use of relational databases
 - title: Sublime Text
   key: SUBLIME
   verboseTitle: 'Sublime Text: A sophisticated text editor for code, markup and prose'
   itemid: https://www.wikidata.org/wiki/Q267193
   abbr: Sublime Text
   sameAs: https://en.wikipedia.org/wiki/Sublime_Text
-  describe: text editor
+  description: text editor
 - title: Submission Information Package
   key: SIP
   abbr: SIP
@@ -2653,7 +2653,7 @@
   itemid: https://www.wikidata.org/wiki/Q70485112
   tag: sword and wizardry
   abbr: S&W
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Swords and Strongholds
   key: SWORDS-AND-STRONGHOLDS
   itemid: https://boardgamegeek.com/boardgame/162315/mouse-guard-swords-strongholds
@@ -2672,7 +2672,7 @@
   abbr: SRD
   itemid: https://www.wikidata.org/wiki/Q1091693
   sameAs: https://en.wikipedia.org/wiki/System_Reference_Document
-  describe: set or subset of role-playing mechanics available under an open license
+  description: set or subset of role-playing mechanics available under an open license
 - title: 'System Reference Document: Fifth Edition'
   key: SRD5
   abbr: SRD5
@@ -2682,7 +2682,7 @@
   tag: tsr
   abbr: TSR
   sameAs: https://en.wikipedia.org/wiki/TSR,_Inc.
-  describe: former company, publisher of "Dungeons & Dragons"
+  description: former company, publisher of "Dungeons & Dragons"
 - title: Take on Establishments
   key: TAKE-ON-ESTABLISHMENTS
   itemid: https://rpggeek.com/rpgitem/133489/take-establishments
@@ -2707,7 +2707,7 @@
   offer: https://www.drivethrurpg.com/product/93378/Technoir?affiliate_id=318171
   tag: technoir
   game: TECHNOIR
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Technology Level
   key: TL
   abbr: TL
@@ -2716,26 +2716,26 @@
   itemid: https://www.wikidata.org/wiki/Q289
   abbr: TV
   sameAs: https://en.wikipedia.org/wiki/Television
-  describe: telecommunication medium for transmitting and receiving moving images
+  description: telecommunication medium for transmitting and receiving moving images
 - title: Test Driven Development
   abbr: TDD
   key: TDD
   itemid: https://www.wikidata.org/wiki/Q950250
   sameAs: https://en.wikipedia.org/wiki/Test-driven_development
-  describe: 'repetition of a very short development cycle: requirements are turned
+  description: 'repetition of a very short development cycle: requirements are turned
     into very specific test cases, then the software is improved to pass the new tests,
     only'
 - title: Textmate
   key: TEXTMATE
   itemid: https://www.wikidata.org/wiki/Q2297533
   sameAs: https://en.wikipedia.org/wiki/TextMate
-  describe: text editor
+  description: text editor
 - title: The Book of the New Sun
   key: THE-BOOK-OF-THE-NEW-SUN
   itemid: https://www.wikidata.org/wiki/Q3269840
   itemtype: Book
   sameAs: https://en.wikipedia.org/wiki/The_Book_of_the_New_Sun
-  describe: novel series by Gene Wolfe
+  description: novel series by Gene Wolfe
 - title: The Empire
   key: WARHAMMER-THE-EMPIRE
   itemid: https://warhammerfantasy.fandom.com/wiki/The_Empire
@@ -2744,7 +2744,7 @@
   itemid: https://www.wikidata.org/wiki/Q181795
   tag: empire strikes back
   sameAs: https://en.wikipedia.org/wiki/The_Empire_Strikes_Back
-  describe: 1980 American science fiction film directed by Irvin Kershner
+  description: 1980 American science fiction film directed by Irvin Kershner
 - title: The Hero's Journey
   key: THE-HEROS-JOURNEY
   itemid: https://rpggeek.com/rpg/34736/heros-journey-fantasy-roleplaying
@@ -2762,20 +2762,20 @@
   itemid: https://www.wikidata.org/wiki/Q19069
   tag: magnificent seven
   sameAs: https://en.wikipedia.org/wiki/The_Magnificent_Seven
-  describe: 1960 American western film directed by John Sturges
+  description: 1960 American western film directed by John Sturges
 - title: The One Ring
   key: TOR
   itemid: https://www.wikidata.org/wiki/Q2028764
   tag: the one ring
   abbr: TOR
   sameAs: https://en.wikipedia.org/wiki/The_One_Ring_Roleplaying_Game
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: The Prophet
   key: THE-PROPHET
   itemid: https://www.wikidata.org/wiki/Q1196302
   itemtype: Book
   sameAs: https://en.wikipedia.org/wiki/The_Prophet_(book)
-  describe: 1923 book with 26 prose poetry fables by Khalil Gibran
+  description: 1923 book with 26 prose poetry fables by Khalil Gibran
 - title: The Regiment
   key: THE-REGIMENT
   itemid: https://rpggeek.com/rpg/27316/regiment
@@ -2798,7 +2798,7 @@
   game: TEMPLE-OF-ELEMENTAL-EVIL
   abbr: ToEE
   sameAs: https://en.wikipedia.org/wiki/The_Temple_of_Elemental_Evil
-  describe: adventure module for D&D
+  description: adventure module for D&D
 - title: Thel Sector
   key: THEL-SECTOR
   tag: thel sector
@@ -2822,12 +2822,12 @@
   itemid: https://www.wikidata.org/wiki/Q851937
   tag: tichu
   sameAs: https://en.wikipedia.org/wiki/Tichu
-  describe: card game
+  description: card game
 - title: To Hit Armor Class 0
   key: THAC0
   abbr: THAC0
   itemid: https://www.wikidata.org/wiki/Q104254746
-  describe: character game mechanic
+  description: character game mechanic
 - title: Today I Learned
   key: TODAY-I-LEARNED
   tag: today i learned
@@ -2835,7 +2835,7 @@
   key: TOM-MOLDVAY
   itemid: https://www.wikidata.org/wiki/Q3530805
   sameAs: https://en.wikipedia.org/wiki/Tom_Moldvay
-  describe: role-playing game designer
+  description: role-playing game designer
 - title: Tomb of Adventure Design
   key: TOME-OF-ADVENTURE-DESIGN
   offer: https://www.drivethrurpg.com/product/97423/Tome-of-Adventure-Design?affiliate_id=318171
@@ -2848,12 +2848,12 @@
   tag: tomb of annihilation
   game: TOMB-OF-ANNIHILATION
   abbr: ToA
-  describe: D&D module adventure
+  description: D&D module adventure
 - title: Too Long; Didn't Read
   key: TL;DR
   itemid: https://www.wikidata.org/wiki/Q16886840
   sameAs: https://en.wikipedia.org/wiki/TL;DR
-  describe: '"too long, didn''t read"; internet comment on the verbosity of a post'
+  description: '"too long, didn''t read"; internet comment on the verbosity of a post'
 - title: Torchbearer
   key: TORCHBEARER
   itemid: https://www.wikidata.org/wiki/Q66830849
@@ -2862,7 +2862,7 @@
   game: TORCHBEARER
   contentDisclaimers:
   - lukecrane
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Total Party Kill
   key: TPK
   abbr: TPK
@@ -2874,7 +2874,7 @@
   abbr: tr
   verboseTitle: 'tr: Unix command to translate or delete characters'
   sameAs: https://en.wikipedia.org/wiki/Tr_(Unix)
-  describe: command in Unix-like operating systems
+  description: command in Unix-like operating systems
 - title: Tracey Barnett
   key: TRACEY-BARNETT
   tag: tracey barnett
@@ -2886,7 +2886,7 @@
   game: TRAIL-OF-CTHULHU
   abbr: ToC
   sameAs: https://en.wikipedia.org/wiki/Trail_of_Cthulhu
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: 'Traveller: Core Rulebook'
   key: TRAVELLER-CORE-RULEBOOK
   itemid: https://www.wikidata.org/wiki/Q2164069
@@ -2894,13 +2894,13 @@
   tag: traveller
   game: TRAVELLER-CORE-RULEBOOK
   sameAs: https://en.wikipedia.org/wiki/Traveller_(role-playing_game)
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Ultraviolet
   key: UV
   itemid: https://www.wikidata.org/wiki/Q11391
   abbr: UV
   sameAs: https://en.wikipedia.org/wiki/Ultraviolet
-  describe: electromagnetic radiation with a wavelength shorter than that of visible
+  description: electromagnetic radiation with a wavelength shorter than that of visible
     light, but longer than X-rays
 - title: Undying
   key: UNDYING
@@ -2911,20 +2911,20 @@
   abbr: URL
   itemid: https://www.wikidata.org/wiki/Q42253
   sameAs: https://en.wikipedia.org/wiki/URL
-  describe: web address to a particular file or page
+  description: web address to a particular file or page
 - title: United States
   key: US
   abbr: USA
   verboseTitle: United States of America
   itemid: https://www.wikidata.org/wiki/Q30
   sameAs: https://en.wikipedia.org/wiki/United_States
-  describe: sovereign state in North America
+  description: sovereign state in North America
 - title: United States dollar
   key: USD
   itemid: https://www.wikidata.org/wiki/Q4917
   abbr: USD
   sameAs: https://en.wikipedia.org/wiki/United_States_dollar
-  describe: currency of the United States of America
+  description: currency of the United States of America
 - title: Universal Planet Profile
   key: UPP
   abbr: UPP
@@ -2941,7 +2941,7 @@
   tag: vim
   abbr: vim
   sameAs: https://en.wikipedia.org/wiki/Vim_(text_editor)
-  describe: improved version of the Vi keyboard-oriented text editor
+  description: improved version of the Vi keyboard-oriented text editor
 - title: Violence
   key: VIOLENCE
   tag: violence
@@ -2953,7 +2953,7 @@
   itemid: https://www.wikidata.org/wiki/Q19841877
   abbr: VS Code
   sameAs: https://en.wikipedia.org/wiki/Visual_Studio_Code
-  describe: source code editor developed by Microsoft
+  description: source code editor developed by Microsoft
 - title: VSCA
   key: VSCA
   itemid: https://vsca.ca
@@ -2963,7 +2963,7 @@
   itemid: https://www.wikidata.org/wiki/Q6537379
   tag: walking
   sameAs: https://en.wikipedia.org/wiki/Walking
-  describe: one of the main gaits of locomotion among legged animals, typically slower
+  description: one of the main gaits of locomotion among legged animals, typically slower
     than running and other gaits; characterized by a 'vaulting' movement of the body
     over the legs, frequently described as an inverted pendulum
 - title: Wampus County
@@ -2975,7 +2975,7 @@
   tag: warhammer fantasy
   abbr: WHF
   sameAs: https://en.wikipedia.org/wiki/Warhammer_Fantasy_Roleplay
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Warhammer Fantasy Setting
   key: WARHAMMER-FANTASY-SETTING
   itemid: https://www.wikidata.org/wiki/Q15831558
@@ -2983,7 +2983,7 @@
   game: WARHAMMER-FANTASY-SETTING
   abbr: WHFS
   sameAs: https://en.wikipedia.org/wiki/Warhammer_Fantasy_(setting)
-  describe: High-fantasy setting, created by Games Workshop
+  description: High-fantasy setting, created by Games Workshop
 - title: Weapon Speed
   key: WS
 - title: Web Content Accessibility Guidelines
@@ -2991,7 +2991,7 @@
   abbr: WCAG
   itemid: https://www.wikidata.org/wiki/Q5364439
   sameAs: https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines
-  describe: web accessibility guidelines
+  description: web accessibility guidelines
 - title: Webmention
   key: WEBMENTION
   tag: webmention
@@ -3006,7 +3006,7 @@
   abbr: WYSIWYG
   itemid: https://www.wikidata.org/wiki/Q170542
   sameAs: https://en.wikipedia.org/wiki/WYSIWYG
-  describe: display of a document during editing in a form closely corresponding to
+  description: display of a document during editing in a form closely corresponding to
     its appearance when printed or displayed as a finished product
 - title: White Fragility
   key: WHITE-FRAGILITY
@@ -3027,7 +3027,7 @@
   itemid: https://www.wikidata.org/wiki/Q1311
   tag: winter
   sameAs: https://en.wikipedia.org/wiki/Winter
-  describe: one of the Earth's four temperate seasons, occurring between autumn and
+  description: one of the Earth's four temperate seasons, occurring between autumn and
     spring
 - title: Wisdom
   key: WIS
@@ -3044,7 +3044,7 @@
   itemid: https://www.wikidata.org/wiki/Q1135204
   abbr: WotC
   sameAs: https://en.wikipedia.org/wiki/Wizards_of_the_Coast
-  describe: American publisher of games
+  description: American publisher of games
 - title: Woman Author
   key: WOMAN-AUTHOR
   tag: woman author
@@ -3053,7 +3053,7 @@
   itemid: https://www.wikidata.org/wiki/Q13166
   tag: wordpress
   sameAs: https://en.wikipedia.org/wiki/WordPress
-  describe: blogging tool and a content management system
+  description: blogging tool and a content management system
 - title: Work Experiments
   key: WORK-EXPERIMENTS
   tag: work experiments
@@ -3068,7 +3068,7 @@
   tag: world of dungeons
   abbr: WoD
   contentDisclaimers: '["adamkoebel"]'
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: World of Steve
   key: WORLD-OF-STEVE
   tag: world of steve
@@ -3077,7 +3077,7 @@
   abbr: WWII
   itemid: https://www.wikidata.org/wiki/Q362
   sameAs: https://en.wikipedia.org/wiki/World_War_II
-  describe: 1939–1945 global war between the Allied and Axis Powers
+  description: 1939–1945 global war between the Allied and Axis Powers
 - title: Worlds without Number
   key: WWN
   itemid: https://www.wikidata.org/wiki/Q104153924
@@ -3085,13 +3085,13 @@
   tag: wwn
   game: WWN
   abbr: WWN
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: 'Worlds without Number: Free Edition'
   key: WWN-FREE
   itemid: https://www.wikidata.org/wiki/Q104153924
   offer: https://www.drivethrurpg.com/product/348809/Worlds-Without-Number-Free-Edition?affiliate_id=318171
   game: WWN-FREE
-  describe: tabletop role-playing game
+  description: tabletop role-playing game
 - title: Wrath of the Autarch
   key: WRATH-OF-THE-AUTARCH
   itemid: https://www.wikidata.org/wiki/Q104150978
@@ -3099,7 +3099,7 @@
   offer: https://www.drivethrurpg.com/product/191025/Wrath-of-the-Autarch?affiliate_id=318171
   tag: wrath of the autarch
   game: WRATH-OF-THE-AUTARCH
-  describe: tabletop kingdom building game
+  description: tabletop kingdom building game
 - title: Wyatt Earp
   key: WYATT-EARP
   itemid: https://boardgamegeek.com/boardgame/878/wyatt-earp
@@ -3120,17 +3120,17 @@
   abbr: YAML
   itemid: https://www.wikidata.org/wiki/Q281876
   sameAs: https://en.wikipedia.org/wiki/YAML
-  describe: human-readable data serialization format
+  description: human-readable data serialization format
 - title: Young Offender
   key: YO
 - title: Zeb Cook
   key: ZEB-COOK
   itemid: https://www.wikidata.org/wiki/Q5232538
   sameAs: https://en.wikipedia.org/wiki/David_Cook_(game_designer)
-  describe: game designer
+  description: game designer
 - title: Zettelkasten
   key: ZK
   itemid: https://www.wikidata.org/wiki/Q196883
   tag: zettelkasten
   sameAs: https://en.wikipedia.org/wiki/Zettelkasten
-  describe: 'German term: a tool in the creation of a literary or scientific work'
+  description: 'German term: a tool in the creation of a literary or scientific work'
