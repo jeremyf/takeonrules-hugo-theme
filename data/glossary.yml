@@ -501,6 +501,7 @@
   tag: character funnel
 - title: Charisma
   key: CHA
+  abbr: Cha
 - title: Chubby Monster Games
   key: CHUBBY-MONSTER-GAMES
   tag: chubby monster games
@@ -563,6 +564,7 @@
   tag: conflict
 - title: Constitution
   key: CON
+  abbr: Con
 - title: Content Delivery Network
   key: CDN
   itemid: https://www.wikidata.org/wiki/Q72588
@@ -712,6 +714,7 @@
   description: American comic book publisher
 - title: Dexterity
   key: DEX
+  abbr: Dex
 - title: Diaspora
   key: DIASPORA
   itemid: https://www.wikidata.org/wiki/Q18206449
@@ -939,6 +942,8 @@
   description: fictional world in Dungeons & Dragons
 - title: Education
   key: EDU
+  abbr: Edu
+  description: a character attribute in the Traveller game system.
 - title: Electronic Counter Measures
   key: ECM
   abbr: ECM
@@ -970,6 +975,7 @@
     others, and of groups
 - title: Endurance
   key: END
+  abbr: End
 - title: ENnie Awards
   key: ENNIE-AWARDS
   itemid: https://www.wikidata.org/wiki/Q5323772
@@ -1040,6 +1046,7 @@
   description: generic tabletop role-playing game system
 - title: Feet
   key: FT
+  abbr: ft
   verboseTitle: Feet (unit of measurement)
   itemid: https://www.wikidata.org/wiki/Q3710
   sameAs: https://en.wikipedia.org/wiki/Foot_(unit)
@@ -1082,6 +1089,7 @@
     one
 - title: Fortitude
   key: FORT
+  abbr: Fort
 - title: Four Fudge/Fate Dice
   key: 4DF
   abbr: 4DF
@@ -1094,6 +1102,7 @@
   description: software that is both free (as in freedom) and open source
 - title: Friendly Local Game Store
   key: FLGS
+  abbr: FLGS
 - title: Friendship
   key: FRIENDSHIP
   itemid: https://www.wikidata.org/wiki/Q491
@@ -1385,6 +1394,7 @@
   abbr: Int
 - title: Intelligence
   key: INT
+  abbr: Int
 - title: International Business Machines Corporation
   key: IBM
   mentionAs: IBM
@@ -1761,17 +1771,19 @@
   key: MVP
   abbr: MVP
 - title: Mouse Guard RPG
-  key: MOUSE-GUARD-RGP
+  key: MOUSE-GUARD-RPG
   itemid: https://www.wikidata.org/wiki/Q17142058
   offer: https://www.burningwheel.com/mouse-guard/
   tag: mouse guard
-  game: MOUSE-GUARD-RGP
+  game: MOUSE-GUARD-RPG
+  abbr: MGRPG
   contentDisclaimers:
   - lukecrane
   sameAs: https://en.wikipedia.org/wiki/Mouse_Guard_Roleplaying_Game
   description: tabletop role-playing game
 - title: Movement
   key: MV
+  abbr: MV
 - title: Necromancer's Maze
   key: NECROMANCER'S-MAZE
   tag: necromancers maze
@@ -1937,6 +1949,7 @@
   description: Dungeons & Dragons adventure module
 - title: Outline Processor Markup Language
   key: OPML
+  abbr: OPML
   itemid: https://www.wikidata.org/wiki/Q836370
   sameAs: https://en.wikipedia.org/wiki/OPML
   description: an XML format for structured outlines
@@ -1981,6 +1994,7 @@
   description: species of fruit tree (for the fruit use Q13411121)
 - title: Peer to Peer
   key: P2P
+  abbr: P2P
   verboseTitle: 'Peer to Peer: A decentralized and distributed network architecture'
   itemid: https://www.wikidata.org/wiki/Q161410
   sameAs: https://en.wikipedia.org/wiki/Peer-to-peer
@@ -2135,6 +2149,7 @@
     flow of speech
 - title: Psionic Strength
   key: PSI
+  abbr: Psi
 - title: Publish (on your) Own Site, Syndicate Elsewhere
   key: POSSE
   abbr: POSSE
@@ -2755,6 +2770,7 @@
   sameAs: https://en.wikipedia.org/wiki/The_Book_of_the_New_Sun
   description: novel series by Gene Wolfe
 - title: The Empire
+  verboseTitle: The Empire of Man (Warhammer Fantasy Setting)
   key: WARHAMMER-THE-EMPIRE
   itemid: https://warhammerfantasy.fandom.com/wiki/The_Empire
   description: The Glorious Empire of the Warhammer Fantasy Setting
@@ -2952,6 +2968,7 @@
   abbr: UWP
 - title: Versus Armor
   key: VA
+  abbr: VA
 - title: VIM Text Editor
   key: VIM
   mentionAs: vim
@@ -3005,6 +3022,7 @@
   description: High-fantasy setting, created by Games Workshop
 - title: Weapon Speed
   key: WS
+  abbr: WS
 - title: Web Content Accessibility Guidelines
   key: WCAG
   abbr: WCAG
@@ -3039,6 +3057,7 @@
   offer: https://www.drivethrurpg.com/product/348152/Whitehack-Third-Edition?affiliate_id=318171
   tag: whitehack
   game: WHITEHACK
+  abbr: WH
 - title: Willpower
   key: WILL
 - title: Winter
@@ -3050,6 +3069,7 @@
     and spring
 - title: Wisdom
   key: WIS
+  abbr: Wis
 - title: Witchburner
   key: WITCHBURNER
   itemid: https://rpggeek.com/rpgseries/60860/witchburner
