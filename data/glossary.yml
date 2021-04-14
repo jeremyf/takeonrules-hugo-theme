@@ -433,7 +433,13 @@
   description: game using playing cards as the primary device
 - title: Carroburg
   key: WARHAMMER-CARROBURG
-  itemid: https://whfb.lexicanum.com/wiki/Carroburg
+  itemid: https://warhammerfantasy.fandom.com/wiki/Carroburg
+- title: Death on the Reik
+  game: DEATH-ON-THE-REIK
+  key: DEATH-ON-THE-REIK
+  offerid: https://www.drivethrurpg.com/product/229191/Warhammer-Fantasy-Roleplay-First-Edition--Death-on-the-Reik-The-Enemy-Within-Part-2?affiliate_id=318171
+  itemid: https://www.wikidata.org/wiki/Q65088833
+  sameAs: https://en.wikipedia.org/wiki/Death_on_the_Reik
 - title: Cartography
   key: CARTOGRAPHY
   itemid: https://www.wikidata.org/wiki/Q42515
@@ -2751,6 +2757,7 @@
 - title: The Empire
   key: WARHAMMER-THE-EMPIRE
   itemid: https://warhammerfantasy.fandom.com/wiki/The_Empire
+  description: The Glorious Empire of the Warhammer Fantasy Setting
 - title: The Empire Strikes Back
   key: THE-EMPIRE-STRIKES-BACK
   itemid: https://www.wikidata.org/wiki/Q181795
