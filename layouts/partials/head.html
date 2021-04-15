@@ -5,6 +5,7 @@
 {{- else if .RelPermalink }}
   <link rel="canonical" href="{{ .RelPermalink }}" />
 {{- end }}
+<link id="canonical-take-on-rules-url" href="{{ .Permalink }}" />
 {{ partialCached "head-duplicated-info.html" . }}
 
 {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}" />{{ end }}
