@@ -5,7 +5,10 @@
 {{- $title := default $data.title ($data.mentionAs) }}
 {{- $name := $title }}
 {{- $link := false }}
-{{- if (.Get "link") }}{{- if $data.sameAs }}
+{{- with (.Get "link") }}
+{{ if ne . "t" }}
+{{- $link = . }}
+{{- else if $data.sameAs }}
 {{- $link = $data.sameAs }}
 {{- else if $data.itemid }}
 {{- $link = $data.itemid }}

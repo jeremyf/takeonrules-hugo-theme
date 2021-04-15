@@ -4,6 +4,9 @@
   verboseTitle: 'Lost Ship: A Survival Game'
   offer: https://www.drivethrurpg.com/product/302647/Lost-Ship-A-Survival-Game?affiliate_id=318171
   game: LOST-SHIP
+- title: CurateND
+  key: CURATE-ND
+  sameAs: https://curate.nd.edu
 - title: Italo Calvino
   itemid: https://www.wikidata.org/wiki/Q154756
   key: ITALO-CALVINO
