@@ -10,12 +10,18 @@
 - title: Italo Calvino
   itemid: https://www.wikidata.org/wiki/Q154756
   key: ITALO-CALVINO
+  sameAs: https://en.wikipedia.org/wiki/Italo_Calvino
+  description: Italian journalist and writer
 - title: Italian Folktales
   itemid: https://www.wikidata.org/wiki/Q3744324
   key: ITALIAN-FOLKTALES
+  sameAs: https://en.wikipedia.org/wiki/Italian_Folktales
+  description: collection of Italian folk-tales by Italo Calvino
 - title: 'Legend of Zelda: Breath of the Wild'
   itemid: https://www.wikidata.org/wiki/Q17185964
   key: BREATH-OF-THE-WILD
+  sameAs: https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild
+  description: 2017 action-adventure video game developed by Nintendo
 - title: 1001 Nights
   key: 1001-NIGHTS
   itemid: https://rpggeek.com/rpg/763/thousand-and-one-nights-game-enticing-stories
@@ -965,10 +971,14 @@
   key: ECM
   abbr: ECM
   itemid: https://www.wikidata.org/wiki/Q998627
+  sameAs: https://en.wikipedia.org/wiki/Electronic_counter-countermeasure
+  description: part of electronic warfare
 - title: Electronic Warfare
   key: EW
   abbr: EW
   itemid: https://www.wikidata.org/wiki/Q272826
+  sameAs: https://en.wikipedia.org/wiki/Electronic_warfare
+  description: combat involving electronics and directed energy
 - title: 'Elisp: dialect of Lisp used in GNU Emacs'
   key: ELISP
   mentionAs: Elisp
@@ -2120,6 +2130,9 @@
   key: PRIVACY
   tag: privacy
   itemid: https://www.wikidata.org/wiki/Q188728
+  sameAs: https://en.wikipedia.org/wiki/Privacy
+  description: the ability of an individual or group to seclude themselves, or information
+    about themselves
 - title: Probability
   key: PROBABILITY
   itemid: https://www.wikidata.org/wiki/Q9492
