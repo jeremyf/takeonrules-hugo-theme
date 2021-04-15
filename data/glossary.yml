@@ -947,9 +947,11 @@
 - title: Electronic Counter Measures
   key: ECM
   abbr: ECM
+  itemid: https://www.wikidata.org/wiki/Q998627
 - title: Electronic Warfare
   key: EW
   abbr: EW
+  itemid: https://www.wikidata.org/wiki/Q272826
 - title: 'Elisp: dialect of Lisp used in GNU Emacs'
   key: ELISP
   mentionAs: Elisp
@@ -1883,6 +1885,7 @@
   key: OGC
   abbr: OGC
   tag: open game content
+  description: The "open" portion of content released under the Open Game License.
 - title: Open Game License
   key: OGL
   abbr: OGL
@@ -2099,6 +2102,7 @@
 - title: Privacy
   key: PRIVACY
   tag: privacy
+  https://www.wikidata.org/wiki/Q188728
 - title: Probability
   key: PROBABILITY
   itemid: https://www.wikidata.org/wiki/Q9492
@@ -2116,6 +2120,7 @@
 - title: Product Identity
   key: PI
   abbr: PI
+  description: The "protected" portion of content released under the Open Game License.
 - title: Product Manager
   key: PRODUCT-MANAGER
   abbr: PM
