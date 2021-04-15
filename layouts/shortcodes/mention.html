@@ -4,8 +4,14 @@
 {{- $data := index (where $.Site.Data.glossary "key" "eq" $key) 0 }}
 {{- $title := default $data.title ($data.mentionAs) }}
 {{- $name := $title }}
+{{- $link := false }}
+{{- if (.Get "link") }}{{- if $data.sameAs }}
+{{- $link = $data.sameAs }}
+{{- else if $data.itemid }}
+{{- $link = $data.itemid }}
+{{- end }}{{- end }}
 {{- if .Get "downcase" }}{{- $name = lower $name}}{{- end }}
 {{- if .Get "as" }}{{ $name = .Get "as" }}{{- end }}
 {{- $itemtype := default "Thing" ($data.itemtype) }}
 {{- if .Get "abbr" }}{{ $name = default $name ($data.abbr) }}{{- end }}
-{{- printf "<%s itemprop=\"%s\" itemscope itemtype=\"http://schema.org/%s\">" $tag $itemprop $itemtype | safeHTML }}{{- if isset $data "itemid" }}<link itemprop="sameAs" href="{{ $data.itemid }}" />{{- end }}<span itemprop="name">{{ $name }}</span>{{- if ne $name $title }}<meta itemprop="alternateName" content="{{ $title }}">{{- end }}{{- printf "</%s>" $tag | safeHTML }}
+{{- printf "<span itemprop=\"%s\" itemscope itemtype=\"http://schema.org/%s\">" $itemprop $itemtype | safeHTML }}{{- if isset $data "itemid" }}<link itemprop="sameAs" href="{{ $data.itemid }}" />{{- end }}{{- printf "<%s itemprop=\"name\">" $tag | safeHTML }}{{- if $link }}<a href="{{ $link }}">{{ $name }}</a>{{- else }}{{ $name }}{{- end }}{{- printf "</%s>" $tag | safeHTML }}{{- if ne $name $title }}<meta itemprop="alternateName" content="{{ $title }}">{{- end }}</span>

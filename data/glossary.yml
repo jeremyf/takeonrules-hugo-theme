@@ -1,4 +1,18 @@
 ---
+- title: Lost Ship
+  key: LOST-SHIP
+  verboseTitle: 'Lost Ship: A Survival Game'
+  offer: https://www.drivethrurpg.com/product/302647/Lost-Ship-A-Survival-Game?affiliate_id=318171
+  game: LOST-SHIP
+- title: Italo Calvino
+  itemid: https://www.wikidata.org/wiki/Q154756
+  key: ITALO-CALVINO
+- title: Italian Folktales
+  itemid: https://www.wikidata.org/wiki/Q3744324
+  key: ITALIAN-FOLKTALES
+- title: 'Legend of Zelda: Breath of the Wild'
+  itemid: https://www.wikidata.org/wiki/Q17185964
+  key: BREATH-OF-THE-WILD
 - title: 1001 Nights
   key: 1001-NIGHTS
   itemid: https://rpggeek.com/rpg/763/thousand-and-one-nights-game-enticing-stories
@@ -2102,7 +2116,7 @@
 - title: Privacy
   key: PRIVACY
   tag: privacy
-  https://www.wikidata.org/wiki/Q188728
+  itemid: https://www.wikidata.org/wiki/Q188728
 - title: Probability
   key: PROBABILITY
   itemid: https://www.wikidata.org/wiki/Q9492
