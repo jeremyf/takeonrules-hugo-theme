@@ -1044,6 +1044,9 @@
 - title: Family
   key: FAMILY
   tag: family
+  itemid: https://www.wikidata.org/wiki/Q8436
+  sameAs: https://en.wikipedia.org/wiki/Family
+  description: group of people affiliated by consanguinity, affinity, or co-residence
 - title: Family Gaming
   key: FAMILY-GAMING
   tag: family gaming
