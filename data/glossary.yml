@@ -253,9 +253,12 @@
   sameAs: https://en.wikipedia.org/wiki/Better_World_Books
   description: online used book seller
 - title: Birthright
+  verboseTitle: Birthright Campaign Setting
   key: BIRTHRIGHT
   itemid: https://www.wikidata.org/wiki/Q2384770
   tag: birthright
+  game: BIRTHRIGHT
+  offer: https://www.dmsguild.com/product/16938/Birthright-Campaign-Setting-2e?affiliate_id=318171
   sameAs: https://en.wikipedia.org/wiki/Birthright_(campaign_setting)
   description: Dungeons & Dragons campaign setting
 - title: Black and White
