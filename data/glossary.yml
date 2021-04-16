@@ -1,27 +1,4 @@
 ---
-- title: Lost Ship
-  key: LOST-SHIP
-  verboseTitle: 'Lost Ship: A Survival Game'
-  offer: https://www.drivethrurpg.com/product/302647/Lost-Ship-A-Survival-Game?affiliate_id=318171
-  game: LOST-SHIP
-- title: CurateND
-  key: CURATE-ND
-  sameAs: https://curate.nd.edu
-- title: Italo Calvino
-  itemid: https://www.wikidata.org/wiki/Q154756
-  key: ITALO-CALVINO
-  sameAs: https://en.wikipedia.org/wiki/Italo_Calvino
-  description: Italian journalist and writer
-- title: Italian Folktales
-  itemid: https://www.wikidata.org/wiki/Q3744324
-  key: ITALIAN-FOLKTALES
-  sameAs: https://en.wikipedia.org/wiki/Italian_Folktales
-  description: collection of Italian folk-tales by Italo Calvino
-- title: 'Legend of Zelda: Breath of the Wild'
-  itemid: https://www.wikidata.org/wiki/Q17185964
-  key: BREATH-OF-THE-WILD
-  sameAs: https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild
-  description: 2017 action-adventure video game developed by Nintendo
 - title: 1001 Nights
   key: 1001-NIGHTS
   itemid: https://rpggeek.com/rpg/763/thousand-and-one-nights-game-enticing-stories
@@ -457,12 +434,6 @@
 - title: Carroburg
   key: WARHAMMER-CARROBURG
   itemid: https://warhammerfantasy.fandom.com/wiki/Carroburg
-- title: Death on the Reik
-  game: DEATH-ON-THE-REIK
-  key: DEATH-ON-THE-REIK
-  offerid: https://www.drivethrurpg.com/product/229191/Warhammer-Fantasy-Roleplay-First-Edition--Death-on-the-Reik-The-Enemy-Within-Part-2?affiliate_id=318171
-  itemid: https://www.wikidata.org/wiki/Q65088833
-  sameAs: https://en.wikipedia.org/wiki/Death_on_the_Reik
 - title: Cartography
   key: CARTOGRAPHY
   itemid: https://www.wikidata.org/wiki/Q42515
@@ -535,6 +506,15 @@
   tag: circle of hands
   game: CIRCLE-OF-HANDS
   abbr: CoH
+- title: Circles Test
+  description: A <cite>Burning Wheel Gold</cite> test used to find a non-player character;
+    In this way the player character can say "I'm looking for someone to help me research
+    this information." The person running the game can then see make a Circle's test
+    and lets see who you find.
+  key: CIRCLES-TEST
+  tag: circles test
+  contentDisclaimers:
+  - lukecrane
 - title: Coalition Building
   key: COALITION-BUILDING
   tag: coalition building
@@ -653,6 +633,9 @@
   game: CTHULHU-DARK
   abbr: CD
   description: tabletop role-playing game
+- title: CurateND
+  key: CURATE-ND
+  sameAs: https://curate.nd.edu
 - title: Custom Moves
   key: CUSTOM-MOVES
   tag: custom moves
@@ -710,6 +693,12 @@
   tag: death
   sameAs: https://en.wikipedia.org/wiki/Death
   description: permanent cessation of vital functions
+- title: Death on the Reik
+  game: DEATH-ON-THE-REIK
+  key: DEATH-ON-THE-REIK
+  offerid: https://www.drivethrurpg.com/product/229191/Warhammer-Fantasy-Roleplay-First-Edition--Death-on-the-Reik-The-Enemy-Within-Part-2?affiliate_id=318171
+  itemid: https://www.wikidata.org/wiki/Q65088833
+  sameAs: https://en.wikipedia.org/wiki/Death_on_the_Reik
 - title: Defund the Police
   key: DEFUND-THE-POLICE
   itemid: https://www.wikidata.org/wiki/Q96150192
@@ -1046,6 +1035,12 @@
   key: FABLES-BOOKSHOP
   itemid: https://fablesbooks.com/
   tag: fables bookshop
+- title: Fafhrd and the Gray Mouser
+  itemid: https://www.wikidata.org/wiki/Q638565
+  key: FAFHRD-AND-THE-GRAY-MOUSER
+  tag: fafhrd and the gray mouser
+  sameAs: https://en.wikipedia.org/wiki/Fafhrd_and_the_Gray_Mouser
+  description: group of works
 - title: Family
   key: FAMILY
   tag: family
@@ -1463,6 +1458,16 @@
   offer: https://www.drivethrurpg.com/product/128281/Inverse-World--A-Dungeon-World-Supplement?affiliate_id=318171
   tag: inverse world
   game: INVERSE-WORLD
+- title: Italian Folktales
+  itemid: https://www.wikidata.org/wiki/Q3744324
+  key: ITALIAN-FOLKTALES
+  sameAs: https://en.wikipedia.org/wiki/Italian_Folktales
+  description: collection of Italian folk-tales by Italo Calvino
+- title: Italo Calvino
+  itemid: https://www.wikidata.org/wiki/Q154756
+  key: ITALO-CALVINO
+  sameAs: https://en.wikipedia.org/wiki/Italo_Calvino
+  description: Italian journalist and writer
 - title: Jack Vance
   key: JACK-VANCE
   itemid: https://www.wikidata.org/wiki/Q312632
@@ -1613,6 +1618,11 @@
   tag: lavender hack
   game: LAVENDER-HACH
   abbr: LH
+- title: 'Legend of Zelda: Breath of the Wild'
+  itemid: https://www.wikidata.org/wiki/Q17185964
+  key: BREATH-OF-THE-WILD
+  sameAs: https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild
+  description: 2017 action-adventure video game developed by Nintendo
 - title: Let's Read
   key: LETS-READ
   tag: let's read
@@ -1642,6 +1652,11 @@
   abbr: LotR
   sameAs: https://en.wikipedia.org/wiki/The_Lord_of_the_Rings
   description: 1954–1955 fantasy novel by J. R. R. Tolkien
+- title: Lost Ship
+  key: LOST-SHIP
+  verboseTitle: 'Lost Ship: A Survival Game'
+  offer: https://www.drivethrurpg.com/product/302647/Lost-Ship-A-Survival-Game?affiliate_id=318171
+  game: LOST-SHIP
 - title: Loviatar Fanzine
   key: LOVIATAR-FANZINE
   itemid: https://rpggeek.com/rpgperiodical/17799/loviatar
@@ -2672,15 +2687,6 @@
   tag: steel test
   contentDisclaimers:
   - lukecrane
-- title: Circles Test
-  description: A <cite>Burning Wheel Gold</cite> test used to find a non-player character;
-    In this way the player character can say "I'm looking for someone to help me research
-    this information." The person running the game can then see make a Circle's test
-    and lets see who you find.
-  key: CIRCLES-TEST
-  tag: circles test
-  contentDisclaimers:
-  - lukecrane
 - title: Stonehell Dungeon
   key: STONEHELL-DUNGEON
   itemid: https://rpggeek.com/rpgseries/26518/stonehell-dungeon
@@ -3001,6 +3007,12 @@
 - title: Universal World Profile
   key: UWP
   abbr: UWP
+- title: User Interface
+  key: UI
+  abbr: UI
+  itemid: https://www.wikidata.org/wiki/Q47146
+  sameAs: https://en.wikipedia.org/wiki/User_interface
+  description: means by which a user interacts with and controls a machine
 - title: Versus Armor
   key: VA
   abbr: VA
