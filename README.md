@@ -84,6 +84,7 @@ There additional optional keys are as follows:
 - **contentDisclaimers**: (Array) Indicates that this entry has some associated content disclaimer
 - **itemtype**: The schema.org itemtype for this entry (see `mention.html` for implementation details)
 - **description**: Similar to note, treat as `itemprop="description"`
+- **autoMention**: When set to true, the glossary:mention rake task will crawl the content and automatically create content links.
 
 #### Todo
 
