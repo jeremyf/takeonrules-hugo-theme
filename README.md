@@ -85,6 +85,15 @@ There additional optional keys are as follows:
 - **itemtype**: The schema.org itemtype for this entry (see `mention.html` for implementation details)
 - **description**: Similar to note, treat as `itemprop="description"`
 
+#### Todo
+
+The `blockquote`, `abbr`, `linkToGame`, and `mention` all tie into similar data access; Just as I should only have one link for a given URL on the page, I should only have one `itemprop="mention"` for a topic.
+
+An idea for refactoring:
+
+- Overload `mention` such that if the `mention`-ed glossary entry has a `game`, `cite` that entry and create an `a`-tag to the offer.
+- Consolidate `abbr` and `mention`, this requires reconciling parameters.
+
 ### Other Stuff
 
 - [table.html](layouts/shortcodes/table.html) :: Helps ensure a well-formed table; one parameter allows for table rendering in the margins.
