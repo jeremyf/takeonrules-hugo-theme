@@ -349,13 +349,14 @@
   abbr: BWC
   contentDisclaimers:
   - lukecrane
-- title: Burning Wheel Gold
+- title: Burning Wheel
   key: BURNING-WHEEL-GOLD
   itemid: https://www.wikidata.org/wiki/Q7720690
   offer: https://burningwheel.com
   tag: burning wheel
   game: BURNING-WHEEL-GOLD
   abbr: BWG
+  autoMention: true
   contentDisclaimers:
   - lukecrane
   sameAs: https://en.wikipedia.org/wiki/The_Burning_Wheel
