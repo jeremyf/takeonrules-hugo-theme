@@ -217,7 +217,8 @@
   game: BARBARIANS-OF-LEMURIA
   description: tabletop role-playing game
 - title: Barrel Rider Games
-  key: BRG
+  key: BARREL-RIDER-GAMES
+  sameAs: https://barrelridergames.wordpress.com/
 - title: Barrowmaze Complete
   key: BARROWMAZE-COMPLETE
   itemid: https://rpggeek.com/rpgitem/175318/barrowmaze-complete
