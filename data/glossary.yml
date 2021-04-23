@@ -342,13 +342,6 @@
   - lukecrane
   sameAs: https://en.wikipedia.org/wiki/Burning_Empires_(role-playing_game)
   description: tabletop role-playing game
-- title: Burning Wheel Codex
-  key: BURNING-WHEEL-CODEX
-  itemid: https://rpggeek.com/rpgitem/191252/burning-wheel-codex
-  game: BURNING-WHEEL-CODEX
-  abbr: BWC
-  contentDisclaimers:
-  - lukecrane
 - title: Burning Wheel
   key: BURNING-WHEEL-GOLD
   itemid: https://www.wikidata.org/wiki/Q7720690
@@ -361,6 +354,13 @@
   - lukecrane
   sameAs: https://en.wikipedia.org/wiki/The_Burning_Wheel
   description: tabletop role-playing game
+- title: Burning Wheel Codex
+  key: BURNING-WHEEL-CODEX
+  itemid: https://rpggeek.com/rpgitem/191252/burning-wheel-codex
+  game: BURNING-WHEEL-CODEX
+  abbr: BWC
+  contentDisclaimers:
+  - lukecrane
 - title: Burning Wheel Headquarters
   key: BWHQ
   contentDisclaimers:
@@ -2254,6 +2254,11 @@
   offer: https://www.drivethrurpg.com/product/112605/2012-Rappan-Athuk-SW?affiliate_id=318171
   tag: rappan athuk
   game: RAPPAN-ATHUK
+- title: Read-eval-print loop
+  abbr: REPL
+  key: REPL
+  itemid: https://www.wikidata.org/wiki/Q2032810
+  tag: repl
 - title: Reading
   key: READING
   itemid: https://www.wikidata.org/wiki/Q199657
