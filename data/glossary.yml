@@ -20,6 +20,7 @@
   itemid: https://www.wikidata.org/wiki/Q4656713
   tag: a few acres of snow
   sameAs: https://en.wikipedia.org/wiki/A_Few_Acres_of_Snow
+  description: board game
 - title: A-Z Challenge
   key: A-Z-CHALLENGE
   tag: a z challenge
@@ -1223,6 +1224,7 @@
   itemid: https://www.wikidata.org/wiki/Q734162
   tag: gipf project
   sameAs: https://en.wikipedia.org/wiki/GIPF_project
+  description: board game
 - title: Git
   key: GIT
   verboseTitle: 'Git: distributed version control system'
@@ -2259,6 +2261,8 @@
   key: REPL
   itemid: https://www.wikidata.org/wiki/Q2032810
   tag: repl
+  sameAs: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
+  description: also known as a language shell
 - title: Reading
   key: READING
   itemid: https://www.wikidata.org/wiki/Q199657
