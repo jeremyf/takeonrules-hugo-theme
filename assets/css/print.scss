@@ -14,6 +14,16 @@ body {
 
 .book { display: none; }
 
+body.resume {
+    & > footer { display: none; }
+    * { color: var(--fg) !important; }
+    a { text-decoration: none !important; }
+    h1 { color: var(--h1); }
+    h2 { color: var(--h2) !important;  font-size: 1rem; }
+    h3 { color: var(--h3) !important;  font-size: 0.9rem; font-weight: 500; margin-top: 1rem; }
+    section:not(.note) dl { margin-left: 10px; }
+}
+
 a { text-decoration: none; }
 
 article {
