@@ -2077,6 +2077,9 @@
   verboseTitle: 'Planarch Codex: Dark Heart of the Dreamer'
   itemid: https://rpggeek.com/rpgitem/138130/planarch-codex-dark-heart-dreamer
   tag: planarch codex
+- title: PlantUML
+  key: PLANTUML
+  itemid: https://www.wikidata.org/wiki/Q18346546
 - title: Play by Post
   key: PBP
   itemid: https://www.wikidata.org/wiki/Q751838
@@ -2609,6 +2612,10 @@
 - title: Solo Gaming
   key: SOLO-GAMING
   tag: solo gaming
+- title: Solr
+  key: SOLR
+  itemid: https://www.wikidata.org/wiki/Q2858103
+  verboseTitle: Apache Solr
 - title: Sophont
   key: SOPHONT
   tag: sophont
