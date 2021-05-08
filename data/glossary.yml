@@ -1,8 +1,4 @@
 ---
-- title: Limited Liability Company
-  abbr: LLC
-  key: LLC
-  itemid: https://www.wikidata.org/wiki/Q149789
 - title: 1001 Nights
   key: 1001-NIGHTS
   itemid: https://rpggeek.com/rpg/763/thousand-and-one-nights-game-enticing-stories
@@ -353,7 +349,7 @@
   offer: https://burningwheel.com
   tag: burning wheel
   game: BURNING-WHEEL-GOLD
-  abbr: BWG
+  abbr: BW
   autoMention: true
   contentDisclaimers:
   - lukecrane
@@ -1648,6 +1644,10 @@
 - title: Lifepaths
   key: LP
   tag: lifepaths
+- title: Limited Liability Company
+  abbr: LLC
+  key: LLC
+  itemid: https://www.wikidata.org/wiki/Q149789
 - title: Live Action Role Playing
   key: LARP
   abbr: LARP
@@ -2999,6 +2999,10 @@
   game: TRAVELLER-CORE-RULEBOOK
   sameAs: https://en.wikipedia.org/wiki/Traveller_(role-playing_game)
   description: tabletop role-playing game
+- title: Tzeentch
+  key: WARHAMMER-TZEENTCH
+  description: 'Tzeentch: the Changer of Ways'
+  sameAs: https://warhammerfantasy.fandom.com/wiki/Tzeentch
 - title: Ultraviolet
   key: UV
   itemid: https://www.wikidata.org/wiki/Q11391
