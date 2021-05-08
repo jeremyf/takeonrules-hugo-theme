@@ -1648,6 +1648,8 @@
   abbr: LLC
   key: LLC
   itemid: https://www.wikidata.org/wiki/Q149789
+  sameAs: https://en.wikipedia.org/wiki/Limited_liability_company
+  description: type of private limited company in the United States
 - title: Live Action Role Playing
   key: LARP
   abbr: LARP
@@ -2084,6 +2086,8 @@
 - title: PlantUML
   key: PLANTUML
   itemid: https://www.wikidata.org/wiki/Q18346546
+  sameAs: https://en.wikipedia.org/wiki/PlantUML
+  description: tool to create UML diagrams from a plain text language
 - title: Play by Post
   key: PBP
   itemid: https://www.wikidata.org/wiki/Q751838
@@ -2620,6 +2624,7 @@
   key: SOLR
   itemid: https://www.wikidata.org/wiki/Q2858103
   verboseTitle: Apache Solr
+  sameAs: https://en.wikipedia.org/wiki/Apache_Solr
 - title: Sophont
   key: SOPHONT
   tag: sophont
