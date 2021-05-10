@@ -3195,7 +3195,8 @@
   itemid: https://www.wikidata.org/wiki/Q68522321
   tag: world of dungeons
   abbr: WoD
-  contentDisclaimers: '["adamkoebel"]'
+  contentDisclaimers:
+  - adamkoebel
   description: tabletop role-playing game
 - title: World of Steve
   key: WORLD-OF-STEVE
