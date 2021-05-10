@@ -3092,11 +3092,13 @@
 - title: Wampus County
   key: WAMPUS-COUNTY
   tag: wampus county
-- title: Warhammer Fantasy
+- title: Warhammer Fantasy Roleplay (Fourth Edition)
   key: WHF
   itemid: https://www.wikidata.org/wiki/Q5490
+  offer: https://www.drivethrurpg.com/product/248284/Warhammer-Fantasy-Roleplay-Fourth-Edition-Rulebook?affiliate=317181
   tag: warhammer fantasy
-  abbr: WHF
+  abbr: WHFR
+  game: WHF
   sameAs: https://en.wikipedia.org/wiki/Warhammer_Fantasy_Roleplay
   description: tabletop role-playing game
 - title: Warhammer Fantasy Setting
