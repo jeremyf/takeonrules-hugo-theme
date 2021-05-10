@@ -1,9 +1,9 @@
 @import "settings";
 
-* { -webkit-transition: none !important; transition: none !important; font-size: 90%; }
+* { -webkit-transition: none !important; transition: none !important; font-size: 12px !important; }
 
 *, *:before, *:after { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
-@page { margin: 0.75in 0.5in; orphans:4; widows:2; }
+@page { margin: 0.75in 0.25in; orphans:4; widows:2; }
 // body header, body footer, body nav, body .content .margin-toggle:not(.sidenote-number) { display:none; }
 // body main header, .marginnote, .sidenote { display: inherit; }
 body {
@@ -19,9 +19,10 @@ body.resume {
     * { color: var(--fg) !important; }
     a, abbr, .dfn { text-decoration: none !important; }
     .dfn { font-style: normal; font-weight: 400; }
-    h1 { color: var(--h1); }
-    h2 { color: var(--h2) !important;  font-size: 1rem; font-weight: 600; }
-    h3 { color: var(--h3) !important;  font-size: 0.9rem; font-weight: 500; }
+    h1 { color: var(--h1); font-size: 22px !important;}
+    h2 { color: var(--h2) !important;  font-size: 18px !important; font-weight: 600; }
+    h3 { color: var(--h3) !important;  font-size: 16px !important; font-weight: 500; }
+    h3 a { font-size: 16px !important; }
     // h3:not(:note) { margin-top: 1rem; }
     section:not(.note) dl { margin-left: 10px; }
 }
@@ -61,6 +62,6 @@ table {
 
 // A hack to address the rather unfortunate margin issues with lists.
 // Without this, the margin was aggressively set in.
-[role="note"] > ul { margin-left: -23px; }
+// [role="note"] > ul { margin-left: -23px; }
 
 .print-only { display: block; }

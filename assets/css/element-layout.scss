@@ -147,7 +147,7 @@ a.offscreen {
 
 dl {
     dt:after { content: ":"; font-weight: bold; }
-    dd { margin-left: 2rem; text-indent: -1rem; }
+    dd { margin-left: 1rem; text-indent: -0.5rem; }
     dd:before { content: "· "; }
 }
 
