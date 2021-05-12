@@ -346,13 +346,13 @@
   - lukecrane
   sameAs: https://en.wikipedia.org/wiki/Burning_Empires_(role-playing_game)
   description: tabletop role-playing game
-- title: Burning Wheel
+- title: Burning Wheel Gold
   key: BURNING-WHEEL-GOLD
   itemid: https://www.wikidata.org/wiki/Q7720690
   offer: https://burningwheel.com
   tag: burning wheel
   game: BURNING-WHEEL-GOLD
-  abbr: BW
+  abbr: BWG
   autoMention: true
   contentDisclaimers:
   - lukecrane
