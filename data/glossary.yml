@@ -2428,6 +2428,10 @@
 - title: Sandbox
   key: SANDBOX
   tag: sandbox
+- title: Sandhill Crane
+  key: SANDHILL-CRANE
+  itemid: https://www.wikidata.org/wiki/Q503804
+  tag: sandhill crane
 - title: Savage Worlds
   key: SAVAGE-WORLDS
   itemid: https://www.wikidata.org/wiki/Q916623
