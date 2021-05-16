@@ -1,7 +1,4 @@
 ---
-- title: Reikland
-  key: WARHAMMER_REIKLAND
-  itemid: https://warhammerfantasy.fandom.com/wiki/Reikland
 - title: 1001 Nights
   key: 1001-NIGHTS
   itemid: https://rpggeek.com/rpg/763/thousand-and-one-nights-game-enticing-stories
@@ -346,6 +343,13 @@
   - lukecrane
   sameAs: https://en.wikipedia.org/wiki/Burning_Empires_(role-playing_game)
   description: tabletop role-playing game
+- title: Burning Wheel Codex
+  key: BURNING-WHEEL-CODEX
+  itemid: https://rpggeek.com/rpgitem/191252/burning-wheel-codex
+  game: BURNING-WHEEL-CODEX
+  abbr: BWC
+  contentDisclaimers:
+  - lukecrane
 - title: Burning Wheel Gold
   key: BURNING-WHEEL-GOLD
   itemid: https://www.wikidata.org/wiki/Q7720690
@@ -358,13 +362,6 @@
   - lukecrane
   sameAs: https://en.wikipedia.org/wiki/The_Burning_Wheel
   description: tabletop role-playing game
-- title: Burning Wheel Codex
-  key: BURNING-WHEEL-CODEX
-  itemid: https://rpggeek.com/rpgitem/191252/burning-wheel-codex
-  game: BURNING-WHEEL-CODEX
-  abbr: BWC
-  contentDisclaimers:
-  - lukecrane
 - title: Burning Wheel Headquarters
   key: BWHQ
   contentDisclaimers:
@@ -981,7 +978,7 @@
   key: ELISP
   mentionAs: Elisp
   itemid: https://www.wikidata.org/wiki/Q1334586
-  abbr: elisp
+  abbr: Elisp
   sameAs: https://en.wikipedia.org/wiki/Emacs_Lisp
   description: dialect of Lisp used in GNU Emacs
 - title: Emacs
@@ -1653,6 +1650,10 @@
   itemid: https://www.wikidata.org/wiki/Q149789
   sameAs: https://en.wikipedia.org/wiki/Limited_liability_company
   description: type of private limited company in the United States
+- title: Lisp
+  key: LISP
+  itemid: https://www.wikidata.org/wiki/Q132874
+  abbr: Lisp
 - title: Live Action Role Playing
   key: LARP
   abbr: LARP
@@ -2295,6 +2296,9 @@
   tag: reign enchiridion
   game: REIGN-ENCHIRIDION
   description: tabletop role-playing game
+- title: Reikland
+  key: WARHAMMER_REIKLAND
+  itemid: https://warhammerfantasy.fandom.com/wiki/Reikland
 - title: Relational Database Management System
   abbr: RDBMS
   key: RDBMS
