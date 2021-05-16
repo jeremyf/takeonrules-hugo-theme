@@ -2432,6 +2432,8 @@
   key: SANDHILL-CRANE
   itemid: https://www.wikidata.org/wiki/Q503804
   tag: sandhill crane
+  sameAs: https://en.wikipedia.org/wiki/Sandhill_crane
+  description: species of bird
 - title: Savage Worlds
   key: SAVAGE-WORLDS
   itemid: https://www.wikidata.org/wiki/Q916623
