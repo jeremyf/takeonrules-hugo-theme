@@ -1654,6 +1654,8 @@
   key: LISP
   itemid: https://www.wikidata.org/wiki/Q132874
   abbr: Lisp
+  sameAs: https://en.wikipedia.org/wiki/Lisp_(programming_language)
+  description: functional programming language based on the lambda calculus
 - title: Live Action Role Playing
   key: LARP
   abbr: LARP
@@ -2632,6 +2634,7 @@
   itemid: https://www.wikidata.org/wiki/Q2858103
   verboseTitle: Apache Solr
   sameAs: https://en.wikipedia.org/wiki/Apache_Solr
+  description: open-source enterprise-search platform
 - title: Sophont
   key: SOPHONT
   tag: sophont
