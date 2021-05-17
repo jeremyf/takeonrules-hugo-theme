@@ -2075,6 +2075,10 @@
 - title: Personal
   key: PERSONAL
   tag: personal
+- title: Personal Development
+  key: PERSONAL-DEVELOPMENT
+  itemdi: https://www.wikidata.org/wiki/Q10998095
+  tag: personal development
 - title: Philosophy
   key: PHILOSOPHY
   tag: philosophy
