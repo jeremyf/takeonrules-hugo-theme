@@ -2,4 +2,6 @@
 {{- $hidden := "" }}
 {{- if .Get "hidden" }}{{- $hidden = "aria-hidden=\"true\"" }}{{- end }}
 {{- $inner := partial "smallParagraphy.html" .Inner }}
-{{ printf "<%s %s role=\"note\" class=\"margin\">%s</%s>" $tag $hidden $inner $tag | safeHTML }}
+{{ printf "<%s %s role=\"note\" class=\"margin\">" $tag $hidden | safeHTML }}
+{{- with .Get "header" }}<h2 id="{{ . | anchorize }}">{{ . }}</h2>{{- end }}
+{{ printf "%s</%s>" $inner $tag | safeHTML }}
