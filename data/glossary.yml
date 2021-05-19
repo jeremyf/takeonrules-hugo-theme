@@ -3280,3 +3280,19 @@
   tag: zettelkasten
   sameAs: https://en.wikipedia.org/wiki/Zettelkasten
   description: 'German term: a tool in the creation of a literary or scientific work'
+- title: Bertrand Russell
+  key: BERTRAND-RUSSELL
+  itemid: https://www.wikidata.org/wiki/Q33760
+  tag: bertrand russell
+- title: Neoliberalism
+  key: NEOLIBERALISM
+  itemid: https://www.wikidata.org/wiki/Q162719
+  tag: neoliberalism
+- title: Strategic Innovation Lab
+  tag: strategic innovation lab
+  key: SILAB
+  abbr: SI Lab
+  verboseTitle: Strategic Innovation Lab of the Hesburgh Libraries
+- title: Process Development
+  tag: process development
+  key: PROCESS-DEVELOPMENT
