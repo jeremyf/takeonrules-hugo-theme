@@ -662,8 +662,7 @@
   description: role-playing game system
 - title: D66
   key: D66
-  verboseTitle: Two six-dice, one signifying the tens digit, the other the ones
-    digit.
+  verboseTitle: Two six-dice, one signifying the tens digit, the other the ones digit.
   abbr: D66
 - title: Dark Six
   key: DARK-SIX
@@ -3284,10 +3283,15 @@
   key: BERTRAND-RUSSELL
   itemid: https://www.wikidata.org/wiki/Q33760
   tag: bertrand russell
+  sameAs: https://en.wikipedia.org/wiki/Bertrand_Russell
+  description: British philosopher, mathematician, historian, writer, and activist
+    (1872–1970)
 - title: Neoliberalism
   key: NEOLIBERALISM
   itemid: https://www.wikidata.org/wiki/Q162719
   tag: neoliberalism
+  sameAs: https://en.wikipedia.org/wiki/Neoliberalism
+  description: political philosophy that supports economic liberalization
 - title: Strategic Innovation Lab
   tag: strategic innovation lab
   key: SILAB
