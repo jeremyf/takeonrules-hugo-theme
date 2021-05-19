@@ -662,7 +662,7 @@
   description: role-playing game system
 - title: D66
   key: D66
-  verboseTitle: Two six-dice, one signifying the "tens" digit, the other the "ones"
+  verboseTitle: Two six-dice, one signifying the tens digit, the other the ones
     digit.
   abbr: D66
 - title: Dark Six
