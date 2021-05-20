@@ -980,6 +980,7 @@
   abbr: Elisp
   sameAs: https://en.wikipedia.org/wiki/Emacs_Lisp
   description: dialect of Lisp used in GNU Emacs
+  tag: elisp
 - title: Emacs
   key: EMACS
   verboseTitle: 'Emacs: Editor MACroS'
