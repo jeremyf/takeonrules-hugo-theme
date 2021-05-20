@@ -1,8 +1,8 @@
 {{- $path     := .Get "src" }}
 {{- $original := resources.Get $path  }}
 {{- $alt      := .Get "alt" }}
-{{- $imageResize := "360x" }}
-{{- with .Get "rotate" }}{{- $imageResize = (printf "360x r%s" .) }}{{- end }}
+{{- $imageResize := default "360x" (.Get "resize") }}
+{{- with .Get "rotate" }}{{- $imageResize = (printf "%s r%s" $imageResize .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
 <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" {{ if isSet .Params "hidden" }}aria-hidden="true" {{ end }} role="note">
   <link itemprop="url" href="{{ $result.RelPermalink }}" />
@@ -10,6 +10,7 @@
        alt="{{ $alt }}"
        width="{{ $result.Width }}"
        height="{{ $result.Height }}"
+       {{- with .Get "title" }}title="{{ . }}"{{ end }}
        data-original-url="{{ $original.RelPermalink}}"
        data-original-width="{{ $original.Width }}"
        data-original-height="{{ $original.Height }}"
