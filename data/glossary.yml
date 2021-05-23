@@ -249,6 +249,13 @@
   abbr: BITs
   contentDisclaimers:
   - lukecrane
+- title: Bertrand Russell
+  key: BERTRAND-RUSSELL
+  itemid: https://www.wikidata.org/wiki/Q33760
+  tag: bertrand russell
+  sameAs: https://en.wikipedia.org/wiki/Bertrand_Russell
+  description: British philosopher, mathematician, historian, writer, and activist
+    (1872–1970)
 - title: Better World Books
   key: BWB
   itemid: https://www.wikidata.org/wiki/Q4898566
@@ -1344,6 +1351,9 @@
   abbr: HR
   sameAs: https://en.wikipedia.org/wiki/Human_resources
   description: professional in human resources
+- title: Hurdy-gurdy
+  key: HURDY-GURDY
+  itemid: https://www.wikidata.org/wiki/Q207821
 - title: Hypertext Markup Language
   key: HTML
   abbr: HTML
@@ -1584,6 +1594,9 @@
   tag: knockspell
   game: KNOCKSPELL
   description: tabletop role-playing game magazine
+- title: Kreutzhofen
+  key: WARHAMMER-KREUTZHOFEN
+  itemid: https://warhammerfantasy.fandom.com/wiki/Kreutzhofen
 - title: Kristcon
   key: KRISTCON
   tag: kristacon
@@ -1853,6 +1866,12 @@
 - title: Necromancer's Maze
   key: NECROMANCER'S-MAZE
   tag: necromancers maze
+- title: Neoliberalism
+  key: NEOLIBERALISM
+  itemid: https://www.wikidata.org/wiki/Q162719
+  tag: neoliberalism
+  sameAs: https://en.wikipedia.org/wiki/Neoliberalism
+  description: political philosophy that supports economic liberalization
 - title: Neutral
   key: NEU
   abbr: N
@@ -2193,6 +2212,9 @@
   sameAs: https://en.wikipedia.org/wiki/Problem_solving
   description: using generic or ad hoc methods in an orderly manner to find solutions
     to problems
+- title: Process Development
+  tag: process development
+  key: PROCESS-DEVELOPMENT
 - title: Product Identity
   key: PI
   abbr: PI
@@ -2750,6 +2772,11 @@
   abbr: SOPA
   sameAs: https://en.wikipedia.org/wiki/Stop_Online_Piracy_Act
   description: unpassed United States bill
+- title: Strategic Innovation Lab
+  tag: strategic innovation lab
+  key: SILAB
+  abbr: SI Lab
+  verboseTitle: Strategic Innovation Lab of the Hesburgh Libraries
 - title: Strength
   key: STR
   abbr: Str
@@ -3280,24 +3307,3 @@
   tag: zettelkasten
   sameAs: https://en.wikipedia.org/wiki/Zettelkasten
   description: 'German term: a tool in the creation of a literary or scientific work'
-- title: Bertrand Russell
-  key: BERTRAND-RUSSELL
-  itemid: https://www.wikidata.org/wiki/Q33760
-  tag: bertrand russell
-  sameAs: https://en.wikipedia.org/wiki/Bertrand_Russell
-  description: British philosopher, mathematician, historian, writer, and activist
-    (1872–1970)
-- title: Neoliberalism
-  key: NEOLIBERALISM
-  itemid: https://www.wikidata.org/wiki/Q162719
-  tag: neoliberalism
-  sameAs: https://en.wikipedia.org/wiki/Neoliberalism
-  description: political philosophy that supports economic liberalization
-- title: Strategic Innovation Lab
-  tag: strategic innovation lab
-  key: SILAB
-  abbr: SI Lab
-  verboseTitle: Strategic Innovation Lab of the Hesburgh Libraries
-- title: Process Development
-  tag: process development
-  key: PROCESS-DEVELOPMENT
