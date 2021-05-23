@@ -1354,6 +1354,8 @@
 - title: Hurdy-gurdy
   key: HURDY-GURDY
   itemid: https://www.wikidata.org/wiki/Q207821
+  sameAs: https://en.wikipedia.org/wiki/Hurdy-gurdy
+  description: musical instrument
 - title: Hypertext Markup Language
   key: HTML
   abbr: HTML
