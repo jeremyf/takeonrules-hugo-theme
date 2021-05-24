@@ -1413,6 +1413,11 @@
 - title: Indieweb
   key: INDIEWEB
   tag: indieweb
+- title: Information Sharing Artifact
+  key: ISA
+  pluralTitle: Information Sharing Artifacts
+  pluralAbbr: ISAs
+  abbr: ISA
 - title: Initiative
   key: INIT
   itemid: https://www.wikidata.org/wiki/Q2413723
