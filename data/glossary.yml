@@ -1239,6 +1239,11 @@
   abbr: git
   sameAs: https://en.wikipedia.org/wiki/Git
   description: distributed version control system
+- title: Github
+  key: GITHUB
+  itemid: https://www.wikidata.org/wiki/Q364
+  sameAs: https://en.wikipedia.org/wiki/GitHub
+  description: hosting service for software projects using Git
 - title: GNU
   key: GNU
   verboseTitle: GNU's Not Unix
@@ -1259,6 +1264,11 @@
   key: GGWT
   tag: goodman games world tour
   abbr: GGWT
+- title: Google Drive
+  key: GOOGLE-DRIVE
+  itemid: https://www.wikidata.org/wiki/Q9340
+  sameAs: https://en.wikipedia.org/wiki/Google_Drive
+  description: Cloud storage and file synchronization service developed by Google
 - title: Google Hangouts
   key: GOOGLE-HANGOUTS
   itemid: https://www.wikidata.org/wiki/Q13231451
@@ -1525,6 +1535,12 @@
   verboseTitle: 'Jekyll: Ruby-based Static Site Generator'
   sameAs: https://en.wikipedia.org/wiki/Jekyll_(software)
   description: Ruby-based static website generator
+- title: Jira
+  key: JIRA
+  itemid: https://www.wikidata.org/wiki/Q1359246
+  verboseTitle: Atlassian's Jira
+  sameAs: https://en.wikipedia.org/wiki/Jira_(software)
+  description: issue-tracking product developed by Atlassian
 - title: John F. Kennedy
   key: JFK
   abbr: JFK
@@ -3076,6 +3092,8 @@
 - title: Uniform Resource Locator
   key: URL
   abbr: URL
+  pluralAbbr: URLs
+  pluralTitle: Uniform Resource Locators
   itemid: https://www.wikidata.org/wiki/Q42253
   sameAs: https://en.wikipedia.org/wiki/URL
   description: web address to a particular file or page
