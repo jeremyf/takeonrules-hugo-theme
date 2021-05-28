@@ -15,7 +15,7 @@
     <ul>
       {{- range $posts.GroupByDate "January" }}
       <li><details open="true">
-        <summary class="month">{{ .Key }}({{ len .Pages }})</summary>
+        <summary class="month">{{ .Key }} ({{ len .Pages }} posts)</summary>
         <ul>
           {{- range .Pages }}
           <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
