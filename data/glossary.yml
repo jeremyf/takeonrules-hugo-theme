@@ -2336,6 +2336,12 @@
   sameAs: https://en.wikipedia.org/wiki/Reading
   description: cognitive process of decoding symbols to derive meaning; a form of
     language processing
+- title: README
+  itemid: https://www.wikidata.org/wiki/Q539662
+  key: README
+  sameAs: https://en.wikipedia.org/wiki/README
+  description: file that contains information about other files in a directory or
+    archive
 - title: Real New Mexico
   key: RNM
 - title: Reflex
