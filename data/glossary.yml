@@ -3338,3 +3338,8 @@
   tag: zettelkasten
   sameAs: https://en.wikipedia.org/wiki/Zettelkasten
   description: 'German term: a tool in the creation of a literary or scientific work'
+- title: Knowledge, Skill, or Ability
+  abbr: KSA
+  key: KSA
+  pluralAbbr: KSAs
+  pluralTitle: Knowledge, Skill, and Abilities
