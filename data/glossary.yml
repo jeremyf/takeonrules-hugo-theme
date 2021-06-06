@@ -933,6 +933,7 @@
 - title: 'Dungeons and Dragons: Third Edition'
   key: 3E
   abbr: 3E
+  game: 3E
   itemid: https://www.wikidata.org/wiki/Q64623234
   description: tabletop role-playing game D&D 3rd edition
 - title: Dwimmermount
@@ -3345,3 +3346,9 @@
   key: KSA
   pluralAbbr: KSAs
   pluralTitle: Knowledge, Skill, and Abilities
+- title: Red Hand of Doom
+  key: RED-HAND-OF-DOOM
+  abbr: RHoD
+  itemid: https://www.wikidata.org/wiki/Q7304215
+  offer: https://www.drivethrurpg.com/product/28797/Red-Hand-of-Doom-3e?affiliate_id=318171
+  game: RED-HAND-OF-DOOM
