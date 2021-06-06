@@ -1177,6 +1177,8 @@
   tag: gamemastering
   sameAs: https://en.wikipedia.org/wiki/Gamemaster
   description: person who acts as an organizer in role-playing games
+  pluralAbbr: GMs
+  pluralTitle: Game Masters
 - title: Game Master Advice
   key: GAME-MASTER-ADVICE
   tag: game master advice
