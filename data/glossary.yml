@@ -1909,7 +1909,7 @@
   itemid: https://www.wikidata.org/wiki/Q70014271
   tag: newsboat
   description: RSS/Atom feed reader for text terminals
-- title: Night Below
+- title: The Night Below
   key: NIGHT-BELOW
   verboseTitle: 'Night Below: An Underdark Campaign'
   itemid: https://www.wikidata.org/wiki/Q7033219
@@ -3346,7 +3346,7 @@
   key: KSA
   pluralAbbr: KSAs
   pluralTitle: Knowledge, Skill, and Abilities
-- title: Red Hand of Doom
+- title: The Red Hand of Doom
   key: RED-HAND-OF-DOOM
   abbr: RHoD
   itemid: https://www.wikidata.org/wiki/Q7304215
@@ -3354,3 +3354,18 @@
   game: RED-HAND-OF-DOOM
   sameAs: https://en.wikipedia.org/wiki/Red_Hand_of_Doom
   description: D&D adventure module
+  tag: red hand of doom
+- title: The Enemy Within
+  key: ENEMY-WITHIN
+  abbr: EW
+  game: ENEMY-WITHIN
+  itemid: https://www.wikidata.org/wiki/Q3203130
+  offer: https://www.drivethrurpg.com/product/286466/Warhammer-Fantasy-Roleplay-Fourth-Edition-Enemy-Within-Campaign--Volume-1-Enemy-in-Shadows?affiliate_id=318171
+  tag: enemy within
+- title: Pirates of Drinax
+  key: PIRATES-OF-DRINAX
+  abbr: PoD
+  game: PIRATES-OF-DRINAX
+  offer: https://www.drivethrurpg.com/product/218046/The-Pirates-of-Drinax?affiliate_id=318171
+  sameAs: https://rpggeek.com/rpgitem/233629/pirates-drinax-mongoose-2nd-edition
+  tag: pirates of drinax

@@ -3,6 +3,7 @@
 {{- $itemprop := default "mentions" (.Get "itemprop")}}
 {{- $entry := index (where $.Site.Data.glossary "key" "eq" $key) 0 }}
 {{- $title := default $entry.title ($entry.mentionAs) }}
+{{- $title = default $title ( .Get "title") }}
 {{- $name := $title }}
 {{- $link := false }}
 {{- with (.Get "link") }}

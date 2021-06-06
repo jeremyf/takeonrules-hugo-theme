@@ -5,16 +5,6 @@
 {{- with (.Get "tag") }}{{ $tag = . }}{{ else }}{{- if .Get "title" }}{{- $tag = "span" }}{{- end }}{{- end }}
 {{- $scratchKey := printf "abbr-%s" $entry.key }}
 {{- if ($.Page.Scratch.Get $scratchKey) }}
-{{- with .Get "abbr" }}
-<abbr title="{{- $title}}">{{ $entry.abbr }}</abbr>
-{{- else }}
-{{ printf "<%s>%s</%s>" $tag $title $tag | safeHTML }}
-{{- end }}
-{{- else }}
-{{- $.Page.Scratch.Set $scratchKey "t" }}
-<span itemprop="mentions" itemscope itemtype="http://schema.org/CreativeWork">{{- with $entry.itemid }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}
-{{ printf "<%s itemprop=\"name\">" $tag | safeHTML }}
-{{- with $entry.offer }}<a class="u-url p-name" itemprop="offers" href="{{- . }}">{{- $title }}</a>{{- else }}{{- $title }}{{- end }}
-{{ printf "</%s>" $tag | safeHTML }}
-{{- if $entry.abbr }} (<abbr title="{{ $title }}">{{ $entry.abbr }}</abbr> <a class="book" rel="tag opener" aria-label="Other site-wide references of “{{ $title }}”" title="Other site-wide references of “{{ $title }}”" href="/site-map/glossary/#abbr-dfn-{{ $entry.key }}">&#128214;</a>){{- end }}</span>
-{{- end }}{{- with .Get "post" }}<small> {{ . }}</small>{{- end }}
+{{- with .Get "abbr" }}<abbr title="{{- $title}}">{{ $entry.abbr }}</abbr>{{- else }}{{ printf "<%s>%s</%s>" $tag $title $tag | safeHTML }}{{- end }}
+{{- else }}{{- $.Page.Scratch.Set $scratchKey "t" }}
+<span itemprop="mentions" itemscope itemtype="http://schema.org/CreativeWork">{{- with $entry.itemid }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}{{ printf "<%s itemprop=\"name\">" $tag | safeHTML }}{{- with $entry.offer }}<a class="u-url p-name" itemprop="offers" href="{{- . }}">{{- $title }}</a>{{- else }}{{- $title }}{{- end }}{{ printf "</%s>" $tag | safeHTML }}{{- if $entry.abbr }} (<abbr title="{{ $title }}">{{ $entry.abbr }}</abbr> <a class="book" rel="tag opener" aria-label="Other site-wide references of “{{ $title }}”" title="Other site-wide references of “{{ $title }}”" href="/site-map/glossary/#abbr-dfn-{{ $entry.key }}">&#128214;</a>){{- end }}</span>{{- end }}{{- with .Get "post" }}<small> {{ . }}</small>{{- end }}
