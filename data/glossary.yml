@@ -3362,6 +3362,8 @@
   itemid: https://www.wikidata.org/wiki/Q3203130
   offer: https://www.drivethrurpg.com/product/286466/Warhammer-Fantasy-Roleplay-Fourth-Edition-Enemy-Within-Campaign--Volume-1-Enemy-in-Shadows?affiliate_id=318171
   tag: enemy within
+  sameAs: https://en.wikipedia.org/wiki/The_Enemy_Within_Campaign
+  description: series of adventures for Warhammer Fantasy Roleplay
 - title: Pirates of Drinax
   key: PIRATES-OF-DRINAX
   abbr: PoD
