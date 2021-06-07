@@ -708,9 +708,13 @@
 - title: Death on the Reik
   game: DEATH-ON-THE-REIK
   key: DEATH-ON-THE-REIK
-  offerid: https://www.drivethrurpg.com/product/229191/Warhammer-Fantasy-Roleplay-First-Edition--Death-on-the-Reik-The-Enemy-Within-Part-2?affiliate_id=318171
+  offer: https://www.drivethrurpg.com/product/229191/Warhammer-Fantasy-Roleplay-First-Edition--Death-on-the-Reik-The-Enemy-Within-Part-2?affiliate_id=318171
   itemid: https://www.wikidata.org/wiki/Q65088833
   sameAs: https://en.wikipedia.org/wiki/Death_on_the_Reik
+- title: Death on the Reik (Director's Cut)
+  game: DEATH-ON-THE-REIK-DIRECTOR
+  key: DEATH-ON-THE-REIK-DIRECTOR
+  offer: https://www.drivethrurpg.com/product/303919/WFRP-Death-on-the-Reik--Enemy-Within-Campaign-Directors-Cut-Volume-2?affiliate_id=318171
 - title: Defund the Police
   key: DEFUND-THE-POLICE
   itemid: https://www.wikidata.org/wiki/Q96150192
@@ -3377,3 +3381,16 @@
   abbr: Rake
   sameAs: https://en.wikipedia.org/wiki/Rake_(software)
   description: Make-like tool written in Ruby
+- title: Single-Page Application
+  abbr: SPA
+  key: SPA
+  pluralAbbr: SPAs
+  pluralTitle: Single-Page Applications
+  itemid: https://www.wikidata.org/wiki/Q1990286
+- title: Ravenloft
+  verboseTitle: I6 Ravenloft
+  tag: ravenloft
+  itemid: https://www.wikidata.org/wiki/Q7296458
+  game: RAVENLOFT
+  key: RAVENLOFT
+  offer: https://www.dmsguild.com/product/17527/I6-Ravenloft-1e?affiliate_id=318171
