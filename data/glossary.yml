@@ -3374,5 +3374,6 @@
 - title: Rake
   itemid: https://www.wikidata.org/wiki/Q1968674
   key: RAKE
+  abbr: Rake
   sameAs: https://en.wikipedia.org/wiki/Rake_(software)
   description: Make-like tool written in Ruby
