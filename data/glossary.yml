@@ -2375,7 +2375,7 @@
   key: RDF
   mentionAs: RDF
   itemid: https://www.wikidata.org/wiki/Q54872
-  abbr: RDFa
+  abbr: RDF
   sameAs: https://en.wikipedia.org/wiki/Resource_Description_Framework
   description: formal language
 - title: Resource Description Framework in Attributes
