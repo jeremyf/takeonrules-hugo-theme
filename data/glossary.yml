@@ -528,6 +528,14 @@
   tag: circles test
   contentDisclaimers:
   - lukecrane
+- title: Coaching
+  key: COACHING
+  tag: coaching
+  itemid: https://www.wikidata.org/wiki/Q1104185
+  sameAs: https://en.wikipedia.org/wiki/Coaching
+  description: form of development in which an experienced person, called a coach,
+    supports a learner or client in achieving a specific personal or professional
+    goal by providing training and guidance
 - title: Coalition Building
   key: COALITION-BUILDING
   tag: coalition building
@@ -649,6 +657,12 @@
 - title: CurateND
   key: CURATE-ND
   sameAs: https://curate.nd.edu
+- title: curriculum vitae
+  itemid: https://www.wikidata.org/wiki/Q186649
+  abbr: CV
+  key: CURRICULUM-VITAE
+  sameAs: https://en.wikipedia.org/wiki/Curriculum_vitae
+  description: summary of career
 - title: Custom Moves
   key: CUSTOM-MOVES
   tag: custom moves
@@ -1624,6 +1638,11 @@
   tag: knockspell
   game: KNOCKSPELL
   description: tabletop role-playing game magazine
+- title: Knowledge, Skill, or Ability
+  abbr: KSA
+  key: KSA
+  pluralAbbr: KSAs
+  pluralTitle: Knowledge, Skill, and Abilities
 - title: Kreutzhofen
   key: WARHAMMER-KREUTZHOFEN
   itemid: https://warhammerfantasy.fandom.com/wiki/Kreutzhofen
@@ -1913,15 +1932,6 @@
   itemid: https://www.wikidata.org/wiki/Q70014271
   tag: newsboat
   description: RSS/Atom feed reader for text terminals
-- title: The Night Below
-  key: NIGHT-BELOW
-  verboseTitle: 'Night Below: An Underdark Campaign'
-  itemid: https://www.wikidata.org/wiki/Q7033219
-  offer: https://www.drivethrurpg.com/product/17087/Night-Below-An-Underdark-Campaign-2e?affiliate_id=318171
-  tag: night below
-  game: NIGHT-BELOW
-  sameAs: https://en.wikipedia.org/wiki/Night_Below
-  description: D&D campaign by Carl Sargent
 - title: Non-Disclosure Agreement
   key: NDA
   abbr: NDA
@@ -2137,6 +2147,13 @@
   itemid: https://www.wikidata.org/wiki/Q59
   sameAs: https://en.wikipedia.org/wiki/PHP
   description: scripting language focused on web development
+- title: Pirates of Drinax
+  key: PIRATES-OF-DRINAX
+  abbr: PoD
+  game: PIRATES-OF-DRINAX
+  offer: https://www.drivethrurpg.com/product/218046/The-Pirates-of-Drinax?affiliate_id=318171
+  sameAs: https://rpggeek.com/rpgitem/233629/pirates-drinax-mongoose-2nd-edition
+  tag: pirates of drinax
 - title: Planarch Codex
   key: PLANARCH-CODEX
   verboseTitle: 'Planarch Codex: Dark Heart of the Dreamer'
@@ -2198,6 +2215,12 @@
   abbr: PoS
   sameAs: https://en.wikipedia.org/wiki/Point_of_sale
   description: event where retail transaction is completed
+- title: Poison Ivy
+  verboseTitle: Toxicodendron radicans
+  itemid: https://www.wikidata.org/wiki/Q7218532
+  key: POISON-IVY
+  sameAs: https://en.wikipedia.org/wiki/Toxicodendron_radicans
+  description: species of plant
 - title: Portable Document Format
   key: PDF
   itemid: https://www.wikidata.org/wiki/Q42332
@@ -2305,6 +2328,12 @@
   abbr: RftG
   sameAs: https://en.wikipedia.org/wiki/Race_for_the_Galaxy
   description: board game
+- title: Rake
+  itemid: https://www.wikidata.org/wiki/Q1968674
+  key: RAKE
+  abbr: Rake
+  sameAs: https://en.wikipedia.org/wiki/Rake_(software)
+  description: Make-like tool written in Ruby
 - title: Random
   key: RANDOM
   tag: random
@@ -2329,6 +2358,15 @@
   offer: https://www.drivethrurpg.com/product/112605/2012-Rappan-Athuk-SW?affiliate_id=318171
   tag: rappan athuk
   game: RAPPAN-ATHUK
+- title: Ravenloft
+  verboseTitle: I6 Ravenloft
+  tag: ravenloft
+  itemid: https://www.wikidata.org/wiki/Q7296458
+  game: RAVENLOFT
+  key: RAVENLOFT
+  offer: https://www.dmsguild.com/product/17527/I6-Ravenloft-1e?affiliate_id=318171
+  sameAs: https://en.wikipedia.org/wiki/Ravenloft_(module)
+  description: 1983 module for Dungeons & Dragons game
 - title: Read-eval-print loop
   abbr: REPL
   key: REPL
@@ -2658,6 +2696,14 @@
 - title: Simplicity
   key: SIMPLICITY
   tag: simplicity
+- title: Single-Page Application
+  abbr: SPA
+  key: SPA
+  pluralAbbr: SPAs
+  pluralTitle: Single-Page Applications
+  itemid: https://www.wikidata.org/wiki/Q1990286
+  sameAs: https://en.wikipedia.org/wiki/Single-page_application
+  description: Web application based on a single web page and client-side logics.
 - title: Situation Mining
   key: SITUATION-MINING
   tag: situation mining
@@ -2937,6 +2983,15 @@
   tag: empire strikes back
   sameAs: https://en.wikipedia.org/wiki/The_Empire_Strikes_Back
   description: 1980 American science fiction film directed by Irvin Kershner
+- title: The Enemy Within
+  key: ENEMY-WITHIN
+  abbr: EW
+  game: ENEMY-WITHIN
+  itemid: https://www.wikidata.org/wiki/Q3203130
+  offer: https://www.drivethrurpg.com/product/286466/Warhammer-Fantasy-Roleplay-Fourth-Edition-Enemy-Within-Campaign--Volume-1-Enemy-in-Shadows?affiliate_id=318171
+  tag: enemy within
+  sameAs: https://en.wikipedia.org/wiki/The_Enemy_Within_Campaign
+  description: series of adventures for Warhammer Fantasy Roleplay
 - title: The Hero's Journey
   key: THE-HEROS-JOURNEY
   itemid: https://rpggeek.com/rpg/34736/heros-journey-fantasy-roleplaying
@@ -2955,6 +3010,15 @@
   tag: magnificent seven
   sameAs: https://en.wikipedia.org/wiki/The_Magnificent_Seven
   description: 1960 American western film directed by John Sturges
+- title: The Night Below
+  key: NIGHT-BELOW
+  verboseTitle: 'Night Below: An Underdark Campaign'
+  itemid: https://www.wikidata.org/wiki/Q7033219
+  offer: https://www.drivethrurpg.com/product/17087/Night-Below-An-Underdark-Campaign-2e?affiliate_id=318171
+  tag: night below
+  game: NIGHT-BELOW
+  sameAs: https://en.wikipedia.org/wiki/Night_Below
+  description: D&D campaign by Carl Sargent
 - title: The One Ring
   key: TOR
   itemid: https://www.wikidata.org/wiki/Q2028764
@@ -2968,6 +3032,15 @@
   itemtype: Book
   sameAs: https://en.wikipedia.org/wiki/The_Prophet_(book)
   description: 1923 book with 26 prose poetry fables by Khalil Gibran
+- title: The Red Hand of Doom
+  key: RED-HAND-OF-DOOM
+  abbr: RHoD
+  itemid: https://www.wikidata.org/wiki/Q7304215
+  offer: https://www.drivethrurpg.com/product/28797/Red-Hand-of-Doom-3e?affiliate_id=318171
+  game: RED-HAND-OF-DOOM
+  sameAs: https://en.wikipedia.org/wiki/Red_Hand_of_Doom
+  description: D&D adventure module
+  tag: red hand of doom
 - title: The Regiment
   key: THE-REGIMENT
   itemid: https://rpggeek.com/rpg/27316/regiment
@@ -2997,6 +3070,10 @@
 - title: Theory
   key: THEORY
   tag: theory
+- title: Think-pair-share
+  itemid: https://www.wikidata.org/wiki/Q22909393
+  key: THINK-PAIR-SHARE
+  sameAs: https://en.wikipedia.org/wiki/Think-pair-share
 - title: Third Eye Games
   key: THIRD-EYE-GAMES
   itemid: https://rpggeek.com/rpgpublisher/10637/third-eye-games
@@ -3345,80 +3422,3 @@
   tag: zettelkasten
   sameAs: https://en.wikipedia.org/wiki/Zettelkasten
   description: 'German term: a tool in the creation of a literary or scientific work'
-- title: Knowledge, Skill, or Ability
-  abbr: KSA
-  key: KSA
-  pluralAbbr: KSAs
-  pluralTitle: Knowledge, Skill, and Abilities
-- title: The Red Hand of Doom
-  key: RED-HAND-OF-DOOM
-  abbr: RHoD
-  itemid: https://www.wikidata.org/wiki/Q7304215
-  offer: https://www.drivethrurpg.com/product/28797/Red-Hand-of-Doom-3e?affiliate_id=318171
-  game: RED-HAND-OF-DOOM
-  sameAs: https://en.wikipedia.org/wiki/Red_Hand_of_Doom
-  description: D&D adventure module
-  tag: red hand of doom
-- title: The Enemy Within
-  key: ENEMY-WITHIN
-  abbr: EW
-  game: ENEMY-WITHIN
-  itemid: https://www.wikidata.org/wiki/Q3203130
-  offer: https://www.drivethrurpg.com/product/286466/Warhammer-Fantasy-Roleplay-Fourth-Edition-Enemy-Within-Campaign--Volume-1-Enemy-in-Shadows?affiliate_id=318171
-  tag: enemy within
-  sameAs: https://en.wikipedia.org/wiki/The_Enemy_Within_Campaign
-  description: series of adventures for Warhammer Fantasy Roleplay
-- title: Pirates of Drinax
-  key: PIRATES-OF-DRINAX
-  abbr: PoD
-  game: PIRATES-OF-DRINAX
-  offer: https://www.drivethrurpg.com/product/218046/The-Pirates-of-Drinax?affiliate_id=318171
-  sameAs: https://rpggeek.com/rpgitem/233629/pirates-drinax-mongoose-2nd-edition
-  tag: pirates of drinax
-- title: Rake
-  itemid: https://www.wikidata.org/wiki/Q1968674
-  key: RAKE
-  abbr: Rake
-  sameAs: https://en.wikipedia.org/wiki/Rake_(software)
-  description: Make-like tool written in Ruby
-- title: Single-Page Application
-  abbr: SPA
-  key: SPA
-  pluralAbbr: SPAs
-  pluralTitle: Single-Page Applications
-  itemid: https://www.wikidata.org/wiki/Q1990286
-  sameAs: https://en.wikipedia.org/wiki/Single-page_application
-  description: Web application based on a single web page and client-side logics.
-- title: Ravenloft
-  verboseTitle: I6 Ravenloft
-  tag: ravenloft
-  itemid: https://www.wikidata.org/wiki/Q7296458
-  game: RAVENLOFT
-  key: RAVENLOFT
-  offer: https://www.dmsguild.com/product/17527/I6-Ravenloft-1e?affiliate_id=318171
-  sameAs: https://en.wikipedia.org/wiki/Ravenloft_(module)
-  description: 1983 module for Dungeons & Dragons game
-- title: Poison Ivy
-  verboseTitle: Toxicodendron radicans
-  itemid: https://www.wikidata.org/wiki/Q7218532
-  key: POISON-IVY
-  sameAs: https://en.wikipedia.org/wiki/Toxicodendron_radicans
-  description: species of plant
-- title: curriculum vitae
-  itemid: https://www.wikidata.org/wiki/Q186649
-  abbr: CV
-  key: CURRICULUM-VITAE
-  sameAs: https://en.wikipedia.org/wiki/Curriculum_vitae
-  description: summary of career
-- title: Coaching
-  key: COACHING
-  tag: coaching
-  itemid: https://www.wikidata.org/wiki/Q1104185
-  sameAs: https://en.wikipedia.org/wiki/Coaching
-  description: form of development in which an experienced person, called a coach,
-    supports a learner or client in achieving a specific personal or professional
-    goal by providing training and guidance
-- title: Think-pair-share
-  itemid: https://www.wikidata.org/wiki/Q22909393
-  key: THINK-PAIR-SHARE
-  sameAs: https://en.wikipedia.org/wiki/Think-pair-share
