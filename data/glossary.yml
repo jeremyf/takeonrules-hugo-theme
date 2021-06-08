@@ -3408,7 +3408,13 @@
   itemid: https://www.wikidata.org/wiki/Q186649
   abbr: CV
   key: CURRICULUM-VITAE
+  sameAs: https://en.wikipedia.org/wiki/Curriculum_vitae
+  description: summary of career
 - title: Coaching
   key: COACHING
   tag: coaching
   itemid: https://www.wikidata.org/wiki/Q1104185
+  sameAs: https://en.wikipedia.org/wiki/Coaching
+  description: form of development in which an experienced person, called a coach,
+    supports a learner or client in achieving a specific personal or professional
+    goal by providing training and guidance
