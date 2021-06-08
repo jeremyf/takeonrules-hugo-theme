@@ -30,6 +30,7 @@
   tag: academia
   description: community of students and scholars engaged in higher education and
     research
+  described: true
 - title: Accelerated Mobile Pages
   key: AMP
   abbr: AMP
@@ -44,12 +45,14 @@
   abbr: 1E
   itemid: https://www.wikidata.org/wiki/Q64597405
   description: tabletop role-playing game AD&D 1st edition
+  described: true
 - title: 'Advanced Dungeons and Dragons: Second Edition'
   key: 2E
   mentionAs: AD&D 2E
   abbr: 2E
   itemid: https://www.wikidata.org/wiki/Q64620925
   description: tabletop role-playing game AD&D 2nd edition
+  described: true
 - title: Adventure
   key: ADVENTURE
   tag: adventure
@@ -124,6 +127,7 @@
   itemid: https://www.wikidata.org/wiki/Q55313888
   abbr: am
   description: period of the day after midnight and before noon
+  described: true
 - title: Apocalypse Galactica
   key: APOCALYPSE-GALACTICA
   tag: apocalypse galactica
@@ -143,6 +147,7 @@
   tag: appendix n
   abbr: Appendix N
   description: Dungeons & Dragons inspirational bibliography
+  described: true
 - title: Application Programming Interface
   key: API
   abbr: API
@@ -217,6 +222,7 @@
   tag: barbarians of lemuria
   game: BARBARIANS-OF-LEMURIA
   description: tabletop role-playing game
+  described: true
 - title: Barrel Rider Games
   key: BARREL-RIDER-GAMES
   sameAs: https://barrelridergames.wordpress.com/
@@ -295,11 +301,13 @@
   itemid: https://www.wikidata.org/wiki/Q21124681
   tag: blogging
   description: action of writing articles or maintaining a weblog
+  described: true
 - title: Blogging Engine
   key: BLOGGING-ENGINE
   itemid: https://www.wikidata.org/wiki/Q1810858
   tag: blogging engine
   description: software designed to simplify creating and maintaining weblogs
+  described: true
 - title: 'Bloodstone: H-Series'
   key: BLOODSTONE
   itemid: https://rpggeek.com/rpgseries/223/h-bloodstone-pass-saga
@@ -438,6 +446,7 @@
   itemid: https://www.wikidata.org/wiki/Q68393330
   tag: carcosa
   description: tabletop role-playing game
+  described: true
 - title: Card Game
   key: CARD-GAME
   itemid: https://www.wikidata.org/wiki/Q142714
@@ -654,6 +663,7 @@
   game: CTHULHU-DARK
   abbr: CD
   description: tabletop role-playing game
+  described: true
 - title: CurateND
   key: CURATE-ND
   sameAs: https://curate.nd.edu
@@ -725,6 +735,7 @@
   offer: https://www.drivethrurpg.com/product/229191/Warhammer-Fantasy-Roleplay-First-Edition--Death-on-the-Reik-The-Enemy-Within-Part-2?affiliate_id=318171
   itemid: https://www.wikidata.org/wiki/Q65088833
   sameAs: https://en.wikipedia.org/wiki/Death_on_the_Reik
+  described: true
 - title: Death on the Reik (Director's Cut)
   game: DEATH-ON-THE-REIK-DIRECTOR
   key: DEATH-ON-THE-REIK-DIRECTOR
@@ -914,6 +925,7 @@
   tag: dungeons
   description: localised built or mixed built/natural setting in the context of role-playing
     games, in particular Dungeons & Dragons
+  described: true
 - title: Dungeons and Dragons
   key: D&D
   abbr: D&D
@@ -933,27 +945,32 @@
   abbr: 5E
   game: 5E
   description: tabletop role-playing game D&D edition
+  described: true
 - title: 'Dungeons and Dragons: Fifth Edition Playtest'
   key: D&D NEXT
   abbr: D&D Next
   itemid: https://www.wikidata.org/wiki/Q64706142
   description: tabletop role-playing game D&D Next beta version
+  described: true
 - title: 'Dungeons and Dragons: Fourth Edition'
   key: 4E
   abbr: 4E
   itemid: https://www.wikidata.org/wiki/Q64706119
   description: tabletop role-playing game edition
+  described: true
 - title: 'Dungeons and Dragons: Original Edition'
   key: 0E
   abbr: 0E
   itemid: https://www.wikidata.org/wiki/Q64596978
   description: tabletop role-playing game
+  described: true
 - title: 'Dungeons and Dragons: Third Edition'
   key: 3E
   abbr: 3E
   game: 3E
   itemid: https://www.wikidata.org/wiki/Q64623234
   description: tabletop role-playing game D&D 3rd edition
+  described: true
 - title: Dwimmermount
   key: DWIMMERMOUNT
   itemid: https://rpggeek.com/rpgitem/137904/dwimmermount-labyrinth-lord
@@ -977,6 +994,7 @@
   itemid: https://www.wikidata.org/wiki/Q15080196
   description: time zone of Eastern Time Zone when observing daylight saving time
     (UTC−04:00)
+  described: true
 - title: Eberron
   key: EBERRON
   itemid: https://www.wikidata.org/wiki/Q1378808
@@ -1134,6 +1152,7 @@
   offer: https://www.drivethrurpg.com/product/264584/Five-Torches-Deep?affiliate_id=318171
   game: FIVE-TORCHES-DEEP
   description: tabletop role-playing game
+  described: true
 - title: For My Children
   key: FOR-MY-CHILDREN
   tag: for my children
@@ -1504,6 +1523,7 @@
   abbr: ICE
   itemid: https://www.wikidata.org/wiki/Q1122382
   sameAs: https://en.wikipedia.org/wiki/Intrusion_Countermeasures_Electronics
+  described: true
 - title: Intsitutional Repository
   abbr: IR
   key: IR
@@ -1601,6 +1621,7 @@
   key: KEVIN-CRAWFORD
   itemid: https://www.wikidata.org/wiki/Q67963897
   description: role-playing game designer
+  described: true
 - title: Kickstarter
   key: KICKSTARTER
   itemid: https://www.wikidata.org/wiki/Q34755
@@ -1638,6 +1659,7 @@
   tag: knockspell
   game: KNOCKSPELL
   description: tabletop role-playing game magazine
+  described: true
 - title: Knowledge, Skill, or Ability
   abbr: KSA
   key: KSA
@@ -1664,11 +1686,13 @@
   tag: lacuna part i
   game: LACUNA-PART-1
   description: tabletop role-playing game
+  described: true
 - title: Lady Blackbird
   key: LADY-BLACKBIRD
   itemid: https://www.wikidata.org/wiki/Q67174687
   tag: lady blackbird
   description: tabletop role-playing game
+  described: true
 - title: Lamentations of the Flame Princess
   key: LOTFP
   itemid: https://www.wikidata.org/wiki/Q27102827
@@ -1677,6 +1701,7 @@
   contentDisclaimers:
   - jamesraggi
   description: OSR tabletop role-playing game
+  described: true
 - title: Lankhmar
   key: LANKHMAR
   itemid: https://www.wikidata.org/wiki/Q6487218
@@ -1729,6 +1754,7 @@
   key: LCG
   abbr: LCG
   itemid: https://www.wikidata.org/wiki/Q15113641
+  described: true
 - title: Lord of the Rings
   key: LOTR
   itemid: https://www.wikidata.org/wiki/Q15228
@@ -1752,6 +1778,7 @@
   contentDisclaimers:
   - lukecrane
   description: role-playing game designer
+  described: true
 - title: Machine Learning
   key: MLEARN
   abbr: ML
@@ -1879,6 +1906,7 @@
   game: MONSTER-OF-THE-WEEK
   abbr: MotW
   description: tabletop role-playing game
+  described: true
 - title: Monsterhearts
   key: MONSTERHEARTS
   itemid: https://www.wikidata.org/wiki/Q17154019
@@ -1892,6 +1920,7 @@
   itemid: https://www.wikidata.org/wiki/Q104253592
   tag: morale
   description: character game mechanic
+  described: true
 - title: Morale Level
   key: ML
   abbr: ML
@@ -1932,6 +1961,7 @@
   itemid: https://www.wikidata.org/wiki/Q70014271
   tag: newsboat
   description: RSS/Atom feed reader for text terminals
+  described: true
 - title: Non-Disclosure Agreement
   key: NDA
   abbr: NDA
@@ -1967,6 +1997,7 @@
   tag: oak tree
   itemid: https://www.wikidata.org/wiki/Q33036816
   description: deciduous tree
+  described: true
 - title: Obstacle
   key: OB
   abbr: Ob
@@ -2099,6 +2130,7 @@
   key: PG
   itemid: https://www.wikidata.org/wiki/Q52382294
   abbr: PG
+  described: true
 - title: Part Time Gods
   key: PART-TIME-GODS
   itemid: https://www.wikidata.org/wiki/Q77995878
@@ -2106,6 +2138,7 @@
   tag: part time gods
   game: PART-TIME-GODS
   description: tabletop role-playing game
+  described: true
 - title: Pay What You Want
   key: PWYW
   abbr: PWYW
@@ -2232,6 +2265,7 @@
   itemid: https://www.wikidata.org/wiki/Q55313907
   abbr: pm
   description: period of the day after noon and before midnight
+  described: true
 - title: Powered by the Apocalypse
   key: PBTA
   itemid: https://www.wikidata.org/wiki/Q17149214
@@ -2362,8 +2396,8 @@
   verboseTitle: I6 Ravenloft
   tag: ravenloft
   itemid: https://www.wikidata.org/wiki/Q7296458
-  game: RAVENLOFT
-  key: RAVENLOFT
+  game: I6-RAVENLOFT
+  key: I6-RAVENLOFT
   offer: https://www.dmsguild.com/product/17527/I6-Ravenloft-1e?affiliate_id=318171
   sameAs: https://en.wikipedia.org/wiki/Ravenloft_(module)
   description: 1983 module for Dungeons & Dragons game
@@ -2398,6 +2432,7 @@
   tag: reign enchiridion
   game: REIGN-ENCHIRIDION
   description: tabletop role-playing game
+  described: true
 - title: Reikland
   key: WARHAMMER_REIKLAND
   itemid: https://warhammerfantasy.fandom.com/wiki/Reikland
@@ -2486,6 +2521,7 @@
   key: RSPEC
   itemid: https://www.wikidata.org/wiki/Q3463141
   sameAs: https://en.wikipedia.org/wiki/RSpec
+  described: true
 - title: Ruby
   key: RUBY
   verboseTitle: Ruby programming language
@@ -2557,6 +2593,7 @@
   itemid: https://www.wikidata.org/wiki/Q104253098
   tag: scales of war
   description: 4th Edition Dungeons & Dragons Adventure Path
+  described: true
 - title: Scarlet Heroes
   key: SCARLET-HEROES
   itemid: https://www.wikidata.org/wiki/Q104253139
@@ -2564,6 +2601,7 @@
   tag: scarlet heroes
   game: SCARLET-HEROES
   description: tabletop role-playing game
+  described: true
 - title: Scenic Dunnsmouth
   key: SCENIC-DUNNSMOUTH
   itemid: https://rpggeek.com/rpgitem/156018/scenic-dunnsmouth
@@ -2605,6 +2643,7 @@
   itemid: https://www.wikidata.org/wiki/Q105716989
   tag: script change
   description: tabletop role-playing game safety tool
+  described: true
 - title: Scripted Conflict
   key: SCRIPTED-CONFLICT
   tag: scripted conflict
@@ -2713,6 +2752,7 @@
   itemid: https://www.wikidata.org/wiki/Q17639282
   abbr: d6
   description: type of die
+  described: true
 - title: Snite Museum of Art
   key: SNITE-MUSEUM-OF-ART
   abbr: Snite
@@ -2781,6 +2821,7 @@
   key: SQUARE
   itemid: https://www.wikidata.org/wiki/Q7581990?wprov=srpw1_12
   tag: square
+  described: true
 - title: Standards
   key: STANDARDS
   tag: standards
@@ -2827,11 +2868,13 @@
   game: SWN
   abbr: SWN
   description: tabletop role-playing game
+  described: true
 - title: Static Site Generator
   key: SSG
   itemid: https://www.wikidata.org/wiki/Q77916592
   abbr: SSG
   description: software to generate static websites
+  described: true
 - title: Stats
   key: STATS
   tag: stats
@@ -2891,6 +2934,7 @@
   tag: sword and wizardry
   abbr: S&W
   description: tabletop role-playing game
+  described: true
 - title: Swords and Strongholds
   key: SWORDS-AND-STRONGHOLDS
   itemid: https://boardgamegeek.com/boardgame/162315/mouse-guard-swords-strongholds
@@ -2945,6 +2989,7 @@
   tag: technoir
   game: TECHNOIR
   description: tabletop role-playing game
+  described: true
 - title: Technology Level
   key: TL
   abbr: TL
@@ -3075,6 +3120,7 @@
   itemid: https://www.wikidata.org/wiki/Q22909393
   key: THINK-PAIR-SHARE
   sameAs: https://en.wikipedia.org/wiki/Think-pair-share
+  described: true
 - title: Third Eye Games
   key: THIRD-EYE-GAMES
   itemid: https://rpggeek.com/rpgpublisher/10637/third-eye-games
@@ -3098,6 +3144,7 @@
   abbr: THAC0
   itemid: https://www.wikidata.org/wiki/Q104254746
   description: character game mechanic
+  described: true
 - title: Today I Learned
   key: TODAY-I-LEARNED
   tag: today i learned
@@ -3119,6 +3166,7 @@
   game: TOMB-OF-ANNIHILATION
   abbr: ToA
   description: D&D module adventure
+  described: true
 - title: Too Long; Didn't Read
   key: TL;DR
   itemid: https://www.wikidata.org/wiki/Q16886840
@@ -3133,11 +3181,13 @@
   contentDisclaimers:
   - lukecrane
   description: tabletop role-playing game
+  described: true
 - title: Total Party Kill
   key: TPK
   abbr: TPK
   itemid: https://www.wikidata.org/wiki/Q7828047
   sameAs: https://en.wikipedia.org/wiki/Total_party_kill
+  described: true
 - title: tr (Unix command)
   key: UNIX-TR
   itemid: https://www.wikidata.org/wiki/Q709372
@@ -3358,6 +3408,7 @@
   contentDisclaimers:
   - adamkoebel
   description: tabletop role-playing game
+  described: true
 - title: World of Steve
   key: WORLD-OF-STEVE
   tag: world of steve
@@ -3375,12 +3426,14 @@
   game: WWN
   abbr: WWN
   description: tabletop role-playing game
+  described: true
 - title: 'Worlds without Number: Free Edition'
   key: WWN-FREE
   itemid: https://www.wikidata.org/wiki/Q104153924
   offer: https://www.drivethrurpg.com/product/348809/Worlds-Without-Number-Free-Edition?affiliate_id=318171
   game: WWN-FREE
   description: tabletop role-playing game
+  described: true
 - title: Wrath of the Autarch
   key: WRATH-OF-THE-AUTARCH
   itemid: https://www.wikidata.org/wiki/Q104150978
@@ -3389,6 +3442,7 @@
   tag: wrath of the autarch
   game: WRATH-OF-THE-AUTARCH
   description: tabletop kingdom building game
+  described: true
 - title: Wyatt Earp
   key: WYATT-EARP
   itemid: https://boardgamegeek.com/boardgame/878/wyatt-earp
@@ -3398,6 +3452,7 @@
   itemid: https://www.wikidata.org/wiki/Q65049759
   abbr: XGtE
   sameAs: https://en.wikipedia.org/wiki/Xanathar%27s_Guide_to_Everything
+  described: true
 - title: YASnippet
   key: YASNIPPET
   verboseTitle: 'YASnippet: Yet Another Snippet Extension'
@@ -3423,3 +3478,25 @@
   tag: zettelkasten
   sameAs: https://en.wikipedia.org/wiki/Zettelkasten
   description: 'German term: a tool in the creation of a literary or scientific work'
+- title: Castle Amber
+  key: X2-CASTLE-AMBER
+  verboseTitle: X2 Castle Amber
+  game: X2-CASTLE-AMBER
+  offer: https://www.drivethrurpg.com/product/17088/X2-Castle-Amber-Basic?affiliate_id=318171
+  itemid: https://www.wikidata.org/wiki/Q5049986
+  tag: castle amber
+  abbr: X2
+  sameAs: https://en.wikipedia.org/wiki/Castle_Amber_(module)
+  description: D&D adventure module
+- title: The Chronicles of Amber
+  key: THE-CHRONICLES-OF-AMBER
+  itemid: https://www.wikidata.org/wiki/Q1053330
+  tag: chronicles of amber
+  sameAs: https://en.wikipedia.org/wiki/The_Chronicles_of_Amber
+  description: fantasy book series
+- title: Roger Zelazny
+  itemid: https://www.wikidata.org/wiki/Q295406
+  key: ROGER-ZELAZNY
+  tag: roger zelazny
+  sameAs: https://en.wikipedia.org/wiki/Roger_Zelazny
+  description: American speculative fiction writer
