@@ -3418,3 +3418,7 @@
   description: form of development in which an experienced person, called a coach,
     supports a learner or client in achieving a specific personal or professional
     goal by providing training and guidance
+- title: Think-pair-share
+  itemid: https://www.wikidata.org/wiki/Q22909393
+  key: THINK-PAIR-SHARE
+  sameAs: https://en.wikipedia.org/wiki/Think-pair-share
