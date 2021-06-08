@@ -3404,3 +3404,11 @@
   key: POISON-IVY
   sameAs: https://en.wikipedia.org/wiki/Toxicodendron_radicans
   description: species of plant
+- title: curriculum vitae
+  itemid: https://www.wikidata.org/wiki/Q186649
+  abbr: CV
+  key: CURRICULUM-VITAE
+- title: Coaching
+  key: COACHING
+  tag: coaching
+  itemid: https://www.wikidata.org/wiki/Q1104185
