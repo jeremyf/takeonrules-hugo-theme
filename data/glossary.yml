@@ -3502,3 +3502,31 @@
   tag: roger zelazny
   sameAs: https://en.wikipedia.org/wiki/Roger_Zelazny
   description: American speculative fiction writer
+- title: Cal Newport
+  tag: cal newport
+  key: CAL-NEWPORT
+  itemid: https://www.wikidata.org/wiki/Q16733303
+  sameAs: https://en.wikipedia.org/wiki/Cal_Newport
+  description: American computer scientist, academic lecturer and writer
+  described: true
+- title: A World without Email
+  verboseTitle: 'A World without Email: Reimagining Work in an Age of Communication
+    Overload'
+  itemid: https://www.wikidata.org/wiki/Q105600008
+  key: A-WORLD-WITHOUT-EMAIL
+  offer: https://www.worldcat.org/title/world-without-email-reimagining-work-in-an-age-of-communication-overload/oclc/1238126722&referer=brief_results
+  description: 2021 book by Cal Newport
+  described: true
+- title: Hyperactive Hive Mind
+  description: A workflow centered around ongoing conversation fueled by unstructured
+    and unscheduled messages delivered through digital communication tools like email
+    and instant messenger services.
+  tag: hyperactive hive mind
+  key: HYPERACTIVE-HIVE-MIND
+- title: Table of Contents
+  abbr: ToC
+  key: TABLE-OF-CONTENTS
+  itemid: https://www.wikidata.org/wiki/Q1456936
+  description: Provides an overview of what to expect from this document.
+  sameAs: https://en.wikipedia.org/wiki/Table_of_contents
+  described: true
