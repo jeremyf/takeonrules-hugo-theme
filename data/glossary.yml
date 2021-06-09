@@ -21,6 +21,14 @@
   tag: a few acres of snow
   sameAs: https://en.wikipedia.org/wiki/A_Few_Acres_of_Snow
   description: board game
+- title: A World without Email
+  verboseTitle: 'A World without Email: Reimagining Work in an Age of Communication
+    Overload'
+  itemid: https://www.wikidata.org/wiki/Q105600008
+  key: A-WORLD-WITHOUT-EMAIL
+  offer: https://www.worldcat.org/title/world-without-email-reimagining-work-in-an-age-of-communication-overload/oclc/1238126722&referer=brief_results
+  description: 2021 book by Cal Newport
+  described: true
 - title: A-Z Challenge
   key: A-Z-CHALLENGE
   tag: a z challenge
@@ -392,6 +400,13 @@
     of energy depletion or exhaustion; increased mental distance from one’s job, or
     feelings of negativism or cynicism related to one's job; and reduced professional
     efficacy
+- title: Cal Newport
+  tag: cal newport
+  key: CAL-NEWPORT
+  itemid: https://www.wikidata.org/wiki/Q16733303
+  sameAs: https://en.wikipedia.org/wiki/Cal_Newport
+  description: American computer scientist, academic lecturer and writer
+  described: true
 - title: Call of Cthulhu
   key: COC
   itemid: https://www.wikidata.org/wiki/Q1027121
@@ -472,6 +487,16 @@
 - title: Caster Level
   key: CL
   abbr: CL
+- title: Castle Amber
+  key: X2-CASTLE-AMBER
+  verboseTitle: X2 Castle Amber
+  game: X2-CASTLE-AMBER
+  offer: https://www.drivethrurpg.com/product/17088/X2-Castle-Amber-Basic?affiliate_id=318171
+  itemid: https://www.wikidata.org/wiki/Q5049986
+  tag: castle amber
+  abbr: X2
+  sameAs: https://en.wikipedia.org/wiki/Castle_Amber_(module)
+  description: D&D adventure module
 - title: Celcius
   key: CEL
   itemid: https://www.wikidata.org/wiki/Q25267
@@ -537,6 +562,13 @@
   tag: circles test
   contentDisclaimers:
   - lukecrane
+- title: Citation
+  key: CITATION
+  itemid: https://www.wikidata.org/wiki/Q1713
+  pluralTitle: Citations
+  sameAs: https://en.wikipedia.org/wiki/Citation
+  description: reference to a source
+  described: true
 - title: Coaching
   key: COACHING
   tag: coaching
@@ -916,6 +948,10 @@
   - adamkoebel
   sameAs: https://en.wikipedia.org/wiki/Dungeon_World
   description: fantasy tabletop role-playing game
+- title: Dungeon World Campaign Playbook
+  offer: https://www.drivethrurpg.com/product/132627/Dungeon-World-Campaign-Playbook?affiliate_id=318171
+  key: DUNGEON-WORLD-CAMPAIGN-PLAYBOOK
+  game: DUNGEON-WORLD-CAMPAIGN-PLAYBOOK
 - title: Dungeoncraft
   key: DUNGEONCRAFT
   tag: dungeoncraft
@@ -1284,6 +1320,13 @@
   itemid: https://www.wikidata.org/wiki/Q364
   sameAs: https://en.wikipedia.org/wiki/GitHub
   description: hosting service for software projects using Git
+- title: Glossary
+  key: GLOSSARY
+  itemid: https://www.wikidata.org/wiki/Q859161
+  sameAs: https://en.wikipedia.org/wiki/Glossary
+  description: alphabetical list of terms relevant to a certain field of study or
+    action
+  described: true
 - title: GNU
   key: GNU
   verboseTitle: GNU's Not Unix
@@ -1406,6 +1449,12 @@
   itemid: https://www.wikidata.org/wiki/Q207821
   sameAs: https://en.wikipedia.org/wiki/Hurdy-gurdy
   description: musical instrument
+- title: Hyperactive Hive Mind
+  description: A workflow centered around ongoing conversation fueled by unstructured
+    and unscheduled messages delivered through digital communication tools like email
+    and instant messenger services.
+  tag: hyperactive hive mind
+  key: HYPERACTIVE-HIVE-MIND
 - title: Hypertext Markup Language
   key: HTML
   abbr: HTML
@@ -1454,6 +1503,12 @@
   abbr: IED
   sameAs: https://en.wikipedia.org/wiki/Improvised_explosive_device
   description: homemade bomb
+- title: Index
+  key: INDEX
+  itemid: https://www.wikidata.org/wiki/Q873506
+  sameAs: https://en.wikipedia.org/wiki/Index_(publishing)
+  description: list of words or phrases
+  described: true
 - title: Indiana
   key: IN
   abbr: IN
@@ -2496,6 +2551,12 @@
 - title: Robert Bohl
   key: ROBERT-BOHL
   tag: robert bohl
+- title: Roger Zelazny
+  itemid: https://www.wikidata.org/wiki/Q295406
+  key: ROGER-ZELAZNY
+  tag: roger zelazny
+  sameAs: https://en.wikipedia.org/wiki/Roger_Zelazny
+  description: American speculative fiction writer
 - title: Role
   key: ROLE
   tag: role
@@ -2959,6 +3020,13 @@
 - title: 'System Reference Document: Fifth Edition'
   key: SRD5
   abbr: SRD5
+- title: Table of Contents
+  abbr: ToC
+  key: TABLE-OF-CONTENTS
+  itemid: https://www.wikidata.org/wiki/Q1456936
+  description: Provides an overview of what to expect from this document.
+  sameAs: https://en.wikipedia.org/wiki/Table_of_contents
+  described: true
 - title: Tactical Rules Studies
   key: TSR
   itemid: https://www.wikidata.org/wiki/Q1543201
@@ -3020,6 +3088,12 @@
   itemtype: Book
   sameAs: https://en.wikipedia.org/wiki/The_Book_of_the_New_Sun
   description: novel series by Gene Wolfe
+- title: The Chronicles of Amber
+  key: THE-CHRONICLES-OF-AMBER
+  itemid: https://www.wikidata.org/wiki/Q1053330
+  tag: chronicles of amber
+  sameAs: https://en.wikipedia.org/wiki/The_Chronicles_of_Amber
+  description: fantasy book series
 - title: The Empire
   verboseTitle: The Empire of Man (Warhammer Fantasy Setting)
   key: WARHAMMER-THE-EMPIRE
@@ -3480,53 +3554,3 @@
   tag: zettelkasten
   sameAs: https://en.wikipedia.org/wiki/Zettelkasten
   description: 'German term: a tool in the creation of a literary or scientific work'
-- title: Castle Amber
-  key: X2-CASTLE-AMBER
-  verboseTitle: X2 Castle Amber
-  game: X2-CASTLE-AMBER
-  offer: https://www.drivethrurpg.com/product/17088/X2-Castle-Amber-Basic?affiliate_id=318171
-  itemid: https://www.wikidata.org/wiki/Q5049986
-  tag: castle amber
-  abbr: X2
-  sameAs: https://en.wikipedia.org/wiki/Castle_Amber_(module)
-  description: D&D adventure module
-- title: The Chronicles of Amber
-  key: THE-CHRONICLES-OF-AMBER
-  itemid: https://www.wikidata.org/wiki/Q1053330
-  tag: chronicles of amber
-  sameAs: https://en.wikipedia.org/wiki/The_Chronicles_of_Amber
-  description: fantasy book series
-- title: Roger Zelazny
-  itemid: https://www.wikidata.org/wiki/Q295406
-  key: ROGER-ZELAZNY
-  tag: roger zelazny
-  sameAs: https://en.wikipedia.org/wiki/Roger_Zelazny
-  description: American speculative fiction writer
-- title: Cal Newport
-  tag: cal newport
-  key: CAL-NEWPORT
-  itemid: https://www.wikidata.org/wiki/Q16733303
-  sameAs: https://en.wikipedia.org/wiki/Cal_Newport
-  description: American computer scientist, academic lecturer and writer
-  described: true
-- title: A World without Email
-  verboseTitle: 'A World without Email: Reimagining Work in an Age of Communication
-    Overload'
-  itemid: https://www.wikidata.org/wiki/Q105600008
-  key: A-WORLD-WITHOUT-EMAIL
-  offer: https://www.worldcat.org/title/world-without-email-reimagining-work-in-an-age-of-communication-overload/oclc/1238126722&referer=brief_results
-  description: 2021 book by Cal Newport
-  described: true
-- title: Hyperactive Hive Mind
-  description: A workflow centered around ongoing conversation fueled by unstructured
-    and unscheduled messages delivered through digital communication tools like email
-    and instant messenger services.
-  tag: hyperactive hive mind
-  key: HYPERACTIVE-HIVE-MIND
-- title: Table of Contents
-  abbr: ToC
-  key: TABLE-OF-CONTENTS
-  itemid: https://www.wikidata.org/wiki/Q1456936
-  description: Provides an overview of what to expect from this document.
-  sameAs: https://en.wikipedia.org/wiki/Table_of_contents
-  described: true
