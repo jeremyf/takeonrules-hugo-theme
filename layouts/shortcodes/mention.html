@@ -16,7 +16,8 @@
 {{- end }}{{- end }}
 {{- $scratchKey := printf "abbr-%s" $entry.key }}
 {{- if ($.Page.Scratch.Get $scratchKey) }}
-{{- if $link }}<a href="{{ $link }}">{{ $name }}</a>{{- else }}{{ $name }}{{- end }}
+{{- if $link }}{{- printf "<%s><a href=\"%s\">%s</a></%s>" $tag $link $name $tag | safeHTML }}
+{{- else }}{{- printf "<%s>%s</%s>" $tag $name $tag | safeHTML }}{{- end }}
 {{- else }}
 {{- $.Page.Scratch.Set $scratchKey "t" }}
 {{- if .Get "downcase" }}{{- $name = lower $name}}{{- end }}
