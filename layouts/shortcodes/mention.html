@@ -6,6 +6,7 @@
 {{- $title = default $title ( .Get "title") }}
 {{- $name := $title }}
 {{- $link := false }}
+{{- if .Get "downcase" }}{{- $name = lower $name}}{{- end }}
 {{- with (.Get "link") }}
 {{- if eq . "offer" }}
 {{- $link = default . ( $entry.offer) }}
@@ -24,7 +25,6 @@
 {{- $.Page.Scratch.Set $scratchKey "t" }}
 {{- $dfn := .Get "dfn" }}
 {{- if $dfn }}{{ $tag = "dfn" }}{{- end }}
-{{- if .Get "downcase" }}{{- $name = lower $name}}{{- end }}
 {{- if .Get "as" }}{{ $name = .Get "as" }}{{- end }}
 {{- $itemtype := default "Thing" ($entry.itemtype) }}
 {{- if .Get "abbr" }}{{ $name = default $name ($entry.abbr) }}{{- end }}
