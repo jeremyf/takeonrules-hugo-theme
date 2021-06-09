@@ -7,12 +7,14 @@
 {{- $name := $title }}
 {{- $link := false }}
 {{- with (.Get "link") }}
-{{ if ne . "t" }}
+{{- if eq . "offer" }}
+{{- $link = default . ( $entry.offer) }}
+{{- else if eq . "sameAs" }}
+{{- $link = default . ($entry.sameAs) }}
+{{- else if eq . "itemid" }}
+{{- $link = default . ($entry.itemid) }}
+{{- else }}
 {{- $link = . }}
-{{- else if $entry.sameAs }}
-{{- $link = $entry.sameAs }}
-{{- else if $entry.itemid }}
-{{- $link = $entry.itemid }}
 {{- end }}{{- end }}
 {{- $scratchKey := printf "abbr-%s" $entry.key }}
 {{- if ($.Page.Scratch.Get $scratchKey) }}
@@ -20,8 +22,13 @@
 {{- else }}{{- printf "<%s>%s</%s>" $tag $name $tag | safeHTML }}{{- end }}
 {{- else }}
 {{- $.Page.Scratch.Set $scratchKey "t" }}
+{{- $dfn := .Get "dfn" }}
+{{- if $dfn }}{{ $tag = "dfn" }}{{- end }}
 {{- if .Get "downcase" }}{{- $name = lower $name}}{{- end }}
 {{- if .Get "as" }}{{ $name = .Get "as" }}{{- end }}
 {{- $itemtype := default "Thing" ($entry.itemtype) }}
 {{- if .Get "abbr" }}{{ $name = default $name ($entry.abbr) }}{{- end }}
-{{- printf "<span itemprop=\"%s\" itemscope itemtype=\"http://schema.org/%s\">" $itemprop $itemtype | safeHTML }}{{- if isset $entry "itemid" }}<link itemprop="sameAs" href="{{ $entry.itemid }}" />{{- end }}{{- printf "<%s itemprop=\"name\">" $tag | safeHTML }}{{- if $link }}<a href="{{ $link }}">{{ $name }}</a>{{- else }}{{ $name }}{{- end }}{{- printf "</%s>" $tag | safeHTML }}{{- if ne $name $title }}<meta itemprop="alternateName" content="{{ $title }}">{{- end }}</span>{{- end }}
+{{- printf "<span itemprop=\"%s\" itemscope itemtype=\"http://schema.org/%s\">" $itemprop $itemtype | safeHTML }}
+{{- if isset $entry "itemid" }}<link itemprop="sameAs" href="{{ $entry.itemid }}" />{{- end }}
+{{- if ne $name $title }}<meta itemprop="alternateName" content="{{ $title }}">{{- end }}
+{{- printf "<%s itemprop=\"name\">" $tag | safeHTML }}{{- if $link }}<a href="{{ $link }}">{{ $name }}</a>{{- else }}{{ $name }}{{- end }}{{- printf "</%s>" $tag | safeHTML }}{{ with $entry.description }}{{- if $dfn }}<span class="sidenote-number"><small class="side" role="note">(i.e., <span itemprop="description">{{ . }}</span>)</small></span>{{- end }}{{- end }}</span>{{- end }}
