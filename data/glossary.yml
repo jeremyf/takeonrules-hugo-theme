@@ -3543,6 +3543,11 @@
   description: human-readable data serialization format
 - title: Young Offender
   key: YO
+- title: Your Code as a Crime Scene
+  verboseTitle: 'Your Code as a Crime Scene : use forensic techniques to arrest defects,
+    bottlenecks, and bad design in your programs'
+  key: YOUR-CODE-AS-A-CRIME-SCENE
+  offer: https://www.worldcat.org/title/your-code-as-a-crime-scene-use-forensic-techniques-to-arrest-defects-bottlenecks-and-bad-design-in-your-programs/oclc/1047817727&referer=brief_results
 - title: Zeb Cook
   key: ZEB-COOK
   itemid: https://www.wikidata.org/wiki/Q5232538
