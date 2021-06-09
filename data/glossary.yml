@@ -2502,6 +2502,8 @@
 - title: Role Playing Game
   key: RPG
   abbr: RPG
+  pluralTitle: Role Playing Games
+  pluralAbbr: RPGs
   itemid: https://www.wikidata.org/wiki/Q160738
   tag: rpg
   sameAs: https://en.wikipedia.org/wiki/Role-playing_game
