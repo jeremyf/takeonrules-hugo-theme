@@ -3115,6 +3115,12 @@
   tag: enemy within
   sameAs: https://en.wikipedia.org/wiki/The_Enemy_Within_Campaign
   description: series of adventures for Warhammer Fantasy Roleplay
+- title: The Forge
+  key: THE-FORGE
+  itemid: https://www.wikidata.org/wiki/Q64528910
+  tag: the forge
+  description: independent tabletop role-playing game movement
+  described: true
 - title: The Hero's Journey
   key: THE-HEROS-JOURNEY
   itemid: https://rpggeek.com/rpg/34736/heros-journey-fantasy-roleplaying
