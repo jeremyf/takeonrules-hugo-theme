@@ -3410,6 +3410,12 @@
   abbr: VS Code
   sameAs: https://en.wikipedia.org/wiki/Visual_Studio_Code
   description: source code editor developed by Microsoft
+- title: Vrusk
+  key: VRUSK
+  itemid: https://www.wikidata.org/wiki/Q107178135
+  sameAs: https://starfrontiers.fandom.com/wiki/Vrusk
+  description: a fictional species in the Star Frontiers franchise
+  described: true
 - title: VSCA
   key: VSCA
   itemid: https://vsca.ca
@@ -3582,6 +3588,12 @@
   itemid: https://github.com/joaotavora/yasnippet
   tag: yasnippet
   abbr: YASnippet
+- title: Yazirian
+  key: YAZIRIAN
+  itemid: https://www.wikidata.org/wiki/Q107178317
+  sameAs: https://starfrontiers.fandom.com/wiki/Yazirian
+  description: a fictional species in the Star Frontiers franchise
+  described: true
 - title: Yet Another Markup Language
   key: YAML
   abbr: YAML
