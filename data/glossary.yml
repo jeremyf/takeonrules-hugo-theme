@@ -897,6 +897,12 @@
   key: DRAGONKNIGHTS
   tag: dragonknights
   game: DRAGONKNIGHTS
+- title: Dralasite
+  description: one of the fictional species in Star Frontiers
+  itemid: https://www.wikidata.org/wiki/Q5305679
+  key: DRALASITE
+  sameAs: https://en.wikipedia.org/wiki/Dralasite
+  described: true
 - title: Dreams
   key: DREAMS
   itemid: https://www.wikidata.org/wiki/Q36348
@@ -1358,6 +1364,13 @@
   tag: google hangouts
   sameAs: https://en.wikipedia.org/wiki/Google_Hangouts
   description: communication software developed by Google
+- title: Google Plus
+  key: GOOGLE-PLUS
+  tag: google plus
+  itemid: https://www.wikidata.org/wiki/Q356
+  sameAs: https://en.wikipedia.org/wiki/Google%2B
+  description: social networking service
+  described: true
 - title: Goshen Game Day
   key: GOSHEN-GAME-DAY
   tag: goshen game day
@@ -1564,6 +1577,13 @@
   itemid: https://www.wikidata.org/wiki/Q33057
   sameAs: https://en.wikipedia.org/wiki/International_Standard_Book_Number
   description: unique numeric book identifier
+- title: Internet Relay Chat
+  key: INTERNET-RELAY-CHAT
+  tag: irc
+  itemid: https://www.wikidata.org/wiki/Q73
+  sameAs: https://en.wikipedia.org/wiki/Internet_Relay_Chat
+  description: protocol for real-time Internet chat and messaging
+  described: true
 - title: Interview
   key: INTERVIEW
   tag: interview
@@ -2322,6 +2342,12 @@
   abbr: pm
   description: period of the day after noon and before midnight
   described: true
+- title: Poul Anderson
+  itemid: https://www.wikidata.org/wiki/Q220883
+  key: POUL-ANDERSON
+  sameAs: https://en.wikipedia.org/wiki/Poul_Anderson
+  description: American science fiction and fantasy writer
+  described: true
 - title: Powered by the Apocalypse
   key: PBTA
   itemid: https://www.wikidata.org/wiki/Q17149214
@@ -3028,6 +3054,12 @@
   description: Provides an overview of what to expect from this document.
   sameAs: https://en.wikipedia.org/wiki/Table_of_contents
   described: true
+- title: Tabletop RPG Design in Theory and Practice at the Forge, 2001-2012
+  offer: https://www.worldcat.org/title/tabletop-rpg-design-in-theory-and-practice-at-the-forge-2001-2012/oclc/1197788142&referer=brief_results
+  key: TABLETOP-RPG-DESIGN-IN-THEORY
+  itemid: https://www.wikidata.org/wiki/Q107177603
+  description: An academic book
+  described: true
 - title: Tactical Rules Studies
   key: TSR
   itemid: https://www.wikidata.org/wiki/Q1543201
@@ -3089,6 +3121,13 @@
   itemtype: Book
   sameAs: https://en.wikipedia.org/wiki/The_Book_of_the_New_Sun
   description: novel series by Gene Wolfe
+- title: The Broken Sword
+  itemid: https://www.wikidata.org/wiki/Q7720276
+  key: THE-BROKEN-SWORD
+  offer: https://www.worldcat.org/title/broken-sword/oclc/1078370235&referer=brief_results
+  sameAs: https://en.wikipedia.org/wiki/The_Broken_Sword
+  description: book by Poul Anderson
+  described: true
 - title: The Chronicles of Amber
   key: THE-CHRONICLES-OF-AMBER
   itemid: https://www.wikidata.org/wiki/Q1053330
@@ -3118,6 +3157,7 @@
 - title: The Forge
   key: THE-FORGE
   itemid: https://www.wikidata.org/wiki/Q64528910
+  url: https://www.indie-rpgs.com/forge/index.php
   tag: the forge
   description: independent tabletop role-playing game movement
   described: true
