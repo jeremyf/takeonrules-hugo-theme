@@ -3161,6 +3161,13 @@
   tag: the forge
   description: independent tabletop role-playing game movement
   described: true
+- title: The Great Pendragon Campaign
+  abbr: GPC
+  key: THE-GREAT-PENDRAGON-CAMPAIGN
+  itemid: https://rpggeek.com/rpgitem/48835/great-pendragon-campaign
+  tag: great pendragon campaign
+  game: THE-GREAT-PENDRAGON-CAMPAIGN
+  offer: https://www.drivethrurpg.com/product/12405/The-Great-Pendragon-Campaign?affiliate_id=318171
 - title: The Hero's Journey
   key: THE-HEROS-JOURNEY
   itemid: https://rpggeek.com/rpg/34736/heros-journey-fantasy-roleplaying
@@ -3262,6 +3269,13 @@
   tag: tichu
   sameAs: https://en.wikipedia.org/wiki/Tichu
   description: card game
+- title: To Be Determined
+  key: TBD
+  abbr: TBD
+  itemid: https://www.wikidata.org/wiki/Q603908
+  sameAs: https://en.wikipedia.org/wiki/To_be_announced
+  description: placeholder term in event planning
+  described: true
 - title: To Hit Armor Class 0
   key: THAC0
   abbr: THAC0
@@ -3486,6 +3500,13 @@
   tag: whitehack
   game: WHITEHACK
   abbr: WH
+- title: Wiki
+  key: WIKI
+  itemid: https://www.wikidata.org/wiki/Q171
+  tag: wiki
+  sameAs: https://en.wikipedia.org/wiki/Wiki
+  description: type of website that visitors can edit
+  described: true
 - title: Willpower
   key: WILL
 - title: Winter
