@@ -19,6 +19,7 @@ abbr { cursor: help; }
 p, summary, li {  vertical-align: baseline; }
 figure, blockquote { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
 
+a.ref { text-decoration: none; }
 .poem {
       font-family: var(--body-font);
       color: var(--fg);

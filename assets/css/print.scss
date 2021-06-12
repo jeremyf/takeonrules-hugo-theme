@@ -12,7 +12,7 @@ body {
   overflow-wrap: break-word;
 }
 
-.book { display: none; }
+.book, .ref { display: none; }
 
 body.resume {
     & > footer { display: none; }
