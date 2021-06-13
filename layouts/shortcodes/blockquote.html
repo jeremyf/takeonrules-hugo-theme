@@ -6,7 +6,7 @@
 {{- $entry := index (where $.Site.Data.glossary "game" "eq" $game) 0 }}
 {{- $cite = $entry.title }}
 {{- $cite_url = $entry.offer }}
-{{- $scratchKey = printf "linkToGame-%s" $game }}
+{{- $scratchKey = printf "glossary-%s" $game }}
 {{- end }}
 {{- $post := .Get "post" }}
 <blockquote itemprop="citation" itemscope itemtype="http://schema.org/CreativeWork" class="h-cite {{- with .Get "epigraph" }} epigraph{{- end }}" {{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
