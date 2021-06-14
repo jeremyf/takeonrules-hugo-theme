@@ -1,3 +1,20 @@
+{{/*
+Parameters:
+
+@param key - required for lookup of glossary entry
+
+Optional Parameters:
+
+@param noIcon - when "t" do not render the linking icon to glossary
+@param abbr - include an abbreviation
+@param noTitle - do not render the title (you'll probably want the abbr="t")
+@param link - specify the given link (see implementation below)
+@param tag - specify the tag to use for the title node
+
+@param itemprop - sometimes, instead of a "mention" you'll want
+@param dfn - add a sidenote with a description
+
+*/}}
 {{- $key := .Get "key" | upper }}
 {{- $entry := index (where $.Site.Data.glossary "key" "eq" $key) 0 }}
 {{- if isset $entry "key" }}
@@ -5,11 +22,7 @@
 {{- $title := default $entry.title ( default $entry.mentionAs (.Get "title")) }}
 {{- $scratchKey := printf "glossary-%s" $entry.key }}
 {{- $titleTag := "span" }}
-{{- if .Get "tag" }}
-{{- $titleTag = .Get "tag" }}
-{{- else }}
-{{- if and ($entry.offer) (eq $title $citedTitle ) }}{{ $titleTag = "cite" }}{{- end }}
-{{- end }}
+{{- if .Get "tag" }}{{- $titleTag = .Get "tag" }}{{- else }}{{- if and ($entry.offer) (eq $title $citedTitle ) }}{{ $titleTag = "cite" }}{{- end }}{{- end }}
 {{- if .Get "downcase" }}{{ $title = lower $title }}{{- end }}
 {{- $abbrHTML := "" }}
 {{- $abbrTitle := default $entry.title (.Get "title") }}
@@ -40,8 +53,9 @@
 {{- $reflink = printf " <a class=\"ref\" rel=\"tag opener\" aria-label=\"Other site-wide references of “%s”\" title=\"Other site-wide references of “%s”\" href=\"/site-map/glossary/#abbr-dfn-%s\"><sup>&#128269;</sup></a>" $title $title $entry.key | safeHTML }}
 {{- end }}
 {{- $dfnText := "" }}
-{{- if .Get "dfn" }}{{ with $entry.description }}
-{{- $dfnText = printf "<span class=\"sidenote-number\"><small class=\"side\" role=\"note\">(i.e., <span itemprop=\"description\">%s</span>)</small></span>" . | safeHTML }}{{- end }}{{- end }}
+{{- with .Get "dfn" }}
+{{- $dfnInnerText := "" }}{{ if eq . "t" }}{{ with $entry.description }}{{- $dfnInnerText := . }}{{- end }}{{- else }}{{- $dfnInnerText = . }}{{- end }}
+{{- if ne 0 (len $dfnInnerText) }}{{- $dfnText = printf "<span class=\"sidenote-number\"><small class=\"side\" role=\"note\">(i.e., <span itemprop=\"description\">%s</span>)</small></span>" . | safeHTML }}{{- end }}{{- end }}
 {{- with $entry.offer }}
 {{- $innerTitleHtml = printf "<a itemprop=\"offer\" href=\"%s\">%s</a>" . $title }}
 {{- else }}
