@@ -50,20 +50,17 @@ Semantically, I don't treat these as an [ASIDE](https://developer.mozilla.org/en
 
 Two other shortcodes (table.html and update.html) provide marginalia options.  See below for more on these two shortcodes.
 
+### Cite Page
+
+- [citePage.html](layouts/shortcodes/citePage.html) :: A shortcode to conditionally generate a `cite a` or `a` tag to the page at the given filename (relative to the Hugo content directory).  **Note:** I use [`tor-page-relative-pathname-list`](https://github.com/jeremyf/dotzshrc/blob/dd289492248b0b2719297220e4dc1127ee7c89df/emacs/jnf-blogging.el#L100-L106) to generate a list of all the filenames.
+
 ### Glossary
 
-Throughout TakeOnRules.com, I make extensive use of a glossary. I use this markup to improve the accessibility of my site.
+Throughout TakeOnRules.com, I make extensive use of a glossary.  I use this markup to improve the accessibility of my site.
 
-- [abbr.html](layouts/shortcodes/abbr.html) :: Creates the [ABBR](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr) tag and links to the glossary.
-- [linkToGame.html](layouts/shortcodes/linkToGame.html) :: Creates a [CITE](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite) tag with a link to an offer to purchase (as defined in the [data/glossary.yml](data/glossary.yml) file).
-- [citePage.html](layouts/shortcodes/citePage.html) :: A shortcode to conditionally generate a `cite a` or `a` tag to the page at the given filename (relative to the Hugo content directory).  **Note:** I use [`tor-page-relative-pathname-list`](https://github.com/jeremyf/dotzshrc/blob/dd289492248b0b2719297220e4dc1127ee7c89df/emacs/jnf-blogging.el#L100-L106) to generate a list of all the filenames.
-- [mention.html](layouts/shortcodes/mention.html) :: A shortcode to drop a `itemprop="mention"` onto the page using the glossary.
+- [glossary.html](layouts/shortcodes/glossary.html) :: Creates consistent markup for referencing a glossary entry.
 
-Related is the [data/glossary.yml](data/glossary.yml) file which contains the data which I use for the `abbr.html`, `mention.html`, and `linkToGame.html` shortcodes.  This is a live data set that I use for TakeOnRules.com.
-
-I wrote about the Glossary in <cite><a href="http://takeonrules.com/2020/12/20/many-small-tools-make-light-work-in-emacs/" class="u-url p-name" rel="cite">Many Small Tools Make Light Work (in Emacs)</a></cite>.
-
-These short codes are written such that I won't render the same help link twice; Hence the use of testing a Page's Scratch variable.
+The `glossary.html` short uses the [data/glossary.yml](data/glossary.yml) file as a database.  I wrote about the Glossary in <cite><a href="http://takeonrules.com/2020/12/20/many-small-tools-make-light-work-in-emacs/" class="u-url p-name" rel="cite">Many Small Tools Make Light Work (in Emacs)</a></cite>.
 
 #### Data Dictionary
 
@@ -75,25 +72,18 @@ Each glossary entry must have two keys:
 There additional optional keys are as follows:
 
 - **verboseTitle**: This is the lengthier title; you know, if there's a colon/subtitle in play use that.
-- **mentionAs**: When we "mention" something (see `mention.html`) use mentionAs and fall back to title.
-- **tag**: If this entry represents a tag, this will be the tags name
+- **pluralTitle**: The pluralized title.
+- **mentionAs**: If for some reason we don't always want to use the title, the mentionAs is a replacement.
+- **tag**: If this entry represents a tag, this will be the tags name.
 - **itemid**: If this entry has a "sameAs" itemprop value, that will be the itemid (e.g. how to disambiguate)
-- **abbr**: If you reference the entry for an ABBR, but the given key is not good for the innerHTML of the ABBR tags. (see `abbr.html` shortcode)
-- **offer**: The URL where the thing is on offer (e.g. where you can buy it)
-- **game**: Indicates that this thing is a game (and linkable via `linkToGame.html` shortcode)
-- **contentDisclaimers**: (Array) Indicates that this entry has some associated content disclaimer
-- **itemtype**: The schema.org itemtype for this entry (see `mention.html` for implementation details)
-- **description**: Similar to note, treat as `itemprop="description"`
-- **autoMention**: When set to true, the glossary:mention rake task will crawl the content and automatically create content links.
-
-#### Todo
-
-The `blockquote`, `abbr`, `linkToGame`, and `mention` all tie into similar data access; Just as I should only have one link for a given URL on the page, I should only have one `itemprop="mention"` for a topic.
-
-An idea for refactoring:
-
-- Overload `mention` such that if the `mention`-ed glossary entry has a `game`, `cite` that entry and create an `a`-tag to the offer.
-- Consolidate `abbr` and `mention`, this requires reconciling parameters.
+- **abbr**: When we provide an abbreviation, use this for the innerHTML of the `abbr` tag.
+- **pluralAbbr**: The pluralized abbreviation.
+- **offer**: The URL where the thing is on offer (e.g. where you can buy it or borrow it).
+- **game**: Indicates that this thing is a game, useful for the [`linkToGame` yasnippet](https://github.com/jeremyf/dotzshrc/blob/5c84e8b05d06b8224811b6f679ea479a67f4a6f1/emacs/snippets/text-mode/linkToGame).
+- **contentDisclaimers**: (Array) Indicates that this entry has some associated content disclaimer.
+- **itemtype**: The schema.org itemtype for this entry.
+- **description**: Similar to note, treat as `itemprop="description"`.
+- **described**: A boolean.  When `true` the given glossary entry has already been described; don't attempt to fetch the description from Wikidata.
 
 ### Other Stuff
 

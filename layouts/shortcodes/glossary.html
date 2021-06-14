@@ -12,11 +12,23 @@
 {{- end }}
 {{- if .Get "downcase" }}{{ $title = lower $title }}{{- end }}
 {{- $abbrHTML := "" }}
-{{- with .Get "abbr" }}{{- $abbr := $entry.abbr }}{{- if ne "t" . }}{{- $abbr = . }}{{- end }}{{ $abbrHTML = printf "<abbr title=\"%s\">%s</abbr>" $title $abbr }}{{- end }}
-{{/* begin if $scratchKey */}}
+{{- $abbrTitle := default $entry.title (.Get "title") }}
+{{- with .Get "abbr" }}
+{{- $abbr := "" }}
+{{- if eq . "t" }}
+{{- if $.Get "plural" }}
+{{- with $entry.pluralAbbr }}{{- $abbr = $entry.pluralAbbr }}{{- else }}{{- errorf "Missing pluralAbbr for %s in file %s" $key $.Page.Permalink }}{{- end }}
+{{- with $entry.pluralTitle }}{{- $abbrTitle = $entry.pluralTitle }}{{- else }}{{- errorf "Missing pluralTitle for %s in file %s" $key $.Page.Permalink }}{{- end }}
+{{- else }}
+{{- $abbr = $entry.abbr }}
+{{- end }}
+{{- else }}
+{{- $abbr = . }}
+{{- end }}
+{{- $abbrHTML = printf "<abbr title=\"%s\">%s</abbr>" $abbrTitle $abbr }}
+{{- end }}{{/* end with .Get "abbr" */}}
 {{- if .Page.Scratch.Get $scratchKey }}
 {{- if eq (len $abbrHTML) 0 }}{{ printf "<%s>%s</%s>" $titleTag $title $titleTag | safeHTML }}{{- else }}{{ $abbrHTML | safeHTML }}{{- end  }}
-{{/* begin else not $scratchKey */}}
 {{- else }}
 {{- .Page.Scratch.Set $scratchKey "t" }}
 {{- $itemprop := default "mentions" ( .Get "itemprop" ) }}
@@ -48,7 +60,7 @@
 {{- if .Get "noTitle" }}<meta itemprop="name" content="{{ $title }}">
 {{ $abbrHTML | safeHTML }}{{ $dfnText }}{{ $reflink }}
 {{- else }}
-{{ printf "<%s itemprop=\"name\">%s</%s>" $titleTag $innerTitleHtml $titleTag | safeHTML }}{{ $dfnText }}
+{{ printf "<%s itemprop=\"name\">%s</%s>%s" $titleTag $innerTitleHtml $titleTag $dfnText | safeHTML }}
 {{- if eq 0 (len $abbrHTML) }}{{ $reflink }}{{- else }} ({{ $abbrHTML | safeHTML }}{{ $reflink}}){{- end }}
 {{- end }}</span>{{- end }}
 {{- else }}{{ errorf "Missing %s in file %s" (.Get "key") (.Page.Permalink) }}{{- end }}
