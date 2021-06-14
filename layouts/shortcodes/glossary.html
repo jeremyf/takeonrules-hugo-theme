@@ -1,0 +1,54 @@
+{{- $key := .Get "key" | upper }}
+{{- $entry := index (where $.Site.Data.glossary "key" "eq" $key) 0 }}
+{{- if isset $entry "key" }}
+{{- $citedTitle := default $entry.title ( default $entry.mentionAs ) }}
+{{- $title := default $entry.title ( default $entry.mentionAs (.Get "title")) }}
+{{- $scratchKey := printf "glossary-%s" $entry.key }}
+{{- $titleTag := "span" }}
+{{- if .Get "tag" }}
+{{- $titleTag = .Get "tag" }}
+{{- else }}
+{{- if and ($entry.offer) (eq $title $citedTitle ) }}{{ $titleTag = "cite" }}{{- end }}
+{{- end }}
+{{- if .Get "downcase" }}{{ $title = lower $title }}{{- end }}
+{{- $abbrHTML := "" }}
+{{- with .Get "abbr" }}{{- $abbr := $entry.abbr }}{{- if ne "t" . }}{{- $abbr = . }}{{- end }}{{ $abbrHTML = printf "<abbr title=\"%s\">%s</abbr>" $title $abbr }}{{- end }}
+{{/* begin if $scratchKey */}}
+{{- if .Page.Scratch.Get $scratchKey }}
+{{- if eq (len $abbrHTML) 0 }}{{ printf "<%s>%s</%s>" $titleTag $title $titleTag | safeHTML }}{{- else }}{{ $abbrHTML | safeHTML }}{{- end  }}
+{{/* begin else not $scratchKey */}}
+{{- else }}
+{{- .Page.Scratch.Set $scratchKey "t" }}
+{{- $itemprop := default "mentions" ( .Get "itemprop" ) }}
+{{- $itemtype := default $entry.itemtype ("Thing") }}
+{{- if eq $titleTag "cite" }}{{ $itemtype = "CreativeWork" }}{{- end }}
+{{- $innerTitleHtml := $title }}
+{{- $reflink := "" }}
+{{- if (.Get "noIcon") }}{{- else }}
+{{- $reflink = printf " <a class=\"ref\" rel=\"tag opener\" aria-label=\"Other site-wide references of “%s”\" title=\"Other site-wide references of “%s”\" href=\"/site-map/glossary/#abbr-dfn-%s\"><sup>&#128269;</sup></a>" $title $title $entry.key | safeHTML }}
+{{- end }}
+{{- $dfnText := "" }}
+{{- if .Get "dfn" }}{{ with $entry.description }}
+{{- $dfnText = printf "<span class=\"sidenote-number\"><small class=\"side\" role=\"note\">(i.e., <span itemprop=\"description\">%s</span>)</small></span>" . | safeHTML }}{{- end }}{{- end }}
+{{- with $entry.offer }}
+{{- $innerTitleHtml = printf "<a itemprop=\"offer\" href=\"%s\">%s</a>" . $title }}
+{{- else }}
+{{- with .Get "link" }}
+{{- if and (eq . "sameAs") (isset $entry "sameAs") }}
+{{- $innerTitleHtml = printf "<a itemprop=\"sameAs\" href=\"%s\">%s</a>" $entry.sameAs $title }}
+{{- else if and (eq . "itemid") (isset $entry "itemid") }}
+{{- $innerTitleHtml = printf "<a itemprop=\"sameAs\" href=\"%s\">%s</a>" $entry.itemid $title }}
+{{- else if eq "http" (substr . 0 4) }}
+{{- $innerTitleHtml = printf "<a href=\"%s\">%s</a>" . $title }}
+{{- else if isset $entry "itemid" }}
+{{- $innerTitleHtml = printf "<a href=\"%s\">%s</a>" $entry.itemid $title }}
+{{- end }}
+{{- end }}
+{{- end }}<span itemprop="{{ $itemprop }}" itempscope itemtype="http://schema.org/{{ $itemtype }}">{{- with $entry.itemid }}<link href="{{ . }}" itemprop="sameAs">{{- end }}
+{{- if .Get "noTitle" }}<meta itemprop="name" content="{{ $title }}">
+{{ $abbrHTML | safeHTML }}{{ $dfnText }}{{ $reflink }}
+{{- else }}
+{{ printf "<%s itemprop=\"name\">%s</%s>" $titleTag $innerTitleHtml $titleTag | safeHTML }}{{ $dfnText }}
+{{- if eq 0 (len $abbrHTML) }}{{ $reflink }}{{- else }} ({{ $abbrHTML | safeHTML }}{{ $reflink}}){{- end }}
+{{- end }}</span>{{- end }}
+{{- else }}{{ errorf "Missing %s in file %s" (.Get "key") (.Page.Permalink) }}{{- end }}
