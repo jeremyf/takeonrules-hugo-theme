@@ -38,7 +38,7 @@ Optional Parameters:
 {{- else }}
 {{- $abbr = . }}
 {{- end }}
-{{- $abbrHTML = printf "<abbr title=\"%s\">%s</abbr>" $abbrTitle $abbr }}
+{{- if $abbr }}{{- $abbrHTML = printf "<abbr title=\"%s\">%s</abbr>" $abbrTitle $abbr }}{{- else }}{{- warnf "Expected abbr for key %s in post %s" $key ($.Page.Permalink) }}{{- end }}
 {{- end }}{{/* end with .Get "abbr" */}}
 {{- if .Page.Scratch.Get $scratchKey }}
 {{- if eq (len $abbrHTML) 0 }}{{ printf "<%s>%s</%s>" $titleTag $title $titleTag | safeHTML }}{{- else }}{{ $abbrHTML | safeHTML }}{{- end  }}
