@@ -71,9 +71,7 @@ Optional Parameters:
 {{- end }}
 {{- end }}
 {{- end }}<span itemprop="{{ $itemprop }}" itempscope itemtype="http://schema.org/{{ $itemtype }}">{{- with $entry.itemid }}<link href="{{ . }}" itemprop="sameAs">{{- end }}
-{{- if .Get "noTitle" }}<meta itemprop="name" content="{{ $title }}">
-{{ $abbrHTML | safeHTML }}{{ $dfnText }}{{ $reflink }}
-{{- else }}
+{{- if .Get "noTitle" }}<meta itemprop="name" content="{{ $title }}">{{ $abbrHTML | safeHTML }}{{ $dfnText }}{{ $reflink }}{{- else }}
 {{ printf "<%s itemprop=\"name\">%s</%s>%s" $titleTag $innerTitleHtml $titleTag $dfnText | safeHTML }}
 {{- if eq 0 (len $abbrHTML) }}{{ $reflink }}{{- else }} ({{ $abbrHTML | safeHTML }}{{ $reflink}}){{- end }}
 {{- end }}</span>{{- end }}
