@@ -19,7 +19,17 @@ Optional Parameters:
 {{- $entry := index (where $.Site.Data.glossary "key" "eq" $key) 0 }}
 {{- if isset $entry "key" }}
 {{- $citedTitle := default $entry.title ( default $entry.mentionAs ) }}
-{{- $title := default $entry.title ( default $entry.mentionAs (.Get "title")) }}
+{{- $title := "" }}
+{{- if .Get "title" }}
+{{- $title = .Get "title" }}
+{{- else if .Get "mentionAs" }}
+{{- $title = .Get "mentionAs" }}
+{{- else if .Get "plural" }}
+{{- $title = $entry.pluralTitle }}
+{{- else }}
+{{- $title = $entry.title }}
+{{- end }}
+{{- if eq 0 (len $title ) }}{{- errorf "Missing title for key %s in file %s" (.Get "key") (.Page.Permalink) }}{{- end }}
 {{- $scratchKey := printf "glossary-%s" $entry.key }}
 {{- $titleTag := "span" }}
 {{- if .Get "tag" }}{{- $titleTag = .Get "tag" }}{{- else }}{{- if and ($entry.offer) (eq $title $citedTitle ) }}{{ $titleTag = "cite" }}{{- end }}{{- end }}
