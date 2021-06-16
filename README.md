@@ -60,7 +60,7 @@ Throughout TakeOnRules.com, I make extensive use of a glossary.  I use this mark
 
 - [glossary.html](layouts/shortcodes/glossary.html) :: Creates consistent markup for referencing a glossary entry.
 
-The `glossary.html` short uses the [data/glossary.yml](data/glossary.yml) file as a database.  I wrote about the Glossary in <cite><a href="http://takeonrules.com/2020/12/20/many-small-tools-make-light-work-in-emacs/" class="u-url p-name" rel="cite">Many Small Tools Make Light Work (in Emacs)</a></cite>.
+The `glossary.html` shortcode uses the [data/glossary.yml](data/glossary.yml) file as a database.  I wrote about the Glossary in <cite><a href="http://takeonrules.com/2020/12/20/many-small-tools-make-light-work-in-emacs/" class="u-url p-name" rel="cite">Many Small Tools Make Light Work (in Emacs)</a></cite>.
 
 #### Data Dictionary
 
