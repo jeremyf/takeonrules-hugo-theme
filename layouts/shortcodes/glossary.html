@@ -1,20 +1,32 @@
 {{/*
+This shortcode does A LOT of work.  In prior incarnations, it was
+three or four shortcodes.  However, as I started normalizing and
+overloading, it became clear that I could consolidate the basic logic.
+
+Yes this does a lot of things, but in doing it this way, I have
+consistent glossary referencing mechanisms.
+
 Parameters:
 
 @param key - required for lookup of glossary entry
 
-Optional Parameters:
+Optional Parameters (in likely importance order):
 
-@param abbr - include an abbreviation; if "t" use the glossary's abbr, otherwise use the given value.
+@param abbr - include an abbreviation; if "t" use the glossary's abbr,
+    otherwise use the given value.
+@param plural - use the pluralization (unless you provide the "title"
+    parameter)
 @param title - use the given "title" for title
-@param plural - use the pluralization (unless you provide the "title" parameter)
 @param noIcon - when "t" do not render the linking icon to glossary
-@param noTitle - do not render the title (you'll probably want the abbr="t")
+@param noTitle - do not render the title (you'll probably want the
+    abbr="t")
 @param link - specify the given link (see implementation below)
-@param tag - specify the tag to use for the title node; defaults to either cite or span (based on logic below)
-
-@param itemprop - sometimes, instead of a "mention" you'll want to use this as the tag
-@param dfn - add a sidenote with a description; if "t" use the predefined; otherwise use the given.
+@param tag - specify the tag to use for the title node; defaults to
+    either cite or span (based on logic below)
+@param dfn - add a sidenote with a description; if "t" use the
+    predefined; otherwise use the given.
+@param itemprop - sometimes, instead of a "mention" you'll want to use
+    this as the tag
 
 */}}
 {{- $key := .Get "key" | upper }}
