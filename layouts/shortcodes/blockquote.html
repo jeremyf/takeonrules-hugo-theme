@@ -3,7 +3,7 @@
 {{- $cite_url := .Get "cite_url" }}
 {{- $scratchKey := false }}
 {{- if $game }}
-{{- $entry := index (where $.Site.Data.glossary "game" "eq" $game) 0 }}
+{{- $entry := index (where $.Site.Data.glossary "game" "eq" (upper $game)) 0 }}
 {{- $cite = $entry.title }}
 {{- $cite_url = $entry.offer }}
 {{- $scratchKey = printf "glossary-%s" $game }}
