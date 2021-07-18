@@ -20,7 +20,7 @@
     <p>
       I have ordered the posts from newest to oldest:
     </p>
-    <dl class="group">
+    <dl class="grid">
       {{- range sort .Pages "Date" "desc" }}
       <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><cite><a href="{{ .Permalink}}">{{ .Title }}</a></cite></dd>
       {{- end }}
