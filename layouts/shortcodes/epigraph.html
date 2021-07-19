@@ -1,0 +1,25 @@
+{{/*
+Parameters:
+
+@param key - required for lookup of epigraph entry
+
+TODO: Cache the author and work
+
+*/}}
+{{- $key := .Get "key" | upper }}
+{{- $entry := index (where $.Site.Data.epigraphs "key" "eq" $key) 0 }}
+<blockquote itemprop="citation" itemscope itemtype="http://schema.org/CreativeWork" class="h-cite epigraph">
+  {{ $entry.text | markdownify }}
+  {{- if (or $entry.author_key $entry.work_key )}}
+  <footer>&mdash;
+    {{- if $entry.author_key }}
+    {{- $author := index (where $.Site.Data.glossary "key" "eq" $entry.author_key) 0 }}
+    <span class="p-author h-card" itemprop="author">{{ $author.title }}</span>{{- if $entry.work_key }}, {{- end }}
+    {{- end }}
+    {{- if $entry.work_key }}
+    {{- $work := index (where $.Site.Data.glossary "key" "eq" $entry.work_key) 0 }}
+    <cite itemprop="headline">{{ with $work.offer }}<a itemprop="mainEntityOfPage" href="{{ . }}">{{ end }}{{ $work.title }}{{ if $work.offer }}</a>{{ end }}</cite>
+    {{ end }}
+  </footer>
+  {{- end }}
+</blockquote>
