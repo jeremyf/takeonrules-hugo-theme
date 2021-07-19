@@ -10,15 +10,13 @@ TODO: Cache the author and work
 {{- $entry := index (where $.Site.Data.epigraphs "key" "eq" $key) 0 }}
 <blockquote itemprop="citation" itemscope itemtype="http://schema.org/CreativeWork" class="h-cite epigraph">
   {{ $entry.text | markdownify }}
-  {{- if (or $entry.author_key $entry.work_key )}}
+  {{- if (or $entry.author_name $entry.work_title )}}
   <footer>&mdash;
-    {{- if $entry.author_key }}
-    {{- $author := index (where $.Site.Data.glossary "key" "eq" $entry.author_key) 0 }}
-    <span class="p-author h-card" itemprop="author">{{ $author.title }}</span>{{- if $entry.work_key }}, {{- end }}
+    {{- if $entry.author_name }}
+    <span class="p-author h-card" itemprop="author">{{ $entry.author_name }}</span>{{- if $entry.work_title }}, {{- end }}
     {{- end }}
-    {{- if $entry.work_key }}
-    {{- $work := index (where $.Site.Data.glossary "key" "eq" $entry.work_key) 0 }}
-    <cite itemprop="headline">{{ with $work.offer }}<a itemprop="mainEntityOfPage" href="{{ . }}">{{ end }}{{ $work.title }}{{ if $work.offer }}</a>{{ end }}</cite>
+    {{- if $entry.work_title }}
+    <cite itemprop="headline">{{ with $entry.work_url }}<a itemprop="mainEntityOfPage" href="{{ . }}">{{ end }}{{ $entry.work_title }}{{ if $entry.work_url }}</a>{{ end }}</cite>
     {{ end }}
   </footer>
   {{- end }}
