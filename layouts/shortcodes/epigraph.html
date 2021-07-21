@@ -10,7 +10,7 @@ TODO: Cache the author and work
 {{- $entry := index (where $.Site.Data.epigraphs "key" "eq" $key) 0 }}
 <blockquote itemprop="citation" itemscope itemtype="http://schema.org/CreativeWork" class="h-cite epigraph">
 {{- if $entry.poem }}
-<pre class="poem">{{ $entry.text }}</pre>
+<pre class="poem">{{ $entry.text | safeHTML }}</pre>
 {{- else }}
 {{ $entry.text | markdownify }}
 {{- end }}
