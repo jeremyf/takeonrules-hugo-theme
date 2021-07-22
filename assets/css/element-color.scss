@@ -32,8 +32,17 @@ table {
 }
 
 blockquote { border-left: 1px dotted var(--blockquote); }
-section.epigraphs blockquote {
-    &:active, &:hover { background: var(--bg-special-warm) ;}
+.epigraphs {
+    width: 85%;
+    border-left: 1px dotted var(--blockquote);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    blockquote {
+        border-left: none;
+        padding: 0;
+        margin: 0;
+        &:active, &:hover { background: var(--bg-special-warm) ;}
+    }
 }
 
 blockquote, .license, blockquote p { color:   var(--blockquote); }
