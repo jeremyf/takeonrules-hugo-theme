@@ -31,7 +31,11 @@ table {
     tfoot td { border-top-color: var(--table-bg-thead); }
 }
 
-blockquote { border-left: 1px dotted   var(--blockquote); }
+blockquote { border-left: 1px dotted var(--blockquote); }
+section.epigraphs blockquote {
+    &:active, &:hover { background: var(--bg-special-warm) ;}
+}
+
 blockquote, .license, blockquote p { color:   var(--blockquote); }
 article aside {
     &.margin { color: var(--aside); }
