@@ -34,14 +34,13 @@ table {
 blockquote { border-left: 1px dotted var(--blockquote); }
 .epigraphs {
     width: 85%;
-    border-left: 1px dotted var(--blockquote);
-    padding-left: 1rem;
-    margin-bottom: 2rem;
+    &:nth-child(odd) { background-color: var(--bg-dim) }
+    padding: 1rem;
+    dl { margin-bottom: 0rem; }
     blockquote {
         border-left: none;
         padding: 0;
         margin: 0;
-        &:active, &:hover { background: var(--bg-special-warm) ;}
     }
 }
 
