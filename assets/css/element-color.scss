@@ -34,7 +34,7 @@ table {
 blockquote { border-left: 1px dotted var(--blockquote); }
 .epigraphs {
     width: 85%;
-    &:nth-child(odd) { background-color: var(--bg-dim) }
+    &:nth-of-type(odd) { background-color: var(--bg-dim) }
     padding: 1rem;
     dl { margin-bottom: 0rem; }
     blockquote {
