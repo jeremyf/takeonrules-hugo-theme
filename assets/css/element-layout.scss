@@ -54,7 +54,11 @@ nav [role="list"] [role="listitem"], nav .series-navigation { display: inline-bl
   font-style: italic;
 }
 
-.full-width .epigraphs pre { width: 100% }
+.full-width .epigraphs {
+    // width: 55%;
+    blockquote { width: 100%; }
+    pre { width: 100%; }
+}
 
 /* END Epigraphs */
 
