@@ -22,6 +22,9 @@ TODO: Cache the author and work
     {{- if $entry.work_title }}
     <cite itemprop="headline">{{ with $entry.work_url }}<a itemprop="mainEntityOfPage" href="{{ . }}">{{ end }}{{ $entry.work_title }}{{ if $entry.work_url }}</a>{{ end }}</cite>
     {{ end }}
+    {{- if $entry.translator_name }}
+    <span itemprop="translator">(translated by {{ $entry.translator_name }})</span>
+    {{- end }}
   </footer>
   {{- end }}
 </blockquote>
