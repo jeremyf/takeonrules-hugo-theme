@@ -66,6 +66,10 @@ nav [role="list"] [role="listitem"], nav .series-navigation { display: inline-bl
     font-family: fantasy;
 }
 
+.cursive {
+    font-family: cursive;
+}
+
 /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
 @import "table";
 /* -- End of Table Styling section --*/
