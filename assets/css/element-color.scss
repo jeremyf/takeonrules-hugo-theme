@@ -157,6 +157,7 @@ time { color:   var(--time); }
 mark { color:   var(--mark-fg); background-color:   var(--mark-bg); }
 
 summary {
+    ~ * { border-left: 1px dotted var(--summary); }
     color:   var(--summary);
     &:hover {
         > * { color: var(--bg) !important; }
