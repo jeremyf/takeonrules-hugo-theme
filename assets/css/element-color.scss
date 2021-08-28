@@ -156,8 +156,12 @@ s, del {
 time { color:   var(--time); }
 mark { color:   var(--mark-fg); background-color:   var(--mark-bg); }
 
+details {
+    border-left: 1px dotted var(--summary);
+    padding-left: 0.5rem;
+}
+
 summary {
-    ~ * { border-left: 1px dotted var(--summary); }
     color:   var(--summary);
     &:hover {
         > * { color: var(--bg) !important; }
