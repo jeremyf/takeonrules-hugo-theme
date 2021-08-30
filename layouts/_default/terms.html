@@ -19,7 +19,7 @@
         <tbody>
           {{- range $key, $value := .Data.Terms.Alphabetical}}
           <tr>
-            <td><a href="{{ $value.Name| urlize }}">{{ $value.Name }}</a></td>
+            <td><a href="{{$.Page.Permalink}}{{ $value.Name| urlize }}/">{{ $value.Name }}</a></td>
             <td class="r">{{  $value.Count }}</td>
             {{- range first 1 $value.Pages.Reverse }}
             <td class="c"><a href="{{ .Permalink }}"><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></a></td>
