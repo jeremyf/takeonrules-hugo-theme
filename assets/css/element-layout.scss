@@ -68,6 +68,8 @@ nav [role="list"] [role="listitem"], nav .series-navigation { display: inline-bl
 
 .cursive {
     font-family: cursive;
+    cite:before { content: "«"; }
+    cite:after { content: "»"; }
     [role=note] { font-family: var(--body-font); }
 }
 
