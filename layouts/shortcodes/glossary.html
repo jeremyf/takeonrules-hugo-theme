@@ -50,7 +50,7 @@ Optional Parameters (in likely importance order):
 {{- if .Get "downcase" }}{{ $title = lower $title }}{{- end }}
 {{- $abbrHTML := "" }}
 {{- $abbrTitle := default $entry.title (.Get "title") }}
-{{- with .Get "abbr" }}
+{{- with (or (.Get "abbr") (.Get "noTitle")) }}
 {{- $abbr := "" }}
 {{- if eq . "t" }}
 {{- if $.Get "plural" }}
