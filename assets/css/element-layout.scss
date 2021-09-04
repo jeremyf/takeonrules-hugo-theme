@@ -208,7 +208,11 @@ main > article > footer input { width: 80%; }
 .hidden { display: none; }
 .breadcrumb, .paginator, .feeds {
   .label { display: none; }
-  width: 85%; font-family: var(--header-font); padding-bottom: 1rem;
+  width: 85%; font-family: var(--header-font);
+}
+
+.breadcrumb, .paginator {
+    padding-bottom: 1rem;
 }
 
 .label { display: none; }

@@ -50,7 +50,7 @@
 </span>
 {{- end }}
 {{- end }}
-
+  </span></nav>
 {{- if eq .Kind "term" }}
 {{- if eq .Type "series" }}
 {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
@@ -71,4 +71,4 @@
   <a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for the list of {{ .Type | title }}</a>
 </div>
 {{- end }}
-</span></nav><hr class="hidden" />
+<hr class="hidden" />
