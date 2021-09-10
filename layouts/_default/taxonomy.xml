@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ .Site.Title }}</title>
+    <title>Posts with "{{ .Title }}" {{ .Type | singularize }} on {{ .Site.Title }}</title>
     <link>{{ .Site.BaseURL }}</link>
-    <description>Recent content for {{ .Site.Title }}</description>
+    <description>Posts with "{{ .Title }}" {{ .Type | singularize }} on {{ .Site.Title }}</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright {{ now.Format "2006" }}, {{ .Site.Params.copyrightHolder }}</copyright>
     {{- with .Site.LanguageCode }}
@@ -24,7 +24,7 @@
     {{ with .OutputFormats.Get "RSS" }}
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{- range first 25 (where .Site.Pages "Type" "in" .Site.Params.paginatedSections) }}
+    {{- range first 25 (.RegularPages) }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
