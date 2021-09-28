@@ -74,7 +74,7 @@ Optional Parameters (in likely importance order):
 {{- $innerTitleHtml := $title }}
 {{- $reflink := "" }}
 {{- if (.Get "noIcon") }}{{- else }}
-{{- $reflink = printf " <small><sup><a class=\"ref\" rel=\"tag opener\" aria-label=\"Other site-wide references of “%s”\" title=\"Other site-wide references of “%s”\" href=\"/site-map/glossary/#abbr-dfn-%s\">&#128269;</a></sup></small>" $title $title $entry.key | safeHTML }}
+{{- $reflink = printf " <small><a class=\"ref\" rel=\"tag opener\" aria-label=\"Other site-wide references of “%s”\" title=\"Other site-wide references of “%s”\" href=\"/site-map/glossary/#abbr-dfn-%s\">&#128269;</a></small>" $title $title $entry.key | safeHTML }}
 {{- end }}
 {{- $dfnText := "" }}
 {{- with .Get "dfn" }}
