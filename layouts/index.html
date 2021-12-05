@@ -9,7 +9,7 @@
 {{ define "breadcrumb" }}
     <div class="feeds" aria-labelledby="site-feeds-label" role="list">
       <span id="site-feeds-label" class="label">Site feeds </span>
-      <a role="listitem" href="{{ .Site.BaseURL }}index.atom">ATOM feed</a> &middot; <a role="listitem" href="{{ .Site.BaseURL }}index.xml">RSS feed</a> &middot; <a role="listitem" href="{{ .Site.BaseURL }}index.json">JSON feed</a>
+      <span role="listitem"><a href="{{ .Site.BaseURL }}index.atom">ATOM feed</a></span> &middot; <span role="listitem"><a href="{{ .Site.BaseURL }}index.xml">RSS feed</a></span> &middot; <span role="listitem"><a href="{{ .Site.BaseURL }}index.json">JSON feed</a></span>
     </div>
     <hr class="hidden" />
 {{ end }}
@@ -69,8 +69,8 @@
   {{- end }}
   {{- end }}
   </ol>
-  <footer aria-hidden  aria-labelledby="blog-pagination-label">
-    <nav class="paginator" aria-labelledby="blog-pagination-label">
+  <footer aria-hidden="true">
+    <nav class="paginator">
       {{- with $paginator }}
       {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;&middot;&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}<small> Page {{ .PageNumber }} of {{ .TotalPages }}</small>
       {{- end }}
