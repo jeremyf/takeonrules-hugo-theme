@@ -35,6 +35,9 @@
 {{- range .Params.tags }}
 <meta name="keywords" content="{{ . }}" />
 {{- end}}
+{{- with .Params.series }}
+<meta name="keywords" content="{{ . }}" />
+{{- end }}
 {{- end }}
 
 {{ partial "twitter_cards.html" . }}
