@@ -128,6 +128,8 @@ article cite { color: var(--cite); }
 article cite:hover { border-bottom: thin dotted var(--cite); }
 
 pre, code { color:  var(--code); }
+pre code { background: var(--bg-dim) }
+
 kbd { color: var(--kbd); }
 
 // BEGIN COMMENTARY TYPE MARKS
