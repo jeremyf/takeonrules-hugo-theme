@@ -6,7 +6,7 @@
   <link rel="canonical" href="{{ .RelPermalink }}" />
 {{- end }}
 <link id="canonical-take-on-rules-url" rel="alternate" href="{{ .Permalink }}" />
-{{ partialCached "head-duplicated-info.html" . }}
+{{ partial "head-duplicated-info.html" . }}
 
 {{ if .RelPermalink }}<link rel="amphtml" href="/amp{{ .RelPermalink }}" />{{ end }}
 {{- if in (slice "term" "taxonomy" "taxonomyTerm") .Kind }}
