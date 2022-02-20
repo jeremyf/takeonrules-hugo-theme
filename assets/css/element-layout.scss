@@ -266,6 +266,7 @@ summary { margin-top: 0.83em; margin-bottom: 0.83em; }
 }
 
 dfn, .dfn { font-weight: bold; }
-.dfn { font-style: italic; }
+.ref { font-weight: lighter}
+.ref, .dfn { font-style: italic; }
 
 .print-only { display: none; }
