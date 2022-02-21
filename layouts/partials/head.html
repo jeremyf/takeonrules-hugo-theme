@@ -40,6 +40,9 @@
 {{- end }}
 {{- end }}
 
+{{- with .Params.org_id }}
+<meta property="org_id" content="{{ . }}" />
+{{- end }}
 {{ partial "twitter_cards.html" . }}
 
 {{- if isset .Params "with_datatables" }}
