@@ -40,9 +40,6 @@
 {{- end }}
 {{- end }}
 
-{{- with .Params.org_id }}
-<meta property="org_id" content="{{ . }}" />
-{{- end }}
 {{ partial "twitter_cards.html" . }}
 
 {{- if isset .Params "with_datatables" }}
@@ -85,6 +82,10 @@
   </script>
 {{- end }}
 
+{{- with .Params.org_id }}
+<meta property="org_id" content="{{ . }}" />
+{{- end }}
+
 <meta name="org-roam-type" content="{{ .Type }}" />
 {{- if eq hugo.Environment "development" }}
   <meta name="hugoPageKind" content="{{ .Kind }}" />
@@ -94,3 +95,6 @@
   {{- end }}
   <meta name="hugoSections" content="{{ delimit .Site.Sections ", " }}" />
 {{- end }}
+
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
