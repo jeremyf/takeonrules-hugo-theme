@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 {{ with $.Site.Params.searchMySiteVerification }}<meta name="searchmysite-verification" content="{{ . }}" />{{- end }}
 
-{{- if .Params.inline_css }}
+{{/* if .Params.inline_css *//}}
+{{- if true }}
 <style media="screen,print">
   {{ (resources.Get "css/tufte.scss" | resources.ToCSS | resources.Minify ).Content | safeCSS }}
 </style>
