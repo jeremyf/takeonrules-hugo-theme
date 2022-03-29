@@ -1,6 +1,12 @@
 @import "settings";
 
-* { -webkit-transition: none !important; transition: none !important; font-size: 12px !important; }
+* { -webkit-transition: none !important; transition: none !important; font-size: 11px !important; }
+pre, pre code { font-size: 10px !important; }
+h1 { font-size: 20px !important; font-weight: 800; }
+h2 { font-size: 17px !important; font-weight: 600; }
+h3 { font-size: 13px !important; font-weight: 500; }
+h4 { font-size: 12px !important; font-weight: 400; }
+small { font-size: 9px !important; }
 
 *, *:before, *:after { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
 @page { margin: 0.75in 0.25in; orphans:4; widows:2; }
@@ -19,10 +25,10 @@ body.resume {
     * { color: var(--fg) !important; }
     a, abbr, .dfn { text-decoration: none !important; }
     .dfn { font-style: normal; font-weight: 400; }
-    h1 { color: var(--h1); font-size: 22px !important;}
-    h2 { color: var(--h2) !important;  font-size: 18px !important; font-weight: 600; }
-    h3 { color: var(--h3) !important;  font-size: 16px !important; font-weight: 500; }
-    h3 a { font-size: 16px !important; }
+    h1 { color: var(--h1) !important; }
+    h2 { color: var(--h2) !important; }
+    h3 { color: var(--h3) !important; }
+    h3 a { font-size: 13px !important; }
     // h3:not(:note) { margin-top: 1rem; }
     section:not(.note) dl { margin-left: 10px; }
 }
