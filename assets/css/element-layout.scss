@@ -11,8 +11,8 @@ article a { text-decoration: underline; }
 a, sup a { text-decoration: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
-h1, h2, h3, h4 { font-family: var(--header-font); font-weight: 400; }
-h1 { font-size: 2rem; }
+.site-nav-home, h1, h2, h3, h4 { font-family: var(--header-font); font-weight: 400; }
+.site-nav-home, h1 { font-size: 2rem; }
 
 summary { cursor: pointer; }
 abbr { cursor: help; }
@@ -106,6 +106,7 @@ body {
         &> nav {
             &.skip-links { padding: 0rem; }
             h1 { display: inline-block; margin: 0; }
+	    .site-nav-home { display: inline; margin: 0; }
             padding: 1rem 0;
             a {
                 letter-spacing: 0.15em;
