@@ -1,0 +1,5 @@
+{{- with .Params.series -}}{{- range (where $.Site.Data.series "key" "eq" .) }}{{- $title := .title }}
+:: <span class="series-navigation" aria-label="Series navigation for &ldquo;{{ $title }}&rdquo;"><span class="label">Series:</span>
+{{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
+<span itemid="{{ .RelPermalink }}#series-itemscope" id="series-itemscope" itemprop="partOfSeries" itemscope itemtype="http://schema.org/CreativeWorkSeries"><cite itemprop="headline"><a itemprop="url" href="{{ $seriesUrl }}">{{ $title }}</a></cite></span>
+{{- end }}{{- end }}

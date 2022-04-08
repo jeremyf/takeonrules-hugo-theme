@@ -1,0 +1,11 @@
+{{- define "tagmd-homepage" }}
+  {{ $entry := (index (where .site.Data.glossary "tag" "eq" .tag) 0) }}
+<span role="listitem" aria-label="&ldquo;{{ $entry.tag }}&rdquo; tag navigation">
+  {{ if isset $entry "itemid" }}
+  <a rel="tag" href="{{ "tags" | absURL }}/{{ .tag | urlize }}/" aria-label="All posts tagged with &ldquo;{{ .tag }}&rdquo;" title="All posts tagged with &ldquo;{{ .tag }}&rdquo;" class="p-category">{{ .tag | anchorize }}</a><span itemprop="keywords" itemscope itemtype="http://schema.org/DefinedTerm"><meta itemprop="name" content="{{ .tag | anchorize }}" />{{- with $entry.title }}<meta itemprop="alternateName" content="{{ . }}" />{{- end }}<link itemprop="sameAs" href="{{ $entry.itemid }}" /></span>
+  {{- else }}
+  <a rel="tag" href="{{ "tags" | absURL }}/{{ .tag | urlize }}/" class="p-category" aria-label="All posts tagged with &ldquo;{{ .tag }}&rdquo;" title="All posts tagged with &ldquo;{{ .tag }}&rdquo;" itemprop="keywords">{{ .tag | anchorize }}</a>
+  {{- end }}
+</span>
+{{- end }}
+  {{- with .Params.tags }}:: <span class="label">Tags:</span> <span role="list" aria-label="Tags for “{{ $.Page.Title }}”">{{- $tags := . }}{{- $last_tag := . | last 1 }}{{- range ($tags | complement $last_tag) }}{{- template "tagmd-homepage" (dict "tag" . "page" $.Page "site" $.Site )}} <span> &middot; </span> {{- end }}{{- range $last_tag }}{{- template "tagmd-homepage" (dict "tag" . "page" $.Page "site" $.Site )}}{{- end }}</span>{{- end }}

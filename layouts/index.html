@@ -49,8 +49,8 @@
     <nav aria-label="Content's metadata and navigation">
       {{ partial "postAuthorWithoutLink.html" . }}
       {{ partial "postDate.html" . }}
-      {{ partial "postTags.html" . }}
-      {{ partial "postSeries.html" . }}
+      {{ partial "postTagsHomePage.html" . }}
+      {{ partial "postSeriesHomePage.html" . }}
     </nav>
     {{ with .Params.images }}
     {{ range . }}

@@ -1,6 +1,7 @@
 {{- with .Params.series -}}{{- range (where $.Site.Data.series "key" "eq" .) }}{{- $title := .title }}
 :: <span class="series-navigation" aria-label="Series navigation for &ldquo;{{ $title }}&rdquo;"><span class="label">Series:</span>
-{{- $series := where $.Site.Pages "Params.series" .key }}
+{{- $series := false }}
+{{- if eq $.Site.Params.withTagRels true }}{{- $series = where $.Site.Pages "Params.series" .key }}{{ end }}
 {{- $prev := index (where $series ".PublishDate" "lt" $.Page.PublishDate) 0 }}
 {{- if $prev }} <a href="{{ $prev.RelPermalink }}" aria-label="Older post in &ldquo;{{ $title }}&rdquo; is &ldquo;{{ $prev.Title }}&rdquo;" title="Older post in &ldquo;{{ $title }}&rdquo; is &ldquo;{{ $prev.Title }}&rdquo;"><small>&lt;</small></a>{{- else }} <small aria-hidden="true">&lt;</small>{{- end }}
 
