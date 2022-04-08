@@ -24,12 +24,13 @@
       {{ end }}
       <nav class="group" role="list" aria-owns="site-nav-home search-link {{- range $idx, $item := .Site.Menus.topnav }}site-nav-{{ anchorize $item.Name }}{{- end }}" aria-label="Site navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <meta itemprop="name" content="Site navigation" />
-        <a href="#skip-to-content"  itemprop="hasPart" class="offscreen">Skip to Main Content</a>
-        <p aria-labelledby="site-nav-home" role="listitem" class="site-nav-home"><a id="site-nav-home" itemprop="hasPart" rel="home" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }}aria-current="page" {{end}} title="Homepage of {{ .Site.Title }}">{{ .Site.Title }}</a></p>
+        <span role="listitem" aria-labelledby="skip-link"><a href="#skip-to-content"  itemprop="hasPart" class="offscreen" id="skip-link">Skip to Main Content</a></span>
+        <p aria-labelledby="home" role="listitem" class="site-nav-home"><a id="home" itemprop="hasPart" rel="home" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }} aria-current="page" {{end}} >{{ .Site.Title }}</a></p>
         {{- range $idx, $item := .Site.Menus.topnav }}
-        <span role="listitem"><a itemprop="hasPart" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}aria-current="page" {{ end }} title="{{ if $item.Title }}{{ $item.Title }}{{ else }}{{ $item.Name }} page{{ end }}">{{ $item.Name | safeHTML }}</a></span><span class="hidden"> &middot; </span>
+	{{- $title := default $item.Title ($item.Name) }}
+        <span role="listitem" aria-label="{{$title}}"><a itemprop="hasPart" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}aria-current="page" {{ end }} title="{{ $title }}">{{ $item.Name | safeHTML }}</a></span><span class="hidden"> &middot; </span>
         {{- end }}
-        <span role="listitem"><a itemprop="hasPart" {{ if eq (string $.Page.RelPermalink) "/search/" }}aria-current="page" {{ end }} rel="search" id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a></span>
+        <span role="listitem" aria-label="Search"><a itemprop="hasPart" {{ if eq (string $.Page.RelPermalink) "/search/" }}aria-current="page" {{ end }} rel="search" id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a></span>
       </nav>
       <script>
        var form = document.getElementById('search-link');
