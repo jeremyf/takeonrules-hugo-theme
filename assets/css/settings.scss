@@ -62,8 +62,8 @@
     --mark-fg: var(--fg-special-warm);
     --bg-special-warm: #f0e0d4;
     --mark-bg: var(--bg-special-warm);
-    --magenta-subtle-bg: #f0d3ff;
-    --disclaimer: var(--magenta-subtle-bg);
+    --bg-active-accent: #d0d6ff;
+    --disclaimer: var(--bg-active-accent);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -96,6 +96,6 @@
         --white-alt: #a8a8a8;
         --fg-special-warm: #f8dec0;
         --bg-special-warm: #382f27;
-        --magenta-subtle-bg: #49366e;
+	--bg-active-accent: #2a2a66;
     }
 }
