@@ -47,10 +47,7 @@
     <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />
     <link itemprop="publisher" href="{{ $.Site.BaseURL }}#tor-organization" />
     <nav aria-label="Content's metadata and navigation">
-      {{ partial "postAuthorWithoutLink.html" . }}
-      {{ partial "postDate.html" . }}
-      {{ partial "postTagsHomePage.html" . }}
-      {{ partial "postSeriesHomePage.html" . }}
+      {{ partial "postAuthorWithoutLink.html" . }}{{ partial "postDate.html" . }}{{ partial "postTagsHomePage.html" . }}{{ partial "postSeriesHomePage.html" . }}
     </nav>
     {{ with .Params.images }}
     {{ range . }}
