@@ -2,7 +2,7 @@
   <h2 id="heading-related-posts">Related Posts</h2>
   <ul aria-labelledby="heading-related-posts">
     {{ range first 5 (.Site.RegularPages.Related .) }}
-      <li>
+      <li aria-label="{{ .Title }}">
         <cite><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></cite>
       </li>
     {{ end }}

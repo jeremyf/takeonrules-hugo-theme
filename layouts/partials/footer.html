@@ -20,7 +20,7 @@
     </span>
   </span>
   <small class="copyright">
-    &copy;<time datetime="{{ now.Format "2006" }}" itemprop="copyrightYear">{{ now.Format "2006" }}</time>&nbsp;
+    &copy;<time datetime="{{ now.Format "2006" }}" aria-label="{{ now.Format "2006" }}" itemprop="copyrightYear">{{ now.Format "2006" }}</time>&nbsp;
     <span id="tor-author" itemid="{{ $.Site.BaseURL }}#tor-author" itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person">
       <link itemprop="contactPoint" href="{{ $.Site.BaseURL}}#tor-contact-point" />
       {{- range .Site.Params.identifiers }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}
