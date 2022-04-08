@@ -1,33 +1,33 @@
 <nav itemprop="breadcrumb" aria-labelledby="breadcrumbs-label" class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
-  <span role="list">
-    <span id="breadcrumbs-label" itemprop="name" class="label">Breadcrumb </span>
+  <span role="list" aria-labelledby="breadcrumbs-label">
+    <span id="breadcrumbs-label" itemprop="name" class="label">Breadcrumbs </span>
     {{- if eq .Type "post" }}
     {{- $year := .Date.Format "2006" }}
-    <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <span role="listitem" aria-label="Home" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
       <span itemprop="name"><a itemprop="item" href="{{ .Site.BaseURL }}">Home</a></span>
       <meta itemprop="position" content="1" />
-    </span> /
+    </span><span aria-hidden="true"> / </span>
     {{ with .Site.GetPage (printf "/%s" $year) }}
-    <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <span role="listitem" itemprop="itemListElement" aria-label="{{ .Title }}" itemscope itemtype="http://schema.org/ListItem">
       <span itemprop="name"><a itemprop="item" rel="up" href="{{ .Permalink }}" id="{{ .Permalink}}">{{ .Title }}</a></span>
       <meta itemprop="position" content="2" />
-    </span> /
+    </span><span aria-hidden="true"> / </span>
     {{ end }}
     <cite id="{{ .Permalink}}" aria-current="page">{{ .Title }}</cite>
   {{ else if eq .Type "series" }}
-    <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <span role="listitem" aria-label="Home" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
       <span itemprop="name"><a itemprop="item" href="{{ .Site.BaseURL }}">Home</a></span>
       <meta itemprop="position" content="1" />
-    </span> /
+    </span><span aria-hidden="true"> / </span>
     {{- if eq .Kind "taxonomy" }}
     <cite>Series</cite>
     {{- else }}
-    <span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <span role="listitem" aria-label="Series" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
       <span itemprop="name"><a itemprop="item" href="{{ .Site.BaseURL }}series/">Series</a></span>
       <meta itemprop="position" content="2" />
     </span>
     {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
-    / <cite>{{ .title }}</cite>
+    <span aria-hidden="true"> / </span><cite>{{ .title }}</cite>
     {{- end }}
     {{- end }}
   {{ else }}
@@ -35,14 +35,15 @@
     {{ end }}
 {{- define "breadcrumbnav" }}
 {{- if .p1.Parent }}
-{{- template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 "depth" (sub .depth 1) "site" .site )}} /
+{{- template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 "depth" (sub .depth 1) "site" .site )}}<span aria-hidden="true"> / </span>
 {{- else if not .p1.IsHome }}
-{{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) "site" .site) }} /
+{{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "depth" (sub .depth 1) "site" .site) }}<span aria-hidden="true"> / </span>
+{{- else }}
 {{- end }}
 {{- if eq .p1 .p2 }}
 <cite id="{{ .p1.Permalink}}" aria-current="page">{{ .p1.Title }}</cite>
 {{- else }}
-<span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-labelledby="{{ .p1.Permalink }}">
   <a itemprop="item" id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}">
     <span itemprop="name">{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}</span>
   </a>
