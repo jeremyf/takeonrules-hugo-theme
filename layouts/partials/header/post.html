@@ -9,8 +9,5 @@
 <meta itemprop="wordCount" content="{{ .WordCount }}" />
 <meta itemprop="inLanguage" content="en-US" />
 <nav aria-label="Content's metadata and navigation">
-  {{ partial "postAuthorWithLink.html" . }}
-  {{ partial "postDate.html" . }}
-  {{ partial "postTags.html" . }}
-  {{ partial "postSeries.html" . }}
+  {{ partial "postAuthorWithLink.html" . }}{{ partial "postDate.html" . }}{{ partial "postTags.html" . }}{{ partial "postSeries.html" . }}
 </nav>

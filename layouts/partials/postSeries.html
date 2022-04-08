@@ -1,5 +1,5 @@
 {{- with .Params.series -}}{{- range (where $.Site.Data.series "key" "eq" .) }}{{- $title := .title }}
-:: <span class="series-navigation" aria-label="Series navigation for &ldquo;{{ $title }}&rdquo;"><span class="label">Series:</span>
+<span aria-hidden="true">:: </span><span class="series-navigation" aria-label="Series navigation for &ldquo;{{ $title }}&rdquo;"><span class="label">Series:</span>
 {{- $series := false }}
 {{- if eq $.Site.Params.withTagRels true }}{{- $series = where $.Site.Pages "Params.series" .key }}{{ end }}
 {{- $prev := index (where $series ".PublishDate" "lt" $.Page.PublishDate) 0 }}
