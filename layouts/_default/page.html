@@ -2,7 +2,7 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/{{ with .Params.Schema }}{{ .type }}{{ else }}WebPageElement{{ end }}">
+  <article itemprop="mainEntity" class="h-entry" {{ with .Params.ariaArticleLabel }}aria-label="{{ . }}"{{ else }}aria-labelledby="{{ anchorize .Title }}"{{ end }} id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/{{ with .Params.Schema }}{{ .type }}{{ else }}WebPageElement{{ end }}">
     <header aria-label="Article header">
       <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
       <h1 itemprop="headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title | safeHTML }}</h1>
@@ -18,7 +18,7 @@
       </nav>
       {{- end }}
     </header>
-    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}property="text"{{ end }}{{ end }} class="e-content content" role="region" aria-label="Article content">
+    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}property="text"{{ end }}{{ end }} class="e-content content" role="region" aria-label=" {{ with .Params.ariaArticleLabel }}{{ . }}{{ else }}Article content{{ end }}">
       {{ .Content }}
     </section>
     <footer aria-label="Article footer">
