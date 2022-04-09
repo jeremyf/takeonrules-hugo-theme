@@ -60,12 +60,12 @@
   {{- end }}
   {{- end }}
   </ol>
-  <footer class="Homepage footer">
+
     <nav class="paginator" aria-labelledby="blog-pagination-label">
       {{- with $paginator }}
-      {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Previous posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;&middot;&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Next posts</a>{{- end }}<small> Page {{ .PageNumber }} of {{ .TotalPages }}</small>
+      {{- if .HasNext }}<a href="{{ .Next.URL }}" rel="prev">Older posts</a>{{- end }}{{- if and .HasNext .HasPrev}}&nbsp;&middot;&nbsp;{{- end }}{{- if .HasPrev }}<a href="{{ .Prev.URL }}" rel="next">Newer posts</a>{{- end }}<small> Page {{ .PageNumber }} of {{ .TotalPages }}</small>
       {{- end }}
     </nav>
-  </footer>
+
 </article>
 {{ end }}
