@@ -1,17 +1,13 @@
 {{- define "tagmd" }}
-  {{ $entry := (index (where .site.Data.glossary "tag" "eq" .tag) 0) }}
-<span role="listitem" aria-label="&ldquo;{{ $entry.tag }}&rdquo; tag navigation">
+{{ $tag := .tag}}
+<span role="listitem" aria-label="&ldquo;{{ $tag }}&rdquo; tag navigation">
   {{ $pages := false }}
-  {{ if eq .site.Params.withTagRels true }}{{- $pages = where .site.Pages "Params.tags" "intersect" (slice .tag) }}{{- end }}
+  {{ if eq .site.Params.withTagRels true }}{{- $pages = where .site.Pages "Params.tags" "intersect" (slice $tag) }}{{- end }}
   {{ if $pages }}{{- $prev := index (where $pages ".PublishDate" "lt" .page.PublishDate) 0 }}
-  {{- if $prev }}<a href="{{ $prev.RelPermalink }}" aria-label="Older post tagged with &ldquo;{{ $entry.tag }}&rdquo; is &ldquo;{{ $prev.Title }}&rdquo;" title="Older post tagged with &ldquo;{{ $entry.tag }}&rdquo; is &ldquo;{{ $prev.Title }}&rdquo;"><small>&lt;</small></a> {{- else }}<small aria-hidden="true">&lt;</small> {{- end }}{{- end }}
-  {{ if isset $entry "itemid" }}
-  <a rel="tag" href="{{ "tags" | absURL }}/{{ .tag | urlize }}/" aria-label="All posts tagged with &ldquo;{{ .tag }}&rdquo;" title="All posts tagged with &ldquo;{{ .tag }}&rdquo;" class="p-category">{{ .tag | anchorize }}</a><span itemprop="keywords" itemscope itemtype="http://schema.org/DefinedTerm"><meta itemprop="name" content="{{ .tag | anchorize }}" />{{- with $entry.title }}<meta itemprop="alternateName" content="{{ . }}" />{{- end }}<link itemprop="sameAs" href="{{ $entry.itemid }}" /></span>
-  {{- else }}
-  <a rel="tag" href="{{ "tags" | absURL }}/{{ .tag | urlize }}/" class="p-category" aria-label="All posts tagged with &ldquo;{{ .tag }}&rdquo;" title="All posts tagged with &ldquo;{{ .tag }}&rdquo;" itemprop="keywords">{{ .tag | anchorize }}</a>
-  {{- end }}
+  {{- if $prev }}<a href="{{ $prev.RelPermalink }}" aria-label="Older post tagged with &ldquo;{{ $tag }}&rdquo; is &ldquo;{{ $prev.Title }}&rdquo;" title="Older post tagged with &ldquo;{{ $tag }}&rdquo; is &ldquo;{{ $prev.Title }}&rdquo;"><small>&lt;</small></a> {{- else }}<small aria-hidden="true">&lt;</small> {{- end }}{{- end }}
+  <a rel="tag" href="{{ "tags" | absURL }}/{{ $tag | urlize }}/" class="p-category" aria-label="All posts tagged with &ldquo;{{ $tag }}&rdquo;" title="All posts tagged with &ldquo;{{ $tag }}&rdquo;" itemprop="keywords">{{ $tag | anchorize }}</a>
   {{- if $pages }}
-  {{- $next := where $pages ".PublishDate" "gt" .page.PublishDate }}{{- range last 1 $next }} <a href="{{ .RelPermalink }}" aria-label="Newer post tagged with &ldquo;{{ $entry.tag }}&rdquo; is &ldquo;{{ .Title }}&rdquo;" title="Newer post tagged with &ldquo;{{ $entry.tag }}&rdquo; is &ldquo;{{ .Title }}&rdquo;"><small>&gt;</small></a>{{- else }} <small aria-hidden="true">&gt;</small>{{- end }}{{- end }}
+  {{- $next := where $pages ".PublishDate" "gt" .page.PublishDate }}{{- range last 1 $next }} <a href="{{ .RelPermalink }}" aria-label="Newer post tagged with &ldquo;{{ $tag }}&rdquo; is &ldquo;{{ .Title }}&rdquo;" title="Newer post tagged with &ldquo;{{ $tag }}&rdquo; is &ldquo;{{ .Title }}&rdquo;"><small>&gt;</small></a>{{- else }} <small aria-hidden="true">&gt;</small>{{- end }}{{- end }}
 </span>
 {{- end }}
   {{- with .Params.tags }}<span aria-hidden="true">:: </span><span class="label">Tags:</span> <span role="list" aria-label="Tags for “{{ $.Page.Title }}”">{{- $tags := . }}{{- $last_tag := . | last 1 }}{{- range ($tags | complement $last_tag) }}{{- template "tagmd" (dict "tag" . "page" $.Page "site" $.Site )}}<span aria-hidden="true"> &middot; </span>{{- end }}{{- range $last_tag }}{{- template "tagmd" (dict "tag" . "page" $.Page "site" $.Site )}}{{- end }}</span>{{- end }}
