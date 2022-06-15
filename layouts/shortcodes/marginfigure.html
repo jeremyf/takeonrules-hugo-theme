@@ -1,11 +1,10 @@
 {{- $path     := .Get "src" }}
 {{- $original := resources.Get $path  }}
-{{- $alt      := .Get "alt" }}
-{{- $alt      := .Get "alt" }}
+{{- $alt      := default "" (.Get "alt") }}
 {{- $imageResize := default "360x" (.Get "resize") }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "%s r%s" $imageResize .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
-<figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" {{ if isSet .Params "hidden" }}aria-hidden="true" {{ end }} role="note">
+<figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" {{ if (or (isSet .Params "hidden") (eq (len $alt) 0)) }}aria-hidden="true" {{ end }} role="note">
   <link itemprop="url" href="{{ $result.RelPermalink }}" />
   <img src="{{ $result.RelPermalink }}"
        alt="{{ $alt }}"

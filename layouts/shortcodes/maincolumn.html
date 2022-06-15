@@ -1,13 +1,12 @@
 {{- $path     := .Get "src" }}
-{{- $alt      := .Get "alt" }}
+{{- $alt      := default "" (.Get "alt") }}
 {{- $caption  := .Get "caption" }}
 {{- $original := resources.Get $path  }}
 {{- $title    := .Get "title" }}
 {{- $imageResize := default "770x" (.Get "resize") }}
-{{- $alt      := .Get "alt" }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "%s r%s" $imageResize .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
-<figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" {{ if isSet .Params "hidden" }} aria-hidden="true"{{ end }}>
+<figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" {{ if (or (isSet .Params "hidden") (eq (len $alt) 0)) }} aria-hidden="true"{{ end }}>
 {{- with $caption }}<figcaption  itemprop="caption">{{ partial "unparagraphy.html" . }}</figcaption>{{ end }}
 {{- if .Get "link" }}
   <a itemprop="isBasedOn" href="{{ $original.RelPermalink }}">
