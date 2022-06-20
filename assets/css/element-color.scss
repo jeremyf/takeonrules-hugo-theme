@@ -143,6 +143,12 @@ s, del, ins {
 }
 ins[role=note] { border-color:   var(--commentary); }
 
+body.resume {
+    .margin, .side, .update {
+	color: var(--body);
+    }
+}
+
 @media screen and (max-width: 760px) {
     ins[role="note"] {
         border-left: thin dotted   var(--commentary);
