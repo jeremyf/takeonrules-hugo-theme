@@ -8,7 +8,7 @@
     <ul aria-label="Content Creators">
       {{- range uniq $partials }}{{- if . }}{{- with index $.Site.Data.content_disclaimers . }}
       <li itemprop="about" itemscope aria-label="{{ .name }}" itemtype="http://schema.org/Person">
-        <link itemprop="sameAs" href="{{ .sameAs }}" />
+        <link itemprop="sameAs" href="{{ .same_as }}" />
         <span itemprop="name">{{ .name }}</span>
       </li>
       {{- end }}{{- end }}{{- end }}

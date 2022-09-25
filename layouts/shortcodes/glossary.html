@@ -85,7 +85,7 @@ Optional Parameters (in likely importance order):
 {{- else }}
 {{- with .Get "link" }}
 {{- if and (eq . "sameAs") (isset $entry "sameAs") }}
-{{- $innerTitleHtml = printf "<a itemprop=\"sameAs\" href=\"%s\">%s</a>" $entry.sameAs $title }}
+{{- $innerTitleHtml = printf "<a itemprop=\"sameAs\" href=\"%s\">%s</a>" $entry.same_as $title }}
 {{- else if and (eq . "itemid") (isset $entry "itemid") }}
 {{- $innerTitleHtml = printf "<a itemprop=\"sameAs\" href=\"%s\">%s</a>" $entry.itemid $title }}
 {{- else if eq "http" (substr . 0 4) }}

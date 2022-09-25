@@ -13,7 +13,7 @@
     <link itemprop="url" href="{{ $.Site.BaseURL }}" />
     <link itemprop="founder" href="{{ $.Site.BaseURL }}#tor-author" />
     <meta itemprop="foundingDate" content="{{ $.Site.Params.foundingDate }}" />
-    {{- range .Site.Params.sameAs }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}
+    {{- range .Site.Params.same_as }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}
     <link itemprop="contactPoint" href="{{ $.Site.BaseURL }}#tor-contact-point" />
     <span id="microdata-logo" itemid="{{ $.Site.BaseURL }}#microdata-logo" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
       <link itemprop="url" href="{{ $.Site.BaseURL }}{{ $.Site.Params.organizationImagePath }}" />
@@ -24,7 +24,7 @@
     <span id="tor-author" itemid="{{ $.Site.BaseURL }}#tor-author" itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person">
       <link itemprop="contactPoint" href="{{ $.Site.BaseURL}}#tor-contact-point" />
       {{- range .Site.Params.identifiers }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}
-      {{- range .Site.Params.sameAs }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}
+      {{- range .Site.Params.same_as }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}
       <span class="p-name" itemprop="name">
         <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
           {{ .Site.Params.copyrightHolder }}
