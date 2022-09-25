@@ -1,12 +1,12 @@
-{{- $contentWarningTags := .Page.Scratch.Get "contentDisclaimers" }}
+{{- $contentWarningTags := .Page.Scratch.Get "content_disclaimers" }}
 {{- if gt (len $contentWarningTags) 0 }}
-{{- $partials := slice false }}{{- range $contentWarningTags }}{{- $partials = $partials | append .contentDisclaimers }}{{- end }}
+{{- $partials := slice false }}{{- range $contentWarningTags }}{{- $partials = $partials | append .content_disclaimers }}{{- end }}
 <section itemprop="comment" itemscope itemtype="http://schema.org/Comment" aria-labelledby="disclaimer-for-{{ $.Page.File.UniqueID }}">
   <h2 id="disclaimer-for-{{ $.Page.File.UniqueID }}" itemprop="headline">Disclaimers</h2>
   <div itemprop="text">
     <p>This post references content created by:</p>
     <ul aria-label="Content Creators">
-      {{- range uniq $partials }}{{- if . }}{{- with index $.Site.Data.contentDisclaimers . }}
+      {{- range uniq $partials }}{{- if . }}{{- with index $.Site.Data.content_disclaimers . }}
       <li itemprop="about" itemscope aria-label="{{ .name }}" itemtype="http://schema.org/Person">
         <link itemprop="sameAs" href="{{ .sameAs }}" />
         <span itemprop="name">{{ .name }}</span>

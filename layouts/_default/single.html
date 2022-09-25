@@ -10,7 +10,7 @@
   <header aria-label="Article header">
     <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
     {{ partial "header/post.html" . }}
-    {{ partial "header/contentDisclaimers.html" . }}
+    {{ partial "header/content_disclaimers.html" . }}
   </header>
   {{- with .Params.hive }}
   <section aria-label="Summary of this post's basis" itemprop="isBasedOn" itemscope itemtype="http://schema.org/CreativeWork">
@@ -64,7 +64,7 @@
     {{- end }}
   </section>
   <footer aria-label="Article footer">
-    {{ partial "footer/contentDisclaimers.html" . }}
+    {{ partial "footer/content_disclaimers.html" . }}
     {{ partial "footer/webmentions.html" . }}
     {{ partial "footer/related-posts.html" . }}
     {{ partial "footer/licenses.html" . }}

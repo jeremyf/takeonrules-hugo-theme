@@ -32,14 +32,14 @@ Optional Parameters (in likely importance order):
 {{- $key := .Get "key" | upper }}
 {{- $entry := index (where $.Site.Data.glossary "key" "eq" $key) 0 }}
 {{- if isset $entry "key" }}
-{{- $citedTitle := default $entry.title ( default $entry.mentionAs ) }}
+{{- $citedTitle := default $entry.title ( default $entry.mention_as ) }}
 {{- $title := "" }}
 {{- if .Get "title" }}
 {{- $title = .Get "title" }}
-{{- else if .Get "mentionAs" }}
-{{- $title = .Get "mentionAs" }}
+{{- else if .Get "mention_as" }}
+{{- $title = .Get "mention_as" }}
 {{- else if .Get "plural" }}
-{{- $title = $entry.pluralTitle }}
+{{- $title = $entry.plural_title }}
 {{- else }}
 {{- $title = $entry.title }}
 {{- end }}
@@ -54,8 +54,8 @@ Optional Parameters (in likely importance order):
 {{- $abbr := "" }}
 {{- if eq . "t" }}
 {{- if $.Get "plural" }}
-{{- with $entry.pluralAbbr }}{{- $abbr = $entry.pluralAbbr }}{{- else }}{{- errorf "Missing pluralAbbr for %s in file %s" $key $.Page.Permalink }}{{- end }}
-{{- with $entry.pluralTitle }}{{- $abbrTitle = $entry.pluralTitle }}{{- else }}{{- errorf "Missing pluralTitle for %s in file %s" $key $.Page.Permalink }}{{- end }}
+{{- with $entry.plural_abbr }}{{- $abbr = $entry.plural_abbr }}{{- else }}{{- errorf "Missing plural_abbr for %s in file %s" $key $.Page.Permalink }}{{- end }}
+{{- with $entry.plural_title }}{{- $abbrTitle = $entry.plural_title }}{{- else }}{{- errorf "Missing plural_title for %s in file %s" $key $.Page.Permalink }}{{- end }}
 {{- else }}
 {{- $abbr = $entry.abbr }}
 {{- end }}

@@ -71,16 +71,16 @@ Each glossary entry must have two keys:
 
 There additional optional keys are as follows:
 
-- **verboseTitle**: This is the lengthier title; you know, if there's a colon/subtitle in play use that.
-- **pluralTitle**: The pluralized title.
-- **mentionAs**: If for some reason we don't always want to use the title, the mentionAs is a replacement.
+- **verbose_title**: This is the lengthier title; you know, if there's a colon/subtitle in play use that.
+- **plural_title**: The pluralized title.
+- **mention_as**: If for some reason we don't always want to use the title, the mention_as is a replacement.
 - **tag**: If this entry represents a tag, this will be the tags name.
 - **itemid**: If this entry has a "sameAs" itemprop value, that will be the itemid (e.g. how to disambiguate)
 - **abbr**: When we provide an abbreviation, use this for the innerHTML of the `abbr` tag.
-- **pluralAbbr**: The pluralized abbreviation.
+- **plural_abbr**: The pluralized abbreviation.
 - **offer**: The URL where the thing is on offer (e.g. where you can buy it or borrow it).
 - **game**: Indicates that this thing is a game, useful for the [`linkToGame` yasnippet](https://github.com/jeremyf/dotzshrc/blob/5c84e8b05d06b8224811b6f679ea479a67f4a6f1/emacs/snippets/text-mode/linkToGame).
-- **contentDisclaimers**: (Array) Indicates that this entry has some associated content disclaimer.
+- **content_disclaimers**: (Array) Indicates that this entry has some associated content disclaimer.
 - **itemtype**: The schema.org itemtype for this entry.
 - **description**: Similar to note, treat as `itemprop="description"`.
 - **described**: A boolean.  When `true` the given glossary entry has already been described; don't attempt to fetch the description from Wikidata.
