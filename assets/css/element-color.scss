@@ -55,6 +55,10 @@ article aside {
     padding: 1rem;
 }
 
+.inline-comments {
+    border-left: 2px dotted var(--bg-special-warm);
+    padding-left: 1rem; }
+
 .licensed {
     .wrapper { color: var(--code) ; }
     border-left: 1px dotted   var(--code);

@@ -223,7 +223,8 @@ main > article > footer input { width: 80%; }
 .hide-js { display: none; }
 
 @media screen and (max-width: 760px) {
-  h2, h2, h3, h4, summary, p, body > footer, .table-wrapper, pre, dl, article section > ol, article section > ul, article summary { width: 85%; }
+    h2, h2, h3, h4, summary, p, body > footer, .table-wrapper, pre, dl, article summary { width: 85%; }
+    article section > ol, article section > ul { width: 76.5%; }
   figure { max-width: 90%; }
   figcaption { margin-right: 0%; max-width: none; }
   blockquote {
