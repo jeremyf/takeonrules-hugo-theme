@@ -1,4 +1,4 @@
-{{- $tag := default "div" (.Get "tag") }}
+{{- $tag := default "aside" (.Get "tag") }}
 {{- $hidden := "" }}
 {{- if .Get "hidden" }}{{- $hidden = "aria-hidden=\"true\"" }}{{- end }}
 {{- $inner := partial "smallParagraphy.html" .Inner }}

@@ -9,7 +9,7 @@
 <section  aria-labelledby="overview-posts-{{ $year }}" class="year-summary">
   <h2 id="overview-posts-{{ $year }}">All Posts</h2>
   <p>Each year, most of what I write are blog posts.</p>
-  <div role="note" class="margin"><p><small>The {{ len $posts }} posts have about {{ $wordCount }} words, for an average of {{ div $wordCount (len $posts ) }} words per post.</small></p></div>
+  <aside role="note" class="margin"><p><small>The {{ len $posts }} posts have about {{ $wordCount }} words, for an average of {{ div $wordCount (len $posts ) }} words per post.</small></p></aside>
   <details open="true">
     <summary>In <time datetime="{{ $year }}">{{ $year }}</time>, I wrote {{ len $posts }} posts&hellip;</summary>
     <ul>
@@ -37,7 +37,7 @@
 
   <p>Some of these posts, I've written as part of a series.</p>
 
-  <div role="note" class="margin"><p><small>Read about <a href="/series/">all of the series for <q>Take on Rules</q></a>.</small></p></div>
+  <aside role="note" class="margin"><p><small>Read about <a href="/series/">all of the series for <q>Take on Rules</q></a>.</small></p></aside>
 
   <details>
     <summary>I've posted into {{ len $series }} series&hellip;</h2></summary>
@@ -69,7 +69,7 @@
 
   <p>Every post I write, I tag with one or more tags.  This year, I used {{ len $tags }} tags.</p>
 
-  <div role="note" class="margin"><p><small>Read about <a href="/tags/">all of the tags for <q>Take on Rules</q></a>.</small></p></div>
+  <aside role="note" class="margin"><p><small>Read about <a href="/tags/">all of the tags for <q>Take on Rules</q></a>.</small></p></aside>
 
   <details>
     <summary>I've tagged posts with {{ len $tags }} tags&hellip;</summary>
@@ -98,7 +98,7 @@
 <section  aria-labelledby="overview-updates-{{ $year }}" class="year-summary">
   <h2 id="overview-updates-{{ $year }}">Updates</h2>
   <p>Sometimes I go back and update posts with new information or corrections.</p>
-  <div role="note" class="margin"><p><small>Read about <a href="/site-map/updates/">all of the updates for <q>Take on Rules</q></a>.</small></p></div>
+  <aside role="note" class="margin"><p><small>Read about <a href="/site-map/updates/">all of the updates for <q>Take on Rules</q></a>.</small></p></aside>
   <details>
     <summary>I wrote {{ len . }} updates&hellip;</summary>
     <p>Below, I list the date of the updates and a link to the updated page.</p>
@@ -120,7 +120,7 @@
 
   <p>Sometimes I tinker with the structure or layout of the site.</p>
 
-  <div class="margin" role="note"><p><small>Read <a href="/site-map/changelog/">the changelog for <q>Take on Rules</q></a>.</small></p></div>
+  <aside class="margin" role="note"><p><small>Read <a href="/site-map/changelog/">the changelog for <q>Take on Rules</q></a>.</small></p></aside>
 
   <details>
     <summary>I made and recorded {{ len $changes }} changes&hellip;</summary>
