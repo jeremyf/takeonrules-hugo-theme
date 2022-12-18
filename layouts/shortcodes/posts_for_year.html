@@ -1,7 +1,7 @@
 {{- $year := .Get 0 }}
 {{- $data := index .Site.Data.yearEndReports $year }}
 {{- if $data }}
-{{- $posts := where (where (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) "Date.Year" "eq" (int $year)) "Draft" "eq" false  }}
+{{- $posts := where (where (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) "Date.Year" "eq" (int $year)) "Draft" "eq" false  }}
 {{- $wordCount := 0 }}{{- range $posts }}{{- $wordCount = add $wordCount .WordCount }}{{- end }}
 
 <p>This page provides an overview into what happened for <cite>{{ .Site.Title }}</cite> during <time datetime="{{ $year}}">{{ $year }}</time>.</p>

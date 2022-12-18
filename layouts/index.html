@@ -1,5 +1,5 @@
 {{ define "head-title" }}
-  {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
+  {{- $paginator := .Paginate (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   {{- if eq 1 $paginator.PageNumber }}
     <title>{{ .Title }}</title>
   {{- else }}
@@ -14,7 +14,7 @@
     <hr class="hidden" />
 {{ end }}
 {{- define "pageRelatedLinks" }}
-{{- with .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
+{{- with .Paginate (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
 {{ if .HasNext }}<link rel="next" itemprop="relatedLink" href="{{ .Next.URL }}" />{{ end }}
 {{ if .HasPrev }}<link rel="prev" itemprop="relatedLink" href="{{ .Prev.URL }}" />{{ end }}
 {{- end }}
@@ -24,7 +24,7 @@
   {{ .Content }}
 </section>
 <article itemprop="mainEntity" aria-labelledby="blog-posts" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/Blog">
-  {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
+  {{- $paginator := .Paginate (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
   <h1 id="blog-posts">Blog Posts{{- if eq 1 $paginator.PageNumber }}{{- else }} (Page {{ $paginator.PageNumber }}){{- end }}</h1>
   {{- with $paginator }}
