@@ -26,6 +26,9 @@
         <span itemprop="hasPart" itemscope itemtype="http://schema.org/CreativeWork">
           <meta itemprop="position" content="{{ $index }}" />
           <cite itemprop="name"><a itemprop="url" href="{{ .Permalink}}">{{ .Title }}</a></cite>
+	  {{- with .Params.Headline }}
+	  <p>{{ . | markdownify }}</p>
+	  {{- end }}
         </span>
       </li>
       {{- end }}
