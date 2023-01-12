@@ -31,7 +31,7 @@ small a.ref { text-decoration: none; font-size: xx-small; }
 blockquote {
   width: 55%;
   padding-left: 1rem;
-  p, .group, ul, ol, h2, h3, h4, footer { width: 90%; }
+  p, .group, ul, ol, dl, h2, h3, h4, footer { width: 90%; }
   .poem {
       width: auto;
       color: var(--blockquote);
