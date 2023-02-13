@@ -17,11 +17,11 @@
       {{- with $mention }}
       <li aria-labelledby="webmention-{{$idx}}-{{ $.Page.File.UniqueID }}">
 	<span id="webmention-{{$idx}}-{{ $.Page.File.UniqueID }}">
-          <a href="{{ .source }}" rel="nofollow">{{ if isset . "source_page_name" }}{{ .source_page_name }}{{ else }}{{ .source }}{{ end }}</a>
+          <a href="{{ .source }}" rel="nofollow noopener noreferrer">{{ if isset . "source_page_name" }}{{ .source_page_name }}{{ else }}{{ .source }}{{ end }}</a>
           {{- if isset . "source_author_name" }}
           by
           {{- if isset . "source_author_url" }}
-          <a href="{{ .source_author_url}}" rel="nofollow">{{ .source_author_name }}</a>
+          <a href="{{ .source_author_url}}" rel="nofollow noopener noreferrer">{{ .source_author_name }}</a>
           {{- else }}
           {{ .source_author_name }}
           {{- end }}
