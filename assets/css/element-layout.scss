@@ -21,7 +21,7 @@ figure, blockquote { margin-left: 0; margin-right: 0; padding-left: 0; padding-r
 
 small a.ref { text-decoration: none; font-size: xx-small; }
 
-.poem {
+.poem, .verse {
     &.mono { font-family: var(--code-font); }
     font-family: var(--body-font);
     color: var(--fg);
