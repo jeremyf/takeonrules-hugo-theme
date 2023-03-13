@@ -12,7 +12,10 @@ a, sup a { text-decoration: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 .site-nav-home, h1, h2, h3, h4 { font-family: var(--header-font); font-weight: 400; }
-.site-nav-home, h1 { font-size: 2rem; }
+.site-nav-home, h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.2rem; }
 
 summary { cursor: pointer; }
 abbr { cursor: help; }
