@@ -6,6 +6,7 @@
     --counter-font: serif;
     --code-font: monospace;
 
+    --bg-dim: #ede7db;
     --bg-inactive: #dfd5cf;
     --black: #333333;
     --blue-faint: #003497;
@@ -26,7 +27,6 @@
     --yellow-faint: #624416;
     --yellow-warmer: #884900;
     --yellow: #6f5500;
-    --bg-dim: #ede7db;
 
     --a-external-visited: var(--cyan-warmer);
     --a-external: var(--blue-faint);
@@ -34,6 +34,8 @@
     --a: var(--blue);
     --abbr: var(--dfn);
     --aside: var(--yellow-faint);
+    --bg-reply-to-email-hover: var(--green-warmer);
+    --bg-reply-to-email: var(--green-faint);
     --bg: var(--white);
     --blockquote: var(--green-faint);
     --border: var(--head-bg);
@@ -44,6 +46,7 @@
     --disclaimer: var(--yellow-warmer);
     --dt: var(--dfn);
     --em: var(--fg-alt);
+    --fg-reply-to-email: var(--bg);
     --fg: var(--black);
     --h1: var(--fg);
     --h2: var(--yellow-faint);
