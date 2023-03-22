@@ -20,11 +20,22 @@
     <p>
       I have ordered the posts from newest to oldest:
     </p>
-    <dl class="grid">
-      {{- range sort .Pages "Date" "desc" }}
-      <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt><dd><cite><a href="{{ .Permalink}}">{{ .Title }}</a></cite></dd>
+    <ol>
+      {{- range $index, $entry := sort .Pages "Date" "desc" }}
+      {{- with $entry }}
+      <li>
+        <time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time>
+        <span itemprop="hasPart" itemscope itemtype="http://schema.org/CreativeWork">
+          <meta itemprop="position" content="{{ $index }}" />
+          <cite itemprop="name"><a itemprop="url" href="{{ .Permalink}}">{{ .Title }}</a></cite>
+	  {{- with .Params.Headline }}
+	  <p>{{ . | markdownify }}</p>
+	  {{- end }}
+        </span>
+      </li>
       {{- end }}
-    </dl>
+      {{- end }}
+    </ol>
   </section>
 </article>
 {{ end }}

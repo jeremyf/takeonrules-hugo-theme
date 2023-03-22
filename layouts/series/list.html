@@ -17,7 +17,7 @@
 
     <p itemprop="about">A list of all of the posts in the <cite>{{ .title }}</cite> series.  I've ordered the posts from oldest to newest.</p>
 
-    <ul>
+    <ol>
       {{ $lastInstance := sub (len $data.Pages) 1 }}
       {{- range $index, $entry := sort $data.Pages "Date" "asc" }}
       {{- with $entry }}
@@ -26,11 +26,14 @@
         <span itemprop="hasPart" itemscope itemtype="http://schema.org/CreativeWork">
           <meta itemprop="position" content="{{ $index }}" />
           <cite itemprop="name"><a itemprop="url" href="{{ .Permalink}}">{{ .Title }}</a></cite>
+	  {{- with .Params.Headline }}
+	  <p>{{ . | markdownify }}</p>
+	  {{- end }}
         </span>
       </li>
       {{- end }}
       {{- end }}
-    </ul>
+    </ol>
   </section>
   {{- end }}
 </article>

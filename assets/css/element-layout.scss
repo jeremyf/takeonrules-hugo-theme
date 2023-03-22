@@ -12,7 +12,10 @@ a, sup a { text-decoration: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 .site-nav-home, h1, h2, h3, h4 { font-family: var(--header-font); font-weight: 400; }
-.site-nav-home, h1 { font-size: 2rem; }
+.site-nav-home, h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.2rem; }
 
 summary { cursor: pointer; }
 abbr { cursor: help; }
@@ -21,7 +24,7 @@ figure, blockquote { margin-left: 0; margin-right: 0; padding-left: 0; padding-r
 
 small a.ref { text-decoration: none; font-size: xx-small; }
 
-.poem {
+.poem, .verse {
     &.mono { font-family: var(--code-font); }
     font-family: var(--body-font);
     color: var(--fg);
@@ -31,7 +34,7 @@ small a.ref { text-decoration: none; font-size: xx-small; }
 blockquote {
   width: 55%;
   padding-left: 1rem;
-  p, .group, ul, ol, h2, h3, h4, footer { width: 90%; }
+  p, .group, ul, ol, dl, h2, h3, h4, footer { width: 90%; }
   .poem {
       width: auto;
       color: var(--blockquote);
@@ -223,7 +226,8 @@ main > article > footer input { width: 80%; }
 .hide-js { display: none; }
 
 @media screen and (max-width: 760px) {
-  h2, h2, h3, h4, summary, p, body > footer, .table-wrapper, pre, dl, article section > ol, article section > ul, article summary { width: 85%; }
+    h2, h2, h3, h4, summary, p, body > footer, .table-wrapper, pre, dl, article summary { width: 85%; }
+    article section > ol, article section > ul { width: 76.5%; }
   figure { max-width: 90%; }
   figcaption { margin-right: 0%; max-width: none; }
   blockquote {

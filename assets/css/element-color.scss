@@ -55,10 +55,16 @@ article aside {
     padding: 1rem;
 }
 
+.inline-comments {
+    border-left: 2px dotted var(--bg-special-warm);
+    padding-left: 1rem; }
+
 .licensed {
     .wrapper { color: var(--code) ; }
     border-left: 1px dotted   var(--code);
 }
+
+.rune { color: var(--rune); }
 
 dt { color:   var(--dt); }
 dfn, .dfn { color:   var(--dfn); }
@@ -67,8 +73,8 @@ dfn, .dfn { color:   var(--dfn); }
 abbr {
     color:   var(--abbr);
     &:hover, &:focus, &:active {
-        background: var(--abbr) !important;
-        color: var(--bg) !important;
+        background: var(--abbr);
+        color: var(--bg);
     }
 }
 
@@ -79,47 +85,58 @@ a, [role="note"], dfn, .dfn, abbr, code, time, summary {
 a, .contrast {
     color:   var(--a);
     &:hover, &:focus, &:active {
-        * { color: var(--bg) !important; }
+        * { color: var(--bg); }
         time {
-            background: var(--time) !important;
+            background: var(--time);
         }
         code {
-            background: var(--code) !important;
+            background: var(--code);
         }
         abbr {
-            background: var(--abbr) !important;
+            background: var(--abbr);
         }
-        background: var(--a) !important;
-        color: var(--bg) !important;
+        background: var(--a);
+        color: var(--bg);
     }
 }
 
-a[href^=https]:not([href^="https://takeonrules.com"]) {
-    color: var(--a-external);
-    &:visited {
-        &:hover, &:focus, &:active {
-            background: var(--a-external-visited) !important;
-        }
+// a[href^=https]:not([href^="https://takeonrules.com"]) {
+//     color: var(--a-external);
+//     &:visited {
+//         &:hover, &:focus, &:active {
+//             background: var(--a-external-visited);
+//         }
 
-        color: var(--a-external-visited); }
-    &:hover, &:focus, &:active {
-        background: var(--a) !important;
+//         color: var(--a-external-visited); }
+//     &:hover, &:focus, &:active {
+//         background: var(--a);
+//     }
+// }
+
+article footer .reply-by-email {
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-reply-to-email);
+    color: var(--fg-reply-to-email);
+    border-radius: 4px;
+    &:focus, &:hover, &:active {
+	background: var(--bg-reply-to-email-hover);
     }
 }
+
 
 a:visited {
     color:   var(--a-visited);
     &:hover, &:focus, &:active {
-        background: var(--a-visited) !important;
-        color: var(--bg) !important;
+        background: var(--a-visited);
+	color: var(--bg);
     }
 }
 
 
 a.offscreen {
     &:focus, &:active, &:hover {
-        background:  var(--a) !important;
-        color:   var(--bg) !important;
+        background:  var(--a);
+        color:   var(--bg);
     }
 }
 
@@ -172,19 +189,19 @@ details {
 summary {
     color:   var(--summary);
     &:hover {
-        > * { color: var(--bg) !important; }
+        > * { color: var(--bg); }
         time {
-            background: var(--summary) !important;
+            background: var(--summary);
         }
         code {
-            background: var(--code) !important;
+            background: var(--code);
         }
         a {
-            &:hover { background: var(--summary) !important; }
-            background: var(--summary) !important;
+            &:hover { background: var(--summary); }
+            background: var(--summary);
         }
-        background: var(--summary) !important;
-        color: var(--bg) !important;
+        background: var(--summary);
+        color: var(--bg);
     }
 }
 

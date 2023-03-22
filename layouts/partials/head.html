@@ -24,7 +24,7 @@
 <meta name="datePublished" content="{{ .Date.Format .Site.Params.iso8601_format }}" />
 {{ end }}
 {{- if .IsHome }}
-{{ $tags := (slice false) }}{{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}{{- range $index, $object := $paginator.Pages }}{{- $tags = $tags | union $object.Params.tags }}{{- end }}
+{{ $tags := (slice false) }}{{- $paginator := .Paginate (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}{{- range $index, $object := $paginator.Pages }}{{- $tags = $tags | union $object.Params.tags }}{{- end }}
 {{- range $tags }}
 <meta name="keywords" content="{{ . }}" />
 {{- end }}

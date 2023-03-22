@@ -83,6 +83,9 @@ Optional Parameters (in likely importance order):
 {{- with $entry.offer }}
 {{- $innerTitleHtml = printf "<a itemprop=\"offer\" href=\"%s\">%s</a>" . $title }}
 {{- else }}
+{{- with $entry.same_as }}
+{{- $innerTitleHtml = printf "<a itemprop=\"sameAs\" href=\"%s\">%s</a>" . $title }}
+{{- else }}
 {{- with .Get "link" }}
 {{- if and (eq . "same_as") (isset $entry "same_as") }}
 {{- $innerTitleHtml = printf "<a itemprop=\"sameAs\" href=\"%s\">%s</a>" $entry.same_as $title }}
@@ -92,6 +95,7 @@ Optional Parameters (in likely importance order):
 {{- $innerTitleHtml = printf "<a href=\"%s\">%s</a>" . $title }}
 {{- else if isset $entry "itemid" }}
 {{- $innerTitleHtml = printf "<a href=\"%s\">%s</a>" $entry.itemid $title }}
+{{- end }}
 {{- end }}
 {{- end }}
 {{- end }}<span itemprop="{{ $itemprop }}" itemscope itemtype="http://schema.org/{{ $itemtype }}">{{- with $entry.itemid }}<link href="{{ . }}" itemprop="sameAs">{{- end }}

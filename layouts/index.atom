@@ -2,7 +2,7 @@
   <title>{{ .Site.Title }}</title>
   <link rel="self" href="{{ .Permalink }}index.atom" hreflang="en-us"/>
   <link href="{{ .Permalink }}" hreflang="en-us"/>
-  <updated>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>
+  <updated>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
   <author>
     {{- with .Site.Params.copyrightHolder }}<name>{{ . }}</name>{{- end }}
     {{- with .Site.Params.copyrightHolderEmail }}<email>{{ . }}</email>{{- end }}
@@ -19,10 +19,10 @@
     {{- with .Site.Params.copyrightHolderEmail }}<email>{{ . }}</email>{{- end }}
     <uri>{{ .Site.BaseURL }}</uri>
     </author>
-    {{- range .Params.tags }}<category term="{{ . | urlize }}" label="{{ . }}"/>{{- end }}
-    {{ `<content type="html"><![CDATA[` | safeHTML }}{{ with .Params.headline }}<h2>{{ . }}</h2>{{- end }}{{ .Content }}]]></content>
-    <published>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</published>
-    <updated>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>
+    {{- range .Params.tags }}<category term="{{ . | urlize }}" label="{{ . }}" />{{- end }}
+    {{ `<content type="html"><![CDATA[` | safeHTML }}{{ with .Params.headline }}<h2>{{ . }}</h2>{{- end }}{{ .Content }}{{ partial "footer/reply-by-email.html" . }}]]></content>
+    <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
+    <updated>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
   </entry>
   {{ end }}
 </feed>

@@ -1,0 +1,3 @@
+<cite>{{ .Title }}</cite> by <a href="{{ .Site.Params.copyrightHolderURL }}">{{ .Site.Params.copyrightHolder }}</a> is published with All Rights Reserved.
+Based on a work at <a class="u-url" rel="bookmark" href="{{ .Permalink }}">{{ .Permalink }}</a>.
+{{ if isset .Site.Params "morepermissionspermalink" }} Permissions beyond the scope of this license may be available at <a href="{{ .Site.Params.morePermissionsPermalink }}" >{{ .Site.Params.morePermissionsPermalink }}</a>.{{ end }}
