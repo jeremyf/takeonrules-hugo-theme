@@ -28,7 +28,7 @@
         <h1 aria-labelledby="home" role="listitem" class="site-nav-home"><a id="home" itemprop="hasPart" aria-label="Home" rel="home" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }} aria-current="page" {{end}} >{{ .Site.Title }}</a></h1>
         {{- range $idx, $item := .Site.Menus.topnav }}
 	{{- $title := default $item.Title ($item.Name) }}
-        <span role="listitem" aria-label="{{$title}}"><a itemprop="hasPart" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}aria-current="page" {{ end }} title="{{ $title }}">{{ $item.Name | safeHTML }}</a></span><span class="hidden"> &middot; </span>
+        <span role="listitem" aria-label="{{$title}}"><a itemprop="hasPart" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}aria-current="page" {{ end }} title="{{ $title }}">{{ $item.Name | safeHTML }}</a></span> &middot;
         {{- end }}
         <span role="listitem" aria-label="Search"><a itemprop="hasPart" {{ if eq (string $.Page.RelPermalink) "/search/" }}aria-current="page" {{ end }} rel="search" id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a></span>
       </nav>

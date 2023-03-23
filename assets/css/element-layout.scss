@@ -237,7 +237,7 @@ main > article > footer input { width: 80%; }
 }
 
 @media (max-width: 760px) {
-  pre, pre code { width: 90%; padding: 0; }
+  pre, pre code { width: 90%; }
 }
 
 sup { font-size: 51%;} /* A weird rendering error happens when this is a set height or greater than 50% */
