@@ -2,6 +2,7 @@
 {{- $alt      := default "" (.Get "alt") }}
 {{- $caption  := .Get "caption" }}
 {{- $original := resources.Get $path  }}
+{{- if $original }}
 {{- $title    := .Get "title" }}
 {{- $imageResize := default "770x" (.Get "resize") }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "%s r%s" $imageResize .) }}{{- end }}
@@ -18,3 +19,4 @@
   <img src="{{ $result.RelPermalink }}" alt="{{ $alt }}" {{ with .Get "title" }}title="{{ . }}" {{ end }}data-original-url="{{ .Site.BaseURL | replaceRE "/$" "" }}{{ $path }}" width="{{ $result.Width }}" height="{{ $result.Height }}" data-width="{{ $result.Width }}" data-height="{{ $result.Height }}" />
 {{- end }}
 </figure>
+{{- end }}
