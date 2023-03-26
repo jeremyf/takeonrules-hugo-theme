@@ -56,7 +56,7 @@ article aside {
 }
 
 .inline-comments {
-    border-left: 2px dotted var(--bg-special-warm);
+    border-left: 2px dotted var(--bg-dim);
     padding-left: 1rem; }
 
 .licensed {
@@ -69,7 +69,9 @@ article aside {
 dt { color:   var(--dt); }
 dfn, .dfn { color:   var(--dfn); }
 
-.sidenote-number:hover *, [role=note]:hover { background: var(--bg-special-warm); }
+
+.sidenote-number:hover *, [role="note"]:hover { background: var(--bg-dim); }
+
 abbr {
     color:   var(--abbr);
     &:hover, &:focus, &:active {
@@ -82,10 +84,10 @@ a, [role="note"], dfn, .dfn, abbr, code, time, summary {
     transition: all 300ms;
 }
 
-a, .contrast {
+a, .contrast, [role="note"] a {
     color:   var(--a);
     &:hover, &:focus, &:active {
-        * { color: var(--bg); }
+        * { color: var(--bg) }
         time {
             background: var(--time);
         }
@@ -124,7 +126,7 @@ article footer .reply-by-email {
 }
 
 
-a:visited {
+a:visited, [role="note"] a:visited {
     color:   var(--a-visited);
     &:hover, &:focus, &:active {
         background: var(--a-visited);
