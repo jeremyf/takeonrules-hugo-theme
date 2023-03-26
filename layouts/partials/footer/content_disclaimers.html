@@ -3,7 +3,7 @@
 {{- $partials := slice false }}{{- range $contentWarningTags }}{{- $partials = $partials | append .content_disclaimers }}{{- end }}
 <section itemprop="comment" itemscope itemtype="http://schema.org/Comment" aria-labelledby="disclaimer-for-{{ $.Page.File.UniqueID }}">
   <h2 id="disclaimer-for-{{ $.Page.File.UniqueID }}" itemprop="headline">Disclaimers</h2>
-  <div itemprop="text">
+  <div itemprop="text" class="disclaimer">
     <p>This post references content created by:</p>
     <ul aria-label="Content Creators">
       {{- range uniq $partials }}{{- if . }}{{- with index $.Site.Data.content_disclaimers . }}

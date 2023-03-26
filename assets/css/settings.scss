@@ -8,6 +8,7 @@
 
     --bg-dim: #ede7db;
     --bg-inactive: #dfd5cf;
+    --bg-ochre: #f0e0cc;
     --black: #333333;
     --blue-faint: #003497;
     --blue-warmer: #0000b0;
@@ -43,7 +44,7 @@
     --code: var(--green);
     --commentary: var(--yellow-faint);
     --dfn: var(--fg-dim);
-    --disclaimer: var(--yellow-warmer);
+    --bg-disclaimer: var(--bg-ochre);
     --dt: var(--dfn);
     --em: var(--fg-alt);
     --fg-reply-to-email: var(--bg);
@@ -73,6 +74,7 @@
 
 	--bg-dim: #1d2235;
 	--bg-inactive: #2b3045;
+	--bg-ochre: #442c2f;
 	--black: #0d0e1c;
 	--blue-faint: #82b0ec;
 	--blue-warmer: #79a8ff;
