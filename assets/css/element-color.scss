@@ -115,7 +115,7 @@ a, .contrast, [role="note"] a {
 //     }
 // }
 
-article footer .reply-by-email {
+article footer .reply-by-email, article footer button {
     padding: 0.5rem 0.75rem;
     background: var(--bg-reply-to-email);
     color: var(--fg-reply-to-email);
