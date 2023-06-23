@@ -166,6 +166,7 @@ body.resume {
     .margin, .side, .update {
 	color: var(--body);
     }
+    small a.ref { display: none; }
 }
 
 @media screen and (max-width: 760px) {

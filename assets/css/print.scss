@@ -24,6 +24,7 @@ body.resume {
     & > footer { display: none; }
     * { color: var(--fg) !important; }
     a, abbr, .dfn { text-decoration: none !important; }
+    small a.ref { display: none; }
     .dfn { font-style: normal; font-weight: 400; }
     h1 { color: var(--h1) !important; }
     h2 { color: var(--h2) !important; }
