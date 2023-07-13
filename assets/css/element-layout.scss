@@ -27,6 +27,7 @@ small a.ref { text-decoration: none; font-size: xx-small; }
 .poem, .verse {
     &.mono { font-family: var(--code-font); }
     font-family: var(--body-font);
+    font-style: italic;
     color: var(--fg);
     padding: 0;
 }
