@@ -10,8 +10,8 @@
 {{- end }}
 {{- $post := .Get "post" }}
 <blockquote {{ with .Get "id" }}id="{{ . }}" {{ end }}itemprop="citation" itemscope itemtype="http://schema.org/Quotation" class="h-cite {{- with .Get "epigraph" }} epigraph{{- end }}" {{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
-{{ if .Get "poem" }}
-<pre class="poem">{{ .Inner }}</pre>
+{{ if .Get "verse" }}
+<pre class="verse">{{ .Inner }}</pre>
 {{ else }}
 {{ .Inner | markdownify }}
 {{ end }}
