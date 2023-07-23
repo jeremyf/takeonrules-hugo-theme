@@ -66,8 +66,8 @@ article aside {
 
 .rune { color: var(--rune); }
 
-dt { color:   var(--dt); }
-dfn, .dfn { color:   var(--dfn); }
+dt { color:   var(--dfn); font-weight: bold; }
+dfn, .dfn { color:   var(--dfn); font-weight: bold; }
 
 
 .sidenote-number:hover *, [role="note"]:hover { background: var(--bg-dim); }
