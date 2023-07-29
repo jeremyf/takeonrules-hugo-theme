@@ -49,6 +49,9 @@
     {{- if isset .Params "headline" }}
     <h3 itemprop="alternateHeadline">{{- .Params.headline | markdownify }}</h3>
     {{- end }}
+    {{- with .Params.abstract }}
+    <p itemprop="abstract"> {{ partial "unparagraphy.html" . }}</p>
+    {{- end }}
     <meta itemprop="wordCount" content="{{ .WordCount }}" />
     <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />
     <link itemprop="publisher" href="{{ $.Site.BaseURL }}#tor-organization" />
