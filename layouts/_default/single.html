@@ -39,7 +39,11 @@
         {{ with .itemid }}<link itemprop="sameAs" href="{{ . }}" />{{ end }}{{ with .offer }}<a itemprop="offers" href="{{ . }}">{{ end }}<span itemprop="name">{{ .title }}</span>{{ with .offer }}</a>{{ end }}</cite>
         {{- end }}.
         We played <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="{{ $.Site.Title }} HQ" /><span itemprop="name">{{ with .location }}{{ . }}{{ else }}around the table{{ end }}</span></span> on <time itemprop="startDate" datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.
-        <meta itemprop="endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" /></small>
+        <meta itemprop="endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
+	{{- with $.Params.series }}{{- range (where $.Site.Data.series "key" "eq" .) }}{{- $title := .title }}{{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
+	It is part of my <cite><a href="{{ $seriesUrl }}">{{ $title }}</a></cite> series.
+	{{- end }}{{- end }}
+	</small>
       </p>
     </section>
     {{- end }}
