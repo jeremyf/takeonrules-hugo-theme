@@ -29,6 +29,9 @@
 	  {{- with .Params.Headline }}
 	  <p>{{ . | markdownify }}</p>
 	  {{- end }}
+	  {{- with .Params.Abstract }}
+	  {{ partial "paragraphy.html" . }}
+	  {{- end }}
         </span>
       </li>
       {{- end }}
