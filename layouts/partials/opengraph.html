@@ -2,10 +2,22 @@
 {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
 <meta property="og:title" content="{{ .title }}" />
 <meta property="og:description" content="{{ .description | plainify }}" />
+<meta property="description" content="{{ .description | plainify }}" />
 {{- end }}
 {{- else }}
 <meta property="og:title" content="{{ .Title }}" />
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+{{- $description := "" }}
+{{- if isset . "Description" }}
+{{- $description = .Description }}
+{{- else if isset .Params "abstract" }}
+{{- $description = .Params.abstract }}
+{{- else if .IsPage }}
+{{- $description = .Summary }}
+{{- else if isset .Site.Params "description" }}
+{{- $description = .Site.Params.description }}
+{{- end }}
+<meta name="description" content="{{ $description | markdownify | plainify }}" />
+<meta property="og:description" content="{{ $description | markdownify | plainify }}" />
 {{- end }}
 <meta property="og:locale" content="{{ .Site.LanguageCode }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
