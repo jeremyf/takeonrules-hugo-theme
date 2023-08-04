@@ -207,6 +207,7 @@ main > article {
         width: 85%;
         * { width: auto; }
     }
+    > ol { padding-left: 1rem; }
 }
 
 main > article > footer input { width: 80%; }
