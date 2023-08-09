@@ -273,8 +273,11 @@ summary { margin-top: 0.83em; margin-bottom: 0.83em; }
   }
 }
 
-dfn, .dfn { font-weight: bold; }
+dfn, .dfn, .mechanic { font-weight: bold; }
 // .ref { border-bottom: 1px inset var(--bg-dim); }
 .dfn { font-style: italic; }
+
+// Introducing the mechanic class; which is inspired by the Errant RPG
+.mechanic { font-style: normal; font-variant: petite-caps; text-transform: capitalize }
 
 .print-only { display: none; }
