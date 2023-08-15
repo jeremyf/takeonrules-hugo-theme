@@ -28,6 +28,7 @@
             width: 50%;
     }
 }
+
 figcaption p { width: 100%; }
 figure[role="note"] {
     max-width: 100%;
@@ -73,6 +74,7 @@ figure[role="note"] {
 }
 
 @media screen and (max-width: 760px) {
+    header + section.content > aside.margin:first-child { padding-top: 1rem; }
     // Setup to ensure that the hover state for summary doesn't overlap with a preceding sidenote's location.
     details, blockquote { clear: both; }
     [role="note"], .note {
