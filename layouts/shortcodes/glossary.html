@@ -73,7 +73,7 @@ Optional Parameters (in likely importance order):
 {{- if eq $titleTag "cite" }}{{ $itemtype = "CreativeWork" }}{{- end }}
 {{- $innerTitleHtml := $title }}
 {{- $reflink := "" }}
-{{- if (.Get "noIcon") }}{{- else }}
+{{- if (or (.Get "noIcon") $entry.no_icon) }}{{- else }}
 {{- $reflink = printf " <small><a class=\"ref\" rel=\"tag opener\" aria-label=\"Other site-wide references of “%s”\" title=\"Other site-wide references of “%s”\" href=\"/site-map/glossary/#abbr-dfn-%s\">&#128214;</a></small>" $title $title $entry.key | safeHTML }}
 {{- end }}
 {{- $dfnText := "" }}
