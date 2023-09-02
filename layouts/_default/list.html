@@ -29,7 +29,10 @@
           <meta itemprop="position" content="{{ $index }}" />
           <cite itemprop="name"><a itemprop="url" href="{{ .Permalink}}">{{ .Title }}</a></cite>
 	  {{- with .Params.Headline }}
-	  <p>{{ . | markdownify }}</p>
+	  <p itemprop="alternateHeadline">{{ . | markdownify }}</p>
+	  {{- end }}
+	  {{- with .Params.abstract }}
+	  <p itemprop="abstract"> {{ partial "unparagraphy.html" . }}</p>
 	  {{- end }}
         </span>
       </li>
