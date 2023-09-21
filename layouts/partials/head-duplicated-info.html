@@ -1,6 +1,4 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-{{- with $.Site.Params.webmentionUrl }}<link rel="webmention" href="{{ . }}" />{{ end }}
-{{- with $.Site.Params.pingbackUrl }}<link rel="pingback" href="{{ . }}" />{{ end }}
 <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 {{ with $.Site.Params.searchMySiteVerification }}<meta name="searchmysite-verification" content="{{ . }}" />{{- end }}

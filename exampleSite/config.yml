@@ -105,14 +105,12 @@ params:
   paginatedSections:
     - post
     - reviews
-  pingbackUrl: 'https://webmention.io/your-site-here.com/xmlrpc'
   sameAs:
     - 'https://github.com/your-handle-here'
   identifiers:
     - 'https://orcid.org/dddd-dddd-dddd-dddd'
   siteHost: your-site-here.com
   title: Your Site Here
-  webmentionUrl: 'https://webmention.io/your-site-here.com/webmention'
   withJsonLd: true
   foundingDate: "2021-02-02"
 permalinks:
