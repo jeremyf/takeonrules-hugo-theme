@@ -45,7 +45,7 @@ blockquote { border-left: 1px dotted var(--blockquote); }
 }
 
 blockquote, .license, blockquote p { color:   var(--blockquote); }
-article aside {
+article aside, [itemprop=abstract] {
     &.margin { color: var(--aside); }
     color: var(--aside);
 }
