@@ -6,9 +6,6 @@ html { scroll-behavior: smooth; vertical-align: baseline; -webkit-font-smoothing
 body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: var(--body-font); counter-reset: sidenote-counter; }
 body, .list-page ul { width: 87.5%; }
 
-// sets link style according to values in _settings.scss
-article a { text-decoration: underline; }
-a, sup a { text-decoration: none; }
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 .site-nav-home, h1, h2, h3, h4 { font-family: var(--header-font); font-weight: 400; }
@@ -106,7 +103,7 @@ figcaption {
 // Without this setting, when the header would wrap, the letters would overlap
 h2, h3, h4, summary, p, .table-wrapper, pre, dl { width: 55%; }
 
-[itemprop=abstract] { width: 65%; }
+[itemprop=abstract] { width: 65% ; }
 
 body {
     > header {
@@ -201,11 +198,11 @@ mark {
 }
 
 
-article { section > ul, section > ol { width: 45%; } }
+[itemprop=mainEntity] { section > ul, section > ol { width: 45%; } }
 
-// The main article has a bound region
-// Note: https://takeonrules.com/2020/12/31/a-refinement-to-the-ubiquitous-initiative-procedure/ introduced nested articles.
-main > article {
+// The main [itemprop=mainEntity] has a bound region
+// Note: https://takeonrules.com/2020/12/31/a-refinement-to-the-ubiquitous-initiative-procedure/ introduced nested [itemprop=mainEntity]s.
+main > [itemprop=mainEntity] {
     > header, > footer, > ol {
         width: 85%;
         * { width: auto; }
@@ -213,7 +210,7 @@ main > article {
     > ol { padding-left: 1rem; }
 }
 
-main > article > footer input { width: 80%; }
+main > [itemprop=mainEntity] > footer input { width: 80%; }
 
 // breadcrumb
 .hidden { display: none; }
@@ -231,8 +228,8 @@ main > article > footer input { width: 80%; }
 .hide-js { display: none; }
 
 @media screen and (max-width: 760px) {
-    h2, h2, h3, h4, summary, p, body > footer, .table-wrapper, pre, dl, article summary { width: 85%; }
-    article section > ol, article section > ul { width: 76.5%; }
+    h2, h2, h3, h4, summary, p, body > footer, .table-wrapper, pre, dl, [itemprop=mainEntity] summary { width: 85%; }
+    [itemprop=mainEntity] section > ol, [itemprop=mainEntity] section > ul { width: 76.5%; }
   figure { max-width: 90%; }
   figcaption { margin-right: 0%; max-width: none; }
   blockquote {

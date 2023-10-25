@@ -45,7 +45,7 @@ blockquote { border-left: 1px dotted var(--blockquote); }
 }
 
 blockquote, .license, blockquote p { color:   var(--blockquote); }
-article aside, [itemprop=abstract] {
+[itemprop=mainEntity] aside, [itemprop=abstract] {
     &.margin { color: var(--aside); }
     color: var(--aside);
 }
@@ -115,7 +115,8 @@ a, .contrast, [role="note"] a {
 //     }
 // }
 
-article footer .reply-by-email, article footer button {
+[itemprop=mainEntity] footer .reply-by-email,
+[itemprop=mainEntity] footer button {
     padding: 0.5rem 0.75rem;
     background: var(--bg-reply-to-email);
     color: var(--fg-reply-to-email);
@@ -142,9 +143,9 @@ a.offscreen {
     }
 }
 
-article em { color: var(--em); }
-article cite { color: var(--cite); }
-article cite:hover { border-bottom: thin dotted var(--cite); }
+[itemprop=mainEntity] em { color: var(--em); }
+[itemprop=mainEntity] cite { color: var(--cite); }
+[itemprop=mainEntity] cite:hover { border-bottom: thin dotted var(--cite); }
 
 pre, code { color:  var(--code); }
 pre code { background: var(--bg-dim) }
@@ -155,6 +156,11 @@ kbd { color: var(--kbd); }
 s, del, ins {
     color:   var(--commentary);
     p { color:   var(--commentary); }
+}
+
+s, del {
+    text-decoration-thickness: 1px; text-decoration-color:   var(--commentary);
+    &:hover, &:focus { text-decoration: none; }
 }
 
 .margin, .side, .update {
@@ -173,10 +179,6 @@ body.resume {
     ins[role="note"] {
         border-left: thin dotted   var(--commentary);
     }
-}
-s, del {
-    text-decoration-thickness: 1px; text-decoration-color:   var(--commentary);
-    &:hover, &:focus { text-decoration: none; }
 }
 // END COMMENTARY
 

@@ -38,7 +38,7 @@ body.resume {
 
 a { text-decoration: none; }
 
-article {
+[itemprop=mainEntity] {
   .table-wrapper, h2, h3, h4, summary { page-break-after: avoid; }
 }
 // I encountered print styling issues where an H2 was "floating" to the right of marginalia
