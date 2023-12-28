@@ -12,7 +12,13 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 
+User-agent: anthropic-ai
+Disallow: /
+
 User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
 Disallow: /
 
 User-agent: FacebookBot
