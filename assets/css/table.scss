@@ -24,7 +24,7 @@ tbody tr {
 }
 .subbody td { padding-left: 1.5rem; }
 
-tfoot td { border-top-width: 1px; border-top-style: solid; }
+tfoot td, tfoot th { border-top-width: 1px; border-top-style: solid; }
 th, tfoot td { text-align: center; }
 th, td { padding: 0.3rem; }
 td { text-align: left; }

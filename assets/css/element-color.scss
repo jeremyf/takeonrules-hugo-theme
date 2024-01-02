@@ -28,7 +28,7 @@ table {
         th { text-align: left; }
         tr:nth-child(odd), &.subhead { background-color: var(--table-bg-tr-alt); }
     }
-    tfoot td { border-top-color: var(--table-bg-thead); }
+    tfoot td, tfoot th { border-top-color: var(--table-bg-thead); }
 }
 
 blockquote { border-left: 1px dotted var(--blockquote); }
