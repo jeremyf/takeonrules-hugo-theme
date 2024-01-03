@@ -1,11 +1,11 @@
 {{- if (and (eq .Kind "term") (eq .Type "series")) }}
 {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
 <meta property="og:title" content="{{ .title }}" />
-<meta property="og:description" content="{{ .description | plainify }}" />
-<meta property="description" content="{{ .description | plainify }}" />
+<meta property="twitter:title" content="{{ .title }}" />
 {{- end }}
 {{- else }}
 <meta property="og:title" content="{{ .Title }}" />
+<meta property="twitter:title" content="{{ .Title }}" />
 {{- $description := "" }}
 {{- if isset . "Description" }}
 {{- $description = .Description }}
@@ -16,25 +16,14 @@
 {{- else if isset .Site.Params "description" }}
 {{- $description = .Site.Params.description }}
 {{- end }}
-<meta name="description" content="{{ $description | markdownify | plainify }}" />
+<meta property="twitter:description" content="{{ $description | markdownify | plainify }}" />
 <meta property="og:description" content="{{ $description | markdownify | plainify }}" />
+<meta name="description" content="{{ $description | markdownify | plainify }}" />
 {{- end }}
+
 <meta property="og:locale" content="{{ .Site.LanguageCode }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{- if (isSet .Params "images") }}
-{{- with .Params.images }}{{ range first 1 . }}
-{{- $original := resources.Get .src }}
-<meta property="og:image" content="{{ $original.Permalink }}" />
-<meta property="og:image:width" content="{{ $original.Width }}" />
-<meta property="og:image:height" content="{{ $original.Height }}" />
-{{- end}}
-{{- end}}
-{{- else }}
-<meta property="og:image" content="{{ .Site.BaseURL}}images/takeonrules.wordpress.com-banner.jpg" />
-<meta property="og:image:width" content="1000" />
-<meta property="og:image:height" content="288" />
-{{- end }}
 
 {{- if .IsHome }}
 <meta name="article:modified_time" content="{{ .Site.LastChange.Format .Site.Params.iso8601_format | safeHTMLAttr }}" />
@@ -78,14 +67,21 @@
   {{- end }}
 {{ end }}{{ end }}
 
-{{- if .IsPage }}
-{{- range .Site.Authors }}{{ with .Social.facebook }}
-<meta property="article:author" content="https://www.facebook.com/{{ . }}" />{{ end }}{{ with .Site.Social.facebook }}
-<meta property="article:publisher" content="https://www.facebook.com/{{ . }}" />{{ end }}
-<meta property="article:section" content="{{ .Section }}" />
-{{- with .Params.tags }}{{ range first 6 . }}
-<meta property="article:tag" content="{{ . }}" />{{ end }}{{ end }}
-{{- end }}{{ end }}
-
-{{- /* Facebook Page Admin ID for Domain Insights */}}
-{{- with .Site.Social.facebook_admin }}<meta property="fb:admins" content="{{ . }}" />{{ end }}
+{{- $original := false }}
+{{- if (isSet .Params "images") }}
+{{- with .Params.images }}{{ range first 1 . }}
+{{- $original = resources.Get .src }}
+{{- end}}{{- end}}
+{{- else }}
+{{- with $.Site.Params.image -}}
+{{- $original = resources.Get . }}
+{{- end }}
+{{- end }}
+{{- if $original }}
+<meta property="og:image" content="{{ $original.Permalink }}" />
+<meta property="og:image:width" content="{{ $original.Width }}" />
+<meta property="og:image:height" content="{{ $original.Height }}" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ $original.Permalink }}" />
+<link rel="image_src" href="{{ $original.Permalink }}" content="{{ $original.Permalink }}" />
+{{- end }}
