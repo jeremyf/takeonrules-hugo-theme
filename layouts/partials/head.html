@@ -1,17 +1,20 @@
-{{- if .Params.canonical_url }}
-<link rel="canonical" href="{{ .Params.canonical_url }}" />
-{{- else if .RelPermalink }}
-  <link rel="canonical" href="{{ .RelPermalink }}" />
-{{- end }}
-<link id="canonical-take-on-rules-url" rel="alternate" href="{{ .Permalink }}" />
+{{- if .Params.canonical_url }}<link rel="canonical" href="{{ .Params.canonical_url }}" />
+{{- else if .RelPermalink }}<link rel="canonical" href="{{ .RelPermalink }}" />{{- end }}
 {{ partial "head-duplicated-info.html" . }}
-
-{{- if in (slice "term" "taxonomy" "taxonomyTerm") .Kind }}
-<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml" />
+{{- with .Params.org_id }}
+<meta property="org_id" content="{{ . }}" />
 {{- end }}
-{{- range .Params.AlternativeOutputFormats }}
-<link rel="{{ .Rel }}" type="{{ .Type }}" href="{{ .Permalink }}" title="{{ .Title }}" />
+<meta name="org-roam-type" content="{{ .Type }}" />
+{{- if eq hugo.Environment "development" }}
+<meta name="hugoPageKind" content="{{ .Kind }}" />
+<meta name="hugoPageType" content="{{ .Type }}" />
+{{- with .Section }}<meta name="hugoSection" content="{{ . }}" />{{- end }}
+<meta name="hugoSections" content="{{ delimit .Site.Sections ", " }}" />
 {{- end }}
+<meta name="theme-color" content="#EEEEEE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0E1C" media="(prefers-color-scheme: dark)">
+{{- if in (slice "term" "taxonomy" "taxonomyTerm") .Kind }}<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml" />{{- end }}
+{{- range .Params.AlternativeOutputFormats }}<link rel="{{ .Rel }}" type="{{ .Type }}" href="{{ .Permalink }}" title="{{ .Title }}" />{{- end }}
 {{- if .IsHome }}
 <meta name="dateModified" content="{{ .Site.LastChange.Format .Site.Params.iso8601_format }}" />
 <meta name="datePublished" content="{{ .Site.Params.firstPostDate }}" />
@@ -21,16 +24,10 @@
 {{ end }}
 {{- if .IsHome }}
 {{ $tags := (slice false) }}{{- $paginator := .Paginate (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}{{- range $index, $object := $paginator.Pages }}{{- $tags = $tags | union $object.Params.tags }}{{- end }}
-{{- range $tags }}
-<meta name="keywords" content="{{ . }}" />
-{{- end }}
+{{- range $tags }}<meta name="keywords" content="{{ . }}" />{{- end }}
 {{- else }}
-{{- range .Params.tags }}
-<meta name="keywords" content="{{ . }}" />
-{{- end}}
-{{- with .Params.series }}
-<meta name="keywords" content="{{ . }}" />
-{{- end }}
+{{- range .Params.tags }}<meta name="keywords" content="{{ . }}" />{{- end}}
+{{- with .Params.series }}<meta name="keywords" content="{{ . }}" />{{- end }}
 {{- end }}
 {{ partial "opengraph.html" . }}
 {{- if isset .Params "with_datatables" }}
@@ -72,20 +69,3 @@
     });
   </script>
 {{- end }}
-
-{{- with .Params.org_id }}
-<meta property="org_id" content="{{ . }}" />
-{{- end }}
-
-<meta name="org-roam-type" content="{{ .Type }}" />
-{{- if eq hugo.Environment "development" }}
-  <meta name="hugoPageKind" content="{{ .Kind }}" />
-  <meta name="hugoPageType" content="{{ .Type }}" />
-  {{- with .Section }}
-  <meta name="hugoSection" content="{{ . }}" />
-  {{- end }}
-  <meta name="hugoSections" content="{{ delimit .Site.Sections ", " }}" />
-{{- end }}
-
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
