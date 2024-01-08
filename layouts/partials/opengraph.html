@@ -1,11 +1,9 @@
 {{- if (and (eq .Kind "term") (eq .Type "series")) }}
 {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
 <meta property="og:title" content="{{ .title }}" />
-<meta property="twitter:title" content="{{ .title }}" />
 {{- end }}
 {{- else }}
 <meta property="og:title" content="{{ .Title }}" />
-<meta property="twitter:title" content="{{ .Title }}" />
 {{- $description := "" }}
 {{- if isset . "Description" }}
 {{- $description = .Description }}
@@ -16,7 +14,6 @@
 {{- else if isset .Site.Params "description" }}
 {{- $description = .Site.Params.description }}
 {{- end }}
-<meta property="twitter:description" content="{{ $description | markdownify | plainify }}" />
 <meta property="og:description" content="{{ $description | markdownify | plainify }}" />
 <meta name="description" content="{{ $description | markdownify | plainify }}" />
 {{- end }}
@@ -60,11 +57,10 @@
   {{- end }}
 {{ end }}{{ end }}
 {{- $original := false }}
-{{- if (isSet .Params "images") }}
-{{- with .Params.images }}{{ range first 1 . }}
+{{- if (isSet .Params "images") }}{{- with .Params.images }}{{ range first 1 . }}
 {{- $original = resources.Get .src }}
-{{- end}}{{- end}}
-{{- else }}
+{{- end}}{{- end}}{{- end }}
+{{- if not $original }}
 {{- with $.Site.Params.image -}}
 {{- $original = resources.Get . }}
 {{- end }}
@@ -73,7 +69,5 @@
 <meta property="og:image" content="{{ $original.Permalink }}" />
 <meta property="og:image:width" content="{{ $original.Width }}" />
 <meta property="og:image:height" content="{{ $original.Height }}" />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="{{ $original.Permalink }}" />
 <link rel="image_src" href="{{ $original.Permalink }}" content="{{ $original.Permalink }}" />
 {{- end }}
