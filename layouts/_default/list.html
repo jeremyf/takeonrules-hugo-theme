@@ -31,7 +31,7 @@
 	  {{- with .Params.Headline }}
 	  <p itemprop="alternateHeadline">{{ . | markdownify }}</p>
 	  {{- end }}
-	  {{- with .Params.abstract }}
+	  {{- with .Params.Description }}
 	  <p itemprop="abstract"> {{ partial "unparagraphy.html" . }}</p>
 	  {{- end }}
         </span>

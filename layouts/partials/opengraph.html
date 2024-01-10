@@ -7,8 +7,8 @@
 {{- $description := "" }}
 {{- if isset . "Description" }}
 {{- $description = .Description }}
-{{- else if isset .Params "abstract" }}
-{{- $description = .Params.abstract }}
+{{- else if isset .Params "Description" }}
+{{- $description = .Params.Description }}
 {{- else if .IsPage }}
 {{- $description = .Summary }}
 {{- else if isset .Site.Params "description" }}

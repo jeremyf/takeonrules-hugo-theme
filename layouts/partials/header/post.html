@@ -11,6 +11,6 @@
 <nav aria-label="Content's metadata and navigation">
   {{ partial "postAuthorWithLink.html" . }}{{ partial "postDate.html" . }}{{ partial "postTags.html" . }}{{ partial "postSeries.html" . }}
 </nav>
-{{- with .Params.abstract }}
+{{- with .Params.Description }}
 <p itemprop="abstract"><strong>Summary:</strong>{{ partial "unparagraphy.html" . }}</p>
 {{- end }}

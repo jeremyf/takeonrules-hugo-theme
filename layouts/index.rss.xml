@@ -35,7 +35,7 @@
       {{- end }}
       <description>
         {{- with .Params.headline }}&lt;h2&gt;{{ . }}&lt;/h2&gt;{{- end }}
-	{{- with .Params.abstract }}&lt;p&gt;&lt;strong&gt;Summary: &lt;/strong&gt;{{ partial "unparagraphy.html" . | html }}&lt;/p&gt;{{- end }}
+	{{- with .Params.Description }}&lt;p&gt;&lt;strong&gt;Summary: &lt;/strong&gt;{{ partial "unparagraphy.html" . | html }}&lt;/p&gt;{{- end }}
         {{- $img := (.Resources.ByType "image").GetMatch "*featured*" }}
         {{- with $img }}
         {{- $img := .Resize "640x" }}

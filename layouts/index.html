@@ -49,7 +49,7 @@
     {{- if isset .Params "headline" }}
     <h3 itemprop="alternateHeadline">{{- .Params.headline | markdownify }}</h3>
     {{- end }}
-    {{- with .Params.abstract }}
+    {{- with .Params.Description }}
     <p itemprop="abstract"> {{ partial "unparagraphy.html" . }}</p>
     {{- end }}
     <meta itemprop="wordCount" content="{{ .WordCount }}" />
