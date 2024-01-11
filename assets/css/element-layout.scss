@@ -169,22 +169,13 @@ a.offscreen {
 .group:not(dl):after { content: "" ;}
 
 dl {
-    dt:after { content: ":"; font-weight: bold; }
-    dd { margin-left: 1rem; text-indent: -0.5rem; }
-    dd:before { content: "· "; }
-}
-
-dl:not(.flex-box) {
-  display: table;
-  dt { clear: left; }
-}
-
-dl.group dd { float: left; }
-
-dl.grid {
     display: grid;
     dt { grid-column: 1; }
     dd { grid-column: 2; }
+
+    dt:after { content: ":"; font-weight: bold; }
+    dd { margin-left: 1rem; text-indent: -0.5rem; }
+    dd:before { content: "· "; }
 }
 
 dd li { padding-left: 1rem; }
