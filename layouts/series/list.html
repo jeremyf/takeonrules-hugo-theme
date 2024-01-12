@@ -12,12 +12,12 @@
     <h1 itemprop="headline" class="p-name" id="{{ anchorize $termTitle }}">{{ .title }}</h1>
     {{ partial "footer/image.html" . }}
   </header>
-  <section class="e-content content">
+  <section class="e-content content" aria-label="Content Body">
     {{ partial "paragraphy.html" .description }}
 
     <p itemprop="about">A list of all of the posts in the <cite>{{ .title }}</cite> series.  I've ordered the posts from oldest to newest.</p>
 
-    <ol>
+    <ol aria-label="Posts in series {{ .title }}" >
       {{ $lastInstance := sub (len $data.Pages) 1 }}
       {{- range $index, $entry := sort $data.Pages "Date" "asc" }}
       {{- with $entry }}
