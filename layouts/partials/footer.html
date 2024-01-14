@@ -1,4 +1,4 @@
-<footer class="group credits" aria-label="Site-wide footer">
+<footer class="group credits">
   <hr  />
   <span id="tor-contact-point" itemid="{{ $.Site.BaseURL }}#tor-contact-point" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
     <link itemprop="email" href="mailto:{{ $.Site.Params.copyrightHolderEmail }}" />
@@ -57,4 +57,6 @@
       </span>
     </small>
   </nav>
+  <br />
+  {{ partial "footer/licenses.html" . }}
 </footer>

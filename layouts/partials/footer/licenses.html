@@ -1,16 +1,5 @@
-{{- if isset .Params "licenses" }}
-{{- $licenses := .Params.licenses }}
-{{- if gt (len $licenses) 0 }}
-<section itemprop="copyrightNotice" aria-labelledby="licenses">
-  <h2 id="licenses">License(s)</h2>
-  {{ $context := . }}
-  {{ range .Params.licenses }}
-  <p class="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
-    <small>
-    {{ with index (where $.Site.Data.licenses "Key" "eq" .) 0 }}
-      {{ partial .PartialForLicenseFooter $context }}
-    {{ end }}
-    </small>
-  </p>
-  {{ end }}
-</section>{{- end }}{{- end }}
+{{- if isset .Params "licenses" }}{{- $licenses := .Params.licenses }}{{- if gt (len $licenses) 0 }}{{- $context := . }}{{- range .Params.licenses }}
+<small class="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+{{- with index (where $.Site.Data.licenses "Key" "eq" .) 0 }}{{ partial .PartialForLicenseFooter $context }}{{- end }}
+</small>
+{{- end }}{{- end }}{{- end }}
