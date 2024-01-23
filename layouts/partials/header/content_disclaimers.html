@@ -1,5 +1,5 @@
 {{- $contentWarningTags := (where (where .Site.Data.glossary "content_disclaimers" "!=" nil ) "tag" "in" .Params.tags ) }}
-{{- .Page.Scratch.Add "content_disclaimers" $contentWarningTags }}
-{{- if gt (len $contentWarningTags) 0 }}
+{{- $.Page.Scratch.Add "content_disclaimers" $contentWarningTags }}
+{{- if (or (gt (len $contentWarningTags) 0) (isset $.Page.Params "content_disclaimers")) }}
 <p class="disclaimer" role="region"><strong>Note:</strong> This post has <a href="#disclaimer-for-{{ $.Page.File.UniqueID }}">content disclaimers</a>.</p>
 {{- end }}

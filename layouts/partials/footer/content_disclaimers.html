@@ -1,6 +1,7 @@
 {{- $contentWarningTags := .Page.Scratch.Get "content_disclaimers" }}
-{{- if gt (len $contentWarningTags) 0 }}
+{{- if (or (gt (len $contentWarningTags) 0) (isset $.Page.Params "content_disclaimers")) }}
 {{- $partials := slice false }}{{- range $contentWarningTags }}{{- $partials = $partials | append .content_disclaimers }}{{- end }}
+{{- with $.Page.Params.content_disclaimers }}{{- $partials = $partials | append . }}{{- end }}
 <section itemprop="comment" itemscope itemtype="http://schema.org/Comment" aria-labelledby="disclaimer-for-{{ $.Page.File.UniqueID }}">
   <h2 id="disclaimer-for-{{ $.Page.File.UniqueID }}" itemprop="headline">Disclaimers</h2>
   <div itemprop="text" class="disclaimer">
