@@ -46,7 +46,7 @@ Optional Parameters (in likely importance order):
 {{- if eq 0 (len $title ) }}{{- errorf "Missing title for key %s in file %s" (.Get "key") (.Page.Permalink) }}{{- end }}
 {{- $scratchKey := printf "glossary-%s" $entry.key }}
 {{- $titleTag := "span" }}
-{{- if .Get "tag" }}{{- $titleTag = .Get "tag" }}{{- else }}{{- if and ($entry.offer) (eq $title $citedTitle ) }}{{ $titleTag = "cite" }}{{- end }}{{- end }}
+{{- if .Get "tag" }}{{- $titleTag = .Get "tag" }}{{- else }}{{- if and (or ($entry.cite) ($entry.offer)) (eq $title $citedTitle ) }}{{ $titleTag = "cite" }}{{- end }}{{- end }}
 {{- if .Get "downcase" }}{{ $title = lower $title }}{{- end }}
 {{- $abbrHTML := "" }}
 {{- $abbrTitle := default $entry.title (.Get "title") }}
