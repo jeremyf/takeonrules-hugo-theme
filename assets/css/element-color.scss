@@ -26,6 +26,7 @@ table {
     caption, td { color:   var(--table-td-fg); }
     tbody {
         th { text-align: left; }
+	.bargraph { color: var(--fg-dim); }
         tr:nth-child(odd), &.subhead { background-color: var(--table-bg-tr-alt); }
     }
     tfoot td, tfoot th { border-top-color: var(--table-bg-thead); }
