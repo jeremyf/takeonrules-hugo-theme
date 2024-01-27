@@ -19,7 +19,7 @@ abbr { cursor: help; }
 p, summary, li {  vertical-align: baseline; }
 figure, blockquote { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
 
-small a.ref { text-decoration: none; font-size: xx-small; }
+small a.ref { font-size: xx-small; }
 
 .verse {
     &.mono { font-family: var(--code-font); }
@@ -118,7 +118,7 @@ body {
                 font-style: normal;
                 font-size: 1.2rem;
                 font-family: var(--header-font);
-                text-decoration: none;
+                text-decoration-style: double;
                 display: inline-block;
                 margin: 1rem 2rem 0 auto;
                 vertical-align: baseline;
