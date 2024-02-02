@@ -69,3 +69,25 @@
     });
   </script>
 {{- end }}
+<script type="text/javascript">
+    window.addEventListener(
+    'load',
+    (event) => {
+	const sidenotes = document.querySelectorAll(".sidenote-number")
+	    sidenotes.forEach((sidenote, i, _arr) => {
+		sidenote.classList.add("js");
+		let a = document.createElement("a");
+		a.setAttribute("href", "#");
+		a.setAttribute("title", "Sidenote #" + (i + 1));
+		a.classList.add("toggler");
+		a.addEventListener('click', (event) => {
+		    event.preventDefault();
+		    let text_element = event.target.parentElement
+			.parentElement.querySelector(".side[role='note']");
+		    text_element.classList.toggle("hide");
+		})
+		a.innerHTML = "<sup>[ " + (i + 1) + " ]</sup>";
+		sidenote.append(a);
+		sidenote.querySelector(".side[role='note']").classList.add("hide");
+     })});
+</script>

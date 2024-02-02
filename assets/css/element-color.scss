@@ -71,8 +71,6 @@ dt { color:   var(--dfn); font-weight: bold; }
 dfn, .dfn { color:   var(--dfn); font-weight: bold; }
 
 
-.sidenote-number:hover *, [role="note"]:hover { background: var(--bg-dim); }
-
 abbr {
     color:   var(--abbr);
     &:hover, &:focus, &:active {
@@ -214,5 +212,6 @@ summary {
 .sidenote-number:after, .side[role="note"]:before {
     color:   var(--sidenote-number);
 }
+
 // END Light Color Definition
 ////////////////////////////////////////////////////////////////////////////////

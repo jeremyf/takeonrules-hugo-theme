@@ -53,18 +53,31 @@ figure[role="note"] {
 }
 
 .sidenote-number { counter-increment: sidenote-counter; }
-.sidenote-number:after, .side[role="note"]:before {
+.sidenote-number:after {
     content: counter(sidenote-counter) ")\000a0";
     font-family: var(--counter-font);
     position: relative;
     vertical-align: baseline;
 }
+
 .sidenote-number:after {
     content: counter(sidenote-counter);
     font-size: 50%;
     top: -0.2rem;
     left: 0.1rem;
 }
+
+@media screen and (min-width: 761px) {
+    .sidenote-number .toggler { display: none; }
+}
+
+.side[role="note"]:before {
+    content: counter(sidenote-counter) ")\000a0";
+    font-family: var(--counter-font);
+    position: relative;
+    vertical-align: baseline;
+}
+
 
 // TODO: Must figure this out. I don't want to hide marginalia but instead
 //       render it similar to the print style
@@ -74,6 +87,11 @@ figure[role="note"] {
 }
 
 @media screen and (max-width: 760px) {
+    .sidenote-number {
+	.toggler { margin-left: 0.33rem; }
+    }
+    .sidenote-number.js:after { left: -1000px; }
+
     header + section.content > aside.margin:first-child { padding-top: 1rem; }
     // Setup to ensure that the hover state for summary doesn't overlap with a preceding sidenote's location.
     details, blockquote { clear: both; }
@@ -102,7 +120,9 @@ figure[role="note"] {
     }
 
     .side[role="note"] {
-        clear: both;
+	.sidenote-number:hover *, [role="note"]:hover { background: var(--bg); }
+	&.hide { display: none; }
+	clear: both;
         margin: 1rem 0;
         width: 97.5%
     }
