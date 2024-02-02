@@ -87,9 +87,7 @@ figure[role="note"] {
 }
 
 @media screen and (max-width: 760px) {
-    .sidenote-number {
-	.toggler { margin-left: 0.33rem; }
-    }
+    .sidenote-number .toggler { margin-left: 0.33rem; display:inline-block; }
     .sidenote-number.js:after { left: -1000px; }
 
     header + section.content > aside.margin:first-child { padding-top: 1rem; }
