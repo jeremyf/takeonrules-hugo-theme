@@ -87,7 +87,7 @@
 		    text_element.classList.toggle("hide");
 		})
 		a.innerHTML = "<sup>[ " + (i + 1) + " ]</sup>";
-		sidenote.append(a);
+		sidenote.prepend(a);
 		sidenote.querySelector(".side[role='note']").classList.add("hide");
      })});
 </script>
