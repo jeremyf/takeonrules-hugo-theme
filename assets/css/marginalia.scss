@@ -1,6 +1,6 @@
 // Responsible for common rendering behavior of the marginalia. When tinkering
 // with this file, remember to review both the narrow version and the print version
-.note, [role="note"] {
+.note, [role=note] {
     // The MARGIN TOP helps ensure more precise positioning of the element.
     margin-top: 0rem;
     > *:first-child { margin-top: 0rem; }
@@ -31,7 +31,7 @@
 }
 
 figcaption p { width: 100%; }
-figure[role="note"] {
+figure[role=note] {
     max-width: 100%;
     figcaption {
         margin-right: 0;
@@ -65,9 +65,11 @@ figure[role="note"] {
 
 @media screen and (min-width: 761px) {
     .side-container .side-toggler { display: none; }
+    // Hidden
+    .side.hidden[role=note] { display: initial; }
 }
 
-.side[role="note"]:before {
+.side[role=note]:before {
     content: counter(sidenote-counter) ")\000a0";
     font-family: var(--counter-font);
     position: relative;
@@ -82,8 +84,8 @@ figure[role="note"] {
 
 // TODO: Must figure this out. I don't want to hide marginalia but instead
 //       render it similar to the print style
-.full-width { [role="note"], .side-container { display: none; } }
-.margin[role="note"], figure[role="note"], .margin.note {
+.full-width { [role=note], .side-container { display: none; } }
+.margin[role=note], figure[role=note], .margin.note {
     margin-right: 12.5%; width: 27%;
 }
 
@@ -94,7 +96,7 @@ figure[role="note"] {
     header + section.content > aside.margin:first-child { padding-top: 1rem; }
     // Setup to ensure that the hover state for summary doesn't overlap with a preceding sidenote's location.
     details, blockquote { clear: both; }
-    [role="note"], .note {
+    [role=note], .note {
         display: block;
         &.margin-table.table-wrapper {
             width: 87.5%;
@@ -112,20 +114,20 @@ figure[role="note"] {
     }
 
     // NOTE: The specificity of the selectors is required; They echo the above specific selector
-    figure[role="note"], .margin[role="note"], .margin.note {
+    figure[role=note], .margin[role=note], .margin.note {
         width: 87.5%;
         clear: both;
         float: none;
     }
 
-    .side[role="note"] {
-clear: both;
+    .side[role=note] {
+	clear: both;
         margin: 1rem 0;
         width: 97.5%
     }
 
 
-    figure[role="note"] {
+    figure[role=note] {
         margin-left: 0;
         padding-left: 0;
     }
