@@ -7,6 +7,7 @@
 
     .fullwidth { max-width: 100%; }
     float: right;
+
     clear: right;
     margin-right: 0;
     margin-bottom: 1rem;
@@ -52,23 +53,18 @@ figure[role="note"] {
     width: 27.5%
 }
 
-.sidenote-number { counter-increment: sidenote-counter; }
-.sidenote-number:after {
-    content: counter(sidenote-counter) ")\000a0";
-    font-family: var(--counter-font);
-    position: relative;
-    vertical-align: baseline;
-}
+.side-container { counter-increment: sidenote-counter; }
 
-.sidenote-number:after {
+.side-label, .side-toggler { font-variant-position: super; }
+
+.side-label:after {
     content: counter(sidenote-counter);
-    font-size: 50%;
-    top: -0.2rem;
-    left: 0.1rem;
+    font-variant-position: super;
+    margin-left: 0.25rem;
 }
 
 @media screen and (min-width: 761px) {
-    .sidenote-number .toggler { display: none; }
+    .side-container .side-toggler { display: none; }
 }
 
 .side[role="note"]:before {
@@ -78,17 +74,27 @@ figure[role="note"] {
     vertical-align: baseline;
 }
 
+button.side-toggler {
+  background: none!important;
+  border: none;
+  font-family: var(--body-font);
+  padding: 0!important;
+  color: var(--a);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 
 // TODO: Must figure this out. I don't want to hide marginalia but instead
 //       render it similar to the print style
-.full-width { [role="note"], .sidenote-number { display: none; } }
+.full-width { [role="note"], .side-container { display: none; } }
 .margin[role="note"], figure[role="note"], .margin.note {
     margin-right: 12.5%; width: 27%;
 }
 
 @media screen and (max-width: 760px) {
-    .sidenote-number .toggler { margin-left: 0.33rem; display:inline-block; }
-    .sidenote-number.js:after { left: -1000px; }
+    .side-container .side-toggler { margin-left: 0.33rem; display:inline-block; }
+    .js.side-container:after, .js .side-label { display: none; }
 
     header + section.content > aside.margin:first-child { padding-top: 1rem; }
     // Setup to ensure that the hover state for summary doesn't overlap with a preceding sidenote's location.
@@ -118,7 +124,6 @@ figure[role="note"] {
     }
 
     .side[role="note"] {
-	.sidenote-number:hover *, [role="note"]:hover { background: var(--bg); }
 	&.hide { display: none; }
 	clear: both;
         margin: 1rem 0;

@@ -70,24 +70,33 @@
   </script>
 {{- end }}
 <script type="text/javascript">
-    window.addEventListener(
-    'load',
-    (event) => {
-	const sidenotes = document.querySelectorAll(".sidenote-number")
-	    sidenotes.forEach((sidenote, i, _arr) => {
-		sidenote.classList.add("js");
-		let a = document.createElement("a");
-		a.setAttribute("href", "#");
-		a.setAttribute("title", "Sidenote #" + (i + 1));
-		a.classList.add("toggler");
-		a.addEventListener('click', (event) => {
-		    event.preventDefault();
-		    let text_element = event.target.parentElement
-			.parentElement.querySelector(".side[role='note']");
-		    text_element.classList.toggle("hide");
-		})
-		a.innerHTML = "<sup>[ " + (i + 1) + " ]</sup>";
-		sidenote.prepend(a);
-		sidenote.querySelector(".side[role='note']").classList.add("hide");
-     })});
+ window.addEventListener(
+   'load',
+   (event) => {
+     const sidenotes = document.querySelectorAll(".side-container")
+     sidenotes.forEach((sidenote, i, _arr) => {
+       sidenote.classList.add("js");
+       let button = document.createElement("button");
+       button.setAttribute("title", "Sidenote #" + (i + 1));
+       button.classList.add("side-toggler");
+       button.addEventListener('click', (event) => {
+	 event.preventDefault();
+	 // The button element
+	 let the_button = event.target.parentElement;
+	 if (the_button.getAttribute("aria-expanded") == "true") {
+	   the_button.setAttribute("aria-expanded", false);
+	 } else {
+	   the_button.setAttribute("aria-expanded", true);
+	 }
+	 let text_element = the_button.parentElement.querySelector(".side[role='note']");
+	 text_element.classList.toggle("hide");
+       });
+       button.setAttribute("aria-expanded", "false");
+       button.setAttribute("aria-controls", "sidenote-content-" + (i + 1));
+       button.innerHTML = "<small>Sidenote " + (i + 1) + "</small>";
+       sidenote.prepend(button);
+       let note = sidenote.querySelector(".side[role='note']");
+       note.classList.add("hide");
+       note.setAttribute("id", "sidenote-content-" + (i + 1));
+ })});
 </script>

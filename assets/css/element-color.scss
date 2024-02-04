@@ -209,8 +209,8 @@ summary {
     }
 }
 
-.sidenote-number:after, .side[role="note"]:before {
-    color:   var(--sidenote-number);
+.side-container:after, .side[role="note"]:before, .side-label {
+    color:   var(--side-number);
 }
 
 // END Light Color Definition
