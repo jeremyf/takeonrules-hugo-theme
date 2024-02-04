@@ -55,10 +55,10 @@ figure[role="note"] {
 
 .side-container { counter-increment: sidenote-counter; }
 
-.side-label, .side-toggler { font-variant-position: super; }
+.side-label { font-variant-position: super; }
 
 .side-label:after {
-    content: counter(sidenote-counter);
+    content: "#" counter(sidenote-counter);
     font-variant-position: super;
     margin-left: 0.25rem;
 }
@@ -74,14 +74,9 @@ figure[role="note"] {
     vertical-align: baseline;
 }
 
-button.side-toggler {
-  background: none!important;
-  border: none;
-  font-family: var(--body-font);
-  padding: 0!important;
-  color: var(--a);
-  text-decoration: underline;
-  cursor: pointer;
+.side-toggler {
+    font-family: var(--body-font);
+    font-size: smaller;
 }
 
 
@@ -124,8 +119,7 @@ button.side-toggler {
     }
 
     .side[role="note"] {
-	&.hide { display: none; }
-	clear: both;
+clear: both;
         margin: 1rem 0;
         width: 97.5%
     }

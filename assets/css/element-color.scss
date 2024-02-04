@@ -209,7 +209,7 @@ summary {
     }
 }
 
-.side-container:after, .side[role="note"]:before, .side-label {
+.side-container:after, .side[role="note"]:before, .side-label, .side-toggler {
     color:   var(--side-number);
 }
 
