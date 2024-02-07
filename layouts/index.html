@@ -29,7 +29,7 @@
 <p itemprop="about" aria-label="About {{ .Site.Title }}">
   {{ partial "unparagraphy.html" .Content }}
 </p>
-<section itemprop="mainEntity" aria-labelledby="blog-posts" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/Blog">
+<section itemprop="mainEntity" class="h-entry" aria-labelledby="blog-posts" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/Blog">
   {{- $paginator := .Paginate (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
   <h1 id="blog-posts">Blog Posts{{- if eq 1 $paginator.PageNumber }}{{- else }} (Page {{ $paginator.PageNumber }}){{- end }}</h1>
@@ -50,7 +50,7 @@
     <h3 itemprop="alternateHeadline">{{- .Params.headline | markdownify }}</h3>
     {{- end }}
     {{- with .Params.Description }}
-    <p itemprop="abstract"> {{ partial "unparagraphy.html" . }}</p>
+    <p itemprop="abstract" class="p-summary"> {{ partial "unparagraphy.html" . }}</p>
     {{- end }}
     <meta itemprop="wordCount" content="{{ .WordCount }}" />
     <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />

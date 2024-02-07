@@ -8,7 +8,7 @@
     <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
     {{ partial "footer/image.html" . }}
   </header>
-  <section itemprop="text" class="e-content content">
+  <section itemprop="text" class="e-content">
     <p>
       Below are all of the posts with the <em>{{ .Title }}</em> {{ .Type | singularize }}.
       {{- $type := .Type }}
@@ -32,7 +32,7 @@
 	  <p itemprop="alternateHeadline">{{ . | markdownify }}</p>
 	  {{- end }}
 	  {{- with .Params.Description }}
-	  <p itemprop="abstract"> {{ partial "unparagraphy.html" . }}</p>
+	  <p itemprop="abstract" class="p-summary"> {{ partial "unparagraphy.html" . }}</p>
 	  {{- end }}
         </span>
       </li>

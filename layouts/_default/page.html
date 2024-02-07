@@ -18,7 +18,7 @@
       </nav>
       {{- end }}
     </header>
-    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}property="text"{{ end }}{{ end }} class="e-content content" role="region" aria-label=" {{ with .Params.ariaArticleLabel }}{{ . }}{{ else }}Article content{{ end }}">
+    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}property="text"{{ end }}{{ end }} class="e-content" role="region" aria-label=" {{ with .Params.ariaArticleLabel }}{{ . }}{{ else }}Article{{ end }}">
       {{ .Content }}
     </section>
     <footer aria-label="Article footer">

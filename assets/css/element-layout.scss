@@ -103,7 +103,7 @@ figcaption {
 // Without this setting, when the header would wrap, the letters would overlap
 h2, h3, h4, summary, p, .table-wrapper, pre, dl { width: 55%; }
 
-[itemprop=abstract] { width: 65% ; }
+.p-summary { width: 65% ; }
 
 body {
     > header {
@@ -189,11 +189,11 @@ mark {
 }
 
 
-[itemprop=mainEntity] { section > ul, section > ol { width: 45%; } }
+.h-entry { section > ul, section > ol { width: 45%; } }
 
-// The main [itemprop=mainEntity] has a bound region
-// Note: https://takeonrules.com/2020/12/31/a-refinement-to-the-ubiquitous-initiative-procedure/ introduced nested [itemprop=mainEntity]s.
-main > [itemprop=mainEntity] {
+// The main .h-entry has a bound region
+// Note: https://takeonrules.com/2020/12/31/a-refinement-to-the-ubiquitous-initiative-procedure/ introduced nested .h-entrys.
+main > .h-entry, main > #skip-to-content {
     > header, > footer, > ol {
         width: 85%;
         * { width: auto; }
@@ -201,7 +201,7 @@ main > [itemprop=mainEntity] {
     > ol { padding-left: 1rem; }
 }
 
-main > [itemprop=mainEntity] > footer input { width: 80%; }
+main > .h-entry > footer input { width: 80%; }
 
 // breadcrumb
 .hidden { display: none; }
@@ -219,8 +219,8 @@ main > [itemprop=mainEntity] > footer input { width: 80%; }
 .hide-js { display: none; }
 
 @media screen and (max-width: 760px) {
-    h2, h2, h3, h4, summary, p, body > footer, .table-wrapper, pre, dl, [itemprop=mainEntity] summary { width: 85%; }
-    [itemprop=mainEntity] section > ol, [itemprop=mainEntity] section > ul { width: 76.5%; }
+    h2, h2, h3, h4, summary, p, body > footer, .table-wrapper, pre, dl, .h-entry summary { width: 85%; }
+    .h-entry section > ol, .h-entry section > ul { width: 76.5%; }
   figure { max-width: 90%; }
   figcaption { margin-right: 0%; max-width: none; }
   blockquote {

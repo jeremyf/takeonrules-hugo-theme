@@ -46,7 +46,7 @@ blockquote { border-left: 1px dotted var(--blockquote); }
 }
 
 blockquote, .license, blockquote p { color:   var(--blockquote); }
-[itemprop=mainEntity] aside, [itemprop=abstract] {
+.h-entry aside, .p-summary {
     &.margin { color: var(--aside); }
     color: var(--aside);
 }
@@ -114,8 +114,8 @@ a, .contrast, [role="note"] a {
 //     }
 // }
 
-[itemprop=mainEntity] footer .reply-by-email,
-[itemprop=mainEntity] footer button {
+.h-entry footer .reply-by-email,
+.h-entry footer button {
     padding: 0.5rem 0.75rem;
     background: var(--bg-reply-to-email);
     color: var(--fg-reply-to-email);
@@ -142,9 +142,9 @@ a.offscreen {
     }
 }
 
-[itemprop=mainEntity] em { color: var(--em); }
-[itemprop=mainEntity] cite { color: var(--cite); }
-[itemprop=mainEntity] cite:hover { border-bottom: thin dotted var(--cite); }
+.h-entry em { color: var(--em); }
+.h-entry cite { color: var(--cite); }
+.h-entry cite:hover { border-bottom: thin dotted var(--cite); }
 
 pre, code { color:  var(--code); }
 pre code { background: var(--bg-dim) }

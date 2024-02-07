@@ -1,7 +1,7 @@
 <h1 itemprop="headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title | safeHTML }}</h1>
 <meta itemprop="name" content="{{ .Title }}" />
 {{- with .Params.headline }}
-<h2 itemprop="alternativeHeadline">{{ . }}</h2>
+<h2>{{ . }}</h2>
 {{- end }}
 <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />
 <link itemprop="publisher" href="{{ $.Site.BaseURL }}#tor-organization" />
@@ -12,5 +12,5 @@
   {{ partial "postAuthorWithLink.html" . }}{{ partial "postDate.html" . }}{{ partial "postTags.html" . }}{{ partial "postSeries.html" . }}
 </nav>
 {{- with .Params.Description }}
-<p itemprop="abstract"><strong>Summary:</strong>{{ partial "unparagraphy.html" . }}</p>
+<p itemprop="abstract" class="p-summary"><strong>Summary:</strong>{{ partial "unparagraphy.html" . }}</p>
 {{- end }}

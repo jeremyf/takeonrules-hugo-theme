@@ -93,7 +93,7 @@ figure[role=note] {
     .side-container .side-toggler { margin-left: 0.33rem; display:inline-block; }
     .js.side-container:after, .js .side-label { display: none; }
 
-    header + section.content > aside.margin:first-child { padding-top: 1rem; }
+    header + section.e-content > aside.margin:first-child { padding-top: 1rem; }
     // Setup to ensure that the hover state for summary doesn't overlap with a preceding sidenote's location.
     details, blockquote { clear: both; }
     [role=note], .note {
