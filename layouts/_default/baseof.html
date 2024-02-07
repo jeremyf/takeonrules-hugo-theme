@@ -21,7 +21,8 @@
     <header aria-label="Site header">
       {{ block "pageRelatedLinks" . }}
       {{ end }}
-      <nav class="group" role="list" aria-label="Site navigation">
+      <nav class="group" aria-label="Site navigation">
+	<span role="list" aria-label="Site navigation links">
         <span role="listitem" aria-labelledby="skip-link"><a href="#skip-to-content" class="offscreen" id="skip-link">Skip to Main Content</a></span>
         <span aria-labelledby="home" role="listitem" class="site-nav-home"><a id="home" aria-label="Home" rel="home" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }} aria-current="page" {{end}} >{{ .Site.Title }}</a></span>
         {{- range $idx, $item := .Site.Menus.topnav }}
@@ -29,6 +30,7 @@
         <span role="listitem" aria-label="{{$title}}"><a href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}aria-current="page" {{ end }} title="{{ $title }}">{{ $item.Name | safeHTML }}</a></span><span class="hidden"> &middot; </span>
         {{- end }}
         <span role="listitem" aria-label="Search"><a {{ if eq (string $.Page.RelPermalink) "/search/" }}aria-current="page" {{ end }} rel="search" id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a></span>
+	</span>
       </nav>
       <script>
        var form = document.getElementById('search-link');

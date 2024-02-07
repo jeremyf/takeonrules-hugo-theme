@@ -1,25 +1,27 @@
-{{ define "head-title" }}
+{{- define "head-title" }}
   {{- $paginator := .Paginate (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
   {{- if eq 1 $paginator.PageNumber }}
     <title>{{ .Title }}</title>
   {{- else }}
     <title>{{ .Title }} (Page {{ $paginator.PageNumber }})</title>
   {{- end }}
-{{ end }}
-{{ define "breadcrumb" }}
+{{- end }}
+{{- define "breadcrumb" }}
     <div class="feeds" aria-labelledby="site-feeds-label" role="list">
       <span id="site-feeds-label" class="label">Site feeds </span>
       <span role="listitem" aria-label="ATOM Feed">
 	<a href="{{ .Site.BaseURL }}index.atom">ATOM feed</a>
-      </span><span aria-hidden="true"> &middot; <span aria-hidden="true"><span role="listitem" aria-label="RSS Feed">
+      </span><span aria-hidden="true"> &middot; </span>
+      <span role="listitem" aria-label="RSS Feed">
 	<a href="{{ .Site.BaseURL }}index.xml">RSS feed</a>
-      </span><span aria-hidden="true"> &middot; <span aria-hidden="true"><span role="listitem" aria-label="JSON Feed">
+      </span><span aria-hidden="true"> &middot; </span>
+      <span role="listitem" aria-label="JSON Feed">
 	<a href="{{ .Site.BaseURL }}index.json">JSON feed</a>
       </span>
     </div>
     <hr class="hidden" />
-{{ end }}
-{{ define "main" }}
+{{- end }}
+{{- define "main" }}
 <p aria-label="About {{ .Site.Title }}">
   {{ partial "unparagraphy.html" .Content }}
 </p>

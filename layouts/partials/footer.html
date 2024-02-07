@@ -1,14 +1,14 @@
 <footer class="group credits">
   <hr  />
   <small class="copyright">
-    &copy;<time datetime="{{ now.Format "2006" }}" aria-label="{{ now.Format "2006" }}">{{ now.Format "2006" }}</time>&nbsp;
+    &copy;<time datetime="{{ now.Format "2006" }}">{{ now.Format "2006" }}</time>&nbsp;
     <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
       {{ .Site.Params.copyrightHolder }}
     </a>
   </small>
   <br />
-  <nav role="list" aria-label="Site-wide Footer Links">
-    <small>
+  <nav aria-label="Site-wide footer">
+    <small role="list" aria-label="Site-wide footer links">
       <span role="listitem" aria-label="Contact Me">
 	<a href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a>
       </span>

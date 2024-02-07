@@ -55,19 +55,19 @@
 {{- if eq .Type "series" }}
 {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}<div class="feeds" aria-labelledby="series-feed-label" role="list">
 <span id="series-feed-label" class="label">Series feed </span>
-<a role="listitem" href="{{ $.Page.Permalink }}index.xml"> RSS feed for <q>{{ .title }}</q> series</a>
+<span role="listitem" aria-label="RSS feed for “{{ .title }}”"><a href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .title }}</q> series</a></span>
 </div>
 {{- end }}
 {{- else }}
 <div class="feeds" aria-labelledby="{{ .Type | singularize | anchorize }}-feed-label" role="list">
 <span id="{{ .Type | singularize | anchorize }}-feed-label" class="label">{{ .Type | singularize | title }} feed </span>
-<a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .Title }}</q></a>
+<span role="listitem" aria-label="RSS feed for “{{ .Title }}”"><a href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .Title }}</q></a></span>
 </div>
 {{- end }}
 {{- else if eq .Kind "taxonomy" }}
 <div class="feeds" aria-labelledby="{{ .Type | anchorize }}-feed-label" role="list">
 <span id="{{ .Type | anchorize }}-feed-label" class="label">{{ .Type | title }} feed </span>
-<a role="listitem" href="{{ $.Page.Permalink }}index.xml">RSS feed for the list of {{ .Type | title }}</a>
+<span role="listitem" aria-label="RSS feed for the list of {{ .Type | title }}"><a href="{{ $.Page.Permalink }}index.xml">RSS feed for the list of {{ .Type | title }}</a>
 </div>
 {{- end }}
 <hr class="hidden" />
