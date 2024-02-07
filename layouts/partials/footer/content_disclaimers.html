@@ -2,19 +2,16 @@
 {{- if (or (gt (len $contentWarningTags) 0) (isset $.Page.Params "content_disclaimers")) }}
 {{- $partials := slice false }}{{- range $contentWarningTags }}{{- $partials = $partials | append .content_disclaimers }}{{- end }}
 {{- with $.Page.Params.content_disclaimers }}{{- $partials = $partials | append . }}{{- end }}
-<section itemprop="comment" itemscope itemtype="http://schema.org/Comment" aria-labelledby="disclaimer-for-{{ $.Page.File.UniqueID }}">
-  <h2 id="disclaimer-for-{{ $.Page.File.UniqueID }}" itemprop="headline">Disclaimers</h2>
-  <div itemprop="text" class="disclaimer">
+<section aria-labelledby="disclaimer-for-{{ $.Page.File.UniqueID }}">
+  <h2 id="disclaimer-for-{{ $.Page.File.UniqueID }}">Disclaimers</h2>
+  <div class="disclaimer">
     <p>This post references content created by:</p>
     <ul aria-label="Content Creators">
       {{- range uniq $partials }}{{- if . }}{{- with index $.Site.Data.content_disclaimers . }}
-      <li itemprop="about" itemscope aria-label="{{ .name }}" itemtype="http://schema.org/Person">
-        <link itemprop="sameAs" href="{{ .same_as }}" />
-        <span itemprop="name">{{ .name }}</span>
-      </li>
+      <li>{{ .name }}</li>
       {{- end }}{{- end }}{{- end }}
     </ul>
-    <p>You can <a itemprop="isPartOf" href="{{ $.Page.RelPermalink }}#skip-to-content">jump back to content</a> or read about the <a href="/site-map/content-disclaimers/">disclaimers regarding content creators</a>.</p>
+    <p>You can <a href="{{ $.Page.RelPermalink }}#skip-to-content">jump back to content</a> or read about the <a href="/site-map/content-disclaimers/">disclaimers regarding content creators</a>.</p>
   </div>
 </section>
 {{- end }}

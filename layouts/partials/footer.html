@@ -1,59 +1,32 @@
 <footer class="group credits">
   <hr  />
-  <span id="tor-contact-point" itemid="{{ $.Site.BaseURL }}#tor-contact-point" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
-    <link itemprop="email" href="mailto:{{ $.Site.Params.copyrightHolderEmail }}" />
-    <link itemprop="sameAs" href="{{ $.Site.BaseURL }}contact-me/" />
-  </span>
-  <span itemprop="isPartOf" itemscope itemtype="http://schema.org/WebSite">
-    <link itemprop="url" href="{{ $.Site.BaseURL }}" />
-    <meta itemprop="name" content="{{ $.Site.Params.title }}" />
-  </span>
-  <span id="tor-organization" itemid='{{ $.Site.BaseURL }}#tor-organization' itemscope itemtype="http://schema.org/Organization" >
-    <meta itemprop="name" content="{{ $.Site.Params.title }}" />
-    <link itemprop="url" href="{{ $.Site.BaseURL }}" />
-    <link itemprop="founder" href="{{ $.Site.BaseURL }}#tor-author" />
-    <meta itemprop="foundingDate" content="{{ $.Site.Params.foundingDate }}" />
-    {{- range .Site.Params.same_as }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}
-    <link itemprop="contactPoint" href="{{ $.Site.BaseURL }}#tor-contact-point" />
-    <span id="microdata-logo" itemid="{{ $.Site.BaseURL }}#microdata-logo" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <link itemprop="url" href="{{ $.Site.BaseURL }}{{ $.Site.Params.organizationImagePath }}" />
-    </span>
-  </span>
   <small class="copyright">
-    &copy;<time datetime="{{ now.Format "2006" }}" aria-label="{{ now.Format "2006" }}" itemprop="copyrightYear">{{ now.Format "2006" }}</time>&nbsp;
-    <span id="tor-author" itemid="{{ $.Site.BaseURL }}#tor-author" itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person">
-      <link itemprop="contactPoint" href="{{ $.Site.BaseURL}}#tor-contact-point" />
-      {{- range .Site.Params.identifiers }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}
-      {{- range .Site.Params.same_as }}<link itemprop="sameAs" href="{{ . }}" />{{- end }}
-      <span class="p-name" itemprop="name">
-        <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
-          {{ .Site.Params.copyrightHolder }}
-        </a>
-      </span>
-    </span>
+    &copy;<time datetime="{{ now.Format "2006" }}" aria-label="{{ now.Format "2006" }}">{{ now.Format "2006" }}</time>&nbsp;
+    <a class="h-card" rel="me" href="{{ .Site.BaseURL }}">
+      {{ .Site.Params.copyrightHolder }}
+    </a>
   </small>
   <br />
-  <nav role="list" aria-label="Site-wide Footer Links" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <meta itemprop="name" content="Site-wide Footer Links" />
+  <nav role="list" aria-label="Site-wide Footer Links">
     <small>
       <span role="listitem" aria-label="Contact Me">
-	<a itemprop="hasPart" href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a>
+	<a href="{{ $.Site.BaseURL }}contact-me/">Contact Me</a>
       </span>
       <span aria-hidden=true>&middot;</span>
       <span role="listitem" aria-label="Changelog">
-	<a itemprop="hasPart" href="/site-map/changelog/">Changelog</a>
+	<a href="/site-map/changelog/">Changelog</a>
       </span>
       <span aria-hidden=true>&middot;</span>
       <span role="listitem" aria-label="Colophon">
-	<a itemprop="hasPart" href="/about/colophon/">Colophon</a>
+	<a href="/about/colophon/">Colophon</a>
       </span>
       <span aria-hidden=true>&middot;</span>
       <span role="listitem" aria-label="Content Disclaimers">
-	<a itemprop="hasPart" href="/site-map/content-disclaimers/">Content Disclaimers</a>
+	<a href="/site-map/content-disclaimers/">Content Disclaimers</a>
       </span>
       <span aria-hidden=true>&middot;</span>
       <span role="listitem" aria-label="Privacy Policy">
-	<a itemprop="hasPart" href="/privacy-policy/">Privacy Policy</a>
+	<a href="/privacy-policy/">Privacy Policy</a>
       </span>
     </small>
   </nav>

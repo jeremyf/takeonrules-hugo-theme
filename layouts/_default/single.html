@@ -1,29 +1,22 @@
 {{ define "breadcrumb" }}
 {{ partial "breadcrumb.html" . }}
 {{ end }}
-{{ define "pageRelatedLinks" }}
-{{- with .PrevInSection }}<link rel="prev" itemprop="relatedLink" href="{{ .Permalink }}" />{{- end }}
-{{- with .NextInSection }}<link rel="next" itemprop="relatedLink" href="{{ .Permalink }}" />{{- end }}
-{{ end }}
 {{ define "main" }}
-<article itemprop="mainEntity" class="h-entry" itemid="#skip-to-content" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize .Title }}">
   <header aria-label="Article header">
-    <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
     {{ partial "header/post.html" . }}
     {{ partial "header/content_disclaimers.html" . }}
   </header>
   {{- with .Params.hive }}
-  <section aria-label="Summary of this post's basis" itemprop="isBasedOn" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="{{ $.Page.Title }}" />
-    <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />
+  <section aria-label="Summary of this post's basis">
     <aside>
       <p>
-        <cite>{{ $.Page.Title }}</cite> expands on <a href="{{ .url }}" itemprop="url">a post I made</a> on <time itemprop="dateCreated" datetime="{{ .postDate }}">{{ .postDate }}</time> into the <a href="https://hive.io/">Hive ecosystem</a>.
+        <cite>{{ $.Page.Title }}</cite> expands on <a href="{{ .url }}">a post I made</a> on <time datetime="{{ .postDate }}">{{ .postDate }}</time> into the <a href="https://hive.io/">Hive ecosystem</a>.
       </p>
     </aside>
   </section>
   {{- end }}
-  <section itemprop="articleBody" class="e-content" itemid="#content" aria-label="Article Content">
+  <section class="e-content" aria-label="Article Content">
     {{- if eq .Params.toc true }}
     <aside class="margin toc" role="note" aria-labelledby="table-of-contents-for-{{.File.UniqueID}}">
       <h2 id="table-of-contents-for-{{.File.UniqueID}}">Table of Contents</h2>
@@ -31,16 +24,13 @@
     </aside>
     {{- end }}
     {{- with .Params.sessionReport }}
-    <section aria-label="Session report summary" itemprop="about" itemscope itemtype="http://schema.org/SocialEvent">
-      <link itemprop="subjectOf" href="{{ $.Page.Permalink }}#skip-to-content" />
-      <p><small><span itemprop="name"><cite>{{ $.Page.Title }}</cite> is a <a itemprop="isPartOf" href="{{ ref $.Page "/site-map/session-reports/index.md"  }}#skip-to-content">game session</a></span> report
+    <section aria-label="Session report summary">
+      <p><small><cite>{{ $.Page.Title }}</cite> is a <a href="{{ ref $.Page "/site-map/session-reports/index.md"  }}#skip-to-content">game session</a></cite> report
         {{- range first 1 (where $.Site.Data.glossary "game" "eq" .game) }}
-        for <cite itemprop="workFeatured" itemscope itemtype="http://schema.org/CreativeWork">
-        {{ with .itemid }}<link itemprop="sameAs" href="{{ . }}" />{{ end }}{{ with .offer }}<a itemprop="offers" href="{{ . }}">{{ end }}<span itemprop="name">{{ .title }}</span>{{ with .offer }}</a>{{ end }}</cite>
+        for <cite>{{ with .offer }}<a href="{{ . }}">{{ end }}{{ .title }}{{ with .offer }}</a>{{ end }}</cite>
         {{- end }}.
-        We played <span itemprop="location" itemscope itemtype="http://schema.org/Place"><meta itemprop="address" content="{{ $.Site.Title }} HQ" /><span itemprop="name">{{ with .location }}{{ . }}{{ else }}around the table{{ end }}</span></span> on <time itemprop="startDate" datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.
-        <meta itemprop="endDate" content="{{ dateFormat $.Site.Params.iso8601_format .date }}" />
-	{{- with $.Params.series }}{{- range (where $.Site.Data.series "key" "eq" .) }}{{- $title := .title }}{{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
+        We played {{ with .location }}{{ . }}{{ else }}around the table{{ end }} on <time datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.
+        {{- with $.Params.series }}{{- range (where $.Site.Data.series "key" "eq" .) }}{{- $title := .title }}{{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
 	It is part of my <cite><a href="{{ $seriesUrl }}">{{ $title }}</a></cite> series.
 	{{- end }}{{- end }}
 	</small>
@@ -50,19 +40,15 @@
 
     {{ .Content }}
     {{- with .Params.theItemReviewed }}
-    <section aria-labelledby="#review-summary-{{ anchorize $.Page.Title }}" itemprop="hasPart" itemscope itemtype="http://schema.org/Review">
-      <link itemprop="isPartOf" href="{{ $.Page.Permalink }}#skip-to-content" />
-      <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />
-      <h2 id="review-summary">Review Summary</h2>
+    <section aria-labelledby="#review-summary-{{ anchorize $.Page.Title }}">
+      <h2 id="review-summary-{{ anchorize $.Page.Title }}">Review Summary</h2>
       {{ with .reviewBody }}
-      <p itemprop="reviewBody">{{ partial "unparagraphy.html" . }}</p>
-      {{ else }}
-      <link itemprop="reviewBody" href="#content" />
+      <p>{{ partial "unparagraphy.html" . }}</p>
       {{ end }}
-      <p itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">I give it <span itemprop="ratingValue">{{ .ratingValue }}</span> of <span itemprop="bestRating">5</span> stars.</p>
-      <p itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ with .type }}{{ . }}{{ else }}Book{{ end }}">
-        <cite>{{ $.Page.Title }}</cite> is a review of <cite itemprop="name"><a itemprop="sameAs" href="{{ .url }}">{{ .name }}</a></cite> by <span itemprop="author">
-          {{ if eq (len .authors) 2 }}{{ delimit .authors "</span> and <span itemprop='author'>"}}{{ else }}{{ delimit .authors "</span>, <span itemprop='author'>"  "</span>, and <span itemprop='author'>" }}{{ end }}</span>.
+      <p>I give it {{ .ratingValue }} of 5 stars.</p>
+      <p>
+        <cite>{{ $.Page.Title }}</cite> is a review of <cite><a href="{{ .url }}">{{ .name }}</a></cite> by
+          {{ if eq (len .authors) 2 }}{{ delimit .authors " and "}}{{ else }}{{ delimit .authors ", "  ", and" }}{{ end }}.
       </p>
     </section>
     {{- end }}

@@ -68,7 +68,6 @@ Optional Parameters (in likely importance order):
 {{- if eq (len $abbrHTML) 0 }}{{ printf "<%s>%s</%s>" $titleTag $title $titleTag | safeHTML }}{{- else }}{{ $abbrHTML | safeHTML }}{{- end  }}
 {{- else }}
 {{- .Page.Scratch.Set $scratchKey "t" }}
-{{- $itemprop := default "mentions" ( .Get "itemprop" ) }}
 {{- $itemtype := default $entry.itemtype ("Thing") }}
 {{- if eq $titleTag "cite" }}{{ $itemtype = "CreativeWork" }}{{- end }}
 {{- $innerTitleHtml := $title }}
@@ -79,21 +78,21 @@ Optional Parameters (in likely importance order):
 {{- $dfnText := "" }}
 {{- with .Get "dfn" }}
 {{- $dfnInnerText := "" }}{{ if eq . "t" }}{{ with $entry.description }}{{- $dfnInnerText := . }}{{- end }}{{- else }}{{- $dfnInnerText = . }}{{- end }}
-{{- if ne 0 (len $dfnInnerText) }}{{- $dfnText = printf "<span class=\"sidenote-number\"><small class=\"side\" role=\"note\">(i.e., <span itemprop=\"description\">%s</span>)</small></span>" . | safeHTML }}{{- end }}{{- end }}
+{{- if ne 0 (len $dfnInnerText) }}{{- $dfnText = printf "<span class=\"sidenote-number\"><small class=\"side\" role=\"note\">(i.e., <span>%s</span>)</small></span>" . | safeHTML }}{{- end }}{{- end }}
 {{- with $entry.offer }}
-{{- $innerTitleHtml = printf "<a itemprop=\"offer\" href=\"%s\">%s</a>" . $title }}
+{{- $innerTitleHtml = printf "<a href=\"%s\">%s</a>" . $title }}
 {{- else }}
 {{- with $entry.same_as }}
-{{- $innerTitleHtml = printf "<a itemprop=\"sameAs\" href=\"%s\">%s</a>" . $title }}
+{{- $innerTitleHtml = printf "<a href=\"%s\">%s</a>" . $title }}
 {{- else }}
 {{- with $entry.url }}
 {{- $innerTitleHtml = printf "<a href=\"%s\">%s</a>" . $title }}
 {{- else }}
 {{- with .Get "link" }}
 {{- if and (eq . "same_as") (isset $entry "same_as") }}
-{{- $innerTitleHtml = printf "<a itemprop=\"sameAs\" href=\"%s\">%s</a>" $entry.same_as $title }}
+{{- $innerTitleHtml = printf "<a href=\"%s\">%s</a>" $entry.same_as $title }}
 {{- else if and (eq . "itemid") (isset $entry "itemid") }}
-{{- $innerTitleHtml = printf "<a itemprop=\"sameAs\" href=\"%s\">%s</a>" $entry.itemid $title }}
+{{- $innerTitleHtml = printf "<a href=\"%s\">%s</a>" $entry.itemid $title }}
 {{- else if eq "http" (substr . 0 4) }}
 {{- $innerTitleHtml = printf "<a href=\"%s\">%s</a>" . $title }}
 {{- else if isset $entry "itemid" }}
@@ -102,9 +101,9 @@ Optional Parameters (in likely importance order):
 {{- end }}
 {{- end }}
 {{- end }}
-{{- end }}<span itemprop="{{ $itemprop }}" itemscope itemtype="http://schema.org/{{ $itemtype }}">{{- with $entry.itemid }}<link href="{{ . }}" itemprop="sameAs">{{- end }}
-{{- if (or (.Get "noTitle") $entry.no_title) }}<meta itemprop="name" content="{{ $title }}">{{ $abbrHTML | safeHTML }}{{ $dfnText }}{{ $reflink }}{{- else }}
-{{- printf "<%s itemprop=\"name\">%s</%s>%s" $titleTag $innerTitleHtml $titleTag $dfnText | safeHTML }}
+{{- end }}
+{{- if (or (.Get "noTitle") $entry.no_title) }}{{ $abbrHTML | safeHTML }}{{ $dfnText }}{{ $reflink }}{{- else }}
+{{- printf "<%s>%s</%s>%s" $titleTag $innerTitleHtml $titleTag $dfnText | safeHTML }}
 {{- if eq 0 (len $abbrHTML) }}{{ $reflink }}{{- else }} ({{ $abbrHTML | safeHTML }}{{ $reflink}}){{- end }}
-{{- end }}</span>{{- end }}
+{{- end }}{{- end }}
 {{- else }}{{ errorf "Missing %s in file %s" (.Get "key") (.Page.Permalink) }}{{- end }}

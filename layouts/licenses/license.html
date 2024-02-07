@@ -2,17 +2,16 @@
 {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-<article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
+<article class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content">
   {{- $slug := replaceRE "^/licenses/([^/]*)/$" "$1" .RelPermalink }}
   {{- $title := .Title }}
   {{ with index (where $.Site.Data.licenses "Key" "eq" $slug) 0 }}
   <header>
-    <link itemprop="mainEntityOfPage" href="{{ $.Page.RelPermalink }}" />
-    <h1 itemprop="name" class="p-name" id="{{ anchorize $title }}">{{ .Name }}</h1>
+    <h1 class="p-name" id="{{ anchorize $title }}">{{ .Name }}</h1>
     {{ partial "footer/image.html" . }}
   </header>
   {{- with .Description }}
-  <section itemprop="about">
+  <section>
     {{ . | safeHTML }}
   </section>
   {{- end }}

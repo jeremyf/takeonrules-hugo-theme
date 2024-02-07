@@ -17,20 +17,18 @@
     {{ partial "head" . }}
     {{ end }}
   </head>
-  <body class="type-{{ .Type }} {{ with .Params.body_dom_class }}{{ . }} {{ end }}{{ if isset .Params "full_width"}}full{{ else }}{{ if .IsHome }}full{{ else }}default{{ end }}{{ end }}-width" itemscope itemtype="http://schema.org/{{ with .Params.schema_dot_org_type }}{{ . }}{{ else }}WebPage{{ end }}">
+  <body class="type-{{ .Type }} {{ with .Params.body_dom_class }}{{ . }} {{ end }}{{ if isset .Params "full_width"}}full{{ else }}{{ if .IsHome }}full{{ else }}default{{ end }}{{ end }}-width">
     <header aria-label="Site header">
-      <meta itemprop="speakable" content="{{ .Permalink }}#skip-to-content" />
       {{ block "pageRelatedLinks" . }}
       {{ end }}
-      <nav class="group" role="list" aria-label="Site navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-        <meta itemprop="name" content="Site navigation" />
-        <span role="listitem" aria-labelledby="skip-link"><a href="#skip-to-content"  itemprop="hasPart" class="offscreen" id="skip-link">Skip to Main Content</a></span>
-        <span aria-labelledby="home" role="listitem" class="site-nav-home"><a id="home" itemprop="hasPart" aria-label="Home" rel="home" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }} aria-current="page" {{end}} >{{ .Site.Title }}</a></span>
+      <nav class="group" role="list" aria-label="Site navigation">
+        <span role="listitem" aria-labelledby="skip-link"><a href="#skip-to-content" class="offscreen" id="skip-link">Skip to Main Content</a></span>
+        <span aria-labelledby="home" role="listitem" class="site-nav-home"><a id="home" aria-label="Home" rel="home" href="{{ .Site.BaseURL }}" {{ if eq (string $.Page.Permalink) (string .Site.BaseURL) }} aria-current="page" {{end}} >{{ .Site.Title }}</a></span>
         {{- range $idx, $item := .Site.Menus.topnav }}
 	{{- $title := default $item.Title ($item.Name) }}
-        <span role="listitem" aria-label="{{$title}}"><a itemprop="hasPart" href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}aria-current="page" {{ end }} title="{{ $title }}">{{ $item.Name | safeHTML }}</a></span><span class="hidden"> &middot; </span>
+        <span role="listitem" aria-label="{{$title}}"><a href="{{ $item.URL }}" {{ if eq $.Page.RelPermalink $item.URL }}aria-current="page" {{ end }} title="{{ $title }}">{{ $item.Name | safeHTML }}</a></span><span class="hidden"> &middot; </span>
         {{- end }}
-        <span role="listitem" aria-label="Search"><a itemprop="hasPart" {{ if eq (string $.Page.RelPermalink) "/search/" }}aria-current="page" {{ end }} rel="search" id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a></span>
+        <span role="listitem" aria-label="Search"><a {{ if eq (string $.Page.RelPermalink) "/search/" }}aria-current="page" {{ end }} rel="search" id="search-link" href="https://duckduckgo.com/?q=site:{{ .Site.Params.siteHost }}" title="Search via DuckDuckGo">Search</a></span>
       </nav>
       <script>
        var form = document.getElementById('search-link');

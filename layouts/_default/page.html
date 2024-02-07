@@ -2,12 +2,11 @@
   {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article itemprop="mainEntity" class="h-entry" {{ with .Params.ariaArticleLabel }}aria-label="{{ . }}"{{ else }}aria-labelledby="{{ anchorize .Title }}"{{ end }} id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/{{ with .Params.Schema }}{{ .type }}{{ else }}WebPageElement{{ end }}">
+  <article class="h-entry" {{ with .Params.ariaArticleLabel }}aria-label="{{ . }}"{{ else }}aria-labelledby="{{ anchorize .Title }}"{{ end }} id="skip-to-content">
     <header aria-label="Article header">
-      <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-      <h1 itemprop="headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title | safeHTML }}</h1>
+      <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title | safeHTML }}</h1>
     {{- with .Params.headline }}
-      <h2 itemprop="alternateHeadline">{{ . }}</h2>
+      <h2>{{ . }}</h2>
       {{- end }}
       {{- if or .Params.relPrevious .Params.relNext }}
       <nav aria-labelledby="{{ .Type }}-neighbors-label" class="paginator">
@@ -18,7 +17,7 @@
       </nav>
       {{- end }}
     </header>
-    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}property="text"{{ end }}{{ end }} class="e-content" role="region" aria-label=" {{ with .Params.ariaArticleLabel }}{{ . }}{{ else }}Article{{ end }}">
+    <section {{ with .Params.Schema }}{{ with .skipText }}{{ else }}property="text"{{ end }}{{ end }} class="e-content" role="region" aria-label="{{ with .Params.ariaArticleLabel }}{{ . }}{{ else }}Article{{ end }}">
       {{ .Content }}
     </section>
     <footer aria-label="Article footer">

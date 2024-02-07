@@ -82,7 +82,7 @@ There additional optional keys are as follows:
 - **game**: Indicates that this thing is a game, useful for the [`linkToGame` yasnippet](https://github.com/jeremyf/dotzshrc/blob/5c84e8b05d06b8224811b6f679ea479a67f4a6f1/emacs/snippets/text-mode/linkToGame).
 - **content_disclaimers**: (Array) Indicates that this entry has some associated content disclaimer.
 - **itemtype**: The schema.org itemtype for this entry.
-- **description**: Similar to note, treat as `itemprop="description"`.
+- **description**: Similar to note, treat as `ohitemprop="description"`.
 - **described**: A boolean.  When `true` the given glossary entry has already been described; don't attempt to fetch the description from Wikidata.
 
 ### Other Stuff

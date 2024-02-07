@@ -2,13 +2,12 @@
 {{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-<article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
+<article class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content">
   <header>
-    <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-    <h1 itemprop="name" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+    <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
     {{ partial "footer/image.html" . }}
   </header>
-  <section itemprop="text" class="e-content">
+  <section class="e-content">
     <p>
       Below are all of the posts with the <em>{{ .Title }}</em> {{ .Type | singularize }}.
       {{- $type := .Type }}
@@ -25,16 +24,13 @@
       {{- with $entry }}
       <li>
         <time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time>
-        <span itemprop="hasPart" itemscope itemtype="http://schema.org/CreativeWork">
-          <meta itemprop="position" content="{{ $index }}" />
-          <cite itemprop="name"><a itemprop="url" href="{{ .Permalink}}">{{ .Title }}</a></cite>
+        <cite><a href="{{ .Permalink}}">{{ .Title }}</a></cite>
 	  {{- with .Params.Headline }}
-	  <p itemprop="alternateHeadline">{{ . | markdownify }}</p>
+	  <p>{{ . | markdownify }}</p>
 	  {{- end }}
 	  {{- with .Params.Description }}
-	  <p itemprop="abstract" class="p-summary"> {{ partial "unparagraphy.html" . }}</p>
+	  <p class="p-summary"> {{ partial "unparagraphy.html" . }}</p>
 	  {{- end }}
-        </span>
       </li>
       {{- end }}
       {{- end }}

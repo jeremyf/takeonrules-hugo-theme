@@ -4,7 +4,7 @@
 {{- if eq .site.Params.withTagRels true }}{{- $pages = where .site.Pages "Params.tags" "intersect" (slice $tag) }}{{- end }}
 {{- if $pages }}{{- $prev := index (where $pages ".PublishDate" "lt" .page.PublishDate) 0 }}
 {{- if $prev }}<a href="{{ $prev.RelPermalink }}" aria-label="Previous post tagged with &ldquo;{{ $tag }}&rdquo; is &ldquo;{{ $prev.Title }}&rdquo;" title="Older post tagged with &ldquo;{{ $tag }}&rdquo; is &ldquo;{{ $prev.Title }}&rdquo;"><small>&lt;</small></a> {{- else }}<small aria-hidden="true">&lt;</small> {{- end }}{{- end }}
-<a rel="tag" href="{{ "tags" | absURL }}/{{ $tag | urlize }}/" class="p-category" aria-label="All posts tagged with &ldquo;{{ $tag }}&rdquo;" title="All posts tagged with &ldquo;{{ $tag }}&rdquo;" itemprop="keywords">{{ $tag | anchorize }}</a>
+<a rel="tag" href="{{ "tags" | absURL }}/{{ $tag | urlize }}/" class="p-category" aria-label="All posts tagged with &ldquo;{{ $tag }}&rdquo;" title="All posts tagged with &ldquo;{{ $tag }}&rdquo;">{{ $tag | anchorize }}</a>
 {{- if $pages }}
 {{- $next := where $pages ".PublishDate" "gt" .page.PublishDate }}{{- range last 1 $next }} <a href="{{ .RelPermalink }}" aria-label="Next post tagged with &ldquo;{{ $tag }}&rdquo; is &ldquo;{{ .Title }}&rdquo;" title="Newer post tagged with &ldquo;{{ $tag }}&rdquo; is &ldquo;{{ .Title }}&rdquo;"><small>&gt;</small></a>{{- else }} <small aria-hidden="true">&gt;</small>{{- end }}{{- end }}
 </span>

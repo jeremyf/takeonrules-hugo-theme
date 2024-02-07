@@ -9,7 +9,7 @@
 {{- $scratchKey = printf "glossary-%s" $game }}
 {{- end }}
 {{- $post := .Get "post" }}
-<blockquote {{ with .Get "id" }}id="{{ . }}" {{ end }}itemprop="citation" itemscope itemtype="http://schema.org/Quotation" class="h-cite {{- with .Get "epigraph" }} epigraph{{- end }}" {{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
+<blockquote {{ with .Get "id" }}id="{{ . }}" {{ end }} class="h-cite {{- with .Get "epigraph" }} epigraph{{- end }}" {{- if($cite_url) }} cite="{{ $cite_url }}"{{ end }}>
 {{ if .Get "verse" }}
 <pre class="verse">{{ .Inner }}</pre>
 {{ else }}
@@ -18,11 +18,10 @@
 {{- if .IsNamedParams }}
 <footer>&mdash;
 {{- with .Get "pre" }}
-<span class="p-author h-card" itemprop="author">{{ . | markdownify }}</span>{{- if(or (or $cite $cite_url) $post) }}, {{ end }}
+<span class="p-author h-card">{{ . | markdownify }}</span>{{- if(or (or $cite $cite_url) $post) }}, {{ end }}
 {{- end }}
-
-{{- if $scratchKey }}{{- if (.Page.Scratch.Get $scratchKey) }}<cite itemprop="headline">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</cite><link itemprop="mainEntityOfPage" href="{{ $cite_url }}" />{{- else }}<cite itemprop="headline"><a itemprop="mainEntityOfPage" href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</a></cite>{{- end }}
-{{- else if $cite_url }}<cite itemprop="headline"><a itemprop="mainEntityOfPage" href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</a></cite>{{- else }}{{- if $cite }}<cite itemprop="headline">{{- $cite }}</cite>{{- end }}{{- end }}
+{{- if $scratchKey }}{{- if (.Page.Scratch.Get $scratchKey) }}<cite>{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</cite>{{- else }}<cite><a href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</a></cite>{{- end }}
+{{- else if $cite_url }}<cite><a href="{{ $cite_url }}" class="u-url p-name" rel="cite">{{- if $cite }}{{- $cite }}{{- else }}{{- $cite_url }}{{- end }}</a></cite>{{- else }}{{- if $cite }}<cite>{{- $cite }}</cite>{{- end }}{{- end }}
 {{- if($post) }}{{ partial "unparagraphy.html" $post }}{{- end }}
 </footer>
 {{- end }}

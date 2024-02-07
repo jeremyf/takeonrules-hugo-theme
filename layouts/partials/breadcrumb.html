@@ -1,38 +1,32 @@
-<nav itemprop="breadcrumb" aria-labelledby="breadcrumbs-label" class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+<nav aria-labelledby="breadcrumbs-label" class="breadcrumb">
 <span role="list" aria-labelledby="breadcrumbs-label">
-<span id="breadcrumbs-label" itemprop="name" class="label">Breadcrumbs </span>
+<span id="breadcrumbs-label" class="label">Breadcrumbs </span>
 {{- if eq .Type "post" }}
 {{- $year := .Date.Format "2006" }}
-<span role="listitem" aria-label="Home" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-<span itemprop="name"><a itemprop="item" href="{{ .Site.BaseURL }}">Home</a></span>
-<meta itemprop="position" content="1" />
+<span role="listitem" aria-label="Home">
+<a href="{{ .Site.BaseURL }}">Home</a>
 </span><span aria-hidden="true"> / </span>
 {{- with .Site.GetPage (printf "/%s" $year) }}
-<span role="listitem" itemprop="itemListElement" aria-labelled-by="{{ .Permalink }}" itemscope itemtype="http://schema.org/ListItem">
-<span itemprop="name"><a itemprop="item" rel="up" href="{{ .Permalink }}" id="{{ .Permalink}}">{{ .Title }}</a></span>
-<meta itemprop="position" content="2" />
+<span role="listitem" aria-labelled-by="{{ .Permalink }}">
+<a rel="up" href="{{ .Permalink }}" id="{{ .Permalink}}">{{ .Title }}</a>
 </span><span aria-hidden="true"> / </span>
 {{- end }}
-<cite role="listitem" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-<span itemprop="name"><a itemprop="item" href="{{ .Permalink }}" id="{{ .Permalink }}" aria-current="page">{{ .Title }}</a></span>
-<meta itemprop="position" content="3" />
+<cite role="listitem">
+<a href="{{ .Permalink }}" id="{{ .Permalink }}" aria-current="page">{{ .Title }}</a>
 </cite>
 {{- else if eq .Type "series" }}
-<span role="listitem" aria-label="Home" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-<span itemprop="name"><a itemprop="item" href="{{ .Site.BaseURL }}">Home</a></span>
-<meta itemprop="position" content="1" />
+<span role="listitem" aria-label="Home">
+<a href="{{ .Site.BaseURL }}">Home</a>
 </span><span aria-hidden="true"> / </span>
 {{- if eq .Kind "taxonomy" }}
 <cite>Series</cite>
 {{- else }}
-<span role="listitem" aria-label="Series" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-<span itemprop="name"><a itemprop="item" href="{{ .Site.BaseURL }}series/">Series</a></span>
-<meta itemprop="position" content="2" />
+<span role="listitem" aria-label="Series">
+<a href="{{ .Site.BaseURL }}series/">Series</a>
 </span>
 {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
-<span aria-hidden="true"> / </span><cite role="listitem" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-<span itemprop="name"><a itemprop="item" href="{{ .Permalink }}" id="{{ .Permalink }}" aria-current="page">{{ .title }}</a></span>
-<meta itemprop="position" content="3" />
+<span aria-hidden="true"> / </span><cite role="listitem">
+<a href="{{ .Permalink }}" id="{{ .Permalink }}" aria-current="page">{{ .title }}</a>
 </cite>
 {{- end }}
 {{- end }}
@@ -49,19 +43,17 @@
 {{- if eq .p1 .p2 }}
 <cite id="{{ .p1.Permalink}}" role="listitem" aria-current="page">{{ .p1.Title }}</cite>
 {{- else }}
-<span role="listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-labelledby="{{ .p1.Permalink }}">
-<a itemprop="item" id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}">
-<span itemprop="name">{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}</span>
+<span role="listitem" aria-labelledby="{{ .p1.Permalink }}">
+<a id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}">
+{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" .p1.Title) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}
 </a>
-<meta itemprop="position" content="{{ .depth }}" />
 </span>
 {{- end }}
 {{- end }}
   </span></nav>
 {{- if eq .Kind "term" }}
 {{- if eq .Type "series" }}
-{{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
-<div class="feeds" aria-labelledby="series-feed-label" role="list">
+{{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}<div class="feeds" aria-labelledby="series-feed-label" role="list">
 <span id="series-feed-label" class="label">Series feed </span>
 <a role="listitem" href="{{ $.Page.Permalink }}index.xml"> RSS feed for <q>{{ .title }}</q> series</a>
 </div>

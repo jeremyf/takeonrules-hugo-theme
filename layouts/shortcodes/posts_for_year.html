@@ -18,9 +18,9 @@
         <summary class="month">{{ .Key }} ({{ len .Pages }} posts)</summary>
         <ul>
           {{- range .Pages }}
-          <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-            <time itemprop="datePublished" datetime="{{  .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time> &middot;
-            <cite itemprop="headline"><a itemprop="mainEntityOfPage" href="{{ .RelPermalink }}">{{ .Title }}</a></cite>
+          <li>
+            <time datetime="{{  .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time> &middot;
+            <cite><a href="{{ .RelPermalink }}">{{ .Title }}</a></cite>
           </li>
           {{- end }}
         </ul>

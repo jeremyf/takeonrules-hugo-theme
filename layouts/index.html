@@ -19,19 +19,12 @@
     </div>
     <hr class="hidden" />
 {{ end }}
-{{- define "pageRelatedLinks" }}
-{{- with .Paginate (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
-{{ if .HasNext }}<link rel="next" itemprop="relatedLink" href="{{ .Next.URL }}" />{{ end }}
-{{ if .HasPrev }}<link rel="prev" itemprop="relatedLink" href="{{ .Prev.URL }}" />{{ end }}
-{{- end }}
-{{- end }}
 {{ define "main" }}
-<p itemprop="about" aria-label="About {{ .Site.Title }}">
+<p aria-label="About {{ .Site.Title }}">
   {{ partial "unparagraphy.html" .Content }}
 </p>
-<section itemprop="mainEntity" class="h-entry" aria-labelledby="blog-posts" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/Blog">
+<section class="h-entry" aria-labelledby="blog-posts" id="skip-to-content">
   {{- $paginator := .Paginate (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}
-  <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
   <h1 id="blog-posts">Blog Posts{{- if eq 1 $paginator.PageNumber }}{{- else }} (Page {{ $paginator.PageNumber }}){{- end }}</h1>
   {{- with $paginator }}
   <nav aria-labelledby="blog-pagination-label" class="paginator">
@@ -42,29 +35,19 @@
   <ol aria-labelledby="blog-posts">
   {{ range $index, $object := $paginator.Pages }}
   {{ with $object }}
-  <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="{{ anchorize .Title }}">
+  <li aria-labelledby="{{ anchorize .Title }}">
     <h2 id="{{ anchorize .Title }}">
-      <cite itemprop="headline"><a itemprop="mainEntityOfPage" href="{{ .RelPermalink }}" rel="bookmark">{{ .Title }}</a></cite>
+      <cite><a href="{{ .RelPermalink }}" rel="bookmark">{{ .Title }}</a></cite>
     </h2>
     {{- if isset .Params "headline" }}
-    <h3 itemprop="alternateHeadline">{{- .Params.headline | markdownify }}</h3>
+    <h3>{{- .Params.headline | markdownify }}</h3>
     {{- end }}
     {{- with .Params.Description }}
-    <p itemprop="abstract" class="p-summary"> {{ partial "unparagraphy.html" . }}</p>
+    <p> {{ partial "unparagraphy.html" . }}</p>
     {{- end }}
-    <meta itemprop="wordCount" content="{{ .WordCount }}" />
-    <link itemprop="author" href="{{ $.Site.BaseURL }}#tor-author" />
-    <link itemprop="publisher" href="{{ $.Site.BaseURL }}#tor-organization" />
     <nav aria-label="Content's metadata and navigation">
       {{ partial "postAuthorWithoutLink.html" . }}{{ partial "postDate.html" . }}{{ partial "postTagsHomePage.html" . }}{{ partial "postSeriesHomePage.html" . }}
     </nav>
-    {{ with .Params.images }}
-    {{ range . }}
-    <link itemprop="image" href="{{ .src }}" />
-    {{ end }}
-    {{ else }}
-    {{ partial "footer/image.html" . }}
-    {{ end }}
   </li>
   {{- end }}
   {{- end }}

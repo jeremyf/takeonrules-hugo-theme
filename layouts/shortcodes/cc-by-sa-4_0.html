@@ -1,16 +1,16 @@
-<article itemprop="citation" class="licensed" aria-labelledby="{{- with .Get "h2"}}{{ . | anchorize }}{{- end }}" itemscope itemtype="http://schema.org/CreativeWork">
+<article class="licensed" aria-labelledby="{{- with .Get "h2"}}{{ . | anchorize }}{{- end }}">
   <header aria-label="Embedded article header">
   <p class="wrapper"><small>Begin <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) Content</a></small></p>
-  {{ with .Get "h2"}}<h2 itemprop="Headline" id="{{ . | anchorize }}">{{ . }}</h2>{{ end }}
+  {{ with .Get "h2"}}<h2 id="{{ . | anchorize }}">{{ . }}</h2>{{ end }}
   </header>
-  <section itemprop="text" aria-label="Embedded content">
+  <section aria-label="Embedded content">
     {{ .Inner | markdownify }}
   </section>
   <footer aria-label="Embedded article header">
     <p class="wrapper"><small>End <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) Content</a></small></p>
-    <p itemprop="copyrightNotice">
+    <p>
     <small>
-      <cite>{{ with .Get "h2"}}{{ . }}{{ end }}</cite> by <a href="{{ $.Site.BaseURL }}">{{ $.Site.Params.copyrightHolder }}</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Based on a work at <a href="{{ $.Page.Permalink }}">{{ $.Page.Permalink }}</a>.{{ if isset .Site.Params "morepermissionspermalink" }} Permissions beyond the scope of this license may be available at <a itemprop="acquireLicensePage" href="{{ .Site.Params.morePermissionsPermalink }}">{{ .Site.Params.morePermissionsPermalink }}</a>.{{ end }}
+      <cite>{{ with .Get "h2"}}{{ . }}{{ end }}</cite> by <a href="{{ $.Site.BaseURL }}">{{ $.Site.Params.copyrightHolder }}</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Based on a work at <a href="{{ $.Page.Permalink }}">{{ $.Page.Permalink }}</a>.{{ if isset .Site.Params "morepermissionspermalink" }} Permissions beyond the scope of this license may be available at <a href="{{ .Site.Params.morePermissionsPermalink }}">{{ .Site.Params.morePermissionsPermalink }}</a>.{{ end }}
     </small>
     </p>
   </footer>

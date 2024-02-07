@@ -1,14 +1,12 @@
 {{ define "main" }}
-  <article itemprop="mainEntity" class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content" itemid="#skip-to-content" itemscope itemtype="http://schema.org/WebPageElement">
+  <article class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content">
     <header>
-      <link itemprop="mainEntityOfPage" href="{{ .Permalink }}#skip-to-content" />
-      <h1 itemprop="headline" class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+      <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
     </header>
-    <section class="e-content" itemprop="text">
-      <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject" role="note">
-        <link itemprop="url" href="/images/logo.jpg" />
+    <section class="e-content">
+      <figure role="note">
         <img src="/images/logo.jpg"  data-widht="309" data-height="250" alt="An abstract wooden chicken surveys a chessboard littered with game pieces."/>
-        <figcatpion itemprop="caption">The Chicken of Discovery has found nothing.</figcatpion>
+        <figcatpion>The Chicken of Discovery has found nothing.</figcatpion>
       </figure>
 
       <p>It looks like we couldn't find the page you wanted.</p>
