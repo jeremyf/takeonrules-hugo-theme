@@ -7,15 +7,15 @@
   {{- end }}
 {{- end }}
 {{- define "breadcrumb" }}
-    <div class="feeds" aria-labelledby="site-feeds-label" role="list">
+    <div class="feeds" aria-labelledby="site-feeds-label" role="menu">
       <span id="site-feeds-label" class="label">Site feeds </span>
-      <span role="listitem" aria-label="ATOM Feed">
+      <span role="menuitem" aria-label="ATOM Feed">
 	<a href="{{ .Site.BaseURL }}index.atom">ATOM feed</a>
       </span><span aria-hidden="true"> &middot; </span>
-      <span role="listitem" aria-label="RSS Feed">
+      <span role="menuitem" aria-label="RSS Feed">
 	<a href="{{ .Site.BaseURL }}index.xml">RSS feed</a>
       </span><span aria-hidden="true"> &middot; </span>
-      <span role="listitem" aria-label="JSON Feed">
+      <span role="menuitem" aria-label="JSON Feed">
 	<a href="{{ .Site.BaseURL }}index.json">JSON feed</a>
       </span>
     </div>

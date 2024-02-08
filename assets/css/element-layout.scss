@@ -108,7 +108,7 @@ h2, h3, h4, summary, p, .table-wrapper, pre, dl { width: 55%; }
 body {
     > header {
         hr { display: none; }
-        &> nav {
+        &> [role=menu], nav {
             &.skip-links { padding: 0rem; }
             h1 { display: inline-block; margin: 0; }
 	    .site-nav-home { display: inline; margin: 0; }
