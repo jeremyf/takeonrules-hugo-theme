@@ -1,9 +1,7 @@
 {{- if .Params.canonical_url }}<link rel="canonical" href="{{ .Params.canonical_url }}" />
 {{- else if .RelPermalink }}<link rel="canonical" href="{{ .RelPermalink }}" />{{- end }}
 {{ partial "head-duplicated-info.html" . }}
-{{- with .Params.org_id }}
-<meta property="org_id" content="{{ . }}" />
-{{- end }}
+{{- with .Params.org_id }}<meta property="org_id" content="{{ . }}" />{{- end }}
 <meta name="org-roam-type" content="{{ .Type }}" />
 {{- if eq hugo.Environment "development" }}
 <meta name="hugoPageKind" content="{{ .Kind }}" />
@@ -23,7 +21,7 @@
 <meta name="datePublished" content="{{ .Date.Format .Site.Params.iso8601_format }}" />
 {{ end }}
 {{- if .IsHome }}
-{{ $tags := (slice false) }}{{- $paginator := .Paginate (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}{{- range $index, $object := $paginator.Pages }}{{- $tags = $tags | union $object.Params.tags }}{{- end }}
+{{- $tags := (slice false) }}{{- $paginator := .Paginate (where .Site.AllPages "Type" "in" .Site.Params.paginatedSections) .Site.Params.pagination_size }}{{- range $index, $object := $paginator.Pages }}{{- $tags = $tags | union $object.Params.tags }}{{- end }}
 {{- range $tags }}<meta name="keywords" content="{{ . }}" />{{- end }}
 {{- else }}
 {{- range .Params.tags }}<meta name="keywords" content="{{ . }}" />{{- end}}
