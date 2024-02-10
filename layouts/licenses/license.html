@@ -19,8 +19,8 @@
   <section>
     {{- range .Data.Pages.GroupByDate "2006" }}
     <details>
-      <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
-      <dl class="group">
+      <summary>{{ .Key }} ({{ len .Pages }})</summary>
+      <dl>
         {{- range .Pages }}
         <dt><time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time></dt>
         <dd><cite><a href="{{ .Permalink}}">{{ .Title }}</a></cite></dd>

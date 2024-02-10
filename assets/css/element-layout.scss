@@ -14,7 +14,6 @@ h2 { font-size: 1.5rem; }
 h3 { font-size: 1.3rem; }
 h4 { font-size: 1.2rem; }
 
-summary { cursor: pointer; }
 abbr { cursor: help; }
 p, summary, li {  vertical-align: baseline; }
 figure, blockquote { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
@@ -30,32 +29,32 @@ small a.ref { font-size: xx-small; }
 }
 
 blockquote {
-  width: 55%;
-  padding-left: 1rem;
-  p, .group, ul, ol, dl, h2, h3, h4, footer { width: 90%; }
-  .verse {
-      width: auto;
-      color: var(--blockquote);
-  }
-  footer {
-    text-align: right;
-    margin-left: 1rem;
-    margin-top: 1rem;
-  }
+    width: 55%;
+    padding-left: 1rem;
+    p, .group, ul, ol, dl, h2, h3, h4, footer { width: 90%; }
+    .verse {
+	width: auto;
+	color: var(--blockquote);
+    }
+    footer {
+	text-align: right;
+	margin-left: 1rem;
+	margin-top: 1rem;
+    }
 }
 
-nav [role="list"] [role="listitem"], nav .series-navigation { display: inline-block; }
+nav [role="list"] [role="listitem"] { display: inline-block; }
 
 /* BEGIN Epigraphs */
 .epigraph {
 
-  width: 45%; padding-left: 5%; margin-top: 2rem; margin-bottom: 2rem;
-  @media screen and (max-width:760px) {
-      width: 75%;
-  }
-  border-left: none;
-  font-style: italic;
-  .p-author { font-style: normal; }
+    width: 45%; padding-left: 5%; margin-top: 2rem; margin-bottom: 2rem;
+    @media screen and (max-width:760px) {
+	width: 75%;
+    }
+    border-left: none;
+    font-style: italic;
+    .p-author { font-style: normal; }
 }
 
 .full-width .epigraphs {
@@ -86,13 +85,13 @@ nav [role="list"] [role="listitem"], nav .series-navigation { display: inline-bl
 figure { max-width: 55%; }
 img { max-width: 100%; }
 figcaption {
-  float: right;
-  clear: right;
-  margin-right: -50%;
-  vertical-align: baseline;
-  position: relative;
-  max-width: 40%;
-  width: 40%
+    float: right;
+    clear: right;
+    margin-right: -50%;
+    vertical-align: baseline;
+    position: relative;
+    max-width: 40%;
+    width: 40%
 }
 
 .type-tags, .type-series, .full-width {
@@ -136,12 +135,10 @@ body {
 
 pre, pre code { font-family: var(--code-font); overflow-x: auto; }
 pre { padding: 0 1.5%; }
-pre code { padding: 1.5%; }
+pre code { padding: 1.5%;  display: block; white-space: pre; }
 kbd, code { font-family: var(--code-font); }
 kbd { padding: 0 2px; margin: 0 1px; border-radius: 4px; background: var(--bg-dim); }
-pre code { display: block; white-space: pre;  }
-
-.newthought { font-variant: small-caps; letter-spacing: 0.05rem; }
+// .newthought { font-variant: small-caps; letter-spacing: 0.05rem; }
 
 @import "marginalia";
 
@@ -152,21 +149,17 @@ pre code { display: block; white-space: pre;  }
 
 // BEGIN Skip Navigation
 a.offscreen {
-  position:absolute; left:-1000px; top:-1000px; width:1px; height:1px; text-align: left; overflow:hidden;
-  &:focus, &:active, &:hover {
-    position:absolute;
-    padding: 0.75rem 0.75rem;
-    margin: 1.5rem 2rem 0 0;
-    left:5px;
-    top:-20px;
-    width:auto;
-    height:auto;
-    overflow:visible; }
+    position:absolute; left:-1000px; top:-1000px; width:1px; height:1px; text-align: left; overflow:hidden;
+    &:focus, &:active, &:hover {
+	position:absolute;
+	padding: 0.75rem 0.75rem;
+	margin: 1.5rem 2rem 0 0;
+	left:5px;
+	top:-20px;
+	width:auto;
+	height:auto;
+	overflow:visible; }
 }
-
-/* clearfix hack after Cederholm (group class name) */
-.group:after { display: table; clear: both; }
-.group:not(dl):after { content: "" ;}
 
 dl {
     display: grid;
@@ -204,33 +197,29 @@ main > .h-entry, main > #skip-to-content {
 main > .h-entry > footer input { width: 80%; }
 
 // breadcrumb
-.hidden { display: none; }
+
 .breadcrumb, .paginator, .feeds {
-  .label { display: none; }
-  width: 85%; font-family: var(--header-font);
+    .label { display: none; }
+    width: 85%; font-family: var(--header-font);
 }
 
 .breadcrumb, .paginator {
     padding-bottom: 1rem;
 }
 
-.label { display: none; }
-
-.hide-js { display: none; }
-
 @media screen and (max-width: 760px) {
     h2, h2, h3, h4, summary, p, body > footer, .table-wrapper, pre, dl, .h-entry summary { width: 85%; }
     .h-entry section > ol, .h-entry section > ul { width: 76.5%; }
-  figure { max-width: 90%; }
-  figcaption { margin-right: 0%; max-width: none; }
-  blockquote {
-    width: 80%;
-    > * {  width: 80%; }
-  }
+    figure { max-width: 90%; }
+    figcaption { margin-right: 0%; max-width: none; }
+    blockquote {
+	width: 80%;
+	> * {  width: 80%; }
+    }
 }
 
 @media (max-width: 760px) {
-  pre, pre code { width: 90%; }
+    pre, pre code { width: 90%; }
 }
 
 sup { font-size: 51%;} /* A weird rendering error happens when this is a set height or greater than 50% */
@@ -239,7 +228,7 @@ ins { text-decoration-line: none; }
 /* Hacks to better present */
 .licensed {
     .wrapper { font-family: var(--code-font); font-variant: small-caps; }
-  padding-left: 1rem;
+    padding-left: 1rem;
 }
 
 details {
@@ -255,13 +244,13 @@ summary { margin-top: 0.83em; margin-bottom: 0.83em; }
 }
 
 @media screen and (max-width: 760px) {
-  details > *:not(summary):not([role="note"]) {
-    width: 87.5%;
-  }
-  .year-summary > details {
-      > summary { width: 87.5% }
-      > ul { width: auto; }
-  }
+    details > *:not(summary):not([role="note"]) {
+	width: 87.5%;
+    }
+    .year-summary > details {
+	> summary { width: 87.5% }
+	> ul { width: auto; }
+    }
 }
 
 dfn, .dfn, .mechanic { font-weight: bold; }
@@ -271,4 +260,4 @@ dfn, .dfn, .mechanic { font-weight: bold; }
 // Introducing the mechanic class; which is inspired by the Errant RPG
 .mechanic { font-style: normal; font-variant: petite-caps; text-transform: capitalize }
 
-.print-only { display: none; }
+.print-only, .hidden, .hide-js, .label { display: none; }
