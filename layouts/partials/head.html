@@ -70,30 +70,29 @@
 <script type="text/javascript">
  window.addEventListener(
    'load',
-   (event) => {
-     const sidenotes = document.querySelectorAll(".side-container")
-     sidenotes.forEach((sidenote, i, _arr) => {
-       sidenote.classList.add("js");
-       let button = document.createElement("button");
-       button.setAttribute("aria-expanded", "false");
-       button.setAttribute("aria-controls", "sidenote-content-" + (i + 1));
-       button.innerHTML = "Sidenote #" + (i + 1);
-       button.classList.add("side-toggler");
-       button.addEventListener('click', (event) => {
-	 event.preventDefault();
-	 // The button element
-	 let the_button = event.target.parentElement;
-	 if (the_button.getAttribute("aria-expanded") == "true") {
-	   the_button.setAttribute("aria-expanded", false);
+   (e) => {
+     const sides = document.querySelectorAll(".side-container")
+     sides.forEach((side, i, _arr) => {
+       side.classList.add("js");
+       let b = document.createElement("button");
+       b.setAttribute("aria-expanded", "false");
+       b.setAttribute("aria-controls", "side-content-" + (i + 1));
+       b.innerHTML = "Sidenote #" + (i + 1);
+       b.classList.add("side-toggler");
+       b.addEventListener('click', (e) => {
+	 e.preventDefault();
+	 let the_b = e.target.parentElement;
+	 if (the_b.getAttribute("aria-expanded") == "true") {
+	   the_b.setAttribute("aria-expanded", false);
 	 } else {
-	   the_button.setAttribute("aria-expanded", true);
+	   the_b.setAttribute("aria-expanded", true);
 	 }
-	 let text_element = the_button.parentElement.querySelector(".side[role='note']");
-	 text_element.classList.toggle("hidden");
+	 let text = the_b.parentElement.querySelector(".side[role='note']");
+	 text.classList.toggle("hidden");
        });
-       sidenote.prepend(button);
-       let note = sidenote.querySelector(".side[role='note']");
+       side.prepend(b);
+       let note = side.querySelector(".side[role='note']");
        note.classList.add("hidden");
-       note.setAttribute("id", "sidenote-content-" + (i + 1));
+       note.setAttribute("id", "side-content-" + (i + 1));
  })});
 </script>
