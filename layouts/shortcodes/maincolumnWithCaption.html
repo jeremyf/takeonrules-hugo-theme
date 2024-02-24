@@ -1,3 +1,5 @@
+{{- $details  := .Get "details" }}
+{{- $summary  := default "Image" (.Get "summary") }}
 {{- $path     := .Get "src" }}
 {{- $alt      := default "" (.Get "alt") }}
 {{- $caption  := .Get "caption" }}
@@ -7,6 +9,7 @@
 {{- $imageResize := default "770x" (.Get "resize") }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "%s r%s" $imageResize .) }}{{- end }}
 {{- $result   := $original.Resize $imageResize }}
+{{- if $details }}<details {{ if (or (isSet .Params "hidden") (eq (len $alt) 0)) }} aria-hidden="true"{{ end }}><summary>{{ $summary }}</summary>{{- end }}
 <figure {{ if (or (isSet .Params "hidden") (eq (len $alt) 0)) }} aria-hidden="true"{{ end }}>
 {{- with .Inner }}<figcaption>{{ partial "paragraphy.html" . }}</figcaption>{{ end }}
 {{- if .Get "link" }}
@@ -18,3 +21,4 @@
 {{- end }}
 </figure>
 {{- end }}
+{{- if $details }}</details>{{- end }}
