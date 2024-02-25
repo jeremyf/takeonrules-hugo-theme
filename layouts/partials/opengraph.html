@@ -1,5 +1,5 @@
-{{- if (and (eq .Kind "term") (eq .Type "series")) }}
-{{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}<meta property="og:title" content="{{ .title }}" />{{- end }}
+{{- if (and (eq .Kind "term") (eq .Type "Series")) }}
+{{- range first 1 (where $.Site.Data.series "key" "eq" (lower .Title) ) }}<meta property="og:title" content="{{ .title }}" />{{- end }}
 {{- else }}
 <meta property="og:title" content="{{ .Title }}" />
 {{- $description := "" }}

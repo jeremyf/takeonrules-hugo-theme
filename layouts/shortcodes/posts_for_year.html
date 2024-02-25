@@ -43,7 +43,7 @@
     <summary>I've posted into {{ len $series }} series&hellip;</h2></summary>
     <ul>
       {{- range $series }}
-      {{- $seriesData := index (where $.Site.Data.series "key" "eq" .key) 0 }}
+      {{- $seriesData := index (where $.Site.Data.series "key" "eq" (lower .key)) 0 }}
       <li>
         <details>
           <summary><cite>{{ $seriesData.title }}</cite> ({{ with (len .entries) }}{{ . }} post{{- if gt . 1 }}s{{- end }}{{- end }})&hellip;</summary>

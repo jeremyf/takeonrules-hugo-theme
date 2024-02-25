@@ -5,8 +5,8 @@
     {{ block "head-title" . }}
     {{- if .IsHome }}
     <title>{{ .Title }}</title>
-    {{- else if (and (eq .Kind "term") (eq .Type "series")) }}
-    {{- range first 1 (where $.Site.Data.series "key" "eq" .Title ) }}
+    {{- else if (and (eq .Kind "term") (eq .Type "Series")) }}
+    {{- range first 1 (where $.Site.Data.series "key" "eq" (lower .Title) ) }}
     <title>{{ .title }} // {{ $.Site.Title  }}</title>
     {{- end }}
     {{- else }}

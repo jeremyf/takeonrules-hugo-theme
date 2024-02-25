@@ -18,7 +18,7 @@
         <tbody>
           {{- range $key, $value := .Data.Terms.Alphabetical }}
           <tr>
-            {{- range first 1 (where $.Site.Data.series "key" "eq" $value.Name ) }}
+            {{- range first 1 (where $.Site.Data.series "key" "eq" (lower $value.Name) ) }}
             <td><a href="{{ $.Page.RelPermalink }}{{ $value.Name | urlize }}">{{ .title }}</a></td>
             <td>{{ $value.Count }}</td>
             {{- range first 1 $value.Pages.Reverse }}

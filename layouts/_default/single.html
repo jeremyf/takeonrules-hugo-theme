@@ -30,7 +30,7 @@
         for <cite>{{ with .offer }}<a href="{{ . }}">{{ end }}{{ .title }}{{ with .offer }}</a>{{ end }}</cite>
         {{- end }}.
         We played {{ with .location }}{{ . }}{{ else }}around the table{{ end }} on <time datetime="{{ dateFormat $.Site.Params.iso8601_format .date }}">{{ dateFormat "Monday, January 02, 2006" .date }}</time>.
-        {{- with $.Params.series }}{{- range (where $.Site.Data.series "key" "eq" .) }}{{- $title := .title }}{{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
+        {{- with $.Params.series }}{{- range (where $.Site.Data.series "key" "eq" (lower .)) }}{{- $title := .title }}{{- $seriesUrl := delimit (slice ("series" | absURL) ( .key | urlize )) "/" }}
 	It is part of my <cite><a href="{{ $seriesUrl }}">{{ $title }}</a></cite> series.
 	{{- end }}{{- end }}
 	</small>
