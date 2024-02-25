@@ -11,7 +11,7 @@
     <p>
       Below are all of the posts with the <em>{{ .Title }}</em> {{ .Type | singularize }}.
       {{- $type := .Type }}
-      {{- range first 1 (where $.Site.Data.glossary (.Type | singularize) "eq" .Title) }}
+      {{- range first 1 (where $.Site.Data.glossary (.Type | singularize | lower) "eq" (lower .Title)) }}
       {{- if eq $.Type "tags" }}
       A post tagged with <em>{{ $.Title }}</em> means that it is about <em>{{ $.Title }}</em>.  If a post references <em>{{ $.Title }}</em> but does not have the tag, then the post will not be in the list below.  If a post has the <em>{{ $.Title }}</em> tag or mentions <em>{{ $.Title }}</em>, then it will be in the <a href="/site-map/glossary/#abbr-dfn-{{ .key }}">Glossary for "{{ $.Title }}"</a>.
       {{- end }}{{- end }}

@@ -1,42 +1,42 @@
 {{ define "breadcrumb" }}
-  {{ partial "breadcrumb.html" . }}
+{{ partial "breadcrumb.html" . }}
 {{ end }}
 {{ define "main" }}
-  <article class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content">
-    <header>
-      <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
-      {{ partial "footer/image.html" . }}
-    </header>
-    <section class="e-content">
-      {{ .Content }}
-      <div class="table-wrapper">
-        <table id="table-{{ anchorize .Title }}" class="data-tables stripe">
-          <caption id="caption-{{ anchorize .Title }}">Table: All {{ .Title }} in {{ .Site.Title }}</caption>
-          <thead>
-            <tr><th scope="col">Title</th><th class="r" scope="col">Count</th><th class="c" scope="col">First Post</th><th class="c" scope="col">Last Post</th></tr>
-          </thead>
-          <tbody>
-          {{- range $key, $value := .Data.Terms.Alphabetical}}
-            <tr>
-              {{- range first 1 (where $.Site.Data.series "key" "eq" $value.Name ) }}
-                <td><a href="{{ $.Page.RelPermalink }}{{ $value.Name | urlize }}">{{ .title }}</a></td>
-                <td>{{ $value.Count }}</td>
-                {{- range first 1 $value.Pages.Reverse }}
-                <td class="c"><a href="{{ .Permalink }}">
-                  <time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time>
-                </a></td>
-                {{- end }}
-                {{- range first 1 $value.Pages }}
-                <td class="c"><a href="{{ .Permalink }}">
-                  <time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time>
-                </a></td>
-                {{- end }}
-              {{- end }}
-            </tr>
+<article class="h-entry" aria-labelledby="{{ anchorize .Title }}" id="skip-to-content">
+  <header>
+    <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title }}</h1>
+    {{ partial "footer/image.html" . }}
+  </header>
+  <section class="e-content">
+    {{ .Content }}
+    <div class="table-wrapper">
+      <table id="table-{{ anchorize .Title }}" class="data-tables stripe">
+        <caption id="caption-{{ anchorize .Title }}">Table: All {{ .Title }} in {{ .Site.Title }}</caption>
+        <thead>
+          <tr><th scope="col">Title</th><th class="r" scope="col">Count</th><th class="c" scope="col">First Post</th><th class="c" scope="col">Last Post</th></tr>
+        </thead>
+        <tbody>
+          {{- range $key, $value := .Data.Terms.Alphabetical }}
+          <tr>
+            {{- range first 1 (where $.Site.Data.series "key" "eq" $value.Name ) }}
+            <td><a href="{{ $.Page.RelPermalink }}{{ $value.Name | urlize }}">{{ .title }}</a></td>
+            <td>{{ $value.Count }}</td>
+            {{- range first 1 $value.Pages.Reverse }}
+            <td class="c"><a href="{{ .Permalink }}">
+              <time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time>
+            </a></td>
+            {{- end }}
+            {{- range first 1 $value.Pages }}
+            <td class="c"><a href="{{ .Permalink }}">
+              <time datetime="{{ dateFormat .Site.Params.iso8601_format .Date }}">{{ dateFormat "2006-01-02" .Date}}</time>
+            </a></td>
+            {{- end }}
+            {{- end }}
+          </tr>
           {{- end }}
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </article>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</article>
 {{ end }}

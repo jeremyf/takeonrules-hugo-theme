@@ -6,7 +6,7 @@
 {{- $termTitle := .Title }}
 {{- $data := .Data }}
 <article class="h-entry" id="skip-to-content" aria-labelledby="{{ anchorize $termTitle }}">
-  {{- range first 1 (where $.Site.Data.syndications "key" "eq" .Title ) }}
+  {{- range first 1 (where $.Site.Data.syndications "key" "eq" (lower .Title) ) }}
   <header>
     <h1 class="p-name" id="{{ anchorize $termTitle }}">Syndications for {{ .title }}</h1>
     {{ partial "footer/image.html" . }}
