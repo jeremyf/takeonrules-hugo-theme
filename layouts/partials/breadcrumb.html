@@ -37,7 +37,9 @@
     {{- else }}
     {{- end }}
     {{- if eq .p1 .p2 }}
-    <cite id="{{ .p1.Permalink}}" role="menuitem" aria-current="page">{{ .p1.Title }}</cite>
+    <cite role="menuitem" aria-current="page">
+      <a href="{{ .p1.Permalink}}">{{ .p1.Title }}</a>
+    </cite>
     {{- else }}
     <span role="menuitem" aria-labelledby="{{ .p1.Permalink }}">
       <a id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}">
