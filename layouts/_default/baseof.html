@@ -9,6 +9,8 @@
     {{- range first 1 (where $.Site.Data.series "key" "eq" (lower .Title) ) }}
     <title>{{ .title }} // {{ $.Site.Title  }}</title>
     {{- end }}
+    {{- else if .Params.resume }}
+    <title>Jeremy Friesen's Resume</title>
     {{- else }}
     <title>{{ .Title }} // {{ .Site.Title  }}</title>
     {{- end }}
