@@ -171,6 +171,12 @@ dl {
     dd:before { content: "· "; }
 }
 
+p.full-width.resume { width: 85% }
+.resume dl {
+    display: block;
+    dt, dd { line-height: 1.5; }
+}
+
 dd li { padding-left: 1rem; }
 
 // Helping the mark highlight extend just pass the letters
