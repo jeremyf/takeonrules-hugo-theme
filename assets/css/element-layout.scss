@@ -137,7 +137,7 @@ pre, pre code { font-family: var(--code-font); overflow-x: auto; }
 pre { padding: 0 1.5%; }
 pre code { padding: 1.5%;  display: block; white-space: pre; }
 kbd, code { font-family: var(--code-font); }
-kbd { padding: 0 2px; margin: 0 1px; border-radius: 4px; background: var(--bg-dim); }
+kbd { padding: 1px 3px; margin: 1px; border-radius: 4px; background: var(--fg); color: var(--bg-dim); border-width: thin; border-style: solid; }
 // .newthought { font-variant: small-caps; letter-spacing: 0.05rem; }
 
 @import "marginalia";
