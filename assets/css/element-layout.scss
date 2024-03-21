@@ -15,7 +15,7 @@ h3 { font-size: 1.3rem; }
 h4 { font-size: 1.2rem; }
 
 abbr { cursor: help; }
-p, summary, li {  vertical-align: baseline; }
+p, summary, li {  vertical-align: baseline; line-height: 1.4; }
 figure, blockquote { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
 
 small a.ref { font-size: xx-small; }
@@ -101,8 +101,6 @@ figcaption {
 
 // Without this setting, when the header would wrap, the letters would overlap
 h2, h3, h4, summary, p, .table-wrapper, pre, dl { width: 55%; }
-
-.p-summary { width: 65% ; }
 
 body {
     > header {
@@ -193,9 +191,10 @@ mark {
 // The main .h-entry has a bound region
 // Note: https://takeonrules.com/2020/12/31/a-refinement-to-the-ubiquitous-initiative-procedure/ introduced nested .h-entrys.
 main > .h-entry, main > #skip-to-content {
+    > header .p-summary { width: 63%; padding: 1em; background: var(--bg-dim); }
     > header, > footer, > ol {
         width: 85%;
-        * { width: auto; }
+        * { width: 85%; }
     }
     > ol { padding-left: 1rem; }
 }
