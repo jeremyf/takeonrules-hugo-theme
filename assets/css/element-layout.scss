@@ -258,6 +258,8 @@ summary { margin-top: 0.83em; margin-bottom: 0.83em; }
 }
 
 @media screen and (max-width: 760px) {
+    // I don't want such a narrow footer
+    body .h-entry > footer { width: auto; }
     details > *:not(summary):not([role="note"]) {
 	width: 87.5%;
     }
