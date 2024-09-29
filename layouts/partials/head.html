@@ -14,7 +14,7 @@
 {{- if in (slice "term" "taxonomy" "taxonomyTerm") .Kind }}<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml" />{{- end }}
 {{- range .Params.AlternativeOutputFormats }}<link rel="{{ .Rel }}" type="{{ .Type }}" href="{{ .Permalink }}" title="{{ .Title }}" />{{- end }}
 {{- if .IsHome }}
-<meta name="dateModified" content="{{ .Site.LastChange.Format .Site.Params.iso8601_format }}" />
+<meta name="dateModified" content="{{ .Site.Lastmod.Format .Site.Params.iso8601_format }}" />
 <meta name="datePublished" content="{{ .Site.Params.firstPostDate }}" />
 {{ else }}
 <meta name="dateModified" content="{{ .Lastmod.Format .Site.Params.iso8601_format }}" />

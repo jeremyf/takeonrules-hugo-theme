@@ -19,8 +19,8 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 {{- if .IsHome }}
-<meta name="article:modified_time" content="{{ .Site.LastChange.Format .Site.Params.iso8601_format | safeHTMLAttr }}" />
-<meta property="og:updated_time" content="{{ .Site.LastChange.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
+<meta name="article:modified_time" content="{{ .Site.Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}" />
+<meta property="og:updated_time" content="{{ .Site.Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
 <meta name="article:published_time" content="{{ .Site.Params.firstPostDate | safeHTMLAttr }}" />
 {{- else if .IsPage }}
   {{- if not .PublishDate.IsZero }}
