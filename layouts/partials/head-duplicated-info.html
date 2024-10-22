@@ -9,10 +9,10 @@
 
 {{- if (or $.Site.Params.inline_css .Params.inline_css) }}
 <style media="screen,print">
-  {{ (resources.Get "css/tufte.scss" | resources.ToCSS | resources.Minify ).Content | safeCSS }}
+  {{ (resources.Get "css/tufte.scss" | toCSS | resources.Minify ).Content | safeCSS }}
 </style>
 <style media="print">
-  {{ (resources.Get "css/print.scss" | resources.ToCSS | resources.Minify).Content | safeCSS }}
+  {{ (resources.Get "css/print.scss" | toCSS | resources.Minify).Content | safeCSS }}
 </style>
 {{- else }}
 {{ $screen := resources.Get "css/tufte.scss" | toCSS | minify | fingerprint }}
