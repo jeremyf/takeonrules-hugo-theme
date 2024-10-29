@@ -3,8 +3,9 @@
 html, body { height: 100%; }
 
 html { scroll-behavior: smooth; vertical-align: baseline; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-body { margin-left: auto; margin-right: auto; padding-left: 12.5%; font-family: var(--body-font); counter-reset: sidenote-counter; }
-body, .list-page ul { width: 87.5%; }
+body { margin-left: auto; margin-right: auto; padding-left: 12.5vw; font-family: var(--body-font); counter-reset: sidenote-counter; }
+// body, .list-page ul { width: 55vw; }
+main, body>footer { width: 47.5vw;}
 
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
@@ -29,9 +30,9 @@ small a.ref { font-size: xx-small; }
 }
 
 blockquote {
-    width: 55%;
+    // width: 55%;
     padding-left: 1rem;
-    p, .group, ul, ol, dl, h2, h3, h4, footer { width: 90%; }
+    // p, .group, ul, ol, dl, h2, h3, h4, footer { width: 90%; }
     .verse {
 	width: auto;
 	// color: var(--blockquote);
@@ -47,22 +48,12 @@ nav [role="list"] [role="listitem"] { display: inline-block; }
 
 /* BEGIN Epigraphs */
 .epigraph {
-
-    width: 45%; padding-left: 5%; margin-top: 2rem; margin-bottom: 2rem;
-    @media screen and (max-width:760px) {
-	width: 75%;
-    }
+    width: 85%;
+    padding: 0 5%;
     border-left: none;
     font-style: italic;
     .p-author { font-style: normal; }
 }
-
-.full-width .epigraphs {
-    // width: 55%;
-    blockquote { width: 100%; }
-    pre { width: 100%; }
-}
-
 /* END Epigraphs */
 
 .fantasy {
@@ -94,14 +85,6 @@ figcaption {
     width: 40%
 }
 
-.type-tags, .type-series, .full-width {
-    max-width: 90%;
-    section > ul, section > ol, h2, h3, h4, summary, p, footer, .table-wrapper, pre, dl { width: 85%; }
-}
-
-// Without this setting, when the header would wrap, the letters would overlap
-h2, h3, h4, summary, p, .table-wrapper, pre, dl { width: 55%; }
-
 body {
     > header {
         hr { display: none; }
@@ -125,7 +108,6 @@ body {
     }
     > footer {
         padding-bottom: 1rem;
-        width: 85%;
         text-align: center;
         font-family: var(--header-font);
     }
@@ -136,7 +118,6 @@ pre { padding: 0 1.5%; }
 pre code { padding: 1.5%;  display: block; white-space: pre; }
 kbd, code { font-family: var(--code-font); }
 kbd { padding: 1px 3px; margin: 1px; border-radius: 4px; background: var(--fg); color: var(--bg-dim); border-width: thin; border-style: solid; }
-// .newthought { font-variant: small-caps; letter-spacing: 0.05rem; }
 
 @import "marginalia";
 
@@ -169,7 +150,6 @@ dl {
     dd:before { content: "· "; }
 }
 
-p.full-width.resume { width: 85% }
 .resume dl {
     display: block;
     dt, dd { line-height: 1.5; }
@@ -186,26 +166,17 @@ mark {
 }
 
 
-.h-entry { section > ul, section > ol { width: 45%; } }
-
 // The main .h-entry has a bound region
 // Note: https://takeonrules.com/2020/12/31/a-refinement-to-the-ubiquitous-initiative-procedure/ introduced nested .h-entrys.
 main > .h-entry {
-    > header .p-summary { width: 63%; padding: 1em; background: var(--bg-dim); }
-    > header, > footer, > ol {
-        width: 85%;
-        * { width: 85%; }
-    }
+    > header .p-summary {
+	padding: 1em; background: var(--bg-dim); }
     > ol { padding-left: 1rem; }
 }
 
-main > .h-entry > footer input { width: 80%; }
-
-// breadcrumb
-
 .breadcrumb, .paginator, .feeds {
     .label { display: none; }
-    width: 85%; font-family: var(--header-font);
+    font-family: var(--header-font);
 }
 
 .breadcrumb, .paginator {
@@ -213,27 +184,9 @@ main > .h-entry > footer input { width: 80%; }
 }
 
 @media screen and (max-width: 760px) {
-    .type-tags, .type-series, .full-width {
-	max-width: 90%;
-	section > ul, section > ol, h2, h3, h4, summary, p, footer, .table-wrapper, pre, dl { width: 90%; }
-    }
-
-    h2, h2, h3, h4, summary, p, body > footer, .table-wrapper, pre, dl, .h-entry summary { width: 85%; }
+    main, body>footer { width: 77.5vw; }
     .h-entry section > ol, .h-entry section > ul { width: 76.5%; }
-    figure { max-width: 90%; }
     figcaption { margin-right: 0%; max-width: none; }
-    blockquote {
-	width: 80%;
-	> * {  width: 80%; }
-    }
-}
-
-@media (max-width: 760px) {
-    pre, pre code { width: 95%; }
-    main > .h-entry {
-	> ol * { width: 95%; }
-	> header .p-summary { width: 95%; }
-    }
 }
 
 sup { font-size: 51%;} /* A weird rendering error happens when this is a set height or greater than 50% */
@@ -246,23 +199,14 @@ ins { text-decoration-line: none; }
 }
 
 details {
-    & > *:not(details) { width: 52%; }
+    // & > *:not(details) { width: 52%; }
 }
 
 summary { margin-top: 0.83em; margin-bottom: 0.83em; }
 
-.year-summary > details {
-    > summary { width: 55% }
-
-    > ul { list-style: none; width: 87.5% }
-}
-
 @media screen and (max-width: 760px) {
     // I don't want such a narrow footer
     body .h-entry > footer { width: auto; }
-    details > *:not(summary):not([role="note"]) {
-	width: 87.5%;
-    }
     .year-summary > details {
 	> summary { width: 87.5% }
 	> ul { width: auto; }
@@ -270,7 +214,7 @@ summary { margin-top: 0.83em; margin-bottom: 0.83em; }
 }
 
 dfn, .dfn, .mechanic { font-weight: bold; }
-// .ref { border-bottom: 1px inset var(--bg-dim); }
+
 .dfn { font-style: italic; }
 
 // Introducing the mechanic class; which is inspired by the Errant RPG

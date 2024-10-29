@@ -2,32 +2,24 @@
 // with this file, remember to review both the narrow version and the print version
 .note, [role=note] {
     // The MARGIN TOP helps ensure more precise positioning of the element.
-    margin-top: 0rem;
+    margin-top: -1rem;
     > *:first-child { margin-top: 0rem; }
 
     .fullwidth { max-width: 100%; }
     float: right;
 
     clear: right;
-    margin-right: 0;
+
+    margin-right: -28.5vw;
+    width: 23.5vw;
     margin-bottom: 1rem;
-    width: 50%;
 
     vertical-align: baseline;
     position: relative;
-    p, dl, &.table-wrapper table {
-        width:100%;
-    }
-
-    h2, h3, h4 { width:  auto; }
 
     dl { display: block; }
 
     ol, ul, pre, code, blockquote { width: 87.5%; }
-    &.side {
-            margin: 0 -60% 1rem 0;
-            width: 50%;
-    }
 }
 
 figcaption p { width: 100%; }
@@ -50,7 +42,7 @@ figure[role=note] {
 }
 
 .ogc .margin[role=note], .margine.note {
-    width: 27.5%
+    width: 22vw;
 }
 
 .side-container { counter-increment: sidenote-counter; }
@@ -85,9 +77,6 @@ figure[role=note] {
 // TODO: Must figure this out. I don't want to hide marginalia but instead
 //       render it similar to the print style
 .full-width { [role=note], .side-container { display: none; } }
-.margin[role=note], figure[role=note], .margin.note {
-    margin-right: 12.5%; width: 27%;
-}
 
 @media screen and (max-width: 760px) {
     .side-container .side-toggler { margin-left: 0.33rem; display:inline-block; }
@@ -99,12 +88,11 @@ figure[role=note] {
     [role=note], .note {
         display: block;
         &.margin-table.table-wrapper {
-            width: 87.5%;
             table { width: 100%; }
         }
+	width: 77.5vw;
         padding-left: 2.5%;
         margin-right: 2.5%;
-        width: 87.5%;
     }
 
     figcaption { width: 100%; }
@@ -115,7 +103,6 @@ figure[role=note] {
 
     // NOTE: The specificity of the selectors is required; They echo the above specific selector
     figure[role=note], .margin[role=note], .margin.note {
-        width: 87.5%;
         clear: both;
         float: none;
     }
@@ -123,7 +110,6 @@ figure[role=note] {
     .side[role=note] {
 	clear: both;
         margin: 1rem 0;
-        width: 97.5%
     }
 
 
