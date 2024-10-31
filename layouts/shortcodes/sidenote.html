@@ -1,4 +1,4 @@
 <small class="side-container">
   <span class="side-label"><span class="hidden">(</span>Sidenote<span class="hidden">:</span></span>
-  <span class="side" role="note"> {{ strings.TrimSpace (partial "unparagraphy" .Inner) }}<span class="hidden">)</span></span>
+  <span class="side" role="note"> {{ strings.TrimSpace (partial "unparagraphy" .Inner) | safeHTML }}<span class="hidden">)</span></span>
 </small>
