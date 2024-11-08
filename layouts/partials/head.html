@@ -1,6 +1,7 @@
 {{- if .Params.canonical_url }}<link rel="canonical" href="{{ .Params.canonical_url }}" />
 {{- else if .RelPermalink }}<link rel="canonical" href="{{ .RelPermalink }}" />{{- end }}
 {{ partial "head-duplicated-info.html" . }}
+{{- range .Params.tags }}<link rel="tags" href="{{ "tags" | absURL }}/{{ . | urlize }}/" />{{- end }}
 {{- with .Params.org_id }}<meta property="org_id" content="{{ . }}" />{{- end }}
 <meta name="org-roam-type" content="{{ .Type }}" />
 {{- if eq hugo.Environment "development" }}

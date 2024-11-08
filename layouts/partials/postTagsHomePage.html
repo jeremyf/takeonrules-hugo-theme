@@ -1,6 +1,6 @@
 {{- define "tagmd-homepage" }}
 <span role="menuitem" aria-label="{{ .tag }}">
-<a rel="tag" href="{{ "tags" | absURL }}/{{ .tag | urlize }}/" class="p-category" aria-label="All posts tagged with &ldquo;{{ .tag }}&rdquo;" title="All posts tagged with &ldquo;{{ .tag }}&rdquo;">{{ .tag | anchorize }}</a>
+<a href="{{ "tags" | absURL }}/{{ .tag | urlize }}/" class="p-category" aria-label="All posts tagged with &ldquo;{{ .tag }}&rdquo;" title="All posts tagged with &ldquo;{{ .tag }}&rdquo;">{{ .tag | anchorize }}</a>
 </span>
 {{- end }}
 {{- with .Params.tags }} :: <span class="label">Tags:</span> <span role="menu" aria-label="Tags for “{{ $.Page.Title }}”">{{- $tags := . }}{{- $last_tag := . | last 1 }}{{- range ($tags | complement $last_tag) }}{{- template "tagmd-homepage" (dict "tag" . "page" $.Page "site" $.Site )}} &middot; {{- end }}{{- range $last_tag }}{{- template "tagmd-homepage" (dict "tag" . "page" $.Page "site" $.Site )}}{{- end }}</span>{{- end }}
