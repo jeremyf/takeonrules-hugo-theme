@@ -1,7 +1,7 @@
 {{- if (and (eq .Kind "term") (eq .Type "Series")) }}
-{{- range first 1 (where $.Site.Data.series "key" "eq" (lower .Title) ) }}<meta property="og:title" content="{{ .title }}" />{{- end }}
+{{- range first 1 (where $.Site.Data.series "key" "eq" (lower .Title) ) }}<meta property="og:title" content="{{ .title }}" >{{- end }}
 {{- else }}
-<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:title" content="{{ .Title }}" >
 {{- $description := "" }}
 {{- if isset . "Description" }}
 {{- $description = .Description }}
@@ -12,46 +12,46 @@
 {{- else if isset .Site.Params "description" }}
 {{- $description = .Site.Params.description }}
 {{- end }}
-<meta property="og:description" content="{{ $description | markdownify | plainify }}" />
-<meta name="description" content="{{ $description | markdownify | plainify }}" />
+<meta property="og:description" content="{{ $description | markdownify | plainify }}" >
+<meta name="description" content="{{ $description | markdownify | plainify }}" >
 {{- end }}
-<meta property="og:locale" content="{{ .Site.LanguageCode }}" />
-<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:locale" content="{{ .Site.LanguageCode }}" >
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" >
+<meta property="og:url" content="{{ .Permalink }}" >
 {{- if .IsHome }}
-<meta name="article:modified_time" content="{{ .Site.Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}" />
-<meta property="og:updated_time" content="{{ .Site.Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
-<meta name="article:published_time" content="{{ .Site.Params.firstPostDate | safeHTMLAttr }}" />
+<meta name="article:modified_time" content="{{ .Site.Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}" >
+<meta property="og:updated_time" content="{{ .Site.Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}">
+<meta name="article:published_time" content="{{ .Site.Params.firstPostDate | safeHTMLAttr }}" >
 {{- else if .IsPage }}
   {{- if not .PublishDate.IsZero }}
-    <meta property="article:published_time" content="{{ .PublishDate.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
+    <meta property="article:published_time" content="{{ .PublishDate.Format .Site.Params.iso8601_format | safeHTMLAttr }}">
   {{- else if not .Date.IsZero }}
-    <meta property="article:published_time" content="{{ .Date.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
+    <meta property="article:published_time" content="{{ .Date.Format .Site.Params.iso8601_format | safeHTMLAttr }}">
   {{- end }}
   {{- if not .Lastmod.IsZero }}
-    <meta property="article:modified_time" content="{{ .Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
-    <meta property="og:updated_time" content="{{ .Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
+    <meta property="article:modified_time" content="{{ .Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}">
+    <meta property="og:updated_time" content="{{ .Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}">
   {{- end }}
 {{- else }}
   {{- if not .Lastmod.IsZero }}
-    <meta property="article:modified_time" content="{{ .Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
-    <meta property="og:updated_time" content="{{ .Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
+    <meta property="article:modified_time" content="{{ .Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}">
+    <meta property="og:updated_time" content="{{ .Lastmod.Format .Site.Params.iso8601_format | safeHTMLAttr }}">
   {{- else }}
-    <meta property="article:modified_time" content="{{ .Date.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
-    <meta property="og:updated_time" content="{{ .Date.Format .Site.Params.iso8601_format | safeHTMLAttr }}"/>
+    <meta property="article:modified_time" content="{{ .Date.Format .Site.Params.iso8601_format | safeHTMLAttr }}">
+    <meta property="og:updated_time" content="{{ .Date.Format .Site.Params.iso8601_format | safeHTMLAttr }}">
   {{- end }}
 {{- end }}{{/* .IsHome */}}
-{{- with .Params.audio }}<meta property="og:audio" content="{{ . }}" />{{ end }}
-{{- with .Params.locale }}<meta property="og:locale" content="{{ . }}" />{{ end }}
-{{- with .Site.Params.title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
-{{- with .Params.videos }}{{- range . }}<meta property="og:video" content="{{ . | absURL }}" />{{ end }}{{ end }}
+{{- with .Params.audio }}<meta property="og:audio" content="{{ . }}" >{{ end }}
+{{- with .Params.locale }}<meta property="og:locale" content="{{ . }}" >{{ end }}
+{{- with .Site.Params.title }}<meta property="og:site_name" content="{{ . }}" >{{ end }}
+{{- with .Params.videos }}{{- range . }}<meta property="og:video" content="{{ . | absURL }}" >{{ end }}{{ end }}
 {{- /* If it is part of a series, link to related articles */}}
 {{- $permalink := .Permalink }}
 {{- $siteSeries := .Site.Taxonomies.series }}{{ with .Params.series }}
 {{- with $name := . }}
   {{- $series := index $siteSeries $name }}
   {{- range $page := first 6 $series.Pages }}
-    {{- if ne $page.Permalink $permalink }}<meta property="og:see_also" content="{{ $page.Permalink }}" />{{ end }}
+    {{- if ne $page.Permalink $permalink }}<meta property="og:see_also" content="{{ $page.Permalink }}" >{{ end }}
   {{- end }}
 {{ end }}{{ end }}
 {{- $original := false }}
@@ -64,8 +64,8 @@
 {{- end }}
 {{- end }}
 {{- if $original }}
-<meta property="og:image" content="{{ $original.Permalink }}" />
-<meta property="og:image:width" content="{{ $original.Width }}" />
-<meta property="og:image:height" content="{{ $original.Height }}" />
+<meta property="og:image" content="{{ $original.Permalink }}" >
+<meta property="og:image:width" content="{{ $original.Width }}" >
+<meta property="og:image:height" content="{{ $original.Height }}" >
 <link rel="image_src" href="{{ $original.Permalink }}" content="{{ $original.Permalink }}" />
 {{- end }}

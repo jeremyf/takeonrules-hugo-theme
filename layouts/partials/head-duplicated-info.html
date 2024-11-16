@@ -1,7 +1,7 @@
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-{{ with $.Site.Params.searchMySiteVerification }}<meta name="searchmysite-verification" content="{{ . }}" />{{- end }}
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+<meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" >
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" >
+{{ with $.Site.Params.searchMySiteVerification }}<meta name="searchmysite-verification" content="{{ . }}" >{{- end }}
 
 {{- with $.Site.Params.PathToBlogrollOPML }}
 <link rel="blogroll" type="application/xml" href="{{ urls.JoinPath $.Site.BaseURL . }}" title="{{ $.Site.Title | safeHTML }} Blog Roll" />
@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="{{ $print.RelPermalink }}" integrity="{{ $print.Data.Integrity }}" rel="preload stylesheet" as="style" media="print"/>
 {{- end }}
 
-<meta property="fediverse:creator" content="{{ $.Site.Params.FediverseCreator }}" />
+<meta property="fediverse:creator" content="{{ $.Site.Params.FediverseCreator }}" >
 
 {{ range .Site.Home.AlternativeOutputFormats -}}
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title | safeHTML }} {{ .Name }} Feed" />
