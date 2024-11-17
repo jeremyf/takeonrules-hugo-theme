@@ -2,6 +2,7 @@ baseURL: 'https://your-site-here.com/'
 canonifyURLs: true
 canonifyurls: true
 enableRobotsTXT: true
+googleAnalytics: SERIOUSLY-DONT-DO-THIS
 languageCode: en-us
 enableInlineShortcodes: true
 markup:
@@ -22,6 +23,10 @@ markup:
       hardWraps: false
       unsafe: true
       xHTML: false
+  tableOfContents:
+    endLevel: 4
+    ordered: true
+    startLevel: 2
   highlight:
     codeFences: false
     hl_Lines: ''
@@ -32,22 +37,27 @@ markup:
     style: tango
     tabWidth: 2
 menu:
+  footer:
+    - identifier: icon-github
+      name: name the link
+      url: 'https://github.com/blah-blah-blah'
+
   me_elsewhere:
     - identifier: github
-      name: github.com/your-handle-here
-      url: 'https://github.com/your-handle-here'
+      name: github.com/blah-blah-blah
+      url: 'https://github.com/blah-blah-blah'
   topnav:
     - identifier: a
       name: About
-      title: About Your Site Here
+      title: About Your Site
       url: /about/
-    - identifier: s
-      name: Services
-      title: "The consulting services I provide"
-      url: /services/
+    - identifier: f
+      name: RSS Feed
+      title: 'RSS Feed for all of Your Site'
+      url: /index.xml
     - identifier: m
       name: Site Map
-      title: 'An index of various pages on Your Site Here'
+      title: 'An index of various pages on Site'
       url: /site-map/
 
 outputs:
@@ -73,44 +83,42 @@ outputFormats:
     baseName: index
     isPlainText: false
 params:
+  FediverseCreator: somebody@somewhere
+  inline_css: true
   # Note: This parameter dictates if you want to render the rel="next"
   # and rel="prev" for all tag instances.  When withTagRels == true,
   # it almost triples the build time.
   withTagRels: true
-  searchMySiteVerification: your-search-verification-here
-  Authors:
-    - twitter: your-twitter-handle-here
+  searchMySiteVerification: blergh-herghy
   CopyrightRelation:
-    - name: Your Org Relation Here
+    - name: Your University
       relationship: alumniOf
       type: EducationalOrganization
-      url: 'https://your-university-here'
-  organizationImagePath: '/images/path-to-your-personal-orgs-image.jpg'
-  authorName: Your Name
-  copyrightHolder: Your Name
-  copyrightHolderEmail: your-email@here.com
-  copyrightHolderURL: 'https://your-site-here.com/about/'
+      url: 'https://somegreatplace.edu'
+  organizationImagePath: 'path/to-image.jpg'
+  authorName: My Glorious Chosen Name
+  copyrightHolder: My Glorious Chosen Name
+  copyrightHolderEmail: your-email@place-of-awesome.com
+  replyToEmail: your-email@place-of-awesome.com
+  copyrightHolderURL: 'https://yourgreatsite.com/about/'
   description: >-
-    Your Name's personal blog, with a focus on table-top role-playing
-    games.
+    Something wonderful I'm sure
   docsUrlForRssV2: 'https://cyber.harvard.edu/rss/rss.html'
   firstPostDate: 2011-02-02
-  googleSiteVerification: your-site-verification-here
-  headline: Your Site Here Blog Posts and Other Web Pages
-  images:
-    - /images/path-to-your-personal-orgs-image.jpg
+  googleSiteVerification: SERIOUSLY_DONT_USE_THIS_CRAP
+  headline: Your Site's Headline
+  image: /images/some-image.png
   iso8601_format: '2006-01-02'
-  morePermissionsPermalink: 'https://your-site-here.com/more_permissions/'
+  morePermissionsPermalink: 'https://your-site-name.com/more_permissions/'
   pagination_size: 10
   paginatedSections:
     - post
-    - reviews
+    - review
+  PathToBlogrollOPML: '/blogroll.xml'
   sameAs:
-    - 'https://github.com/your-handle-here'
-  identifiers:
-    - 'https://orcid.org/dddd-dddd-dddd-dddd'
-  siteHost: your-site-here.com
-  title: Your Site Here
+    - 'https://github.com/some-github-name'
+  siteHost: your-site-name.com
+  title: Your Site Name
   withJsonLd: true
   foundingDate: "2021-02-02"
 permalinks:
@@ -138,5 +146,6 @@ taxonomies:
   license: licenses
   series: series
   tag: tags
+  syndication: syndications
 theme: hugo-tufte
 title: Your Site Here
