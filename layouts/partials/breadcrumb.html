@@ -12,7 +12,7 @@
     </span><span aria-hidden="true"> / </span>
     {{- end }}
     <cite role="menuitem">
-      <a href="{{ .Permalink }}" id="{{ .Permalink }}" aria-current="page">{{ .Title }}</a>
+      <a href="{{ .Permalink }}" class="u-url" id="{{ .Permalink }}" aria-current="page">{{ .Title }}</a>
     </cite>
     {{- else if eq .Type "series" }}
     <span role="menuitem" aria-label="Home">
@@ -23,7 +23,7 @@
     </span>
     {{- range first 1 (where $.Site.Data.series "key" "eq" (lower .Title) ) }}
     <span aria-hidden="true"> / </span><cite role="menuitem">
-      <a href="{{ .Permalink }}" id="{{ .Permalink }}" aria-current="page">{{ .title }}</a>
+      <a href="{{ .Permalink }}" class="u-url" id="{{ .Permalink }}" aria-current="page">{{ .title }}</a>
     </cite>
     {{- end }}
     {{- else }}
