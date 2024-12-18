@@ -1,28 +1,28 @@
 <nav aria-labelledby="breadcrumbs-label" class="breadcrumb">
-  <span role="menu" aria-labelledby="breadcrumbs-label">
+  <span role="list" aria-labelledby="breadcrumbs-label">
     <span id="breadcrumbs-label" class="label">Breadcrumbs </span>
     {{- if eq .Type "post" }}
     {{- $year := .Date.Format "2006" }}
-    <span role="menuitem" aria-label="Home">
+    <span role="listitem" aria-label="Home">
       <a href="{{ .Site.BaseURL }}">Home</a>
     </span><span aria-hidden="true"> / </span>
     {{- with .Site.GetPage (printf "/%s" $year) }}
-    <span role="menuitem" aria-labelled-by="{{ .Permalink }}">
+    <span role="listitem" aria-labelled-by="{{ .Permalink }}">
       <a rel="up" href="{{ .Permalink }}" id="{{ .Permalink}}">{{ .Title }}</a>
     </span><span aria-hidden="true"> / </span>
     {{- end }}
-    <cite role="menuitem">
+    <cite role="listitem">
       <a href="{{ .Permalink }}" class="u-url" id="{{ .Permalink }}" aria-current="page">{{ .Title }}</a>
     </cite>
     {{- else if eq .Type "series" }}
-    <span role="menuitem" aria-label="Home">
+    <span role="listitem" aria-label="Home">
       <a href="{{ .Site.BaseURL }}">Home</a>
     </span><span aria-hidden="true"> / </span>
-    <span role="menuitem" aria-label="Series">
+    <span role="listitem" aria-label="Series">
       <a href="{{ .Site.BaseURL }}series/">Series</a>
     </span>
     {{- range first 1 (where $.Site.Data.series "key" "eq" (lower .Title) ) }}
-    <span aria-hidden="true"> / </span><cite role="menuitem">
+    <span aria-hidden="true"> / </span><cite role="listitem">
       <a href="{{ .Permalink }}" class="u-url" id="{{ .Permalink }}" aria-current="page">{{ .title }}</a>
     </cite>
     {{- end }}
@@ -37,11 +37,11 @@
     {{- else }}
     {{- end }}
     {{- if eq .p1 .p2 }}
-    <cite role="menuitem" aria-current="page">
+    <cite role="listitem" aria-current="page">
       <a href="{{ .p1.Permalink}}">{{ .p1.Title }}</a>
     </cite>
     {{- else }}
-    <span role="menuitem" aria-labelledby="{{ .p1.Permalink }}">
+    <span role="listitem" aria-labelledby="{{ .p1.Permalink }}">
       <a id="{{ .p1.Permalink}}" {{ if eq .depth 2 }}rel="up" {{ end }}href="{{ .p1.Permalink }}">
 	{{- if eq .p1.Permalink .p1.Site.BaseURL }}Home{{- else if (and (eq .p1.Type "series") (eq .p1.Kind "term")) }}{{- range (where .site.Data.series "key" (lower .p1.Title)) }}{{ .title | safeHTML }}{{- end }}{{- else }}{{ .p1.Title | safeHTML }}{{- end }}
       </a>
@@ -51,21 +51,21 @@
   </span></nav>
 {{- if eq .Kind "term" }}
 {{- if eq .Type "series" }}
-{{- range first 1 (where $.Site.Data.series "key" "eq" (lower .Title) ) }}<div class="feeds" aria-labelledby="series-feed-label" role="menu">
+{{- range first 1 (where $.Site.Data.series "key" "eq" (lower .Title) ) }}<div class="feeds" aria-labelledby="series-feed-label" role="list">
     <span id="series-feed-label" class="label">Series feed </span>
-    <span role="menuitem" aria-label="RSS feed for “{{ .title }}”"><a href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .title }}</q> series</a></span>
+    <span role="listitem" aria-label="RSS feed for “{{ .title }}”"><a href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .title }}</q> series</a></span>
 </div>
 {{- end }}
 {{- else }}
-<div class="feeds" aria-labelledby="{{ .Type | singularize | anchorize }}-feed-label" role="menu">
+<div class="feeds" aria-labelledby="{{ .Type | singularize | anchorize }}-feed-label" role="list">
   <span id="{{ .Type | singularize | anchorize }}-feed-label" class="label">{{ .Type | singularize | title }} feed </span>
-  <span role="menuitem" aria-label="RSS feed for “{{ .Title }}”"><a href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .Title }}</q></a></span>
+  <span role="listitem" aria-label="RSS feed for “{{ .Title }}”"><a href="{{ $.Page.Permalink }}index.xml">RSS feed for <q>{{ .Title }}</q></a></span>
 </div>
 {{- end }}
 {{- else if eq .Kind "taxonomy" }}
-<div class="feeds" aria-labelledby="{{ .Type | anchorize }}-feed-label" role="menu">
+<div class="feeds" aria-labelledby="{{ .Type | anchorize }}-feed-label" role="list">
   <span id="{{ .Type | anchorize }}-feed-label" class="label">{{ .Type | title }} feed </span>
-  <span role="menuitem" aria-label="RSS feed for the list of {{ .Type | title }}"><a href="{{ $.Page.Permalink }}index.xml">RSS feed for the list of {{ .Type | title }}</a>
+  <span role="listitem" aria-label="RSS feed for the list of {{ .Type | title }}"><a href="{{ $.Page.Permalink }}index.xml">RSS feed for the list of {{ .Type | title }}</a>
 </div>
 {{- end }}
 <hr class="hidden" />
