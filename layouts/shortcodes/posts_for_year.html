@@ -9,7 +9,9 @@
 <section  aria-labelledby="overview-posts-{{ $year }}" class="year-summary">
   <h2 id="overview-posts-{{ $year }}">All Posts</h2>
   <p>Each year, most of what I write are blog posts.</p>
+  {{- if gt (len $posts) 0 }}
   <aside role="note" class="margin"><p><small>The {{ len $posts }} posts have about {{ $wordCount }} words, for an average of {{ div $wordCount (len $posts ) }} words per post.</small></p></aside>
+  {{- end }}
   <details open="true">
     <summary>In <time datetime="{{ $year }}">{{ $year }}</time>, I wrote {{ len $posts }} posts&hellip;</summary>
     <ul>
