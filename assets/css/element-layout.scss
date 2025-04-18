@@ -21,14 +21,6 @@ figure, blockquote { margin-left: 0; margin-right: 0; padding-left: 0; padding-r
 
 small a.ref { font-size: xx-small; }
 
-.verse {
-    &.mono { font-family: var(--code-font); }
-    font-family: var(--body-font);
-    font-style: italic;
-    color: var(--fg);
-    padding: 0;
-}
-
 blockquote {
     // width: 55%;
     padding-left: 1rem;
@@ -51,8 +43,15 @@ nav [role="list"] [role="listitem"] { display: inline-block; }
     width: 85%;
     padding: 0 5%;
     border-left: none;
+}
+
+.verse {
+    &.mono { font-family: var(--code-font); }
+    padding: 0;
+}
+
+.epigraph, .verse {
     font-style: italic;
-    .p-author { font-style: normal; }
     footer { font-style: normal; }
 }
 /* END Epigraphs */
