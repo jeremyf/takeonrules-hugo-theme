@@ -4,8 +4,9 @@
 {{ define "main" }}
   <article class="h-entry" {{ with .Params.ariaArticleLabel }}aria-label="{{ . }}"{{ else }}aria-labelledby="{{ anchorize .Title }}"{{ end }} id="skip-to-content">
     <header aria-label="Article header">
-      <h1 class="p-name" id="{{ anchorize .Title }}">{{ .Title | safeHTML }}</h1>
-    {{- with .Params.headline }}
+      {{ partial "header/post.html" . }}
+      {{ partial "header/content_disclaimers.html" . }}
+      {{- with .Params.headline }}
       <h2>{{ . }}</h2>
       {{- end }}
       {{- if or .Params.relPrevious .Params.relNext }}
