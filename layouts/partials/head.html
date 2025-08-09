@@ -10,6 +10,7 @@
 {{- with .Section }}<meta name="hugoSection" content="{{ . }}" >{{- end }}
 <meta name="hugoSections" content="{{ delimit .Site.Sections ", " }}" >
 {{- end }}
+<meta name="googlebot" content="noindex, nofollow, noimageindex">
 <meta name="theme-color" content="#EEEEEE" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0D0E1C" media="(prefers-color-scheme: dark)">
 {{- if in (slice "term" "taxonomy" "taxonomyTerm") .Kind }}<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title}} Feed for {{ .Title }}" href="{{ .Permalink }}index.xml" />{{- end }}
