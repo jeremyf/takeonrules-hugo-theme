@@ -30,6 +30,8 @@ User-agent: Google-Extended
 User-agent: GoogleOther
 User-agent: GoogleOther-Image
 User-agent: GoogleOther-Video
+User-agent: Google-CloudVertexBot
+User-agent: Googlebot-Video
 User-agent: GPTBot
 User-agent: iaskspider/2.0
 User-agent: ICC-Crawler
