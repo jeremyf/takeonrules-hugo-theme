@@ -4,9 +4,13 @@
 {{- $original := resources.Get $path  }}
 {{- if $original }}
 {{- $title    := .Get "title" }}
+{{- $result := $original }}
+{{- if .Get "skipResize" }}
+{{- else }}
 {{- $imageResize := default "770x" (.Get "resize") }}
 {{- with .Get "rotate" }}{{- $imageResize = (printf "%s r%s" $imageResize .) }}{{- end }}
-{{- $result   := $original.Resize $imageResize }}
+{{- $result   = $original.Resize $imageResize }}
+{{- end }}
 <figure {{ if (or (isSet .Params "hidden") (eq (len $alt) 0)) }} aria-hidden="true"{{ end }}>
 {{- with $caption }}<figcaption>{{ partial "unparagraphy.html" . }}</figcaption>{{ end }}
 {{- if .Get "link" }}
