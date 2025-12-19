@@ -2,6 +2,6 @@
 {{- if eq (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }}
 <time class="dt-published" datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
 {{- else }}
-<del class="dt-published" datetime="{{ .Lastmod.Format "2006-01-02" }}"><time aria-label="Published On" datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006-01-02" .Date }}</time></del>
-<ins datetime="{{ .Lastmod.Format "2006-01-02" }}"><time aria-label="Modified On" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time></ins>
+<del aria-label="Published on" class="dt-published" datetime="{{ .Lastmod.Format "2006-01-02" }}"><time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006-01-02" .Date }}</time></del>
+<ins aria-label="Modified on" datetime="{{ .Lastmod.Format "2006-01-02" }}"><time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time></ins>
 {{- end }}
